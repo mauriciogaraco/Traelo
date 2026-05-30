@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+        brand: ['Kaushan Script', 'cursive'],
       },
       backgroundImage: {
         'gradient-primary': 'linear-gradient(135deg, #FB923C 0%, #F97316 55%, #EA580C 100%)',
