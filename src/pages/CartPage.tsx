@@ -31,7 +31,7 @@ export function CartPage() {
         {items.map(({ product, quantity }) => (
           <div key={product.id} className="flex gap-3 bg-surface border border-border rounded-3xl p-3">
             <button onClick={() => navigate(`/producto/${product.id}`)} className="flex-shrink-0">
-              <ProductImage emoji={product.image} category={product.category} alt={product.name} size="sm" className="w-20 h-20 rounded-2xl" />
+              <ProductImage emoji={product.image} photo={product.photo} category={product.category} alt={product.name} size="sm" className="w-20 h-20 rounded-2xl" />
             </button>
 
             <div className="flex-1 min-w-0 flex flex-col">

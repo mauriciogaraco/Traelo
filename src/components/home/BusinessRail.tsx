@@ -1,4 +1,5 @@
 import type { Business } from '../../types'
+import { LazyImage } from '../ui/LazyImage'
 
 interface BusinessRailProps {
   businesses: Business[]
@@ -21,11 +22,12 @@ export function BusinessRail({ businesses, selectedId, onSelect }: BusinessRailP
                 : 'border-border bg-surface hover:border-primary/30'
             }`}
           >
-            <div className={`h-20 bg-gradient-to-br ${biz.color} flex items-center justify-center`}>
-              <span className="text-4xl drop-shadow-sm" aria-hidden="true">
-                {biz.image}
-              </span>
-            </div>
+            <LazyImage
+              src={biz.image}
+              alt={biz.name}
+              className="h-20 w-full"
+              placeholderClassName={biz.color}
+            />
             <div className="p-2.5">
               <p className="text-sm font-bold text-text-primary leading-tight line-clamp-1">
                 {biz.name}

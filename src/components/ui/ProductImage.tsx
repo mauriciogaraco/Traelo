@@ -1,4 +1,5 @@
 import type { Category } from '../../types'
+import { LazyImage } from './LazyImage'
 
 const categoryGradient: Record<Category, string> = {
   Alimentos: 'from-amber-100 to-orange-50',
@@ -10,23 +11,43 @@ const categoryGradient: Record<Category, string> = {
 }
 
 interface ProductImageProps {
-  emoji: string
   category: Category
   alt: string
+  /** Emoji de respaldo si no hay foto. */
+  emoji?: string
+  /** Foto real (URL importada). Si existe, se usa con carga diferida. */
+  photo?: string
   size?: 'sm' | 'md' | 'lg'
   className?: string
+  /** Cargar la imagen de inmediato (above the fold). */
+  eager?: boolean
 }
 
 const emojiSize = { sm: 'text-3xl', md: 'text-5xl', lg: 'text-8xl' }
 
 export function ProductImage({
-  emoji,
   category,
   alt,
+  emoji,
+  photo,
   size = 'md',
   className = '',
+  eager = false,
 }: ProductImageProps) {
   const gradient = categoryGradient[category] ?? 'from-stone-100 to-stone-50'
+
+  if (photo) {
+    return (
+      <LazyImage
+        src={photo}
+        alt={alt}
+        eager={eager}
+        placeholderClassName={gradient}
+        className={className}
+      />
+    )
+  }
+
   return (
     <div
       className={`relative flex items-center justify-center bg-gradient-to-br ${gradient} overflow-hidden ${className}`}

@@ -27,6 +27,7 @@ export function ProductCard({ product }: { product: Product }) {
       <div className="relative">
         <ProductImage
           emoji={product.image}
+          photo={product.photo}
           category={product.category}
           alt={product.name}
           size="md"

@@ -37,9 +37,11 @@ export function ProductDetailPage() {
       <div className="relative">
         <ProductImage
           emoji={product.image}
+          photo={product.photo}
           category={product.category}
           alt={product.name}
           size="lg"
+          eager
           className="w-full aspect-square rounded-b-4xl"
         />
         <button

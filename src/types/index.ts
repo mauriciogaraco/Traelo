@@ -12,9 +12,9 @@ export interface Business {
   id: string
   name: string
   description: string
-  /** Emoji usado como imagen ligera (sin descargas en redes lentas) */
+  /** Imagen del negocio (URL importada o ruta). */
   image: string
-  /** Tailwind gradient classes para el fondo de la tarjeta */
+  /** Tailwind gradient classes para el placeholder mientras carga la imagen. */
   color: string
 }
 
@@ -26,8 +26,10 @@ export interface Product {
   category: Category
   shortDescription: string
   longDescription: string
-  /** Emoji usado como imagen ligera */
+  /** Emoji de respaldo (se muestra si no hay foto). */
   image: string
+  /** Foto real del producto (URL importada). Opcional. */
+  photo?: string
   price: number
   stockStatus: StockStatus
 }

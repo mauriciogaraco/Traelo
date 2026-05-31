@@ -81,7 +81,7 @@ export function CheckoutPage() {
           <div className="bg-surface border border-border rounded-3xl p-4 space-y-3">
             {items.map(({ product, quantity }) => (
               <div key={product.id} className="flex items-center gap-3">
-                <ProductImage emoji={product.image} category={product.category} alt={product.name} size="sm" className="w-11 h-11 rounded-xl flex-shrink-0" />
+                <ProductImage emoji={product.image} photo={product.photo} category={product.category} alt={product.name} size="sm" className="w-11 h-11 rounded-xl flex-shrink-0" />
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-bold text-text-primary line-clamp-1">{product.name}</p>
                   <p className="text-xs text-text-secondary">x {quantity}</p>

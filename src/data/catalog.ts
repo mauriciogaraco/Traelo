@@ -1,4 +1,30 @@
 import type { Business, Product, Category } from '../types'
+import BLogo from '../assets/images/business/mercado.webp'
+import BLogo2 from '../assets/images/business/electrodomésticos.jpg'
+import BLogo3 from '../assets/images/business/restaurant.jpg'
+import Arroz from '../assets/images/products/arroz.webp'
+import Aceite from '../assets/images/products/aceite.jpg'
+import Frijoles from '../assets/images/products/frijoles.webp'
+import Cafe from '../assets/images/products/café.avif'
+import Refresco from '../assets/images/products/refresco.avif'
+import Agua from '../assets/images/products/agua.webp'
+import Jabón from '../assets/images/products/jabón.webp'
+import Pasta from '../assets/images/products/pasta.jpg'
+import Detergente from '../assets/images/products/detergente.jpg'
+import sal from '../assets/images/products/sal.webp'
+import Ventilador from '../assets/images/products/ventilador.jpg'
+import Olla from '../assets/images/products/olla.webp'
+import Licuadora from '../assets/images/products/licuadora.webp'
+import Sartenes from '../assets/images/products/sartenes.webp'
+import Bombillo from '../assets/images/products/bombillo.webp'
+import Extension from '../assets/images/products/extension.jpg'
+import Congris from '../assets/images/products/congris.jpg'
+import Pollo from '../assets/images/products/pollo.jpg'
+import Pizza from '../assets/images/products/pizza.jpg'
+import Hamburguesa from '../assets/images/products/hamburguesa.jpg'
+import Spaguetti from '../assets/images/products/espaguettis.jpg'
+import Flan from '../assets/images/products/flan.jpg'
+import Sandwich from '../assets/images/products/sandwich.jpg'
 
 export const categories: Category[] = [
   'Alimentos',
@@ -23,21 +49,21 @@ export const businesses: Business[] = [
     id: 'bodega-central',
     name: 'La Bodega Central',
     description: 'Alimentos, bebidas y productos del hogar. Lo esencial del día a día.',
-    image: '🛒',
+    image: BLogo,
     color: 'from-amber-100 to-orange-50',
   },
   {
     id: 'electrohogar',
     name: 'ElectroHogar',
     description: 'Electrodomésticos y artículos para tu casa, con garantía.',
-    image: '🏠',
+    image: BLogo2,
     color: 'from-sky-100 to-cyan-50',
   },
   {
     id: 'el-patio',
     name: 'Restaurante El Patio',
     description: 'Comida criolla recién hecha, lista para disfrutar en casa.',
-    image: '🍲',
+    image: BLogo3,
     color: 'from-rose-100 to-orange-50',
   },
 ]
@@ -54,6 +80,7 @@ export const products: Product[] = [
     longDescription:
       'Arroz blanco de grano largo seleccionado, sin impurezas y de cocción uniforme. Bolsa de 1 kg sellada para mayor frescura. Rinde aproximadamente 4 porciones por libra.',
     image: '🍚',
+    photo: Arroz,
     price: 320,
     stockStatus: 'disponible',
   },
@@ -67,9 +94,11 @@ export const products: Product[] = [
     longDescription:
       'Aceite vegetal 100% refinado, ideal para frituras, salteados y aderezos. Botella de 1 litro con tapa de seguridad. Sin colesterol.',
     image: '🫒',
+    photo: Aceite,
     price: 780,
     stockStatus: 'disponible',
   },
+
   {
     id: 'bc-003',
     name: 'Frijoles negros 1 kg',
@@ -80,6 +109,7 @@ export const products: Product[] = [
     longDescription:
       'Frijoles negros de primera calidad, limpios y listos para cocinar. Ricos en proteína y fibra. Bolsa de 1 kg.',
     image: '🫘',
+    photo: Frijoles,
     price: 450,
     stockStatus: 'pocas',
   },
@@ -93,6 +123,7 @@ export const products: Product[] = [
     longDescription:
       'Café molido de tueste natural, aroma intenso y cuerpo equilibrado. Paquete de 250 g. Perfecto para la colada de la mañana.',
     image: '☕',
+    photo: Cafe,
     price: 540,
     stockStatus: 'disponible',
   },
@@ -106,6 +137,7 @@ export const products: Product[] = [
     longDescription:
       'Refresco de cola carbonatado en botella de 2 litros. Sabor clásico y refrescante. Ideal para compartir en familia.',
     image: '🥤',
+    photo: Refresco,
     price: 290,
     stockStatus: 'disponible',
   },
@@ -119,6 +151,7 @@ export const products: Product[] = [
     longDescription:
       'Agua purificada por osmosis inversa, sin sabor ni olor. Botellón de 5 litros con tapón de seguridad. Ideal para beber y cocinar.',
     image: '💧',
+    photo: Agua,
     price: 180,
     stockStatus: 'disponible',
   },
@@ -132,6 +165,7 @@ export const products: Product[] = [
     longDescription:
       'Pack de 3 jabones de tocador con glicerina y extractos naturales. Aroma fresco y duradero, apto para piel sensible. 100 g por unidad.',
     image: '🧼',
+    photo: Jabón,
     price: 260,
     stockStatus: 'disponible',
   },
@@ -145,6 +179,7 @@ export const products: Product[] = [
     longDescription:
       'Pasta dental con flúor y acción antibacteriana. Protege contra caries y mal aliento. Tubo de 100 ml para uso familiar.',
     image: '🪥',
+    photo: Pasta,
     price: 210,
     stockStatus: 'pocas',
   },
@@ -158,6 +193,7 @@ export const products: Product[] = [
     longDescription:
       'Detergente en polvo de gran poder limpiador para máquina y lavado a mano. Cuida los colores y deja fragancia fresca. Rinde hasta 30 lavados.',
     image: '🧺',
+    photo: Detergente,
     price: 560,
     stockStatus: 'disponible',
   },
@@ -171,6 +207,7 @@ export const products: Product[] = [
     longDescription:
       'Sal de mesa refinada y enriquecida con yodo. Grano fino que fluye con facilidad. Bolsa de 1 kg con cierre.',
     image: '🧂',
+    photo: sal,
     price: 90,
     stockStatus: 'agotado',
   },
@@ -186,6 +223,7 @@ export const products: Product[] = [
     longDescription:
       'Ventilador de mesa de 12" con motor silencioso de bajo consumo, 3 velocidades y oscilación automática. Rejilla desmontable para fácil limpieza. 110V.',
     image: '🌀',
+    photo: Ventilador,
     price: 8500,
     stockStatus: 'disponible',
   },
@@ -199,6 +237,7 @@ export const products: Product[] = [
     longDescription:
       'Olla a presión de acero inoxidable de 4 litros con doble válvula de seguridad. Ahorra hasta un 70% de tiempo y energía. Compatible con todas las cocinas.',
     image: '🍲',
+    photo: Olla,
     price: 11200,
     stockStatus: 'disponible',
   },
@@ -212,6 +251,7 @@ export const products: Product[] = [
     longDescription:
       'Licuadora con vaso de vidrio de 1.5 L, motor de 500W, 5 velocidades y función pulso. Cuchillas de acero desmontables. 110V.',
     image: '🥤',
+    photo: Licuadora,
     price: 7400,
     stockStatus: 'pocas',
   },
@@ -251,6 +291,7 @@ export const products: Product[] = [
     longDescription:
       'Set de 3 sartenes antiadherentes de aluminio (20, 24 y 28 cm). Recubrimiento de 3 capas libre de PFOA y mango termoaislante.',
     image: '🍳',
+    photo: Sartenes,
     price: 6900,
     stockStatus: 'disponible',
   },
@@ -264,6 +305,7 @@ export const products: Product[] = [
     longDescription:
       'Pack de 4 bombillos LED de 9W (equivalentes a 60W). Luz blanca neutra, casquillo E27, hasta 15.000 horas de vida útil.',
     image: '🔆',
+    photo: Bombillo,
     price: 1500,
     stockStatus: 'pocas',
   },
@@ -277,6 +319,7 @@ export const products: Product[] = [
     longDescription:
       'Extensión de 3 metros con 4 tomas, 2 puertos USB y protector contra sobretensiones. Cable de cobre, interruptor con luz indicadora.',
     image: '🔌',
+    photo: Extension,
     price: 2300,
     stockStatus: 'disponible',
   },
@@ -305,6 +348,7 @@ export const products: Product[] = [
     longDescription:
       'Generosa ración de arroz congrí acompañado de masas de cerdo asado, yuca con mojo y ensalada fresca. El plato criollo de la casa.',
     image: '🍛',
+    photo: Congris,
     price: 650,
     stockStatus: 'disponible',
   },
@@ -318,6 +362,7 @@ export const products: Product[] = [
     longDescription:
       'Cuarto de pollo asado al horno, marinado con especias de la casa, acompañado de papas doradas y arroz blanco.',
     image: '🍗',
+    photo: Pollo,
     price: 720,
     stockStatus: 'disponible',
   },
@@ -331,6 +376,7 @@ export const products: Product[] = [
     longDescription:
       'Pizza mediana de masa artesanal con abundante queso gratinado y salsa de tomate natural. Lista para compartir.',
     image: '🍕',
+    photo: Pizza,
     price: 580,
     stockStatus: 'disponible',
   },
@@ -344,6 +390,7 @@ export const products: Product[] = [
     longDescription:
       'Hamburguesa de carne de res a la parrilla con queso fundido, lechuga, tomate y salsa especial. Incluye papas fritas.',
     image: '🍔',
+    photo: Hamburguesa,
     price: 540,
     stockStatus: 'pocas',
   },
@@ -357,6 +404,7 @@ export const products: Product[] = [
     longDescription:
       'Espaguetis al dente bañados en salsa boloñesa casera con carne molida y un toque de queso. Porción individual abundante.',
     image: '🍝',
+    photo: Spaguetti,
     price: 490,
     stockStatus: 'disponible',
   },
@@ -370,35 +418,12 @@ export const products: Product[] = [
     longDescription:
       'Clásico sándwich cubano con jamón, cerdo asado, queso, pepinillos y mostaza, en pan tostado a la plancha.',
     image: '🥪',
+    photo: Sandwich,
     price: 380,
     stockStatus: 'disponible',
   },
-  {
-    id: 'ep-007',
-    name: 'Ensalada fresca',
-    businessId: 'el-patio',
-    businessName: 'Restaurante El Patio',
-    category: 'Comida',
-    shortDescription: 'Vegetales de temporada.',
-    longDescription:
-      'Ensalada fresca de lechuga, tomate, pepino y zanahoria con aderezo ligero. La opción saludable de la carta.',
-    image: '🥗',
-    price: 260,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'ep-008',
-    name: 'Jugo natural 500 ml',
-    businessId: 'el-patio',
-    businessName: 'Restaurante El Patio',
-    category: 'Bebidas',
-    shortDescription: 'Fruta del día.',
-    longDescription:
-      'Jugo natural recién exprimido de la fruta del día (mango, guayaba o piña según disponibilidad). Vaso de 500 ml.',
-    image: '🧃',
-    price: 200,
-    stockStatus: 'disponible',
-  },
+ 
+
   {
     id: 'ep-009',
     name: 'Flan de la casa',
@@ -409,6 +434,7 @@ export const products: Product[] = [
     longDescription:
       'Flan casero de huevo con caramelo, suave y cremoso. El cierre perfecto para tu pedido.',
     image: '🍮',
+    photo: Flan,
     price: 220,
     stockStatus: 'pocas',
   },
