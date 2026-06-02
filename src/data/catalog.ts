@@ -255,32 +255,7 @@ export const products: Product[] = [
     price: 7400,
     stockStatus: 'pocas',
   },
-  {
-    id: 'eh-004',
-    name: 'Hervidor eléctrico 1.7 L',
-    businessId: 'electrohogar',
-    businessName: 'ElectroHogar',
-    category: 'Electrodomésticos',
-    shortDescription: 'Apagado automático.',
-    longDescription:
-      'Hervidor eléctrico de acero inoxidable de 1.7 L. Hierve en menos de 3 minutos, con apagado automático y protección contra funcionamiento en seco. 1500W.',
-    image: '🫖',
-    price: 5200,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'eh-005',
-    name: 'Lámpara LED de mesa',
-    businessId: 'electrohogar',
-    businessName: 'ElectroHogar',
-    category: 'Hogar',
-    shortDescription: 'Brazo flexible, USB.',
-    longDescription:
-      'Lámpara LED de escritorio con 3 modos de luz y 5 niveles de brillo. Brazo flexible y puerto USB integrado. Bajo consumo: 8W.',
-    image: '💡',
-    price: 3600,
-    stockStatus: 'disponible',
-  },
+
   {
     id: 'eh-006',
     name: 'Set de sartenes (3 pzs)',
@@ -323,19 +298,7 @@ export const products: Product[] = [
     price: 2300,
     stockStatus: 'disponible',
   },
-  {
-    id: 'eh-009',
-    name: 'Plancha eléctrica',
-    businessId: 'electrohogar',
-    businessName: 'ElectroHogar',
-    category: 'Electrodomésticos',
-    shortDescription: 'Suela cerámica + vapor.',
-    longDescription:
-      'Plancha con suela de cerámica antiadherente y sistema de vapor. Control de temperatura ajustable y función autolimpieza. 1200W.',
-    image: '🧷',
-    price: 4800,
-    stockStatus: 'agotado',
-  },
+
 
   // ───────────────── Restaurante El Patio ─────────────────
   {

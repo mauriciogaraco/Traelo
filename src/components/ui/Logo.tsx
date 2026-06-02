@@ -5,8 +5,8 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg'
   /** Mostrar el texto "Tráelo" junto a la marca. */
   showWordmark?: boolean
-  /** Usar un cohete como acento sobre la "a" (en lugar de la tilde). */
-  rocketAccent?: boolean
+  /** Usar un avión de papel (con estela) como acento sobre la "a", en vez de la tilde. */
+  planeAccent?: boolean
   className?: string
 }
 
@@ -21,17 +21,24 @@ const wordSize = {
   lg: 'text-5xl',
 }
 
-function RocketAccent() {
+/**
+ * Acento en forma de avión de papel con puntos suspensivos detrás (estela de
+ * vuelo). Va sobre la "a", inclinado, para que se lea como la tilde de "Tráelo".
+ */
+function PlaneAccent() {
   return (
     <span
-      className="absolute left-1/2 -translate-x-1/2 -top-[0.34em] w-[0.5em] h-[0.5em] -rotate-[12deg] text-primary"
+      className="absolute left-1/2 -top-[0.46em] flex items-center gap-[0.05em] text-primary"
+      style={{ transform: 'translateX(-46%) rotate(-16deg)' }}
       aria-hidden="true"
     >
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+      {/* puntos suspensivos / estela */}
+      <span className="w-[0.07em] h-[0.07em] rounded-full bg-current opacity-40" />
+      <span className="w-[0.1em] h-[0.1em] rounded-full bg-current opacity-60" />
+      <span className="w-[0.13em] h-[0.13em] rounded-full bg-current opacity-80" />
+      {/* avión de papel */}
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-[0.5em] h-[0.5em] ml-[0.04em]">
+        <path d="M21.7 3.3 2.5 11.1c-.9.4-.9 1.6 0 1.9l4.8 1.6 1.8 5.8c.2.7 1.1.9 1.6.3l2.7-2.9 4.7 3.4c.6.4 1.5.1 1.7-.6l3.4-15.6c.2-1-.8-1.9-1.5-1.7Z" />
       </svg>
     </span>
   )
@@ -40,7 +47,7 @@ function RocketAccent() {
 export function Logo({
   size = 'md',
   showWordmark = true,
-  rocketAccent = true,
+  planeAccent = true,
   className = '',
 }: LogoProps) {
   return (
@@ -56,12 +63,12 @@ export function Logo({
       />
       {showWordmark && (
         <span className={`font-brand text-primary leading-none pb-1 ${wordSize[size]}`}>
-          {rocketAccent ? (
+          {planeAccent ? (
             <>
               Tr
               <span className="relative inline-block">
                 a
-                <RocketAccent />
+                <PlaneAccent />
               </span>
               elo
             </>

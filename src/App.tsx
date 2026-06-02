@@ -3,6 +3,7 @@ import { useEffect, type ReactNode } from 'react'
 import { AddressProvider } from './context/AddressContext'
 import { CartProvider } from './context/CartContext'
 import { OrdersProvider } from './context/OrdersContext'
+import { ToastProvider } from './context/ToastContext'
 import { AppShell } from './components/layout/AppShell'
 import { HomePage } from './pages/HomePage'
 import { ProductDetailPage } from './pages/ProductDetailPage'
@@ -12,11 +13,13 @@ import { OrdersPage } from './pages/OrdersPage'
 
 function Providers({ children }: { children: ReactNode }) {
   return (
-    <AddressProvider>
-      <OrdersProvider>
-        <CartProvider>{children}</CartProvider>
-      </OrdersProvider>
-    </AddressProvider>
+    <ToastProvider>
+      <AddressProvider>
+        <OrdersProvider>
+          <CartProvider>{children}</CartProvider>
+        </OrdersProvider>
+      </AddressProvider>
+    </ToastProvider>
   )
 }
 

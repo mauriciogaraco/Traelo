@@ -1,19 +1,15 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
-import type { Address, CartItem, Order } from '../types'
+import type { Order } from '../types'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../lib/storage'
 
 interface OrdersContextValue {
   orders: Order[]
-  createOrder: (items: CartItem[], address: Address) => Order
+  /** Persiste un pedido ya construido (ver makeOrder en lib/order). */
+  saveOrder: (order: Order) => void
   markCompleted: (orderId: string) => void
 }
 
 const OrdersContext = createContext<OrdersContextValue | null>(null)
-
-function generateOrderId(): string {
-  // Pedido #XXXX — 4 dígitos legibles
-  return Math.floor(1000 + Math.random() * 9000).toString()
-}
 
 export function OrdersProvider({ children }: { children: ReactNode }) {
   const [orders, setOrders] = useState<Order[]>(() =>
@@ -24,17 +20,8 @@ export function OrdersProvider({ children }: { children: ReactNode }) {
     writeStorage(STORAGE_KEYS.orders, orders)
   }, [orders])
 
-  function createOrder(items: CartItem[], address: Address): Order {
-    const order: Order = {
-      id: generateOrderId(),
-      date: new Date().toISOString(),
-      items,
-      total: items.reduce((sum, i) => sum + i.product.price * i.quantity, 0),
-      status: 'pendiente',
-      address,
-    }
+  function saveOrder(order: Order) {
     setOrders((prev) => [order, ...prev])
-    return order
   }
 
   function markCompleted(orderId: string) {
@@ -44,7 +31,7 @@ export function OrdersProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <OrdersContext.Provider value={{ orders, createOrder, markCompleted }}>
+    <OrdersContext.Provider value={{ orders, saveOrder, markCompleted }}>
       {children}
     </OrdersContext.Provider>
   )
