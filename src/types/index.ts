@@ -9,6 +9,7 @@ export type Category =
   | 'Bebidas'
   | 'Aseo'
   | 'Hogar'
+  | 'Confituras'
   | 'Comida'
 
 export interface Business {
