@@ -6,6 +6,7 @@ import { CategoryRail } from '../components/home/CategoryRail'
 import { ProductCard } from '../components/product/ProductCard'
 import { Pagination } from '../components/ui/Pagination'
 import { Logo } from '../components/ui/Logo'
+import { PaymentNote } from '../components/ui/PaymentNote'
 import type { Category } from '../types'
 
 const PAGE_SIZE = 20
@@ -112,6 +113,11 @@ export function HomePage() {
             <StartHint />
           ) : (
             <>
+              {activeBiz?.paymentNote && (
+                <div className="mb-3 rounded-2xl overflow-hidden border border-amber-100">
+                  <PaymentNote note={activeBiz.paymentNote} />
+                </div>
+              )}
               <SectionTitle
                 title={resultsTitle}
                 action={

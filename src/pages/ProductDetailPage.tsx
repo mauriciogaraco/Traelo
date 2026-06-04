@@ -6,6 +6,9 @@ import { ProductImage } from '../components/ui/ProductImage'
 import { Button } from '../components/ui/Button'
 import { useCart } from '../context/CartContext'
 import { formatAmount } from '../lib/format'
+import { hasFormato, packSize } from '../lib/cart'
+import { businessById } from '../data/catalog'
+import { PaymentNote } from '../components/ui/PaymentNote'
 
 export function ProductDetailPage() {
   const { id } = useParams<{ id: string }>()
@@ -31,6 +34,13 @@ export function ProductDetailPage() {
     addItem(product!, qty)
   }
 
+  // Volver: usa el historial si existe, si no (entrada directa/recarga) va al inicio.
+  function goBack() {
+    const idx = (window.history.state?.idx as number | undefined) ?? 0
+    if (idx > 0) navigate(-1)
+    else navigate('/')
+  }
+
   return (
     <div className="animate-fade-in">
       {/* Imagen grande con botón volver */}
@@ -45,13 +55,14 @@ export function ProductDetailPage() {
           className="w-full aspect-square rounded-b-4xl"
         />
         <button
-          onClick={() => navigate(-1)}
-          className="absolute top-4 left-4 w-10 h-10 rounded-full bg-surface/90 backdrop-blur shadow-soft flex items-center justify-center text-text-primary"
+          onClick={goBack}
+          className="absolute top-4 left-4 z-10 h-10 pl-2.5 pr-3.5 rounded-full bg-surface/95 backdrop-blur border border-border shadow-card flex items-center gap-1.5 text-text-primary font-bold text-sm active:scale-95 transition-transform"
           aria-label="Volver"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
+          Volver
         </button>
         <div className="absolute top-4 right-4">
           <StockBadge status={product.stockStatus} size="md" />
@@ -71,8 +82,24 @@ export function ProductDetailPage() {
 
         <div className="flex items-baseline gap-1.5 mt-3">
           <span className="text-3xl font-bold text-primary">{formatAmount(product.price)}</span>
-          <span className="text-sm font-semibold text-text-secondary">CUP</span>
+          <span className="text-sm font-semibold text-text-secondary">
+            CUP{hasFormato(product) ? ' / unidad' : ''}
+          </span>
         </div>
+        {hasFormato(product) && (
+          <p className="flex items-center gap-2 mt-2">
+            <span className="px-2 py-0.5 rounded-md bg-primary/10 text-primary text-xs font-bold">
+              Caja × {packSize(product)}
+            </span>
+            <span className="text-sm font-semibold text-text-secondary">Se vende por caja completa</span>
+          </p>
+        )}
+
+        {businessById(product.businessId)?.paymentNote && (
+          <div className="mt-4 rounded-2xl overflow-hidden border border-amber-100">
+            <PaymentNote note={businessById(product.businessId)!.paymentNote!} />
+          </div>
+        )}
 
         <div className="mt-5">
           <h2 className="text-sm font-bold text-text-primary mb-1.5">Descripción</h2>
@@ -82,7 +109,16 @@ export function ProductDetailPage() {
         {/* Cantidad */}
         {!isOut && (
           <div className="flex items-center justify-between mt-6 bg-surface border border-border rounded-2xl p-3">
-            <span className="text-sm font-bold text-text-primary">Cantidad</span>
+            <div>
+              <span className="text-sm font-bold text-text-primary">
+                {hasFormato(product) ? 'Cajas' : 'Cantidad'}
+              </span>
+              {hasFormato(product) && (
+                <span className="block text-[11px] font-semibold text-text-secondary">
+                  = {qty * packSize(product)} unidades
+                </span>
+              )}
+            </div>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setQty((q) => Math.max(1, q - 1))}

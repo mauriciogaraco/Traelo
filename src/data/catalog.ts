@@ -17,6 +17,11 @@ import Pollo from '../assets/images/products/pollo.jpg'
 
 export const categories: Category[] = ['Alimentos', 'Bebidas', 'Aseo', 'Hogar', 'Comida']
 
+/** Busca un negocio por id (para leer reglas como paymentNote). */
+export function businessById(id: string) {
+  return businesses.find((b) => b.id === id)
+}
+
 export const categoryEmoji: Record<Category, string> = {
   Alimentos: '🥫',
   Bebidas: '🥤',
@@ -32,6 +37,7 @@ export const businesses: Business[] = [
     description: 'Mercadito: alimentos, bebidas y aseo del día a día.',
     image: BMercado,
     color: 'from-amber-100 to-orange-50',
+    paymentNote: 'Solo se aceptan billetes de 50 CUP en adelante.',
   },
   {
     id: 'el-patio',
@@ -53,7 +59,7 @@ export const products: Product[] = [
   // ───────────────── La Bodega Central (mercadito) ─────────────────
   {
     id: 'bc-001',
-    name: 'Arroz grano largo 1 kg',
+    name: 'Avena',
     businessId: 'bodega-central',
     businessName: 'La Bodega Central',
     category: 'Alimentos',
@@ -116,6 +122,20 @@ export const products: Product[] = [
     photo: Jabon,
     price: 260,
     stockStatus: 'agotado',
+  },
+  {
+    id: 'bc-007',
+    name: 'Cerveza (caja de 24)',
+    businessId: 'bodega-central',
+    businessName: 'La Bodega Central',
+    category: 'Bebidas',
+    shortDescription: 'Se vende por caja de 24.',
+    longDescription:
+      'Cerveza nacional en lata. Se vende por caja completa de 24 unidades. El precio mostrado es por unidad.',
+    image: '🍺',
+    price: 280,
+    formato: 24,
+    stockStatus: 'disponible',
   },
   {
     id: 'bc-006',

@@ -9,6 +9,7 @@ import {
 } from 'react'
 import type { CartItem, Product } from '../types'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../lib/storage'
+import { lineTotal } from '../lib/cart'
 
 interface CartContextValue {
   items: CartItem[]
@@ -70,7 +71,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   )
 
   const subtotal = useMemo(
-    () => items.reduce((sum, i) => sum + i.product.price * i.quantity, 0),
+    () => items.reduce((sum, i) => sum + lineTotal(i), 0),
     [items]
   )
 

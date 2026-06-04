@@ -4,8 +4,11 @@ import { ProductImage } from '../components/ui/ProductImage'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { MessagingFeeRow } from '../components/ui/MessagingFeeRow'
+import { PaymentNote } from '../components/ui/PaymentNote'
 import { formatAmount, formatPrice } from '../lib/format'
 import { groupByBusiness } from '../lib/order'
+import { hasFormato, lineTotal, packSize, unitsOf } from '../lib/cart'
+import { businessById } from '../data/catalog'
 import type { CartItem } from '../types'
 
 export function CartPage() {
@@ -48,6 +51,10 @@ export function CartPage() {
               <p className="text-sm font-bold text-text-primary flex-1 truncate">{group.businessName}</p>
               <span className="text-xs font-semibold text-text-secondary">{formatPrice(group.subtotal)}</span>
             </div>
+
+            {businessById(group.businessId)?.paymentNote && (
+              <PaymentNote note={businessById(group.businessId)!.paymentNote!} />
+            )}
 
             <div className="p-3 space-y-3">
               {group.items.map((item) => (
@@ -105,7 +112,7 @@ function CartRow({
   onRemove: () => void
   onOpen: () => void
 }) {
-  const { product, quantity } = item
+  const { product } = item
   return (
     <div className="flex gap-3">
       <button onClick={onOpen} className="flex-shrink-0">
@@ -119,8 +126,13 @@ function CartRow({
         >
           {product.name}
         </button>
+        {hasFormato(product) && (
+          <p className="text-[11px] font-semibold text-text-secondary mt-0.5">
+            {unitsOf(item)} u · caja × {packSize(product)} · {formatAmount(product.price)}/u
+          </p>
+        )}
         <p className="text-base font-bold text-primary mt-auto">
-          {formatAmount(product.price * quantity)}{' '}
+          {formatAmount(lineTotal(item))}{' '}
           <span className="text-[11px] font-semibold text-text-secondary">CUP</span>
         </p>
       </div>
@@ -142,8 +154,8 @@ function CartRow({
               <path strokeLinecap="round" d="M5 12h14" />
             </svg>
           </button>
-          <span className="w-6 text-center text-sm font-bold">{quantity}</span>
-          <button onClick={onInc} className="w-8 h-8 flex items-center justify-center text-primary" aria-label="Aumentar">
+          <span className="min-w-9 px-1 text-center text-sm font-bold">{unitsOf(item)}</span>
+          <button onClick={onInc} className="w-8 h-8 flex items-center justify-center text-primary" aria-label={hasFormato(product) ? 'Añadir una caja' : 'Aumentar'}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" d="M12 5v14M5 12h14" />
             </svg>

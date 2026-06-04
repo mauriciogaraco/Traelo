@@ -1,4 +1,5 @@
 import type { Address, CartItem, Order } from '../types'
+import { lineTotal } from './cart'
 
 export interface BusinessGroup {
   businessId: string
@@ -18,7 +19,7 @@ export function groupByBusiness(items: CartItem[]): BusinessGroup[] {
       map.set(businessId, group)
     }
     group.items.push(item)
-    group.subtotal += item.product.price * item.quantity
+    group.subtotal += lineTotal(item)
   }
   return [...map.values()]
 }
@@ -34,7 +35,7 @@ export function makeOrder(items: CartItem[], address: Address): Order {
     id: generateOrderId(),
     date: new Date().toISOString(),
     items: items.map((i) => ({ ...i })),
-    total: items.reduce((sum, i) => sum + i.product.price * i.quantity, 0),
+    total: items.reduce((sum, i) => sum + lineTotal(i), 0),
     status: 'pendiente',
     address,
   }
