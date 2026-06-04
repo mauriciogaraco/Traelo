@@ -6,7 +6,7 @@ import { ProductImage } from '../components/ui/ProductImage'
 import { Button } from '../components/ui/Button'
 import { useCart } from '../context/CartContext'
 import { formatAmount } from '../lib/format'
-import { hasFormato, packSize } from '../lib/cart'
+import { hasFormato, hasOptions, packSize } from '../lib/cart'
 import { businessById } from '../data/catalog'
 import { PaymentNote } from '../components/ui/PaymentNote'
 
@@ -15,6 +15,7 @@ export function ProductDetailPage() {
   const navigate = useNavigate()
   const { addItem } = useCart()
   const [qty, setQty] = useState(1)
+  const [option, setOption] = useState<string | null>(null)
 
   const product = products.find((p) => p.id === id)
 
@@ -29,9 +30,12 @@ export function ProductDetailPage() {
   }
 
   const isOut = product.stockStatus === 'agotado'
+  const needsOption = hasOptions(product)
+  const canAdd = !isOut && (!needsOption || option !== null)
 
   function add() {
-    addItem(product!, qty)
+    if (!canAdd) return
+    addItem(product!, qty, option ?? undefined)
   }
 
   // Volver: usa el historial si existe, si no (entrada directa/recarga) va al inicio.
@@ -106,6 +110,37 @@ export function ProductDetailPage() {
           <p className="text-[15px] text-text-secondary leading-relaxed">{product.longDescription}</p>
         </div>
 
+        {/* Selector de tipo */}
+        {needsOption && !isOut && (
+          <div className="mt-5">
+            <div className="flex items-center gap-2 mb-2">
+              <h2 className="text-sm font-bold text-text-primary">Elige el tipo</h2>
+              {option === null && (
+                <span className="text-[11px] font-bold text-warning">Requerido</span>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {product.options!.map((opt) => {
+                const active = option === opt
+                return (
+                  <button
+                    key={opt}
+                    onClick={() => setOption(opt)}
+                    aria-pressed={active}
+                    className={`px-3.5 py-2 rounded-xl text-sm font-bold border transition-all active:scale-95 ${
+                      active
+                        ? 'bg-gradient-primary text-white border-transparent shadow-btn-primary'
+                        : 'bg-surface text-text-primary border-border hover:border-primary/40'
+                    }`}
+                  >
+                    {opt}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Cantidad */}
         {!isOut && (
           <div className="flex items-center justify-between mt-6 bg-surface border border-border rounded-2xl p-3">
@@ -152,6 +187,10 @@ export function ProductDetailPage() {
         {isOut ? (
           <Button size="lg" fullWidth disabled>
             Producto agotado
+          </Button>
+        ) : needsOption && option === null ? (
+          <Button size="lg" fullWidth disabled>
+            Elige un tipo para continuar
           </Button>
         ) : (
           <div className="grid grid-cols-2 gap-3">

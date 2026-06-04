@@ -9,15 +9,17 @@ import {
 } from 'react'
 import type { CartItem, Product } from '../types'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../lib/storage'
-import { lineTotal } from '../lib/cart'
+import { lineTotal, lineId, itemLineId } from '../lib/cart'
 
 interface CartContextValue {
   items: CartItem[]
-  addItem: (product: Product, quantity?: number) => void
-  removeItem: (productId: string) => void
-  setQuantity: (productId: string, quantity: number) => void
+  /** Añade un producto. `option` es el tipo/sabor elegido (si aplica). */
+  addItem: (product: Product, quantity?: number, option?: string) => void
+  /** Operaciones por id de línea (usa lineId / itemLineId de lib/cart). */
+  removeItem: (lineKey: string) => void
+  setQuantity: (lineKey: string, quantity: number) => void
   clearCart: () => void
-  getQuantity: (productId: string) => number
+  getQuantity: (lineKey: string) => number
   subtotal: number
   total: number
   itemCount: number
@@ -34,30 +36,31 @@ export function CartProvider({ children }: { children: ReactNode }) {
     writeStorage(STORAGE_KEYS.cart, items)
   }, [items])
 
-  const addItem = useCallback((product: Product, quantity = 1) => {
+  const addItem = useCallback((product: Product, quantity = 1, option?: string) => {
+    const key = lineId(product.id, option)
     setItems((prev) => {
-      const existing = prev.find((i) => i.product.id === product.id)
+      const existing = prev.find((i) => itemLineId(i) === key)
       if (existing) {
         return prev.map((i) =>
-          i.product.id === product.id ? { ...i, quantity: i.quantity + quantity } : i
+          itemLineId(i) === key ? { ...i, quantity: i.quantity + quantity } : i
         )
       }
-      return [...prev, { product, quantity }]
+      return [...prev, { product, quantity, option }]
     })
   }, [])
 
-  const removeItem = useCallback((productId: string) => {
-    setItems((prev) => prev.filter((i) => i.product.id !== productId))
+  const removeItem = useCallback((lineKey: string) => {
+    setItems((prev) => prev.filter((i) => itemLineId(i) !== lineKey))
   }, [])
 
   const setQuantity = useCallback(
-    (productId: string, quantity: number) => {
+    (lineKey: string, quantity: number) => {
       if (quantity <= 0) {
-        removeItem(productId)
+        removeItem(lineKey)
         return
       }
       setItems((prev) =>
-        prev.map((i) => (i.product.id === productId ? { ...i, quantity } : i))
+        prev.map((i) => (itemLineId(i) === lineKey ? { ...i, quantity } : i))
       )
     },
     [removeItem]
@@ -66,7 +69,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const clearCart = useCallback(() => setItems([]), [])
 
   const getQuantity = useCallback(
-    (productId: string) => items.find((i) => i.product.id === productId)?.quantity ?? 0,
+    (lineKey: string) => items.find((i) => itemLineId(i) === lineKey)?.quantity ?? 0,
     [items]
   )
 

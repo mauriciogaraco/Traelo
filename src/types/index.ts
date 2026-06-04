@@ -8,7 +8,6 @@ export type Category =
   | 'Alimentos'
   | 'Bebidas'
   | 'Aseo'
-  | 'Hogar'
   | 'Confituras'
   | 'Comida'
 
@@ -44,12 +43,19 @@ export interface Product {
    * Por defecto (undefined) el producto se vende por unidad.
    */
   formato?: number
+  /**
+   * Tipos/sabores disponibles (ej: ['Fresa', 'Natural']). Si tiene opciones, el
+   * producto NO se puede añadir directo: hay que elegir el tipo en su detalle.
+   */
+  options?: string[]
   stockStatus: StockStatus
 }
 
 export interface CartItem {
   product: Product
   quantity: number
+  /** Tipo/sabor elegido (para productos con `options`). */
+  option?: string
 }
 
 export interface Address {

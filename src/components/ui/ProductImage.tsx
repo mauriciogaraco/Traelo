@@ -5,7 +5,6 @@ const categoryGradient: Record<Category, string> = {
   Alimentos: 'from-amber-100 to-orange-50',
   Bebidas: 'from-sky-100 to-cyan-50',
   Aseo: 'from-violet-100 to-fuchsia-50',
-  Hogar: 'from-emerald-100 to-green-50',
   Confituras: 'from-pink-100 to-rose-50',
   Comida: 'from-rose-100 to-orange-50',
 }

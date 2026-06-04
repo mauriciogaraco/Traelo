@@ -6,7 +6,7 @@ import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { formatDate, formatPrice } from '../lib/format'
 import { groupByBusiness } from '../lib/order'
-import { hasFormato, lineTotal, unitsOf } from '../lib/cart'
+import { hasFormato, itemLineId, lineTotal, unitsOf } from '../lib/cart'
 import { sendOrderToTelegram } from '../lib/telegram'
 import type { Order } from '../types'
 
@@ -108,9 +108,10 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
             </p>
             <div className="space-y-1 pl-1">
               {group.items.map((item) => (
-                <div key={item.product.id} className="flex items-center justify-between gap-2 text-sm">
+                <div key={itemLineId(item)} className="flex items-center justify-between gap-2 text-sm">
                   <span className="text-text-secondary line-clamp-1 flex-1">
-                    {item.product.name}{' '}
+                    {item.product.name}
+                    {item.option && <span className="text-primary font-semibold"> · {item.option}</span>}{' '}
                     <span className="text-text-secondary/70">
                       × {hasFormato(item.product) ? `${unitsOf(item)} u` : item.quantity}
                     </span>

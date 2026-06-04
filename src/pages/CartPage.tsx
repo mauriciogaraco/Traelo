@@ -7,7 +7,7 @@ import { MessagingFeeRow } from '../components/ui/MessagingFeeRow'
 import { PaymentNote } from '../components/ui/PaymentNote'
 import { formatAmount, formatPrice } from '../lib/format'
 import { groupByBusiness } from '../lib/order'
-import { hasFormato, lineTotal, packSize, unitsOf } from '../lib/cart'
+import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
 import { businessById } from '../data/catalog'
 import type { CartItem } from '../types'
 
@@ -57,16 +57,19 @@ export function CartPage() {
             )}
 
             <div className="p-3 space-y-3">
-              {group.items.map((item) => (
-                <CartRow
-                  key={item.product.id}
-                  item={item}
-                  onDec={() => setQuantity(item.product.id, item.quantity - 1)}
-                  onInc={() => setQuantity(item.product.id, item.quantity + 1)}
-                  onRemove={() => removeItem(item.product.id)}
-                  onOpen={() => navigate(`/producto/${item.product.id}`)}
-                />
-              ))}
+              {group.items.map((item) => {
+                const key = itemLineId(item)
+                return (
+                  <CartRow
+                    key={key}
+                    item={item}
+                    onDec={() => setQuantity(key, item.quantity - 1)}
+                    onInc={() => setQuantity(key, item.quantity + 1)}
+                    onRemove={() => removeItem(key)}
+                    onOpen={() => navigate(`/producto/${item.product.id}`)}
+                  />
+                )
+              })}
             </div>
           </div>
         ))}
@@ -126,6 +129,11 @@ function CartRow({
         >
           {product.name}
         </button>
+        {item.option && (
+          <span className="inline-flex self-start items-center mt-0.5 px-1.5 py-0.5 rounded-md bg-primary/10 text-primary text-[10px] font-bold">
+            {item.option}
+          </span>
+        )}
         {hasFormato(product) && (
           <p className="text-[11px] font-semibold text-text-secondary mt-0.5">
             {unitsOf(item)} u · caja × {packSize(product)} · {formatAmount(product.price)}/u

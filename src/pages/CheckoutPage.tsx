@@ -12,7 +12,7 @@ import { MessagingFeeRow } from '../components/ui/MessagingFeeRow'
 import { PaymentNote } from '../components/ui/PaymentNote'
 import { formatAmount, formatPrice } from '../lib/format'
 import { makeOrder, groupByBusiness } from '../lib/order'
-import { hasFormato, lineTotal, packSize, unitsOf } from '../lib/cart'
+import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
 import { sendOrderToTelegram } from '../lib/telegram'
 import { businessById } from '../data/catalog'
 
@@ -112,10 +112,13 @@ export function CheckoutPage() {
                 )}
                 <div className="p-3 space-y-3">
                   {group.items.map((item) => (
-                    <div key={item.product.id} className="flex items-center gap-3">
+                    <div key={itemLineId(item)} className="flex items-center gap-3">
                       <ProductImage emoji={item.product.image} photo={item.product.photo} category={item.product.category} alt={item.product.name} size="sm" className="w-11 h-11 rounded-xl flex-shrink-0" />
                       <div className="flex-1 min-w-0">
-                        <p className="text-sm font-bold text-text-primary line-clamp-1">{item.product.name}</p>
+                        <p className="text-sm font-bold text-text-primary line-clamp-1">
+                          {item.product.name}
+                          {item.option && <span className="text-primary"> · {item.option}</span>}
+                        </p>
                         <p className="text-xs text-text-secondary">
                           {hasFormato(item.product)
                             ? `${unitsOf(item)} u · ${item.quantity} caja${item.quantity > 1 ? 's' : ''} × ${packSize(item.product)}`
