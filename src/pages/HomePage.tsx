@@ -214,6 +214,9 @@ export function HomePage() {
           </>
         )}
       </div>
+      <div className="px-4">
+        <SupportSection />
+      </div>
     </div>
   );
 }
@@ -254,5 +257,36 @@ function SectionTitle({
       </h2>
       {action && <div className="pb-0.5">{action}</div>}
     </div>
+  );
+}
+
+function SupportSection() {
+  return (
+    <section className="pt-8 pb-8">
+      <div className="rounded-3xl border border-border bg-surface px-6 py-8 text-center shadow-soft">
+        <div className="text-5xl mb-3">💬</div>
+
+        <h3 className="text-lg font-bold text-text-primary">
+          ¿Necesitas ayuda?
+        </h3>
+
+        <p className="text-sm text-text-secondary mt-2 max-w-sm mx-auto">
+          Si tienes dudas sobre cómo realizar un pedido, algún problema con la
+          plataforma o necesitas asistencia, estamos disponibles para ayudarte.
+        </p>
+
+        <a
+          href="https://wa.me/5358365388"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-primary px-5 py-3 font-bold text-white shadow-soft transition-transform hover:scale-[1.02]"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.46 0 .09 5.37.09 11.97c0 2.11.55 4.17 1.59 5.99L0 24l6.21-1.63a11.96 11.96 0 0 0 5.85 1.49h.01c6.6 0 11.97-5.37 11.97-11.97 0-3.2-1.25-6.21-3.52-8.41ZM12.07 21.84h-.01a9.94 9.94 0 0 1-5.07-1.39l-.36-.21-3.69.97.99-3.6-.23-.37a9.93 9.93 0 0 1-1.53-5.27c0-5.49 4.46-9.95 9.95-9.95 2.66 0 5.16 1.03 7.04 2.91a9.88 9.88 0 0 1 2.91 7.04c0 5.49-4.47 9.95-9.96 9.95Zm5.46-7.45c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.46 0 1.45 1.06 2.85 1.21 3.05.15.2 2.09 3.19 5.07 4.47.71.31 1.27.5 1.7.64.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.42.25-.69.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z" />
+          </svg>
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </section>
   );
 }
