@@ -54,19 +54,19 @@ import Hamburguesa from '../assets/images/products/hamburguesa.jpg'
 
 import Aceite from '../assets/images/products/mercado/aceite_900ml.jpg'
 import ArrozAgranel from '../assets/images/products/mercado/arroz_brasileño_agranel.jpg'
-import Mortadella from '../assets/images/products/mercado/mortadella_1kg.jpg'
-import Mortadella1kg from '../assets/images/products/mercado/mortadella_500g.webp'
-import AzucarAgranel from '../assets/images/products/mercado/azucar_blanca_lb.jpg'
-import PerritoMana from '../assets/images/products/mercado/perritos_mana.jpg'
-import FEFEJabon from '../assets/images/products/mercado/FEFE_jabon.jpg'
-import FrijolesPontarollo from '../assets/images/products/mercado/pontarollo.jpg'
-import SopaInstantanea from '../assets/images/products/mercado/sopa_instantanea.jpg'
-import SpamTubo from '../assets/images/products/mercado/spam_tubo.webp'
-import yogurt from '../assets/images/products/mercado/yogurt_vaso.webp'
+//import Mortadella from '../assets/images/products/mercado/mortadella_1kg.jpg'
+//import Mortadella1kg from '../assets/images/products/mercado/mortadella_500g.webp'
+//import AzucarAgranel from '../assets/images/products/mercado/azucar_blanca_lb.jpg'
+//import PerritoMana from '../assets/images/products/mercado/perritos_mana.jpg'
+//import FEFEJabon from '../assets/images/products/mercado/FEFE_jabon.jpg'
+//import FrijolesPontarollo from '../assets/images/products/mercado/pontarollo.jpg'
+//import SopaInstantanea from '../assets/images/products/mercado/sopa_instantanea.jpg'
+//import SpamTubo from '../assets/images/products/mercado/spam_tubo.webp'
+//import yogurt from '../assets/images/products/mercado/yogurt_vaso.webp'
 
 
-import PanImperial from '../assets/images/products/Macus/pan_imperial.jpg'
-import PanMedianoche from '../assets/images/products/Macus/Pan_medianoche.jpg'
+//import PanImperial from '../assets/images/products/Macus/pan_imperial.jpg'
+//import PanMedianoche from '../assets/images/products/Macus/Pan_medianoche.jpg'
 import PanSuperMacu from '../assets/images/products/Macus/pan_macu.jpg'
 
 export const categories: Category[] = ['Alimentos', 'Bebidas', 'Aseo', 'Comida', 'Confituras']
@@ -759,13 +759,13 @@ export const products: Product[] = [
     id: 'ma-001', name: 'Arroz Guyanés(por libra)', businessId: MERCA2, businessName: MERCA2_NAME,
     category: 'Alimentos', shortDescription: 'Precio por libra.',
     longDescription: 'Arroz a granel, precio por libra. Indica la cantidad de libras al confirmar.',
-    image: '🍚', photo: Frijoles, price: 320, stockStatus: 'disponible',
+    image: '🍚', photo: ArrozAgranel, price: 320, stockStatus: 'disponible',
   },
   {
     id: 'ma-002', name: 'Aceite (90mL)', businessId: MERCA2, businessName: MERCA2_NAME,
     category: 'Alimentos', shortDescription: 'Botella de 900ml.',
     longDescription: 'Aceite vegetal en botella de 900ml.',
-    image: '🫒', photo: Vinagre, price: 1500, stockStatus: 'disponible',
+    image: '🫒', photo: Aceite, price: 1500, stockStatus: 'disponible',
   },
   {
     id: 'ma-003', name: 'Perrito caliente', businessId: MERCA2, businessName: MERCA2_NAME,
