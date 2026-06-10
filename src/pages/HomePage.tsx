@@ -139,6 +139,7 @@ export function HomePage() {
               <circle cx="11" cy="11" r="7" />
               <path strokeLinecap="round" d="m21 21-4.3-4.3" />
             </svg>
+            {/** add a commit */}
             <input
               ref={inputRef}
               type="search"
