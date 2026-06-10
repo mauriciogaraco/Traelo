@@ -88,11 +88,13 @@ export interface Order {
   date: string
   items: CartItem[]
   /** Suma de los productos (sin mensajería). */
-  subtotal: number
+  subtotal?: number
   /** Tarifa de mensajería aplicada. */
-  fee: number
+  fee?: number
   /** subtotal + fee. */
   total: number
+  /** Momento de entrega elegido, ej: "Lo antes posible" o "Hoy 7:30 pm". */
+  delivery?: string
   status: OrderStatus
   address: Address
 }

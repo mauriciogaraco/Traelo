@@ -1,8 +1,5 @@
 /** Configuración del MVP de Tráelo. */
 
-/** Tarifa fija de mensajería (CUP). */
-export const MESSAGING_FEE = 200
-
 /** Promoción de lanzamiento mostrada al cliente. */
 export const MESSAGING_PROMO = 'Los primeros 10 pedidos del día son gratis 🎉'
 

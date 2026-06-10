@@ -1,8 +1,10 @@
 import type { Business, Product, Category } from '../types'
 
 // Logos de negocio
-import BMercado from '../assets/images/business/mercado.webp'
-import BRestaurante from '../assets/images/business/restaurant.jpg'
+import BMercado from '../assets/images/business/Mercadito.jpg'
+import BCentral from '../assets/images/business/bodega_central.jpg'
+import Macus from '../assets/images/business/macus.jpg'
+import DLM from '../assets/images/business/DLM.jpg'
 
 // Fotos del mercadito (una por imagen del directorio)
 import Avena from '../assets/images/products/mercadito/avena.jpg'
@@ -47,8 +49,25 @@ import PastaDental from '../assets/images/products/mercadito/bombones.jpg'
 import ToasllitasHumedas from '../assets/images/products/mercadito/toallitas_indoxa.jpg'
 // Fotos del restaurante
 import Pizza from '../assets/images/products/pizza.jpg'
-import Hamburguesa from '../assets/images/products/hamburguesa.jpg'
 import Pollo from '../assets/images/products/pollo.jpg'
+import Hamburguesa from '../assets/images/products/hamburguesa.jpg'
+
+import Aceite from '../assets/images/products/mercado/aceite_900ml.jpg'
+import ArrozAgranel from '../assets/images/products/mercado/arroz_brasileño_agranel.jpg'
+import Mortadella from '../assets/images/products/mercado/mortadella_1kg.jpg'
+import Mortadella1kg from '../assets/images/products/mercado/mortadella_500g.webp'
+import AzucarAgranel from '../assets/images/products/mercado/azucar_blanca_lb.jpg'
+import PerritoMana from '../assets/images/products/mercado/perritos_mana.jpg'
+import FEFEJabon from '../assets/images/products/mercado/FEFE_jabon.jpg'
+import FrijolesPontarollo from '../assets/images/products/mercado/pontarollo.jpg'
+import SopaInstantanea from '../assets/images/products/mercado/sopa_instantanea.jpg'
+import SpamTubo from '../assets/images/products/mercado/spam_tubo.webp'
+import yogurt from '../assets/images/products/mercado/yogurt_vaso.webp'
+
+
+import PanImperial from '../assets/images/products/Macus/pan_imperial.jpg'
+import PanMedianoche from '../assets/images/products/Macus/Pan_medianoche.jpg'
+import PanSuperMacu from '../assets/images/products/Macus/pan_macu.jpg'
 
 export const categories: Category[] = ['Alimentos', 'Bebidas', 'Aseo', 'Comida', 'Confituras']
 
@@ -70,7 +89,7 @@ export const businesses: Business[] = [
     id: 'bodega-central',
     name: 'La Bodega Central',
     description: 'Mercadito: alimentos, bebidas y aseo del día a día.',
-    image: BMercado,
+    image: BCentral,
     color: 'from-amber-100 to-orange-50',
     paymentNote: 'Solo se aceptan billetes de 50 CUP en adelante.',
     schedule: { days: [1, 2, 3, 4, 5, 6], open: '09:00', close: '17:00', label: 'Lun–Sáb · 9:00 am – 5:00 pm' },
@@ -79,7 +98,7 @@ export const businesses: Business[] = [
     id: 'el-patio',
     name: 'Restaurante El Patio',
     description: 'Comida criolla recién hecha, lista para disfrutar en casa.',
-    image: BRestaurante,
+    image: DLM,
     color: 'from-rose-100 to-orange-50',
     schedule: { days: [3, 4, 5, 6, 0], open: '09:00', close: '20:00', label: 'Mié–Dom · 9:00 am – 8:00 pm' },
   },
@@ -87,7 +106,7 @@ export const businesses: Business[] = [
     id: 'panes-macus',
     name: 'Panes Macus',
     description: 'Panadería: panes frescos, frezco, malta y cerveza.',
-    image: Coconut,
+    image: Macus,
     color: 'from-yellow-100 to-amber-50',
     schedule: { days: [0, 1, 2, 3, 4, 5, 6], open: '08:00', close: '20:00', label: 'Todos los días · 8:00 am – 8:00 pm' },
   },
@@ -467,7 +486,7 @@ export const products: Product[] = [
   shortDescription: 'Nuestro producto estrella.',
   longDescription: 'Versión especial del Macu con ingredientes premium.',
   image: '🥪',
-  photo: Hamburguesa, // cambia por la foto real cuando la tengas
+  photo: PanSuperMacu, // cambia por la foto real cuando la tengas
   price: 1370,
   stockStatus: 'disponible',
 },
@@ -675,42 +694,101 @@ export const products: Product[] = [
   price: 570,
   stockStatus: 'agotado',
 },
-
+{
+  id: 'pm-022',
+  name: 'Vaca Frita',
+  businessId: PANES,
+  businessName: PANES_NAME,
+  category: 'Comida',
+  shortDescription: 'Vaca frita.',
+  longDescription: 'Pan con vaca frita.',
+  image: '🥩',
+  price: 570,
+  stockStatus: 'agotado',
+},
+{
+  id: 'pm-023',
+  name: 'Lechonazo',
+  businessId: PANES,
+  businessName: PANES_NAME,
+  category: 'Comida',
+  shortDescription: 'Lechón.',
+  longDescription: 'Pan con lechón.',
+  image: '🥩',
+  price: 1200,
+  stockStatus: 'disponible',
+},
+{
+  id: 'pm-024',
+  name: 'Medianoche',
+  businessId: PANES,
+  businessName: PANES_NAME,
+  category: 'Comida',
+  shortDescription: '',
+  longDescription: '',
+  image: '🥩',
+  price: 1100,
+  stockStatus: 'disponible',
+},
+{
+  id: 'pm-025',
+  name: 'Imperial',
+  businessId: PANES,
+  businessName: PANES_NAME,
+  category: 'Comida',
+  shortDescription: 'Pan especial imperial',
+  longDescription: '',
+  image: '🥩',
+  price: 1300,
+  stockStatus: 'disponible',
+},
+{
+  id: 'pm-026',
+  name: 'Chorizo',
+  businessId: PANES,
+  businessName: PANES_NAME,
+  category: 'Comida',
+  shortDescription: 'Pan con chorizo',
+  longDescription: '',
+  image: '🥩',
+  price: 320,
+  stockStatus: 'disponible',
+},
   // ───────────────── Mercadito El Ahorro ─────────────────
   {
-    id: 'ma-001', name: 'Arroz (por libra)', businessId: MERCA2, businessName: MERCA2_NAME,
+    id: 'ma-001', name: 'Arroz Guyanés(por libra)', businessId: MERCA2, businessName: MERCA2_NAME,
     category: 'Alimentos', shortDescription: 'Precio por libra.',
     longDescription: 'Arroz a granel, precio por libra. Indica la cantidad de libras al confirmar.',
-    image: '🍚', photo: Frijoles, price: 90, stockStatus: 'disponible',
+    image: '🍚', photo: Frijoles, price: 320, stockStatus: 'disponible',
   },
   {
-    id: 'ma-002', name: 'Aceite (1 L)', businessId: MERCA2, businessName: MERCA2_NAME,
-    category: 'Alimentos', shortDescription: 'Botella de 1 litro.',
-    longDescription: 'Aceite vegetal en botella de 1 litro.',
-    image: '🫒', photo: Vinagre, price: 760, stockStatus: 'disponible',
+    id: 'ma-002', name: 'Aceite (90mL)', businessId: MERCA2, businessName: MERCA2_NAME,
+    category: 'Alimentos', shortDescription: 'Botella de 900ml.',
+    longDescription: 'Aceite vegetal en botella de 900ml.',
+    image: '🫒', photo: Vinagre, price: 1500, stockStatus: 'disponible',
   },
   {
     id: 'ma-003', name: 'Perrito caliente', businessId: MERCA2, businessName: MERCA2_NAME,
     category: 'Alimentos', shortDescription: 'Salchicha + pan.',
     longDescription: 'Perrito caliente listo para preparar (salchicha y pan). Se vende por unidad.',
-    image: '🌭', price: 150, stockStatus: 'disponible',
+    image: '🌭', price: 620, stockStatus: 'disponible',
   },
   {
     id: 'ma-004', name: 'Azúcar (por libra)', businessId: MERCA2, businessName: MERCA2_NAME,
     category: 'Alimentos', shortDescription: 'Precio por libra.',
     longDescription: 'Azúcar a granel, precio por libra. Indica la cantidad de libras al confirmar.',
-    image: '🍬', price: 80, stockStatus: 'disponible',
+    image: '🍬', price: 400, stockStatus: 'disponible',
   },
   {
-    id: 'ma-005', name: 'Jamonada de pollo (1 lb)', businessId: MERCA2, businessName: MERCA2_NAME,
+    id: 'ma-005', name: 'Jamonada de pollo (500)', businessId: MERCA2, businessName: MERCA2_NAME,
     category: 'Alimentos', shortDescription: 'Una libra.',
     longDescription: 'Jamonada de pollo, se entrega por libra.',
-    image: '🍖', photo: Pollo, price: 420, stockStatus: 'disponible',
+    image: '🍖', photo: Pollo, price: 700, stockStatus: 'disponible',
   },
   {
     id: 'ma-006', name: 'Lomo de cerdo en bistec (1 lb)', businessId: MERCA2, businessName: MERCA2_NAME,
     category: 'Alimentos', shortDescription: 'Una libra, en bistec.',
     longDescription: 'Lomo de cerdo cortado en bistec, se entrega por libra.',
-    image: '🥩', photo: Hamburguesa, price: 950, stockStatus: 'disponible',
+    image: '🥩', photo: Hamburguesa, price: 1400, stockStatus: 'disponible',
   },
 ]

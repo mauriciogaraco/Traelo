@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { useOrders } from '../context/OrdersContext'
@@ -10,20 +10,57 @@ import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { MessagingFeeRow, MessagingPromo } from '../components/ui/MessagingFeeRow'
 import { PaymentNote } from '../components/ui/PaymentNote'
-import { formatAmount, formatPrice } from '../lib/format'
+import { formatAmount, formatPrice, formatTime12h } from '../lib/format'
 import { makeOrder, groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
+import { computeFee } from '../lib/fees'
 import { isOpenNow } from '../lib/hours'
 import { sendOrderToTelegram } from '../lib/telegram'
 import { businessById } from '../data/catalog'
 
+type DeliveryMode = 'asap' | 'scheduled'
+
+function todayAt(hhmm: string): Date {
+  const [h, m] = hhmm.split(':').map(Number)
+  const d = new Date()
+  d.setHours(h, m || 0, 0, 0)
+  return d
+}
+
+/**
+ * Genera franjas de entrega de HOY, solo desde la hora actual en adelante
+ * (en pasos de 15 min). value = "HH:mm" (24h, para el cálculo), label = "7:30 pm".
+ */
+function buildTimeSlots(now: Date, stepMin = 15): { value: string; label: string }[] {
+  // Primera franja: redondea hacia adelante (nunca una hora ya pasada).
+  const start = new Date(now)
+  start.setSeconds(0, 0)
+  const rem = now.getMinutes() % stepMin
+  start.setMinutes(now.getMinutes() + (rem === 0 ? stepMin : stepMin - rem))
+
+  const endOfDay = new Date(now)
+  endOfDay.setHours(23, 45, 0, 0)
+
+  const slots: { value: string; label: string }[] = []
+  for (let t = new Date(start); t <= endOfDay; t.setMinutes(t.getMinutes() + stepMin)) {
+    const hh = String(t.getHours()).padStart(2, '0')
+    const mm = String(t.getMinutes()).padStart(2, '0')
+    slots.push({ value: `${hh}:${mm}`, label: formatTime12h(`${hh}:${mm}`) })
+  }
+  return slots
+}
+
 export function CheckoutPage() {
   const navigate = useNavigate()
-  const { items, subtotal, total, clearCart } = useCart()
+  const { items, subtotal, clearCart } = useCart()
   const { saveOrder } = useOrders()
   const { address } = useAddress()
   const { showToast } = useToast()
   const [sending, setSending] = useState(false)
+  const [deliveryMode, setDeliveryMode] = useState<DeliveryMode>('asap')
+  const [deliveryTime, setDeliveryTime] = useState('')
+  // Franjas de hoy desde la hora actual (se calculan una vez al abrir).
+  const timeSlots = useMemo(() => buildTimeSlots(new Date()), [])
 
   if (items.length === 0) {
     return (
@@ -45,13 +82,31 @@ export function CheckoutPage() {
     return b ? !isOpenNow(b) : false
   })
   const hasClosed = closedGroups.length > 0
-  const canConfirm = !!address && !sending && !hasClosed
+
+  // Entrega elegida → momento para calcular la tarifa
+  const scheduledMissing = deliveryMode === 'scheduled' && !deliveryTime
+  const when = deliveryMode === 'scheduled' && deliveryTime ? todayAt(deliveryTime) : new Date()
+  const deliveryLabel =
+    deliveryMode === 'scheduled' && deliveryTime
+      ? `Hoy a las ${formatTime12h(deliveryTime)}`
+      : 'Lo antes posible'
+
+  const feeInfo = computeFee(items, when)
+  const total = subtotal + feeInfo.fee
+  const feeNote = [
+    feeInfo.isLate ? 'después de las 7 pm' : null,
+    feeInfo.multiBusiness ? '+100 por varios negocios' : null,
+  ]
+    .filter(Boolean)
+    .join(' · ')
+
+  const canConfirm = !!address && !sending && !hasClosed && !scheduledMissing
 
   async function confirm() {
     if (!canConfirm) return
     setSending(true)
 
-    const order = makeOrder(items, address!)
+    const order = makeOrder(items, address!, { label: deliveryLabel, when })
     const ok = await sendOrderToTelegram(order)
 
     if (ok) {
@@ -97,6 +152,67 @@ export function CheckoutPage() {
               </p>
             </>
           )}
+        </section>
+
+        {/* ¿Cuándo lo quieres? */}
+        <section>
+          <h2 className="text-sm font-bold text-text-primary mb-2">¿Cuándo lo quieres?</h2>
+          <div className="bg-surface border border-border rounded-3xl p-3 space-y-2">
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={() => setDeliveryMode('asap')}
+                className={`h-11 rounded-2xl text-sm font-bold border transition-all ${
+                  deliveryMode === 'asap'
+                    ? 'bg-gradient-primary text-white border-transparent shadow-btn-primary'
+                    : 'bg-background text-text-primary border-border'
+                }`}
+              >
+                Lo antes posible
+              </button>
+              <button
+                onClick={() => setDeliveryMode('scheduled')}
+                className={`h-11 rounded-2xl text-sm font-bold border transition-all ${
+                  deliveryMode === 'scheduled'
+                    ? 'bg-gradient-primary text-white border-transparent shadow-btn-primary'
+                    : 'bg-background text-text-primary border-border'
+                }`}
+              >
+                Elegir hora
+              </button>
+            </div>
+
+            {deliveryMode === 'scheduled' && (
+              <div className="bg-background border border-border rounded-2xl px-4 py-2.5">
+                <label htmlFor="delivery-time" className="block text-sm font-semibold text-text-primary mb-1">
+                  Hora de entrega (hoy)
+                </label>
+                {timeSlots.length === 0 ? (
+                  <p className="text-xs text-warning font-semibold">
+                    Ya no quedan horarios disponibles hoy. Elige “Lo antes posible”.
+                  </p>
+                ) : (
+                  <select
+                    id="delivery-time"
+                    value={deliveryTime}
+                    onChange={(e) => setDeliveryTime(e.target.value)}
+                    className="w-full bg-transparent text-sm font-bold text-text-primary focus:outline-none"
+                  >
+                    <option value="">Selecciona la hora</option>
+                    {timeSlots.map((s) => (
+                      <option key={s.value} value={s.value}>
+                        {s.label}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </div>
+            )}
+            {feeInfo.isLate && (
+              <p className="text-[11px] text-warning font-semibold">
+                A partir de las 7:00 pm la mensajería cuesta {formatPrice(350)}.
+              </p>
+            )}
+          </div>
         </section>
 
         {/* Resumen agrupado por negocio */}
@@ -152,7 +268,11 @@ export function CheckoutPage() {
             <span className="text-text-secondary">Subtotal</span>
             <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
           </div>
-          <MessagingFeeRow />
+          <div className="flex justify-between text-sm">
+            <span className="text-text-secondary">Entrega</span>
+            <span className="font-semibold text-text-primary">{deliveryLabel}</span>
+          </div>
+          <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
           <div className="border-t border-border pt-2.5 flex justify-between items-baseline">
             <span className="font-bold text-text-primary">Total a pagar</span>
             <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>
@@ -171,6 +291,12 @@ export function CheckoutPage() {
               dentro del horario o quita esos productos.
             </p>
           </div>
+        )}
+
+        {scheduledMissing && (
+          <p className="text-xs text-warning font-semibold -mt-2">
+            Elige la hora de entrega para continuar.
+          </p>
         )}
 
         {/* Aviso */}

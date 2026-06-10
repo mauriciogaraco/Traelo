@@ -57,8 +57,6 @@ export default function App() {
     <BrowserRouter>
       <Providers>
         <ScrollToTop />
-        <ComingSoonModal />
-
         <AppShell>
           <Routes>
             <Route path="/" element={<HomePage />} />

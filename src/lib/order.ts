@@ -1,6 +1,13 @@
 import type { Address, CartItem, Order } from '../types'
 import { lineTotal } from './cart'
-import { MESSAGING_FEE } from './config'
+import { computeFee } from './fees'
+
+export interface DeliveryChoice {
+  /** Etiqueta legible para mostrar/guardar, ej: "Lo antes posible". */
+  label: string
+  /** Momento de la entrega (para calcular la tarifa según la hora). */
+  when: Date
+}
 
 export interface BusinessGroup {
   businessId: string
@@ -30,10 +37,10 @@ function generateOrderId(): string {
   return Math.floor(1000 + Math.random() * 9000).toString()
 }
 
-/** Construye un pedido (sin persistir) a partir del carrito y la dirección. */
-export function makeOrder(items: CartItem[], address: Address): Order {
+/** Construye un pedido (sin persistir) a partir del carrito, la dirección y la entrega. */
+export function makeOrder(items: CartItem[], address: Address, delivery: DeliveryChoice): Order {
   const subtotal = items.reduce((sum, i) => sum + lineTotal(i), 0)
-  const fee = items.length > 0 ? MESSAGING_FEE : 0
+  const fee = computeFee(items, delivery.when).fee
   return {
     id: generateOrderId(),
     date: new Date().toISOString(),
@@ -41,6 +48,7 @@ export function makeOrder(items: CartItem[], address: Address): Order {
     subtotal,
     fee,
     total: subtotal + fee,
+    delivery: delivery.label,
     status: 'pendiente',
     address,
   }

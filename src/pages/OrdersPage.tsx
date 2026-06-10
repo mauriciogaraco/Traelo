@@ -88,6 +88,15 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
           <p className="text-[11px] font-semibold text-text-secondary">Pedido</p>
           <p className="text-lg font-bold text-text-primary">#{order.id}</p>
           <p className="text-xs text-text-secondary mt-0.5">{formatDate(order.date)}</p>
+          {order.delivery && (
+            <p className="text-xs text-primary font-semibold mt-0.5 flex items-center gap-1">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                <circle cx="12" cy="12" r="9" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
+              </svg>
+              {order.delivery}
+            </p>
+          )}
         </div>
         <span className={`px-3 py-1 rounded-full text-xs font-bold flex-shrink-0 ${status.className}`}>
           {status.label}

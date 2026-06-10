@@ -10,7 +10,7 @@ import {
 import type { CartItem, Product } from '../types'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../lib/storage'
 import { lineTotal, lineId, itemLineId } from '../lib/cart'
-import { MESSAGING_FEE } from '../lib/config'
+import { computeFee } from '../lib/fees'
 
 interface CartContextValue {
   items: CartItem[]
@@ -86,7 +86,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     [items]
   )
 
-  const fee = items.length > 0 ? MESSAGING_FEE : 0
+  // Estimación de tarifa "ahora" (en checkout se recalcula con la hora elegida).
+  const fee = computeFee(items).fee
 
   const value: CartContextValue = {
     items,

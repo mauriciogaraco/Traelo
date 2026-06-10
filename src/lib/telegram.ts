@@ -2,12 +2,7 @@ import type { Order } from '../types'
 import { formatPrice } from './format'
 import { groupByBusiness } from './order'
 import { hasFormato, lineTotal, packSize, unitsOf } from './cart'
-import {
-  TELEGRAM_BOT_TOKEN,
-  TELEGRAM_CHAT_ID,
-  MESSAGING_FEE,
-  MESSAGING_PROMO,
-} from './config'
+import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, MESSAGING_PROMO } from './config'
 
 /** Escapa los caracteres reservados de HTML para Telegram (parse_mode=HTML). */
 function esc(text: string): string {
@@ -38,6 +33,7 @@ export function buildOrderMessage(order: Order): string {
     `📍 <b>Dirección:</b> ${esc(address.direccion)}`,
     ...(address.referencia ? [`🧭 <b>Referencia:</b> ${esc(address.referencia)}`] : []),
     `📞 <b>Teléfono:</b> ${esc(address.telefono)}`,
+    `🕒 <b>Entrega:</b> ${esc(order.delivery ?? 'Lo antes posible')}`,
     '',
   ]
 
@@ -55,7 +51,7 @@ export function buildOrderMessage(order: Order): string {
     lines.push('')
   }
 
-  lines.push(`🛵 <b>Mensajería:</b> ${formatPrice(MESSAGING_FEE)}`)
+  lines.push(`🛵 <b>Mensajería:</b> ${formatPrice(order.fee ?? 0)}`)
   lines.push(`🎁 <i>${esc(MESSAGING_PROMO)}</i>`)
   lines.push(`💵 <b>Total: ${formatPrice(total)}</b>`)
 
