@@ -25,12 +25,24 @@ const AGREGOS: Addon[] = [
 ]
 
 const comida: Product[] = [
-  { id: 'lm-001', name: 'Espaguetis', businessId: ID, businessName: NAME, category: 'Comida', shortDescription: 'Con salsa de la casa.', longDescription: 'Espaguetis recién hechos. Puedes añadir un agrego.', image: '🍝', price: 450, addons: AGREGOS, stockStatus: 'disponible' },
-  { id: 'lm-002', name: 'Pizza de Queso', businessId: ID, businessName: NAME, category: 'Comida', shortDescription: 'Clásica.', longDescription: 'Pizza de queso. Puedes añadir un agrego.', image: '🍕', price: 270, addons: AGREGOS, stockStatus: 'disponible' },
-  { id: 'lm-003', name: 'Pizza Queso Doble', businessId: ID, businessName: NAME, category: 'Comida', shortDescription: 'Doble queso.', longDescription: 'Pizza con doble queso. Puedes añadir un agrego.', image: '🍕', price: 470, addons: AGREGOS, stockStatus: 'disponible' },
-  { id: 'lm-004', name: 'Pizza de Jamón', businessId: ID, businessName: NAME, category: 'Comida', shortDescription: 'Con jamón.', longDescription: 'Pizza de jamón. Puedes añadir un agrego.', image: '🍕', price: 620, addons: AGREGOS, stockStatus: 'disponible' },
-  { id: 'lm-005', name: 'Pizza de Picadillo', businessId: ID, businessName: NAME, category: 'Comida', shortDescription: 'Con picadillo.', longDescription: 'Pizza de picadillo. Puedes añadir un agrego.', image: '🍕', price: 720, addons: AGREGOS, stockStatus: 'disponible' },
-  { id: 'lm-006', name: 'Pizza de Cebolla', businessId: ID, businessName: NAME, category: 'Comida', shortDescription: 'Con cebolla.', longDescription: 'Pizza de cebolla. Puedes añadir un agrego.', image: '🍕', price: 520, addons: AGREGOS, stockStatus: 'disponible' },
+  { id: 'lm-001', name: 'Espaguetis', businessId: ID, businessName: NAME, category: 'Comida',
+     shortDescription: 'Con salsa de la casa.', longDescription: 'Espaguetis recién hechos. Puedes añadir un agrego.',
+      image: '🍝', price: 450, addons: AGREGOS, stockStatus: 'disponible' },
+  { id: 'lm-002', name: 'Pizza de Queso', businessId: ID, businessName: NAME, category: 'Comida',
+     shortDescription: 'Clásica.', longDescription: 'Pizza de queso. Puedes añadir un agrego.', image: '🍕',
+     price: 300, addons: AGREGOS, stockStatus: 'disponible' },
+  { id: 'lm-003', name: 'Pizza Queso Doble', businessId: ID, businessName: NAME, category: 'Comida',
+     shortDescription: 'Doble queso.', longDescription: 'Pizza con doble queso. Puedes añadir un agrego.', image: '🍕',
+      price: 520, addons: AGREGOS, stockStatus: 'disponible' },
+  { id: 'lm-004', name: 'Pizza de Jamón', businessId: ID, businessName: NAME, category: 'Comida',
+     shortDescription: 'Con jamón.', longDescription: 'Pizza de jamón. Puedes añadir un agrego.', image: '🍕', 
+     price: 670, addons: AGREGOS, stockStatus: 'disponible' },
+  { id: 'lm-005', name: 'Pizza de Picadillo', businessId: ID, businessName: NAME, category: 'Comida',
+     shortDescription: 'Con picadillo.', longDescription: 'Pizza de picadillo. Puedes añadir un agrego.', image: '🍕',
+      price: 770, addons: AGREGOS, stockStatus: 'disponible' },
+  { id: 'lm-006', name: 'Pizza de Cebolla', businessId: ID, businessName: NAME, category: 'Comida', 
+    shortDescription: 'Con cebolla.', longDescription: 'Pizza de cebolla. Puedes añadir un agrego.',
+     image: '🍕', price: 570, addons: AGREGOS, stockStatus: 'disponible' },
 ]
 
 export const laMarinaProducts: Product[] = [...comida, ...makeDrinks(ID, NAME, 'lm-dr')]
