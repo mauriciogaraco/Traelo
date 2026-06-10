@@ -95,6 +95,7 @@ export const businesses: Business[] = [
     schedule: { days: [1, 2, 3, 4, 5, 6], open: '09:00', close: '17:00', label: 'Lun–Sáb · 9:00 am – 5:00 pm' },
   },
   {
+    
     id: 'el-patio',
     name: 'DLM Bar-ResTaurante',
     description: 'Comida criolla recién hecha, lista para disfrutar en casa.',
