@@ -1,0 +1,71 @@
+[
+  {
+    "id": "lm-001", "name": "Espaguetis", "businessId": "la-marina", "businessName": "La Marina",
+    "category": "Comida", "shortDescription": "Con salsa de la casa.", "longDescription": "Espaguetis recién hechos. Puedes añadir un agrego.",
+    "image": "🍝", "price": 450, "stockStatus": "disponible",
+    "addons": [
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
+      { "name": "Picadillo de cerdo", "price": 300 }, { "name": "Cebolla", "price": 100 }
+    ],
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+  },
+  {
+    "id": "lm-002", "name": "Pizza de Queso", "businessId": "la-marina", "businessName": "La Marina",
+    "category": "Comida", "shortDescription": "Clásica.", "longDescription": "Pizza de queso. Puedes añadir un agrego.",
+    "image": "🍕", "price": 300, "stockStatus": "disponible",
+    "addons": [
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
+      { "name": "Picadillo de cerdo", "price": 300 }, { "name": "Cebolla", "price": 100 }
+    ]
+  },
+  {
+    "id": "lm-003", "name": "Pizza Queso Doble", "businessId": "la-marina", "businessName": "La Marina",
+    "category": "Comida", "shortDescription": "Doble queso.", "longDescription": "Pizza con doble queso. Puedes añadir un agrego.",
+    "image": "🍕", "price": 520, "stockStatus": "disponible",
+    "addons": [
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
+      { "name": "Picadillo de cerdo", "price": 300 }, { "name": "Cebolla", "price": 100 }
+    ]
+  },
+  {
+    "id": "lm-004", "name": "Pizza de Jamón", "businessId": "la-marina", "businessName": "La Marina",
+    "category": "Comida", "shortDescription": "Con jamón.", "longDescription": "Pizza de jamón. Puedes añadir un agrego.",
+    "image": "🍕", "price": 670, "stockStatus": "disponible",
+    "addons": [
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
+      { "name": "Picadillo de cerdo", "price": 300 }, { "name": "Cebolla", "price": 100 }
+    ]
+  },
+  {
+    "id": "lm-005", "name": "Pizza de Picadillo", "businessId": "la-marina", "businessName": "La Marina",
+    "category": "Comida", "shortDescription": "Con picadillo.", "longDescription": "Pizza de picadillo. Puedes añadir un agrego.",
+    "image": "🍕", "price": 770, "stockStatus": "disponible",
+    "addons": [
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
+      { "name": "Picadillo de cerdo", "price": 300 }, { "name": "Cebolla", "price": 100 }
+    ]
+  },
+  {
+    "id": "lm-006", "name": "Pizza de Cebolla", "businessId": "la-marina", "businessName": "La Marina",
+    "category": "Comida", "shortDescription": "Con cebolla.", "longDescription": "Pizza de cebolla. Puedes añadir un agrego.",
+    "image": "🍕", "price": 570, "stockStatus": "disponible",
+    "addons": [
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
+      { "name": "Picadillo de cerdo", "price": 300 }, { "name": "Cebolla", "price": 100 }
+    ]
+  },
+  { "id": "lm-dr-ref-naranja", "name": "Ref. Naranja", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 300, "stockStatus": "disponible" },
+  { "id": "lm-dr-ref-limon", "name": "Ref. Limón", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 300, "stockStatus": "disponible" },
+  { "id": "lm-dr-malta-guajira", "name": "Malta Guajira 1.5 L", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 1200, "stockStatus": "disponible" },
+  { "id": "lm-dr-malta", "name": "Malta", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 450, "stockStatus": "disponible" },
+  { "id": "lm-dr-jugo-cajita", "name": "Jugo de Cajita", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🧃", "price": 240, "stockStatus": "disponible" },
+  { "id": "lm-dr-chaka", "name": "Chaka", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 500, "stockStatus": "disponible" },
+  { "id": "lm-dr-energizante-grande", "name": "Energizante Grande", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "⚡", "price": 500, "stockStatus": "disponible" },
+  { "id": "lm-dr-energizante-xl", "name": "Energizante XL", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "⚡", "price": 380, "stockStatus": "disponible" },
+  { "id": "lm-dr-cerv-shekels", "name": "Cerv. Shekels", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 400, "stockStatus": "disponible" },
+  { "id": "lm-dr-cerv-becks", "name": "Cerv. Becks", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 380, "stockStatus": "disponible" },
+  { "id": "lm-dr-cerv-beer-azul", "name": "Cerv. Beer Azul", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 380, "stockStatus": "disponible" },
+  { "id": "lm-dr-cerv-muralla", "name": "Cerv. Muralla", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 380, "stockStatus": "disponible" },
+  { "id": "lm-dr-kermato", "name": "Kermato", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 800, "stockStatus": "disponible" },
+  { "id": "lm-dr-agua-natural", "name": "Agua Natural", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "💧", "price": 180, "stockStatus": "disponible" }
+]

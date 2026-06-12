@@ -10,6 +10,7 @@ import { AddressProvider } from "./context/AddressContext";
 import { CartProvider } from "./context/CartContext";
 import { OrdersProvider } from "./context/OrdersContext";
 import { ToastProvider } from "./context/ToastContext";
+import { CatalogProvider } from "./context/CatalogContext";
 import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
 import { ProductDetailPage } from "./pages/ProductDetailPage";
@@ -20,13 +21,15 @@ import { OrdersPage } from "./pages/OrdersPage";
 
 function Providers({ children }: { children: ReactNode }) {
   return (
-    <ToastProvider>
-      <AddressProvider>
-        <OrdersProvider>
-          <CartProvider>{children}</CartProvider>
-        </OrdersProvider>
-      </AddressProvider>
-    </ToastProvider>
+    <CatalogProvider>
+      <ToastProvider>
+        <AddressProvider>
+          <OrdersProvider>
+            <CartProvider>{children}</CartProvider>
+          </OrdersProvider>
+        </AddressProvider>
+      </ToastProvider>
+    </CatalogProvider>
   );
 }
 

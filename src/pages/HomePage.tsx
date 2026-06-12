@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { products, businesses } from "../data/catalog";
+import { useCatalog } from "../context/CatalogContext";
 import { AddressBar } from "../components/address/AddressBar";
 import { BusinessRail } from "../components/home/BusinessRail";
 import { CategoryRail } from "../components/home/CategoryRail";
@@ -15,6 +15,7 @@ import type { Category } from "../types";
 const PAGE_SIZE = 20;
 
 export function HomePage() {
+  const { businesses, products, loading } = useCatalog();
   const [query, setQuery] = useState("");
   const [business, setBusiness] = useState<string | null>(null);
   const [category, setCategory] = useState<Category | "Todos">("Todos");
@@ -30,6 +31,7 @@ export function HomePage() {
   const browseActive = business !== null || category !== "Todos";
 
   const filtered = useMemo(() => {
+    if (loading) return [];
     const q = query.trim().toLowerCase();
     if (q) {
       // Búsqueda global: ignora negocio/categoría seleccionados.
@@ -48,7 +50,7 @@ export function HomePage() {
       });
     }
     return [];
-  }, [query, business, category, browseActive]);
+  }, [loading, query, business, category, browseActive, products]);
 
   // Reinicia la página al cambiar cualquier filtro.
   useEffect(() => {
@@ -61,6 +63,22 @@ export function HomePage() {
       resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [business]);
+
+  if (loading) {
+    return (
+      <div className="animate-fade-in">
+        <header className="bg-gradient-warm px-4 pt-4 pb-4 rounded-b-[1.75rem] border-b border-border/70">
+          <div className="flex items-center gap-2">
+            <Logo />
+          </div>
+        </header>
+        <div className="flex flex-col items-center gap-3 py-16">
+          <div className="w-7 h-7 border-[2.5px] border-primary border-t-transparent rounded-full animate-spin" />
+          <p className="text-sm font-semibold text-text-secondary">Cargando catálogo...</p>
+        </div>
+      </div>
+    );
+  }
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const pageItems = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
