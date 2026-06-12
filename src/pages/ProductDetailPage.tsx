@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { products } from '../data/catalog'
+import { useCatalog } from '../context/CatalogContext'
 import { StockBadge } from '../components/ui/StockBadge'
 import { ProductImage } from '../components/ui/ProductImage'
 import { Button } from '../components/ui/Button'
@@ -15,6 +15,7 @@ import type { Addon, Packaging } from '../types'
 export function ProductDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
+  const { products, loading } = useCatalog()
   const { addItem } = useCart()
   const [qty, setQty] = useState(1)
   const [option, setOption] = useState<string | null>(null)
@@ -27,6 +28,14 @@ export function ProductDetailPage() {
   useEffect(() => {
     if (product?.packaging?.length === 1) setPackaging(product.packaging[0])
   }, [product])
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center py-24">
+        <div className="w-7 h-7 border-[2.5px] border-primary border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
 
   if (!product) {
     return (
