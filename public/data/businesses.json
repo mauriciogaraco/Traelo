@@ -1,9 +1,9 @@
 [
   {
     "id": "bodega-central",
-    "name": "La Bodega Central",
-    "description": "Mercadito: alimentos, bebidas y aseo del día a día.",
-    "image": "/assets/images/business/bodega_central.jpg",
+    "name": "Mercado Alpha",
+    "description": "Mercado Alpha: alimentos, bebidas y aseo del día a día.",
+    "image": "/assets/images/business/alpha.jpg",
     "color": "from-amber-100 to-orange-50",
     "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
     "schedule": { "days": [1,2,3,4,5,6], "open": "09:00", "close": "17:00", "label": "Lun–Sáb · 9:00 am – 5:00 pm" }
