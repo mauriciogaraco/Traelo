@@ -19,6 +19,7 @@ import { CheckoutPage } from "./pages/CheckoutPage";
 import { OrdersPage } from "./pages/OrdersPage";
 //import { ComingSoonModal } from "./pages/CommingSoonModal";
 
+// CatalogProvider va primero para que los demás contextos puedan leer el catálogo si lo necesitan.
 function Providers({ children }: { children: ReactNode }) {
   return (
     <CatalogProvider>
