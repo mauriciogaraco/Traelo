@@ -1,6 +1,6 @@
 import type { Business, Product } from '../../types'
 
-import BCentral from '../../assets/images/business/bodega_central.jpg'
+import BCentral from '../../assets/images/business/alpha.jpg'
 import Avena from '../../assets/images/products/mercadito/avena.jpg'
 import Bambil from '../../assets/images/products/mercadito/bambil.jpg'
 import Botonetas from '../../assets/images/products/mercadito/botonetas.jpg'
@@ -41,12 +41,12 @@ import PastaDental from '../../assets/images/products/mercadito/bombones.jpg'
 import ToasllitasHumedas from '../../assets/images/products/mercadito/toallitas_indoxa.jpg'
 
 const ID = 'bodega-central'
-const NAME = 'La Bodega Central'
+const NAME = 'Mercado Alpha'
 
 export const bodegaCentral: Business = {
   id: ID,
   name: NAME,
-  description: 'Mercadito: alimentos, bebidas y aseo del día a día.',
+  description: 'Mercado Alpha: alimentos, bebidas y aseo del día a día.',
   image: BCentral,
   color: 'from-amber-100 to-orange-50',
   paymentNote: 'Solo se aceptan billetes de 50 CUP en adelante.',
