@@ -54,8 +54,8 @@
       { "name": "Picadillo de cerdo", "price": 300 }, { "name": "Cebolla", "price": 100 }
     ]
   },
-  { "id": "lm-dr-ref-naranja", "name": "Ref. Naranja", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 300, "stockStatus": "disponible" },
-  { "id": "lm-dr-ref-limon", "name": "Ref. Limón", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 300, "stockStatus": "disponible" },
+  { "id": "lm-dr-ref-naranja", "name": "Ref. Naranja", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 350, "stockStatus": "disponible" },
+  { "id": "lm-dr-ref-limon", "name": "Ref. Limón", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🥤", "price": 350, "stockStatus": "disponible" },
   { "id": "lm-dr-malta-guajira", "name": "Malta Guajira 1.5 L", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 1200, "stockStatus": "disponible" },
   { "id": "lm-dr-malta", "name": "Malta", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🍺", "price": 450, "stockStatus": "disponible" },
   { "id": "lm-dr-jugo-cajita", "name": "Jugo de Cajita", "businessId": "la-marina", "businessName": "La Marina", "category": "Bebidas", "shortDescription": "", "longDescription": "Se vende por unidad.", "image": "🧃", "price": 240, "stockStatus": "disponible" },
