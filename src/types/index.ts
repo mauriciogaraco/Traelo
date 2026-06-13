@@ -33,6 +33,8 @@ export interface Business {
   color: string
   /** Aviso de pago opcional, ej: "Solo billetes de 50 CUP en adelante". */
   paymentNote?: string
+  /** Tarifa de mensajería propia del negocio. Si no se define, se usa FEE_BASE global. */
+  deliveryFee?: number
   /** Horario de atención. */
   schedule: BusinessSchedule
 }
