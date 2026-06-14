@@ -1758,7 +1758,7 @@
       "longDescription": "Postres · Final dulce",
       "image": "🍮",
       "price": 550,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -1776,7 +1776,7 @@
       "longDescription": "Postres · Final dulce",
       "image": "🍮",
       "price": 750,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -1794,7 +1794,7 @@
       "longDescription": "Postres · Final dulce",
       "image": "🍮",
       "price": 500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -1808,10 +1808,10 @@
       "businessId": "dlm",
       "businessName": "Bar Restaurante DLM",
       "category": "Comida",
-      "shortDescription": "Postres",
+      "shortDescription": "Cake",
       "longDescription": "Postres · Final dulce",
       "image": "🍮",
-      "price": 800,
+      "price": 900,
       "stockStatus": "disponible",
       "packaging": [
         {
