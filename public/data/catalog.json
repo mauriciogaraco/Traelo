@@ -376,7 +376,7 @@
       "price": 560,
       "stockStatus": "disponible"
     },
-     {
+    {
       "id": "bc-024",
       "name": "Lavavajillas",
       "businessId": "bodega-central",
@@ -602,7 +602,7 @@
       "formato": 10,
       "stockStatus": "disponible"
     },
-        {
+    {
       "id": "bc-041",
       "name": "Saco de Arroz 50lb",
       "businessId": "bodega-central",
@@ -616,7 +616,7 @@
       "formato": 1,
       "stockStatus": "disponible"
     },
-        {
+    {
       "id": "bc-042",
       "name": "Leche condensada",
       "businessId": "bodega-central",
@@ -630,8 +630,6 @@
       "formato": 24,
       "stockStatus": "disponible"
     },
-
-    
     {
       "id": "dlm-001",
       "name": "Entremés de Queso",
@@ -2797,7 +2795,7 @@
           "price": 150
         },
         {
-          "name": "Queso doble",
+          "name": "Queso",
           "price": 200
         },
         {
@@ -2833,7 +2831,7 @@
           "price": 150
         },
         {
-          "name": "Queso doble",
+          "name": "Queso",
           "price": 200
         },
         {
@@ -2859,7 +2857,7 @@
           "price": 150
         },
         {
-          "name": "Queso doble",
+          "name": "Queso",
           "price": 200
         },
         {
@@ -2885,7 +2883,7 @@
           "price": 150
         },
         {
-          "name": "Queso doble",
+          "name": "Queso",
           "price": 200
         },
         {
@@ -2911,7 +2909,7 @@
           "price": 150
         },
         {
-          "name": "Queso doble",
+          "name": "Queso",
           "price": 200
         },
         {
@@ -2937,7 +2935,7 @@
           "price": 150
         },
         {
-          "name": "Queso doble",
+          "name": "Queso",
           "price": 200
         },
         {

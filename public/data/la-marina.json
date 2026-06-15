@@ -4,7 +4,7 @@
     "category": "Comida", "shortDescription": "Con salsa de la casa.", "longDescription": "Espaguetis recién hechos. Puedes añadir un agrego.",
     "image": "🍝", "price": 450, "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 }, { "name": "Queso doble", "price": 200 },
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
       { "name": "Cebolla", "price": 100 }
     ],
     "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
@@ -14,7 +14,7 @@
     "category": "Comida", "shortDescription": "Clásica.", "longDescription": "Pizza de queso. Puedes añadir un agrego.",
     "image": "🍕", "price": 300, "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 }, { "name": "Queso doble", "price": 200 },
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
       { "name": "Cebolla", "price": 100 }
     ]
   },
@@ -23,7 +23,7 @@
     "category": "Comida", "shortDescription": "Doble queso.", "longDescription": "Pizza con doble queso. Puedes añadir un agrego.",
     "image": "🍕", "price": 520, "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 }, { "name": "Queso doble", "price": 200 },
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
       { "name": "Cebolla", "price": 100 }
     ]
   },
@@ -32,7 +32,7 @@
     "category": "Comida", "shortDescription": "Con jamón.", "longDescription": "Pizza de jamón. Puedes añadir un agrego.",
     "image": "🍕", "price": 670, "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 }, { "name": "Queso doble", "price": 200 },
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
       { "name": "Cebolla", "price": 100 }
     ]
   },
@@ -41,7 +41,7 @@
     "category": "Comida", "shortDescription": "Con picadillo.", "longDescription": "Pizza de picadillo. Puedes añadir un agrego.",
     "image": "🍕", "price": 770, "stockStatus": "agotado",
     "addons": [
-      { "name": "Jamón", "price": 150 }, { "name": "Queso doble", "price": 200 },
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
       { "name": "Cebolla", "price": 100 }
     ]
   },
@@ -50,7 +50,7 @@
     "category": "Comida", "shortDescription": "Con cebolla.", "longDescription": "Pizza de cebolla. Puedes añadir un agrego.",
     "image": "🍕", "price": 570, "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 }, { "name": "Queso doble", "price": 200 },
+      { "name": "Jamón", "price": 150 }, { "name": "Queso", "price": 200 },
       { "name": "Cebolla", "price": 100 }
     ]
   },
