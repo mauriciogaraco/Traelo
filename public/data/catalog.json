@@ -92,7 +92,6 @@
       "schedule": {
         "days": [
           0,
-          1,
           2,
           3,
           4,
@@ -101,7 +100,7 @@
         ],
         "open": "09:00",
         "close": "22:00",
-        "label": "Todos los días · 9:00 am – 10:00 pm"
+        "label": "Cerrada hoy por limpieza · Mar–Dom · 9:00 am – 10:00 pm"
       }
     }
   ],
