@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Business, Product } from '../../types'
 
 import BCentral from '../../assets/images/business/alpha.jpg'

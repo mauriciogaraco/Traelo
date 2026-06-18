@@ -1,16 +1,15 @@
 import type { Business, Category } from '../types'
 
-export const categories: Category[] = ['Alimentos', 'Bebidas', 'Aseo', 'Comida', 'Confituras']
+export const categories: Category[] = ['Combos', 'Comidas', 'Regalos', 'Bebidas', 'Panadería']
 
 export const categoryEmoji: Record<Category, string> = {
-  Alimentos: '🥫',
-  Bebidas: '🥤',
-  Aseo: '🧼',
-  Comida: '🍽️',
-  Confituras: '🍯',
+  Combos: '🎁',
+  Comidas: '🍽️',
+  Regalos: '🎂',
+  Bebidas: '🍺',
+  Panadería: '🥖',
 }
 
-// Populated by CatalogContext once the JSON loads.
 let _businesses: Business[] = []
 
 export function _setBusinessCache(businesses: Business[]) {

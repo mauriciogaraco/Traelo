@@ -4,10 +4,8 @@ import { StockBadge } from '../ui/StockBadge'
 import { ProductImage } from '../ui/ProductImage'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../context/CartContext'
-import { formatAmount } from '../../lib/format'
+import { formatPrice } from '../../lib/format'
 import { hasAddons, hasFormato, hasOptions, hasPackaging, packSize } from '../../lib/cart'
-import { isOpenNow } from '../../lib/hours'
-import { businessById } from '../../data/catalog'
 import { flyToCart } from '../../lib/flyToCart'
 
 export function ProductCard({ product }: { product: Product }) {
@@ -15,11 +13,8 @@ export function ProductCard({ product }: { product: Product }) {
   const { addItem, getQuantity } = useCart()
   const qty = getQuantity(product.id)
   const isOut = product.stockStatus === 'agotado'
-  // Con tipos, agregos o envase, se abre el detalle para elegir antes de añadir.
   const needsChoice = hasOptions(product) || hasAddons(product) || hasPackaging(product)
-  const biz = businessById(product.businessId)
-  const closed = !biz || !isOpenNow(biz)
-  const disabled = isOut || closed
+  const disabled = isOut
 
   function handleAdd(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault()
@@ -56,16 +51,10 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="text-[11px] font-semibold text-text-secondary truncate">
           {product.businessName}
         </p>
-        {/* line-clamp-2: si el texto se sale, puntos suspensivos sin estirar la tarjeta */}
         <h3 className="text-sm font-bold text-text-primary leading-snug line-clamp-2 mt-0.5">
           {product.name}
         </h3>
         <div className="flex flex-wrap gap-1 mt-1">
-          {closed && (
-            <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md bg-stone-100 text-text-secondary text-[10px] font-bold">
-              🕒 Cerrado
-            </span>
-          )}
           {hasFormato(product) && (
             <span className="inline-flex items-center px-1.5 py-0.5 rounded-md bg-primary/10 text-primary text-[10px] font-bold">
               Caja × {packSize(product)}
@@ -85,11 +74,11 @@ export function ProductCard({ product }: { product: Product }) {
 
         <div className="flex items-end justify-between gap-2 mt-auto pt-3">
           <div className="leading-none min-w-0">
-            <span className="text-base font-bold text-text-primary">
-              {formatAmount(product.price)}
+            <span className="text-lg font-bold text-primary">
+              {formatPrice(product.price)}
             </span>
             <span className="block text-[10px] font-semibold text-text-secondary mt-0.5">
-              {hasFormato(product) ? 'CUP/u' : 'CUP'}
+              USD · envío incluido
             </span>
           </div>
 
@@ -104,7 +93,6 @@ export function ProductCard({ product }: { product: Product }) {
             }`}
           >
             {needsChoice ? (
-              // icono "elegir": deslizadores/opciones
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h10M4 18h7" />
               </svg>

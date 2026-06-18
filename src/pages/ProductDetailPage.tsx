@@ -5,11 +5,8 @@ import { StockBadge } from '../components/ui/StockBadge'
 import { ProductImage } from '../components/ui/ProductImage'
 import { Button } from '../components/ui/Button'
 import { useCart } from '../context/CartContext'
-import { formatAmount, formatPrice } from '../lib/format'
+import { formatPrice } from '../lib/format'
 import { hasAddons, hasFormato, hasOptions, hasPackaging, packSize } from '../lib/cart'
-import { isOpenNow } from '../lib/hours'
-import { businessById } from '../data/catalog'
-import { PaymentNote } from '../components/ui/PaymentNote'
 import type { Addon, Packaging } from '../types'
 
 export function ProductDetailPage() {
@@ -24,7 +21,6 @@ export function ProductDetailPage() {
 
   const product = products.find((p) => p.id === id)
 
-  // Si solo hay un envase, se selecciona automáticamente (es obligatorio).
   useEffect(() => {
     if (product?.packaging?.length === 1) setPackaging(product.packaging[0])
   }, [product])
@@ -52,10 +48,8 @@ export function ProductDetailPage() {
   const canAddon = hasAddons(product)
   const needsPackaging = hasPackaging(product)
   const multiPackaging = (product.packaging?.length ?? 0) > 1
-  const biz = businessById(product.businessId)
-  const closed = !biz || !isOpenNow(biz)
   const canAdd =
-    !isOut && !closed && (!needsOption || option !== null) && (!needsPackaging || packaging !== null)
+    !isOut && (!needsOption || option !== null) && (!needsPackaging || packaging !== null)
   const unitPrice = product.price + (addon?.price ?? 0) + (packaging?.price ?? 0)
 
   function add() {
@@ -63,7 +57,6 @@ export function ProductDetailPage() {
     addItem(product!, qty, option ?? undefined, addon ?? undefined, packaging ?? undefined)
   }
 
-  // Volver: usa el historial si existe, si no (entrada directa/recarga) va al inicio.
   function goBack() {
     const idx = (window.history.state?.idx as number | undefined) ?? 0
     if (idx > 0) navigate(-1)
@@ -72,7 +65,6 @@ export function ProductDetailPage() {
 
   return (
     <div className="animate-fade-in">
-      {/* Imagen grande con botón volver */}
       <div className="relative">
         <ProductImage
           emoji={product.image}
@@ -98,7 +90,6 @@ export function ProductDetailPage() {
         </div>
       </div>
 
-      {/* Info */}
       <div className="px-4 pt-5">
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">
@@ -109,54 +100,24 @@ export function ProductDetailPage() {
 
         <h1 className="text-2xl font-bold text-text-primary leading-tight mt-2">{product.name}</h1>
 
-        {biz && (
-          <p className="flex items-center gap-1.5 mt-1.5 text-xs font-semibold">
-            <span
-              className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full ${
-                closed ? 'bg-stone-100 text-text-secondary' : 'bg-green-50 text-success'
-              }`}
-            >
-              <span className={`w-1.5 h-1.5 rounded-full ${closed ? 'bg-stone-400' : 'bg-success'}`} />
-              {closed ? 'Cerrado' : 'Abierto'}
-            </span>
-            <span className="text-text-secondary">{biz.schedule.label}</span>
-          </p>
-        )}
-
-        <div className="flex items-baseline gap-1.5 mt-3">
-          <span className="text-3xl font-bold text-primary">{formatAmount(product.price)}</span>
-          <span className="text-sm font-semibold text-text-secondary">
-            CUP{hasFormato(product) ? ' / unidad' : ''}
+        <div className="flex items-baseline gap-2 mt-3">
+          <span className="text-3xl font-bold text-primary">{formatPrice(unitPrice)}</span>
+          <span className="text-sm font-semibold text-text-secondary">USD</span>
+          <span className="text-xs font-semibold text-accent bg-accent/10 px-2 py-0.5 rounded-full">
+            Envío incluido
           </span>
         </div>
-        {hasFormato(product) && (
-          <p className="flex items-center gap-2 mt-2">
-            <span className="px-2 py-0.5 rounded-md bg-primary/10 text-primary text-xs font-bold">
-              Caja × {packSize(product)}
-            </span>
-            <span className="text-sm font-semibold text-text-secondary">Se vende por caja completa</span>
-          </p>
-        )}
-
-        {businessById(product.businessId)?.paymentNote && (
-          <div className="mt-4 rounded-2xl overflow-hidden border border-amber-100">
-            <PaymentNote note={businessById(product.businessId)!.paymentNote!} />
-          </div>
-        )}
 
         <div className="mt-5">
           <h2 className="text-sm font-bold text-text-primary mb-1.5">Descripción</h2>
           <p className="text-[15px] text-text-secondary leading-relaxed">{product.longDescription}</p>
         </div>
 
-        {/* Selector de tipo */}
         {needsOption && !isOut && (
           <div className="mt-5">
             <div className="flex items-center gap-2 mb-2">
               <h2 className="text-sm font-bold text-text-primary">Elige el tipo</h2>
-              {option === null && (
-                <span className="text-[11px] font-bold text-warning">Requerido</span>
-              )}
+              {option === null && <span className="text-[11px] font-bold text-warning">Requerido</span>}
             </div>
             <div className="flex flex-wrap gap-2">
               {product.options!.map((opt) => {
@@ -180,7 +141,6 @@ export function ProductDetailPage() {
           </div>
         )}
 
-        {/* Agregos (opcional, máximo uno) */}
         {canAddon && !isOut && (
           <div className="mt-5">
             <div className="flex items-center gap-2 mb-2">
@@ -201,10 +161,7 @@ export function ProductDetailPage() {
                         : 'bg-surface text-text-primary border-border hover:border-primary/40'
                     }`}
                   >
-                    {ag.name}{' '}
-                    <span className={active ? 'text-white/80' : 'text-text-secondary'}>
-                      +{formatAmount(ag.price)}
-                    </span>
+                    {ag.name} <span className={active ? 'text-white/80' : 'text-text-secondary'}>+{formatPrice(ag.price)}</span>
                   </button>
                 )
               })}
@@ -212,18 +169,13 @@ export function ProductDetailPage() {
           </div>
         )}
 
-        {/* Envase para llevar (obligatorio) */}
         {needsPackaging && !isOut && (
           <div className="mt-5">
             <div className="flex items-center gap-2 mb-2">
               <h2 className="text-sm font-bold text-text-primary">Envase para llevar</h2>
-              {multiPackaging ? (
-                packaging === null && (
-                  <span className="text-[11px] font-bold text-warning">Requerido</span>
-                )
-              ) : (
-                <span className="text-[11px] font-bold text-text-secondary">Obligatorio</span>
-              )}
+              {multiPackaging
+                ? packaging === null && <span className="text-[11px] font-bold text-warning">Requerido</span>
+                : <span className="text-[11px] font-bold text-text-secondary">Obligatorio</span>}
             </div>
             <div className="flex flex-wrap gap-2">
               {product.packaging!.map((pk) => {
@@ -241,10 +193,7 @@ export function ProductDetailPage() {
                         : 'bg-surface text-text-primary border-border hover:border-primary/40'
                     }`}
                   >
-                    {pk.name}{' '}
-                    <span className={active ? 'text-white/80' : 'text-text-secondary'}>
-                      +{formatAmount(pk.price)}
-                    </span>
+                    {pk.name} <span className={active ? 'text-white/80' : 'text-text-secondary'}>+{formatPrice(pk.price)}</span>
                   </button>
                 )
               })}
@@ -252,15 +201,6 @@ export function ProductDetailPage() {
           </div>
         )}
 
-        {/* Precio por unidad con extras (agrego/envase) */}
-        {!isOut && (addon || packaging) && (
-          <p className="text-sm text-text-secondary mt-4">
-            Precio por unidad:{' '}
-            <span className="font-bold text-primary">{formatPrice(unitPrice)}</span>
-          </p>
-        )}
-
-        {/* Cantidad */}
         {!isOut && (
           <div className="flex items-center justify-between mt-6 bg-surface border border-border rounded-2xl p-3">
             <div>
@@ -298,46 +238,21 @@ export function ProductDetailPage() {
         )}
       </div>
 
-      {/* Espaciador para que el contenido no quede tras la barra de acción fija */}
       <div className="h-28" aria-hidden="true" />
 
-      {/* Barra de acción fija */}
       <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[440px] z-40 bg-surface/95 backdrop-blur-md border-t border-border px-4 pt-3 pb-4 pb-safe">
         {isOut ? (
-          <Button size="lg" fullWidth disabled>
-            Producto agotado
-          </Button>
-        ) : closed ? (
-          <Button size="lg" fullWidth disabled>
-            Cerrado ahora · {biz?.schedule.label}
-          </Button>
+          <Button size="lg" fullWidth disabled>Producto agotado</Button>
         ) : needsOption && option === null ? (
-          <Button size="lg" fullWidth disabled>
-            Elige un tipo para continuar
-          </Button>
+          <Button size="lg" fullWidth disabled>Elige un tipo para continuar</Button>
         ) : needsPackaging && packaging === null ? (
-          <Button size="lg" fullWidth disabled>
-            Elige el envase para continuar
-          </Button>
+          <Button size="lg" fullWidth disabled>Elige el envase para continuar</Button>
         ) : (
           <div className="grid grid-cols-2 gap-3">
-            <Button
-              variant="soft"
-              size="lg"
-              onClick={() => {
-                add()
-                navigate('/carrito')
-              }}
-            >
+            <Button variant="soft" size="lg" onClick={() => { add(); navigate('/carrito') }}>
               Añadir
             </Button>
-            <Button
-              size="lg"
-              onClick={() => {
-                add()
-                navigate('/checkout')
-              }}
-            >
+            <Button size="lg" onClick={() => { add(); navigate('/checkout') }}>
               Comprar ahora
             </Button>
           </div>

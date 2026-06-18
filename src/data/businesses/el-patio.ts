@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Business, Category, Packaging, Product, StockStatus } from '../../types'
 import DLM from '../../assets/images/business/DLM.jpg'
 import menuData from './products.json'

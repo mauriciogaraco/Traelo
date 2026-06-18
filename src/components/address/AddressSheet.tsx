@@ -9,14 +9,20 @@ interface AddressSheetProps {
   onSave: (address: Address) => void
 }
 
-const empty: Address = { nombre: '', apellidos: '', telefono: '', direccion: '', referencia: '' }
+const empty: Address = {
+  nombreComprador: '',
+  whatsappComprador: '',
+  nombreDestinatario: '',
+  direccion: '',
+  observaciones: '',
+}
+
 type Errors = Partial<Record<keyof Address, string>>
 
 export function AddressSheet({ open, initial, onClose, onSave }: AddressSheetProps) {
   const [form, setForm] = useState<Address>(initial ?? empty)
   const [errors, setErrors] = useState<Errors>({})
 
-  // Sincroniza el formulario cada vez que se abre
   useEffect(() => {
     if (open) {
       setForm(initial ?? empty)
@@ -24,13 +30,10 @@ export function AddressSheet({ open, initial, onClose, onSave }: AddressSheetPro
     }
   }, [open, initial])
 
-  // Bloquea el scroll del fondo mientras el sheet está abierto
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'
-      return () => {
-        document.body.style.overflow = ''
-      }
+      return () => { document.body.style.overflow = '' }
     }
   }, [open])
 
@@ -43,11 +46,11 @@ export function AddressSheet({ open, initial, onClose, onSave }: AddressSheetPro
 
   function validate(): boolean {
     const errs: Errors = {}
-    if (!form.nombre.trim()) errs.nombre = 'Requerido'
-    if (!form.apellidos.trim()) errs.apellidos = 'Requerido'
-    if (!form.telefono.trim()) errs.telefono = 'Requerido'
-    else if (!/^\d{6,11}$/.test(form.telefono.replace(/\s|-/g, '')))
-      errs.telefono = 'Número no válido'
+    if (!form.nombreComprador.trim()) errs.nombreComprador = 'Requerido'
+    if (!form.whatsappComprador.trim()) errs.whatsappComprador = 'Requerido'
+    else if (!/^\+?[\d\s\-().]{7,20}$/.test(form.whatsappComprador.trim()))
+      errs.whatsappComprador = 'Número no válido'
+    if (!form.nombreDestinatario.trim()) errs.nombreDestinatario = 'Requerido'
     if (!form.direccion.trim()) errs.direccion = 'Requerido'
     setErrors(errs)
     return Object.keys(errs).length === 0
@@ -57,29 +60,27 @@ export function AddressSheet({ open, initial, onClose, onSave }: AddressSheetPro
     e.preventDefault()
     if (!validate()) return
     onSave({
-      nombre: form.nombre.trim(),
-      apellidos: form.apellidos.trim(),
-      telefono: form.telefono.trim(),
+      nombreComprador: form.nombreComprador.trim(),
+      whatsappComprador: form.whatsappComprador.trim(),
+      nombreDestinatario: form.nombreDestinatario.trim(),
       direccion: form.direccion.trim(),
-      referencia: form.referencia?.trim() || undefined,
+      observaciones: form.observaciones?.trim() || undefined,
     })
   }
 
   return (
     <div className="fixed inset-0 z-[60] flex items-end justify-center">
-      {/* Backdrop */}
       <button
         aria-label="Cerrar"
         onClick={onClose}
         className="absolute inset-0 bg-black/40 animate-fade-in"
       />
-      {/* Sheet */}
       <div className="relative w-full max-w-[440px] bg-surface rounded-t-4xl shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto scrollbar-none">
         <div className="sticky top-0 bg-surface px-5 pt-4 pb-3 border-b border-border">
           <div className="w-10 h-1.5 bg-border rounded-full mx-auto mb-4" />
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-text-primary">
-              {initial ? 'Editar dirección' : 'Agregar dirección'}
+              {initial ? 'Editar datos del pedido' : 'Datos del pedido'}
             </h2>
             <button
               onClick={onClose}
@@ -93,17 +94,71 @@ export function AddressSheet({ open, initial, onClose, onSave }: AddressSheetPro
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-5 space-y-4" noValidate>
-          <div className="grid grid-cols-2 gap-3">
-            <Field label="Nombre" value={form.nombre} onChange={(v) => update('nombre', v)} error={errors.nombre} placeholder="Ej: María" autoComplete="given-name" />
-            <Field label="Apellidos" value={form.apellidos} onChange={(v) => update('apellidos', v)} error={errors.apellidos} placeholder="Ej: García" autoComplete="family-name" />
+        <form onSubmit={handleSubmit} className="p-5 space-y-5" noValidate>
+          {/* Sección comprador */}
+          <div>
+            <p className="text-xs font-bold text-accent uppercase tracking-wider mb-3">
+              Tu información (comprador)
+            </p>
+            <div className="space-y-3">
+              <Field
+                label="Tu nombre"
+                value={form.nombreComprador}
+                onChange={(v) => update('nombreComprador', v)}
+                error={errors.nombreComprador}
+                placeholder="Ej: Juan García"
+                autoComplete="name"
+              />
+              <Field
+                label="Tu WhatsApp"
+                value={form.whatsappComprador}
+                onChange={(v) => update('whatsappComprador', v)}
+                error={errors.whatsappComprador}
+                placeholder="Ej: +1 305 555 0123"
+                type="tel"
+                autoComplete="tel"
+                hint="Te contactaremos aquí para coordinar el pago por Zelle"
+              />
+            </div>
           </div>
-          <Field label="Teléfono" value={form.telefono} onChange={(v) => update('telefono', v)} error={errors.telefono} placeholder="Ej: 55123456" type="tel" autoComplete="tel" />
-          <Field label="Dirección completa" value={form.direccion} onChange={(v) => update('direccion', v)} error={errors.direccion} placeholder="Calle, número, entre calles, municipio..." multiline autoComplete="street-address" />
-          <Field label="Referencia (opcional)" value={form.referencia ?? ''} onChange={(v) => update('referencia', v)} placeholder="Ej: al doblar de la farmacia, frente al parque..." multiline />
+
+          {/* Separador */}
+          <div className="border-t border-dashed border-border" />
+
+          {/* Sección destinatario */}
+          <div>
+            <p className="text-xs font-bold text-accent uppercase tracking-wider mb-3">
+              Quién recibe en Güira de Melena
+            </p>
+            <div className="space-y-3">
+              <Field
+                label="Nombre del familiar"
+                value={form.nombreDestinatario}
+                onChange={(v) => update('nombreDestinatario', v)}
+                error={errors.nombreDestinatario}
+                placeholder="Ej: María García"
+              />
+              <Field
+                label="Dirección en Güira de Melena"
+                value={form.direccion}
+                onChange={(v) => update('direccion', v)}
+                error={errors.direccion}
+                placeholder="Calle, número, entre calles..."
+                multiline
+                autoComplete="street-address"
+              />
+              <Field
+                label="Observaciones (opcional)"
+                value={form.observaciones ?? ''}
+                onChange={(v) => update('observaciones', v)}
+                placeholder="Ej: Llamar antes de entregar, al doblar de la farmacia..."
+                multiline
+              />
+            </div>
+          </div>
 
           <Button type="submit" size="lg" fullWidth>
-            Guardar dirección
+            Guardar datos
           </Button>
         </form>
       </div>
@@ -120,11 +175,11 @@ interface FieldProps {
   type?: string
   multiline?: boolean
   autoComplete?: string
+  hint?: string
 }
 
-function Field({ label, value, onChange, error, placeholder, type = 'text', multiline, autoComplete }: FieldProps) {
-  const base =
-    'w-full px-4 py-3 rounded-2xl border text-sm text-text-primary placeholder:text-text-secondary focus:outline-none focus:ring-2 transition-all'
+function Field({ label, value, onChange, error, placeholder, type = 'text', multiline, autoComplete, hint }: FieldProps) {
+  const base = 'w-full px-4 py-3 rounded-2xl border text-sm text-text-primary placeholder:text-text-secondary focus:outline-none focus:ring-2 transition-all'
   const state = error
     ? 'border-danger/50 bg-red-50 focus:ring-danger/20'
     : 'border-border bg-background focus:ring-primary/25 focus:border-primary/40'
@@ -136,6 +191,7 @@ function Field({ label, value, onChange, error, placeholder, type = 'text', mult
       ) : (
         <input type={type} value={value} onChange={(e) => onChange(e.target.value)} placeholder={placeholder} autoComplete={autoComplete} className={`${base} ${state}`} />
       )}
+      {hint && !error && <span className="block text-[11px] text-text-secondary mt-1">{hint}</span>}
       {error && <span className="block text-danger text-xs font-bold mt-1">{error}</span>}
     </label>
   )

@@ -1,0 +1,253 @@
+{
+  "businesses": [
+    {
+      "id": "combos",
+      "name": "Combos",
+      "description": "Combos especiales curados para celebrar con tu familia.",
+      "image": "/assets/images/business/restaurant.jpg",
+      "color": "from-orange-100 to-amber-50"
+    },
+    {
+      "id": "dlm",
+      "name": "Bar Restaurante DLM",
+      "description": "Sabores de la casa, bebidas y platos fuertes para compartir.",
+      "image": "/assets/images/business/DLM.jpg",
+      "color": "from-rose-100 to-orange-50"
+    },
+    {
+      "id": "panes-macus",
+      "name": "Panadería Los Macus",
+      "description": "Panes artesanales recién horneados cada día.",
+      "image": "/assets/images/business/macus.jpg",
+      "color": "from-yellow-100 to-amber-50"
+    },
+    {
+      "id": "bebidas-regalos",
+      "name": "Bebidas & Regalos",
+      "description": "Cervezas, maltas, dulces y regalos para sorprender.",
+      "image": "/assets/images/business/Mercadito.jpg",
+      "color": "from-emerald-100 to-teal-50"
+    }
+  ],
+  "products": [
+    {
+      "id": "combo-padres",
+      "name": "Combo Día de los Padres",
+      "businessId": "combos",
+      "businessName": "Combos",
+      "category": "Combos",
+      "shortDescription": "El mejor regalo para papá.",
+      "longDescription": "Combo especial para celebrar el Día de los Padres: pollo asado, arroz congri, bebidas y postre. Todo preparado con amor para que papá lo disfrute en familia.",
+      "image": "🎁",
+      "photo": "/assets/images/products/pollo.jpg",
+      "price": 35,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "combo-familiar",
+      "name": "Combo Familiar",
+      "businessId": "combos",
+      "businessName": "Combos",
+      "category": "Combos",
+      "shortDescription": "Para compartir en familia.",
+      "longDescription": "Combo pensado para reunir a la familia: arroz congri, picadillo, bebidas y pan artesanal. Porciones generosas para que todos disfruten juntos.",
+      "image": "👨‍👩‍👧‍👦",
+      "photo": "/assets/images/products/congris.jpg",
+      "price": 28,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "combo-celebracion",
+      "name": "Combo Celebración",
+      "businessId": "combos",
+      "businessName": "Combos",
+      "category": "Combos",
+      "shortDescription": "Para fiestas y momentos especiales.",
+      "longDescription": "El combo más completo: pollo o cerdo asado, arroz moro, frijoles, bebidas, pan artesanal y postre. Perfecto para cumpleaños, aniversarios o simplemente celebrar.",
+      "image": "🎉",
+      "photo": "/assets/images/products/flan.jpg",
+      "price": 45,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "combo-restaurante",
+      "name": "Combo Restaurante",
+      "businessId": "combos",
+      "businessName": "Combos",
+      "category": "Combos",
+      "shortDescription": "Lo mejor del DLM a domicilio.",
+      "longDescription": "Lo mejor del Bar Restaurante DLM en un solo combo: hamburguesa artesanal, pizza o plato del día, bebida fría y postre. Ideal para los que aman la buena comida.",
+      "image": "🍔",
+      "photo": "/assets/images/products/hamburguesa.jpg",
+      "price": 32,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "combo-panaderia",
+      "name": "Combo Panadería",
+      "businessId": "combos",
+      "businessName": "Combos",
+      "category": "Combos",
+      "shortDescription": "El sabor del pan recién horneado.",
+      "longDescription": "Combo de panadería artesanal Los Macus: panes variados recién horneados, malteada natural y dulce casero. Un desayuno o merienda que encantará a toda tu familia.",
+      "image": "🥖",
+      "photo": "/assets/images/products/Macus/pan_macu.jpg",
+      "price": 18,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hamburguesa-especial",
+      "name": "Hamburguesa Especial",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comidas",
+      "shortDescription": "Jugosa y con todos los ingredientes.",
+      "longDescription": "Hamburguesa artesanal del DLM con carne de res, queso, vegetales frescos y la salsa especial de la casa. Un clásico que siempre satisface.",
+      "image": "🍔",
+      "photo": "/assets/images/products/hamburguesa.jpg",
+      "price": 8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pizza-familiar",
+      "name": "Pizza Familiar",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comidas",
+      "shortDescription": "Para compartir entre varios.",
+      "longDescription": "Pizza familiar con masa artesanal, salsa de tomate casera, queso y toppings seleccionados. Suficiente para 3-4 personas, lista para compartir.",
+      "image": "🍕",
+      "photo": "/assets/images/products/pizza.jpg",
+      "price": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pollo-asado",
+      "name": "Pollo Asado",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comidas",
+      "shortDescription": "Pollo entero con guarnición.",
+      "longDescription": "Pollo entero asado al horno con especias cubanas, acompañado de arroz y ensalada. Un plato completo que nutre y satisface a toda la familia.",
+      "image": "🍗",
+      "photo": "/assets/images/products/pollo.jpg",
+      "price": 15,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "sandwich-cubano",
+      "name": "Sandwich Cubano",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comidas",
+      "shortDescription": "El clásico cubano bien hecho.",
+      "longDescription": "Sandwich cubano tradicional con jamón, cerdo, queso y pickle en pan artesanal prensado. Una delicia que recuerda los sabores de siempre.",
+      "image": "🥪",
+      "photo": "/assets/images/products/sandwich.jpg",
+      "price": 7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pan-macu",
+      "name": "Pan de los Macus (x12)",
+      "businessId": "panes-macus",
+      "businessName": "Panadería Los Macus",
+      "category": "Panadería",
+      "shortDescription": "Panes artesanales recién horneados.",
+      "longDescription": "12 panes artesanales de Los Macus, recién salidos del horno con ingredientes naturales. Ideales para el desayuno o merienda familiar.",
+      "image": "🥖",
+      "photo": "/assets/images/products/Macus/pan_macu.jpg",
+      "price": 8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pan-imperial",
+      "name": "Pan Imperial",
+      "businessId": "panes-macus",
+      "businessName": "Panadería Los Macus",
+      "category": "Panadería",
+      "shortDescription": "El pan más especial de Los Macus.",
+      "longDescription": "Pan imperial especial de Los Macus, elaborado con masa madre y horneado artesanalmente. Un sabor único y auténtico que merece el nombre.",
+      "image": "🍞",
+      "photo": "/assets/images/products/Macus/pan_imperial.jpg",
+      "price": 6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pan-medianoche",
+      "name": "Pan Medianoche (x6)",
+      "businessId": "panes-macus",
+      "businessName": "Panadería Los Macus",
+      "category": "Panadería",
+      "shortDescription": "Suaves y deliciosos para sandwiches.",
+      "longDescription": "6 panes medianoches suaves y esponjosos de Los Macus, perfectos para hacer sandwiches o disfrutar con mantequilla. El sabor de siempre.",
+      "image": "🥐",
+      "photo": "/assets/images/products/Macus/Pan_medianoche.jpg",
+      "price": 5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "malteada",
+      "name": "Malteada Natural",
+      "businessId": "panes-macus",
+      "businessName": "Panadería Los Macus",
+      "category": "Panadería",
+      "shortDescription": "Fresca y cremosa, sabor natural.",
+      "longDescription": "Malteada artesanal de Los Macus con frutas naturales de temporada. Refrescante y nutritiva, perfecta para el calor cubano.",
+      "image": "🥤",
+      "photo": "/assets/images/products/Macus/malteada.jpg",
+      "price": 4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cervezas-becks",
+      "name": "Cervezas Beck's x6",
+      "businessId": "bebidas-regalos",
+      "businessName": "Bebidas & Regalos",
+      "category": "Bebidas",
+      "shortDescription": "El brindis perfecto para papá.",
+      "longDescription": "6 cervezas Beck's importadas, frías y listas para el brindis. El regalo perfecto para los papás que merecen lo mejor después de tanto trabajo.",
+      "image": "🍺",
+      "photo": "/assets/images/products/mercadito/cerveza_becks.jpg",
+      "price": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "maltas-x6",
+      "name": "Maltas x6",
+      "businessId": "bebidas-regalos",
+      "businessName": "Bebidas & Regalos",
+      "category": "Bebidas",
+      "shortDescription": "Nutritivas para toda la familia.",
+      "longDescription": "6 maltas importadas, ricas en nutrientes y vitaminas. Una bebida que toda la familia puede disfrutar, especialmente los más pequeños.",
+      "image": "🍶",
+      "price": 9,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cake-especial",
+      "name": "Cake Especial",
+      "businessId": "bebidas-regalos",
+      "businessName": "Bebidas & Regalos",
+      "category": "Regalos",
+      "shortDescription": "Para celebrar momentos únicos.",
+      "longDescription": "Cake artesanal decorado especialmente para la ocasión. Elaborado con ingredientes frescos y mucho amor, perfecto para cumpleaños, aniversarios o simplemente para hacer sonreír a quien amas.",
+      "image": "🎂",
+      "price": 22,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dulces-variados",
+      "name": "Dulces Variados",
+      "businessId": "bebidas-regalos",
+      "businessName": "Bebidas & Regalos",
+      "category": "Regalos",
+      "shortDescription": "Selección de dulces cubanos.",
+      "longDescription": "Caja de dulces variados: bombones, caramelos y confituras seleccionadas. Un detalle dulce que siempre llega al corazón de quien lo recibe.",
+      "image": "🍬",
+      "photo": "/assets/images/products/mercadito/bombones.jpg",
+      "price": 8,
+      "stockStatus": "disponible"
+    }
+  ]
+}

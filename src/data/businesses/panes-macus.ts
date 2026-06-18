@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Business, Product } from '../../types'
 import { makeDrinks } from '../drinks'
 

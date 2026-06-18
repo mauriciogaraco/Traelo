@@ -4,36 +4,23 @@ import { groupByBusiness } from './order'
 import { hasFormato, lineTotal, packSize, unitsOf } from './cart'
 import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from './config'
 
-/** Escapa los caracteres reservados de HTML para Telegram (parse_mode=HTML). */
 function esc(text: string): string {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
-/**
- * Construye el mensaje del pedido en HTML, ORGANIZADO POR NEGOCIO:
- *
- *   Pedido #1234
- *   Cliente / Dirección / Teléfono
- *
- *   🏪 Negocio A
- *   • Producto x 2 — 100 CUP
- *   🏪 Negocio B
- *   • Producto x 1 — 50 CUP
- *
- *   Total
- */
 export function buildOrderMessage(order: Order): string {
   const { id, address, total } = order
   const groups = groupByBusiness(order.items)
 
   const lines: string[] = [
-    `🧾 <b>Pedido #${esc(id)}</b> — Tráelo`,
+    `🎁 <b>Pedido #${esc(id)}</b> — Tráelo Familia`,
     '',
-    `👤 <b>Cliente:</b> ${esc(address.nombre)} ${esc(address.apellidos)}`,
+    `👤 <b>Comprador:</b> ${esc(address.nombreComprador)}`,
+    `📱 <b>WhatsApp:</b> ${esc(address.whatsappComprador)}`,
+    '',
+    `📦 <b>Para:</b> ${esc(address.nombreDestinatario)}`,
     `📍 <b>Dirección:</b> ${esc(address.direccion)}`,
-    ...(address.referencia ? [`🧭 <b>Referencia:</b> ${esc(address.referencia)}`] : []),
-    `📞 <b>Teléfono:</b> ${esc(address.telefono)}`,
-    `🕒 <b>Entrega:</b> ${esc(order.delivery ?? 'Lo antes posible')}`,
+    ...(address.observaciones ? [`📝 <b>Observaciones:</b> ${esc(address.observaciones)}`] : []),
     '',
   ]
 
@@ -54,16 +41,13 @@ export function buildOrderMessage(order: Order): string {
     lines.push('')
   }
 
-  lines.push(`🛵 <b>Mensajería:</b> ${formatPrice(order.fee ?? 0)}`)
-  lines.push(`💵 <b>Total: ${formatPrice(total)}</b>`)
+  lines.push(`💵 <b>Total: ${formatPrice(total)} USD</b>`)
+  lines.push('')
+  lines.push(`💳 <i>Pago por Zelle — coordinar por WhatsApp</i>`)
 
   return lines.join('\n')
 }
 
-/**
- * Envía el pedido al chat de Telegram configurado.
- * Devuelve true si Telegram confirma el envío, false en cualquier error.
- */
 export async function sendOrderToTelegram(order: Order): Promise<boolean> {
   try {
     const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {

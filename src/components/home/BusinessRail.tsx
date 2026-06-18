@@ -48,13 +48,15 @@ export function BusinessRail({ businesses, selectedId, onSelect }: BusinessRailP
               <p className="text-[11px] text-text-secondary line-clamp-1 mt-0.5">
                 {biz.description}
               </p>
-              <p className="flex items-center gap-1 text-[10.5px] text-text-secondary mt-1.5 font-semibold">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <circle cx="12" cy="12" r="9" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
-                </svg>
-                <span className="line-clamp-1">{biz.schedule.label}</span>
-              </p>
+              {biz.schedule && (
+                <p className="flex items-center gap-1 text-[10.5px] text-text-secondary mt-1.5 font-semibold">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                    <circle cx="12" cy="12" r="9" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
+                  </svg>
+                  <span className="line-clamp-1">{biz.schedule.label}</span>
+                </p>
+              )}
             </div>
           </button>
         )

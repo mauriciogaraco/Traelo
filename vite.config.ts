@@ -9,10 +9,10 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['logo.webp', 'traelo_192x192.png', 'traelo_512x512.png'],
       manifest: {
-        name: 'Tráelo',
-        short_name: 'Tráelo',
-        description: 'Compra en negocios locales y recíbelo en casa',
-        theme_color: '#F97316',
+        name: 'Tráelo Familia',
+        short_name: 'Familia',
+        description: 'Desde cualquier lugar, cerca de los tuyos. Envía regalos a tu familia en Cuba.',
+        theme_color: '#C96A3D',
         background_color: '#FAF8F5',
         display: 'standalone',
         orientation: 'portrait',
@@ -32,7 +32,7 @@ export default defineConfig({
           {
             // catalog.json: NetworkFirst con timeout corto. La app muestra localStorage
             // mientras tanto; el SW entrega datos frescos en cuanto llegan.
-            urlPattern: /\/data\/catalog\.json$/,
+            urlPattern: /\/data\/catalog-familia\.json$/,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'catalog-data',

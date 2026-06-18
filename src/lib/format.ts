@@ -1,11 +1,13 @@
-/** Formatea un precio en CUP, ej: 1250 → "1 250 CUP". */
+/** Formatea un precio en USD, ej: 15 → "$15", 15.5 → "$15.50". */
 export function formatPrice(value: number): string {
-  return `${value.toLocaleString('es-CU')} CUP`
+  if (Number.isInteger(value)) return `$${value}`
+  return `$${value.toFixed(2)}`
 }
 
-/** Solo el número con separador de miles, sin la moneda. */
+/** Solo el valor con símbolo $, sin decimales si es entero. */
 export function formatAmount(value: number): string {
-  return value.toLocaleString('es-CU')
+  if (Number.isInteger(value)) return `$${value}`
+  return `$${value.toFixed(2)}`
 }
 
 /** Convierte "19:30" → "7:30 pm". */

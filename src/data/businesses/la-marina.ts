@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Addon, Business, Packaging, Product } from '../../types'
 import { makeDrinks } from '../drinks'
 

@@ -12,7 +12,7 @@ import type { Order } from '../types'
 
 const statusConfig = {
   pendiente: { label: 'Pendiente', className: 'bg-amber-50 text-warning' },
-  completado: { label: 'Completado', className: 'bg-green-50 text-success' },
+  completado: { label: 'Entregado', className: 'bg-green-50 text-success' },
 }
 
 export function OrdersPage() {
@@ -30,8 +30,8 @@ export function OrdersPage() {
         <EmptyState
           icon="📦"
           title="Aún no tienes pedidos"
-          description="Cuando hagas tu primer pedido aparecerá aquí para que le hagas seguimiento."
-          action={<Button size="lg" onClick={() => navigate('/')}>Empezar a comprar</Button>}
+          description="Cuando hagas tu primer pedido aparecerá aquí para hacerle seguimiento."
+          action={<Button size="lg" onClick={() => navigate('/')}>Hacer un pedido</Button>}
         />
       </div>
     )
@@ -47,11 +47,14 @@ export function OrdersPage() {
       </header>
 
       {justOrdered && (
-        <div className="mx-4 mb-4 flex items-center gap-2.5 bg-green-50 border border-green-200 rounded-2xl p-3 animate-scale-in">
-          <span className="text-lg">✅</span>
-          <p className="text-sm font-semibold text-green-800">
-            ¡Pedido #{justOrdered} enviado! Te contactaremos para coordinar la entrega.
-          </p>
+        <div className="mx-4 mb-4 flex items-start gap-2.5 bg-green-50 border border-green-200 rounded-2xl p-3 animate-scale-in">
+          <span className="text-lg flex-shrink-0">✅</span>
+          <div>
+            <p className="text-sm font-bold text-green-800">¡Pedido #{justOrdered} enviado!</p>
+            <p className="text-xs text-green-700 mt-0.5">
+              Te contactaremos por WhatsApp para coordinar el pago por Zelle.
+            </p>
+          </div>
         </div>
       )}
 
@@ -88,13 +91,13 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
           <p className="text-[11px] font-semibold text-text-secondary">Pedido</p>
           <p className="text-lg font-bold text-text-primary">#{order.id}</p>
           <p className="text-xs text-text-secondary mt-0.5">{formatDate(order.date)}</p>
-          {order.delivery && (
+          {order.address.nombreDestinatario && (
             <p className="text-xs text-primary font-semibold mt-0.5 flex items-center gap-1">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <circle cx="12" cy="12" r="9" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
+                <circle cx="12" cy="8" r="4" />
+                <path strokeLinecap="round" d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
               </svg>
-              {order.delivery}
+              Para: {order.address.nombreDestinatario}
             </p>
           )}
         </div>
@@ -103,7 +106,6 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
         </span>
       </div>
 
-      {/* Items agrupados por negocio */}
       <div className="px-4 py-3 space-y-3">
         {groups.map((group) => (
           <div key={group.businessId}>
@@ -121,8 +123,7 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
                   <span className="text-text-secondary line-clamp-1 flex-1">
                     {item.product.name}
                     {item.option && <span className="text-primary font-semibold"> · {item.option}</span>}
-                    {item.addon && <span className="text-success font-semibold"> · + {item.addon.name}</span>}
-                    {item.packaging && <span className="text-sky-700 font-semibold"> · 📦 {item.packaging.name}</span>}{' '}
+                    {' '}
                     <span className="text-text-secondary/70">
                       × {hasFormato(item.product) ? `${unitsOf(item)} u` : item.quantity}
                     </span>
@@ -140,7 +141,7 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
       <div className="px-4 pb-4 pt-1 border-t border-border flex items-center justify-between gap-3">
         <div>
           <p className="text-[11px] text-text-secondary">Total</p>
-          <p className="text-lg font-bold text-primary">{formatPrice(order.total)}</p>
+          <p className="text-lg font-bold text-primary">{formatPrice(order.total)} USD</p>
         </div>
         <div className="flex items-center gap-2">
           <button
@@ -158,7 +159,7 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
               onClick={onComplete}
               className="h-9 px-3 rounded-xl border border-border text-xs font-bold text-text-primary hover:border-primary/40 transition-colors"
             >
-              Recibido
+              Recibido ✓
             </button>
           )}
         </div>
