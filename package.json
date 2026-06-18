@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "catalog": "node scripts/build-catalog.js",
+    "build": "node scripts/build-catalog.js && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

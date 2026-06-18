@@ -1,0 +1,3144 @@
+{
+  "businesses": [
+    {
+      "id": "bodega-central",
+      "name": "Mercado Alpha",
+      "description": "Mercado Alpha: alimentos, bebidas y aseo del día a día.",
+      "image": "/assets/images/business/alpha.jpg",
+      "color": "from-amber-100 to-orange-50",
+      "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
+      "schedule": {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "17:00",
+        "label": "Lun–Sáb · 9:00 am – 5:00 pm"
+      }
+    },
+    {
+      "id": "dlm",
+      "name": "Bar Restaurante DLM",
+      "description": "Sabores de la casa, bebidas, picaderas y platos fuertes para compartir.",
+      "image": "/assets/images/business/DLM.jpg",
+      "color": "from-rose-100 to-orange-50",
+      "deliveryFee": 350,
+      "schedule": {
+        "days": [
+          3,
+          4,
+          5,
+          6,
+          0
+        ],
+        "open": "13:00",
+        "close": "22:00",
+        "label": "Mié–Dom · 1:00 pm – 10:00 pm"
+      }
+    },
+    {
+      "id": "panes-macus",
+      "name": "Los Macus",
+      "description": "Panadería: panes recién hechos y bebidas frías.",
+      "image": "/assets/images/business/macus.jpg",
+      "color": "from-yellow-100 to-amber-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "22:00",
+        "label": "Todos los días · 9:00 am – 10:00 pm"
+      }
+    },
+    {
+      "id": "mercadito-ahorro",
+      "name": "El Mercadito",
+      "description": "Granos por libra, aceite y embutidos frescos.",
+      "image": "/assets/images/business/Mercadito.jpg",
+      "color": "from-emerald-100 to-teal-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "22:00",
+        "label": "Todos los días · 9:00 am – 10:00 pm"
+      }
+    },
+    {
+      "id": "la-marina",
+      "name": "La Marina",
+      "description": "Pizzas y espaguetis con agregos a elección, más bebidas frías.",
+      "image": "/assets/images/products/pizza.jpg",
+      "color": "from-red-100 to-orange-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "22:00",
+        "label": "Todos los días · 9:00 am – 10:00 pm"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "bc-001",
+      "name": "Avena con leche",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Lista para preparar.",
+      "longDescription": "Avena con leche, se vende por unidad.",
+      "image": "🥣",
+      "photo": "/assets/images/products/mercadito/avena.jpg",
+      "price": 4.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-002",
+      "name": "Chicharrones de viento",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Listos para freír.",
+      "longDescription": "Se venden por unidad, listos para freír.",
+      "image": "🍟",
+      "photo": "/assets/images/products/mercadito/chicharrones.jpg",
+      "price": 1.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-003",
+      "name": "Shaka (vodka energético)",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Bebidas",
+      "shortDescription": "Caja de 24 unidades.",
+      "longDescription": "Llévate la caja de 24 unidades y disfruta del sabor que todos aman.",
+      "image": "🥤",
+      "photo": "/assets/images/products/mercadito/shaka.jpg",
+      "price": 0.8,
+      "formato": 24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-004",
+      "name": "Refresco Cana",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Bebidas",
+      "shortDescription": "Elige una opción para añadir al carrito",
+      "longDescription": "Excelente calidad. Se vende por blister de 12 unidades. Contiene 420ml",
+      "image": "🥤",
+      "photo": "/assets/images/products/mercadito/refresco_cana_cola.jpg",
+      "price": 0.53,
+      "formato": 12,
+      "options": [
+        "Cola",
+        "Uva",
+        "Limón",
+        "Naranja",
+        "Frambuesa"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-005",
+      "name": "Papel sanitario",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Extra suave.",
+      "longDescription": "Se vende por paca de 24 unidades.",
+      "image": "🧻",
+      "photo": "/assets/images/products/mercadito/papel_higienico.jpg",
+      "price": 1,
+      "formato": 24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-008",
+      "name": "Botonetas",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "Tira de 24 unidades.",
+      "longDescription": "Se venden por tira de 24 unidades.",
+      "image": "🧀",
+      "photo": "/assets/images/products/mercadito/botonetas.jpg",
+      "price": 0.11,
+      "formato": 24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-009",
+      "name": "Chupa Chupa XXXL",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "Estuche de 48 unidades.",
+      "longDescription": "Se vende por estuches de 48 unidades.",
+      "image": "🍭",
+      "photo": "/assets/images/products/mercadito/chups_chups.jpg",
+      "price": 0.1,
+      "formato": 48,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-010",
+      "name": "Culeros Bebish",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Pañales desechables.",
+      "longDescription": "Se vende por unidad.",
+      "image": "🧷",
+      "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
+      "price": 5.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-012",
+      "name": "Bambil",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🧃",
+      "photo": "/assets/images/products/mercadito/bambil.jpg",
+      "price": 0.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-013",
+      "name": "Galletas Coconut",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "De coco.",
+      "longDescription": "Se vende por estuches de 12 unidades",
+      "image": "🍪",
+      "photo": "/assets/images/products/mercadito/coconut.jpg",
+      "price": 0.17,
+      "formato": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-014",
+      "name": "Crackers",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "Galletas saladas.",
+      "longDescription": "Galletas tipo cracker. Se vende por unidad.",
+      "image": "🍘",
+      "photo": "/assets/images/products/mercadito/crackers.jpg",
+      "price": 0.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-015",
+      "name": "Cuki's",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "Elige una opción para añadir",
+      "longDescription": " Se vende por estuche de 12 unidades",
+      "image": "🍪",
+      "photo": "/assets/images/products/mercadito/cukis.jpg",
+      "price": 2.16,
+      "options": [
+        "Vainilla",
+        "Chocolate"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-017",
+      "name": "Frijoles negros",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "500 gramos.",
+      "longDescription": "Se vende por unidad",
+      "image": "🫘",
+      "photo": "/assets/images/products/mercadito/frijoles.jpg",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-018",
+      "name": "Gelatina",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍮",
+      "photo": "/assets/images/products/mercadito/gelatina.jpg",
+      "price": 0.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-019",
+      "name": "Gelatina en pomo",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "Lista para comer.",
+      "longDescription": "Gelatina en pomo. Se vende por pomos de 100 unidades",
+      "image": "🍮",
+      "photo": "/assets/images/products/mercadito/gelatina_pomo.jpg",
+      "price": 6.8,
+      "options": [
+        "Pingüino",
+        "Mono"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-020",
+      "name": "Diarias",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🧻",
+      "photo": "/assets/images/products/mercadito/intimas.jpg",
+      "price": 1.16,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "bc-022",
+      "name": "Jugos Petit",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Bebidas",
+      "shortDescription": "El mejor jugo del mercado",
+      "longDescription": "Se vende por cajas de 24 unidades, viene surtido los 3 sabores en la caja",
+      "image": "🧃",
+      "photo": "/assets/images/products/mercadito/jugos_petit.jpg",
+      "price": 0.4,
+      "formato": 24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-023",
+      "name": "Galletas Jumbo",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "",
+      "longDescription": "Se vende por estuches de 12 unidades",
+      "image": "🧺",
+      "photo": "/assets/images/products/mercadito/jumbo.jpg",
+      "price": 0.17,
+      "formato": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-024",
+      "name": "Lavavajillas",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Pote Lavavajillas",
+      "longDescription": "Lavavajillas líquido. Se vende por unidad.",
+      "image": "🧴",
+      "photo": "/assets/images/products/mercadito/lavavajillas.jpg",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-025",
+      "name": "Mayonesa",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Cremosa.",
+      "longDescription": "Mayonesa en pomo. Se vende por blister de 12 unidades",
+      "image": "🥚",
+      "photo": "/assets/images/products/mercadito/mayonesa.jpg",
+      "price": 1.66,
+      "formato": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-026",
+      "name": "Pastilla para congrí",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Sazón en pastilla.",
+      "longDescription": "Se vende por caja de 48 pastillitas",
+      "image": "🧂",
+      "photo": "/assets/images/products/mercadito/pastillaCongrís.jpg",
+      "price": 0.11,
+      "formato": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-027",
+      "name": "Pastilla de pollo",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Sazón en pastilla.",
+      "longDescription": "Pastilla saborizante de pollo . Se vende por caajita de 12 unidades.",
+      "image": "🧂",
+      "photo": "/assets/images/products/mercadito/pastilla_de_pollo_con_tomate.jpg",
+      "price": 0.04,
+      "formato": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-028",
+      "name": "Peter Neptun",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "",
+      "longDescription": "Se vende por cajas de 24 unidades",
+      "image": "🍪",
+      "photo": "/assets/images/products/mercadito/peter_neptun.jpg",
+      "price": 0.24,
+      "formato": 24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-029",
+      "name": "Puré de papas",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "1kg",
+      "longDescription": " Se vende por unidad.",
+      "image": "🥔",
+      "photo": "/assets/images/products/mercadito/pure_de_papas.jpg",
+      "price": 6.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-030",
+      "name": "Espaguetis",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "500 gramos.",
+      "longDescription": "Se vende por cajas de 20 unidades.",
+      "image": "🍝",
+      "photo": "/assets/images/products/mercadito/spaguetti.jpg",
+      "price": 0.48,
+      "formato": 20,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-031",
+      "name": "Vinagre",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Pomo de 1 litro.",
+      "longDescription": "Se vende por blister de 10 unidades.",
+      "image": "🧴",
+      "photo": "/assets/images/products/mercadito/Vinagre.jpg",
+      "price": 0.5,
+      "formato": 10,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-032",
+      "name": "Yogurt Vima",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Bebidas",
+      "shortDescription": "x4",
+      "longDescription": " Se vende por estuche de 4 vasitos",
+      "image": "🥛",
+      "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
+      "price": 1.8,
+      "options": [
+        "Fresa",
+        "Natural"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-033",
+      "name": "Detergente Líquido",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Detergente líquido multiuso",
+      "longDescription": "Se venden por blister 10 unidades.",
+      "image": "🧴",
+      "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
+      "price": 0.7,
+      "formato": 10,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "bc-034",
+      "name": "Toallitas Húmedas",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Toallitas húmedas para el cuidado personal",
+      "longDescription": "Se venden por unnidad.",
+      "image": "🧴",
+      "photo": "/assets/images/products/mercadito/toallitas_indoxa.jpg",
+      "price": 1.33,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-035",
+      "name": "Bombones",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "",
+      "longDescription": "Se venden por paquete 80/90 bombones",
+      "image": "🍫",
+      "photo": "/assets/images/products/mercadito/bombones.jpg",
+      "price": 6.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-036",
+      "name": "Pasta Dental CoolWhite",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Pasta dental",
+      "longDescription": "Se venden por paquete de 12 unidades",
+      "image": "🪥",
+      "photo": "/assets/images/products/mercadito/bombones.jpg",
+      "price": 0.72,
+      "formato": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-038",
+      "name": "Queso criollo",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Se vende por libra",
+      "image": "🧀",
+      "photo": "/assets/images/products/mercadito/queso_criollo.jpg",
+      "price": 1.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-039",
+      "name": "Zumo Naranja/Limón",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Se vende por blister de 10 unidades",
+      "image": "🧃",
+      "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
+      "price": 0.5,
+      "formato": 10,
+      "options": [
+        "Naranja",
+        "Limón"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-040",
+      "name": "Arroz Sam 1kg",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Se vende por paca de 10 unidades",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercadito/arroz_sam.jpg",
+      "price": 1.32,
+      "formato": 10,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-041",
+      "name": "Saco de Arroz 50lb",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Arroz Americano.",
+      "longDescription": "El mejor precio del mercado , sale a 280 la libra",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercadito/arroz50lb.jpg",
+      "price": 28.8,
+      "formato": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-042",
+      "name": "Leche condensada",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Se vende por caja de 24 unidades",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercadito/leche_condensada.jpg",
+      "price": 1.34,
+      "formato": 24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-043",
+      "name": "Arroz de Guyana 110lbs",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Se vende por saco",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
+      "price": 63.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-044",
+      "name": "Marranetas",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Se vende por estuche de 12 unidades",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercadito/marranetas.jpg",
+      "price": 0.37,
+      "formato": 40,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-045",
+      "name": "Jabón de lavar",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Multiusos de 170g ",
+      "longDescription": "Se vende por cajas de 40 unidades",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercadito/jabón_lavar_multiuso.jpg",
+      "price": 0.53,
+      "formato": 40,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-001",
+      "name": "Entremés de Queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 1.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-002",
+      "name": "Entremés de Jamón",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 1.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-003",
+      "name": "Entremés de Jamón/queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-004",
+      "name": "Entremés Mixto",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 3.5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-005",
+      "name": "Croquetas de la casa",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 1.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-006",
+      "name": "Tostones rellenos de jamón y queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-007",
+      "name": "Tostones rellenos de atún",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-008",
+      "name": "Tostones rellenos de ropa vieja de cerdo",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.6,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-009",
+      "name": "Tostones rellenos de ropa vieja de res",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.6,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-010",
+      "name": "Tostones naturales",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 1.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-011",
+      "name": "Frituras de Malanga",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 1.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-012",
+      "name": "Aceitunas",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-013",
+      "name": "Papas fritas",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-014",
+      "name": "Papas fritas con queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-015",
+      "name": "Salchipapa",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-016",
+      "name": "Bolitas queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 2.6,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-017",
+      "name": "Picadera DLM",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Entrantes",
+      "longDescription": "Entrantes · Para empezar",
+      "image": "🍤",
+      "price": 9.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-018",
+      "name": "Ensalada fría de jamón",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Fríos",
+      "longDescription": "Fríos · Frescos",
+      "image": "🥗",
+      "price": 1.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-019",
+      "name": "Ensalalada fría de atún",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Fríos",
+      "longDescription": "Fríos · Frescos",
+      "image": "🥗",
+      "price": 2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-020",
+      "name": "Crema de queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Fríos",
+      "longDescription": "Fríos · Frescos",
+      "image": "🥗",
+      "price": 1.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-021",
+      "name": "Crema jamón y queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Fríos",
+      "longDescription": "Fríos · Frescos",
+      "image": "🥗",
+      "price": 2.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-022",
+      "name": "Camarón",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cocteles",
+      "longDescription": "Cocteles · Del bar",
+      "image": "🦐",
+      "price": 4.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-023",
+      "name": "Langosta",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cocteles",
+      "longDescription": "Cocteles · Del bar",
+      "image": "🦐",
+      "price": 4.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-024",
+      "name": "Ración de Yuca",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Guarniciones",
+      "longDescription": "Guarniciones · Acompañantes",
+      "image": "🍚",
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-025",
+      "name": "Ensalada mixta",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Guarniciones",
+      "longDescription": "Guarniciones · Acompañantes",
+      "image": "🍚",
+      "price": 2.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-026",
+      "name": "Espaguetis de jamón",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pastas & arroz",
+      "longDescription": "Pastas & arroz · Clásicos",
+      "image": "🍝",
+      "price": 2.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-027",
+      "name": "Espaguetis con  queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pastas & arroz",
+      "longDescription": "Pastas & arroz · Clásicos",
+      "image": "🍝",
+      "price": 2.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-028",
+      "name": "Espaguetis de jamón y queso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pastas & arroz",
+      "longDescription": "Pastas & arroz · Clásicos",
+      "image": "🍝",
+      "price": 2.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-029",
+      "name": "Arroz blanco",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pastas & arroz",
+      "longDescription": "Pastas & arroz · Clásicos",
+      "image": "🍝",
+      "price": 0.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-030",
+      "name": "Arroz moro",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pastas & arroz",
+      "longDescription": "Pastas & arroz · Clásicos",
+      "image": "🍝",
+      "price": 1.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-031",
+      "name": "Arroz frito",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pastas & arroz",
+      "longDescription": "Pastas & arroz · Clásicos",
+      "image": "🍝",
+      "price": 2.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-032",
+      "name": "Gordon blue 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pollo",
+      "longDescription": "Pollo · Fuertes",
+      "image": "🍗",
+      "price": 6.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-033",
+      "name": "Fajitas Empanadas 230g (Pollo)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pollo",
+      "longDescription": "Pollo · Fuertes",
+      "image": "🍗",
+      "price": 4.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-034",
+      "name": "Fajitas encebolladas 230g (Pollo)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pollo",
+      "longDescription": "Pollo · Fuertes",
+      "image": "🍗",
+      "price": 4.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-035",
+      "name": "Bistec grillé 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pollo",
+      "longDescription": "Pollo · Fuertes",
+      "image": "🍗",
+      "price": 4.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-036",
+      "name": "Milanesa 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Pollo",
+      "longDescription": "Pollo · Fuertes",
+      "image": "🍗",
+      "price": 6.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-037",
+      "name": "Uruguayo 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 6.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-038",
+      "name": "Rollo Empanado 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 6.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-039",
+      "name": "Fajitas Empanadas 230g (Cerdo)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 4.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-040",
+      "name": "Fajitas Encebolladas 230g (Cerdo)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 4.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-041",
+      "name": "Milanesa 230g (con jamón y queso)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 6.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-042",
+      "name": "Bistec grillé 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 4.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-043",
+      "name": "Ropa vieja 150g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 4.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-044",
+      "name": "Brusquetas 300g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 4.5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-045",
+      "name": "Masa frita 460g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 6.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-046",
+      "name": "Masa Fricasé 460g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 7.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-047",
+      "name": "Lomillo relleno gratinado 460g (vegetales, jamón y aceitunas)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cerdo",
+      "longDescription": "Cerdo · Parrilla",
+      "image": "🥩",
+      "price": 8.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-048",
+      "name": "Ropa vieja 150g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Res",
+      "longDescription": "Res · Parrilla",
+      "image": "🥩",
+      "price": 4.5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-049",
+      "name": "Vaca Frita",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Res",
+      "longDescription": "Res · Parrilla",
+      "image": "🥩",
+      "price": 4.5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-050",
+      "name": "Ceviche de Camarón 115g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 5.2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-051",
+      "name": "Camarón al ajillo 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 5.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-052",
+      "name": "Camarón enchilado 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 6.1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-053",
+      "name": "Camarón rebosado 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 5.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-054",
+      "name": "Bistec de langosta mariposa 300g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 6.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-055",
+      "name": "Enchilado de langosta 300g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 6.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-056",
+      "name": "Langosta Rebosada 300g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 6.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-057",
+      "name": "Langosta al ajillo 300g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 6.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-058",
+      "name": "Langosta a mi manera 300g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 6.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-059",
+      "name": "Minuta Frita 300g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 3.2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-060",
+      "name": "Filete de pescado 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 3.7,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-061",
+      "name": "Ceviche 115g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 4.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-062",
+      "name": "Eperlán 230g",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Mar",
+      "longDescription": "Mar · Del mar",
+      "image": "🦞",
+      "price": 4.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-063",
+      "name": "Helado 2 bolas",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Postres",
+      "longDescription": "Postres · Final dulce",
+      "image": "🍮",
+      "price": 1.2,
+      "stockStatus": "agotado",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-064",
+      "name": "Helado 3 bolas",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Postres",
+      "longDescription": "Postres · Final dulce",
+      "image": "🍮",
+      "price": 1.6,
+      "stockStatus": "agotado",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-065",
+      "name": "Flan",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Postres",
+      "longDescription": "Postres · Final dulce",
+      "image": "🍮",
+      "price": 1.1,
+      "stockStatus": "agotado",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-066",
+      "name": "Postre de la casa",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Comida",
+      "shortDescription": "Cake",
+      "longDescription": "Postres · Final dulce",
+      "image": "🍮",
+      "price": 1.9,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-067",
+      "name": "Batido de helado",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 2.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Envase",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "dlm-068",
+      "name": "Cerveza de lata",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 0.96,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-069",
+      "name": "Cerveza Cristal",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 1.16,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-070",
+      "name": "Cerveza importada",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 2.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-071",
+      "name": "Refresco de lata",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 0.82,
+      "stockStatus": "disponible",
+      "options": [
+        "Naranja",
+        "Limón",
+        "Cola"
+      ]
+    },
+    {
+      "id": "dlm-072",
+      "name": "Malta",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 0.86,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-073",
+      "name": "Red Bull",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 1.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-074",
+      "name": "Energético",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 0.96,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-075",
+      "name": "Kermato",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 1.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-076",
+      "name": "Jugo de Cajita",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 0.66,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-077",
+      "name": "Jugo de lata",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 0.96,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-078",
+      "name": "Pomo de agua",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🥤",
+      "price": 0.56,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-079",
+      "name": "Vino Espumoso",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 16.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-080",
+      "name": "Ron Havana Club Especial (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 16.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-081",
+      "name": "Ron Havana Club Smoky (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 26.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-082",
+      "name": "Ron Eminente 7 años (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 43.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-083",
+      "name": "Vodka Krova (con 1 caja de jugo)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 18.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-084",
+      "name": "Vodka Ciroc (con 1 caja de jugo)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 33.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-085",
+      "name": "Vodka Belvedere (con 1 caja de jugo)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 19.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-086",
+      "name": "Whisky Back to Black (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 18.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-087",
+      "name": "Whisky Ballantine (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 26.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-088",
+      "name": "Whisky Jameson (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 35.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-089",
+      "name": "Whisky Jameson Black Barrel (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 39.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-090",
+      "name": "Whisky Chivas Regal (18 años) (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 59.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-091",
+      "name": "Whisky Red Label (con 1 Red Bull)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 32.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-092",
+      "name": "Tequila Rose",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 57.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-093",
+      "name": "Jager",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 28.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-094",
+      "name": "Havana Club 15 Años",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 0.3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-095",
+      "name": "Wisky Blonde Label",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Botellas en Ofertas",
+      "longDescription": "Botellas en Ofertas · Promociones Especiales",
+      "image": "🍾",
+      "price": 39.06,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-001",
+      "name": "Jamón",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Pan con jamón.",
+      "longDescription": "Pan con jamón recién preparado.",
+      "image": "🥪",
+      "price": 0.58,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-002",
+      "name": "Jamón y Queso",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Jamón y queso.",
+      "longDescription": "Pan con jamón y queso.",
+      "image": "🥪",
+      "price": 0.68,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-003",
+      "name": "Hamburguesa",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Hamburguesa de la casa.",
+      "longDescription": "Hamburguesa preparada al momento.",
+      "image": "🍔",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-004",
+      "name": "Macu",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Especialidad de la casa.",
+      "longDescription": "Pan Macu preparado al momento.",
+      "image": "🥪",
+      "price": 1.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-005",
+      "name": "Super Macu",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Nuestro producto estrella.",
+      "longDescription": "Versión especial del Macu con ingredientes premium.",
+      "image": "🥪",
+      "photo": "/assets/images/products/Macus/pan_macu.jpg",
+      "price": 2.74,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-006",
+      "name": "Aporreado",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Aporreado tradicional.",
+      "longDescription": "Pan con aporreado recién preparado.",
+      "image": "🥪",
+      "price": 0.74,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-007",
+      "name": "Picadillo",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Picadillo preparado.",
+      "longDescription": "Pan con picadillo.",
+      "image": "🥪",
+      "price": 0.42,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-008",
+      "name": "Surtido",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Combinación surtida.",
+      "longDescription": "Pan surtido con diferentes ingredientes.",
+      "image": "🥪",
+      "price": 0.74,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-009",
+      "name": "Surtido Especial",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Versión especial.",
+      "longDescription": "Pan surtido especial.",
+      "image": "🥪",
+      "price": 1.28,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-010",
+      "name": "Tortilla",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Tortilla recién hecha.",
+      "longDescription": "Pan con tortilla.",
+      "image": "🥚",
+      "price": 0.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-011",
+      "name": "Jamón y Queso Especial",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Versión especial.",
+      "longDescription": "Pan con jamón y queso especial.",
+      "image": "🥪",
+      "price": 0.98,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-012",
+      "name": "Croqueta",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Croqueta individual.",
+      "longDescription": "Croqueta para añadir al pan.",
+      "image": "🍘",
+      "price": 0.56,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "pm-013",
+      "name": "Queso",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Porción de queso.",
+      "longDescription": "Queso para añadir al pan.",
+      "image": "🧀",
+      "price": 0.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-016",
+      "name": "Perro Grande",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Perro caliente grande.",
+      "longDescription": "Perro caliente tamaño grande.",
+      "image": "🌭",
+      "price": 0.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-017",
+      "name": "Mortadella",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Mortadella.",
+      "longDescription": "Pan con mortadella.",
+      "image": "🥪",
+      "price": 0.54,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-018",
+      "name": "Lomo Ahumado",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Lomo ahumado.",
+      "longDescription": "Pan con lomo ahumado.",
+      "image": "🥪",
+      "price": 1.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-020",
+      "name": "Bistec de Cerdo",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Bistec de cerdo.",
+      "longDescription": "Pan con bistec de cerdo.",
+      "image": "🥩",
+      "price": 1.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-021",
+      "name": "Bistec de Res",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Bistec de res.",
+      "longDescription": "Pan con bistec de res.",
+      "image": "🥩",
+      "price": 1.7,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "pm-022",
+      "name": "Vaca Frita",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Vaca frita.",
+      "longDescription": "Pan con vaca frita.",
+      "image": "🥩",
+      "price": 1.14,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "pm-024",
+      "name": "Medianoche",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "",
+      "longDescription": "",
+      "image": "🥪",
+      "price": 2.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-025",
+      "name": "Imperial",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Pan especial imperial",
+      "longDescription": "",
+      "image": "🥪",
+      "price": 2.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-026",
+      "name": "Chorizo",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Pan con chorizo",
+      "longDescription": "",
+      "image": "🥩",
+      "price": 0.64,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-ref-naranja",
+      "name": "Ref. Naranja",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 0.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-ref-limon",
+      "name": "Ref. Limón",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 0.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-malta-guajira",
+      "name": "Malta Guajira 1.5 L",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 2.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-malta",
+      "name": "Malta",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.9,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-jugo-cajita",
+      "name": "Jugo de Cajita",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🧃",
+      "price": 0.48,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-chaka",
+      "name": "Chaka",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-energizante-grande",
+      "name": "Energizante Grande",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "⚡",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-energizante-xl",
+      "name": "Energizante Flash",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "⚡",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-cerv-shekels",
+      "name": "Cerv. Shekels",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-cerv-becks",
+      "name": "Cerv. Becks",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-cerv-beer-azul",
+      "name": "Cerv. Beer Azul",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-cerv-muralla",
+      "name": "Cerv. Muralla",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-kermato",
+      "name": "Kermato",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 1.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-dr-agua-natural",
+      "name": "Agua Natural",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "💧",
+      "price": 0.36,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-001",
+      "name": "Arroz Guyanés (por libra)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Arroz a granel, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercado/arroz_brasileño_agranel.jpg",
+      "price": 0.68,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-002",
+      "name": "Aceite (900 mL)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Botella de 900ml.",
+      "longDescription": "Aceite vegetal en botella de 900ml.",
+      "image": "🫒",
+      "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
+      "price": 3.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-003",
+      "name": "Perrito caliente",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Salchicha + pan.",
+      "longDescription": "Perrito caliente listo para preparar (salchicha y pan). Se vende por unidad.",
+      "image": "🌭",
+      "photo": "/assets/images/products/mercado/perritos_mana.jpg",
+      "price": 1.3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-004",
+      "name": "Azúcar (por libra)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Azúcar a granel, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍬",
+      "photo": "/assets/images/products/mercado/azucar_blanca_lb.jpg",
+      "price": 0.84,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-005",
+      "name": "Jamonada de pollo (500 g)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Media libra.",
+      "longDescription": "Jamonada de pollo, se entrega por unidad.",
+      "image": "🍖",
+      "photo": "/assets/images/products/mercado/mortadella_500g.webp",
+      "price": 1.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-006",
+      "name": "Lomo de cerdo en bistec (1 lb)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Una libra, en bistec.",
+      "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
+      "image": "🥩",
+      "price": 3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-013",
+      "name": "Sopita instantánea",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Sopa intantanea.",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercado/sopa_instantanea.jpg",
+      "price": 0.44,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-007",
+      "name": "Jabón en Polvo",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Aseo",
+      "shortDescription": "",
+      "longDescription": "Jabón en polvo para lavado de ropa (1kg).",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercado/FEFE_jabon.jpg",
+      "price": 2.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-008",
+      "name": "Mortadella 1kg",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Mortadella de 1kg.",
+      "image": "🥩",
+      "photo": "/assets/images/products/mercado/mortadella_1kg.jpg",
+      "price": 2.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-009",
+      "name": "Spam de tubo",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Spam de tubo (400g).",
+      "image": "🥩",
+      "photo": "/assets/images/products/mercado/spam_tubo.webp",
+      "price": 1.4,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "ma-0010",
+      "name": "Frijoles 1kg",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Frijoles de 1kg.",
+      "image": "🫘",
+      "photo": "/assets/images/products/mercado/pontarollo.jpg",
+      "price": 1.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-0011",
+      "name": "Arroz 1kg",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Arroz de 1kg.",
+      "image": "🍚",
+      "photo": "/assets/images/products/mercado/arroz_sam1kg.jpg",
+      "price": 1.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-0012",
+      "name": "Yogurt Vaso",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Yogurt envasaado",
+      "image": "🥛",
+      "photo": "/assets/images/products/mercado/yogurt_vaso.webp",
+      "price": 0.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-001",
+      "name": "Espaguetis",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Con salsa de la casa.",
+      "longDescription": "Espaguetis recién hechos. Puedes añadir un agrego.",
+      "image": "🍝",
+      "price": 0.9,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Jamón",
+          "price": 150
+        },
+        {
+          "name": "Queso",
+          "price": 200
+        },
+        {
+          "name": "Cebolla",
+          "price": 100
+        }
+      ],
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 10
+        },
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "lm-002",
+      "name": "Pizza de Queso",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Clásica.",
+      "longDescription": "Pizza de queso. Puedes añadir un agrego.",
+      "image": "🍕",
+      "price": 0.6,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Jamón",
+          "price": 150
+        },
+        {
+          "name": "Queso",
+          "price": 200
+        },
+        {
+          "name": "Cebolla",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "lm-003",
+      "name": "Pizza Queso Doble",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Doble queso.",
+      "longDescription": "Pizza con doble queso. Puedes añadir un agrego.",
+      "image": "🍕",
+      "price": 1.04,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Jamón",
+          "price": 150
+        },
+        {
+          "name": "Queso",
+          "price": 200
+        },
+        {
+          "name": "Cebolla",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "lm-004",
+      "name": "Pizza de Jamón",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Con jamón.",
+      "longDescription": "Pizza de jamón. Puedes añadir un agrego.",
+      "image": "🍕",
+      "price": 1.34,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Jamón",
+          "price": 150
+        },
+        {
+          "name": "Queso",
+          "price": 200
+        },
+        {
+          "name": "Cebolla",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "lm-005",
+      "name": "Pizza de Picadillo",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Con picadillo.",
+      "longDescription": "Pizza de picadillo. Puedes añadir un agrego.",
+      "image": "🍕",
+      "price": 1.54,
+      "stockStatus": "agotado",
+      "addons": [
+        {
+          "name": "Jamón",
+          "price": 150
+        },
+        {
+          "name": "Queso",
+          "price": 200
+        },
+        {
+          "name": "Cebolla",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "lm-006",
+      "name": "Pizza de Cebolla",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Con cebolla.",
+      "longDescription": "Pizza de cebolla. Puedes añadir un agrego.",
+      "image": "🍕",
+      "price": 1.14,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Jamón",
+          "price": 150
+        },
+        {
+          "name": "Queso",
+          "price": 200
+        },
+        {
+          "name": "Cebolla",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "lm-dr-ref-naranja",
+      "name": "Ref. Naranja",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 0.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-ref-limon",
+      "name": "Ref. Limón",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 0.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-malta-guajira",
+      "name": "Malta Guajira 1.5 L",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 2.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-malta",
+      "name": "Malta",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.9,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-jugo-cajita",
+      "name": "Jugo de Cajita",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🧃",
+      "price": 0.48,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-chaka",
+      "name": "Chaka",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-energizante-grande",
+      "name": "Energizante Grande",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "⚡",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-energizante-xl",
+      "name": "Energizante Flash",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "⚡",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-cerv-shekels",
+      "name": "Cerv. Shekels",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-cerv-becks",
+      "name": "Cerv. Becks",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-cerv-beer-azul",
+      "name": "Cerv. Beer Azul",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-cerv-muralla",
+      "name": "Cerv. Muralla",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🍺",
+      "price": 0.76,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-kermato",
+      "name": "Kermato",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "🥤",
+      "price": 1.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-dr-agua-natural",
+      "name": "Agua Natural",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Se vende por unidad.",
+      "image": "💧",
+      "price": 0.36,
+      "stockStatus": "disponible"
+    }
+  ]
+}
