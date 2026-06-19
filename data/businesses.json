@@ -65,5 +65,18 @@
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
     }
+  },
+  {
+    "id": "linea-callejon",
+    "name": "Pizzería Línea-Callejón",
+    "description": "Pizzas individuales y familiares, espaguetis, comidas criollas y picaderas.",
+    "image": "/assets/images/business/Linea_Callejón.jpg",
+    "color": "from-green-100 to-emerald-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "22:00",
+      "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
   }
 ]
