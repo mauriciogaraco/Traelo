@@ -2524,7 +2524,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 1200,
+      "price": 1400,
       "stockStatus": "disponible"
     },
     {
@@ -3471,7 +3471,13 @@
       "longDescription": "Espaguetis · Clásicos",
       "image": "🍝",
       "price": 700,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
     },
     {
       "id": "lc-sp-02",
@@ -3483,7 +3489,13 @@
       "longDescription": "Espaguetis · Clásicos",
       "image": "🍝",
       "price": 900,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
     },
     {
       "id": "lc-sp-03",
@@ -3495,7 +3507,13 @@
       "longDescription": "Espaguetis · Clásicos",
       "image": "🍝",
       "price": 900,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
     },
     {
       "id": "lc-sp-04",
@@ -3507,7 +3525,13 @@
       "longDescription": "Espaguetis · Clásicos",
       "image": "🍝",
       "price": 1100,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
     },
     {
       "id": "lc-sp-05",
@@ -3519,7 +3543,13 @@
       "longDescription": "Espaguetis · Clásicos",
       "image": "🍝",
       "price": 1000,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
     },
     {
       "id": "lc-sp-06",
@@ -3531,7 +3561,13 @@
       "longDescription": "Espaguetis · Clásicos",
       "image": "🍝",
       "price": 1200,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
     },
     {
       "id": "lc-sp-07",
@@ -3543,7 +3579,13 @@
       "longDescription": "Espaguetis · Clásicos",
       "image": "🍝",
       "price": 1200,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 150
+        }
+      ]
     },
     {
       "id": "lc-pz-00",
@@ -3650,7 +3692,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Doble queso",
       "image": "🍕",
-      "price": 900,
+      "price": 700,
       "stockStatus": "disponible"
     },
     {
@@ -3770,7 +3812,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 2500,
+      "price": 2000,
       "stockStatus": "disponible"
     }
   ]
