@@ -395,7 +395,7 @@
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/lavavajillas.jpg",
       "price": 1,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-025",
@@ -549,7 +549,7 @@
       "image": "🍫",
       "photo": "/assets/images/products/mercadito/bombones.jpg",
       "price": 6.4,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-036",
@@ -576,7 +576,7 @@
       "image": "🧀",
       "photo": "/assets/images/products/mercadito/queso_criollo.jpg",
       "price": 1.5,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-039",
@@ -649,7 +649,7 @@
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
       "price": 63.6,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-044",
@@ -2682,7 +2682,7 @@
       "longDescription": "Aceite vegetal en botella de 900ml.",
       "image": "🫒",
       "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-      "price": 3.2,
+      "price": 3.3,
       "stockStatus": "disponible"
     },
     {
@@ -2708,7 +2708,7 @@
       "longDescription": "Azúcar a granel, precio por libra. Indica la cantidad de libras al confirmar.",
       "image": "🍬",
       "photo": "/assets/images/products/mercado/azucar_blanca_lb.jpg",
-      "price": 0.84,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
