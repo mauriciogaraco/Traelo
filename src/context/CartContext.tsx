@@ -11,6 +11,7 @@ import type { Addon, CartItem, Packaging, Product } from '../types'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../lib/storage'
 import { lineTotal, lineId, itemLineId } from '../lib/cart'
 import { computeFee } from '../lib/fees'
+import { useCatalog } from './CatalogContext'
 
 interface CartContextValue {
   items: CartItem[]
@@ -27,6 +28,8 @@ interface CartContextValue {
   setQuantity: (lineKey: string, quantity: number) => void
   clearCart: () => void
   getQuantity: (lineKey: string) => number
+  /** Actualiza precios del carrito contra el catálogo actual. */
+  syncPrices: (catalogProducts: Product[]) => void
   subtotal: number
   /** Tarifa de mensajería (0 si el carrito está vacío). */
   fee: number
@@ -85,6 +88,42 @@ export function CartProvider({ children }: { children: ReactNode }) {
     [items]
   )
 
+  const syncPrices = useCallback((catalogProducts: Product[]) => {
+    setItems((prev) => {
+      let changed = false
+      const next = prev.map((item) => {
+        const fresh = catalogProducts.find((p) => p.id === item.product.id)
+        if (!fresh) return item
+
+        let updated = item
+
+        if (fresh.price !== item.product.price) {
+          updated = { ...updated, product: { ...updated.product, price: fresh.price } }
+          changed = true
+        }
+
+        if (item.addon && fresh.addons) {
+          const freshAddon = fresh.addons.find((a) => a.name === item.addon!.name)
+          if (freshAddon && freshAddon.price !== item.addon.price) {
+            updated = { ...updated, addon: { ...item.addon, price: freshAddon.price } }
+            changed = true
+          }
+        }
+
+        if (item.packaging && fresh.packaging) {
+          const freshPkg = fresh.packaging.find((p) => p.name === item.packaging!.name)
+          if (freshPkg && freshPkg.price !== item.packaging.price) {
+            updated = { ...updated, packaging: { ...item.packaging, price: freshPkg.price } }
+            changed = true
+          }
+        }
+
+        return updated
+      })
+      return changed ? next : prev
+    })
+  }, [])
+
   const subtotal = useMemo(
     () => items.reduce((sum, i) => sum + lineTotal(i), 0),
     [items]
@@ -105,6 +144,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setQuantity,
     clearCart,
     getQuantity,
+    syncPrices,
     subtotal,
     fee,
     total: subtotal + fee,
@@ -112,6 +152,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>
+}
+
+/** Puente sin UI: sincroniza precios del carrito cuando llegan datos frescos del catálogo. */
+export function CartPriceSyncer() {
+  const { products } = useCatalog()
+  const { syncPrices } = useCart()
+
+  useEffect(() => {
+    if (products.length > 0) syncPrices(products)
+  }, [products, syncPrices])
+
+  return null
 }
 
 export function useCart() {

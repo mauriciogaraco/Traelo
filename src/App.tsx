@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { useEffect, type ReactNode } from "react";
 import { AddressProvider } from "./context/AddressContext";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider, CartPriceSyncer } from "./context/CartContext";
 import { OrdersProvider } from "./context/OrdersContext";
 import { ToastProvider } from "./context/ToastContext";
 import { CatalogProvider } from "./context/CatalogContext";
@@ -25,7 +25,10 @@ function Providers({ children }: { children: ReactNode }) {
       <ToastProvider>
         <AddressProvider>
           <OrdersProvider>
-            <CartProvider>{children}</CartProvider>
+            <CartProvider>
+              <CartPriceSyncer />
+              {children}
+            </CartProvider>
           </OrdersProvider>
         </AddressProvider>
       </ToastProvider>
