@@ -9,7 +9,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-002",
@@ -21,7 +22,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-003",
@@ -33,7 +35,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-004",
@@ -45,7 +48,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-005",
@@ -57,7 +61,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍗",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-006",
@@ -69,7 +74,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-007",
@@ -81,7 +87,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🐟",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-008",
@@ -93,7 +100,8 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍽️",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-009",
@@ -105,7 +113,8 @@
     "longDescription": "Comidas Criollas · Guarniciones",
     "image": "🍚",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-010",
@@ -117,7 +126,8 @@
     "longDescription": "Comidas Criollas · Guarniciones",
     "image": "🥗",
     "price": 300,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-011",
@@ -129,7 +139,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🍖",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-012",
@@ -141,7 +152,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🍗",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-013",
@@ -153,7 +165,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-014",
@@ -165,7 +178,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-015",
@@ -177,7 +191,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-016",
@@ -189,7 +204,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-017",
@@ -201,7 +217,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-018",
@@ -213,7 +230,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-019",
@@ -225,7 +243,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-020",
@@ -237,7 +256,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🍽️",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-021",
@@ -249,7 +269,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🌭",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-022",
@@ -261,7 +282,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🦞",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-023",
@@ -273,7 +295,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-024",
@@ -285,7 +308,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🐟",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-025",
@@ -297,7 +321,8 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-sp-01",
@@ -310,7 +335,7 @@
     "image": "🍝",
     "price": 700,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-sp-02",
@@ -323,7 +348,7 @@
     "image": "🍝",
     "price": 900,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-sp-03",
@@ -336,7 +361,7 @@
     "image": "🍝",
     "price": 900,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-sp-04",
@@ -349,7 +374,7 @@
     "image": "🍝",
     "price": 1100,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-sp-05",
@@ -362,7 +387,7 @@
     "image": "🍝",
     "price": 1000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-sp-06",
@@ -375,7 +400,7 @@
     "image": "🍝",
     "price": 1200,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-sp-07",
@@ -388,7 +413,7 @@
     "image": "🍝",
     "price": 1200,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
   },
   {
     "id": "lc-pz-00",
@@ -400,7 +425,8 @@
     "longDescription": "Pizzas · Sin topping",
     "image": "🍕",
     "price": 300,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-01",
@@ -411,8 +437,9 @@
     "shortDescription": "Pizzas",
     "longDescription": "Pizzas · Individuales",
     "image": "🍕",
-    "price": 500,
-    "stockStatus": "disponible"
+    "price": 300,
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-02",
@@ -424,7 +451,8 @@
     "longDescription": "Pizzas · Individuales",
     "image": "🍕",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-03",
@@ -436,7 +464,8 @@
     "longDescription": "Pizzas · Individuales",
     "image": "🍕",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-04",
@@ -447,8 +476,9 @@
     "shortDescription": "Pizzas",
     "longDescription": "Pizzas · Individuales",
     "image": "🍕",
-    "price": 1000,
-    "stockStatus": "disponible"
+    "price": 500,
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-05",
@@ -460,7 +490,8 @@
     "longDescription": "Pizzas · Individuales",
     "image": "🍕",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-06",
@@ -471,8 +502,9 @@
     "shortDescription": "Pizzas",
     "longDescription": "Pizzas · Individuales",
     "image": "🍕",
-    "price": 700,
-    "stockStatus": "disponible"
+    "price": 1000,
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-07",
@@ -483,8 +515,9 @@
     "shortDescription": "Pizzas",
     "longDescription": "Pizzas · Doble queso",
     "image": "🍕",
-    "price": 700,
-    "stockStatus": "disponible"
+    "price": 500,
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-08",
@@ -496,7 +529,8 @@
     "longDescription": "Pizzas · Doble queso",
     "image": "🍕",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-09",
@@ -507,8 +541,9 @@
     "shortDescription": "Pizzas",
     "longDescription": "Pizzas · Doble queso",
     "image": "🍕",
-    "price": 900,
-    "stockStatus": "disponible"
+    "price": 700,
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-10",
@@ -520,7 +555,8 @@
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-11",
@@ -532,7 +568,8 @@
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-12",
@@ -544,7 +581,8 @@
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-13",
@@ -555,8 +593,9 @@
     "shortDescription": "Pizzas",
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
-    "price": 1100,
-    "stockStatus": "disponible"
+    "price": 900,
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pz-14",
@@ -567,8 +606,22 @@
     "shortDescription": "Pizzas",
     "longDescription": "Pizzas · Especiales",
     "image": "🍕",
+    "price": 700,
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+  },
+  {
+    "id": "lc-pz-15",
+    "name": "Pizza Hawaiana con Queso Gouda",
+    "businessId": "linea-callejon",
+    "businessName": "Línea-Callejón",
+    "category": "Comida",
+    "shortDescription": "Pizzas",
+    "longDescription": "Pizzas · Especiales",
+    "image": "🍕",
     "price": 1100,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pzf-01",
@@ -579,8 +632,10 @@
     "shortDescription": "Pizzas Familiares",
     "longDescription": "Pizzas Familiares · Tamaño grande",
     "image": "🍕",
-    "price": 1500,
-    "stockStatus": "disponible"
+    "price": 1200,
+    "stockStatus": "disponible",
+    "addons": [{ "name": "Agrego extra", "price": 300 }],
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pzf-02",
@@ -592,7 +647,9 @@
     "longDescription": "Pizzas Familiares · Tamaño grande",
     "image": "🍕",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "addons": [{ "name": "Agrego extra", "price": 300 }],
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pzf-03",
@@ -603,8 +660,10 @@
     "shortDescription": "Pizzas Familiares",
     "longDescription": "Pizzas Familiares · Tamaño grande",
     "image": "🍕",
-    "price": 2000,
-    "stockStatus": "disponible"
+    "price": 1500,
+    "stockStatus": "disponible",
+    "addons": [{ "name": "Agrego extra", "price": 300 }],
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   },
   {
     "id": "lc-pzf-04",
@@ -616,6 +675,8 @@
     "longDescription": "Pizzas Familiares · Tamaño grande",
     "image": "🍕",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "addons": [{ "name": "Agrego extra", "price": 300 }],
+    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
   }
 ]
