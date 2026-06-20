@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import { computeFee } from '../lib/fees'
 import { ProductImage } from '../components/ui/ProductImage'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
@@ -33,6 +34,8 @@ export function CartPage() {
   }
 
   const groups = groupByBusiness(items)
+  const zelleFee = computeFee(items).fee
+  const totalWithFee = Math.round((subtotal + zelleFee) * 100) / 100
 
   return (
     <div className="animate-fade-in">
@@ -78,19 +81,20 @@ export function CartPage() {
         <div className="bg-surface border border-border rounded-3xl p-4 space-y-2.5">
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Subtotal</span>
-            <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
+            <span className="font-semibold text-text-primary">${formatPrice(subtotal)} USD</span>
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Mensajería</span>
             <span className="font-semibold text-accent">Incluida</span>
           </div>
-          <div className="border-t border-border pt-2.5 flex justify-between items-baseline">
-            <span className="font-bold text-text-primary">Total</span>
-            <span className="text-xl font-bold text-primary">{formatPrice(subtotal)}</span>
+          <div className="flex justify-between text-sm">
+            <span className="text-text-secondary">Comisión Zelle (10%)</span>
+            <span className="font-semibold text-text-primary">${formatPrice(zelleFee)} USD</span>
           </div>
-          <p className="text-[11px] text-text-secondary text-center">
-            El costo de entrega en Güira de Melena está incluido.
-          </p>
+          <div className="border-t border-border pt-2.5 flex justify-between items-baseline">
+            <span className="font-bold text-text-primary">Total a pagar por Zelle</span>
+            <span className="text-xl font-bold text-primary">${formatPrice(totalWithFee)} USD</span>
+          </div>
         </div>
 
         {/* Zelle note */}

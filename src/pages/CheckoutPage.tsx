@@ -36,6 +36,8 @@ export function CheckoutPage() {
   }
 
   const groups = groupByBusiness(items)
+  const zelleFee = Math.round(subtotal * 0.10 * 100) / 100
+  const totalWithFee = Math.round((subtotal + zelleFee) * 100) / 100
   const canConfirm = !!address && !sending
 
   async function confirm() {
@@ -158,15 +160,19 @@ export function CheckoutPage() {
         <section className="bg-surface border border-border rounded-3xl p-4 space-y-2.5">
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Subtotal</span>
-            <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
+            <span className="font-semibold text-text-primary">${formatPrice(subtotal)} USD</span>
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Mensajería</span>
             <span className="font-semibold text-accent">Incluida</span>
           </div>
+          <div className="flex justify-between text-sm">
+            <span className="text-text-secondary">Comisión Zelle (10%)</span>
+            <span className="font-semibold text-text-primary">${formatPrice(zelleFee)} USD</span>
+          </div>
           <div className="border-t border-border pt-2.5 flex justify-between items-baseline">
-            <span className="font-bold text-text-primary">Total a pagar</span>
-            <span className="text-xl font-bold text-primary">{formatPrice(subtotal)} USD</span>
+            <span className="font-bold text-text-primary">Total a pagar por Zelle</span>
+            <span className="text-xl font-bold text-primary">${formatPrice(totalWithFee)} USD</span>
           </div>
         </section>
 
@@ -174,8 +180,9 @@ export function CheckoutPage() {
         <div className="flex items-start gap-2.5 bg-secondary/60 border border-border rounded-2xl p-3">
           <span className="text-lg flex-shrink-0">💳</span>
           <p className="text-xs text-text-secondary leading-relaxed">
-            Al confirmar, te contactaremos por WhatsApp para coordinar el pago por{' '}
-            <span className="font-bold text-text-primary">Zelle</span>. No se realiza ningún cargo automático.
+            Al confirmar, te contactaremos por WhatsApp para coordinar el pago de{' '}
+            <span className="font-bold text-text-primary">${formatPrice(totalWithFee)} USD por Zelle</span>.
+            No se realiza ningún cargo automático.
           </p>
         </div>
 

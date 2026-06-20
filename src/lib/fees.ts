@@ -9,9 +9,11 @@ export interface FeeBreakdown {
   multiBusiness: boolean
 }
 
-/** En Tráelo Familia el costo de mensajería está incluido en el precio. */
-export function computeFee(_items: CartItem[], _when: Date = new Date()): FeeBreakdown {
-  return { base: 0, surcharge: 0, fee: 0, isLate: false, multiBusiness: false }
+/** Comisión Zelle del 10% sobre el subtotal. La mensajería está incluida en el precio. */
+export function computeFee(items: CartItem[], _when: Date = new Date()): FeeBreakdown {
+  const subtotal = subtotalOf(items)
+  const fee = Math.round(subtotal * 0.10 * 100) / 100
+  return { base: 0, surcharge: 0, fee, isLate: false, multiBusiness: false }
 }
 
 export function subtotalOf(items: CartItem[]): number {

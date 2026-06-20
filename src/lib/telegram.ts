@@ -41,9 +41,15 @@ export function buildOrderMessage(order: Order): string {
     lines.push('')
   }
 
-  lines.push(`💵 <b>Total: ${formatPrice(total)} USD</b>`)
+  const subtotalVal = order.subtotal ?? total
+  const zelleCommission = Math.round(subtotalVal * 0.10 * 100) / 100
+  const zelleTotalVal = Math.round((subtotalVal + zelleCommission) * 100) / 100
+
+  lines.push(`💵 Subtotal: ${formatPrice(subtotalVal)} USD`)
+  lines.push(`➕ Comisión Zelle (10%): ${formatPrice(zelleCommission)} USD`)
+  lines.push(`💳 <b>Total Zelle: ${formatPrice(zelleTotalVal)} USD</b>`)
   lines.push('')
-  lines.push(`💳 <i>Pago por Zelle — coordinar por WhatsApp</i>`)
+  lines.push(`📲 <i>Coordinar pago por WhatsApp</i>`)
 
   return lines.join('\n')
 }
