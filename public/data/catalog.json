@@ -3897,28 +3897,6 @@
       ]
     },
     {
-      "id": "lc-pz-00",
-      "name": "Pizza Sola (base)",
-      "businessId": "linea-callejon",
-      "businessName": "Línea-Callejón",
-      "category": "Comida",
-      "shortDescription": "Pizzas",
-      "longDescription": "Pizzas · Sin topping",
-      "image": "🍕",
-      "price": 300,
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Sin caja",
-          "price": 0
-        },
-        {
-          "name": "Caja",
-          "price": 150
-        }
-      ]
-    },
-    {
       "id": "lc-pz-01",
       "name": "Pizza de Queso",
       "businessId": "linea-callejon",
