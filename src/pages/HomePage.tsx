@@ -9,6 +9,7 @@ import { Logo } from "../components/ui/Logo";
 import { PaymentNote } from "../components/ui/PaymentNote";
 import { ShareSection } from "../components/home/ShareSection";
 import { ClosedTodayBanner } from "../components/home/ClosedTodayBanner";
+import { FeaturedSection } from "../components/home/FeaturedSection";
 import { ordersClosedForToday } from "../lib/hours";
 import type { Category } from "../types";
 
@@ -219,6 +220,9 @@ export function HomePage() {
           </section>
         ) : (
           <>
+            {/* Destacados */}
+            <FeaturedSection products={products} />
+
             {/* Negocios */}
             <section className="pt-5">
               <SectionTitle

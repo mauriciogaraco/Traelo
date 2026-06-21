@@ -90,6 +90,8 @@ export interface Product {
    */
   packaging?: Packaging[]
   stockStatus: StockStatus
+  /** Marca el producto como destacado para mostrarlo en la sección Destacados. */
+  featured?: boolean
 }
 
 export interface CartItem {

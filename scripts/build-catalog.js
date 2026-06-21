@@ -13,6 +13,7 @@ const BUSINESS_FILES = [
   'mercadito-ahorro',
   'la-marina',
   'linea-callejon',
+  'al-carbon',
 ];
 
 function read(file) {
