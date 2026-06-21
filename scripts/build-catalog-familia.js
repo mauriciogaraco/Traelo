@@ -44,6 +44,7 @@ const bodega  = JSON.parse(readFileSync(resolve(root, 'data/bodega-central.json'
 const dlm     = JSON.parse(readFileSync(resolve(root, 'data/dlm.json'), 'utf8'))
 const macus   = JSON.parse(readFileSync(resolve(root, 'data/panes-macus.json'), 'utf8'))
 const marina  = JSON.parse(readFileSync(resolve(root, 'data/la-marina.json'), 'utf8'))
+const lineaCallejonRaw = JSON.parse(readFileSync(resolve(root, 'data/linea-callejon.json'), 'utf8'))
 
 // ── Convert products ───────────────────────────────────────────────
 const bodegaProducts = bodega.map(p => convertProduct(p))
@@ -129,105 +130,8 @@ const combos = [
   },
 ]
 
-// ── Línea Callejón (nuevo restaurante, placeholder) ───────────────
-const lineaCallejonProducts = [
-  {
-    id: 'lc-001',
-    name: 'Pizza de Queso',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Comidas',
-    shortDescription: 'Clásica.',
-    longDescription: 'Pizza de queso fundido recién horneada.',
-    image: '🍕',
-    price: 0.80,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'lc-002',
-    name: 'Pizza de Jamón',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Comidas',
-    shortDescription: 'Con jamón.',
-    longDescription: 'Pizza de jamón y queso.',
-    image: '🍕',
-    price: 1.34,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'lc-003',
-    name: 'Pizza Especial',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Comidas',
-    shortDescription: 'La estrella de la casa.',
-    longDescription: 'Pizza especial con ingredientes de la casa.',
-    image: '🍕',
-    price: 1.80,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'lc-004',
-    name: 'Espaguetis',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Comidas',
-    shortDescription: 'Con salsa de la casa.',
-    longDescription: 'Espaguetis con salsa especial de la casa.',
-    image: '🍝',
-    price: 0.90,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'lc-005',
-    name: 'Espaguetis Jamón y Queso',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Comidas',
-    shortDescription: 'Con jamón y queso.',
-    longDescription: 'Espaguetis con jamón y queso gratinados.',
-    image: '🍝',
-    price: 1.40,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'lc-dr-ref-naranja',
-    name: 'Ref. Naranja',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Bebidas',
-    shortDescription: '',
-    longDescription: 'Se vende por unidad.',
-    image: '🥤',
-    price: 0.70,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'lc-dr-malta',
-    name: 'Malta',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Bebidas',
-    shortDescription: '',
-    longDescription: 'Se vende por unidad.',
-    image: '🍺',
-    price: 0.90,
-    stockStatus: 'disponible',
-  },
-  {
-    id: 'lc-dr-agua',
-    name: 'Agua Natural',
-    businessId: 'linea-callejon',
-    businessName: 'Línea Callejón',
-    category: 'Bebidas',
-    shortDescription: '',
-    longDescription: 'Se vende por unidad.',
-    image: '💧',
-    price: 0.36,
-    stockStatus: 'disponible',
-  },
-]
+// ── Línea Callejón ─────────────────────────────────────────────────
+const lineaCallejonProducts = lineaCallejonRaw.map(p => convertProduct(p))
 
 // ── Businesses ─────────────────────────────────────────────────────
 const businesses = [

@@ -2985,99 +2985,1049 @@
     },
     {
       "id": "lc-001",
+      "name": "Entremés de Jamón y Queso",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🍤",
+      "price": 3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-002",
+      "name": "Entremés de Jamón y Queso Gouda",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🍤",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-003",
+      "name": "Tostones Rellenos",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🍤",
+      "price": 3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-004",
+      "name": "Tostones Rellenos Gouda",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🍤",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-005",
+      "name": "Fajitas de Pollo",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🍗",
+      "price": 3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-006",
+      "name": "Croquetas al Plato",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🍤",
+      "price": 1.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-007",
+      "name": "Esperiñán de Pescado",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🐟",
+      "price": 3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-008",
+      "name": "Surtido para Picar",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Picaderas",
+      "longDescription": "Picaderas · Para empezar",
+      "image": "🍽️",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-009",
+      "name": "Ración de Arroz",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Guarniciones",
+      "image": "🍚",
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-010",
+      "name": "Ración de Ensalada",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Guarniciones",
+      "image": "🥗",
+      "price": 0.6,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-011",
+      "name": "Stick de Jamón",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🍖",
+      "price": 2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-012",
+      "name": "Pollo",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🍗",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-013",
+      "name": "Bistec de Res",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-014",
+      "name": "Bistec de Cerdo",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-015",
+      "name": "Masas de Cerdo",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-016",
+      "name": "Costillas de Cerdo",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-017",
+      "name": "Chuleta de Cerdo",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-018",
+      "name": "Ropa Vieja",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-019",
+      "name": "Carne Asada",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-020",
+      "name": "Picadillo + Guarnición",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🍽️",
+      "price": 2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-021",
+      "name": "Perro Caliente + Guarnición",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🌭",
+      "price": 2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-022",
+      "name": "Langosta",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🦞",
+      "price": 5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-023",
+      "name": "Carne de Res en Trozos",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 5,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-024",
+      "name": "Filete de Pescado",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🐟",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-025",
+      "name": "Lomo Frito",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Comidas Criollas",
+      "longDescription": "Comidas Criollas · Platos",
+      "image": "🥩",
+      "price": 4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-sp-01",
+      "name": "Espagueti de Queso",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Espaguetis",
+      "longDescription": "Espaguetis · Clásicos",
+      "image": "🍝",
+      "price": 1.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 0.02
+        },
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-sp-02",
+      "name": "Espagueti de Jamón",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Espaguetis",
+      "longDescription": "Espaguetis · Clásicos",
+      "image": "🍝",
+      "price": 1.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 0.02
+        },
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-sp-03",
+      "name": "Espagueti Queso Doble",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Espaguetis",
+      "longDescription": "Espaguetis · Clásicos",
+      "image": "🍝",
+      "price": 1.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 0.02
+        },
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-sp-04",
+      "name": "Espagueti Queso Doble y Jamón",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Espaguetis",
+      "longDescription": "Espaguetis · Clásicos",
+      "image": "🍝",
+      "price": 2.2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 0.02
+        },
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-sp-05",
+      "name": "Espagueti Queso Gouda",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Espaguetis",
+      "longDescription": "Espaguetis · Clásicos",
+      "image": "🍝",
+      "price": 2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 0.02
+        },
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-sp-06",
+      "name": "Espagueti Queso Gouda Doble",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Espaguetis",
+      "longDescription": "Espaguetis · Clásicos",
+      "image": "🍝",
+      "price": 2.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 0.02
+        },
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-sp-07",
+      "name": "Espagueti Queso Gouda y Jamón",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Espaguetis",
+      "longDescription": "Espaguetis · Clásicos",
+      "image": "🍝",
+      "price": 2.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Jaba",
+          "price": 0.02
+        },
+        {
+          "name": "Termopack",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-01",
       "name": "Pizza de Queso",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
       "category": "Comidas",
-      "shortDescription": "Clásica.",
-      "longDescription": "Pizza de queso fundido recién horneada.",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 0.8,
-      "stockStatus": "disponible"
+      "price": 0.6,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     },
     {
-      "id": "lc-002",
+      "id": "lc-pz-02",
       "name": "Pizza de Jamón",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
       "category": "Comidas",
-      "shortDescription": "Con jamón.",
-      "longDescription": "Pizza de jamón y queso.",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 1.34,
-      "stockStatus": "disponible"
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     },
     {
-      "id": "lc-003",
-      "name": "Pizza Especial",
+      "id": "lc-pz-03",
+      "name": "Pizza de Cebolla",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
       "category": "Comidas",
-      "shortDescription": "La estrella de la casa.",
-      "longDescription": "Pizza especial con ingredientes de la casa.",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Individuales",
+      "image": "🍕",
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-04",
+      "name": "Pizza de Pimiento",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Individuales",
+      "image": "🍕",
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-05",
+      "name": "Pizza de Picadillo",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Individuales",
+      "image": "🍕",
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-06",
+      "name": "Pizza de Atún",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Individuales",
+      "image": "🍕",
+      "price": 2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-07",
+      "name": "Pizza Queso Doble",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Doble queso",
+      "image": "🍕",
+      "price": 1,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-08",
+      "name": "Pizza Queso Doble y Jamón",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Doble queso",
+      "image": "🍕",
+      "price": 1.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-09",
+      "name": "Pizza Queso Doble y Cebolla",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Doble queso",
+      "image": "🍕",
+      "price": 1.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-10",
+      "name": "Pizza Queso Gouda",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Queso Gouda",
+      "image": "🍕",
+      "price": 1.4,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-11",
+      "name": "Pizza Queso Gouda Doble",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
       "price": 1.8,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     },
     {
-      "id": "lc-004",
-      "name": "Espaguetis",
+      "id": "lc-pz-12",
+      "name": "Pizza Queso Gouda y Jamón",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
       "category": "Comidas",
-      "shortDescription": "Con salsa de la casa.",
-      "longDescription": "Espaguetis con salsa especial de la casa.",
-      "image": "🍝",
-      "price": 0.9,
-      "stockStatus": "disponible"
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Queso Gouda",
+      "image": "🍕",
+      "price": 1.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     },
     {
-      "id": "lc-005",
-      "name": "Espaguetis Jamón y Queso",
+      "id": "lc-pz-13",
+      "name": "Pizza Queso Gouda y Cebolla",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
       "category": "Comidas",
-      "shortDescription": "Con jamón y queso.",
-      "longDescription": "Espaguetis con jamón y queso gratinados.",
-      "image": "🍝",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Queso Gouda",
+      "image": "🍕",
+      "price": 1.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pz-14",
+      "name": "Pizza Hawaiana",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Especiales",
+      "image": "🍕",
       "price": 1.4,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     },
     {
-      "id": "lc-dr-ref-naranja",
-      "name": "Ref. Naranja",
+      "id": "lc-pz-15",
+      "name": "Pizza Hawaiana con Queso Gouda",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
-      "category": "Bebidas",
-      "shortDescription": "",
-      "longDescription": "Se vende por unidad.",
-      "image": "🥤",
-      "price": 0.7,
-      "stockStatus": "disponible"
+      "category": "Comidas",
+      "shortDescription": "Pizzas",
+      "longDescription": "Pizzas · Especiales",
+      "image": "🍕",
+      "price": 2.2,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     },
     {
-      "id": "lc-dr-malta",
-      "name": "Malta",
+      "id": "lc-pzf-01",
+      "name": "Pizza Familiar de Queso",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
-      "category": "Bebidas",
-      "shortDescription": "",
-      "longDescription": "Se vende por unidad.",
-      "image": "🍺",
-      "price": 0.9,
-      "stockStatus": "disponible"
+      "category": "Comidas",
+      "shortDescription": "Pizzas Familiares",
+      "longDescription": "Pizzas Familiares · Tamaño grande",
+      "image": "🍕",
+      "price": 2.4,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Agrego extra",
+          "price": 0.6
+        }
+      ],
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     },
     {
-      "id": "lc-dr-agua",
-      "name": "Agua Natural",
+      "id": "lc-pzf-02",
+      "name": "Pizza Familiar de Jamón",
       "businessId": "linea-callejon",
       "businessName": "Línea Callejón",
-      "category": "Bebidas",
-      "shortDescription": "",
-      "longDescription": "Se vende por unidad.",
-      "image": "💧",
-      "price": 0.36,
-      "stockStatus": "disponible"
+      "category": "Comidas",
+      "shortDescription": "Pizzas Familiares",
+      "longDescription": "Pizzas Familiares · Tamaño grande",
+      "image": "🍕",
+      "price": 3,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Agrego extra",
+          "price": 0.6
+        }
+      ],
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pzf-03",
+      "name": "Pizza Familiar Queso Gouda",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas Familiares",
+      "longDescription": "Pizzas Familiares · Tamaño grande",
+      "image": "🍕",
+      "price": 3,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Agrego extra",
+          "price": 0.6
+        }
+      ],
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
+    },
+    {
+      "id": "lc-pzf-04",
+      "name": "Pizza Familiar Queso Gouda Doble",
+      "businessId": "linea-callejon",
+      "businessName": "Línea Callejón",
+      "category": "Comidas",
+      "shortDescription": "Pizzas Familiares",
+      "longDescription": "Pizzas Familiares · Tamaño grande",
+      "image": "🍕",
+      "price": 4,
+      "stockStatus": "disponible",
+      "addons": [
+        {
+          "name": "Agrego extra",
+          "price": 0.6
+        }
+      ],
+      "packaging": [
+        {
+          "name": "Sin caja",
+          "price": 0
+        },
+        {
+          "name": "Caja",
+          "price": 0.3
+        }
+      ]
     }
   ]
 }
