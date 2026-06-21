@@ -1,0 +1,69 @@
+[
+  {
+    "id": "bodega-central",
+    "name": "Mercado Alpha",
+    "description": "Mercado Alpha: alimentos, bebidas y aseo del día a día.",
+    "image": "/assets/images/business/alpha.jpg",
+    "color": "from-amber-100 to-orange-50",
+    "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
+    "schedule": {
+      "days": [1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Lun–Sáb · 9:00 am – 5:00 pm"
+    }
+  },
+  {
+    "id": "dlm",
+    "name": "Bar Restaurante DLM",
+    "description": "Sabores de la casa, bebidas, picaderas y platos fuertes para compartir.",
+    "image": "/assets/images/business/DLM.jpg",
+    "color": "from-rose-100 to-orange-50",
+    "deliveryFee": 350,
+    "schedule": {
+      "days": [3, 4, 5, 6, 0],
+      "open": "13:00",
+      "close": "22:00",
+      "label": "Mié–Dom · 1:00 pm – 10:00 pm"
+    }
+  },
+  {
+    "id": "panes-macus",
+    "name": "Los Macus",
+    "description": "Panadería: panes recién hechos y bebidas frías.",
+    "image": "/assets/images/business/macus.jpg",
+    "color": "from-yellow-100 to-amber-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "22:00",
+      "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
+  },
+  {
+    "id": "mercadito-ahorro",
+    "name": "El Mercadito",
+    "description": "Granos por libra, aceite y embutidos frescos.",
+    "image": "/assets/images/business/Mercadito.jpg",
+    "color": "from-emerald-100 to-teal-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "22:00",
+      "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
+  },
+  {
+    "id": "la-marina",
+    "name": "La Marina",
+    "description": "Pizzas y espaguetis con agregos a elección, más bebidas frías.",
+    "image": "/assets/images/products/pizza.jpg",
+    "color": "from-red-100 to-orange-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "22:00",
+      "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
+  }
+]
