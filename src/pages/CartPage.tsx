@@ -1,19 +1,25 @@
-import { useNavigate } from 'react-router-dom'
-import { useCart } from '../context/CartContext'
-import { computeFee } from '../lib/fees'
-import { ProductImage } from '../components/ui/ProductImage'
-import { Button } from '../components/ui/Button'
-import { EmptyState } from '../components/ui/EmptyState'
-import { formatPrice, formatAmount } from '../lib/format'
-import { groupByBusiness } from '../lib/order'
-import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
-import type { CartItem } from '../types'
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import { computeFee } from "../lib/fees";
+import { ProductImage } from "../components/ui/ProductImage";
+import { Button } from "../components/ui/Button";
+import { EmptyState } from "../components/ui/EmptyState";
+import { formatPrice, formatAmount } from "../lib/format";
+import { groupByBusiness } from "../lib/order";
+import {
+  hasFormato,
+  itemLineId,
+  lineTotal,
+  packSize,
+  unitsOf,
+} from "../lib/cart";
+import type { CartItem } from "../types";
 
-const MIN_ORDER_USD = 20
+const MIN_ORDER_USD = 20;
 
 export function CartPage() {
-  const navigate = useNavigate()
-  const { items, setQuantity, removeItem, subtotal } = useCart()
+  const navigate = useNavigate();
+  const { items, setQuantity, removeItem, subtotal } = useCart();
 
   if (items.length === 0) {
     return (
@@ -24,42 +30,60 @@ export function CartPage() {
           title="Tu carrito está vacío"
           description="Explora los combos y productos para empezar tu regalo."
           action={
-            <Button size="lg" onClick={() => navigate('/')}>
+            <Button size="lg" onClick={() => navigate("/")}>
               Explorar catálogo
             </Button>
           }
         />
       </div>
-    )
+    );
   }
 
-  const groups = groupByBusiness(items)
-  const zelleFee = computeFee(items).fee
-  const totalWithFee = Math.round((subtotal + zelleFee) * 100) / 100
+  const groups = groupByBusiness(items);
+  const zelleFee = computeFee(items).fee;
+  const totalWithFee = Math.round((subtotal + zelleFee) * 100) / 100;
 
   return (
     <div className="animate-fade-in">
       <PageHeader
         title="Tu carrito"
-        subtitle={`${items.length} ${items.length === 1 ? 'producto' : 'productos'}`}
+        subtitle={`${items.length} ${items.length === 1 ? "producto" : "productos"}`}
       />
 
       <div className="px-4 space-y-4">
         {groups.map((group) => (
-          <div key={group.businessId} className="bg-surface border border-border rounded-3xl overflow-hidden">
+          <div
+            key={group.businessId}
+            className="bg-surface border border-border rounded-3xl overflow-hidden"
+          >
             <div className="flex items-center gap-2 px-4 py-2.5 bg-primary/5 border-b border-border">
               <span className="text-primary">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18" />
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18"
+                  />
                 </svg>
               </span>
-              <p className="text-sm font-bold text-text-primary flex-1 truncate">{group.businessName}</p>
-              <span className="text-xs font-semibold text-text-secondary">{formatPrice(group.subtotal)}</span>
+              <p className="text-sm font-bold text-text-primary flex-1 truncate">
+                {group.businessName}
+              </p>
+              <span className="text-xs font-semibold text-text-secondary">
+                {formatPrice(group.subtotal)}
+              </span>
             </div>
 
             <div className="p-3 space-y-3">
               {group.items.map((item) => {
-                const key = itemLineId(item)
+                const key = itemLineId(item);
                 return (
                   <CartRow
                     key={key}
@@ -69,7 +93,7 @@ export function CartPage() {
                     onRemove={() => removeItem(key)}
                     onOpen={() => navigate(`/producto/${item.product.id}`)}
                   />
-                )
+                );
               })}
             </div>
           </div>
@@ -81,7 +105,9 @@ export function CartPage() {
         <div className="bg-surface border border-border rounded-3xl p-4 space-y-2.5">
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Subtotal</span>
-            <span className="font-semibold text-text-primary">${formatPrice(subtotal)} USD</span>
+            <span className="font-semibold text-text-primary">
+              {formatPrice(subtotal)} USD
+            </span>
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Mensajería</span>
@@ -89,11 +115,17 @@ export function CartPage() {
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Comisión Zelle (10%)</span>
-            <span className="font-semibold text-text-primary">${formatPrice(zelleFee)} USD</span>
+            <span className="font-semibold text-text-primary">
+              {formatPrice(zelleFee)} USD
+            </span>
           </div>
           <div className="border-t border-border pt-2.5 flex justify-between items-baseline">
-            <span className="font-bold text-text-primary">Total a pagar por Zelle</span>
-            <span className="text-xl font-bold text-primary">${formatPrice(totalWithFee)} USD</span>
+            <span className="font-bold text-text-primary">
+              Total a pagar por Zelle
+            </span>
+            <span className="text-xl font-bold text-primary">
+              {formatPrice(totalWithFee)} USD
+            </span>
           </div>
         </div>
 
@@ -101,7 +133,9 @@ export function CartPage() {
         <div className="flex items-start gap-2.5 bg-secondary/60 border border-border rounded-2xl p-3">
           <span className="text-lg flex-shrink-0">💳</span>
           <p className="text-xs text-text-secondary leading-relaxed">
-            El pago se realiza por <span className="font-bold text-text-primary">Zelle</span>. Te contactaremos por WhatsApp para coordinar.
+            El pago se realiza por{" "}
+            <span className="font-bold text-text-primary">Zelle</span>. Te
+            contactaremos por WhatsApp para coordinar.
           </p>
         </div>
 
@@ -109,8 +143,12 @@ export function CartPage() {
           <div className="flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-2xl p-3">
             <span className="text-lg flex-shrink-0">⚠️</span>
             <p className="text-xs text-amber-800 leading-relaxed">
-              El pedido mínimo es <span className="font-bold">${MIN_ORDER_USD} USD</span>. Te faltan{' '}
-              <span className="font-bold">${(MIN_ORDER_USD - subtotal).toFixed(2)} USD</span> para continuar.
+              El pedido mínimo es{" "}
+              <span className="font-bold">${MIN_ORDER_USD} USD</span>. Te faltan{" "}
+              <span className="font-bold">
+                ${(MIN_ORDER_USD - subtotal).toFixed(2)} USD
+              </span>{" "}
+              para continuar.
             </p>
           </div>
         )}
@@ -119,18 +157,29 @@ export function CartPage() {
           <Button
             size="lg"
             fullWidth
-            onClick={() => navigate('/checkout')}
+            onClick={() => navigate("/checkout")}
             disabled={subtotal < MIN_ORDER_USD}
           >
             Continuar al pedido
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M13 6l6 6-6 6" />
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M5 12h14M13 6l6 6-6 6"
+              />
             </svg>
           </Button>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function CartRow({
@@ -140,13 +189,13 @@ function CartRow({
   onRemove,
   onOpen,
 }: {
-  item: CartItem
-  onDec: () => void
-  onInc: () => void
-  onRemove: () => void
-  onOpen: () => void
+  item: CartItem;
+  onDec: () => void;
+  onInc: () => void;
+  onRemove: () => void;
+  onOpen: () => void;
 }) {
-  const { product } = item
+  const { product } = item;
   return (
     <div className="flex gap-3">
       <button onClick={onOpen} className="flex-shrink-0">
@@ -176,7 +225,8 @@ function CartRow({
         </div>
         {hasFormato(product) && (
           <p className="text-[11px] font-semibold text-text-secondary mt-0.5">
-            {unitsOf(item)} u · caja × {packSize(product)} · {formatAmount(product.price)}/u
+            {unitsOf(item)} u · caja × {packSize(product)} ·{" "}
+            {formatAmount(product.price)}/u
           </p>
         )}
         <p className="text-base font-bold text-primary mt-auto">
@@ -190,8 +240,19 @@ function CartRow({
           className="w-8 h-8 rounded-lg text-text-secondary hover:text-danger hover:bg-red-50 flex items-center justify-center transition-colors"
           aria-label="Eliminar"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 7h14M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m1 0-.7 12a1 1 0 0 1-1 .94H8.7a1 1 0 0 1-1-.94L7 7" />
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 7h14M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m1 0-.7 12a1 1 0 0 1-1 .94H8.7a1 1 0 0 1-1-.94L7 7"
+            />
           </svg>
         </button>
 
@@ -201,7 +262,14 @@ function CartRow({
             className="w-8 h-8 flex items-center justify-center text-text-primary"
             aria-label="Disminuir"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
               <path strokeLinecap="round" d="M5 12h14" />
             </svg>
           </button>
@@ -213,21 +281,30 @@ function CartRow({
             className="w-8 h-8 flex items-center justify-center text-primary"
             aria-label="Aumentar"
           >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+            >
               <path strokeLinecap="round" d="M12 5v14M5 12h14" />
             </svg>
           </button>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function PageHeader({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
     <header className="px-4 pt-6 pb-4">
       <h1 className="text-2xl font-bold text-text-primary">{title}</h1>
-      {subtitle && <p className="text-sm text-text-secondary mt-0.5">{subtitle}</p>}
+      {subtitle && (
+        <p className="text-sm text-text-secondary mt-0.5">{subtitle}</p>
+      )}
     </header>
-  )
+  );
 }

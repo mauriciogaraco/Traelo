@@ -1,60 +1,67 @@
-import { useNavigate } from 'react-router-dom'
-import { useCart } from '../context/CartContext'
-import { useOrders } from '../context/OrdersContext'
-import { useAddress } from '../context/AddressContext'
-import { useToast } from '../context/ToastContext'
-import { AddressBar } from '../components/address/AddressBar'
-import { ProductImage } from '../components/ui/ProductImage'
-import { Button } from '../components/ui/Button'
-import { EmptyState } from '../components/ui/EmptyState'
-import { formatPrice } from '../lib/format'
-import { makeOrder, groupByBusiness } from '../lib/order'
-import { hasFormato, itemLineId, lineTotal, unitsOf } from '../lib/cart'
-import { sendOrderToTelegram } from '../lib/telegram'
-import { useState } from 'react'
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
+import { useOrders } from "../context/OrdersContext";
+import { useAddress } from "../context/AddressContext";
+import { useToast } from "../context/ToastContext";
+import { AddressBar } from "../components/address/AddressBar";
+import { ProductImage } from "../components/ui/ProductImage";
+import { Button } from "../components/ui/Button";
+import { EmptyState } from "../components/ui/EmptyState";
+import { formatPrice } from "../lib/format";
+import { makeOrder, groupByBusiness } from "../lib/order";
+import { hasFormato, itemLineId, lineTotal, unitsOf } from "../lib/cart";
+import { sendOrderToTelegram } from "../lib/telegram";
+import { useState } from "react";
 
 export function CheckoutPage() {
-  const navigate = useNavigate()
-  const { items, subtotal, clearCart } = useCart()
-  const { saveOrder } = useOrders()
-  const { address } = useAddress()
-  const { showToast } = useToast()
-  const [sending, setSending] = useState(false)
+  const navigate = useNavigate();
+  const { items, subtotal, clearCart } = useCart();
+  const { saveOrder } = useOrders();
+  const { address } = useAddress();
+  const { showToast } = useToast();
+  const [sending, setSending] = useState(false);
 
   if (items.length === 0) {
     return (
       <div className="animate-fade-in">
-        <Header onBack={() => navigate('/')} />
+        <Header onBack={() => navigate("/")} />
         <EmptyState
           icon="🧾"
           title="No hay nada que confirmar"
           description="Tu carrito está vacío. Añade productos para hacer un pedido."
-          action={<Button size="lg" onClick={() => navigate('/')}>Ir al inicio</Button>}
+          action={
+            <Button size="lg" onClick={() => navigate("/")}>
+              Ir al inicio
+            </Button>
+          }
         />
       </div>
-    )
+    );
   }
 
-  const groups = groupByBusiness(items)
-  const zelleFee = Math.round(subtotal * 0.10 * 100) / 100
-  const totalWithFee = Math.round((subtotal + zelleFee) * 100) / 100
-  const canConfirm = !!address && !sending
+  const groups = groupByBusiness(items);
+  const zelleFee = Math.round(subtotal * 0.1 * 100) / 100;
+  const totalWithFee = Math.round((subtotal + zelleFee) * 100) / 100;
+  const canConfirm = !!address && !sending;
 
   async function confirm() {
-    if (!canConfirm) return
-    setSending(true)
+    if (!canConfirm) return;
+    setSending(true);
 
-    const order = makeOrder(items, address!, { label: 'Lo antes posible', when: new Date() })
-    const ok = await sendOrderToTelegram(order)
+    const order = makeOrder(items, address!, {
+      label: "Lo antes posible",
+      when: new Date(),
+    });
+    const ok = await sendOrderToTelegram(order);
 
     if (ok) {
-      saveOrder(order)
-      clearCart()
-      showToast('¡Pedido enviado! Te contactaremos por WhatsApp.', 'success')
-      navigate('/pedidos', { replace: true, state: { justOrdered: order.id } })
+      saveOrder(order);
+      clearCart();
+      showToast("¡Pedido enviado! Te contactaremos por WhatsApp.", "success");
+      navigate("/pedidos", { replace: true, state: { justOrdered: order.id } });
     } else {
-      setSending(false)
-      showToast('No se pudo enviar el pedido. Inténtalo de nuevo.', 'error')
+      setSending(false);
+      showToast("No se pudo enviar el pedido. Inténtalo de nuevo.", "error");
     }
   }
 
@@ -65,31 +72,53 @@ export function CheckoutPage() {
       <div className="px-4 space-y-5">
         {/* Datos del pedido */}
         <section>
-          <h2 className="text-sm font-bold text-text-primary mb-2">Datos del pedido</h2>
+          <h2 className="text-sm font-bold text-text-primary mb-2">
+            Datos del pedido
+          </h2>
           {address ? (
             <div className="bg-surface border border-border rounded-3xl p-4">
               <div className="space-y-1.5">
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0">Comprador</span>
-                  <span className="text-sm font-bold text-text-primary">{address.nombreComprador}</span>
+                  <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0">
+                    Comprador
+                  </span>
+                  <span className="text-sm font-bold text-text-primary">
+                    {address.nombreComprador}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0">WhatsApp</span>
-                  <span className="text-sm text-text-secondary">{address.whatsappComprador}</span>
+                  <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0">
+                    WhatsApp
+                  </span>
+                  <span className="text-sm text-text-secondary">
+                    {address.whatsappComprador}
+                  </span>
                 </div>
                 <div className="border-t border-border/60 pt-1.5 mt-1.5">
                   <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0">Para</span>
-                    <span className="text-sm font-bold text-text-primary">{address.nombreDestinatario}</span>
+                    <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0">
+                      Para
+                    </span>
+                    <span className="text-sm font-bold text-text-primary">
+                      {address.nombreDestinatario}
+                    </span>
                   </div>
                   <div className="flex items-start gap-2 mt-1">
-                    <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0 mt-0.5">Dirección</span>
-                    <span className="text-sm text-text-secondary">{address.direccion}</span>
+                    <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0 mt-0.5">
+                      Dirección
+                    </span>
+                    <span className="text-sm text-text-secondary">
+                      {address.direccion}
+                    </span>
                   </div>
                   {address.observaciones && (
                     <div className="flex items-start gap-2 mt-1">
-                      <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0 mt-0.5">Notas</span>
-                      <span className="text-sm text-text-secondary">{address.observaciones}</span>
+                      <span className="text-[11px] font-semibold text-text-secondary w-20 flex-shrink-0 mt-0.5">
+                        Notas
+                      </span>
+                      <span className="text-sm text-text-secondary">
+                        {address.observaciones}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -110,22 +139,45 @@ export function CheckoutPage() {
 
         {/* Resumen */}
         <section>
-          <h2 className="text-sm font-bold text-text-primary mb-2">Resumen del pedido</h2>
+          <h2 className="text-sm font-bold text-text-primary mb-2">
+            Resumen del pedido
+          </h2>
           <div className="space-y-3">
             {groups.map((group) => (
-              <div key={group.businessId} className="bg-surface border border-border rounded-3xl overflow-hidden">
+              <div
+                key={group.businessId}
+                className="bg-surface border border-border rounded-3xl overflow-hidden"
+              >
                 <div className="flex items-center gap-2 px-4 py-2.5 bg-primary/5 border-b border-border">
                   <span className="text-primary">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18" />
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18"
+                      />
                     </svg>
                   </span>
-                  <p className="text-sm font-bold text-text-primary flex-1 truncate">{group.businessName}</p>
-                  <span className="text-xs font-semibold text-text-secondary">{formatPrice(group.subtotal)}</span>
+                  <p className="text-sm font-bold text-text-primary flex-1 truncate">
+                    {group.businessName}
+                  </p>
+                  <span className="text-xs font-semibold text-text-secondary">
+                    {formatPrice(group.subtotal)}
+                  </span>
                 </div>
                 <div className="p-3 space-y-3">
                   {group.items.map((item) => (
-                    <div key={itemLineId(item)} className="flex items-center gap-3">
+                    <div
+                      key={itemLineId(item)}
+                      className="flex items-center gap-3"
+                    >
                       <ProductImage
                         emoji={item.product.image}
                         photo={item.product.photo}
@@ -137,11 +189,16 @@ export function CheckoutPage() {
                       <div className="flex-1 min-w-0">
                         <p className="text-sm font-bold text-text-primary line-clamp-1">
                           {item.product.name}
-                          {item.option && <span className="text-primary"> · {item.option}</span>}
+                          {item.option && (
+                            <span className="text-primary">
+                              {" "}
+                              · {item.option}
+                            </span>
+                          )}
                         </p>
                         <p className="text-xs text-text-secondary">
                           {hasFormato(item.product)
-                            ? `${unitsOf(item)} u · ${item.quantity} caja${item.quantity > 1 ? 's' : ''}`
+                            ? `${unitsOf(item)} u · ${item.quantity} caja${item.quantity > 1 ? "s" : ""}`
                             : `× ${item.quantity}`}
                         </p>
                       </div>
@@ -160,7 +217,9 @@ export function CheckoutPage() {
         <section className="bg-surface border border-border rounded-3xl p-4 space-y-2.5">
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Subtotal</span>
-            <span className="font-semibold text-text-primary">${formatPrice(subtotal)} USD</span>
+            <span className="font-semibold text-text-primary">
+              {formatPrice(subtotal)} USD
+            </span>
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Mensajería</span>
@@ -168,11 +227,17 @@ export function CheckoutPage() {
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Comisión Zelle (10%)</span>
-            <span className="font-semibold text-text-primary">${formatPrice(zelleFee)} USD</span>
+            <span className="font-semibold text-text-primary">
+              {formatPrice(zelleFee)} USD
+            </span>
           </div>
           <div className="border-t border-border pt-2.5 flex justify-between items-baseline">
-            <span className="font-bold text-text-primary">Total a pagar por Zelle</span>
-            <span className="text-xl font-bold text-primary">${formatPrice(totalWithFee)} USD</span>
+            <span className="font-bold text-text-primary">
+              Total a pagar por Zelle
+            </span>
+            <span className="text-xl font-bold text-primary">
+              {formatPrice(totalWithFee)} USD
+            </span>
           </div>
         </section>
 
@@ -180,9 +245,12 @@ export function CheckoutPage() {
         <div className="flex items-start gap-2.5 bg-secondary/60 border border-border rounded-2xl p-3">
           <span className="text-lg flex-shrink-0">💳</span>
           <p className="text-xs text-text-secondary leading-relaxed">
-            Al confirmar, te contactaremos por WhatsApp para coordinar el pago de{' '}
-            <span className="font-bold text-text-primary">${formatPrice(totalWithFee)} USD por Zelle</span>.
-            No se realiza ningún cargo automático.
+            Al confirmar, te contactaremos por WhatsApp para coordinar el pago
+            de{" "}
+            <span className="font-bold text-text-primary">
+              ${formatPrice(totalWithFee)} USD por Zelle
+            </span>
+            . No se realiza ningún cargo automático.
           </p>
         </div>
 
@@ -190,7 +258,7 @@ export function CheckoutPage() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M21.7 3.3 2.5 11.1c-.9.4-.9 1.6 0 1.9l4.8 1.6 1.8 5.8c.2.7 1.1.9 1.6.3l2.7-2.9 4.7 3.4c.6.4 1.5.1 1.7-.6l3.4-15.6c.2-1-.8-1.9-1.5-1.7Z" />
           </svg>
-          {sending ? 'Enviando pedido...' : 'Confirmar pedido'}
+          {sending ? "Enviando pedido..." : "Confirmar pedido"}
         </Button>
 
         {!address && (
@@ -200,7 +268,7 @@ export function CheckoutPage() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
 function Header({ onBack }: { onBack: () => void }) {
@@ -211,11 +279,22 @@ function Header({ onBack }: { onBack: () => void }) {
         className="w-9 h-9 rounded-full bg-surface border border-border flex items-center justify-center text-text-primary"
         aria-label="Volver"
       >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2.5}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
       </button>
       <h1 className="text-2xl font-bold text-text-primary">Confirmar pedido</h1>
     </header>
-  )
+  );
 }
