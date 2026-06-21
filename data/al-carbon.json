@@ -50,19 +50,5 @@
     "formato": 10,
     "packaging": [{ "name": "Tiempo de cocción", "price": 2000 }],
     "stockStatus": "disponible"
-  },
-  {
-    "id": "ac-005",
-    "name": "Licor Crema de Vie",
-    "businessId": "al-carbon",
-    "businessName": "Al Carbón",
-    "category": "Bebidas",
-    "shortDescription": "Deliciosa crema de vie artesanal.",
-    "longDescription": "Licor Crema de Vie artesanal. Se vende por unidad.",
-    "image": "🍶",
-    "photo": "/assets/images/crema-de-vie.jpg",
-    "price": 2300,
-    "featured": true,
-    "stockStatus": "disponible"
   }
 ]

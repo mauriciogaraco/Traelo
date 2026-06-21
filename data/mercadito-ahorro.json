@@ -287,6 +287,20 @@
     "stockStatus": "disponible"
   },
   {
+    "id": "ma-026",
+    "name": "Licor Crema de Vie",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Bebidas",
+    "shortDescription": "Deliciosa crema de vie artesanal.",
+    "longDescription": "Licor Crema de Vie artesanal. Se vende por unidad.",
+    "image": "🍶",
+    "photo": "/assets/images/crema-de-vie.jpg",
+    "price": 2300,
+    "featured": true,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "ma-025",
     "name": "Picadillo de pollo MDM (1 lb)",
     "businessId": "mercadito-ahorro",
