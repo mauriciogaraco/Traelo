@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useCatalog } from "../context/CatalogContext";
+import { useCart } from "../context/CartContext";
 import { AddressBar } from "../components/address/AddressBar";
 import { BusinessRail } from "../components/home/BusinessRail";
 import { CategoryRail } from "../components/home/CategoryRail";
@@ -10,7 +12,10 @@ import { PaymentNote } from "../components/ui/PaymentNote";
 import { ShareSection } from "../components/home/ShareSection";
 import { ClosedTodayBanner } from "../components/home/ClosedTodayBanner";
 import { ordersClosedForToday } from "../lib/hours";
-import type { Category } from "../types";
+import { formatPrice } from "../lib/format";
+import { flyToCart } from "../lib/flyToCart";
+import { hasAddons, hasOptions, hasPackaging } from "../lib/cart";
+import type { Category, Product } from "../types";
 
 const PAGE_SIZE = 20;
 
@@ -218,6 +223,9 @@ export function HomePage() {
           </section>
         ) : (
           <>
+            {/* Destacados */}
+            <FeaturedSection products={products} />
+
             {/* Negocios */}
             <section className="pt-5">
               <SectionTitle
@@ -301,6 +309,106 @@ const HOW_IT_WORKS = [
   { emoji: '💳', title: 'Paga por Zelle', desc: 'Te contactamos para coordinar.' },
   { emoji: '🚀', title: 'Entregamos', desc: 'Directo en Güira de Melena.' },
 ]
+
+const FEATURED_IDS = ['combo-papa', 'combo-001', 'combo-super']
+
+function FeaturedSection({ products }: { products: Product[] }) {
+  const hero = products.find((p) => p.id === 'combo-papa')
+  const others = FEATURED_IDS.slice(1)
+    .map((id) => products.find((p) => p.id === id))
+    .filter((p): p is Product => !!p)
+
+  if (!hero) return null
+
+  return (
+    <section className="pt-5">
+      <SectionTitle title="Destacados" />
+      <FeaturedHeroCard product={hero} />
+      {others.length > 0 && (
+        <div className="grid grid-cols-2 gap-3 mt-3">
+          {others.map((p) => (
+            <ProductCard key={p.id} product={p} />
+          ))}
+        </div>
+      )}
+    </section>
+  )
+}
+
+function FeaturedHeroCard({ product }: { product: Product }) {
+  const navigate = useNavigate()
+  const { addItem, getQuantity } = useCart()
+  const qty = getQuantity(product.id)
+  const needsChoice = hasOptions(product) || hasAddons(product) || hasPackaging(product)
+  const isOut = product.stockStatus === 'agotado'
+
+  function handleAdd(e: React.MouseEvent<HTMLButtonElement>) {
+    e.preventDefault()
+    e.stopPropagation()
+    if (isOut) return
+    if (needsChoice) { navigate(`/producto/${product.id}`); return }
+    flyToCart(e.currentTarget)
+    addItem(product)
+  }
+
+  return (
+    <Link
+      to={`/producto/${product.id}`}
+      className="group block rounded-3xl overflow-hidden border border-amber-200 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 shadow-soft"
+    >
+      <div className="px-5 pt-5 pb-4">
+        {/* Badge */}
+        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-700 text-[10px] font-bold mb-3">
+          <span className="text-[11px]">🎁</span>
+          Especial Día del Padre
+        </span>
+
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <h3 className="text-[1.1rem] font-extrabold text-text-primary leading-tight">
+              {product.name}
+            </h3>
+            <p className="text-[11px] text-text-secondary mt-1 leading-relaxed line-clamp-2">
+              {product.longDescription}
+            </p>
+            <p className="text-xs text-amber-700 font-semibold mt-1.5">
+              El Mercadito
+            </p>
+          </div>
+          <span className="text-5xl flex-shrink-0 leading-none">👨</span>
+        </div>
+
+        <div className="flex items-center justify-between mt-4">
+          <div>
+            <span className="text-[10px] font-semibold text-text-secondary uppercase tracking-wide">Precio</span>
+            <p className="text-xl font-extrabold text-text-primary leading-none">
+              {formatPrice(product.price)} <span className="text-sm font-bold text-text-secondary">USD</span>
+            </p>
+          </div>
+          <button
+            onClick={handleAdd}
+            disabled={isOut}
+            className="inline-flex items-center gap-1.5 rounded-2xl bg-primary px-4 py-2.5 text-sm font-bold text-white shadow-soft transition-transform active:scale-95 disabled:opacity-40"
+          >
+            {qty > 0 ? (
+              <>
+                <span className="w-5 h-5 rounded-full bg-white/25 flex items-center justify-center text-[11px] font-extrabold">{qty}</span>
+                Añadir más
+              </>
+            ) : (
+              <>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
+                </svg>
+                Añadir
+              </>
+            )}
+          </button>
+        </div>
+      </div>
+    </Link>
+  )
+}
 
 function StartHint() {
   return (
