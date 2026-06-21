@@ -979,7 +979,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 2.6,
+      "price": 3.1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1897,7 +1897,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 2.3,
+      "price": 3.1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1939,7 +1939,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 2.06,
+      "price": 2.3,
       "stockStatus": "disponible"
     },
     {
@@ -1951,7 +1951,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.82,
+      "price": 0.96,
       "stockStatus": "disponible",
       "options": [
         "Naranja",
