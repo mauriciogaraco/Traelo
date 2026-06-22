@@ -3373,7 +3373,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
       "price": 3,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3391,7 +3391,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
       "price": 4,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3409,7 +3409,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍗",
       "price": 3,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -4139,7 +4139,7 @@
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
       "price": 1.4,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Sin caja",
@@ -4161,7 +4161,7 @@
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
       "price": 1.8,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Sin caja",
@@ -4183,7 +4183,7 @@
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
       "price": 1.8,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Sin caja",
@@ -4205,7 +4205,7 @@
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
       "price": 1.8,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Sin caja",
@@ -4249,7 +4249,7 @@
       "longDescription": "Pizzas · Especiales",
       "image": "🍕",
       "price": 2.2,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Sin caja",
@@ -4327,7 +4327,7 @@
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
       "price": 3,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "addons": [
         {
           "name": "Agrego extra",
@@ -4355,7 +4355,7 @@
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
       "price": 4,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "addons": [
         {
           "name": "Agrego extra",

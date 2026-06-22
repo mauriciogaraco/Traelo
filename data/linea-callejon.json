@@ -10,7 +10,12 @@
     "image": "🍤",
     "price": 1500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-002",
@@ -23,7 +28,12 @@
     "image": "🍤",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-003",
@@ -35,8 +45,13 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 1500,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-004",
@@ -48,8 +63,13 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 2000,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-005",
@@ -61,8 +81,13 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍗",
     "price": 1500,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-006",
@@ -75,7 +100,12 @@
     "image": "🍤",
     "price": 700,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-007",
@@ -88,7 +118,12 @@
     "image": "🐟",
     "price": 1500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-008",
@@ -101,7 +136,12 @@
     "image": "🍽️",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-009",
@@ -114,7 +154,12 @@
     "image": "🍚",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-010",
@@ -127,7 +172,12 @@
     "image": "🥗",
     "price": 300,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-011",
@@ -140,7 +190,12 @@
     "image": "🍖",
     "price": 1000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-012",
@@ -153,7 +208,12 @@
     "image": "🍗",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-013",
@@ -166,7 +226,12 @@
     "image": "🥩",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-014",
@@ -179,7 +244,12 @@
     "image": "🥩",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-015",
@@ -192,7 +262,12 @@
     "image": "🥩",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-016",
@@ -205,7 +280,12 @@
     "image": "🥩",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-017",
@@ -218,7 +298,12 @@
     "image": "🥩",
     "price": 2500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-018",
@@ -231,7 +316,12 @@
     "image": "🥩",
     "price": 2500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-019",
@@ -244,7 +334,12 @@
     "image": "🥩",
     "price": 2500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-020",
@@ -257,7 +352,12 @@
     "image": "🍽️",
     "price": 1000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-021",
@@ -270,7 +370,12 @@
     "image": "🌭",
     "price": 1000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-022",
@@ -283,7 +388,12 @@
     "image": "🦞",
     "price": 2500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-023",
@@ -296,7 +406,12 @@
     "image": "🥩",
     "price": 2500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-024",
@@ -309,7 +424,12 @@
     "image": "🐟",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-025",
@@ -322,7 +442,12 @@
     "image": "🥩",
     "price": 2000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-sp-01",
@@ -335,7 +460,16 @@
     "image": "🍝",
     "price": 700,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-sp-02",
@@ -348,7 +482,16 @@
     "image": "🍝",
     "price": 900,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-sp-03",
@@ -361,7 +504,16 @@
     "image": "🍝",
     "price": 900,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-sp-04",
@@ -374,7 +526,16 @@
     "image": "🍝",
     "price": 1100,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-sp-05",
@@ -387,7 +548,16 @@
     "image": "🍝",
     "price": 1000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-sp-06",
@@ -400,7 +570,16 @@
     "image": "🍝",
     "price": 1200,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-sp-07",
@@ -413,7 +592,16 @@
     "image": "🍝",
     "price": 1200,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Jaba", "price": 10 }, { "name": "Termopack", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-01",
@@ -426,7 +614,16 @@
     "image": "🍕",
     "price": 300,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-02",
@@ -439,7 +636,16 @@
     "image": "🍕",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-03",
@@ -452,7 +658,16 @@
     "image": "🍕",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-04",
@@ -465,7 +680,16 @@
     "image": "🍕",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-05",
@@ -478,7 +702,16 @@
     "image": "🍕",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-06",
@@ -491,7 +724,16 @@
     "image": "🍕",
     "price": 1000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-07",
@@ -504,7 +746,16 @@
     "image": "🍕",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-08",
@@ -517,7 +768,16 @@
     "image": "🍕",
     "price": 700,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-09",
@@ -530,7 +790,16 @@
     "image": "🍕",
     "price": 700,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-10",
@@ -542,8 +811,17 @@
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
     "price": 700,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-11",
@@ -555,8 +833,17 @@
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
     "price": 900,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-12",
@@ -568,8 +855,17 @@
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
     "price": 900,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-13",
@@ -581,8 +877,17 @@
     "longDescription": "Pizzas · Queso Gouda",
     "image": "🍕",
     "price": 900,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-14",
@@ -595,7 +900,16 @@
     "image": "🍕",
     "price": 700,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pz-15",
@@ -607,8 +921,17 @@
     "longDescription": "Pizzas · Especiales",
     "image": "🍕",
     "price": 1100,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "stockStatus": "agotado",
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pzf-01",
@@ -621,8 +944,22 @@
     "image": "🍕",
     "price": 1200,
     "stockStatus": "disponible",
-    "addons": [{ "name": "Agrego extra", "price": 300 }],
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "addons": [
+      {
+        "name": "Agrego extra",
+        "price": 300
+      }
+    ],
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pzf-02",
@@ -635,8 +972,22 @@
     "image": "🍕",
     "price": 1500,
     "stockStatus": "disponible",
-    "addons": [{ "name": "Agrego extra", "price": 300 }],
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "addons": [
+      {
+        "name": "Agrego extra",
+        "price": 300
+      }
+    ],
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pzf-03",
@@ -648,9 +999,23 @@
     "longDescription": "Pizzas Familiares · Tamaño grande",
     "image": "🍕",
     "price": 1500,
-    "stockStatus": "disponible",
-    "addons": [{ "name": "Agrego extra", "price": 300 }],
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "stockStatus": "agotado",
+    "addons": [
+      {
+        "name": "Agrego extra",
+        "price": 300
+      }
+    ],
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "lc-pzf-04",
@@ -662,8 +1027,22 @@
     "longDescription": "Pizzas Familiares · Tamaño grande",
     "image": "🍕",
     "price": 2000,
-    "stockStatus": "disponible",
-    "addons": [{ "name": "Agrego extra", "price": 300 }],
-    "packaging": [{ "name": "Sin caja", "price": 0 }, { "name": "Caja", "price": 150 }]
+    "stockStatus": "agotado",
+    "addons": [
+      {
+        "name": "Agrego extra",
+        "price": 300
+      }
+    ],
+    "packaging": [
+      {
+        "name": "Sin caja",
+        "price": 0
+      },
+      {
+        "name": "Caja",
+        "price": 150
+      }
+    ]
   }
 ]

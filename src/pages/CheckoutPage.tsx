@@ -254,7 +254,7 @@ export function CheckoutPage() {
         </section>
 
         {/* Totales */}
-        <section className="bg-surface border border-border rounded-3xl p-4 space-y-2.5">
+        <section className="bg-surface border border-border rounded-3xl p-4 space-y-3">
           <div className="flex justify-between text-sm">
             <span className="text-text-secondary">Subtotal</span>
             <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
@@ -264,7 +264,7 @@ export function CheckoutPage() {
             <span className="font-semibold text-text-primary">{deliveryLabel}</span>
           </div>
           <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
-          <div className="border-t border-border pt-2.5 flex justify-between items-baseline">
+          <div className="border-t border-border pt-3 flex justify-between items-baseline">
             <span className="font-bold text-text-primary">Total a pagar</span>
             <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>
           </div>

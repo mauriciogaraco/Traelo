@@ -50,8 +50,14 @@ export function unitsOf(item: CartItem): number {
   return item.quantity * packSize(item.product)
 }
 
-/** Total de la línea = (precio + agrego + envase) por unidad × unidades totales. */
+/**
+ * Total de la línea. El packaging se cobra una vez por lote (quantity),
+ * no por cada unidad dentro del formato. Para productos sin formato (packSize=1)
+ * el resultado es idéntico al comportamiento anterior.
+ */
 export function lineTotal(item: CartItem): number {
-  const unitPrice = item.product.price + (item.addon?.price ?? 0) + (item.packaging?.price ?? 0)
-  return unitPrice * unitsOf(item)
+  const ps = packSize(item.product)
+  const basePerUnit = item.product.price + (item.addon?.price ?? 0)
+  const packagingOnce = item.packaging?.price ?? 0
+  return (basePerUnit * ps + packagingOnce) * item.quantity
 }
