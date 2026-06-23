@@ -51,7 +51,13 @@
     "photo": "/assets/images/products/mercadito/refresco_cana_cola.jpg",
     "price": 265,
     "formato": 12,
-    "options": ["Cola", "Uva", "Limón", "Naranja", "Frambuesa"],
+    "options": [
+      "Cola",
+      "Uva",
+      "Limón",
+      "Naranja",
+      "Frambuesa"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -94,7 +100,7 @@
     "photo": "/assets/images/products/mercadito/chups_chups.jpg",
     "price": 48,
     "formato": 48,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-010",
@@ -160,7 +166,10 @@
     "image": "🍪",
     "photo": "/assets/images/products/mercadito/cukis.jpg",
     "price": 1080,
-    "options": ["Vainilla", "Chocolate"],
+    "options": [
+      "Vainilla",
+      "Chocolate"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -200,7 +209,10 @@
     "image": "🍮",
     "photo": "/assets/images/products/mercadito/gelatina_pomo.jpg",
     "price": 3400,
-    "options": ["Pingüino", "Mono"],
+    "options": [
+      "Pingüino",
+      "Mono"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -338,7 +350,7 @@
     "photo": "/assets/images/products/mercadito/spaguetti.jpg",
     "price": 240,
     "formato": 20,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-031",
@@ -365,7 +377,10 @@
     "image": "🥛",
     "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
     "price": 900,
-    "options": ["Fresa", "Natural"],
+    "options": [
+      "Fresa",
+      "Natural"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -447,7 +462,10 @@
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
     "price": 250,
     "formato": 10,
-    "options": ["Naranja", "Limón"],
+    "options": [
+      "Naranja",
+      "Limón"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -474,7 +492,7 @@
     "longDescription": "El mejor precio del mercado , sale a 280 la libra",
     "image": "🍚",
     "photo": "/assets/images/products/mercadito/arroz50lb.jpg",
-    "price": 14400,
+    "price": 14000,
     "formato": 1,
     "stockStatus": "disponible"
   },

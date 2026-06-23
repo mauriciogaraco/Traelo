@@ -249,7 +249,7 @@
       "photo": "/assets/images/products/mercadito/chups_chups.jpg",
       "price": 48,
       "formato": 48,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-010",
@@ -499,7 +499,7 @@
       "photo": "/assets/images/products/mercadito/spaguetti.jpg",
       "price": 240,
       "formato": 20,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-031",
@@ -641,7 +641,7 @@
       "longDescription": "El mejor precio del mercado , sale a 280 la libra",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz50lb.jpg",
-      "price": 14400,
+      "price": 14000,
       "formato": 1,
       "stockStatus": "disponible"
     },
@@ -2703,7 +2703,7 @@
       "longDescription": "Aceite vegetal en botella de 900ml.",
       "image": "🫒",
       "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-      "price": 1700,
+      "price": 1800,
       "stockStatus": "disponible"
     },
     {
@@ -3337,7 +3337,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
       "price": 1500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3355,7 +3355,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3427,7 +3427,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
       "price": 700,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3445,7 +3445,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🐟",
       "price": 1500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3463,7 +3463,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍽️",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3481,7 +3481,7 @@
       "longDescription": "Comidas Criollas · Guarniciones",
       "image": "🍚",
       "price": 500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3499,7 +3499,7 @@
       "longDescription": "Comidas Criollas · Guarniciones",
       "image": "🥗",
       "price": 300,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3517,7 +3517,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🍖",
       "price": 1000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3535,7 +3535,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🍗",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3553,7 +3553,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3571,7 +3571,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3589,7 +3589,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3607,7 +3607,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3625,7 +3625,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3643,7 +3643,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3661,7 +3661,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3679,7 +3679,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🍽️",
       "price": 1000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3697,7 +3697,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🌭",
       "price": 1000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3715,7 +3715,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🦞",
       "price": 2500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3733,7 +3733,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2500,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3751,7 +3751,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🐟",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -3769,7 +3769,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2000,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
