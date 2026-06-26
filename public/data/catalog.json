@@ -2716,7 +2716,7 @@
       "longDescription": "Perrito caliente listo para preparar (salchicha y pan). Se vende por unidad.",
       "image": "🌭",
       "photo": "/assets/images/products/mercado/perritos_mana.jpg",
-      "price": 650,
+      "price": 680,
       "stockStatus": "disponible"
     },
     {
@@ -2771,32 +2771,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "ma-007",
-      "name": "Jabón en Polvo",
-      "businessId": "mercadito-ahorro",
-      "businessName": "El Mercadito",
-      "category": "Aseo",
-      "shortDescription": "",
-      "longDescription": "Jabón en polvo para lavado de ropa (1kg).",
-      "image": "🍚",
-      "photo": "/assets/images/products/mercado/FEFE_jabon.jpg",
-      "price": 1200,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ma-008",
-      "name": "Mortadella 1kg",
-      "businessId": "mercadito-ahorro",
-      "businessName": "El Mercadito",
-      "category": "Alimentos",
-      "shortDescription": "",
-      "longDescription": "Mortadella de 1kg.",
-      "image": "🥩",
-      "photo": "/assets/images/products/mercado/mortadella_1kg.jpg",
-      "price": 1400,
-      "stockStatus": "disponible"
-    },
-    {
       "id": "ma-0010",
       "name": "Frijoles 1kg",
       "businessId": "mercadito-ahorro",
@@ -2819,7 +2793,7 @@
       "longDescription": "Arroz de 1kg.",
       "image": "🍚",
       "photo": "/assets/images/products/mercado/arroz_sam1kg.jpg",
-      "price": 700,
+      "price": 750,
       "stockStatus": "disponible"
     },
     {
@@ -2844,7 +2818,7 @@
       "shortDescription": "1 kg.",
       "longDescription": "Hígado de pollo fresco, se vende por kilogramo.",
       "image": "🍗",
-      "price": 1000,
+      "price": 1050,
       "stockStatus": "disponible"
     },
     {
@@ -2933,14 +2907,14 @@
     },
     {
       "id": "ma-022",
-      "name": "Paquete de pollo (7-8 muslos)",
+      "name": "Paquete de pollo (5-6 muslos)",
       "businessId": "mercadito-ahorro",
       "businessName": "El Mercadito",
       "category": "Alimentos",
-      "shortDescription": "7 a 8 muslos por paquete.",
-      "longDescription": "Paquete de muslos de pollo, trae entre 7 y 8 unidades.",
+      "shortDescription": "5 a 6 muslos por paquete.",
+      "longDescription": "Paquete de muslos de pollo, trae entre 5 y 6 unidades.",
       "image": "🍗",
-      "price": 2000,
+      "price": 1800,
       "stockStatus": "disponible"
     },
     {
