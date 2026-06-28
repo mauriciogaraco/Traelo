@@ -1457,24 +1457,6 @@
       ]
     },
     {
-      "id": "dlm-043",
-      "name": "Ropa vieja 150g",
-      "businessId": "dlm",
-      "businessName": "Bar Restaurante DLM",
-      "category": "Comida",
-      "shortDescription": "Cerdo",
-      "longDescription": "Cerdo · Parrilla",
-      "image": "🥩",
-      "price": 2050,
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Termopack",
-          "price": 200
-        }
-      ]
-    },
-    {
       "id": "dlm-044",
       "name": "Brusquetas 300g",
       "businessId": "dlm",
@@ -2413,7 +2395,7 @@
       "shortDescription": "Perro caliente grande.",
       "longDescription": "Perro caliente tamaño grande.",
       "image": "🌭",
-      "price": 350,
+      "price": 380,
       "stockStatus": "disponible"
     },
     {
@@ -2965,6 +2947,20 @@
       "longDescription": "Picadillo de pollo MDM, se vende por libra.",
       "image": "🍖",
       "price": 500,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-027",
+      "name": "Café El Arriero (250 g)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Café molido 250 g.",
+      "longDescription": "Café El Arriero molido, presentación de 250 gramos.",
+      "image": "☕",
+      "photo": "/assets/images/products/mercado/café_arreiro.jpg",
+      "price": 1800,
+      "featured": true,
       "stockStatus": "disponible"
     },
     {

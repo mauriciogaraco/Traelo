@@ -10,7 +10,12 @@
     "image": "🍤",
     "price": 950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-002",
@@ -23,7 +28,12 @@
     "image": "🍤",
     "price": 850,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-003",
@@ -36,7 +46,12 @@
     "image": "🍤",
     "price": 1400,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-004",
@@ -49,7 +64,12 @@
     "image": "🍤",
     "price": 1750,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-005",
@@ -62,7 +82,12 @@
     "image": "🍤",
     "price": 950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-006",
@@ -75,7 +100,12 @@
     "image": "🍤",
     "price": 1150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-007",
@@ -88,7 +118,12 @@
     "image": "🍤",
     "price": 1150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-008",
@@ -101,7 +136,12 @@
     "image": "🍤",
     "price": 1300,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-009",
@@ -114,7 +154,12 @@
     "image": "🍤",
     "price": 1300,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-010",
@@ -127,7 +172,12 @@
     "image": "🍤",
     "price": 950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-011",
@@ -140,7 +190,12 @@
     "image": "🍤",
     "price": 950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-012",
@@ -153,7 +208,12 @@
     "image": "🍤",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-013",
@@ -166,7 +226,12 @@
     "image": "🍤",
     "price": 1050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-014",
@@ -179,7 +244,12 @@
     "image": "🍤",
     "price": 1400,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-015",
@@ -192,7 +262,12 @@
     "image": "🍤",
     "price": 1400,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-016",
@@ -205,7 +280,12 @@
     "image": "🍤",
     "price": 1550,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-017",
@@ -218,7 +298,12 @@
     "image": "🍤",
     "price": 4550,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-018",
@@ -231,7 +316,12 @@
     "image": "🥗",
     "price": 950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-019",
@@ -244,7 +334,12 @@
     "image": "🥗",
     "price": 1000,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-020",
@@ -257,7 +352,12 @@
     "image": "🥗",
     "price": 950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-021",
@@ -270,7 +370,12 @@
     "image": "🥗",
     "price": 1150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-022",
@@ -283,7 +388,12 @@
     "image": "🦐",
     "price": 2050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-023",
@@ -296,7 +406,12 @@
     "image": "🦐",
     "price": 2050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-024",
@@ -309,7 +424,12 @@
     "image": "🍚",
     "price": 500,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-025",
@@ -322,7 +442,12 @@
     "image": "🍚",
     "price": 1150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-026",
@@ -335,7 +460,12 @@
     "image": "🍝",
     "price": 1050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-027",
@@ -348,7 +478,12 @@
     "image": "🍝",
     "price": 1050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-028",
@@ -361,7 +496,12 @@
     "image": "🍝",
     "price": 1400,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-029",
@@ -374,7 +514,12 @@
     "image": "🍝",
     "price": 350,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-030",
@@ -387,7 +532,12 @@
     "image": "🍝",
     "price": 550,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-031",
@@ -400,7 +550,12 @@
     "image": "🍝",
     "price": 1150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-032",
@@ -413,7 +568,12 @@
     "image": "🍗",
     "price": 3150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-033",
@@ -426,7 +586,12 @@
     "image": "🍗",
     "price": 2150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-034",
@@ -439,7 +604,12 @@
     "image": "🍗",
     "price": 2150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-035",
@@ -452,7 +622,12 @@
     "image": "🍗",
     "price": 2050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-036",
@@ -465,7 +640,12 @@
     "image": "🍗",
     "price": 3150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-037",
@@ -478,7 +658,12 @@
     "image": "🥩",
     "price": 3150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-038",
@@ -491,7 +676,12 @@
     "image": "🥩",
     "price": 3150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-039",
@@ -504,7 +694,12 @@
     "image": "🥩",
     "price": 2150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-040",
@@ -517,7 +712,12 @@
     "image": "🥩",
     "price": 2050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-041",
@@ -530,7 +730,12 @@
     "image": "🥩",
     "price": 3150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-042",
@@ -543,20 +748,12 @@
     "image": "🥩",
     "price": 2050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
-  },
-  {
-    "id": "dlm-043",
-    "name": "Ropa vieja 150g",
-    "businessId": "dlm",
-    "businessName": "Bar Restaurante DLM",
-    "category": "Comida",
-    "shortDescription": "Cerdo",
-    "longDescription": "Cerdo · Parrilla",
-    "image": "🥩",
-    "price": 2050,
-    "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-044",
@@ -569,7 +766,12 @@
     "image": "🥩",
     "price": 2250,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-045",
@@ -582,7 +784,12 @@
     "image": "🥩",
     "price": 3350,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-046",
@@ -595,7 +802,12 @@
     "image": "🥩",
     "price": 3850,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-047",
@@ -608,7 +820,12 @@
     "image": "🥩",
     "price": 4450,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-048",
@@ -621,7 +838,12 @@
     "image": "🥩",
     "price": 2250,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-049",
@@ -634,7 +856,12 @@
     "image": "🥩",
     "price": 2250,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-050",
@@ -647,7 +874,12 @@
     "image": "🦞",
     "price": 2600,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-051",
@@ -660,7 +892,12 @@
     "image": "🦞",
     "price": 2700,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-052",
@@ -673,7 +910,12 @@
     "image": "🦞",
     "price": 3050,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-053",
@@ -686,7 +928,12 @@
     "image": "🦞",
     "price": 2950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-054",
@@ -699,7 +946,12 @@
     "image": "🦞",
     "price": 3150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-055",
@@ -712,7 +964,12 @@
     "image": "🦞",
     "price": 3350,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-056",
@@ -725,7 +982,12 @@
     "image": "🦞",
     "price": 3350,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-057",
@@ -738,7 +1000,12 @@
     "image": "🦞",
     "price": 3150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-058",
@@ -751,7 +1018,12 @@
     "image": "🦞",
     "price": 3350,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-059",
@@ -764,7 +1036,12 @@
     "image": "🦞",
     "price": 1600,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-060",
@@ -777,7 +1054,12 @@
     "image": "🦞",
     "price": 1850,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-061",
@@ -790,7 +1072,12 @@
     "image": "🦞",
     "price": 2150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-062",
@@ -803,7 +1090,12 @@
     "image": "🦞",
     "price": 2150,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-063",
@@ -816,7 +1108,12 @@
     "image": "🍮",
     "price": 600,
     "stockStatus": "agotado",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-064",
@@ -829,7 +1126,12 @@
     "image": "🍮",
     "price": 800,
     "stockStatus": "agotado",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-065",
@@ -842,7 +1144,12 @@
     "image": "🍮",
     "price": 550,
     "stockStatus": "agotado",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-066",
@@ -855,7 +1162,12 @@
     "image": "🍮",
     "price": 950,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Termopack", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-067",
@@ -868,7 +1180,12 @@
     "image": "🥤",
     "price": 1550,
     "stockStatus": "disponible",
-    "packaging": [{ "name": "Envase", "price": 200 }]
+    "packaging": [
+      {
+        "name": "Envase",
+        "price": 200
+      }
+    ]
   },
   {
     "id": "dlm-068",
@@ -917,7 +1234,11 @@
     "image": "🥤",
     "price": 480,
     "stockStatus": "disponible",
-    "options": ["Naranja", "Limón", "Cola"]
+    "options": [
+      "Naranja",
+      "Limón",
+      "Cola"
+    ]
   },
   {
     "id": "dlm-072",

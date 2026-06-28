@@ -285,5 +285,19 @@
     "image": "🍖",
     "price": 500,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-027",
+    "name": "Café El Arriero (250 g)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Café molido 250 g.",
+    "longDescription": "Café El Arriero molido, presentación de 250 gramos.",
+    "image": "☕",
+    "photo": "/assets/images/products/mercado/café_arreiro.jpg",
+    "price": 1800,
+    "featured": true,
+    "stockStatus": "disponible"
   }
 ]

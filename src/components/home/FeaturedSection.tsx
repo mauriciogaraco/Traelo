@@ -30,9 +30,9 @@ function FeaturedCard({ product }: { product: Product }) {
   return (
     <Link
       to={`/producto/${product.id}`}
-      className="flex items-center gap-4 bg-surface border border-amber-200 rounded-3xl p-3 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200"
+      className="w-64 flex-shrink-0 snap-start flex items-center gap-3 bg-surface border border-amber-200 rounded-3xl p-3 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200"
     >
-      <div className="w-24 h-24 flex-shrink-0 rounded-2xl overflow-hidden">
+      <div className="w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden">
         <ProductImage
           emoji={product.image}
           photo={product.photo}
@@ -99,10 +99,15 @@ export function FeaturedSection({ products }: { products: Product[] }) {
           Destacados
         </h2>
       </div>
-      <div className="space-y-3">
-        {featured.map((p) => (
-          <FeaturedCard key={p.id} product={p} />
-        ))}
+      {/* Carrusel horizontal con scroll suave */}
+      <div className="-mx-4 px-4 overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory">
+        <div className="flex gap-3 pb-1">
+          {featured.map((p) => (
+            <FeaturedCard key={p.id} product={p} />
+          ))}
+          {/* Espaciado final para que el último card no quede pegado al borde */}
+          <div className="w-4 flex-shrink-0" />
+        </div>
       </div>
     </section>
   )
