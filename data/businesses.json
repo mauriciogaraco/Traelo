@@ -6,11 +6,12 @@
     "image": "/assets/images/business/alpha.jpg",
     "color": "from-amber-100 to-orange-50",
     "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
+    "status": "cerrado",
     "schedule": {
       "days": [1, 2, 3, 4, 5, 6],
       "open": "09:00",
       "close": "17:00",
-      "label": "Lun–Sáb · 9:00 am – 5:00 pm"
+      "label": "Cerrado temporalmente · Gestión de inventario"
     }
   },
   {
