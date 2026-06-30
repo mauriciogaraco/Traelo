@@ -10,6 +10,7 @@ export type Category =
   | 'Aseo'
   | 'Confituras'
   | 'Comida'
+  | 'Ropa'
 
 /** Horario de atención del negocio (para no permitir pedidos fuera de hora). */
 export interface BusinessSchedule {

@@ -1,6 +1,6 @@
 import type { Business, Category } from '../types'
 
-export const categories: Category[] = ['Alimentos', 'Bebidas', 'Aseo', 'Comida', 'Confituras']
+export const categories: Category[] = ['Alimentos', 'Bebidas', 'Aseo', 'Comida', 'Confituras', 'Ropa']
 
 export const categoryEmoji: Record<Category, string> = {
   Alimentos: '🥫',
@@ -8,6 +8,7 @@ export const categoryEmoji: Record<Category, string> = {
   Aseo: '🧼',
   Comida: '🍽️',
   Confituras: '🍯',
+  Ropa: '👗',
 }
 
 // Populated by CatalogContext once the JSON loads.

@@ -14,6 +14,7 @@ const BUSINESS_FILES = [
   'la-marina',
   'linea-callejon',
   'al-carbon',
+  'eme-boutique',
 ];
 
 function read(file) {
