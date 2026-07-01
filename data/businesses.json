@@ -87,7 +87,7 @@
     "image": "/assets/images/business/Eme-Boutique.jpg",
     "color": "from-pink-100 to-rose-50",
     "currency": "USD",
-    "paymentNote": "Precios en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "paymentNote": "Precios en USD · pago al cambio del día (El Toque). La mensajería se abona en CUP y se cobra aunque no se retenga la prenda.",
     "deliveryFee": 350,
     "schedule": {
       "days": [0, 1, 2, 3, 4, 5, 6],

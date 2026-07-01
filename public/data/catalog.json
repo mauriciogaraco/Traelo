@@ -133,7 +133,7 @@
       "image": "/assets/images/business/Eme-Boutique.jpg",
       "color": "from-pink-100 to-rose-50",
       "currency": "USD",
-      "paymentNote": "Precios en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "paymentNote": "Precios en USD · pago al cambio del día (El Toque). La mensajería se abona en CUP y se cobra aunque no se retenga la prenda.",
       "deliveryFee": 350,
       "schedule": {
         "days": [
@@ -4439,8 +4439,11 @@
       "shortDescription": "Precio en USD.",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
+      "options": [
+        "M"
+      ],
       "photo": "/assets/images/products/Eme Boutique/Aloruh-perlado.jpg",
-      "price": 19,
+      "price": 25,
       "stockStatus": "disponible"
     },
     {
@@ -4453,7 +4456,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Aloruh-verde-con-nudo.jpg",
-      "price": 13,
+      "price": 25,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4466,7 +4472,7 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Batidor-de-pilas.jpg",
-      "price": 9,
+      "price": 10,
       "stockStatus": "disponible"
     },
     {
@@ -4480,6 +4486,9 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Bikini-blanco-tirantes.jpg",
       "price": 16,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4493,6 +4502,9 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Bikini-negro-con-tiras.jpg",
       "price": 16,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4505,7 +4517,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/bikini-negro.jpg",
-      "price": 14,
+      "price": 15,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4518,7 +4533,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Blusa-blanca-puntos.jpg",
-      "price": 19,
+      "price": 15,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4527,11 +4545,14 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "S grande",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Blusa-corta-mangas-negras.jpg",
-      "price": 17,
+      "price": 14,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4544,7 +4565,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Blusa-de-mangas-ancha.jpg",
-      "price": 12,
+      "price": 15,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4557,7 +4581,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Blusa-Firerie-blanco.jpg",
-      "price": 19,
+      "price": 15,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4570,7 +4597,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Blusa-Firerie-Marrón.jpg",
-      "price": 12,
+      "price": 15,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4583,7 +4613,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Blusa-Maija-tiras.jpg",
-      "price": 16,
+      "price": 14,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4595,8 +4628,11 @@
       "shortDescription": "Precio en USD.",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
+      "options": [
+        "S"
+      ],
       "photo": "/assets/images/products/Eme Boutique/blusa-roja.jpg",
-      "price": 19,
+      "price": 14,
       "stockStatus": "disponible"
     },
     {
@@ -4609,12 +4645,15 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Blusa-rojo-vino-Botones.jpg",
-      "price": 20,
+      "price": 14,
+      "options": [
+        "XS"
+      ],
       "stockStatus": "disponible"
     },
     {
       "id": "eb-015",
-      "name": "Blusa Tirantes Blanca Tejida",
+      "name": "Blusa Dazy Blanca Tejida",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
@@ -4622,12 +4661,15 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/blusa-tirantes-blanca-tejida.jpg",
-      "price": 17,
+      "price": 14,
+      "options": [
+        "L"
+      ],
       "stockStatus": "disponible"
     },
     {
       "id": "eb-016",
-      "name": "Bolso Loewe",
+      "name": "Cartera Loewe",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
@@ -4635,7 +4677,7 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/bolso-Loewe.jpg",
-      "price": 18,
+      "price": 65,
       "stockStatus": "disponible"
     },
     {
@@ -4648,7 +4690,7 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Bolso-rojo.jpg",
-      "price": 18,
+      "price": 12,
       "stockStatus": "disponible"
     },
     {
@@ -4657,11 +4699,11 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "Las 2 piezas",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Bolso_milano, 2-piezas.jpg",
-      "price": 16,
+      "price": 20,
       "stockStatus": "disponible"
     },
     {
@@ -4670,11 +4712,14 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "100 % algodón",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/ConfortCana-cojunto-algodón.jpg",
-      "price": 12,
+      "price": 20,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4683,11 +4728,14 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "100 % algodón",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/ConfortCana-Conjunto-blanco.jpg",
-      "price": 11,
+      "price": 20,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4696,11 +4744,11 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "Talla 26",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/ConfortCana-short.jpg",
-      "price": 16,
+      "price": 20,
       "stockStatus": "disponible"
     },
     {
@@ -4713,7 +4761,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Conjunto de bikini y maya blanco.jpg",
-      "price": 14,
+      "price": 30,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4726,7 +4777,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Conjunto-deportivo-negro.jpg",
-      "price": 9,
+      "price": 20,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4738,6 +4792,9 @@
       "shortDescription": "Precio en USD.",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
+      "options": [
+        "S"
+      ],
       "photo": "/assets/images/products/Eme Boutique/conjunto-lencería-negra-2-piezas.jpg",
       "price": 12,
       "stockStatus": "disponible"
@@ -4752,7 +4809,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Enterizo-levantaGlúeteo-azul.jpg",
-      "price": 18,
+      "price": 20,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4765,7 +4825,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Firerie-Satín-verde.jpg",
-      "price": 19,
+      "price": 20,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4791,7 +4854,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/lencería-enterisa-rojo-vino.jpg",
-      "price": 15,
+      "price": 16,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4800,11 +4866,14 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "Las 3 piezas",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Lencería-enteriso-azul.jpg",
-      "price": 11,
+      "price": 18,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4817,7 +4886,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/lencería-negra-encaje.jpg",
-      "price": 11,
+      "price": 16,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4831,6 +4903,9 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Licra-LevantaGlúteos-corta-azul.jpg",
       "price": 14,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4843,7 +4918,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Licra-LevantaGlúteos-corta-negra.jpg",
-      "price": 12,
+      "price": 14,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4856,7 +4934,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Licra-negra-pata-campana.jpg",
-      "price": 21,
+      "price": 18,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4869,7 +4950,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Licras-LevantaGlúteos-larga-azul.jpg",
-      "price": 21,
+      "price": 18,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4882,7 +4966,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Licras-LevantaGlúteos-larga-marrón.jpg",
-      "price": 20,
+      "price": 18,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4895,7 +4982,12 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Licras-LevantaGlúteos-larga-negra.jpg",
-      "price": 20,
+      "price": 18,
+      "options": [
+        "S",
+        "M",
+        "L"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4904,11 +4996,15 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "Solo la maya.",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/maya-negra-con-mangas.jpg",
-      "price": 13,
+      "price": 15,
+      "options": [
+        "S",
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4921,7 +5017,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Mono-enterizo-celeste.jpg",
-      "price": 18,
+      "price": 20,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4934,7 +5033,7 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/organizador.jpg",
-      "price": 10,
+      "price": 12,
       "stockStatus": "disponible"
     },
     {
@@ -4947,7 +5046,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/pantaloneta-negra.jpg",
-      "price": 8,
+      "price": 20,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4960,7 +5062,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/pantaloneta-rosa.jpg",
-      "price": 10,
+      "price": 20,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4974,6 +5079,9 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/pullover-Shein-Essce-beige.jpg",
       "price": 14,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -4986,12 +5094,15 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Pullover-Shein-Essce.jpg",
-      "price": 18,
+      "price": 14,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
       "id": "eb-044",
-      "name": "Rowne Bolso Tejido",
+      "name": "Romwe Bolso Tejido",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
@@ -4999,7 +5110,7 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Rowne-bolso-tejido.jpg",
-      "price": 24,
+      "price": 20,
       "stockStatus": "disponible"
     },
     {
@@ -5012,7 +5123,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Selianne-Blanco-Negro.jpg",
-      "price": 17,
+      "price": 20,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5041,7 +5155,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Shein-Petit-rayas-azules.jpg",
-      "price": 15,
+      "price": 25,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5050,7 +5167,7 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "Solo la maya.",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Shein-Swim-Maya-negro.jpg",
@@ -5067,7 +5184,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Shein-Unity-blusa.jpg",
-      "price": 19,
+      "price": 18,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5080,7 +5200,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Short-Mezclilla.jpg",
-      "price": 14,
+      "price": 15,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5089,11 +5212,14 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "Las 3 piezas",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Swim,-Mod-3-piezas-raya.jpg",
-      "price": 15,
+      "price": 25,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5106,7 +5232,11 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Swim-Basisc-Maya-Negro.jpg",
-      "price": 16,
+      "price": 12,
+      "options": [
+        "S",
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5119,7 +5249,8 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/swim-SXY-negro.jpg",
-      "price": 12,
+      "price": 20,
+      "options": "S",
       "stockStatus": "disponible"
     },
     {
@@ -5132,7 +5263,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Top-tejido-negro.jpg",
-      "price": 16,
+      "price": 8,
+      "options": [
+        8
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5145,7 +5279,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/trusa-aloruh-blanca.jpg",
-      "price": 17,
+      "price": 18,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5222,7 +5359,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-blanco-tejido.jpg",
-      "price": 27,
+      "price": 20,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5348,7 +5488,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-verde-escote.jpg",
-      "price": 21,
+      "price": 22,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5393,7 +5536,7 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Zapatera.jpg",
-      "price": 12,
+      "price": 20,
       "stockStatus": "disponible"
     }
   ]

@@ -2,6 +2,7 @@ import type { Order } from '../types'
 import { formatPrice } from './format'
 import { groupByBusiness } from './order'
 import { hasFormato, lineTotal, packSize, unitsOf } from './cart'
+import { businessById } from '../data/catalog'
 import { TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID } from './config'
 
 /** Escapa los caracteres reservados de HTML para Telegram (parse_mode=HTML). */
@@ -9,21 +10,8 @@ function esc(text: string): string {
   return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
-/**
- * Construye el mensaje del pedido en HTML, ORGANIZADO POR NEGOCIO:
- *
- *   Pedido #1234
- *   Cliente / Dirección / Teléfono
- *
- *   🏪 Negocio A
- *   • Producto x 2 — 100 CUP
- *   🏪 Negocio B
- *   • Producto x 1 — 50 CUP
- *
- *   Total
- */
 export function buildOrderMessage(order: Order): string {
-  const { id, address, total } = order
+  const { id, address } = order
   const groups = groupByBusiness(order.items)
 
   const lines: string[] = [
@@ -37,8 +25,16 @@ export function buildOrderMessage(order: Order): string {
     '',
   ]
 
+  let cupTotal = 0
+  let usdTotal = 0
+  const hasUsd = groups.some(g => businessById(g.businessId)?.currency === 'USD')
+
   for (const group of groups) {
-    lines.push(`🏪 <b>${esc(group.businessName)}</b>`)
+    const currency = businessById(group.businessId)?.currency
+    const isUsd = currency === 'USD'
+
+    lines.push(`🏪 <b>${esc(group.businessName)}</b>${isUsd ? ' 💲' : ''}`)
+
     for (const item of group.items) {
       const { product, quantity, option, addon, packaging } = item
       const detalle = hasFormato(product)
@@ -48,22 +44,34 @@ export function buildOrderMessage(order: Order): string {
       if (option) nombre += ` (${option})`
       if (addon) nombre += ` + ${addon.name}`
       if (packaging) nombre += ` [${packaging.name}]`
-      lines.push(`   • ${esc(nombre)} ${detalle} — ${formatPrice(lineTotal(item))}`)
+      const precio = formatPrice(lineTotal(item), isUsd ? 'USD' : undefined)
+      lines.push(`   • ${esc(nombre)} ${detalle} — ${precio}`)
     }
-    lines.push(`   <i>Subtotal: ${formatPrice(group.subtotal)}</i>`)
+
+    lines.push(`   <i>Subtotal: ${formatPrice(group.subtotal, isUsd ? 'USD' : undefined)}</i>`)
     lines.push('')
+
+    if (isUsd) usdTotal += group.subtotal
+    else cupTotal += group.subtotal
   }
 
-  lines.push(`🛵 <b>Mensajería:</b> ${formatPrice(order.fee ?? 0)}`)
-  lines.push(`💵 <b>Total: ${formatPrice(total)}</b>`)
+  const fee = order.fee ?? 0
+  lines.push(`🛵 <b>Mensajería:</b> ${formatPrice(fee)} <i>(siempre en CUP)</i>`)
+
+  if (hasUsd) {
+    if (usdTotal > 0)
+      lines.push(`💲 <b>Productos USD: ${formatPrice(usdTotal, 'USD')}</b>`)
+    if (cupTotal > 0)
+      lines.push(`💵 <b>Productos CUP: ${formatPrice(cupTotal)}</b>`)
+    lines.push(`💵 <b>Mensajería a cobrar: ${formatPrice(fee)}</b>`)
+    lines.push(`<i>⚠️ La mensajería se cobra en CUP aunque no se retenga la prenda.</i>`)
+  } else {
+    lines.push(`💵 <b>Total: ${formatPrice(cupTotal + fee)}</b>`)
+  }
 
   return lines.join('\n')
 }
 
-/**
- * Envía el pedido al chat de Telegram configurado.
- * Devuelve true si Telegram confirma el envío, false en cualquier error.
- */
 export async function sendOrderToTelegram(order: Order): Promise<boolean> {
   try {
     const res = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {

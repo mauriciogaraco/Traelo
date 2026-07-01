@@ -82,6 +82,7 @@ export function CheckoutPage() {
     const b = businessById(g.businessId)
     return b ? !isOpenNow(b) : false
   })
+  const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD')
   const hasClosed = closedGroups.length > 0
 
   // Entrega elegida → momento para calcular la tarifa
@@ -211,7 +212,9 @@ export function CheckoutPage() {
         <section>
           <h2 className="text-sm font-bold text-text-primary mb-2">Resumen del pedido</h2>
           <div className="space-y-3">
-            {groups.map((group) => (
+            {groups.map((group) => {
+              const groupCurrency = businessById(group.businessId)?.currency
+              return (
               <div key={group.businessId} className="bg-surface border border-border rounded-3xl overflow-hidden">
                 <div className="flex items-center gap-2 px-4 py-2.5 bg-primary/5 border-b border-border">
                   <span className="text-primary">
@@ -220,7 +223,7 @@ export function CheckoutPage() {
                     </svg>
                   </span>
                   <p className="text-sm font-bold text-text-primary flex-1 truncate">{group.businessName}</p>
-                  <span className="text-xs font-semibold text-text-secondary">{formatPrice(group.subtotal)}</span>
+                  <span className="text-xs font-semibold text-text-secondary">{formatPrice(group.subtotal, groupCurrency)}</span>
                 </div>
                 {businessById(group.businessId)?.paymentNote && (
                   <PaymentNote note={businessById(group.businessId)!.paymentNote!} />
@@ -243,31 +246,60 @@ export function CheckoutPage() {
                         </p>
                       </div>
                       <p className="text-sm font-bold text-text-primary flex-shrink-0">
-                        {formatAmount(lineTotal(item))}
+                        {groupCurrency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{groupCurrency === 'USD' ? ' USD' : ''}
                       </p>
                     </div>
                   ))}
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </section>
 
         {/* Totales */}
         <section className="bg-surface border border-border rounded-3xl p-4 space-y-3">
-          <div className="flex justify-between text-sm">
-            <span className="text-text-secondary">Subtotal</span>
-            <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
-          </div>
-          <div className="flex justify-between text-sm">
-            <span className="text-text-secondary">Entrega</span>
-            <span className="font-semibold text-text-primary">{deliveryLabel}</span>
-          </div>
-          <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
-          <div className="border-t border-border pt-3 flex justify-between items-baseline">
-            <span className="font-bold text-text-primary">Total a pagar</span>
-            <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>
-          </div>
+          {hasUsdGroups ? (
+            <>
+              {groups.map((group) => {
+                const groupCurrency = businessById(group.businessId)?.currency
+                return (
+                  <div key={group.businessId} className="flex justify-between text-sm">
+                    <span className="text-text-secondary">{group.businessName}</span>
+                    <span className="font-semibold text-text-primary">
+                      {formatPrice(group.subtotal, groupCurrency)}
+                    </span>
+                  </div>
+                )
+              })}
+              <div className="flex justify-between text-sm">
+                <span className="text-text-secondary">Entrega</span>
+                <span className="font-semibold text-text-primary">{deliveryLabel}</span>
+              </div>
+              <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
+              <div className="border-t border-border pt-3 space-y-1">
+                <p className="text-[11px] text-warning font-semibold">
+                  La mensajería se abona en CUP aunque no se retenga la prenda.
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="flex justify-between text-sm">
+                <span className="text-text-secondary">Subtotal</span>
+                <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-text-secondary">Entrega</span>
+                <span className="font-semibold text-text-primary">{deliveryLabel}</span>
+              </div>
+              <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
+              <div className="border-t border-border pt-3 flex justify-between items-baseline">
+                <span className="font-bold text-text-primary">Total a pagar</span>
+                <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>
+              </div>
+            </>
+          )}
         </section>
 
         {/* Negocio cerrado: no se puede pedir */}
