@@ -659,7 +659,8 @@
     "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Shein-Swim-Maya-negro.jpg",
-    "price": 11,
+    "price": 18,
+    "options":["S"],
     "stockStatus": "disponible"
   },
   {
@@ -710,7 +711,7 @@
     "businessId": "eme-boutique",
     "businessName": "Eme Boutique",
     "category": "Ropa",
-    "shortDescription": "Precio en USD.",
+    "shortDescription": "Solo la maya.",
     "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Swim-Basisc-Maya-Negro.jpg",
