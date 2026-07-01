@@ -6,8 +6,7 @@
       "description": "Mercado Alpha: alimentos, bebidas y aseo del día a día.",
       "image": "/assets/images/business/alpha.jpg",
       "color": "from-amber-100 to-orange-50",
-      "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
-      "status": "cerrado",
+      "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante. · El costo de mensajería indicado es referencial. Debido a la naturaleza del pedido, la tarifa final puede ajustarse en función del peso y volumen total de los productos. El mensajero le comunicará el monto definitivo al momento de coordinar la entrega.",
       "schedule": {
         "days": [
           1,
@@ -18,8 +17,7 @@
           6
         ],
         "open": "09:00",
-        "close": "17:00",
-        "label": "Cerrado temporalmente · Gestión de inventario"
+        "close": "17:00"
       }
     },
     {
@@ -184,7 +182,7 @@
       "image": "🥣",
       "photo": "/assets/images/products/mercadito/avena.jpg",
       "price": 4.2,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-002",
@@ -223,7 +221,7 @@
       "longDescription": "Excelente calidad. Se vende por blister de 12 unidades. Contiene 420ml",
       "image": "🥤",
       "photo": "/assets/images/products/mercadito/refresco_cana_cola.jpg",
-      "price": 0.53,
+      "price": 0.48,
       "formato": 12,
       "options": [
         "Cola",
@@ -244,7 +242,7 @@
       "longDescription": "Se vende por paca de 24 unidades.",
       "image": "🧻",
       "photo": "/assets/images/products/mercadito/papel_higienico.jpg",
-      "price": 1,
+      "price": 0.94,
       "formato": 24,
       "stockStatus": "disponible"
     },
@@ -258,7 +256,7 @@
       "longDescription": "Se venden por tira de 24 unidades.",
       "image": "🧀",
       "photo": "/assets/images/products/mercadito/botonetas.jpg",
-      "price": 0.11,
+      "price": 0.09,
       "formato": 24,
       "stockStatus": "disponible"
     },
@@ -286,7 +284,7 @@
       "longDescription": "Se vende por unidad.",
       "image": "🧷",
       "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-      "price": 5.6,
+      "price": 5,
       "stockStatus": "disponible"
     },
     {
@@ -299,7 +297,7 @@
       "longDescription": "Se vende por unidad.",
       "image": "🧃",
       "photo": "/assets/images/products/mercadito/bambil.jpg",
-      "price": 0.6,
+      "price": 0.5,
       "stockStatus": "disponible"
     },
     {
@@ -312,7 +310,7 @@
       "longDescription": "Se vende por estuches de 12 unidades",
       "image": "🍪",
       "photo": "/assets/images/products/mercadito/coconut.jpg",
-      "price": 0.17,
+      "price": 0.15,
       "formato": 12,
       "stockStatus": "disponible"
     },
@@ -327,7 +325,7 @@
       "image": "🍘",
       "photo": "/assets/images/products/mercadito/crackers.jpg",
       "price": 0.4,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-015",
@@ -344,7 +342,7 @@
         "Vainilla",
         "Chocolate"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-017",
@@ -357,7 +355,7 @@
       "image": "🫘",
       "photo": "/assets/images/products/mercadito/frijoles.jpg",
       "price": 0.8,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-018",
@@ -370,7 +368,7 @@
       "image": "🍮",
       "photo": "/assets/images/products/mercadito/gelatina.jpg",
       "price": 0.6,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-019",
@@ -382,7 +380,7 @@
       "longDescription": "Gelatina en pomo. Se vende por pomos de 100 unidades",
       "image": "🍮",
       "photo": "/assets/images/products/mercadito/gelatina_pomo.jpg",
-      "price": 6.8,
+      "price": 6.2,
       "options": [
         "Pingüino",
         "Mono"
@@ -414,7 +412,7 @@
       "photo": "/assets/images/products/mercadito/jugos_petit.jpg",
       "price": 0.4,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-023",
@@ -426,9 +424,9 @@
       "longDescription": "Se vende por estuches de 12 unidades",
       "image": "🧺",
       "photo": "/assets/images/products/mercadito/jumbo.jpg",
-      "price": 0.17,
+      "price": 0.15,
       "formato": 12,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-024",
@@ -455,7 +453,7 @@
       "photo": "/assets/images/products/mercadito/mayonesa.jpg",
       "price": 1.66,
       "formato": 12,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-026",
@@ -467,13 +465,13 @@
       "longDescription": "Se vende por caja de 48 pastillitas",
       "image": "🧂",
       "photo": "/assets/images/products/mercadito/pastillaCongrís.jpg",
-      "price": 0.11,
-      "formato": 12,
+      "price": 0.1,
+      "formato": 48,
       "stockStatus": "disponible"
     },
     {
       "id": "bc-027",
-      "name": "Pastilla de pollo",
+      "name": "Pastilla de pollo con tomate",
       "businessId": "bodega-central",
       "businessName": "Mercado Alpha",
       "category": "Alimentos",
@@ -497,7 +495,7 @@
       "photo": "/assets/images/products/mercadito/peter_neptun.jpg",
       "price": 0.24,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-029",
@@ -510,7 +508,7 @@
       "image": "🥔",
       "photo": "/assets/images/products/mercadito/pure_de_papas.jpg",
       "price": 6.2,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-030",
@@ -538,7 +536,7 @@
       "photo": "/assets/images/products/mercadito/Vinagre.jpg",
       "price": 0.5,
       "formato": 10,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-032",
@@ -550,7 +548,7 @@
       "longDescription": " Se vende por estuche de 4 vasitos",
       "image": "🥛",
       "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
-      "price": 1.8,
+      "price": 1.56,
       "options": [
         "Fresa",
         "Natural"
@@ -582,7 +580,7 @@
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/toallitas_indoxa.jpg",
       "price": 1.33,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-035",
@@ -609,7 +607,7 @@
       "photo": "/assets/images/products/mercadito/bombones.jpg",
       "price": 0.72,
       "formato": 12,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-038",
@@ -640,21 +638,7 @@
         "Naranja",
         "Limón"
       ],
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "bc-040",
-      "name": "Arroz Sam 1kg",
-      "businessId": "bodega-central",
-      "businessName": "Mercado Alpha",
-      "category": "Alimentos",
-      "shortDescription": "",
-      "longDescription": "Se vende por paca de 10 unidades",
-      "image": "🍚",
-      "photo": "/assets/images/products/mercadito/arroz_sam.jpg",
-      "price": 1.32,
-      "formato": 10,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-041",
@@ -668,7 +652,7 @@
       "photo": "/assets/images/products/mercadito/arroz50lb.jpg",
       "price": 28,
       "formato": 1,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-042",
@@ -680,7 +664,7 @@
       "longDescription": "Se vende por caja de 24 unidades",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/leche_condensada.jpg",
-      "price": 1.34,
+      "price": 1.28,
       "formato": 24,
       "stockStatus": "disponible"
     },
@@ -694,8 +678,8 @@
       "longDescription": "Se vende por saco",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-      "price": 63.6,
-      "stockStatus": "agotado"
+      "price": 56,
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-044",
@@ -709,7 +693,7 @@
       "photo": "/assets/images/products/mercadito/marranetas.jpg",
       "price": 0.37,
       "formato": 40,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-045",
@@ -721,7 +705,7 @@
       "longDescription": "Se vende por cajas de 40 unidades",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/jabón_lavar_multiuso.jpg",
-      "price": 0.53,
+      "price": 0.52,
       "formato": 40,
       "stockStatus": "disponible"
     },
@@ -5171,7 +5155,10 @@
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Shein-Swim-Maya-negro.jpg",
-      "price": 11,
+      "price": 18,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5228,7 +5215,7 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio en USD.",
+      "shortDescription": "Solo la maya.",
       "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Swim-Basisc-Maya-Negro.jpg",
