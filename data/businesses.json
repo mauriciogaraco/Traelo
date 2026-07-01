@@ -86,7 +86,8 @@
     "description": "Ropa, lencería, bolsos y accesorios de moda.",
     "image": "/assets/images/business/Eme-Boutique.jpg",
     "color": "from-pink-100 to-rose-50",
-    "paymentNote": "Precios en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
+    "currency": "USD",
+    "paymentNote": "Precios en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
     "deliveryFee": 350,
     "schedule": {
       "days": [0, 1, 2, 3, 4, 5, 6],

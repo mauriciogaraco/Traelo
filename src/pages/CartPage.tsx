@@ -54,7 +54,9 @@ export function CartPage() {
       />
 
       <div className="px-4 space-y-4">
-        {groups.map((group) => (
+        {groups.map((group) => {
+          const groupCurrency = businessById(group.businessId)?.currency
+          return (
           <div
             key={group.businessId}
             className="bg-surface border border-border rounded-3xl overflow-hidden"
@@ -81,7 +83,7 @@ export function CartPage() {
                 {group.businessName}
               </p>
               <span className="text-xs font-semibold text-text-secondary">
-                {formatPrice(group.subtotal)}
+                {formatPrice(group.subtotal, groupCurrency)}
               </span>
             </div>
 
@@ -98,6 +100,7 @@ export function CartPage() {
                   <CartRow
                     key={key}
                     item={item}
+                    currency={groupCurrency}
                     onDec={() => setQuantity(key, item.quantity - 1)}
                     onInc={() => setQuantity(key, item.quantity + 1)}
                     onRemove={() => removeItem(key)}
@@ -107,7 +110,8 @@ export function CartPage() {
               })}
             </div>
           </div>
-        ))}
+          )
+        })}
       </div>
 
       {/* Resumen */}
@@ -157,12 +161,14 @@ export function CartPage() {
 
 function CartRow({
   item,
+  currency,
   onDec,
   onInc,
   onRemove,
   onOpen,
 }: {
   item: CartItem;
+  currency?: 'USD';
   onDec: () => void;
   onInc: () => void;
   onRemove: () => void;
@@ -213,9 +219,9 @@ function CartRow({
           </p>
         )}
         <p className="text-base font-bold text-primary mt-auto">
-          {formatAmount(lineTotal(item))}{" "}
+          {currency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{" "}
           <span className="text-[11px] font-semibold text-text-secondary">
-            CUP
+            {currency === 'USD' ? 'USD' : 'CUP'}
           </span>
         </p>
       </div>

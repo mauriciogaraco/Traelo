@@ -36,6 +36,8 @@ export interface Business {
   paymentNote?: string
   /** Tarifa de mensajería propia del negocio. Si no se define, se usa FEE_BASE global. */
   deliveryFee?: number
+  /** Moneda en que se muestran los precios. Por defecto CUP. */
+  currency?: 'USD'
   /** Cierre manual que anula el horario. 'cerrado' = bloqueado sin importar schedule. */
   status?: 'cerrado'
   /** Horario de atención. */

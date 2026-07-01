@@ -32,11 +32,17 @@ writeFileSync(
 );
 console.log(`catalog.json — ${businesses.length} negocios, ${products.length} productos`);
 
+const usdBusinessIds = new Set(
+  businesses.filter(b => b.currency === 'USD').map(b => b.id)
+);
+
 const catalogFamilia = {
   businesses,
   products: products.map(p => ({
     ...p,
-    price: Math.round((p.price / USD_RATE) * 100) / 100,
+    price: usdBusinessIds.has(p.businessId)
+      ? p.price
+      : Math.round((p.price / USD_RATE) * 100) / 100,
   })),
 };
 writeFileSync(

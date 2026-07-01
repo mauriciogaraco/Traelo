@@ -19,6 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
   const needsChoice = hasOptions(product) || hasAddons(product) || hasPackaging(product)
   const biz = businessById(product.businessId)
   const closed = !biz || !isOpenNow(biz)
+  const currency = biz?.currency
   const disabled = isOut || closed
 
   function handleAdd(e: React.MouseEvent<HTMLButtonElement>) {
@@ -73,7 +74,9 @@ export function ProductCard({ product }: { product: Product }) {
           )}
           {hasOptions(product) && (
             <span className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md bg-stone-100 text-text-secondary text-[10px] font-bold">
-              {product.options!.length} tipos
+              {product.options!.length === 1
+                ? product.options![0]
+                : `${product.options!.length} ${product.category === 'Ropa' ? 'tallas' : 'tipos'}`}
             </span>
           )}
           {hasAddons(product) && (
@@ -86,10 +89,10 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="flex items-end justify-between gap-2 mt-auto pt-3">
           <div className="leading-none min-w-0">
             <span className="text-base font-bold text-text-primary">
-              {formatAmount(product.price)}
+              {currency === 'USD' ? '$ ' : ''}{formatAmount(product.price)}
             </span>
             <span className="block text-[10px] font-semibold text-text-secondary mt-0.5">
-              {hasFormato(product) ? 'CUP/u' : 'CUP'}
+              {currency === 'USD' ? 'USD' : hasFormato(product) ? 'CUP/u' : 'CUP'}
             </span>
           </div>
 

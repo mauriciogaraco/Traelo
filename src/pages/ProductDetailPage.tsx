@@ -54,6 +54,7 @@ export function ProductDetailPage() {
   const multiPackaging = (product.packaging?.length ?? 0) > 1
   const biz = businessById(product.businessId)
   const closed = !biz || !isOpenNow(biz)
+  const currency = biz?.currency
   const canAdd =
     !isOut && !closed && (!needsOption || option !== null) && (!needsPackaging || packaging !== null)
   const unitPrice = product.price + (addon?.price ?? 0) + (packaging?.price ?? 0)
@@ -124,9 +125,11 @@ export function ProductDetailPage() {
         )}
 
         <div className="flex items-baseline gap-1.5 mt-3">
-          <span className="text-3xl font-bold text-primary">{formatAmount(product.price)}</span>
+          <span className="text-3xl font-bold text-primary">
+            {currency === 'USD' ? '$ ' : ''}{formatAmount(product.price)}
+          </span>
           <span className="text-sm font-semibold text-text-secondary">
-            CUP{hasFormato(product) ? ' / unidad' : ''}
+            {currency === 'USD' ? 'USD' : `CUP${hasFormato(product) ? ' / unidad' : ''}`}
           </span>
         </div>
         {hasFormato(product) && (
@@ -153,7 +156,9 @@ export function ProductDetailPage() {
         {needsOption && !isOut && (
           <div className="mt-5">
             <div className="flex items-center gap-2 mb-2">
-              <h2 className="text-sm font-bold text-text-primary">Elige el tipo</h2>
+              <h2 className="text-sm font-bold text-text-primary">
+                {product.category === 'Ropa' ? 'Elige la talla' : 'Elige el tipo'}
+              </h2>
               {option === null && (
                 <span className="text-[11px] font-bold text-warning">Requerido</span>
               )}
@@ -256,7 +261,7 @@ export function ProductDetailPage() {
         {!isOut && (addon || packaging) && (
           <p className="text-sm text-text-secondary mt-4">
             Precio por unidad:{' '}
-            <span className="font-bold text-primary">{formatPrice(unitPrice)}</span>
+            <span className="font-bold text-primary">{formatPrice(unitPrice, currency)}</span>
           </p>
         )}
 

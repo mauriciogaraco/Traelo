@@ -1,5 +1,6 @@
-/** Formatea un precio en CUP, ej: 1250 → "1 250 CUP". */
-export function formatPrice(value: number): string {
+/** Formatea un precio según la moneda del negocio. */
+export function formatPrice(value: number, currency?: 'USD'): string {
+  if (currency === 'USD') return `$ ${value.toLocaleString('es-CU')} USD`
   return `${value.toLocaleString('es-CU')} CUP`
 }
 

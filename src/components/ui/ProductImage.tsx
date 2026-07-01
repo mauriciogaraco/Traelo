@@ -7,6 +7,7 @@ const categoryGradient: Record<Category, string> = {
   Aseo: 'from-violet-100 to-fuchsia-50',
   Confituras: 'from-pink-100 to-rose-50',
   Comida: 'from-rose-100 to-orange-50',
+  Ropa: 'from-pink-100 to-rose-50',
 }
 
 interface ProductImageProps {
