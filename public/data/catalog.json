@@ -4773,11 +4773,11 @@
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
-      "shortDescription": "Precio referencial en USD.",
-      "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Precio en CUP.",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/gafas.jpg",
-      "price": 5000,
+      "price": 3500,
       "stockStatus": "disponible"
     },
     {
@@ -5024,7 +5024,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Shein-Bae-marrón.jpg",
-      "price": 7000,
+      "price": 15000,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5146,7 +5149,7 @@
     },
     {
       "id": "eb-056",
-      "name": "Vesido Aloruh",
+      "name": "Vestido Aloruh Negro",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
@@ -5154,7 +5157,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Vesido-Aloruh.jpg",
-      "price": 13000,
+      "price": 10000,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5167,7 +5173,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-Aloruh-azul-metálico.jpg",
-      "price": 13000,
+      "price": 12500,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5180,7 +5189,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-aloruh-blanco.jpg",
-      "price": 14000,
+      "price": 10000,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5193,7 +5205,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-aloruh-marrón.jpg",
-      "price": 12500,
+      "price": 10000,
+      "options": [
+        "XS"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5219,7 +5234,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-blanco-un-solo-hombro.jpg",
-      "price": 16500,
+      "price": 11000,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5232,12 +5250,16 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-brillora-blanco-negro.jpg",
-      "price": 15500,
+      "price": 10000,
+      "options": [
+        "M",
+        "L"
+      ],
       "stockStatus": "disponible"
     },
     {
       "id": "eb-063",
-      "name": "Vestido Escote Carmelita",
+      "name": "Vestido Escote Marrón",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
@@ -5245,7 +5267,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-escote-carmelita.jpg",
-      "price": 14500,
+      "price": 12500,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5258,7 +5283,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-hauture-gasa.jpg",
-      "price": 15000,
+      "price": 7500,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5271,7 +5299,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-rojo.jpg",
-      "price": 9500,
+      "price": 7500,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5284,7 +5315,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-selianne-blanco.jpg",
-      "price": 12500,
+      "price": 10000,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5297,7 +5331,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido-tirantes-rojo-vino.jpg",
-      "price": 14500,
+      "price": 11000,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -5315,7 +5352,7 @@
     },
     {
       "id": "eb-069",
-      "name": "Vestido",
+      "name": "Vestido Shein Foxxy",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
@@ -5323,12 +5360,15 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestido.jpg",
-      "price": 14000,
+      "price": 6000,
+      "options": [
+        "M"
+      ],
       "stockStatus": "disponible"
     },
     {
       "id": "eb-070",
-      "name": "Vestigo Aloruh Rojo Vino",
+      "name": "Vestido Aloruh Rojo Vino",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
       "category": "Ropa",
@@ -5336,7 +5376,10 @@
       "longDescription": "Precio en USD o su equivalente en CUP al cambio del día en \"El Toque\".",
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/vestigo-aloruh-rojo-vino.jpg",
-      "price": 16500,
+      "price": 10000,
+      "options": [
+        "S"
+      ],
       "stockStatus": "disponible"
     },
     {
