@@ -41,6 +41,7 @@ export function CartPage() {
   }
 
   const groups = groupByBusiness(items);
+  const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD');
   const feeInfo = computeFee(items);
   const feeNote = feeInfo.multiBusiness
     ? `Incluye +100 por varios negocios`
@@ -130,6 +131,11 @@ export function CartPage() {
               {formatPrice(total)}
             </span>
           </div>
+          {hasUsdGroups && (
+            <p className="text-[11px] text-warning font-semibold">
+              La mensajería se abona en CUP aunque no se retenga la prenda.
+            </p>
+          )}
           <p className="text-[11px] text-text-secondary text-right">
             La tarifa puede variar según la hora de entrega.
           </p>
