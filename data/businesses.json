@@ -5,7 +5,7 @@
     "description": "Mercado Alpha: alimentos, bebidas y aseo del día a día.",
     "image": "/assets/images/business/alpha.jpg",
     "color": "from-amber-100 to-orange-50",
-    "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
+    "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante. · El costo de mensajería indicado es referencial. Debido a la naturaleza del pedido, la tarifa final puede ajustarse en función del peso y volumen total de los productos. El mensajero le comunicará el monto definitivo al momento de coordinar la entrega.",
     "status": "cerrado",
     "schedule": {
       "days": [1, 2, 3, 4, 5, 6],

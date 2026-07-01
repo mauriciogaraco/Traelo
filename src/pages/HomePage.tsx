@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useCatalog } from "../context/CatalogContext";
 import { AddressBar } from "../components/address/AddressBar";
 import { BusinessRail } from "../components/home/BusinessRail";
@@ -17,12 +18,31 @@ const PAGE_SIZE = 20;
 
 export function HomePage() {
   const { businesses, products, loading, syncing } = useCatalog();
-  const [query, setQuery] = useState("");
-  const [business, setBusiness] = useState<string | null>(null);
-  const [category, setCategory] = useState<Category | "Todos">("Todos");
-  const [page, setPage] = useState(1);
+  const [searchParams, setSearchParams] = useSearchParams();
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLElement>(null);
+
+  // Filtros en URL para que sobrevivan la navegación al detalle y el botón Volver.
+  const query    = searchParams.get("q") ?? "";
+  const business = searchParams.get("negocio");
+  const category = (searchParams.get("categoria") as Category | "Todos") ?? "Todos";
+  const page     = parseInt(searchParams.get("pagina") ?? "1", 10);
+
+  function setQuery(q: string) {
+    setSearchParams(p => { const n = new URLSearchParams(p); q ? n.set("q", q) : n.delete("q"); n.delete("pagina"); return n; }, { replace: true });
+  }
+  function setBusiness(id: string | null) {
+    setSearchParams(p => { const n = new URLSearchParams(p); id ? n.set("negocio", id) : n.delete("negocio"); n.delete("pagina"); return n; }, { replace: true });
+  }
+  function setCategory(cat: Category | "Todos") {
+    setSearchParams(p => { const n = new URLSearchParams(p); cat !== "Todos" ? n.set("categoria", cat) : n.delete("categoria"); n.delete("pagina"); return n; }, { replace: true });
+  }
+  function setPage(pg: number) {
+    setSearchParams(p => { const n = new URLSearchParams(p); pg > 1 ? n.set("pagina", String(pg)) : n.delete("pagina"); return n; }, { replace: true });
+  }
+  function clearAll() {
+    setSearchParams({}, { replace: true });
+  }
 
   const ordersClosed = ordersClosedForToday();
 
@@ -52,11 +72,6 @@ export function HomePage() {
     }
     return [];
   }, [loading, query, business, category, browseActive, products]);
-
-  // Reinicia la página al cambiar cualquier filtro.
-  useEffect(() => {
-    setPage(1);
-  }, [query, business, category]);
 
   // Al seleccionar un negocio, baja con scroll suave hasta los productos.
   useEffect(() => {
@@ -92,12 +107,6 @@ export function HomePage() {
       : category !== "Todos"
         ? category
         : "Resultados";
-
-  function clearAll() {
-    setQuery("");
-    setBusiness(null);
-    setCategory("Todos");
-  }
 
   const resultsBlock = (
     <>

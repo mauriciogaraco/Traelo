@@ -98,6 +98,7 @@ export function CheckoutPage() {
   const feeNote = [
     feeInfo.isLate ? 'después de las 7 pm' : null,
     feeInfo.multiBusiness ? '+100 por varios negocios' : null,
+    feeInfo.isBulk ? '+100 por pedido mayor de 10 000 CUP' : null,
   ]
     .filter(Boolean)
     .join(' · ')

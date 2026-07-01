@@ -43,9 +43,10 @@ export function CartPage() {
   const groups = groupByBusiness(items);
   const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD');
   const feeInfo = computeFee(items);
-  const feeNote = feeInfo.multiBusiness
-    ? `Incluye +100 por varios negocios`
-    : undefined;
+  const feeNote = [
+    feeInfo.multiBusiness ? '+100 por varios negocios' : null,
+    feeInfo.isBulk ? '+100 por pedido mayor de 10 000 CUP' : null,
+  ].filter(Boolean).join(' · ') || undefined;
 
   return (
     <div className="animate-fade-in">
