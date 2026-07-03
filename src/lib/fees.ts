@@ -43,7 +43,7 @@ export function computeFee(items: CartItem[], when: Date = new Date()): FeeBreak
   const multiSurcharge = multiBusiness ? (businessCount - 1) * MULTI_BUSINESS_SURCHARGE : 0
   // Solo cuenta productos en CUP para el umbral de volumen.
   const cupSubtotal = items
-    .filter(i => businessById(i.product.businessId)?.currency !== 'USD')
+    .filter(i => (i.product.currency ?? businessById(i.product.businessId)?.currency) !== 'USD')
     .reduce((sum, i) => sum + lineTotal(i), 0)
   const isBulk = base === FEE_BASE && cupSubtotal > FEE_BULK_THRESHOLD
   const bulkSurcharge = isBulk ? FEE_BULK_SURCHARGE : 0

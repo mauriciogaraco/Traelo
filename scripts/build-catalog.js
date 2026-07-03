@@ -40,7 +40,7 @@ const catalogFamilia = {
   businesses,
   products: products.map(p => ({
     ...p,
-    price: usdBusinessIds.has(p.businessId)
+    price: usdBusinessIds.has(p.businessId) || p.currency === 'USD'
       ? p.price
       : Math.round((p.price / USD_RATE) * 100) / 100,
   })),

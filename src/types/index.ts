@@ -11,6 +11,7 @@ export type Category =
   | 'Confituras'
   | 'Comida'
   | 'Ropa'
+  | 'Electrónica'
 
 /** Horario de atención del negocio (para no permitir pedidos fuera de hora). */
 export interface BusinessSchedule {
@@ -95,6 +96,8 @@ export interface Product {
   stockStatus: StockStatus
   /** Marca el producto como destacado para mostrarlo en la sección Destacados. */
   featured?: boolean
+  /** Moneda del precio. Por defecto hereda la del negocio (CUP). */
+  currency?: 'USD'
 }
 
 export interface CartItem {

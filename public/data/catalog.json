@@ -284,7 +284,7 @@
       "longDescription": "Se vende por unidad.",
       "image": "🧷",
       "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-      "price": 2500,
+      "price": 2600,
       "stockStatus": "disponible"
     },
     {
@@ -534,9 +534,9 @@
       "longDescription": "Se vende por blister de 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-      "price": 250,
+      "price": 260,
       "formato": 10,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-032",
@@ -548,7 +548,7 @@
       "longDescription": " Se vende por estuche de 4 vasitos",
       "image": "🥛",
       "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
-      "price": 780,
+      "price": 800,
       "options": [
         "Fresa",
         "Natural"
@@ -565,7 +565,7 @@
       "longDescription": "Se venden por blister 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-      "price": 350,
+      "price": 340,
       "formato": 10,
       "stockStatus": "agotado"
     },
@@ -632,7 +632,7 @@
       "longDescription": "Se vende por blister de 10 unidades",
       "image": "🧃",
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-      "price": 250,
+      "price": 260,
       "formato": 10,
       "options": [
         "Naranja",
@@ -664,7 +664,7 @@
       "longDescription": "Se vende por caja de 24 unidades",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/leche_condensada.jpg",
-      "price": 640,
+      "price": 650,
       "formato": 24,
       "stockStatus": "disponible"
     },
@@ -678,7 +678,7 @@
       "longDescription": "Se vende por saco",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-      "price": 28000,
+      "price": 31000,
       "stockStatus": "disponible"
     },
     {
@@ -2973,6 +2973,36 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "ma-ecoflow-delta2",
+      "name": "EcoFlow DELTA 2",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Electrónica",
+      "currency": "USD",
+      "shortDescription": "Estación de energía portátil 1024 Wh · 1800 W · Carga al 80% en 50 min.",
+      "longDescription": "🔧 En tres líneas:\n\n· 1024 Wh LFP (más de 10 años de duración)\n· Potencia de 1800 W (pico de 2400 W con X-Boost para frigoríficos y microondas)\n· Carga superrápida: del 0 al 80% en 50 minutos\n\n✅ En el día a día:\n\n· Nevera funcionando horas / ventiladores toda la noche\n· Conecta hasta 13 dispositivos a la vez (incluye puertos USB-C de 100 W para laptops)\n· Cambio automático en caso de apagón para que no pierdas lo esencial\n\n🔋 +3.000 ciclos: una inversión que dura años.\n\nSin humos, sin gasolina, sin ruido. Solo la tranquilidad de tener energía cuando más la necesitas.\n\nLa DELTA 2. El respaldo que tu hogar merece para no volver a quedarte a oscuras.",
+      "image": "⚡",
+      "photo": "/assets/images/products/mercadito/EcoFlow Delta 2.jpg",
+      "price": 750,
+      "stockStatus": "disponible",
+      "featured": true
+    },
+    {
+      "id": "ma-ecoflow-delta3",
+      "name": "EcoFlow DELTA 3 Classic",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Electrónica",
+      "currency": "USD",
+      "shortDescription": "Estación de energía portátil 1024 Wh · 1800 W continua · UPS 10 ms.",
+      "longDescription": "Estación de energía portátil EcoFlow DELTA 3 Classic\n\nCapacidad: 1024 Wh (LiFePO4)\n\nCarga ultrarrápida: del 0 al 80% en solo 45–55 minutos.\n\nSalida AC potente: 1800 W de potencia continua (2600 W con modo X-Boost).\n\nFunción UPS de grado profesional: tiempo de conmutación de solo 10 ms para respaldo instantáneo.",
+      "image": "⚡",
+      "photo": "/assets/images/products/mercadito/EcoFlow-Delta-3.jpg",
+      "price": 800,
+      "stockStatus": "disponible",
+      "featured": false
+    },
+    {
       "id": "lm-001",
       "name": "Espaguetis",
       "businessId": "la-marina",
@@ -4537,7 +4567,7 @@
       "options": [
         "S"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-009",
@@ -5050,7 +5080,7 @@
       "options": [
         "M"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-042",
@@ -5159,7 +5189,7 @@
       "options": [
         "S"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-049",
@@ -5524,6 +5554,126 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Zapatera.jpg",
       "price": 20,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-072",
+      "name": "Conjunto Aloruh Rojo Vino",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Conjunto de 2 piezas.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "👗",
+      "photo": "/assets/images/products/Eme Boutique/Conjunto-Aloruh-rojo-vino.jpg",
+      "price": 30,
+      "options": [
+        "S"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-073",
+      "name": "Patek Philippe Rosa",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/Patelk-PhiliPPe-rosa.jpg",
+      "price": 140,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-074",
+      "name": "Patek Philippe Plateado Cara Negra",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/Patek-phillipe-plateado-cara-negra.jpg",
+      "price": 140,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-075",
+      "name": "Rolex Daytona Cara Negra",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/rolex-daytona-cara-negra.jpg",
+      "price": 130,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-076",
+      "name": "Rolex Daytona De Hombre",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/rolex-daytona-de-hombre.jpg",
+      "price": 130,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-077",
+      "name": "Rolex Presidente Mujer",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/Rolex-presidente-mujer.jpg",
+      "price": 120,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-078",
+      "name": "Rolex Presidente Dorado Mujer",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/rolex-presidente-dorado-mujer.jpg",
+      "price": 120,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-079",
+      "name": "Audemars Piguet Dorado Cara Negra",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/Audemars-Piguet-dorado-cara-negra.jpg",
+      "price": 65,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-080",
+      "name": "Audemars Piguet Plateado Cara Negra",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Reloj de lujo.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "⌚",
+      "photo": "/assets/images/products/Eme Boutique/Audemars-Piguet-plateado-cara-negra.jpg",
+      "price": 65,
       "stockStatus": "disponible"
     }
   ]

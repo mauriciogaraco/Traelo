@@ -19,7 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
   const needsChoice = hasOptions(product) || hasAddons(product) || hasPackaging(product)
   const biz = businessById(product.businessId)
   const closed = !biz || !isOpenNow(biz)
-  const currency = biz?.currency
+  const currency = product.currency ?? biz?.currency
   const disabled = isOut || closed
 
   function handleAdd(e: React.MouseEvent<HTMLButtonElement>) {

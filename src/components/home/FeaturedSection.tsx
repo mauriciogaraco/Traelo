@@ -14,6 +14,7 @@ function FeaturedCard({ product }: { product: Product }) {
   const qty = getQuantity(product.id)
   const biz = businessById(product.businessId)
   const closed = !biz || !isOpenNow(biz)
+  const currency = product.currency ?? biz?.currency
   const isOut = product.stockStatus === 'agotado'
   const needsChoice = hasOptions(product) || hasAddons(product) || hasPackaging(product)
   const disabled = isOut || closed
@@ -53,8 +54,10 @@ function FeaturedCard({ product }: { product: Product }) {
         <p className="text-[10px] text-text-secondary mt-0.5 truncate">{product.businessName}</p>
         <div className="flex items-center justify-between mt-1.5">
           <span className="text-sm font-bold text-text-primary">
-            {formatAmount(product.price)}{' '}
-            <span className="text-[10px] font-semibold text-text-secondary">CUP</span>
+            {currency === 'USD' ? '$ ' : ''}{formatAmount(product.price)}{' '}
+            <span className="text-[10px] font-semibold text-text-secondary">
+              {currency === 'USD' ? 'USD' : 'CUP'}
+            </span>
           </span>
           <button
             onClick={handleAdd}

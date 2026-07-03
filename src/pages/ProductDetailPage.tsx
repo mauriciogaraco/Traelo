@@ -21,6 +21,7 @@ export function ProductDetailPage() {
   const [option, setOption] = useState<string | null>(null)
   const [addon, setAddon] = useState<Addon | null>(null)
   const [packaging, setPackaging] = useState<Packaging | null>(null)
+  const [descExpanded, setDescExpanded] = useState(false)
 
   const product = products.find((p) => p.id === id)
 
@@ -54,7 +55,8 @@ export function ProductDetailPage() {
   const multiPackaging = (product.packaging?.length ?? 0) > 1
   const biz = businessById(product.businessId)
   const closed = !biz || !isOpenNow(biz)
-  const currency = biz?.currency
+  const currency = product.currency ?? biz?.currency
+  const isLongDesc = product.longDescription.length > 200
   const canAdd =
     !isOut && !closed && (!needsOption || option !== null) && (!needsPackaging || packaging !== null)
   const unitPrice = product.price + (addon?.price ?? 0) + (packaging?.price ?? 0)
@@ -149,7 +151,17 @@ export function ProductDetailPage() {
 
         <div className="mt-5">
           <h2 className="text-sm font-bold text-text-primary mb-1.5">Descripción</h2>
-          <p className="text-[15px] text-text-secondary leading-relaxed">{product.longDescription}</p>
+          <p className={`text-[15px] text-text-secondary leading-relaxed whitespace-pre-line ${isLongDesc && !descExpanded ? 'line-clamp-4' : ''}`}>
+            {product.longDescription}
+          </p>
+          {isLongDesc && (
+            <button
+              onClick={() => setDescExpanded(v => !v)}
+              className="mt-2 text-sm font-bold text-primary"
+            >
+              {descExpanded ? 'Ver menos' : 'Ver más'}
+            </button>
+          )}
         </div>
 
         {/* Selector de tipo */}

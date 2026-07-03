@@ -108,7 +108,7 @@
     "photo": "/assets/images/products/Eme Boutique/Blusa-corta-mangas-negras.jpg",
     "price": 14,
     "options": ["S"],
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "eb-009",
@@ -564,7 +564,7 @@
     "photo": "/assets/images/products/Eme Boutique/pantaloneta-rosa.jpg",
     "price": 20,
     "options": ["M"],
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "eb-042",
@@ -661,7 +661,7 @@
     "photo": "/assets/images/products/Eme Boutique/Shein-Swim-Maya-negro.jpg",
     "price": 18,
     "options":["S"],
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "eb-049",
@@ -982,6 +982,124 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Zapatera.jpg",
     "price": 20,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-072",
+    "name": "Conjunto Aloruh Rojo Vino",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Conjunto de 2 piezas.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "👗",
+    "photo": "/assets/images/products/Eme Boutique/Conjunto-Aloruh-rojo-vino.jpg",
+    "price": 30,
+    "options": ["S"],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-073",
+    "name": "Patek Philippe Rosa",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/Patelk-PhiliPPe-rosa.jpg",
+    "price": 140,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-074",
+    "name": "Patek Philippe Plateado Cara Negra",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/Patek-phillipe-plateado-cara-negra.jpg",
+    "price": 140,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-075",
+    "name": "Rolex Daytona Cara Negra",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/rolex-daytona-cara-negra.jpg",
+    "price": 130,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-076",
+    "name": "Rolex Daytona De Hombre",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/rolex-daytona-de-hombre.jpg",
+    "price": 130,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-077",
+    "name": "Rolex Presidente Mujer",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/Rolex-presidente-mujer.jpg",
+    "price": 120,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-078",
+    "name": "Rolex Presidente Dorado Mujer",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/rolex-presidente-dorado-mujer.jpg",
+    "price": 120,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-079",
+    "name": "Audemars Piguet Dorado Cara Negra",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/Audemars-Piguet-dorado-cara-negra.jpg",
+    "price": 65,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-080",
+    "name": "Audemars Piguet Plateado Cara Negra",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Reloj de lujo.",
+    "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+    "image": "⌚",
+    "photo": "/assets/images/products/Eme Boutique/Audemars-Piguet-plateado-cara-negra.jpg",
+    "price": 65,
     "stockStatus": "disponible"
   }
 ]
