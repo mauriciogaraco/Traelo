@@ -284,7 +284,7 @@
       "longDescription": "Se vende por unidad.",
       "image": "🧷",
       "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-      "price": 5,
+      "price": 5.2,
       "stockStatus": "disponible"
     },
     {
@@ -534,9 +534,9 @@
       "longDescription": "Se vende por blister de 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-      "price": 0.5,
+      "price": 0.52,
       "formato": 10,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-032",
@@ -548,7 +548,7 @@
       "longDescription": " Se vende por estuche de 4 vasitos",
       "image": "🥛",
       "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
-      "price": 1.56,
+      "price": 1.6,
       "options": [
         "Fresa",
         "Natural"
@@ -565,7 +565,7 @@
       "longDescription": "Se venden por blister 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-      "price": 0.7,
+      "price": 0.68,
       "formato": 10,
       "stockStatus": "agotado"
     },
@@ -632,7 +632,7 @@
       "longDescription": "Se vende por blister de 10 unidades",
       "image": "🧃",
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-      "price": 0.5,
+      "price": 0.52,
       "formato": 10,
       "options": [
         "Naranja",
@@ -664,7 +664,7 @@
       "longDescription": "Se vende por caja de 24 unidades",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/leche_condensada.jpg",
-      "price": 1.28,
+      "price": 1.3,
       "formato": 24,
       "stockStatus": "disponible"
     },
@@ -678,7 +678,7 @@
       "longDescription": "Se vende por saco",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-      "price": 56,
+      "price": 62,
       "stockStatus": "disponible"
     },
     {
