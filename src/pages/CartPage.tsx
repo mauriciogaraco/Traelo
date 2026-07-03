@@ -42,6 +42,13 @@ export function CartPage() {
 
   const groups = groupByBusiness(items);
   const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD');
+  const cupSubtotal = items
+    .filter(i => (i.product.currency ?? businessById(i.product.businessId)?.currency) !== 'USD')
+    .reduce((sum, i) => sum + lineTotal(i), 0)
+  const usdSubtotal = items
+    .filter(i => (i.product.currency ?? businessById(i.product.businessId)?.currency) === 'USD')
+    .reduce((sum, i) => sum + lineTotal(i), 0)
+  const hasAnyUsd = usdSubtotal > 0 || hasUsdGroups
   const feeInfo = computeFee(items);
   const feeNote = [
     feeInfo.multiBusiness ? '+100 por varios negocios' : null,
@@ -58,6 +65,11 @@ export function CartPage() {
       <div className="px-4 space-y-4">
         {groups.map((group) => {
           const groupCurrency = businessById(group.businessId)?.currency
+          const grpUsd = group.items.filter(i => i.product.currency === 'USD' || groupCurrency === 'USD').reduce((s, i) => s + lineTotal(i), 0)
+          const grpCup = group.items.filter(i => i.product.currency !== 'USD' && groupCurrency !== 'USD').reduce((s, i) => s + lineTotal(i), 0)
+          const grpSubtotalLabel = grpUsd > 0 && grpCup > 0
+            ? `${formatPrice(grpCup)} + ${formatPrice(grpUsd, 'USD')}`
+            : grpUsd > 0 ? formatPrice(grpUsd, 'USD') : formatPrice(grpCup)
           return (
           <div
             key={group.businessId}
@@ -85,7 +97,7 @@ export function CartPage() {
                 {group.businessName}
               </p>
               <span className="text-xs font-semibold text-text-secondary">
-                {formatPrice(group.subtotal, groupCurrency)}
+                {grpSubtotalLabel}
               </span>
             </div>
 
@@ -119,19 +131,49 @@ export function CartPage() {
       {/* Resumen */}
       <div className="px-4 mt-5 space-y-3">
         <div className="bg-surface border border-border rounded-3xl p-4 space-y-3">
-          <div className="flex justify-between text-sm">
-            <span className="text-text-secondary">Subtotal</span>
-            <span className="font-semibold text-text-primary">
-              {formatPrice(subtotal)}
-            </span>
-          </div>
+          {hasAnyUsd ? (
+            <>
+              {cupSubtotal > 0 && (
+                <div className="flex justify-between text-sm">
+                  <span className="text-text-secondary">Subtotal CUP</span>
+                  <span className="font-semibold text-text-primary">{formatPrice(cupSubtotal)}</span>
+                </div>
+              )}
+              {usdSubtotal > 0 && (
+                <div className="flex justify-between text-sm">
+                  <span className="text-text-secondary">Subtotal USD</span>
+                  <span className="font-semibold text-text-primary">{formatPrice(usdSubtotal, 'USD')}</span>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="flex justify-between text-sm">
+              <span className="text-text-secondary">Subtotal</span>
+              <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
+            </div>
+          )}
           <MessagingFeeRow fee={feeInfo.fee} note={feeNote} />
-          <div className="border-t border-border pt-3 flex justify-between items-baseline">
-            <span className="font-bold text-text-primary">Total</span>
-            <span className="text-xl font-bold text-primary">
-              {formatPrice(total)}
-            </span>
-          </div>
+          {hasAnyUsd ? (
+            <div className="border-t border-border pt-3 space-y-1">
+              {cupSubtotal > 0 && (
+                <div className="flex justify-between items-baseline">
+                  <span className="font-bold text-text-primary">Total CUP</span>
+                  <span className="text-xl font-bold text-primary">{formatPrice(cupSubtotal + feeInfo.fee)}</span>
+                </div>
+              )}
+              {usdSubtotal > 0 && (
+                <div className="flex justify-between items-baseline">
+                  <span className="font-bold text-text-primary">Total USD</span>
+                  <span className="text-xl font-bold text-primary">{formatPrice(usdSubtotal, 'USD')}</span>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="border-t border-border pt-3 flex justify-between items-baseline">
+              <span className="font-bold text-text-primary">Total</span>
+              <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>
+            </div>
+          )}
           {hasUsdGroups && (
             <p className="text-[11px] text-warning font-semibold">
               La mensajería se abona en CUP aunque no se retenga la prenda.
@@ -182,6 +224,7 @@ function CartRow({
   onOpen: () => void;
 }) {
   const { product } = item;
+  const itemCurrency = product.currency ?? currency;
   return (
     <div className="flex gap-3">
       <button onClick={onOpen} className="flex-shrink-0">
@@ -226,9 +269,9 @@ function CartRow({
           </p>
         )}
         <p className="text-base font-bold text-primary mt-auto">
-          {currency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{" "}
+          {itemCurrency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{" "}
           <span className="text-[11px] font-semibold text-text-secondary">
-            {currency === 'USD' ? 'USD' : 'CUP'}
+            {itemCurrency === 'USD' ? 'USD' : 'CUP'}
           </span>
         </p>
       </div>

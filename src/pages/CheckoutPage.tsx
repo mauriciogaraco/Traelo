@@ -83,6 +83,7 @@ export function CheckoutPage() {
     return b ? !isOpenNow(b) : false
   })
   const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD')
+  const hasAnyUsd = hasUsdGroups || groups.some(g => g.items.some(i => i.product.currency === 'USD'))
   const hasClosed = closedGroups.length > 0
 
   // Entrega elegida → momento para calcular la tarifa
@@ -215,44 +216,52 @@ export function CheckoutPage() {
           <div className="space-y-3">
             {groups.map((group) => {
               const groupCurrency = businessById(group.businessId)?.currency
+              const grpUsd = group.items.filter(i => i.product.currency === 'USD' || groupCurrency === 'USD').reduce((s, i) => s + lineTotal(i), 0)
+              const grpCup = group.items.filter(i => i.product.currency !== 'USD' && groupCurrency !== 'USD').reduce((s, i) => s + lineTotal(i), 0)
+              const grpLabel = grpUsd > 0 && grpCup > 0
+                ? `${formatPrice(grpCup)} + ${formatPrice(grpUsd, 'USD')}`
+                : grpUsd > 0 ? formatPrice(grpUsd, 'USD') : formatPrice(grpCup)
               return (
-              <div key={group.businessId} className="bg-surface border border-border rounded-3xl overflow-hidden">
-                <div className="flex items-center gap-2 px-4 py-2.5 bg-primary/5 border-b border-border">
-                  <span className="text-primary">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18" />
-                    </svg>
-                  </span>
-                  <p className="text-sm font-bold text-text-primary flex-1 truncate">{group.businessName}</p>
-                  <span className="text-xs font-semibold text-text-secondary">{formatPrice(group.subtotal, groupCurrency)}</span>
+                <div key={group.businessId} className="bg-surface border border-border rounded-3xl overflow-hidden">
+                  <div className="flex items-center gap-2 px-4 py-2.5 bg-primary/5 border-b border-border">
+                    <span className="text-primary">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18" />
+                      </svg>
+                    </span>
+                    <p className="text-sm font-bold text-text-primary flex-1 truncate">{group.businessName}</p>
+                    <span className="text-xs font-semibold text-text-secondary">{grpLabel}</span>
+                  </div>
+                  {businessById(group.businessId)?.paymentNote && (
+                    <PaymentNote note={businessById(group.businessId)!.paymentNote!} />
+                  )}
+                  <div className="p-3 space-y-3">
+                    {group.items.map((item) => {
+                      const itemCurrency = item.product.currency ?? groupCurrency
+                      return (
+                        <div key={itemLineId(item)} className="flex items-center gap-3">
+                          <ProductImage emoji={item.product.image} photo={item.product.photo} category={item.product.category} alt={item.product.name} size="sm" className="w-11 h-11 rounded-xl flex-shrink-0" />
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-bold text-text-primary line-clamp-1">
+                              {item.product.name}
+                              {item.option && <span className="text-primary"> · {item.option}</span>}
+                              {item.addon && <span className="text-success"> · + {item.addon.name}</span>}
+                              {item.packaging && <span className="text-sky-700"> · 📦 {item.packaging.name}</span>}
+                            </p>
+                            <p className="text-xs text-text-secondary">
+                              {hasFormato(item.product)
+                                ? `${unitsOf(item)} u · ${item.quantity} caja${item.quantity > 1 ? 's' : ''} × ${packSize(item.product)}`
+                                : `× ${item.quantity}`}
+                            </p>
+                          </div>
+                          <p className="text-sm font-bold text-text-primary flex-shrink-0">
+                            {itemCurrency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{itemCurrency === 'USD' ? ' USD' : ''}
+                          </p>
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
-                {businessById(group.businessId)?.paymentNote && (
-                  <PaymentNote note={businessById(group.businessId)!.paymentNote!} />
-                )}
-                <div className="p-3 space-y-3">
-                  {group.items.map((item) => (
-                    <div key={itemLineId(item)} className="flex items-center gap-3">
-                      <ProductImage emoji={item.product.image} photo={item.product.photo} category={item.product.category} alt={item.product.name} size="sm" className="w-11 h-11 rounded-xl flex-shrink-0" />
-                      <div className="flex-1 min-w-0">
-                        <p className="text-sm font-bold text-text-primary line-clamp-1">
-                          {item.product.name}
-                          {item.option && <span className="text-primary"> · {item.option}</span>}
-                          {item.addon && <span className="text-success"> · + {item.addon.name}</span>}
-                          {item.packaging && <span className="text-sky-700"> · 📦 {item.packaging.name}</span>}
-                        </p>
-                        <p className="text-xs text-text-secondary">
-                          {hasFormato(item.product)
-                            ? `${unitsOf(item)} u · ${item.quantity} caja${item.quantity > 1 ? 's' : ''} × ${packSize(item.product)}`
-                            : `× ${item.quantity}`}
-                        </p>
-                      </div>
-                      <p className="text-sm font-bold text-text-primary flex-shrink-0">
-                        {groupCurrency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{groupCurrency === 'USD' ? ' USD' : ''}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
               )
             })}
           </div>
@@ -260,16 +269,19 @@ export function CheckoutPage() {
 
         {/* Totales */}
         <section className="bg-surface border border-border rounded-3xl p-4 space-y-3">
-          {hasUsdGroups ? (
+          {hasAnyUsd ? (
             <>
               {groups.map((group) => {
-                const groupCurrency = businessById(group.businessId)?.currency
+                const gc = businessById(group.businessId)?.currency
+                const gUsd = group.items.filter(i => i.product.currency === 'USD' || gc === 'USD').reduce((s, i) => s + lineTotal(i), 0)
+                const gCup = group.items.filter(i => i.product.currency !== 'USD' && gc !== 'USD').reduce((s, i) => s + lineTotal(i), 0)
+                const gLabel = gUsd > 0 && gCup > 0
+                  ? `${formatPrice(gCup)} + ${formatPrice(gUsd, 'USD')}`
+                  : gUsd > 0 ? formatPrice(gUsd, 'USD') : formatPrice(gCup)
                 return (
                   <div key={group.businessId} className="flex justify-between text-sm">
                     <span className="text-text-secondary">{group.businessName}</span>
-                    <span className="font-semibold text-text-primary">
-                      {formatPrice(group.subtotal, groupCurrency)}
-                    </span>
+                    <span className="font-semibold text-text-primary">{gLabel}</span>
                   </div>
                 )
               })}
@@ -278,11 +290,13 @@ export function CheckoutPage() {
                 <span className="font-semibold text-text-primary">{deliveryLabel}</span>
               </div>
               <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
-              <div className="border-t border-border pt-3 space-y-1">
-                <p className="text-[11px] text-warning font-semibold">
-                  La mensajería se abona en CUP aunque no se retenga la prenda.
-                </p>
-              </div>
+              {hasUsdGroups && (
+                <div className="border-t border-border pt-3">
+                  <p className="text-[11px] text-warning font-semibold">
+                    La mensajería se abona en CUP aunque no se retenga la prenda.
+                  </p>
+                </div>
+              )}
             </>
           ) : (
             <>

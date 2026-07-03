@@ -27,16 +27,22 @@ export function buildOrderMessage(order: Order): string {
 
   let cupTotal = 0
   let usdTotal = 0
-  const hasUsd = groups.some(g => businessById(g.businessId)?.currency === 'USD')
+  const hasUsd = groups.some(g =>
+    businessById(g.businessId)?.currency === 'USD' ||
+    g.items.some(i => i.product.currency === 'USD')
+  )
+  const hasEmePolicy = groups.some(g => businessById(g.businessId)?.currency === 'USD')
 
   for (const group of groups) {
-    const currency = businessById(group.businessId)?.currency
-    const isUsd = currency === 'USD'
+    const groupIsUsd = businessById(group.businessId)?.currency === 'USD'
 
-    lines.push(`🏪 <b>${esc(group.businessName)}</b>${isUsd ? ' 💲' : ''}`)
+    lines.push(`🏪 <b>${esc(group.businessName)}</b>${groupIsUsd ? ' 💲' : ''}`)
 
+    let grpCup = 0
+    let grpUsd = 0
     for (const item of group.items) {
       const { product, quantity, option, addon, packaging } = item
+      const itemIsUsd = product.currency === 'USD' || groupIsUsd
       const detalle = hasFormato(product)
         ? `${unitsOf(item)} u (${quantity} caja${quantity > 1 ? 's' : ''} × ${packSize(product)})`
         : `× ${quantity}`
@@ -44,15 +50,17 @@ export function buildOrderMessage(order: Order): string {
       if (option) nombre += ` (${option})`
       if (addon) nombre += ` + ${addon.name}`
       if (packaging) nombre += ` [${packaging.name}]`
-      const precio = formatPrice(lineTotal(item), isUsd ? 'USD' : undefined)
+      const precio = formatPrice(lineTotal(item), itemIsUsd ? 'USD' : undefined)
       lines.push(`   • ${esc(nombre)} ${detalle} — ${precio}`)
+      if (itemIsUsd) { grpUsd += lineTotal(item); usdTotal += lineTotal(item) }
+      else { grpCup += lineTotal(item); cupTotal += lineTotal(item) }
     }
 
-    lines.push(`   <i>Subtotal: ${formatPrice(group.subtotal, isUsd ? 'USD' : undefined)}</i>`)
+    const subtotalLine = grpUsd > 0 && grpCup > 0
+      ? `${formatPrice(grpCup)} + ${formatPrice(grpUsd, 'USD')}`
+      : grpUsd > 0 ? formatPrice(grpUsd, 'USD') : formatPrice(grpCup)
+    lines.push(`   <i>Subtotal: ${subtotalLine}</i>`)
     lines.push('')
-
-    if (isUsd) usdTotal += group.subtotal
-    else cupTotal += group.subtotal
   }
 
   const fee = order.fee ?? 0
@@ -64,7 +72,8 @@ export function buildOrderMessage(order: Order): string {
     if (cupTotal > 0)
       lines.push(`💵 <b>Productos CUP: ${formatPrice(cupTotal)}</b>`)
     lines.push(`💵 <b>Mensajería a cobrar: ${formatPrice(fee)}</b>`)
-    lines.push(`<i>⚠️ La mensajería se cobra en CUP aunque no se retenga la prenda.</i>`)
+    if (hasEmePolicy)
+      lines.push(`<i>⚠️ La mensajería se cobra en CUP aunque no se retenga la prenda.</i>`)
   } else {
     lines.push(`💵 <b>Total: ${formatPrice(cupTotal + fee)}</b>`)
   }

@@ -6,6 +6,7 @@ export interface CatalogData {
 }
 
 const CACHE_KEY = 'traelo_catalog_v2'
+const ETAG_KEY  = 'traelo_catalog_etag'
 const CATALOG_URL = '/data/catalog.json'
 
 function readCache(): CatalogData | null {
@@ -35,16 +36,19 @@ export interface LoadCatalogResult {
 
 export function loadCatalog(): LoadCatalogResult {
   const cached = readCache()
-  const cachedStr = cached ? JSON.stringify(cached) : null
+  const storedEtag = localStorage.getItem(ETAG_KEY) ?? ''
 
-  const synced = fetch(CATALOG_URL)
-    .then((res) => {
+  // Solicitud condicional: si el servidor soporta ETags devuelve 304 sin body
+  // cuando el catálogo no cambió → ahorra descargar 157 KB en cada visita.
+  const headers: HeadersInit = storedEtag ? { 'If-None-Match': storedEtag } : {}
+
+  const synced = fetch(CATALOG_URL, { headers })
+    .then(async (res) => {
+      if (res.status === 304) return null // sin cambios, usamos caché
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      return res.json() as Promise<CatalogData>
-    })
-    .then((fresh) => {
-      const freshStr = JSON.stringify(fresh)
-      if (freshStr === cachedStr) return null // sin cambios
+      const fresh = await res.json() as CatalogData
+      const etag = res.headers.get('ETag') ?? res.headers.get('Last-Modified') ?? ''
+      if (etag) localStorage.setItem(ETAG_KEY, etag)
       writeCache(fresh)
       return fresh
     })

@@ -8,6 +8,7 @@ const categoryGradient: Record<Category, string> = {
   Confituras: 'from-pink-100 to-rose-50',
   Comida: 'from-rose-100 to-orange-50',
   Ropa: 'from-pink-100 to-rose-50',
+  Electrónica: 'from-blue-100 to-indigo-50',
 }
 
 interface ProductImageProps {
