@@ -3169,6 +3169,32 @@
       ]
     },
     {
+      "id": "lm-pizza-queso-familiar",
+      "name": "Pizza de Queso Familiar",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Tamaño familiar · Más de 1 kg de pizza.",
+      "longDescription": "La favorita de siempre, ahora en tamaño familiar. Más de 1 kg de pizza recién horneada, masa esponjosa y queso fundido en cada rebanada. Ideal para compartir.",
+      "image": "🍕",
+      "photo": "/assets/images/products/La Marina/pizza-queso-familiar.jpg",
+      "price": 2.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lm-pizza-jamon-familiar",
+      "name": "Pizza de Jamón Familiar",
+      "businessId": "la-marina",
+      "businessName": "La Marina",
+      "category": "Comida",
+      "shortDescription": "Tamaño familiar · Más de 1 kg de pizza.",
+      "longDescription": "La clásica de jamón en su versión más generosa. Más de 1 kg de pizza con masa tierna, salsa de la casa, queso y jamón en cada porción. Una mesa entera satisfecha.",
+      "image": "🍕",
+      "photo": "/assets/images/products/La Marina/pizza-jamón-familiar.jpg",
+      "price": 3.6,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "lm-dr-ref-naranja",
       "name": "Ref. Naranja",
       "businessId": "la-marina",
