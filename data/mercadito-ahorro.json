@@ -22,7 +22,7 @@
     "longDescription": "Aceite vegetal en botella de 900ml.",
     "image": "🫒",
     "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-    "price": 1800,
+    "price": 1900,
     "stockStatus": "disponible"
   },
   {
@@ -49,19 +49,6 @@
     "image": "🍬",
     "photo": "/assets/images/products/mercado/azucar_blanca_lb.jpg",
     "price": 450,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "ma-005",
-    "name": "Jamonada de pollo (500 g)",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Alimentos",
-    "shortDescription": "Media libra.",
-    "longDescription": "Jamonada de pollo, se entrega por unidad.",
-    "image": "🍖",
-    "photo": "/assets/images/products/mercado/mortadella_500g.webp",
-    "price": 750,
     "stockStatus": "disponible"
   },
   {
@@ -125,7 +112,7 @@
     "longDescription": "Yogurt envasaado",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/yogurt_vaso.webp",
-    "price": 250,
+    "price": 280,
     "stockStatus": "disponible"
   },
   {
@@ -258,7 +245,7 @@
     "longDescription": "Alitas de pollo, se venden por paquete.",
     "image": "🍗",
     "price": 1900,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-026",
