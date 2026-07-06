@@ -298,9 +298,9 @@
     "longDescription": "🔧 En tres líneas:\n\n· 1024 Wh LFP (más de 10 años de duración)\n· Potencia de 1800 W (pico de 2400 W con X-Boost para frigoríficos y microondas)\n· Carga superrápida: del 0 al 80% en 50 minutos\n\n✅ En el día a día:\n\n· Nevera funcionando horas / ventiladores toda la noche\n· Conecta hasta 13 dispositivos a la vez (incluye puertos USB-C de 100 W para laptops)\n· Cambio automático en caso de apagón para que no pierdas lo esencial\n\n🔋 +3.000 ciclos: una inversión que dura años.\n\nSin humos, sin gasolina, sin ruido. Solo la tranquilidad de tener energía cuando más la necesitas.\n\nLa DELTA 2. El respaldo que tu hogar merece para no volver a quedarte a oscuras.",
     "image": "⚡",
     "photo": "/assets/images/products/mercadito/EcoFlow Delta 2.jpg",
-    "price": 750,
+    "price": 800,
     "stockStatus": "disponible",
-    "featured": true
+    "featured": false
   },
   {
     "id": "ma-ecoflow-delta3",
@@ -315,6 +315,6 @@
     "photo": "/assets/images/products/mercadito/EcoFlow-Delta-3.jpg",
     "price": 800,
     "stockStatus": "disponible",
-    "featured": false
+    "featured": true
   }
 ]
