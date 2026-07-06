@@ -165,7 +165,7 @@
     "longDescription": "Lata de Spam. Indica el sabor al confirmar el pedido.",
     "image": "🥫",
     "photo": "/assets/images/products/TuKprichito/lata-de-spam-pollo-res-cerdo.jpg",
-    "price": 900,
+    "price": 1000,
     "stockStatus": "disponible",
     "options": ["Pollo", "Res", "Cerdo"]
   },
@@ -323,7 +323,7 @@
     "shortDescription": "Se vende por unidad.",
     "longDescription": "Bebida Shaka, se vende por unidad.",
     "image": "🥤",
-    "photo": "/assets/images/products/TuKprichito/refrezco-lata.jpg",
+    "photo": "/assets/images/products/TuKprichito/cerveza-shaka-energético.jpg",
     "price": 500,
     "stockStatus": "disponible"
   },
@@ -336,7 +336,7 @@
     "shortDescription": "Se vende por unidad.",
     "longDescription": "Bebida energética Flash, se vende por unidad.",
     "image": "⚡",
-    "photo": "/assets/images/products/TuKprichito/refrezco-lata.jpg",
+    "photo": "/assets/images/products/TuKprichito/cerveza-shaka-energético.jpg",
     "price": 360,
     "stockStatus": "disponible"
   },
@@ -349,7 +349,7 @@
     "shortDescription": "Se vende por unidad.",
     "longDescription": "Cerveza Becks, se vende por unidad.",
     "image": "🍺",
-    "photo": "/assets/images/products/TuKprichito/refrezco-lata.jpg",
+    "photo": "/assets/images/products/TuKprichito/cerveza-shaka-energético.jpg",
     "price": 400,
     "stockStatus": "disponible"
   },
