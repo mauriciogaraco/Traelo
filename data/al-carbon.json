@@ -24,6 +24,30 @@
     "stockStatus": "disponible"
   },
   {
+    "id": "ac-005",
+    "name": "Pan con bistec",
+    "businessId": "al-carbon",
+    "businessName": "Al Carbón",
+    "category": "Comida",
+    "shortDescription": "Con pepino encurtido, cebollín y aliño.",
+    "longDescription": "Pan con bistec de cerdo a las brasas. Viene acompañado de pepino encurtido, cebollín y aliño de la casa.",
+    "image": "🥪",
+    "price": 450,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ac-006",
+    "name": "Pomo de refresco",
+    "businessId": "al-carbon",
+    "businessName": "Al Carbón",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por unidad.",
+    "longDescription": "Pomo de refresco, se vende por unidad.",
+    "image": "🥤",
+    "price": 320,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "ac-003",
     "name": "Cerdo asado (5 lbs)",
     "businessId": "al-carbon",
