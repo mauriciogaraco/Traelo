@@ -638,7 +638,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 3150,
+    "price": 3550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -656,7 +656,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 3150,
+    "price": 3550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -728,7 +728,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 3150,
+    "price": 3550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -818,7 +818,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 4450,
+    "price": 5050,
     "stockStatus": "disponible",
     "packaging": [
       {

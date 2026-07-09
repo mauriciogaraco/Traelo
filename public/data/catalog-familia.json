@@ -1369,7 +1369,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 6.3,
+      "price": 7.1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1387,7 +1387,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 6.3,
+      "price": 7.1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1459,7 +1459,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 6.3,
+      "price": 7.1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1549,7 +1549,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 8.9,
+      "price": 10.1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2533,7 +2533,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 0.7,
+      "price": 0.8,
       "stockStatus": "disponible"
     },
     {
@@ -2545,7 +2545,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 0.7,
+      "price": 0.8,
       "stockStatus": "disponible"
     },
     {
@@ -2582,7 +2582,7 @@
       "longDescription": "Se vende por unidad.",
       "image": "🧃",
       "price": 0.48,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "pm-dr-chaka",
@@ -2629,7 +2629,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.8,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -2641,7 +2641,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.76,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -2653,7 +2653,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.76,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -2665,7 +2665,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.76,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -2715,7 +2715,7 @@
       "longDescription": "Aceite vegetal en botella de 900ml.",
       "image": "🫒",
       "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-      "price": 3.8,
+      "price": 3.9,
       "stockStatus": "disponible"
     },
     {
@@ -3211,7 +3211,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 0.7,
+      "price": 0.8,
       "stockStatus": "disponible"
     },
     {
@@ -3223,7 +3223,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 0.7,
+      "price": 0.8,
       "stockStatus": "disponible"
     },
     {
@@ -3260,7 +3260,7 @@
       "longDescription": "Se vende por unidad.",
       "image": "🧃",
       "price": 0.48,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "lm-dr-chaka",
@@ -3307,7 +3307,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.8,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -3319,7 +3319,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.76,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -3331,7 +3331,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.76,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -3343,7 +3343,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 0.76,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
