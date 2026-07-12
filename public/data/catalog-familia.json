@@ -104,11 +104,11 @@
       }
     },
     {
-      "id": "al-carbon",
-      "name": "Al Carbón",
-      "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
-      "image": "/assets/images/business/AlCarbón.jpg",
-      "color": "from-orange-100 to-red-50",
+      "id": "cronos",
+      "name": "Cronos",
+      "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
+      "image": "/assets/images/business/Cronos.jpg",
+      "color": "from-sky-100 to-cyan-50",
       "schedule": {
         "days": [
           0,
@@ -188,6 +188,27 @@
         "open": "09:00",
         "close": "22:00",
         "label": "Todos los días · 9:00 am – 10:00 pm"
+      }
+    },
+    {
+      "id": "al-carbon",
+      "name": "Al Carbón",
+      "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
+      "image": "/assets/images/business/AlCarbón.jpg",
+      "color": "from-orange-100 to-red-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "label": "Todos los días · 11:00 am – 9:00 pm"
       }
     }
   ],
@@ -3371,6 +3392,58 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "cr-001",
+      "name": "Terciopelo de Mamey",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido natural de mamey.",
+      "longDescription": "Batido cremoso de mamey natural, suave y tropical. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🥤",
+      "photo": "/assets/images/products/Cronos/Mamey.jpg",
+      "price": 1.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-002",
+      "name": "Cremosa Artesanal",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Malteadas",
+      "shortDescription": "Malteada espesa y cremosa.",
+      "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
+      "image": "🥛",
+      "photo": "/assets/images/products/Cronos/Malteada.jpg",
+      "price": 1.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-003",
+      "name": "Beso de Fresa",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de fresa.",
+      "longDescription": "Batido de helado de fresa, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍓",
+      "photo": "/assets/images/products/Cronos/Helado-fresa.jpg",
+      "price": 1.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-004",
+      "name": "Noche de Chocolate",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de chocolate.",
+      "longDescription": "Batido de helado de chocolate oscuro e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍫",
+      "photo": "/assets/images/products/Cronos/Helado-Chocolate.jpg",
+      "price": 1.8,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "lc-001",
       "name": "Entremés de Jamón y Queso",
       "businessId": "linea-callejon",
@@ -4415,92 +4488,6 @@
           "price": 150
         }
       ]
-    },
-    {
-      "id": "ac-001",
-      "name": "Brochetas de cerdo",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Brochetas a las brasas.",
-      "longDescription": "Brochetas de cerdo asadas a las brasas. Se venden por unidad.",
-      "image": "🍢",
-      "price": 1.7,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-002",
-      "name": "Brochetas rellenas de queso",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Rellenas de queso, a las brasas.",
-      "longDescription": "Brochetas de cerdo rellenas de queso, asadas a las brasas. Se venden por unidad.",
-      "image": "🍢",
-      "price": 2.2,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-005",
-      "name": "Pan con bistec",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Con pepino encurtido, cebollín y aliño.",
-      "longDescription": "Pan con bistec de cerdo a las brasas. Viene acompañado de pepino encurtido, cebollín y aliño de la casa.",
-      "image": "🥪",
-      "price": 0.9,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-006",
-      "name": "Pomo de refresco",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Bebidas",
-      "shortDescription": "Se vende por unidad.",
-      "longDescription": "Pomo de refresco, se vende por unidad.",
-      "image": "🥤",
-      "price": 0.64,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-003",
-      "name": "Cerdo asado (5 lbs)",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Precio por libra, mínimo 5 lbs.",
-      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 5 libras. Incluye tiempo de cocción.",
-      "image": "🥩",
-      "price": 3.1,
-      "formato": 5,
-      "packaging": [
-        {
-          "name": "Tiempo de cocción",
-          "price": 2000
-        }
-      ],
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-004",
-      "name": "Cerdo asado (10 lbs)",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Precio por libra, mínimo 10 lbs.",
-      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 10 libras. Incluye tiempo de cocción.",
-      "image": "🥩",
-      "price": 3.1,
-      "formato": 10,
-      "packaging": [
-        {
-          "name": "Tiempo de cocción",
-          "price": 2000
-        }
-      ],
-      "stockStatus": "disponible"
     },
     {
       "id": "eb-001",
@@ -6335,6 +6322,92 @@
       "image": "🌭",
       "photo": "/assets/images/products/TuKprichito/salchichas.jpg",
       "price": 1.32,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-001",
+      "name": "Brochetas de cerdo",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Brochetas a las brasas.",
+      "longDescription": "Brochetas de cerdo asadas a las brasas. Se venden por unidad.",
+      "image": "🍢",
+      "price": 1.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-002",
+      "name": "Brochetas rellenas de queso",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Rellenas de queso, a las brasas.",
+      "longDescription": "Brochetas de cerdo rellenas de queso, asadas a las brasas. Se venden por unidad.",
+      "image": "🍢",
+      "price": 2.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-005",
+      "name": "Pan con bistec",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Con pepino encurtido, cebollín y aliño.",
+      "longDescription": "Pan con bistec de cerdo a las brasas. Viene acompañado de pepino encurtido, cebollín y aliño de la casa.",
+      "image": "🥪",
+      "price": 0.9,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-006",
+      "name": "Pomo de refresco",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Pomo de refresco, se vende por unidad.",
+      "image": "🥤",
+      "price": 0.64,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-003",
+      "name": "Cerdo asado (5 lbs)",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Precio por libra, mínimo 5 lbs.",
+      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 5 libras. Incluye tiempo de cocción.",
+      "image": "🥩",
+      "price": 3.1,
+      "formato": 5,
+      "packaging": [
+        {
+          "name": "Tiempo de cocción",
+          "price": 2000
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-004",
+      "name": "Cerdo asado (10 lbs)",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Precio por libra, mínimo 10 lbs.",
+      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 10 libras. Incluye tiempo de cocción.",
+      "image": "🥩",
+      "price": 3.1,
+      "formato": 10,
+      "packaging": [
+        {
+          "name": "Tiempo de cocción",
+          "price": 2000
+        }
+      ],
       "stockStatus": "disponible"
     }
   ]
