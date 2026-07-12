@@ -7,12 +7,12 @@ const ROOT = join(__dirname, '..');
 const USD_RATE = 500;
 
 const BUSINESS_FILES = [
+  'cronos',
   'bodega-central',
   'dlm',
   'panes-macus',
   'mercadito-ahorro',
   'la-marina',
-  'cronos',
   'linea-callejon',
   'eme-boutique',
   'tu-kprichito',
