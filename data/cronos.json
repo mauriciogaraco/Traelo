@@ -1,7 +1,7 @@
 [
   {
     "id": "cr-001",
-    "name": "Terciopelo de Mamey",
+    "name": "Smoothie de Mamey",
     "businessId": "cronos",
     "businessName": "Cronos",
     "category": "Batidos",
@@ -14,7 +14,7 @@
   },
   {
     "id": "cr-002",
-    "name": "Cremosa Artesanal",
+    "name": "Smoothie Malteado",
     "businessId": "cronos",
     "businessName": "Cronos",
     "category": "Malteadas",
@@ -27,7 +27,7 @@
   },
   {
     "id": "cr-003",
-    "name": "Beso de Fresa",
+    "name": "Smoothie de Fresa",
     "businessId": "cronos",
     "businessName": "Cronos",
     "category": "Batidos",
@@ -41,7 +41,7 @@
   },
   {
     "id": "cr-004",
-    "name": "Noche de Chocolate",
+    "name": "Smoothie de Chocolate",
     "businessId": "cronos",
     "businessName": "Cronos",
     "category": "Batidos",
