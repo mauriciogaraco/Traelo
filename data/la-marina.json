@@ -140,7 +140,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🥤",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -152,7 +152,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🥤",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -189,7 +189,7 @@
     "longDescription": "Se vende por unidad.",
     "image": "🧃",
     "price": 240,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "lm-dr-chaka",
@@ -236,7 +236,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🍺",
-    "price": 400,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -248,7 +248,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🍺",
-    "price": 380,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -260,7 +260,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🍺",
-    "price": 380,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -272,7 +272,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🍺",
-    "price": 380,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
