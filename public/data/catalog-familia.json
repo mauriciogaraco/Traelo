@@ -6349,7 +6349,7 @@
     },
     {
       "id": "am-001",
-      "name": "Torticas",
+      "name": "Caja de Torticas x15",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
@@ -6362,7 +6362,7 @@
     },
     {
       "id": "am-002",
-      "name": "Pasteles",
+      "name": "Caja de Pasteles x13",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
@@ -6388,7 +6388,7 @@
     },
     {
       "id": "am-004",
-      "name": "Merenguitos",
+      "name": "Bolsa de Merenguitos x15",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
@@ -6401,7 +6401,7 @@
     },
     {
       "id": "am-005",
-      "name": "Tartaletas",
+      "name": "Caja de Tartaletas x6",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
