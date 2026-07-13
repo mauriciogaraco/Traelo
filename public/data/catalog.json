@@ -104,11 +104,12 @@
       }
     },
     {
-      "id": "al-carbon",
-      "name": "Al Carbón",
-      "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
-      "image": "/assets/images/business/AlCarbón.jpg",
-      "color": "from-orange-100 to-red-50",
+      "id": "cronos",
+      "name": "Cronos",
+      "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
+      "image": "/assets/images/business/Cronos.jpg",
+      "color": "from-sky-100 to-cyan-50",
+      "hidden": true,
       "schedule": {
         "days": [
           0,
@@ -189,9 +190,105 @@
         "close": "22:00",
         "label": "Todos los días · 9:00 am – 10:00 pm"
       }
+    },
+    {
+      "id": "amore",
+      "name": "AmoRe Dulcería",
+      "description": "Torticas, pasteles, merenguitos, tartaletas y cakes artesanales.",
+      "image": "/assets/images/business/Amore.jpg",
+      "color": "from-pink-100 to-rose-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "08:00",
+        "close": "15:00",
+        "label": "Todos los días · 8:00 am – 3:00 pm"
+      }
+    },
+    {
+      "id": "al-carbon",
+      "name": "Al Carbón",
+      "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
+      "image": "/assets/images/business/AlCarbón.jpg",
+      "color": "from-orange-100 to-red-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "11:00",
+        "close": "21:00",
+        "label": "Todos los días · 11:00 am – 9:00 pm"
+      }
     }
   ],
   "products": [
+    {
+      "id": "cr-001",
+      "name": "Smoothie de Mamey",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido natural de mamey.",
+      "longDescription": "Batido cremoso de mamey natural, suave y tropical. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🥤",
+      "photo": "/assets/images/products/Cronos/Mamey.jpg",
+      "price": 700,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-002",
+      "name": "Smoothie Malteado",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Malteadas",
+      "shortDescription": "Malteada espesa y cremosa.",
+      "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
+      "image": "🥛",
+      "photo": "/assets/images/products/Cronos/Malteada.jpg",
+      "price": 750,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-003",
+      "name": "Smoothie de Fresa",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de fresa.",
+      "longDescription": "Batido de helado de fresa, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍓",
+      "photo": "/assets/images/products/Cronos/Helado-fresa.jpg",
+      "price": 900,
+      "featured": true,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-004",
+      "name": "Smoothie de Chocolate",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de chocolate.",
+      "longDescription": "Batido de helado de chocolate oscuro e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍫",
+      "photo": "/assets/images/products/Cronos/Helado-Chocolate.jpg",
+      "price": 900,
+      "featured": true,
+      "stockStatus": "disponible"
+    },
     {
       "id": "bc-001",
       "name": "Avena con leche",
@@ -2617,7 +2714,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "⚡",
-      "price": 400,
+      "price": 450,
       "stockStatus": "disponible"
     },
     {
@@ -3295,7 +3392,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "⚡",
-      "price": 400,
+      "price": 450,
       "stockStatus": "disponible"
     },
     {
@@ -4415,92 +4512,6 @@
           "price": 150
         }
       ]
-    },
-    {
-      "id": "ac-001",
-      "name": "Brochetas de cerdo",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Brochetas a las brasas.",
-      "longDescription": "Brochetas de cerdo asadas a las brasas. Se venden por unidad.",
-      "image": "🍢",
-      "price": 850,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-002",
-      "name": "Brochetas rellenas de queso",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Rellenas de queso, a las brasas.",
-      "longDescription": "Brochetas de cerdo rellenas de queso, asadas a las brasas. Se venden por unidad.",
-      "image": "🍢",
-      "price": 1100,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-005",
-      "name": "Pan con bistec",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Con pepino encurtido, cebollín y aliño.",
-      "longDescription": "Pan con bistec de cerdo a las brasas. Viene acompañado de pepino encurtido, cebollín y aliño de la casa.",
-      "image": "🥪",
-      "price": 450,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-006",
-      "name": "Pomo de refresco",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Bebidas",
-      "shortDescription": "Se vende por unidad.",
-      "longDescription": "Pomo de refresco, se vende por unidad.",
-      "image": "🥤",
-      "price": 320,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-003",
-      "name": "Cerdo asado (5 lbs)",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Precio por libra, mínimo 5 lbs.",
-      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 5 libras. Incluye tiempo de cocción.",
-      "image": "🥩",
-      "price": 1550,
-      "formato": 5,
-      "packaging": [
-        {
-          "name": "Tiempo de cocción",
-          "price": 2000
-        }
-      ],
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "ac-004",
-      "name": "Cerdo asado (10 lbs)",
-      "businessId": "al-carbon",
-      "businessName": "Al Carbón",
-      "category": "Comida",
-      "shortDescription": "Precio por libra, mínimo 10 lbs.",
-      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 10 libras. Incluye tiempo de cocción.",
-      "image": "🥩",
-      "price": 1550,
-      "formato": 10,
-      "packaging": [
-        {
-          "name": "Tiempo de cocción",
-          "price": 2000
-        }
-      ],
-      "stockStatus": "disponible"
     },
     {
       "id": "eb-001",
@@ -6335,6 +6346,208 @@
       "image": "🌭",
       "photo": "/assets/images/products/TuKprichito/salchichas.jpg",
       "price": 660,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-001",
+      "name": "Torticas",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Dulcería",
+      "shortDescription": "Caja de 15 unidades.",
+      "longDescription": "Deliciosas torticas caseras. La caja trae 15 unidades.",
+      "image": "🍪",
+      "photo": "/assets/images/products/AmoRe/torticas.jpg",
+      "price": 1200,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-002",
+      "name": "Pasteles",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Dulcería",
+      "shortDescription": "Caja de 13 unidades.",
+      "longDescription": "Pasteles esponjosos y rellenos. La caja trae 13 unidades.",
+      "image": "🥐",
+      "photo": "/assets/images/products/AmoRe/caja de pasteles.jpg",
+      "price": 1200,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-003",
+      "name": "Merenguitos",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Dulcería",
+      "shortDescription": "Bolsa de 15 unidades.",
+      "longDescription": "Merenguitos crujientes y ligeros. La bolsa trae 15 unidades.",
+      "image": "🍬",
+      "photo": "/assets/images/products/AmoRe/Merenguitos (bolsa de 15 ).jpg",
+      "price": 1000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-004",
+      "name": "Tartaletas",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Dulcería",
+      "shortDescription": "Caja de 6 unidades.",
+      "longDescription": "Tartaletas artesanales. La caja trae 6 unidades.",
+      "image": "🥧",
+      "photo": "/assets/images/products/AmoRe/tartaletas.jpg",
+      "price": 1000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-005",
+      "name": "3 Leches",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Postres",
+      "shortDescription": "Porción individual.",
+      "longDescription": "Esponjoso bizcocho bañado en tres leches, cremoso y suave en cada bocado.",
+      "image": "🍮",
+      "photo": "/assets/images/products/AmoRe/3-leches.jpg",
+      "price": 650,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-006",
+      "name": "Minicake 3 Leches",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Cakes",
+      "shortDescription": "Minicake de 20 cm.",
+      "longDescription": "Minicake de tres leches de 20 cm. Esponjoso, bañado en tres leches y decorado con crema.",
+      "image": "🎂",
+      "photo": "/assets/images/products/AmoRe/Mini-cake-3-leches.jpg",
+      "price": 3000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-007",
+      "name": "Cake 3 Leches",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Cakes",
+      "shortDescription": "Solicítalo con anticipación · 8 am–3 pm.",
+      "longDescription": "Los cakes siempre los deben pedir un tiempo antes en el horario de 8 am a 3 de la tarde.",
+      "image": "🎂",
+      "photo": "/assets/images/products/AmoRe/cake-3-leches.jpg",
+      "price": 5000,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Caja",
+          "price": 1000
+        }
+      ]
+    },
+    {
+      "id": "am-008",
+      "name": "Cake de Almíbar y Dulce de Leche",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Cakes",
+      "shortDescription": "Solicítalo con anticipación · 8 am–3 pm.",
+      "longDescription": "Los cakes siempre los deben pedir un tiempo antes en el horario de 8 am a 3 de la tarde.",
+      "image": "🎂",
+      "photo": "/assets/images/products/AmoRe/cake-de-almibar-y-dulce-de-leche.jpg",
+      "price": 4500,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Caja",
+          "price": 1000
+        }
+      ]
+    },
+    {
+      "id": "ac-001",
+      "name": "Brochetas de cerdo",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Brochetas a las brasas.",
+      "longDescription": "Brochetas de cerdo asadas a las brasas. Se venden por unidad.",
+      "image": "🍢",
+      "price": 850,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-002",
+      "name": "Brochetas rellenas de queso",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Rellenas de queso, a las brasas.",
+      "longDescription": "Brochetas de cerdo rellenas de queso, asadas a las brasas. Se venden por unidad.",
+      "image": "🍢",
+      "price": 1100,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-005",
+      "name": "Pan con bistec",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Con pepino encurtido, cebollín y aliño.",
+      "longDescription": "Pan con bistec de cerdo a las brasas. Viene acompañado de pepino encurtido, cebollín y aliño de la casa.",
+      "image": "🥪",
+      "price": 450,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-006",
+      "name": "Pomo de refresco",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Pomo de refresco, se vende por unidad.",
+      "image": "🥤",
+      "price": 320,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-003",
+      "name": "Cerdo asado (5 lbs)",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Precio por libra, mínimo 5 lbs.",
+      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 5 libras. Incluye tiempo de cocción.",
+      "image": "🥩",
+      "price": 1550,
+      "formato": 5,
+      "packaging": [
+        {
+          "name": "Tiempo de cocción",
+          "price": 2000
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ac-004",
+      "name": "Cerdo asado (10 lbs)",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Comida",
+      "shortDescription": "Precio por libra, mínimo 10 lbs.",
+      "longDescription": "Cerdo asado a las brasas. Precio por libra, se vende en paquete de 10 libras. Incluye tiempo de cocción.",
+      "image": "🥩",
+      "price": 1550,
+      "formato": 10,
+      "packaging": [
+        {
+          "name": "Tiempo de cocción",
+          "price": 2000
+        }
+      ],
       "stockStatus": "disponible"
     }
   ]

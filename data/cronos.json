@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cr-001",
+    "name": "Smoothie de Mamey",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido natural de mamey.",
+    "longDescription": "Batido cremoso de mamey natural, suave y tropical. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🥤",
+    "photo": "/assets/images/products/Cronos/Mamey.jpg",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-002",
+    "name": "Smoothie Malteado",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Malteadas",
+    "shortDescription": "Malteada espesa y cremosa.",
+    "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
+    "image": "🥛",
+    "photo": "/assets/images/products/Cronos/Malteada.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-003",
+    "name": "Smoothie de Fresa",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de fresa.",
+    "longDescription": "Batido de helado de fresa, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🍓",
+    "photo": "/assets/images/products/Cronos/Helado-fresa.jpg",
+    "price": 900,
+    "featured": true,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-004",
+    "name": "Smoothie de Chocolate",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de chocolate.",
+    "longDescription": "Batido de helado de chocolate oscuro e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🍫",
+    "photo": "/assets/images/products/Cronos/Helado-Chocolate.jpg",
+    "price": 900,
+    "featured": true,
+    "stockStatus": "disponible"
+  }
+]

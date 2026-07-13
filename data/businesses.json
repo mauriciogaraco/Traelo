@@ -66,11 +66,12 @@
     }
   },
   {
-    "id": "al-carbon",
-    "name": "Al Carbón",
-    "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
-    "image": "/assets/images/business/AlCarbón.jpg",
-    "color": "from-orange-100 to-red-50",
+    "id": "cronos",
+    "name": "Cronos",
+    "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
+    "image": "/assets/images/business/Cronos.jpg",
+    "color": "from-sky-100 to-cyan-50",
+    "hidden": true,
     "schedule": {
       "days": [0, 1, 2, 3, 4, 5, 6],
       "open": "11:00",
@@ -118,6 +119,32 @@
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
+  },
+  {
+    "id": "amore",
+    "name": "AmoRe Dulcería",
+    "description": "Torticas, pasteles, merenguitos, tartaletas y cakes artesanales.",
+    "image": "/assets/images/business/Amore.jpg",
+    "color": "from-pink-100 to-rose-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "08:00",
+      "close": "15:00",
+      "label": "Todos los días · 8:00 am – 3:00 pm"
+    }
+  },
+  {
+    "id": "al-carbon",
+    "name": "Al Carbón",
+    "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
+    "image": "/assets/images/business/AlCarbón.jpg",
+    "color": "from-orange-100 to-red-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "11:00",
+      "close": "21:00",
+      "label": "Todos los días · 11:00 am – 9:00 pm"
     }
   }
 ]
