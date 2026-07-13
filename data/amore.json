@@ -27,6 +27,19 @@
   },
   {
     "id": "am-003",
+    "name": "Rosquitas",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Dulcería",
+    "shortDescription": "Caja de 11 unidades.",
+    "longDescription": "Rosquitas caseras, crujientes y esponjosas. La caja trae 11 unidades.",
+    "image": "🍩",
+    "photo": "/assets/images/products/AmoRe/Rosquitas.jpg",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-004",
     "name": "Merenguitos",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -39,7 +52,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-004",
+    "id": "am-005",
     "name": "Tartaletas",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -52,7 +65,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-005",
+    "id": "am-006",
     "name": "3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -65,7 +78,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-006",
+    "id": "am-007",
     "name": "Minicake 3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -78,7 +91,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-007",
+    "id": "am-008",
     "name": "Cake 3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -94,7 +107,7 @@
     ]
   },
   {
-    "id": "am-008",
+    "id": "am-009",
     "name": "Cake de Almíbar y Dulce de Leche",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
