@@ -110,7 +110,8 @@
       "image": "/assets/images/business/Cronos.jpg",
       "color": "from-sky-100 to-cyan-50",
       "deliveryFee": 0,
-      "paymentNote": "🎉 Mensajería gratis hoy.",
+      "status": "cerrado",
+      "paymentNote": "Cerrado por inventario.",
       "schedule": {
         "days": [
           0,
