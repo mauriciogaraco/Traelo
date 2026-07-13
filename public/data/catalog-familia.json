@@ -109,7 +109,6 @@
       "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
       "image": "/assets/images/business/Cronos.jpg",
       "color": "from-sky-100 to-cyan-50",
-      "hidden": true,
       "schedule": {
         "days": [
           0,
@@ -6350,7 +6349,7 @@
     },
     {
       "id": "am-001",
-      "name": "Torticas",
+      "name": "Caja de Torticas x15",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
@@ -6363,7 +6362,7 @@
     },
     {
       "id": "am-002",
-      "name": "Pasteles",
+      "name": "Caja de Pasteles x13",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
@@ -6376,7 +6375,20 @@
     },
     {
       "id": "am-003",
-      "name": "Merenguitos",
+      "name": "Caja de Rosquitas x11",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Dulcería",
+      "shortDescription": "Caja de 11 unidades.",
+      "longDescription": "Rosquitas caseras, crujientes y esponjosas. La caja trae 11 unidades.",
+      "image": "🍩",
+      "photo": "/assets/images/products/AmoRe/Rosquitas.jpg",
+      "price": 2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-004",
+      "name": "Bolsa de Merenguitos x15",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
@@ -6388,8 +6400,8 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "am-004",
-      "name": "Tartaletas",
+      "id": "am-005",
+      "name": "Caja de Tartaletas x6",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
@@ -6401,7 +6413,7 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "am-005",
+      "id": "am-006",
       "name": "3 Leches",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
@@ -6414,7 +6426,7 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "am-006",
+      "id": "am-007",
       "name": "Minicake 3 Leches",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
@@ -6427,7 +6439,7 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "am-007",
+      "id": "am-008",
       "name": "Cake 3 Leches",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
@@ -6446,7 +6458,7 @@
       ]
     },
     {
-      "id": "am-008",
+      "id": "am-009",
       "name": "Cake de Almíbar y Dulce de Leche",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
