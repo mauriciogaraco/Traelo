@@ -17,7 +17,9 @@ import type { Category } from "../types";
 const PAGE_SIZE = 20;
 
 export function HomePage() {
-  const { businesses, products, loading, syncing } = useCatalog();
+  const { businesses: allBusinesses, products: allProducts, loading, syncing } = useCatalog();
+  const businesses = allBusinesses.filter((b) => !b.hidden);
+  const products = allProducts.filter((p) => !allBusinesses.find((b) => b.id === p.businessId)?.hidden);
   const [searchParams, setSearchParams] = useSearchParams();
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLElement>(null);

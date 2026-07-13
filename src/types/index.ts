@@ -41,6 +41,8 @@ export interface Business {
   currency?: 'USD'
   /** Cierre manual que anula el horario. 'cerrado' = bloqueado sin importar schedule. */
   status?: 'cerrado'
+  /** Ocultar completamente de la UI (negocio y sus productos en destacados). */
+  hidden?: boolean
   /** Horario de atención. */
   schedule: BusinessSchedule
 }
