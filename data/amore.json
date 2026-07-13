@@ -10,10 +10,7 @@
     "image": "🍪",
     "photo": "/assets/images/products/AmoRe/torticas.jpg",
     "price": 1200,
-    "stockStatus": "disponible",
-    "packaging": [
-      { "name": "Caja", "price": 1000 }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "am-002",
@@ -26,10 +23,7 @@
     "image": "🥐",
     "photo": "/assets/images/products/AmoRe/caja de pasteles.jpg",
     "price": 1200,
-    "stockStatus": "disponible",
-    "packaging": [
-      { "name": "Caja", "price": 1000 }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "am-003",
@@ -42,10 +36,7 @@
     "image": "🍬",
     "photo": "/assets/images/products/AmoRe/Merenguitos (bolsa de 15 ).jpg",
     "price": 1000,
-    "stockStatus": "disponible",
-    "packaging": [
-      { "name": "Caja", "price": 1000 }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "am-004",
@@ -58,10 +49,7 @@
     "image": "🥧",
     "photo": "/assets/images/products/AmoRe/tartaletas.jpg",
     "price": 1000,
-    "stockStatus": "disponible",
-    "packaging": [
-      { "name": "Caja", "price": 1000 }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "am-005",
@@ -74,10 +62,7 @@
     "image": "🍮",
     "photo": "/assets/images/products/AmoRe/3-leches.jpg",
     "price": 650,
-    "stockStatus": "disponible",
-    "packaging": [
-      { "name": "Caja", "price": 1000 }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "am-006",
@@ -90,10 +75,7 @@
     "image": "🎂",
     "photo": "/assets/images/products/AmoRe/Mini-cake-3-leches.jpg",
     "price": 3000,
-    "stockStatus": "disponible",
-    "packaging": [
-      { "name": "Caja", "price": 1000 }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "am-007",
