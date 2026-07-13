@@ -8,7 +8,9 @@ export function MessagingFeeRow({ fee, note }: { fee: number; note?: string }) {
         <span aria-hidden="true">🛵</span> Mensajería
       </span>
       <span className="text-right">
-        <span className="font-semibold text-text-primary">{formatPrice(fee)}</span>
+        <span className="font-semibold text-text-primary">
+          {fee === 0 ? 'Gratis 🎉' : formatPrice(fee)}
+        </span>
         {note && <span className="block text-[11px] text-text-secondary">{note}</span>}
       </span>
     </div>
