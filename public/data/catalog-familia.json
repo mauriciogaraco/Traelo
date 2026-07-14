@@ -3050,7 +3050,7 @@
       "shortDescription": "Precio por libra.",
       "longDescription": "Picadillo de pollo MDM, se vende por libra.",
       "image": "🍖",
-      "price": 1,
+      "price": 1.04,
       "stockStatus": "disponible"
     },
     {
@@ -6366,15 +6366,15 @@
     },
     {
       "id": "am-003",
-      "name": "Caja de Rosquitas x11",
+      "name": "Caja de Rosquitas x13",
       "businessId": "amore",
       "businessName": "AmoRe Dulcería",
       "category": "Dulcería",
-      "shortDescription": "Caja de 11 unidades.",
-      "longDescription": "Rosquitas caseras, crujientes y esponjosas. La caja trae 11 unidades.",
+      "shortDescription": "Caja de 13 unidades.",
+      "longDescription": "Rosquitas caseras, crujientes y esponjosas. La caja trae 13 unidades.",
       "image": "🍩",
       "photo": "/assets/images/products/AmoRe/Rosquitas.jpg",
-      "price": 2,
+      "price": 2.4,
       "stockStatus": "disponible"
     },
     {
@@ -6400,7 +6400,7 @@
       "longDescription": "Tartaletas artesanales. La caja trae 6 unidades.",
       "image": "🥧",
       "photo": "/assets/images/products/AmoRe/tartaletas.jpg",
-      "price": 2,
+      "price": 2.1,
       "stockStatus": "disponible"
     },
     {
@@ -6413,7 +6413,7 @@
       "longDescription": "Esponjoso bizcocho bañado en tres leches, cremoso y suave en cada bocado.",
       "image": "🍮",
       "photo": "/assets/images/products/AmoRe/3-leches.jpg",
-      "price": 1.3,
+      "price": 1.4,
       "stockStatus": "disponible"
     },
     {
