@@ -2917,7 +2917,7 @@
       "longDescription": "Hígado de pollo fresco, se vende por kilogramo.",
       "image": "🍗",
       "price": 2.1,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "ma-015",
@@ -3012,7 +3012,7 @@
       "shortDescription": "5 a 6 muslos por paquete.",
       "longDescription": "Paquete de muslos de pollo, trae entre 5 y 6 unidades.",
       "image": "🍗",
-      "price": 3.6,
+      "price": 3.8,
       "stockStatus": "disponible"
     },
     {
@@ -3026,18 +3026,6 @@
       "image": "🌸",
       "price": 4,
       "stockStatus": "disponible"
-    },
-    {
-      "id": "ma-024",
-      "name": "Alitas de pollo",
-      "businessId": "mercadito-ahorro",
-      "businessName": "El Mercadito",
-      "category": "Alimentos",
-      "shortDescription": "Se vende por paquete.",
-      "longDescription": "Alitas de pollo, se venden por paquete.",
-      "image": "🍗",
-      "price": 3.8,
-      "stockStatus": "agotado"
     },
     {
       "id": "ma-026",
@@ -6335,7 +6323,7 @@
       "image": "🍗",
       "photo": "/assets/images/products/TuKprichito/muslos de pollo.jpg",
       "price": 3.6,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-045",
