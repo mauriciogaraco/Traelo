@@ -110,8 +110,6 @@
       "image": "/assets/images/business/Cronos.jpg",
       "color": "from-sky-100 to-cyan-50",
       "deliveryFee": 0,
-      "status": "cerrado",
-      "paymentNote": "Cerrado por inventario.",
       "schedule": {
         "days": [
           0,
@@ -122,9 +120,9 @@
           5,
           6
         ],
-        "open": "11:00",
-        "close": "21:00",
-        "label": "Todos los días · 11:00 am – 9:00 pm"
+        "open": "09:00",
+        "close": "17:00",
+        "label": "Todos los días · 9:00 am – 5:00 pm"
       }
     },
     {
@@ -201,7 +199,6 @@
       "color": "from-pink-100 to-rose-50",
       "schedule": {
         "days": [
-          0,
           1,
           2,
           3,
@@ -209,9 +206,9 @@
           5,
           6
         ],
-        "open": "08:00",
-        "close": "15:00",
-        "label": "Todos los días · 8:00 am – 3:00 pm"
+        "open": "09:00",
+        "close": "17:00",
+        "label": "Lun–Sáb · 9:00 am – 5:00 pm"
       }
     },
     {
@@ -273,7 +270,7 @@
       "longDescription": "Batido de helado de fresa, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
       "image": "🍓",
       "photo": "/assets/images/products/Cronos/Helado-fresa.jpg",
-      "price": 900,
+      "price": 1100,
       "featured": true,
       "stockStatus": "disponible"
     },
@@ -287,8 +284,34 @@
       "longDescription": "Batido de helado de chocolate oscuro e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
       "image": "🍫",
       "photo": "/assets/images/products/Cronos/Helado-Chocolate.jpg",
-      "price": 900,
+      "price": 1100,
       "featured": true,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-005",
+      "name": "Smoothie de Vainilla",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de vainilla.",
+      "longDescription": "Batido de helado de vainilla, suave y cremoso. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍦",
+      "photo": "/assets/images/products/Cronos/helado-Vanilla.jpg",
+      "price": 1100,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-006",
+      "name": "Smoothie de Naranja y Piña",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de naranja y piña.",
+      "longDescription": "Batido de helado de naranja y piña, tropical y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍊",
+      "photo": "/assets/images/products/Cronos/Helado-Naranja-Piña.jpg",
+      "price": 1100,
       "stockStatus": "disponible"
     },
     {
@@ -2668,7 +2691,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 460,
       "stockStatus": "disponible"
     },
     {
@@ -2852,7 +2875,7 @@
       "shortDescription": "Una libra, en bistec.",
       "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
       "image": "🥩",
-      "price": 1500,
+      "price": 1600,
       "stockStatus": "disponible"
     },
     {
@@ -3334,7 +3357,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 460,
       "stockStatus": "disponible"
     },
     {
@@ -5946,7 +5969,7 @@
       "image": "🥚",
       "photo": "/assets/images/products/TuKprichito/Huevos-frescos-de-granja.jpg",
       "price": 100,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-017",
@@ -6310,7 +6333,7 @@
       "image": "🥩",
       "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
       "price": 1500,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-044",
@@ -6336,7 +6359,7 @@
       "image": "🌭",
       "photo": "/assets/images/products/TuKprichito/salchichas.jpg",
       "price": 660,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "am-001",

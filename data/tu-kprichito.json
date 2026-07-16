@@ -206,7 +206,7 @@
     "image": "🥚",
     "photo": "/assets/images/products/TuKprichito/Huevos-frescos-de-granja.jpg",
     "price": 100,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-017",
@@ -559,7 +559,7 @@
     "image": "🥩",
     "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-044",
@@ -585,6 +585,6 @@
     "image": "🌭",
     "photo": "/assets/images/products/TuKprichito/salchichas.jpg",
     "price": 660,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   }
 ]

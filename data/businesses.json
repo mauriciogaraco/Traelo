@@ -72,13 +72,11 @@
     "image": "/assets/images/business/Cronos.jpg",
     "color": "from-sky-100 to-cyan-50",
     "deliveryFee": 0,
-    "status": "cerrado",
-    "paymentNote": "Cerrado por inventario.",
     "schedule": {
       "days": [0, 1, 2, 3, 4, 5, 6],
-      "open": "11:00",
-      "close": "21:00",
-      "label": "Todos los días · 11:00 am – 9:00 pm"
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Todos los días · 9:00 am – 5:00 pm"
     }
   },
   {
@@ -130,10 +128,10 @@
     "image": "/assets/images/business/Amore.jpg",
     "color": "from-pink-100 to-rose-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
-      "open": "08:00",
-      "close": "15:00",
-      "label": "Todos los días · 8:00 am – 3:00 pm"
+      "days": [1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Lun–Sáb · 9:00 am – 5:00 pm"
     }
   },
   {
