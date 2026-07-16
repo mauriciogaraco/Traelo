@@ -110,8 +110,6 @@
       "image": "/assets/images/business/Cronos.jpg",
       "color": "from-sky-100 to-cyan-50",
       "deliveryFee": 0,
-      "status": "cerrado",
-      "paymentNote": "Cerrado por inventario.",
       "schedule": {
         "days": [
           0,
@@ -122,9 +120,9 @@
           5,
           6
         ],
-        "open": "11:00",
-        "close": "21:00",
-        "label": "Todos los días · 11:00 am – 9:00 pm"
+        "open": "09:00",
+        "close": "17:00",
+        "label": "Todos los días · 9:00 am – 5:00 pm"
       }
     },
     {
@@ -272,7 +270,7 @@
       "longDescription": "Batido de helado de fresa, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
       "image": "🍓",
       "photo": "/assets/images/products/Cronos/Helado-fresa.jpg",
-      "price": 1.8,
+      "price": 2.2,
       "featured": true,
       "stockStatus": "disponible"
     },
@@ -286,7 +284,7 @@
       "longDescription": "Batido de helado de chocolate oscuro e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
       "image": "🍫",
       "photo": "/assets/images/products/Cronos/Helado-Chocolate.jpg",
-      "price": 1.8,
+      "price": 2.2,
       "featured": true,
       "stockStatus": "disponible"
     },
@@ -2851,7 +2849,7 @@
       "shortDescription": "Una libra, en bistec.",
       "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
       "image": "🥩",
-      "price": 3,
+      "price": 3.2,
       "stockStatus": "disponible"
     },
     {
@@ -6309,7 +6307,7 @@
       "image": "🥩",
       "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
       "price": 3,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-044",
@@ -6335,7 +6333,7 @@
       "image": "🌭",
       "photo": "/assets/images/products/TuKprichito/salchichas.jpg",
       "price": 1.32,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "am-001",

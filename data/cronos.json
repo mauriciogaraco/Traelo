@@ -35,7 +35,7 @@
     "longDescription": "Batido de helado de fresa, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
     "image": "🍓",
     "photo": "/assets/images/products/Cronos/Helado-fresa.jpg",
-    "price": 900,
+    "price": 1100,
     "featured": true,
     "stockStatus": "disponible"
   },
@@ -49,7 +49,7 @@
     "longDescription": "Batido de helado de chocolate oscuro e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
     "image": "🍫",
     "photo": "/assets/images/products/Cronos/Helado-Chocolate.jpg",
-    "price": 900,
+    "price": 1100,
     "featured": true,
     "stockStatus": "disponible"
   }
