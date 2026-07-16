@@ -286,8 +286,12 @@ export function CheckoutPage() {
                 )
               })}
               <div className="flex justify-between text-sm">
-                <span className="text-text-secondary">Entrega</span>
-                <span className="font-semibold text-text-primary">{deliveryLabel}</span>
+                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning' : 'text-text-secondary'}>
+                  {deliveryMode === 'scheduled' ? '⚠️ ENTREGA' : 'Entrega'}
+                </span>
+                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning uppercase' : 'font-semibold text-text-primary'}>
+                  {deliveryLabel}
+                </span>
               </div>
               <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
               {hasUsdGroups && (
@@ -305,8 +309,12 @@ export function CheckoutPage() {
                 <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span className="text-text-secondary">Entrega</span>
-                <span className="font-semibold text-text-primary">{deliveryLabel}</span>
+                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning' : 'text-text-secondary'}>
+                  {deliveryMode === 'scheduled' ? '⚠️ ENTREGA' : 'Entrega'}
+                </span>
+                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning uppercase' : 'font-semibold text-text-primary'}>
+                  {deliveryLabel}
+                </span>
               </div>
               <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
               <div className="border-t border-border pt-3 flex justify-between items-baseline">
