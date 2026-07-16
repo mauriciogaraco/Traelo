@@ -2665,7 +2665,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 460,
       "stockStatus": "disponible"
     },
     {
@@ -3331,7 +3331,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 460,
       "stockStatus": "disponible"
     },
     {
@@ -5943,7 +5943,7 @@
       "image": "🥚",
       "photo": "/assets/images/products/TuKprichito/Huevos-frescos-de-granja.jpg",
       "price": 100,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-017",
