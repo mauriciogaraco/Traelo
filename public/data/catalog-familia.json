@@ -109,7 +109,6 @@
       "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
       "image": "/assets/images/business/Cronos.jpg",
       "color": "from-sky-100 to-cyan-50",
-      "deliveryFee": 0,
       "schedule": {
         "days": [
           0,
