@@ -52,5 +52,31 @@
     "price": 1100,
     "featured": true,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-005",
+    "name": "Smoothie de Vainilla",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de vainilla.",
+    "longDescription": "Batido de helado de vainilla, suave y cremoso. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🍦",
+    "photo": "/assets/images/products/Cronos/helado-Vanilla.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-006",
+    "name": "Smoothie de Naranja y Piña",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de naranja y piña.",
+    "longDescription": "Batido de helado de naranja y piña, tropical y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🍊",
+    "photo": "/assets/images/products/Cronos/Helado-Naranja-Piña.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
   }
 ]
