@@ -101,6 +101,7 @@
     "description": "Bodega de confianza: alimentos, bebidas, aseo y más, todo en un solo lugar.",
     "image": "/assets/images/business/Tu-Kprichito.jpg",
     "color": "from-violet-100 to-purple-50",
+    "status": "cerrado",
     "schedule": {
       "days": [0, 1, 2, 3, 4, 5, 6],
       "open": "09:00",
