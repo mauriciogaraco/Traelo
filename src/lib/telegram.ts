@@ -21,7 +21,9 @@ export function buildOrderMessage(order: Order): string {
     `📍 <b>Dirección:</b> ${esc(address.direccion)}`,
     ...(address.referencia ? [`🧭 <b>Referencia:</b> ${esc(address.referencia)}`] : []),
     `📞 <b>Teléfono:</b> ${esc(address.telefono)}`,
-    `🕒 <b>Entrega:</b> ${esc(order.delivery ?? 'Lo antes posible')}`,
+    order.delivery && order.delivery !== 'Lo antes posible'
+      ? `⚠️⏰ <b>ENTREGA: ${esc(order.delivery.toUpperCase())}</b>`
+      : `🕒 <b>Entrega:</b> ${esc('Lo antes posible')}`,
     '',
   ]
 
