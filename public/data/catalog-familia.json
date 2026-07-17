@@ -120,8 +120,8 @@
           6
         ],
         "open": "09:00",
-        "close": "17:00",
-        "label": "Todos los días · 9:00 am – 5:00 pm"
+        "close": "18:00",
+        "label": "Todos los días · 9:00 am – 6:00 pm"
       }
     },
     {
@@ -154,7 +154,6 @@
       "description": "Bodega de confianza: alimentos, bebidas, aseo y más, todo en un solo lugar.",
       "image": "/assets/images/business/Tu-Kprichito.jpg",
       "color": "from-violet-100 to-purple-50",
-      "status": "cerrado",
       "schedule": {
         "days": [
           0,
@@ -166,8 +165,8 @@
           6
         ],
         "open": "09:00",
-        "close": "21:00",
-        "label": "Todos los días · 9:00 am – 9:00 pm"
+        "close": "17:00",
+        "label": "Todos los días · 9:00 am – 5:00 pm"
       }
     },
     {
