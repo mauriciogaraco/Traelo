@@ -4616,7 +4616,7 @@
       "options": [
         "S"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-007",
@@ -4799,7 +4799,7 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Bolso_milano, 2-piezas.jpg",
       "price": 20,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-019",
@@ -5097,8 +5097,7 @@
       "photo": "/assets/images/products/Eme Boutique/maya-negra-con-mangas.jpg",
       "price": 15,
       "options": [
-        "S",
-        "M"
+        "S"
       ],
       "stockStatus": "disponible"
     },
@@ -5129,7 +5128,7 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/organizador.jpg",
       "price": 12,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-040",
@@ -5690,7 +5689,7 @@
       "image": "⌚",
       "photo": "/assets/images/products/Eme Boutique/rolex-daytona-cara-negra.jpg",
       "price": 130,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-076",
@@ -5716,7 +5715,7 @@
       "image": "⌚",
       "photo": "/assets/images/products/Eme Boutique/Rolex-presidente-mujer.jpg",
       "price": 120,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-078",
@@ -5729,7 +5728,7 @@
       "image": "⌚",
       "photo": "/assets/images/products/Eme Boutique/rolex-presidente-dorado-mujer.jpg",
       "price": 120,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-079",
@@ -5755,6 +5754,19 @@
       "image": "⌚",
       "photo": "/assets/images/products/Eme Boutique/Audemars-Piguet-plateado-cara-negra.jpg",
       "price": 65,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-081",
+      "name": "Bolso Milano",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Solo el bolso.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "👜",
+      "photo": "/assets/images/products/Eme Boutique/Bolso_milano, 2-piezas.jpg",
+      "price": 18,
       "stockStatus": "disponible"
     },
     {
