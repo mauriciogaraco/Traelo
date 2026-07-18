@@ -5758,6 +5758,19 @@
     },
     {
       "id": "eb-081",
+      "name": "Conjunto Jemour Blanco",
+      "businessId": "eme-boutique",
+      "businessName": "Eme Boutique",
+      "category": "Ropa",
+      "shortDescription": "Precio en USD.",
+      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
+      "image": "👗",
+      "photo": "/assets/images/products/Eme Boutique/conjunto-jemour-blanco.jpg",
+      "price": 25,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "eb-082",
       "name": "Bolso Milano",
       "businessId": "eme-boutique",
       "businessName": "Eme Boutique",
