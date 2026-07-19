@@ -45,6 +45,8 @@ export interface Business {
   hidden?: boolean
   /** Horario de atención. */
   schedule: BusinessSchedule
+  /** Bloque horario adicional para días con horario distinto (ej: domingo). */
+  scheduleExtra?: BusinessSchedule
 }
 
 /** Agrego opcional (extra) que se puede sumar a un producto, ej: { name: 'Queso', price: 200 }. */

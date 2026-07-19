@@ -111,7 +111,6 @@
       "color": "from-sky-100 to-cyan-50",
       "schedule": {
         "days": [
-          0,
           1,
           2,
           3,
@@ -121,7 +120,15 @@
         ],
         "open": "09:00",
         "close": "18:00",
-        "label": "Todos los días · 9:00 am – 6:00 pm"
+        "label": "Lun–Sáb · 9:00 am – 6:00 pm · Dom · 12:00 pm – 8:00 pm"
+      },
+      "scheduleExtra": {
+        "days": [
+          0
+        ],
+        "open": "12:00",
+        "close": "20:00",
+        "label": "Dom · 12:00 pm – 8:00 pm"
       }
     },
     {
