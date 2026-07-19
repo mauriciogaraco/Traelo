@@ -8,10 +8,11 @@ function toMinutes(hhmm: string): number {
 /** ¿El negocio está abierto ahora mismo? */
 export function isOpenNow(business: Business, now: Date = new Date()): boolean {
   if (business.status === 'cerrado') return false
-  const { schedule } = business
-  if (!schedule.days.includes(now.getDay())) return false
   const cur = now.getHours() * 60 + now.getMinutes()
-  return cur >= toMinutes(schedule.open) && cur < toMinutes(schedule.close)
+  const day = now.getDay()
+  const check = (s: typeof business.schedule) =>
+    s.days.includes(day) && cur >= toMinutes(s.open) && cur < toMinutes(s.close)
+  return check(business.schedule) || (business.scheduleExtra ? check(business.scheduleExtra) : false)
 }
 
 /** Texto corto del horario, ej: "Lun–Sáb · 9:00 am – 5:00 pm". */
