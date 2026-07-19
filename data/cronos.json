@@ -36,7 +36,6 @@
     "image": "🍓",
     "photo": "/assets/images/products/Cronos/Helado-fresa.jpg",
     "price": 1100,
-    "featured": true,
     "stockStatus": "disponible"
   },
   {
@@ -76,6 +75,33 @@
     "longDescription": "Batido de helado de naranja y piña, tropical y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
     "image": "🍊",
     "photo": "/assets/images/products/Cronos/Helado-Naranja-Piña.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-007",
+    "name": "Smoothie de Avellana",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de avellana.",
+    "longDescription": "Batido de helado sabor avellana, cremoso e irresistible. Coronado con crema batida, maní, sirope y confituras de decoración.",
+    "image": "🌰",
+    "photo": "/assets/images/products/Cronos/Helado-Sabor-Avellana.jpg",
+    "price": 1100,
+    "featured": true,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-008",
+    "name": "Smoothie de Mantecado",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de mantecado.",
+    "longDescription": "Batido de helado de mantecado, suave y nostálgico. Coronado con crema batida, maní, sirope y confituras de decoración.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Cronos/Helado-Mantecado.jpg",
     "price": 1100,
     "stockStatus": "disponible"
   }
