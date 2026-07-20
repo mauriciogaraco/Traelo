@@ -17,6 +17,7 @@ const BUSINESS_FILES = [
   'eme-boutique',
   'tu-kprichito',
   'amore',
+  'cafeteria-d-leo',
   'al-carbon',
 ];
 

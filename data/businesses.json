@@ -71,6 +71,7 @@
     "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
     "image": "/assets/images/business/Cronos.jpg",
     "color": "from-sky-100 to-cyan-50",
+    "status": "cerrado",
     "schedule": {
       "days": [1, 2, 3, 4, 5, 6],
       "open": "09:00",
@@ -137,6 +138,19 @@
       "open": "09:00",
       "close": "17:00",
       "label": "Lun–Sáb · 9:00 am – 5:00 pm"
+    }
+  },
+  {
+    "id": "cafeteria-d-leo",
+    "name": "Cafetería D' Leo",
+    "description": "Panes con bistec, hamburguesa y tortilla, preparados con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+    "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
+    "color": "from-yellow-100 to-amber-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Todos los días · 9:00 am – 5:00 pm"
     }
   },
   {
