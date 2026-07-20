@@ -219,6 +219,27 @@
       }
     },
     {
+      "id": "cafeteria-d-leo",
+      "name": "Cafetería D' Leo",
+      "description": "Panes con bistec, hamburguesa y tortilla, preparados con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
+      "color": "from-yellow-100 to-amber-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "17:00",
+        "label": "Todos los días · 9:00 am – 5:00 pm"
+      }
+    },
+    {
       "id": "al-carbon",
       "name": "Al Carbón",
       "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
@@ -6547,6 +6568,84 @@
           "price": 1000
         }
       ]
+    },
+    {
+      "id": "cdl-001",
+      "name": "Pan con Hamburguesa",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Panes",
+      "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
+      "longDescription": "Pan con hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "image": "🍔",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Hamburguesa-450.jpg",
+      "price": 450,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-002",
+      "name": "Pan con Tortilla",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Panes",
+      "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
+      "longDescription": "Pan con tortilla, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "image": "🥚",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla-400.jpg",
+      "price": 400,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-003",
+      "name": "Pan con Tortilla y Hamburguesa",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Panes",
+      "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
+      "longDescription": "Pan con tortilla y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "image": "🍔",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/pan-Con-Tortilla-y-Hamburguesa-600.jpg",
+      "price": 600,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-004",
+      "name": "Pan con Bistec",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Panes",
+      "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
+      "longDescription": "Pan con bistec, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "image": "🥩",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-800.jpg",
+      "price": 800,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-005",
+      "name": "Pan con Bistec y Hamburguesa",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Panes",
+      "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
+      "longDescription": "Pan con bistec y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "image": "🥩",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-Y-Hamburguesa-1000.jpg",
+      "price": 1000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-006",
+      "name": "Cerveza Presidente",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Bebidas",
+      "shortDescription": "Lata fría.",
+      "longDescription": "Cerveza Presidente fría, se vende por unidad.",
+      "image": "🍺",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/cerveza-presidente-380.jpg",
+      "price": 380,
+      "stockStatus": "disponible"
     },
     {
       "id": "ac-001",

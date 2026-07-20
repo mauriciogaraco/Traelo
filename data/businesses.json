@@ -141,6 +141,19 @@
     }
   },
   {
+    "id": "cafeteria-d-leo",
+    "name": "Cafetería D' Leo",
+    "description": "Panes con bistec, hamburguesa y tortilla, preparados con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+    "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
+    "color": "from-yellow-100 to-amber-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Todos los días · 9:00 am – 5:00 pm"
+    }
+  },
+  {
     "id": "al-carbon",
     "name": "Al Carbón",
     "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
