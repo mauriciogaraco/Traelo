@@ -391,7 +391,7 @@
       "image": "🍟",
       "photo": "/assets/images/products/mercadito/chicharrones.jpg",
       "price": 900,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-003",
