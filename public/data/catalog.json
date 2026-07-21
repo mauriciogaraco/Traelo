@@ -6037,19 +6037,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "tk-016",
-      "name": "Huevos frescos de granja",
-      "businessId": "tu-kprichito",
-      "businessName": "Tu Kprichito",
-      "category": "Alimentos",
-      "shortDescription": "Precio por unidad.",
-      "longDescription": "Huevos frescos de granja. Precio por unidad. Indica la cantidad al confirmar.",
-      "image": "🥚",
-      "photo": "/assets/images/products/TuKprichito/Huevos-frescos-de-granja.jpg",
-      "price": 100,
-      "stockStatus": "agotado"
-    },
-    {
       "id": "tk-017",
       "name": "Galletas dulces de Cremita",
       "businessId": "tu-kprichito",
@@ -6268,7 +6255,7 @@
       "image": "🧴",
       "photo": "/assets/images/products/TuKprichito/detergente-líquido-5litros.jpg",
       "price": 3000,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-033",
@@ -6281,7 +6268,7 @@
       "image": "🧴",
       "photo": "/assets/images/products/TuKprichito/detergente-liquido.jpg",
       "price": 500,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-034",
@@ -6411,7 +6398,7 @@
       "image": "🥩",
       "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
       "price": 1500,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "tk-044",
@@ -6438,6 +6425,30 @@
       "photo": "/assets/images/products/TuKprichito/salchichas.jpg",
       "price": 660,
       "stockStatus": "agotado"
+    },
+    {
+      "id": "tk-046",
+      "name": "Aceite",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Aceite de cocina, se vende por unidad.",
+      "image": "🫙",
+      "price": 2000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "tk-047",
+      "name": "Arroz de Guyana",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por libra.",
+      "longDescription": "Arroz de Guyana, se vende por libra.",
+      "image": "🍚",
+      "price": 320,
+      "stockStatus": "disponible"
     },
     {
       "id": "am-001",
