@@ -405,7 +405,7 @@
       "photo": "/assets/images/products/mercadito/shaka.jpg",
       "price": 400,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-004",
@@ -426,7 +426,7 @@
         "Naranja",
         "Frambuesa"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-005",
@@ -440,7 +440,7 @@
       "photo": "/assets/images/products/mercadito/papel_higienico.jpg",
       "price": 470,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-008",
@@ -454,7 +454,7 @@
       "photo": "/assets/images/products/mercadito/botonetas.jpg",
       "price": 45,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-009",
@@ -581,7 +581,7 @@
         "Pingüino",
         "Mono"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-020",
@@ -716,9 +716,9 @@
       "longDescription": "Se vende por cajas de 20 unidades.",
       "image": "🍝",
       "photo": "/assets/images/products/mercadito/spaguetti.jpg",
-      "price": 240,
+      "price": 255,
       "formato": 20,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-031",
@@ -749,7 +749,7 @@
         "Fresa",
         "Natural"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-033",
@@ -820,34 +820,30 @@
     },
     {
       "id": "bc-039",
-      "name": "Zumo Naranja/Limón",
+      "name": "Zumo de Naranja",
       "businessId": "bodega-central",
       "businessName": "Mercado Alpha",
       "category": "Alimentos",
-      "shortDescription": "",
-      "longDescription": "Se vende por blister de 10 unidades",
-      "image": "🧃",
+      "shortDescription": "Blister de 10 unidades.",
+      "longDescription": "Se vende por blister de 10 unidades.",
+      "image": "🍊",
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
       "price": 260,
       "formato": 10,
-      "options": [
-        "Naranja",
-        "Limón"
-      ],
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
-      "id": "bc-041",
-      "name": "Saco de Arroz 50lb",
+      "id": "bc-039b",
+      "name": "Zumo de Limón",
       "businessId": "bodega-central",
       "businessName": "Mercado Alpha",
       "category": "Alimentos",
-      "shortDescription": "Arroz Americano.",
-      "longDescription": "El mejor precio del mercado , sale a 280 la libra",
-      "image": "🍚",
-      "photo": "/assets/images/products/mercadito/arroz50lb.jpg",
-      "price": 14000,
-      "formato": 1,
+      "shortDescription": "Blister de 10 unidades.",
+      "longDescription": "Se vende por blister de 10 unidades.",
+      "image": "🍋",
+      "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
+      "price": 260,
+      "formato": 10,
       "stockStatus": "agotado"
     },
     {
@@ -874,7 +870,7 @@
       "longDescription": "Se vende por saco",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-      "price": 31000,
+      "price": 28500,
       "stockStatus": "disponible"
     },
     {
@@ -903,6 +899,20 @@
       "photo": "/assets/images/products/mercadito/jabón_lavar_multiuso.jpg",
       "price": 260,
       "formato": 40,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-046",
+      "name": "Detergente en polvo Viking Market (1 kg)",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Saco de 15 paquetes de 1 kg.",
+      "longDescription": "Detergente en polvo Viking Market Extra Clean Limón Fresh, 1 kg por paquete. Se vende por saco de 15 paquetes.",
+      "image": "🧺",
+      "photo": "/assets/images/products/mercadito/detergente_en-polvo-1kg.jpg",
+      "price": 960,
+      "formato": 15,
       "stockStatus": "disponible"
     },
     {
@@ -6037,19 +6047,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "tk-016",
-      "name": "Huevos frescos de granja",
-      "businessId": "tu-kprichito",
-      "businessName": "Tu Kprichito",
-      "category": "Alimentos",
-      "shortDescription": "Precio por unidad.",
-      "longDescription": "Huevos frescos de granja. Precio por unidad. Indica la cantidad al confirmar.",
-      "image": "🥚",
-      "photo": "/assets/images/products/TuKprichito/Huevos-frescos-de-granja.jpg",
-      "price": 100,
-      "stockStatus": "agotado"
-    },
-    {
       "id": "tk-017",
       "name": "Galletas dulces de Cremita",
       "businessId": "tu-kprichito",
@@ -6201,7 +6198,7 @@
       "shortDescription": "Se vende por unidad.",
       "longDescription": "Cerveza Becks, se vende por unidad.",
       "image": "🍺",
-      "photo": "/assets/images/products/TuKprichito/cerveza-shaka-energético.jpg",
+      "photo": "/assets/images/products/TuKprichito/cerveza-beck's-400.jpg",
       "price": 400,
       "stockStatus": "disponible"
     },
@@ -6268,7 +6265,7 @@
       "image": "🧴",
       "photo": "/assets/images/products/TuKprichito/detergente-líquido-5litros.jpg",
       "price": 3000,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-033",
@@ -6281,7 +6278,7 @@
       "image": "🧴",
       "photo": "/assets/images/products/TuKprichito/detergente-liquido.jpg",
       "price": 500,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-034",
@@ -6411,7 +6408,7 @@
       "image": "🥩",
       "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
       "price": 1500,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "tk-044",
@@ -6438,6 +6435,115 @@
       "photo": "/assets/images/products/TuKprichito/salchichas.jpg",
       "price": 660,
       "stockStatus": "agotado"
+    },
+    {
+      "id": "tk-046",
+      "name": "Aceite de Soja Marwa",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Alimentos",
+      "shortDescription": "Botella de 900 ml.",
+      "longDescription": "Aceite de soja Marwa, 100% puro, botella de 900 ml.",
+      "image": "🫙",
+      "photo": "/assets/images/products/TuKprichito/Aceite-de-soja-2000.jpg",
+      "price": 2000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "tk-047",
+      "name": "Arroz de Guyana",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por libra.",
+      "longDescription": "Arroz de Guyana, se vende por libra.",
+      "image": "🍚",
+      "price": 320,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "tk-048",
+      "name": "Atún en lata Docanned Star",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Alimentos",
+      "shortDescription": "En aceite vegetal. Se vende por lata.",
+      "longDescription": "Atún en aceite vegetal Docanned Star, se vende por lata.",
+      "image": "🥫",
+      "photo": "/assets/images/products/TuKprichito/Atún-lata-550.jpg",
+      "price": 550,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "tk-049",
+      "name": "Detergente en polvo Silver Bright (900g)",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Aseo",
+      "shortDescription": "Bolsa de 900 gramos.",
+      "longDescription": "Detergente en polvo Silver Bright, bolsa de 900 gramos. Biodegradable, aroma fresco y duradero.",
+      "image": "🧺",
+      "photo": "/assets/images/products/TuKprichito/Detergente-900gramos-900.jpg",
+      "price": 900,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "tk-050",
+      "name": "Estuche 6 jabones Kare",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Aseo",
+      "shortDescription": "Elige la fragancia.",
+      "longDescription": "Estuche de 6 jabones de olor Kare Beauty Soap. Disponible en 4 fragancias.",
+      "image": "🧼",
+      "photo": "/assets/images/products/TuKprichito/Estuches-6-jabones-1400.jpg",
+      "price": 1400,
+      "stockStatus": "disponible",
+      "options": [
+        "Classic Creamy",
+        "Tropical Blossom",
+        "Savon Cologne",
+        "Pearly Shine"
+      ]
+    },
+    {
+      "id": "tk-051",
+      "name": "Frijoles negros (1 kg)",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Alimentos",
+      "shortDescription": "Bolsa de 1 kg.",
+      "longDescription": "Frijoles negros, bolsa de 1 kilogramo.",
+      "image": "🫘",
+      "photo": "/assets/images/products/TuKprichito/Frijoles-1kg-800.jpg",
+      "price": 800,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "tk-052",
+      "name": "Íntimas Angélica (18 un.)",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Aseo",
+      "shortDescription": "Paquete de 18 unidades.",
+      "longDescription": "Almohadillas sanitarias Angélica, anatómicas sin alas, flujo normal. Paquete de 18 unidades.",
+      "image": "🩸",
+      "photo": "/assets/images/products/TuKprichito/Intimas-Angélicas-800.jpg",
+      "price": 800,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "tk-053",
+      "name": "Leche en polvo Purelac Max Pro (400g)",
+      "businessId": "tu-kprichito",
+      "businessName": "Tu Kprichito",
+      "category": "Alimentos",
+      "shortDescription": "Bolsa de 400 gramos.",
+      "longDescription": "Leche en polvo Purelac Max Pro de Tangara, bolsa de 400 gramos. Dairy blend instantáneo.",
+      "image": "🥛",
+      "photo": "/assets/images/products/TuKprichito/Leche-en-polvo-400gramos-2000.jpg",
+      "price": 2000,
+      "stockStatus": "disponible"
     },
     {
       "id": "am-001",
