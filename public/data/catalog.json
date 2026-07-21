@@ -109,7 +109,6 @@
       "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
       "image": "/assets/images/business/Cronos.jpg",
       "color": "from-sky-100 to-cyan-50",
-      "status": "cerrado",
       "schedule": {
         "days": [
           1,
@@ -224,7 +223,6 @@
       "description": "Panes con bistec, hamburguesa y tortilla, preparados con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
       "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
       "color": "from-yellow-100 to-amber-50",
-      "status": "cerrado",
       "schedule": {
         "days": [
           0,
@@ -6637,6 +6635,18 @@
     },
     {
       "id": "cdl-006",
+      "name": "Malta Morena",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Malta morena fría, se vende por unidad.",
+      "image": "🍺",
+      "price": 350,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-007",
       "name": "Cerveza Presidente",
       "businessId": "cafeteria-d-leo",
       "businessName": "Cafetería D' Leo",
@@ -6646,6 +6656,30 @@
       "image": "🍺",
       "photo": "/assets/images/products/Cafetería-D'-Leo/cerveza-presidente-380.jpg",
       "price": 380,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-008",
+      "name": "Refresco de Limón",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Refresco de limón frío, se vende por unidad.",
+      "image": "🥤",
+      "price": 350,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-009",
+      "name": "Cerveza 3 Caballos",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Cerveza 3 Caballos fría, se vende por unidad.",
+      "image": "🍺",
+      "price": 400,
       "stockStatus": "disponible"
     },
     {
