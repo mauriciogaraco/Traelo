@@ -391,7 +391,7 @@
       "image": "🍟",
       "photo": "/assets/images/products/mercadito/chicharrones.jpg",
       "price": 900,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-003",
@@ -405,7 +405,7 @@
       "photo": "/assets/images/products/mercadito/shaka.jpg",
       "price": 400,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-004",
@@ -426,7 +426,7 @@
         "Naranja",
         "Frambuesa"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-005",
@@ -440,7 +440,7 @@
       "photo": "/assets/images/products/mercadito/papel_higienico.jpg",
       "price": 470,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-008",
@@ -454,7 +454,7 @@
       "photo": "/assets/images/products/mercadito/botonetas.jpg",
       "price": 45,
       "formato": 24,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-009",
@@ -581,7 +581,7 @@
         "Pingüino",
         "Mono"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-020",
@@ -716,9 +716,9 @@
       "longDescription": "Se vende por cajas de 20 unidades.",
       "image": "🍝",
       "photo": "/assets/images/products/mercadito/spaguetti.jpg",
-      "price": 240,
+      "price": 255,
       "formato": 20,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-031",
@@ -749,7 +749,7 @@
         "Fresa",
         "Natural"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-033",
@@ -820,34 +820,30 @@
     },
     {
       "id": "bc-039",
-      "name": "Zumo Naranja/Limón",
+      "name": "Zumo de Naranja",
       "businessId": "bodega-central",
       "businessName": "Mercado Alpha",
       "category": "Alimentos",
-      "shortDescription": "",
-      "longDescription": "Se vende por blister de 10 unidades",
-      "image": "🧃",
+      "shortDescription": "Blister de 10 unidades.",
+      "longDescription": "Se vende por blister de 10 unidades.",
+      "image": "🍊",
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
       "price": 260,
       "formato": 10,
-      "options": [
-        "Naranja",
-        "Limón"
-      ],
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
-      "id": "bc-041",
-      "name": "Saco de Arroz 50lb",
+      "id": "bc-039b",
+      "name": "Zumo de Limón",
       "businessId": "bodega-central",
       "businessName": "Mercado Alpha",
       "category": "Alimentos",
-      "shortDescription": "Arroz Americano.",
-      "longDescription": "El mejor precio del mercado , sale a 280 la libra",
-      "image": "🍚",
-      "photo": "/assets/images/products/mercadito/arroz50lb.jpg",
-      "price": 14000,
-      "formato": 1,
+      "shortDescription": "Blister de 10 unidades.",
+      "longDescription": "Se vende por blister de 10 unidades.",
+      "image": "🍋",
+      "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
+      "price": 260,
+      "formato": 10,
       "stockStatus": "agotado"
     },
     {
@@ -874,7 +870,7 @@
       "longDescription": "Se vende por saco",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-      "price": 31000,
+      "price": 28500,
       "stockStatus": "disponible"
     },
     {
@@ -903,6 +899,20 @@
       "photo": "/assets/images/products/mercadito/jabón_lavar_multiuso.jpg",
       "price": 260,
       "formato": 40,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-046",
+      "name": "Detergente en polvo Viking Market (1 kg)",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Aseo",
+      "shortDescription": "Saco de 15 paquetes de 1 kg.",
+      "longDescription": "Detergente en polvo Viking Market Extra Clean Limón Fresh, 1 kg por paquete. Se vende por saco de 15 paquetes.",
+      "image": "🧺",
+      "photo": "/assets/images/products/mercadito/detergente_en-polvo-1kg.jpg",
+      "price": 960,
+      "formato": 15,
       "stockStatus": "disponible"
     },
     {
