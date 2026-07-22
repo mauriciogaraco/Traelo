@@ -2453,7 +2453,7 @@
       "shortDescription": "Pan con jamón.",
       "longDescription": "Pan con jamón recién preparado.",
       "image": "🥪",
-      "price": 0.58,
+      "price": 0.68,
       "stockStatus": "disponible"
     },
     {
@@ -2465,7 +2465,7 @@
       "shortDescription": "Jamón y queso.",
       "longDescription": "Pan con jamón y queso.",
       "image": "🥪",
-      "price": 0.68,
+      "price": 0.78,
       "stockStatus": "disponible"
     },
     {
@@ -2477,7 +2477,7 @@
       "shortDescription": "Hamburguesa de la casa.",
       "longDescription": "Hamburguesa preparada al momento.",
       "image": "🍔",
-      "price": 0.8,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -2489,7 +2489,7 @@
       "shortDescription": "Especialidad de la casa.",
       "longDescription": "Pan Macu preparado al momento.",
       "image": "🥪",
-      "price": 1.2,
+      "price": 1.3,
       "stockStatus": "disponible"
     },
     {
@@ -2502,7 +2502,7 @@
       "longDescription": "Versión especial del Macu con ingredientes premium.",
       "image": "🥪",
       "photo": "/assets/images/products/Macus/pan_macu.jpg",
-      "price": 2.74,
+      "price": 2.84,
       "stockStatus": "disponible"
     },
     {
@@ -2514,7 +2514,7 @@
       "shortDescription": "Aporreado tradicional.",
       "longDescription": "Pan con aporreado recién preparado.",
       "image": "🥪",
-      "price": 0.74,
+      "price": 0.8,
       "stockStatus": "disponible"
     },
     {
@@ -2538,7 +2538,7 @@
       "shortDescription": "Combinación surtida.",
       "longDescription": "Pan surtido con diferentes ingredientes.",
       "image": "🥪",
-      "price": 0.74,
+      "price": 0.84,
       "stockStatus": "disponible"
     },
     {
@@ -2550,7 +2550,7 @@
       "shortDescription": "Versión especial.",
       "longDescription": "Pan surtido especial.",
       "image": "🥪",
-      "price": 1.28,
+      "price": 1.5,
       "stockStatus": "disponible"
     },
     {
@@ -2562,7 +2562,7 @@
       "shortDescription": "Tortilla recién hecha.",
       "longDescription": "Pan con tortilla.",
       "image": "🥚",
-      "price": 0.6,
+      "price": 0.7,
       "stockStatus": "disponible"
     },
     {
@@ -2574,7 +2574,7 @@
       "shortDescription": "Versión especial.",
       "longDescription": "Pan con jamón y queso especial.",
       "image": "🥪",
-      "price": 0.98,
+      "price": 1.1,
       "stockStatus": "disponible"
     },
     {
@@ -2622,7 +2622,7 @@
       "shortDescription": "Mortadella.",
       "longDescription": "Pan con mortadella.",
       "image": "🥪",
-      "price": 0.54,
+      "price": 0.64,
       "stockStatus": "disponible"
     },
     {
@@ -2634,7 +2634,7 @@
       "shortDescription": "Lomo ahumado.",
       "longDescription": "Pan con lomo ahumado.",
       "image": "🥪",
-      "price": 1.4,
+      "price": 1.5,
       "stockStatus": "disponible"
     },
     {
@@ -2670,7 +2670,7 @@
       "shortDescription": "Vaca frita.",
       "longDescription": "Pan con vaca frita.",
       "image": "🥩",
-      "price": 1.14,
+      "price": 1.7,
       "stockStatus": "agotado"
     },
     {
@@ -2682,7 +2682,7 @@
       "shortDescription": "",
       "longDescription": "",
       "image": "🥪",
-      "price": 2.2,
+      "price": 2.3,
       "stockStatus": "disponible"
     },
     {
@@ -2694,7 +2694,7 @@
       "shortDescription": "Pan especial imperial",
       "longDescription": "",
       "image": "🥪",
-      "price": 2.6,
+      "price": 2.8,
       "stockStatus": "disponible"
     },
     {
@@ -2706,7 +2706,43 @@
       "shortDescription": "Pan con chorizo",
       "longDescription": "",
       "image": "🥩",
-      "price": 0.64,
+      "price": 0.74,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-027",
+      "name": "Lechonazo",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Pan con lechón.",
+      "longDescription": "Pan con lechonazo recién preparado.",
+      "image": "🥩",
+      "price": 2.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-028",
+      "name": "Ropa Vieja",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Ropa vieja tradicional.",
+      "longDescription": "Pan con ropa vieja recién preparada.",
+      "image": "🥩",
+      "price": 1.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "pm-029",
+      "name": "Carne Asada",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Carne asada.",
+      "longDescription": "Pan con carne asada recién preparada.",
+      "image": "🥩",
+      "price": 1.5,
       "stockStatus": "disponible"
     },
     {
