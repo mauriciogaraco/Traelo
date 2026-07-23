@@ -369,6 +369,18 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "cr-009",
+      "name": "Smoothie de Dulce de Leche",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de dulce de leche.",
+      "longDescription": "Batido de helado de dulce de leche, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍮",
+      "price": 2.2,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "bc-001",
       "name": "Avena con leche",
       "businessId": "bodega-central",
