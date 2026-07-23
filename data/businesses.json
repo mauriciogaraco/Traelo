@@ -73,15 +73,15 @@
     "color": "from-sky-100 to-cyan-50",
     "schedule": {
       "days": [1, 2, 3, 4, 5, 6],
-      "open": "12:00",
+      "open": "09:00",
       "close": "18:00",
-      "label": "Lun–Sáb · 12:00 pm – 6:00 pm · Dom · 12:00 pm – 8:00 pm"
+      "label": "Lun–Sáb · 9:00 am – 6:00 pm · Dom · 12:00 pm – 6:00 pm"
     },
     "scheduleExtra": {
       "days": [0],
       "open": "12:00",
-      "close": "20:00",
-      "label": "Dom · 12:00 pm – 8:00 pm"
+      "close": "18:00",
+      "label": "Dom · 12:00 pm – 6:00 pm"
     }
   },
   {
@@ -145,6 +145,7 @@
     "description": "Panes con bistec, hamburguesa y tortilla, preparados con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
     "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
     "color": "from-yellow-100 to-amber-50",
+    "status": "cerrado",
     "schedule": {
       "days": [0, 1, 2, 3, 4, 5, 6],
       "open": "09:00",
