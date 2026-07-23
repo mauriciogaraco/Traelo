@@ -364,7 +364,7 @@
     "image": "🚬",
     "photo": "/assets/images/products/TuKprichito/cigarro H.upman sin filtro.jpg",
     "price": 400,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-030",
@@ -377,7 +377,7 @@
     "image": "🚬",
     "photo": "/assets/images/products/TuKprichito/cigarro popular-rojo.jpg",
     "price": 520,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-031",
