@@ -369,6 +369,19 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "cr-009",
+      "name": "Smoothie de Dulce de Leche",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de dulce de leche.",
+      "longDescription": "Batido de helado de dulce de leche, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍮",
+      "photo": "/assets/images/products/Cronos/Helado-Dulce-De-Leche.jpg",
+      "price": 2.2,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "bc-001",
       "name": "Avena con leche",
       "businessId": "bodega-central",
@@ -762,9 +775,9 @@
       "longDescription": "Se venden por blister 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-      "price": 0.68,
+      "price": 0.72,
       "formato": 10,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-034",
@@ -903,6 +916,30 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "bc-047",
+      "name": "Vino Seco",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Vino seco, se vende por unidad.",
+      "image": "🍷",
+      "price": 0.52,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-048",
+      "name": "Pollo de postas",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Pollo de postas. Indica la cantidad al confirmar el pedido.",
+      "image": "🍗",
+      "price": 3.8,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "bc-046",
       "name": "Detergente en polvo Viking Market (1 kg)",
       "businessId": "bodega-central",
@@ -912,7 +949,7 @@
       "longDescription": "Detergente en polvo Viking Market Extra Clean Limón Fresh, 1 kg por paquete. Se vende por saco de 15 paquetes.",
       "image": "🧺",
       "photo": "/assets/images/products/mercadito/detergente_en-polvo-1kg.jpg",
-      "price": 1.92,
+      "price": 2,
       "formato": 15,
       "stockStatus": "disponible"
     },
@@ -6931,7 +6968,7 @@
       "image": "🧼",
       "photo": "/assets/images/products/TuKprichito/jabón-de-baño.jpg",
       "price": 0.5,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-017",
@@ -7113,7 +7150,7 @@
       "image": "🚬",
       "photo": "/assets/images/products/TuKprichito/cigarro H.upman sin filtro.jpg",
       "price": 0.8,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-030",
@@ -7126,7 +7163,7 @@
       "image": "🚬",
       "photo": "/assets/images/products/TuKprichito/cigarro popular-rojo.jpg",
       "price": 1.04,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-031",
@@ -7295,7 +7332,7 @@
       "image": "🥩",
       "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
       "price": 3,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-044",
@@ -7307,8 +7344,8 @@
       "longDescription": "Muslos de pollo, se venden por paquete.",
       "image": "🍗",
       "photo": "/assets/images/products/TuKprichito/muslos de pollo.jpg",
-      "price": 3.6,
-      "stockStatus": "agotado"
+      "price": 4,
+      "stockStatus": "disponible"
     },
     {
       "id": "tk-045",
@@ -7359,7 +7396,7 @@
       "image": "🥫",
       "photo": "/assets/images/products/TuKprichito/Atún-lata-550.jpg",
       "price": 1.1,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-049",
@@ -7385,7 +7422,7 @@
       "image": "🧼",
       "photo": "/assets/images/products/TuKprichito/Estuches-6-jabones-1400.jpg",
       "price": 2.8,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "options": [
         "Classic Creamy",
         "Tropical Blossom",
