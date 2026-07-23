@@ -193,7 +193,7 @@
     "image": "🧼",
     "photo": "/assets/images/products/TuKprichito/jabón-de-baño.jpg",
     "price": 250,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-017",
@@ -546,7 +546,7 @@
     "image": "🥩",
     "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-044",
@@ -558,8 +558,8 @@
     "longDescription": "Muslos de pollo, se venden por paquete.",
     "image": "🍗",
     "photo": "/assets/images/products/TuKprichito/muslos de pollo.jpg",
-    "price": 1800,
-    "stockStatus": "agotado"
+    "price": 2000,
+    "stockStatus": "disponible"
   },
   {
     "id": "tk-045",
@@ -610,7 +610,7 @@
     "image": "🥫",
     "photo": "/assets/images/products/TuKprichito/Atún-lata-550.jpg",
     "price": 550,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-049",
@@ -636,7 +636,7 @@
     "image": "🧼",
     "photo": "/assets/images/products/TuKprichito/Estuches-6-jabones-1400.jpg",
     "price": 1400,
-    "stockStatus": "disponible",
+    "stockStatus": "agotado",
     "options": ["Classic Creamy", "Tropical Blossom", "Savon Cologne", "Pearly Shine"]
   },
   {

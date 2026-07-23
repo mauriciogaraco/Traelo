@@ -915,6 +915,18 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "bc-048",
+      "name": "Pollo de postas",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Pollo de postas. Indica la cantidad al confirmar el pedido.",
+      "image": "🍗",
+      "price": 1900,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "bc-046",
       "name": "Detergente en polvo Viking Market (1 kg)",
       "businessId": "bodega-central",
@@ -6943,7 +6955,7 @@
       "image": "🧼",
       "photo": "/assets/images/products/TuKprichito/jabón-de-baño.jpg",
       "price": 250,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-017",
@@ -7307,7 +7319,7 @@
       "image": "🥩",
       "photo": "/assets/images/products/TuKprichito/lomo de cerdo.jpg",
       "price": 1500,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-044",
@@ -7319,8 +7331,8 @@
       "longDescription": "Muslos de pollo, se venden por paquete.",
       "image": "🍗",
       "photo": "/assets/images/products/TuKprichito/muslos de pollo.jpg",
-      "price": 1800,
-      "stockStatus": "agotado"
+      "price": 2000,
+      "stockStatus": "disponible"
     },
     {
       "id": "tk-045",
@@ -7371,7 +7383,7 @@
       "image": "🥫",
       "photo": "/assets/images/products/TuKprichito/Atún-lata-550.jpg",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-049",
@@ -7397,7 +7409,7 @@
       "image": "🧼",
       "photo": "/assets/images/products/TuKprichito/Estuches-6-jabones-1400.jpg",
       "price": 1400,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "options": [
         "Classic Creamy",
         "Tropical Blossom",
