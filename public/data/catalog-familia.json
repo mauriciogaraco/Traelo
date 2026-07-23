@@ -762,9 +762,9 @@
       "longDescription": "Se venden por blister 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-      "price": 0.68,
+      "price": 0.72,
       "formato": 10,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-034",
@@ -900,6 +900,18 @@
       "photo": "/assets/images/products/mercadito/jabón_lavar_multiuso.jpg",
       "price": 0.52,
       "formato": 40,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-047",
+      "name": "Vino Seco",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Vino seco, se vende por unidad.",
+      "image": "🍷",
+      "price": 0.52,
       "stockStatus": "disponible"
     },
     {
