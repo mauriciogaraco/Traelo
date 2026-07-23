@@ -2455,6 +2455,40 @@
       "longDescription": "Pan con jamón recién preparado.",
       "image": "🥪",
       "price": 340,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2467,6 +2501,40 @@
       "longDescription": "Pan con jamón y queso.",
       "image": "🥪",
       "price": 390,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2479,6 +2547,40 @@
       "longDescription": "Hamburguesa preparada al momento.",
       "image": "🍔",
       "price": 450,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2491,6 +2593,40 @@
       "longDescription": "Pan Macu preparado al momento.",
       "image": "🥪",
       "price": 650,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2504,6 +2640,40 @@
       "image": "🥪",
       "photo": "/assets/images/products/Macus/pan_macu.jpg",
       "price": 1420,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2516,6 +2686,40 @@
       "longDescription": "Pan con aporreado recién preparado.",
       "image": "🥪",
       "price": 400,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2528,6 +2732,40 @@
       "longDescription": "Pan con picadillo.",
       "image": "🥪",
       "price": 210,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2540,6 +2778,40 @@
       "longDescription": "Pan surtido con diferentes ingredientes.",
       "image": "🥪",
       "price": 420,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2552,6 +2824,40 @@
       "longDescription": "Pan surtido especial.",
       "image": "🥪",
       "price": 750,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2564,6 +2870,40 @@
       "longDescription": "Pan con tortilla.",
       "image": "🥚",
       "price": 350,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2576,6 +2916,40 @@
       "longDescription": "Pan con jamón y queso especial.",
       "image": "🥪",
       "price": 550,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2588,6 +2962,40 @@
       "longDescription": "Croqueta para añadir al pan.",
       "image": "🍘",
       "price": 280,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "agotado"
     },
     {
@@ -2600,6 +3008,40 @@
       "longDescription": "Queso para añadir al pan.",
       "image": "🧀",
       "price": 300,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2612,6 +3054,40 @@
       "longDescription": "Perro caliente tamaño grande.",
       "image": "🌭",
       "price": 380,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2624,6 +3100,40 @@
       "longDescription": "Pan con mortadella.",
       "image": "🥪",
       "price": 320,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2636,6 +3146,40 @@
       "longDescription": "Pan con lomo ahumado.",
       "image": "🥪",
       "price": 750,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2648,6 +3192,40 @@
       "longDescription": "Pan con bistec de cerdo.",
       "image": "🥩",
       "price": 850,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2660,6 +3238,40 @@
       "longDescription": "Pan con bistec de res.",
       "image": "🥩",
       "price": 850,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "agotado"
     },
     {
@@ -2672,6 +3284,40 @@
       "longDescription": "Pan con vaca frita.",
       "image": "🥩",
       "price": 850,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "agotado"
     },
     {
@@ -2684,6 +3330,40 @@
       "longDescription": "",
       "image": "🥪",
       "price": 1150,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2696,6 +3376,40 @@
       "longDescription": "",
       "image": "🥪",
       "price": 1400,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2708,6 +3422,40 @@
       "longDescription": "",
       "image": "🥩",
       "price": 370,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2720,6 +3468,40 @@
       "longDescription": "Pan con lechonazo recién preparado.",
       "image": "🥩",
       "price": 1300,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2732,6 +3514,40 @@
       "longDescription": "Pan con ropa vieja recién preparada.",
       "image": "🥩",
       "price": 750,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
@@ -2744,6 +3560,40 @@
       "longDescription": "Pan con carne asada recién preparada.",
       "image": "🥩",
       "price": 750,
+      "addons": [
+        {
+          "name": "Hamburguesa",
+          "price": 250
+        },
+        {
+          "name": "Jamón",
+          "price": 100
+        },
+        {
+          "name": "Queso",
+          "price": 80
+        },
+        {
+          "name": "Chorizo",
+          "price": 100
+        },
+        {
+          "name": "Tortilla",
+          "price": 140
+        },
+        {
+          "name": "Mortadella",
+          "price": 80
+        },
+        {
+          "name": "Perro",
+          "price": 250
+        },
+        {
+          "name": "Aporreado",
+          "price": 220
+        }
+      ],
       "stockStatus": "disponible"
     },
     {
