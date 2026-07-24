@@ -153,6 +153,20 @@
     }
   },
   {
+    "id": "las-palmitas",
+    "name": "Las Palmitas",
+    "description": "Restaurante Las Palmitas — carnes, mariscos, pollo, coctelería y más en Güira de Melena.",
+    "image": "/assets/images/business/Las Palmitas.jpg",
+    "color": "from-green-100 to-lime-50",
+    "paymentNote": "A su cuenta se le suma el 5% de servicio.",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "12:00",
+      "close": "22:00",
+      "label": "Todos los días · 12:00 pm – 10:00 pm"
+    }
+  },
+  {
     "id": "heladeria-mk",
     "name": "Heladería M&K",
     "description": "Helados artesanales en copas individuales y tinas familiares.",
