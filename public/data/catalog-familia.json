@@ -8824,6 +8824,30 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "lp-113",
+      "name": "Cóctel de Langosta",
+      "businessId": "las-palmitas",
+      "businessName": "Las Palmitas",
+      "category": "Entrantes",
+      "shortDescription": "",
+      "longDescription": "Cóctel de langosta.",
+      "image": "🦞",
+      "price": 3.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lp-114",
+      "name": "Aceitunas",
+      "businessId": "las-palmitas",
+      "businessName": "Las Palmitas",
+      "category": "Entrantes",
+      "shortDescription": "",
+      "longDescription": "Aceitunas.",
+      "image": "🫒",
+      "price": 2,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "lp-075",
       "name": "Cóctel de Camarones",
       "businessId": "las-palmitas",
@@ -8940,7 +8964,7 @@
       "shortDescription": "",
       "longDescription": "Espagueti napolitano.",
       "image": "🍝",
-      "price": 5.6,
+      "price": 1.6,
       "stockStatus": "disponible"
     },
     {
