@@ -153,6 +153,19 @@
     }
   },
   {
+    "id": "heladeria-mk",
+    "name": "Heladería M&K",
+    "description": "Helados artesanales en copas individuales y tinas familiares.",
+    "image": "/assets/images/business/heladeria-mk.jpg",
+    "color": "from-pink-100 to-fuchsia-50",
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Todos los días · 9:00 am – 9:00 pm"
+    }
+  },
+  {
     "id": "al-carbon",
     "name": "Al Carbón",
     "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",

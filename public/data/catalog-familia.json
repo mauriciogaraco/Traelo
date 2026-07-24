@@ -239,6 +239,27 @@
       }
     },
     {
+      "id": "heladeria-mk",
+      "name": "Heladería M&K",
+      "description": "Helados artesanales en copas individuales y tinas familiares.",
+      "image": "/assets/images/business/heladeria-mk.jpg",
+      "color": "from-pink-100 to-fuchsia-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "label": "Todos los días · 9:00 am – 9:00 pm"
+      }
+    },
+    {
       "id": "al-carbon",
       "name": "Al Carbón",
       "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
@@ -7796,6 +7817,75 @@
         }
       ],
       "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-001",
+      "name": "Helado de Fresa 280 ml",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Helados",
+      "shortDescription": "Copa de 280 ml.",
+      "longDescription": "Helado artesanal de fresa en copa de 280 ml.",
+      "image": "🍓",
+      "photo": "/assets/images/products/HeladeriaM&K/helado-fresa-280ml-540.jpg",
+      "price": 1.08,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-002",
+      "name": "Helado de Dulce de Leche 750 ml",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Helados",
+      "shortDescription": "Pote de 750 ml.",
+      "longDescription": "Helado artesanal de dulce de leche en pote de 750 ml.",
+      "image": "🍮",
+      "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
+      "price": 2.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-003",
+      "name": "Helado de Leche Condensada 280 ml",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Helados",
+      "shortDescription": "Copa de 280 ml.",
+      "longDescription": "Helado artesanal de leche condensada en copa de 280 ml.",
+      "image": "🍦",
+      "photo": "/assets/images/products/HeladeriaM&K/helado-leche-condensada-280ml-540.jpg",
+      "price": 1.08,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-004",
+      "name": "Helado de Vainilla 280 ml",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Helados",
+      "shortDescription": "Copa de 280 ml.",
+      "longDescription": "Helado artesanal de vainilla en copa de 280 ml.",
+      "image": "🍦",
+      "photo": "/assets/images/products/HeladeriaM&K/helado-vainilla-280ml-540.jpg",
+      "price": 1.08,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-005",
+      "name": "Tina de Helado 4 litros",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Helados",
+      "shortDescription": "Tina familiar de 4 litros.",
+      "longDescription": "Tina familiar de helado artesanal de 4 litros. Elige tu sabor.",
+      "image": "🧊",
+      "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
+      "price": 9.3,
+      "stockStatus": "disponible",
+      "options": [
+        "Fresa",
+        "Dulce de Leche"
+      ]
     }
   ]
 }
