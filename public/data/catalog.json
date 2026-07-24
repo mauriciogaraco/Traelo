@@ -3921,7 +3921,7 @@
       "longDescription": "Arroz de 1kg.",
       "image": "🍚",
       "photo": "/assets/images/products/mercado/arroz_sam1kg.jpg",
-      "price": 750,
+      "price": 780,
       "stockStatus": "disponible"
     },
     {
@@ -7663,8 +7663,8 @@
       "businessId": "cafeteria-d-leo",
       "businessName": "Cafetería D' Leo",
       "category": "Panes",
-      "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
-      "longDescription": "Pan con bistec, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "shortDescription": "Con ensalada, cebolla y papitas.",
+      "longDescription": "Pan con bistec, preparado con ensalada de estación, cebolla y papitas.",
       "image": "🥩",
       "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-800.jpg",
       "price": 800,
@@ -7730,6 +7730,32 @@
       "longDescription": "Cerveza 3 Caballos fría, se vende por unidad.",
       "image": "🍺",
       "price": 400,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-010",
+      "name": "Pan con Tortilla, Bistec y Hamburguesa",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Panes",
+      "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
+      "longDescription": "Pan con tortilla, bistec y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+      "image": "🍔",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla,Bistec y Hamburguesa-1200.jpg",
+      "price": 1200,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cdl-011",
+      "name": "Hamburguesas de Pollo x4 Moonel",
+      "businessId": "cafeteria-d-leo",
+      "businessName": "Cafetería D' Leo",
+      "category": "Carnes",
+      "shortDescription": "Paquete de 4 unidades · 100 g c/u · congelado.",
+      "longDescription": "Hamburguesas de pollo Moonel, paquete de 4 unidades de 100 g. Producto congelado.",
+      "image": "🍗",
+      "photo": "/assets/images/products/Cafetería-D'-Leo/Hamburguesas de pollo-x4 -- 700.jpg",
+      "price": 700,
       "stockStatus": "disponible"
     },
     {
