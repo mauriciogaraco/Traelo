@@ -7945,7 +7945,13 @@
       "longDescription": "Bistec uruguayo de cerdo.",
       "image": "🥩",
       "price": 3150,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-002",
@@ -7957,7 +7963,13 @@
       "longDescription": "Rollo de cerdo.",
       "image": "🥩",
       "price": 3150,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-003",
@@ -7969,7 +7981,13 @@
       "longDescription": "Bistec de cerdo a la parrilla.",
       "image": "🥩",
       "price": 2450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-004",
@@ -7981,7 +7999,13 @@
       "longDescription": "Masa de cerdo frita.",
       "image": "🍖",
       "price": 2350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-005",
@@ -7993,7 +8017,13 @@
       "longDescription": "Masa de cerdo asada en cazuela.",
       "image": "🍖",
       "price": 2350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-006",
@@ -8005,7 +8035,13 @@
       "longDescription": "Fricasé de cerdo.",
       "image": "🍖",
       "price": 2450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-007",
@@ -8017,7 +8053,13 @@
       "longDescription": "Cerdo a la Juliana.",
       "image": "🍖",
       "price": 1950,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-008",
@@ -8029,7 +8071,13 @@
       "longDescription": "Chuleta de cerdo.",
       "image": "🥩",
       "price": 2450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-009",
@@ -8041,7 +8089,13 @@
       "longDescription": "Costilla de cerdo frita.",
       "image": "🍖",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-010",
@@ -8053,7 +8107,13 @@
       "longDescription": "Bistec de cerdo empanado.",
       "image": "🥩",
       "price": 2350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-011",
@@ -8065,7 +8125,13 @@
       "longDescription": "Ropa vieja de res.",
       "image": "🥩",
       "price": 2750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-012",
@@ -8077,7 +8143,13 @@
       "longDescription": "Vaca frita.",
       "image": "🥩",
       "price": 2750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-013",
@@ -8089,7 +8161,13 @@
       "longDescription": "Arroz moro (congri).",
       "image": "🍚",
       "price": 450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-014",
@@ -8101,7 +8179,13 @@
       "longDescription": "Arroz blanco.",
       "image": "🍚",
       "price": 350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-015",
@@ -8113,7 +8197,13 @@
       "longDescription": "Arroz frito.",
       "image": "🍚",
       "price": 850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-016",
@@ -8125,7 +8215,13 @@
       "longDescription": "Arroz pilaf.",
       "image": "🍚",
       "price": 450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-017",
@@ -8137,7 +8233,13 @@
       "longDescription": "Yuca con mojo.",
       "image": "🌿",
       "price": 450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-018",
@@ -8149,7 +8251,13 @@
       "longDescription": "Yuca con chicharrón.",
       "image": "🌿",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-019",
@@ -8161,7 +8269,13 @@
       "longDescription": "Vianda frita.",
       "image": "🌿",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-020",
@@ -8173,7 +8287,13 @@
       "longDescription": "Ensalada de estación.",
       "image": "🥗",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-021",
@@ -8185,7 +8305,13 @@
       "longDescription": "Flan casero.",
       "image": "🍮",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-022",
@@ -8197,7 +8323,13 @@
       "longDescription": "Helado.",
       "image": "🍦",
       "price": 650,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-023",
@@ -8209,7 +8341,13 @@
       "longDescription": "Garbanzo frito.",
       "image": "🫘",
       "price": 1550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-024",
@@ -8221,7 +8359,13 @@
       "longDescription": "Langosta al ajillo.",
       "image": "🦞",
       "price": 2250,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-025",
@@ -8233,7 +8377,13 @@
       "longDescription": "Fajita de langosta.",
       "image": "🦞",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-026",
@@ -8245,7 +8395,13 @@
       "longDescription": "Mar y Tierra.",
       "image": "🥩",
       "price": 6050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-027",
@@ -8257,7 +8413,13 @@
       "longDescription": "Filete de pescado gratinado.",
       "image": "🐟",
       "price": 2250,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-028",
@@ -8269,7 +8431,13 @@
       "longDescription": "Jhon Bill: pescado, camarón, bechamel y queso.",
       "image": "🐟",
       "price": 4250,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-029",
@@ -8281,7 +8449,13 @@
       "longDescription": "Bistec de cerdo gratinado.",
       "image": "🥩",
       "price": 2950,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-030",
@@ -8293,7 +8467,13 @@
       "longDescription": "Bistec de pollo gratinado.",
       "image": "🍗",
       "price": 2750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-031",
@@ -8305,7 +8485,13 @@
       "longDescription": "Picadera Las Palmitas: masa de cerdo, aceitunas, queso, jamón, fajitas de pollo, croquetas y tostones rellenos.",
       "image": "🍽️",
       "price": 6050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-032",
@@ -8317,7 +8503,13 @@
       "longDescription": "Chilindrón de cordero.",
       "image": "🍖",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-033",
@@ -8329,7 +8521,13 @@
       "longDescription": "Chicharronetas mexicanas.",
       "image": "🌮",
       "price": 2550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-034",
@@ -8341,7 +8539,13 @@
       "longDescription": "Paea.",
       "image": "🥘",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-035",
@@ -8353,7 +8557,13 @@
       "longDescription": "Cóctel línea crema.",
       "image": "🍹",
       "price": 450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-036",
@@ -8365,7 +8575,13 @@
       "longDescription": "Daiquirí.",
       "image": "🍹",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-037",
@@ -8377,7 +8593,13 @@
       "longDescription": "Sangría.",
       "image": "🍷",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-038",
@@ -8389,7 +8611,13 @@
       "longDescription": "Copa de vino.",
       "image": "🍷",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-039",
@@ -8401,7 +8629,13 @@
       "longDescription": "Margarita Blue.",
       "image": "🍹",
       "price": 700,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-040",
@@ -8413,7 +8647,13 @@
       "longDescription": "Margarita natural.",
       "image": "🍹",
       "price": 650,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-041",
@@ -8425,7 +8665,13 @@
       "longDescription": "Caipirosca.",
       "image": "🍹",
       "price": 650,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-042",
@@ -8437,7 +8683,13 @@
       "longDescription": "Michelada.",
       "image": "🍺",
       "price": 350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-043",
@@ -8449,7 +8701,13 @@
       "longDescription": "Chelada.",
       "image": "🍺",
       "price": 300,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-044",
@@ -8461,7 +8719,13 @@
       "longDescription": "Cuba Libre.",
       "image": "🥃",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-045",
@@ -8473,7 +8737,13 @@
       "longDescription": "Cubanito.",
       "image": "🥃",
       "price": 850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-046",
@@ -8485,7 +8755,13 @@
       "longDescription": "Línea de vodka.",
       "image": "🍹",
       "price": 350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-047",
@@ -8497,7 +8773,13 @@
       "longDescription": "Vodka Screwdriver.",
       "image": "🍹",
       "price": 450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-048",
@@ -8509,7 +8791,13 @@
       "longDescription": "Ron cola.",
       "image": "🥃",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-049",
@@ -8521,7 +8809,13 @@
       "longDescription": "Cielo Azul.",
       "image": "🍹",
       "price": 750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-050",
@@ -8533,7 +8827,13 @@
       "longDescription": "Sex on the Beach.",
       "image": "🍹",
       "price": 750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-051",
@@ -8545,7 +8845,13 @@
       "longDescription": "Piña Colada.",
       "image": "🍹",
       "price": 650,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-052",
@@ -8557,7 +8863,13 @@
       "longDescription": "Limonada frappé.",
       "image": "🍹",
       "price": 350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-053",
@@ -8569,7 +8881,13 @@
       "longDescription": "Whisky Bucanas.",
       "image": "🥃",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-054",
@@ -8581,7 +8899,13 @@
       "longDescription": "Whisky Red Label.",
       "image": "🥃",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-055",
@@ -8593,7 +8917,13 @@
       "longDescription": "Whisky Jameson.",
       "image": "🥃",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-056",
@@ -8605,7 +8935,13 @@
       "longDescription": "Whisky Mcgregor.",
       "image": "🥃",
       "price": 750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-057",
@@ -8617,7 +8953,13 @@
       "longDescription": "Ron Havana Club Especial.",
       "image": "🥃",
       "price": 450,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-058",
@@ -8629,7 +8971,13 @@
       "longDescription": "Ron Havana Club Reserva.",
       "image": "🥃",
       "price": 550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-059",
@@ -8641,7 +8989,13 @@
       "longDescription": "Ron Havana Club 3 Años.",
       "image": "🥃",
       "price": 400,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-060",
@@ -8653,7 +9007,13 @@
       "longDescription": "Expreso de 5 oz.",
       "image": "☕",
       "price": 250,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-061",
@@ -8665,7 +9025,13 @@
       "longDescription": "Bolitas de queso.",
       "image": "🧀",
       "price": 850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-062",
@@ -8677,7 +9043,13 @@
       "longDescription": "Fajitas de cerdo.",
       "image": "🥩",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-063",
@@ -8689,7 +9061,13 @@
       "longDescription": "Fajitas de cerdo con aceitunas.",
       "image": "🥩",
       "price": 2700,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-064",
@@ -8701,7 +9079,13 @@
       "longDescription": "Fajitas de pollo.",
       "image": "🍗",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-065",
@@ -8713,7 +9097,13 @@
       "longDescription": "Fajitas de pollo con aceitunas.",
       "image": "🍗",
       "price": 2700,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-066",
@@ -8725,7 +9115,13 @@
       "longDescription": "Esperlan de pescado.",
       "image": "🐟",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-067",
@@ -8737,7 +9133,13 @@
       "longDescription": "Minuta de pescado frita.",
       "image": "🐟",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-068",
@@ -8749,7 +9151,13 @@
       "longDescription": "Entremés de jamón y queso.",
       "image": "🍽️",
       "price": 1350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-069",
@@ -8761,7 +9169,13 @@
       "longDescription": "Entremés mixto: jamón, queso y aceituna.",
       "image": "🍽️",
       "price": 1750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-070",
@@ -8773,7 +9187,13 @@
       "longDescription": "Croquetas.",
       "image": "🍘",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-071",
@@ -8785,7 +9205,13 @@
       "longDescription": "Tostones rellenos con jamón, queso y salsa rosa.",
       "image": "🫔",
       "price": 1550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-072",
@@ -8797,7 +9223,13 @@
       "longDescription": "Tostones rellenos con atún.",
       "image": "🫔",
       "price": 1750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-073",
@@ -8809,7 +9241,13 @@
       "longDescription": "Tostones rellenos con ropa vieja.",
       "image": "🫔",
       "price": 1750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-074",
@@ -8821,7 +9259,13 @@
       "longDescription": "Frituras de malanga.",
       "image": "🥙",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-113",
@@ -8833,7 +9277,13 @@
       "longDescription": "Cóctel de langosta.",
       "image": "🦞",
       "price": 1750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-114",
@@ -8845,7 +9295,13 @@
       "longDescription": "Aceitunas.",
       "image": "🫒",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-075",
@@ -8857,7 +9313,13 @@
       "longDescription": "Cóctel de camarones.",
       "image": "🍤",
       "price": 1850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-076",
@@ -8869,7 +9331,13 @@
       "longDescription": "Papas fritas.",
       "image": "🍟",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-077",
@@ -8881,7 +9349,13 @@
       "longDescription": "Papas fritas con salchichas.",
       "image": "🍟",
       "price": 1350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-078",
@@ -8893,7 +9367,13 @@
       "longDescription": "Periquito.",
       "image": "🍽️",
       "price": 1550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-079",
@@ -8905,7 +9385,13 @@
       "longDescription": "Fajita de langosta.",
       "image": "🦞",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-080",
@@ -8917,7 +9403,13 @@
       "longDescription": "Bolitas de jamón y queso.",
       "image": "🧀",
       "price": 1250,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-081",
@@ -8929,7 +9421,13 @@
       "longDescription": "Crema de queso.",
       "image": "🍲",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-082",
@@ -8941,7 +9439,13 @@
       "longDescription": "Crema de jamón y queso.",
       "image": "🍲",
       "price": 1250,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-083",
@@ -8953,7 +9457,13 @@
       "longDescription": "Crema Aurora.",
       "image": "🍲",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-084",
@@ -8965,7 +9475,13 @@
       "longDescription": "Espagueti napolitano.",
       "image": "🍝",
       "price": 850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-085",
@@ -8977,7 +9493,13 @@
       "longDescription": "Espagueti con jamón y queso.",
       "image": "🍝",
       "price": 1050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-086",
@@ -8989,7 +9511,13 @@
       "longDescription": "Langosta mariposa.",
       "image": "🦞",
       "price": 2850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-087",
@@ -9001,7 +9529,13 @@
       "longDescription": "Enchilado de langosta.",
       "image": "🦞",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-088",
@@ -9013,7 +9547,13 @@
       "longDescription": "Langosta a la parrilla.",
       "image": "🦞",
       "price": 2550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-089",
@@ -9025,7 +9565,13 @@
       "longDescription": "Langosta frita.",
       "image": "🦞",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-090",
@@ -9037,7 +9583,13 @@
       "longDescription": "Langosta sensación.",
       "image": "🦞",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-091",
@@ -9049,7 +9601,13 @@
       "longDescription": "Camarón empanado.",
       "image": "🍤",
       "price": 2350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-092",
@@ -9061,7 +9619,13 @@
       "longDescription": "Camarón al ajillo.",
       "image": "🍤",
       "price": 2350,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-093",
@@ -9073,7 +9637,13 @@
       "longDescription": "Camarón enchilado.",
       "image": "🍤",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-094",
@@ -9085,7 +9655,13 @@
       "longDescription": "Camarón a la parrilla.",
       "image": "🍤",
       "price": 2250,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-095",
@@ -9097,7 +9673,13 @@
       "longDescription": "Pulpo al ajillo.",
       "image": "🐙",
       "price": 2550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-096",
@@ -9109,7 +9691,13 @@
       "longDescription": "Pulpo enchilado.",
       "image": "🐙",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-097",
@@ -9121,7 +9709,13 @@
       "longDescription": "Filete de sierra empanada.",
       "image": "🐟",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-098",
@@ -9133,7 +9727,13 @@
       "longDescription": "Filete de pescado a la parrilla.",
       "image": "🐟",
       "price": 1850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-099",
@@ -9145,7 +9745,13 @@
       "longDescription": "Canciller: pescado con jamón y queso.",
       "image": "🐟",
       "price": 2850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-100",
@@ -9157,7 +9763,13 @@
       "longDescription": "Calamar.",
       "image": "🦑",
       "price": 3050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-101",
@@ -9169,7 +9781,13 @@
       "longDescription": "Rueda de sierra.",
       "image": "🐟",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-102",
@@ -9181,7 +9799,13 @@
       "longDescription": "Seviche de camarón.",
       "image": "🍤",
       "price": 2150,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-103",
@@ -9193,7 +9817,13 @@
       "longDescription": "Filete Emperador.",
       "image": "🐟",
       "price": 2550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-104",
@@ -9205,7 +9835,13 @@
       "longDescription": "Seviche surtido.",
       "image": "🍤",
       "price": 2550,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-105",
@@ -9217,7 +9853,13 @@
       "longDescription": "Pollo Golden Blue.",
       "image": "🍗",
       "price": 2750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-106",
@@ -9229,7 +9871,13 @@
       "longDescription": "Pollo frito.",
       "image": "🍗",
       "price": 1850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-107",
@@ -9241,7 +9889,13 @@
       "longDescription": "Pollo chiflado.",
       "image": "🍗",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-108",
@@ -9253,7 +9907,13 @@
       "longDescription": "Pollo asado en cazuela.",
       "image": "🍗",
       "price": 1850,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-109",
@@ -9265,7 +9925,13 @@
       "longDescription": "Pollo fricasé.",
       "image": "🍗",
       "price": 1950,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-110",
@@ -9277,7 +9943,13 @@
       "longDescription": "Pollo a la Juliana.",
       "image": "🍗",
       "price": 1750,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-111",
@@ -9289,7 +9961,13 @@
       "longDescription": "Bistec de pollo empanizado.",
       "image": "🍗",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     },
     {
       "id": "lp-112",
@@ -9301,7 +9979,13 @@
       "longDescription": "Pechuga de pollo a la parrilla.",
       "image": "🍗",
       "price": 2050,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 200
+        }
+      ]
     }
   ]
 }
