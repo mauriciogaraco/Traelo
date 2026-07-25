@@ -621,13 +621,7 @@
     "longDescription": "Cóctel línea crema.",
     "image": "🍹",
     "price": 450,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-036",
@@ -639,13 +633,7 @@
     "longDescription": "Daiquirí.",
     "image": "🍹",
     "price": 550,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-037",
@@ -657,13 +645,7 @@
     "longDescription": "Sangría.",
     "image": "🍷",
     "price": 550,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-038",
@@ -675,13 +657,7 @@
     "longDescription": "Copa de vino.",
     "image": "🍷",
     "price": 550,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-039",
@@ -693,13 +669,7 @@
     "longDescription": "Margarita Blue.",
     "image": "🍹",
     "price": 700,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-040",
@@ -711,13 +681,7 @@
     "longDescription": "Margarita natural.",
     "image": "🍹",
     "price": 650,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-041",
@@ -729,13 +693,7 @@
     "longDescription": "Caipirosca.",
     "image": "🍹",
     "price": 650,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-042",
@@ -747,13 +705,7 @@
     "longDescription": "Michelada.",
     "image": "🍺",
     "price": 350,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-043",
@@ -765,13 +717,7 @@
     "longDescription": "Chelada.",
     "image": "🍺",
     "price": 300,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-044",
@@ -783,13 +729,7 @@
     "longDescription": "Cuba Libre.",
     "image": "🥃",
     "price": 550,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-045",
@@ -801,13 +741,7 @@
     "longDescription": "Cubanito.",
     "image": "🥃",
     "price": 850,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-046",
@@ -819,13 +753,7 @@
     "longDescription": "Línea de vodka.",
     "image": "🍹",
     "price": 350,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-047",
@@ -837,13 +765,7 @@
     "longDescription": "Vodka Screwdriver.",
     "image": "🍹",
     "price": 450,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-048",
@@ -855,13 +777,7 @@
     "longDescription": "Ron cola.",
     "image": "🥃",
     "price": 550,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-049",
@@ -873,13 +789,7 @@
     "longDescription": "Cielo Azul.",
     "image": "🍹",
     "price": 750,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-050",
@@ -891,13 +801,7 @@
     "longDescription": "Sex on the Beach.",
     "image": "🍹",
     "price": 750,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-051",
@@ -909,13 +813,7 @@
     "longDescription": "Piña Colada.",
     "image": "🍹",
     "price": 650,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-052",
@@ -927,13 +825,7 @@
     "longDescription": "Limonada frappé.",
     "image": "🍹",
     "price": 350,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-053",
@@ -945,13 +837,7 @@
     "longDescription": "Whisky Bucanas.",
     "image": "🥃",
     "price": 2050,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-054",
@@ -963,13 +849,7 @@
     "longDescription": "Whisky Red Label.",
     "image": "🥃",
     "price": 1050,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-055",
@@ -981,13 +861,7 @@
     "longDescription": "Whisky Jameson.",
     "image": "🥃",
     "price": 1050,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-056",
@@ -999,13 +873,7 @@
     "longDescription": "Whisky Mcgregor.",
     "image": "🥃",
     "price": 750,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-057",
@@ -1017,13 +885,7 @@
     "longDescription": "Ron Havana Club Especial.",
     "image": "🥃",
     "price": 450,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-058",
@@ -1035,13 +897,7 @@
     "longDescription": "Ron Havana Club Reserva.",
     "image": "🥃",
     "price": 550,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-059",
@@ -1053,13 +909,7 @@
     "longDescription": "Ron Havana Club 3 Años.",
     "image": "🥃",
     "price": 400,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-060",
@@ -1071,13 +921,7 @@
     "longDescription": "Expreso de 5 oz.",
     "image": "☕",
     "price": 250,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Termopack",
-        "price": 200
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "lp-061",
