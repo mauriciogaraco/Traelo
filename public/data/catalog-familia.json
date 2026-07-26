@@ -7986,17 +7986,31 @@
       "businessId": "heladeria-mk",
       "businessName": "Heladería M&K",
       "category": "Helados",
-      "shortDescription": "Vaso con helado y panetela.",
-      "longDescription": "Vaso con helado artesanal y panetela.",
-      "image": "🍨",
+      "shortDescription": "Sabor Chocolate · vaso con helado y panetela.",
+      "longDescription": "Vaso con helado artesanal de chocolate y panetela.",
+      "image": "🍫",
       "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
       "price": 1.28,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-010",
+      "name": "Vaso de Helado y Panetela con Helado Extra",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Helados",
+      "shortDescription": "Vaso con helado extra y panetela. Elige tu sabor.",
+      "longDescription": "Vaso con helado artesanal extra y panetela. Elige tu sabor.",
+      "image": "🍨",
+      "photo": "/assets/images/products/HeladeriaM&K/vaso  de Helado Y panetela con helado Extra -850.jpg",
+      "price": 1.7,
       "stockStatus": "disponible",
-      "addons": [
-        {
-          "name": "Otra bola de helado",
-          "price": 200
-        }
+      "options": [
+        "Vainilla",
+        "Naranja Piña",
+        "Uva",
+        "Mantecado",
+        "Fresa"
       ]
     },
     {
