@@ -23,7 +23,7 @@
     "image": "🍮",
     "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
     "price": 1100,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "hmk-003",
@@ -63,6 +63,72 @@
     "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
     "price": 4650,
     "stockStatus": "disponible",
-    "options": ["Fresa", "Dulce de Leche"]
+    "options": ["Mantecado", "Fresa", "Manzana", "Naranja Piña", "Vainilla"]
+  },
+  {
+    "id": "hmk-006",
+    "name": "Helado de Naranja Piña 280 ml",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Copa de 280 ml.",
+    "longDescription": "Helado artesanal de naranja piña en copa de 280 ml.",
+    "image": "🍊",
+    "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Naranja-Piña-280ml-540.jpg",
+    "price": 540,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-007",
+    "name": "Helado de Mantecado 280 ml",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Copa de 280 ml.",
+    "longDescription": "Helado artesanal de mantecado en copa de 280 ml.",
+    "image": "🍦",
+    "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Mantecado-280ml-540.jpg",
+    "price": 540,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-008",
+    "name": "Helado de Manzana 280 ml",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Copa de 280 ml.",
+    "longDescription": "Helado artesanal de manzana en copa de 280 ml.",
+    "image": "🍏",
+    "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Manzana-280ml-540.jpg",
+    "price": 540,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-009",
+    "name": "Vaso de Helado y Panetela",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Sabor Chocolate · vaso con helado y panetela.",
+    "longDescription": "Vaso con helado artesanal de chocolate y panetela.",
+    "image": "🍫",
+    "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
+    "price": 640,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-010",
+    "name": "Vaso de Helado y Panetela con Helado Extra",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Vaso con helado extra y panetela. Elige tu sabor.",
+    "longDescription": "Vaso con helado artesanal extra y panetela. Elige tu sabor.",
+    "image": "🍨",
+    "photo": "/assets/images/products/HeladeriaM&K/vaso  de Helado Y panetela con helado Extra -850.jpg",
+    "price": 850,
+    "stockStatus": "disponible",
+    "options": ["Vainilla", "Naranja Piña", "Uva", "Mantecado", "Fresa"]
   }
 ]
