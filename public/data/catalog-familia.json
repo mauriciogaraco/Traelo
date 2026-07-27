@@ -3869,7 +3869,7 @@
       "longDescription": "Aceite vegetal en botella de 900ml.",
       "image": "🫒",
       "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-      "price": 4,
+      "price": 4.2,
       "stockStatus": "disponible"
     },
     {
@@ -3920,7 +3920,7 @@
       "longDescription": "Sopa intantanea.",
       "image": "🍚",
       "photo": "/assets/images/products/mercado/sopa_instantanea.jpg",
-      "price": 0.44,
+      "price": 0.56,
       "stockStatus": "disponible"
     },
     {
@@ -4035,6 +4035,18 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "ma-028",
+      "name": "Leche condensada (lata)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por lata.",
+      "longDescription": "Leche condensada, se vende por lata.",
+      "image": "🥛",
+      "price": 1.6,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "ma-020",
       "name": "Fanguito (lata)",
       "businessId": "mercadito-ahorro",
@@ -4043,7 +4055,7 @@
       "shortDescription": "Se vende por lata.",
       "longDescription": "Fanguito, se vende por lata.",
       "image": "🍫",
-      "price": 1.5,
+      "price": 1.7,
       "stockStatus": "disponible"
     },
     {
