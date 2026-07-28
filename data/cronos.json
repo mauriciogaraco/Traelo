@@ -63,7 +63,7 @@
     "image": "🍦",
     "photo": "/assets/images/products/Cronos/helado-Vanilla.jpg",
     "price": 1100,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "cr-006",
@@ -102,6 +102,19 @@
     "longDescription": "Batido de helado de mantecado, suave y nostálgico. Coronado con crema batida, maní, sirope y confituras de decoración.",
     "image": "🍨",
     "photo": "/assets/images/products/Cronos/Helado-Mantecado.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-010",
+    "name": "Smoothie de Caramelo",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de caramelo.",
+    "longDescription": "Batido de helado de caramelo, dulce e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🍯",
+    "photo": "/assets/images/products/Cronos/Helado-De-Caramelo.jpg",
     "price": 1100,
     "stockStatus": "disponible"
   },

@@ -266,7 +266,7 @@
       "id": "las-palmitas",
       "name": "Las Palmitas",
       "description": "Restaurante Las Palmitas — carnes, mariscos, pollo, coctelería y más en Güira de Melena.",
-      "image": "/assets/images/business/Las Palmitas.jpg",
+      "image": "/assets/images/business/LasPamitasLogo2.jpg",
       "color": "from-green-100 to-lime-50",
       "deliveryFee": 350,
       "paymentNote": "Mensajería 350 CUP · después de las 7:00 pm sube a 450 CUP. · A su cuenta se le suma el 5% de servicio.",
@@ -393,7 +393,7 @@
       "image": "🍦",
       "photo": "/assets/images/products/Cronos/helado-Vanilla.jpg",
       "price": 1100,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "cr-006",
@@ -432,6 +432,19 @@
       "longDescription": "Batido de helado de mantecado, suave y nostálgico. Coronado con crema batida, maní, sirope y confituras de decoración.",
       "image": "🍨",
       "photo": "/assets/images/products/Cronos/Helado-Mantecado.jpg",
+      "price": 1100,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-010",
+      "name": "Smoothie de Caramelo",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de caramelo.",
+      "longDescription": "Batido de helado de caramelo, dulce e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍯",
+      "photo": "/assets/images/products/Cronos/Helado-De-Caramelo.jpg",
       "price": 1100,
       "stockStatus": "disponible"
     },
@@ -4187,6 +4200,203 @@
       "featured": true
     },
     {
+      "id": "ma-028",
+      "name": "Leche condensada (lata)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por lata.",
+      "longDescription": "Leche condensada, se vende por lata.",
+      "image": "🥛",
+      "photo": "/assets/images/products/mercado/leche condensada 800.jpg",
+      "price": 800,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-029",
+      "name": "Coditos 500 g",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Paquete de 500 g.",
+      "longDescription": "Coditos, paquete de 500 g.",
+      "image": "🍝",
+      "price": 380,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-030",
+      "name": "Atún (lata)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por lata.",
+      "longDescription": "Atún en lata, se vende por unidad.",
+      "image": "🐟",
+      "photo": "/assets/images/products/mercado/lata de atún.jpg",
+      "price": 600,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-031",
+      "name": "Café Bárbaro",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Café Bárbaro, se vende por unidad.",
+      "image": "☕",
+      "price": 2000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-032",
+      "name": "Café Vinalés",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Café Vinalés, se vende por unidad.",
+      "image": "☕",
+      "price": 1800,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-033",
+      "name": "Café El Rincón",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Café El Rincón, se vende por unidad.",
+      "image": "☕",
+      "price": 900,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-034",
+      "name": "Vinagre",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Vinagre, se vende por unidad.",
+      "image": "🍶",
+      "price": 400,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-035",
+      "name": "Vino Seco",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Vino seco, se vende por unidad.",
+      "image": "🍷",
+      "price": 350,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-036",
+      "name": "Toallitas húmedas chiquitas",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Aseo",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Toallitas húmedas chiquitas, se venden por unidad.",
+      "image": "🧻",
+      "price": 160,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-037",
+      "name": "Íntimas",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Aseo",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Toallas íntimas, se venden por unidad.",
+      "image": "🌸",
+      "price": 550,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-038",
+      "name": "Protectores",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Aseo",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Protectores diarios, se venden por unidad.",
+      "image": "🌸",
+      "price": 400,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-039",
+      "name": "Detergente Defá 500 g",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Aseo",
+      "shortDescription": "Paquete de 500 g.",
+      "longDescription": "Detergente Defá, paquete de 500 g.",
+      "image": "🧺",
+      "price": 750,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-040",
+      "name": "Pasta Dental Royal Fresh",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Aseo",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Pasta dental Royal Fresh, se vende por unidad.",
+      "image": "🦷",
+      "photo": "/assets/images/products/mercado/pasta dental royal fresh.jpg",
+      "price": 600,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-041",
+      "name": "Desodorante",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Aseo",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Desodorante, se vende por unidad.",
+      "image": "🌿",
+      "photo": "/assets/images/products/mercado/desodorantes.jpg",
+      "price": 700,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-042",
+      "name": "Galletas María",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Se vende por paquete.",
+      "longDescription": "Galletas María, se venden por paquete.",
+      "image": "🍪",
+      "price": 250,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-043",
+      "name": "Pasta de Bocadito (cubeta 1 L)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Cubeta de 1 litro.",
+      "longDescription": "Pasta de bocadito en cubeta de 1 litro.",
+      "image": "🍯",
+      "photo": "/assets/images/products/mercado/pasta de bocadito.jpg",
+      "price": 1800,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "lm-001",
       "name": "Espaguetis",
       "businessId": "la-marina",
@@ -7914,7 +8124,7 @@
       "image": "🍓",
       "photo": "/assets/images/products/HeladeriaM&K/helado-fresa-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-002",
@@ -7940,7 +8150,7 @@
       "image": "🍦",
       "photo": "/assets/images/products/HeladeriaM&K/helado-leche-condensada-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-004",
@@ -7972,7 +8182,8 @@
         "Fresa",
         "Manzana",
         "Naranja Piña",
-        "Vainilla"
+        "Vainilla",
+        "Uva"
       ]
     },
     {
@@ -8020,12 +8231,20 @@
       "businessId": "heladeria-mk",
       "businessName": "Heladería M&K",
       "category": "Helados",
-      "shortDescription": "Sabor Chocolate · vaso con helado y panetela.",
-      "longDescription": "Vaso con helado artesanal de chocolate y panetela.",
+      "shortDescription": "Vaso con helado y panetela. Elige tu sabor.",
+      "longDescription": "Vaso con helado artesanal y panetela. Elige tu sabor.",
       "image": "🍫",
       "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
       "price": 640,
-      "stockStatus": "disponible"
+      "stockStatus": "disponible",
+      "options": [
+        "Chocolate",
+        "Vainilla",
+        "Naranja Piña",
+        "Uva",
+        "Mantecado",
+        "Fresa"
+      ]
     },
     {
       "id": "hmk-010",
