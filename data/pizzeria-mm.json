@@ -1,0 +1,147 @@
+[
+  {
+    "id": "pmm-001",
+    "name": "Pizza de Queso",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Pizzas",
+    "shortDescription": "",
+    "longDescription": "Pizza de queso.",
+    "image": "🍕",
+    "price": 300,
+    "stockStatus": "disponible",
+    "addons": [
+      { "name": "Cebolla", "price": 150 },
+      { "name": "Chorizo", "price": 150 },
+      { "name": "Jamón", "price": 150 }
+    ]
+  },
+  {
+    "id": "pmm-002",
+    "name": "Pizza Doble Queso",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Pizzas",
+    "shortDescription": "",
+    "longDescription": "Pizza doble queso.",
+    "image": "🍕",
+    "price": 500,
+    "stockStatus": "disponible",
+    "addons": [
+      { "name": "Cebolla", "price": 150 },
+      { "name": "Chorizo", "price": 150 },
+      { "name": "Jamón", "price": 150 }
+    ]
+  },
+  {
+    "id": "pmm-003",
+    "name": "Pizza de Cebolla",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Pizzas",
+    "shortDescription": "",
+    "longDescription": "Pizza de cebolla.",
+    "image": "🍕",
+    "price": 550,
+    "stockStatus": "disponible",
+    "addons": [
+      { "name": "Cebolla", "price": 150 },
+      { "name": "Chorizo", "price": 150 },
+      { "name": "Jamón", "price": 150 }
+    ]
+  },
+  {
+    "id": "pmm-004",
+    "name": "Pizza de Jamón",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Pizzas",
+    "shortDescription": "",
+    "longDescription": "Pizza de jamón.",
+    "image": "🍕",
+    "price": 650,
+    "stockStatus": "disponible",
+    "addons": [
+      { "name": "Cebolla", "price": 150 },
+      { "name": "Chorizo", "price": 150 },
+      { "name": "Jamón", "price": 150 }
+    ]
+  },
+  {
+    "id": "pmm-005",
+    "name": "Pizza de Chorizo",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Pizzas",
+    "shortDescription": "",
+    "longDescription": "Pizza de chorizo.",
+    "image": "🍕",
+    "price": 700,
+    "stockStatus": "disponible",
+    "addons": [
+      { "name": "Cebolla", "price": 150 },
+      { "name": "Chorizo", "price": 150 },
+      { "name": "Jamón", "price": 150 }
+    ]
+  },
+  {
+    "id": "pmm-006",
+    "name": "Malta",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por unidad.",
+    "longDescription": "Malta fría, se vende por unidad.",
+    "image": "🍺",
+    "price": 430,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "pmm-007",
+    "name": "Refresco",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por unidad.",
+    "longDescription": "Refresco frío, se vende por unidad.",
+    "image": "🥤",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "pmm-008",
+    "name": "Shaka",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por unidad.",
+    "longDescription": "Shaka frío, se vende por unidad.",
+    "image": "🥤",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "pmm-009",
+    "name": "Cerveza",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por unidad.",
+    "longDescription": "Cerveza fría, se vende por unidad.",
+    "image": "🍺",
+    "price": 450,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "pmm-010",
+    "name": "Jugo de Cajita",
+    "businessId": "pizzeria-mm",
+    "businessName": "Pizzería M&M",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por unidad.",
+    "longDescription": "Jugo de cajita, se vende por unidad.",
+    "image": "🧃",
+    "price": 280,
+    "stockStatus": "disponible"
+  }
+]
