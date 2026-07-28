@@ -21,6 +21,7 @@ const BUSINESS_FILES = [
   'al-carbon',
   'heladeria-mk',
   'las-palmitas',
+  'pizzeria-mm',
 ];
 
 function read(file) {
