@@ -436,6 +436,19 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "cr-010",
+      "name": "Smoothie de Caramelo",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de caramelo.",
+      "longDescription": "Batido de helado de caramelo, dulce e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍯",
+      "photo": "/assets/images/products/Cronos/Helado-De-Caramelo.jpg",
+      "price": 1100,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "cr-009",
       "name": "Smoothie de Dulce de Leche",
       "businessId": "cronos",
