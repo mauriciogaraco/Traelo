@@ -45,12 +45,16 @@ const usdBusinessIds = new Set(
 
 const catalogFamilia = {
   businesses,
-  products: products.map(p => ({
-    ...p,
-    price: usdBusinessIds.has(p.businessId) || p.currency === 'USD'
-      ? p.price
-      : Math.round((p.price / USD_RATE) * 100) / 100,
-  })),
+  products: products.map(p => {
+    const isUsd = usdBusinessIds.has(p.businessId) || p.currency === 'USD';
+    const toCup = (n) => isUsd ? n : Math.round((n / USD_RATE) * 100) / 100;
+    return {
+      ...p,
+      price: toCup(p.price),
+      ...(p.addons   ? { addons:   p.addons.map(a  => ({ ...a,  price: toCup(a.price)  })) } : {}),
+      ...(p.packaging ? { packaging: p.packaging.map(pk => ({ ...pk, price: toCup(pk.price) })) } : {}),
+    };
+  }),
 };
 writeFileSync(
   join(ROOT, 'public', 'data', 'catalog-familia.json'),
