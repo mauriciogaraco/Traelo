@@ -10,14 +10,38 @@
     "image": "🥪",
     "price": 340,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -32,14 +56,38 @@
     "image": "🥪",
     "price": 390,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -54,14 +102,38 @@
     "image": "🍔",
     "price": 450,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -76,14 +148,38 @@
     "image": "🥪",
     "price": 650,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -99,14 +195,38 @@
     "photo": "/assets/images/products/Macus/pan_macu.jpg",
     "price": 1420,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -121,14 +241,38 @@
     "image": "🥪",
     "price": 400,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -143,14 +287,38 @@
     "image": "🥪",
     "price": 210,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -165,14 +333,38 @@
     "image": "🥪",
     "price": 420,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -187,14 +379,38 @@
     "image": "🥪",
     "price": 750,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -209,14 +425,38 @@
     "image": "🥚",
     "price": 350,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -231,14 +471,38 @@
     "image": "🥪",
     "price": 550,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -253,14 +517,38 @@
     "image": "🍘",
     "price": 280,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "agotado"
   },
@@ -275,14 +563,38 @@
     "image": "🧀",
     "price": 300,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -297,14 +609,38 @@
     "image": "🌭",
     "price": 380,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -319,14 +655,38 @@
     "image": "🥪",
     "price": 320,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -341,14 +701,38 @@
     "image": "🥪",
     "price": 750,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -363,14 +747,38 @@
     "image": "🥩",
     "price": 850,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -385,14 +793,38 @@
     "image": "🥩",
     "price": 850,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "agotado"
   },
@@ -407,14 +839,38 @@
     "image": "🥩",
     "price": 850,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "agotado"
   },
@@ -429,14 +885,38 @@
     "image": "🥪",
     "price": 1150,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -451,14 +931,38 @@
     "image": "🥪",
     "price": 1400,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -473,14 +977,38 @@
     "image": "🥩",
     "price": 370,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -495,14 +1023,38 @@
     "image": "🥩",
     "price": 1300,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -517,14 +1069,38 @@
     "image": "🥩",
     "price": 750,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -539,14 +1115,38 @@
     "image": "🥩",
     "price": 750,
     "addons": [
-      { "name": "Hamburguesa", "price": 250 },
-      { "name": "Jamón", "price": 100 },
-      { "name": "Queso", "price": 80 },
-      { "name": "Chorizo", "price": 100 },
-      { "name": "Tortilla", "price": 140 },
-      { "name": "Mortadella", "price": 80 },
-      { "name": "Perro", "price": 250 },
-      { "name": "Aporreado", "price": 220 }
+      {
+        "name": "Hamburguesa",
+        "price": 250
+      },
+      {
+        "name": "Jamón",
+        "price": 100
+      },
+      {
+        "name": "Queso",
+        "price": 80
+      },
+      {
+        "name": "Chorizo",
+        "price": 100
+      },
+      {
+        "name": "Tortilla",
+        "price": 140
+      },
+      {
+        "name": "Mortadella",
+        "price": 80
+      },
+      {
+        "name": "Perro",
+        "price": 250
+      },
+      {
+        "name": "Aporreado",
+        "price": 220
+      }
     ],
     "stockStatus": "disponible"
   },
@@ -559,7 +1159,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🥤",
-    "price": 420,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -571,7 +1171,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🥤",
-    "price": 420,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {

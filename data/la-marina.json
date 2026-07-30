@@ -11,13 +11,28 @@
     "price": 450,
     "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 },
-      { "name": "Queso", "price": 200 },
-      { "name": "Cebolla", "price": 100 }
+      {
+        "name": "Jamón",
+        "price": 150
+      },
+      {
+        "name": "Queso",
+        "price": 200
+      },
+      {
+        "name": "Cebolla",
+        "price": 100
+      }
     ],
     "packaging": [
-      { "name": "Jaba", "price": 10 },
-      { "name": "Termopack", "price": 150 }
+      {
+        "name": "Jaba",
+        "price": 10
+      },
+      {
+        "name": "Termopack",
+        "price": 150
+      }
     ]
   },
   {
@@ -32,9 +47,18 @@
     "price": 300,
     "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 },
-      { "name": "Queso", "price": 200 },
-      { "name": "Cebolla", "price": 100 }
+      {
+        "name": "Jamón",
+        "price": 150
+      },
+      {
+        "name": "Queso",
+        "price": 200
+      },
+      {
+        "name": "Cebolla",
+        "price": 100
+      }
     ]
   },
   {
@@ -49,9 +73,18 @@
     "price": 520,
     "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 },
-      { "name": "Queso", "price": 200 },
-      { "name": "Cebolla", "price": 100 }
+      {
+        "name": "Jamón",
+        "price": 150
+      },
+      {
+        "name": "Queso",
+        "price": 200
+      },
+      {
+        "name": "Cebolla",
+        "price": 100
+      }
     ]
   },
   {
@@ -66,9 +99,18 @@
     "price": 670,
     "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 },
-      { "name": "Queso", "price": 200 },
-      { "name": "Cebolla", "price": 100 }
+      {
+        "name": "Jamón",
+        "price": 150
+      },
+      {
+        "name": "Queso",
+        "price": 200
+      },
+      {
+        "name": "Cebolla",
+        "price": 100
+      }
     ]
   },
   {
@@ -83,9 +125,18 @@
     "price": 770,
     "stockStatus": "agotado",
     "addons": [
-      { "name": "Jamón", "price": 150 },
-      { "name": "Queso", "price": 200 },
-      { "name": "Cebolla", "price": 100 }
+      {
+        "name": "Jamón",
+        "price": 150
+      },
+      {
+        "name": "Queso",
+        "price": 200
+      },
+      {
+        "name": "Cebolla",
+        "price": 100
+      }
     ]
   },
   {
@@ -100,9 +151,18 @@
     "price": 570,
     "stockStatus": "disponible",
     "addons": [
-      { "name": "Jamón", "price": 150 },
-      { "name": "Queso", "price": 200 },
-      { "name": "Cebolla", "price": 100 }
+      {
+        "name": "Jamón",
+        "price": 150
+      },
+      {
+        "name": "Queso",
+        "price": 200
+      },
+      {
+        "name": "Cebolla",
+        "price": 100
+      }
     ]
   },
   {
@@ -140,7 +200,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🥤",
-    "price": 420,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -152,7 +212,7 @@
     "shortDescription": "",
     "longDescription": "Se vende por unidad.",
     "image": "🥤",
-    "price": 420,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
