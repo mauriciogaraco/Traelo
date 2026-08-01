@@ -1317,5 +1317,17 @@
     "image": "💧",
     "price": 180,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "pm-030",
+    "name": "Ensalada Fría",
+    "businessId": "panes-macus",
+    "businessName": "Los Macus",
+    "category": "Comida",
+    "shortDescription": "Porción de 250 g.",
+    "longDescription": "Ensalada fría en porción de 250 g.",
+    "image": "🥗",
+    "price": 400,
+    "stockStatus": "disponible"
   }
 ]

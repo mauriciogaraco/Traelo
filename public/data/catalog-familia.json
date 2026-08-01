@@ -118,9 +118,9 @@
           5,
           6
         ],
-        "open": "09:00",
+        "open": "12:00",
         "close": "18:00",
-        "label": "Lun–Sáb · 9:00 am – 6:00 pm · Dom · 12:00 pm – 6:00 pm"
+        "label": "Lun–Sáb · 12:00 pm – 6:00 pm · Dom · 12:00 pm – 6:00 pm"
       },
       "scheduleExtra": {
         "days": [
@@ -161,7 +161,6 @@
       "description": "Bodega de confianza: alimentos, bebidas, aseo y más, todo en un solo lugar.",
       "image": "/assets/images/business/Tu-Kprichito.jpg",
       "color": "from-violet-100 to-purple-50",
-      "status": "cerrado",
       "schedule": {
         "days": [
           0,
@@ -1258,7 +1257,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 2.1,
+      "price": 2.7,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1276,7 +1275,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 2.8,
+      "price": 3.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -3882,6 +3881,18 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "pm-030",
+      "name": "Ensalada Fría",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Porción de 250 g.",
+      "longDescription": "Ensalada fría en porción de 250 g.",
+      "image": "🥗",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "ma-001",
       "name": "Arroz Guyanés (por libra)",
       "businessId": "mercadito-ahorro",
@@ -3905,7 +3916,7 @@
       "image": "🫒",
       "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
       "price": 4.2,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "ma-003",
