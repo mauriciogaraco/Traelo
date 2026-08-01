@@ -8233,6 +8233,19 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "ac-007",
+      "name": "Posta de Pollo Asada",
+      "businessId": "al-carbon",
+      "businessName": "Al Carbón",
+      "category": "Carnes",
+      "shortDescription": "Posta de pollo asada a las brasas.",
+      "longDescription": "Posta de pollo asada a las brasas.",
+      "image": "🍗",
+      "photo": "/assets/images/products/posta de pollo asada 1000 cup.jpg",
+      "price": 1000,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "hmk-001",
       "name": "Helado de Fresa 280 ml",
       "businessId": "heladeria-mk",
