@@ -4000,8 +4000,8 @@
       "longDescription": "Perrito caliente listo para preparar (salchicha y pan). Se vende por unidad.",
       "image": "🌭",
       "photo": "/assets/images/products/mercado/perritos_mana.jpg",
-      "price": 1.36,
-      "stockStatus": "agotado"
+      "price": 2,
+      "stockStatus": "disponible"
     },
     {
       "id": "ma-004",
@@ -4077,7 +4077,7 @@
       "longDescription": "Yogurt envasaado",
       "image": "🥛",
       "photo": "/assets/images/products/mercado/yogurt_vaso.webp",
-      "price": 0.56,
+      "price": 0.64,
       "stockStatus": "disponible"
     },
     {
@@ -4101,7 +4101,7 @@
       "shortDescription": "Se vende por lata.",
       "longDescription": "Pasta de tomate concentrada, se vende por lata.",
       "image": "🍅",
-      "price": 1,
+      "price": 1.16,
       "stockStatus": "disponible"
     },
     {
@@ -4477,6 +4477,42 @@
       "image": "🍯",
       "photo": "/assets/images/products/mercado/pasta de bocadito.jpg",
       "price": 3.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-044",
+      "name": "Jamonada",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Embutidos",
+      "shortDescription": "Se vende por unidad.",
+      "longDescription": "Jamonada.",
+      "image": "🥩",
+      "price": 1.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-045",
+      "name": "Jamón (1 libra)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Embutidos",
+      "shortDescription": "Porción de 1 libra.",
+      "longDescription": "Jamón en porción de 1 libra.",
+      "image": "🍖",
+      "price": 3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-046",
+      "name": "Jamón (½ libra)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Embutidos",
+      "shortDescription": "Porción de ½ libra.",
+      "longDescription": "Jamón en porción de media libra.",
+      "image": "🍖",
+      "price": 1.5,
       "stockStatus": "disponible"
     },
     {
