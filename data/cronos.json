@@ -10,7 +10,7 @@
     "image": "🥤",
     "photo": "/assets/images/products/Cronos/Mamey.jpg",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "cr-002",
@@ -129,6 +129,6 @@
     "image": "🍮",
     "photo": "/assets/images/products/Cronos/Helado-Dulce-De-Leche.jpg",
     "price": 1100,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   }
 ]
