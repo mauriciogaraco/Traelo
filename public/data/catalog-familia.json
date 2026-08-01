@@ -809,7 +809,7 @@
       "longDescription": "Se vende por cajas de 20 unidades.",
       "image": "🍝",
       "photo": "/assets/images/products/mercadito/spaguetti.jpg",
-      "price": 0.51,
+      "price": 0.52,
       "formato": 20,
       "stockStatus": "disponible"
     },
@@ -868,8 +868,8 @@
       "longDescription": "Se venden por unnidad.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/toallitas_indoxa.jpg",
-      "price": 1.33,
-      "stockStatus": "agotado"
+      "price": 1.24,
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-035",
@@ -937,7 +937,7 @@
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
       "price": 0.52,
       "formato": 10,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-042",
@@ -963,7 +963,7 @@
       "longDescription": "Se vende por saco",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-      "price": 57,
+      "price": 59,
       "stockStatus": "disponible"
     },
     {
@@ -992,7 +992,7 @@
       "photo": "/assets/images/products/mercadito/jabón_lavar_multiuso.jpg",
       "price": 0.52,
       "formato": 40,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-047",
@@ -1031,6 +1031,58 @@
       "price": 2,
       "formato": 15,
       "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-049",
+      "name": "Café Dufiltro",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Caja de 20 unidades.",
+      "longDescription": "Café Dufiltro. Se vende por caja de 20 unidades.",
+      "image": "☕",
+      "price": 3.1,
+      "stockStatus": "disponible",
+      "formato": 20
+    },
+    {
+      "id": "bc-050",
+      "name": "Café Santa Bárbara 250 g",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Caja de 20 unidades.",
+      "longDescription": "Café Santa Bárbara 250 g. Se vende por caja de 20 unidades.",
+      "image": "☕",
+      "price": 1.6,
+      "stockStatus": "disponible",
+      "formato": 20
+    },
+    {
+      "id": "bc-051",
+      "name": "Pote de Margarina",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Caja de 24 unidades.",
+      "longDescription": "Pote de margarina. Se vende por caja de 24 unidades.",
+      "image": "🧈",
+      "price": 1.06,
+      "stockStatus": "disponible",
+      "formato": 24
+    },
+    {
+      "id": "bc-052",
+      "name": "Mayonesa Marwa",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Blister de 12 unidades.",
+      "longDescription": "Mayonesa Marwa. Se vende por blister de 12 unidades.",
+      "image": "🫙",
+      "price": 1.77,
+      "stockStatus": "disponible",
+      "formato": 12
     },
     {
       "id": "dlm-001",
