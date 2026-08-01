@@ -63,7 +63,14 @@
     "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
     "price": 4650,
     "stockStatus": "disponible",
-    "options": ["Mantecado", "Fresa", "Manzana", "Naranja Piña", "Vainilla", "Uva"]
+    "options": [
+      "Mantecado",
+      "Fresa",
+      "Manzana",
+      "Naranja Piña",
+      "Vainilla",
+      "Uva"
+    ]
   },
   {
     "id": "hmk-006",
@@ -116,7 +123,14 @@
     "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
     "price": 640,
     "stockStatus": "disponible",
-    "options": ["Chocolate", "Vainilla", "Naranja Piña", "Uva", "Mantecado", "Fresa"]
+    "options": [
+      "Chocolate",
+      "Vainilla",
+      "Naranja Piña",
+      "Uva",
+      "Mantecado",
+      "Fresa"
+    ]
   },
   {
     "id": "hmk-010",
@@ -130,6 +144,54 @@
     "photo": "/assets/images/products/HeladeriaM&K/vaso  de Helado Y panetela con helado Extra -850.jpg",
     "price": 850,
     "stockStatus": "disponible",
-    "options": ["Vainilla", "Naranja Piña", "Uva", "Mantecado", "Fresa"]
+    "options": [
+      "Vainilla",
+      "Naranja Piña",
+      "Uva",
+      "Mantecado",
+      "Fresa"
+    ]
+  },
+  {
+    "id": "hmk-011",
+    "name": "Caja de Marquesitas x4",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Dulces",
+    "shortDescription": "Caja de 4 marquesitas artesanales.",
+    "longDescription": "Caja de 4 marquesitas artesanales.",
+    "image": "🥐",
+    "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
+    "price": 360,
+    "stockStatus": "disponible",
+    "formato": 4
+  },
+  {
+    "id": "hmk-012",
+    "name": "Caja de Rollitos x4",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Dulces",
+    "shortDescription": "Caja de 4 rollitos artesanales.",
+    "longDescription": "Caja de 4 rollitos artesanales.",
+    "image": "🌀",
+    "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
+    "price": 360,
+    "stockStatus": "disponible",
+    "formato": 4
+  },
+  {
+    "id": "hmk-013",
+    "name": "Caja de Dobos x4",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Dulces",
+    "shortDescription": "Caja de 4 dobos artesanales.",
+    "longDescription": "Caja de 4 dobos artesanales.",
+    "image": "🍩",
+    "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
+    "price": 360,
+    "stockStatus": "disponible",
+    "formato": 4
   }
 ]

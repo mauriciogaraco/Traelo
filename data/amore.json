@@ -103,7 +103,10 @@
     "price": 5000,
     "stockStatus": "disponible",
     "packaging": [
-      { "name": "Caja", "price": 1000 }
+      {
+        "name": "Caja",
+        "price": 1000
+      }
     ]
   },
   {
@@ -119,7 +122,24 @@
     "price": 4500,
     "stockStatus": "disponible",
     "packaging": [
-      { "name": "Caja", "price": 1000 }
+      {
+        "name": "Caja",
+        "price": 1000
+      }
     ]
+  },
+  {
+    "id": "am-010",
+    "name": "Bolsa de Pan de Bocadito x 20",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "Bolsa de 20 panes de bocadito.",
+    "longDescription": "Bolsa de 20 panes de bocadito artesanales.",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/Bolsa de Pan de Bocadito x 20 --400cup.jpg",
+    "price": 400,
+    "stockStatus": "disponible",
+    "formato": 20
   }
 ]
