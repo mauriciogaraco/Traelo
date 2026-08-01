@@ -1257,7 +1257,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 2.1,
+      "price": 2.7,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1275,7 +1275,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 2.8,
+      "price": 3.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -3881,6 +3881,18 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "pm-030",
+      "name": "Ensalada Fría",
+      "businessId": "panes-macus",
+      "businessName": "Los Macus",
+      "category": "Comida",
+      "shortDescription": "Porción de 250 g.",
+      "longDescription": "Ensalada fría en porción de 250 g.",
+      "image": "🥗",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "ma-001",
       "name": "Arroz Guyanés (por libra)",
       "businessId": "mercadito-ahorro",
@@ -3904,7 +3916,7 @@
       "image": "🫒",
       "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
       "price": 4.2,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "ma-003",
