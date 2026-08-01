@@ -8007,6 +8007,20 @@
       ]
     },
     {
+      "id": "am-010",
+      "name": "Bolsa de Pan de Bocadito x 20",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Panadería",
+      "shortDescription": "Bolsa de 20 panes de bocadito.",
+      "longDescription": "Bolsa de 20 panes de bocadito artesanales.",
+      "image": "🍞",
+      "photo": "/assets/images/products/AmoRe/Bolsa de Pan de Bocadito x 20 --400cup.jpg",
+      "price": 0.8,
+      "stockStatus": "disponible",
+      "formato": 20
+    },
+    {
       "id": "cdl-001",
       "name": "Pan con Hamburguesa",
       "businessId": "cafeteria-d-leo",
