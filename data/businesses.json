@@ -195,6 +195,19 @@
     }
   },
   {
+    "id": "ferreguira",
+    "name": "FerreGüira",
+    "description": "Ferretería FerreGüira — herramientas, materiales eléctricos, fontanería y más en Güira de Melena.",
+    "image": "/assets/images/business/FerreGüira.jpg",
+    "color": "from-orange-100 to-amber-50",
+    "schedule": {
+      "days": [1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "18:00",
+      "label": "Lun–Sáb · 9:00 am – 6:00 pm"
+    }
+  },
+  {
     "id": "al-carbon",
     "name": "Al Carbón",
     "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
