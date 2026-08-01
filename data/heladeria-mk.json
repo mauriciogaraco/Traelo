@@ -63,7 +63,14 @@
     "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
     "price": 4650,
     "stockStatus": "disponible",
-    "options": ["Mantecado", "Fresa", "Manzana", "Naranja Piña", "Vainilla", "Uva"]
+    "options": [
+      "Mantecado",
+      "Fresa",
+      "Manzana",
+      "Naranja Piña",
+      "Vainilla",
+      "Uva"
+    ]
   },
   {
     "id": "hmk-006",
@@ -116,7 +123,14 @@
     "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
     "price": 640,
     "stockStatus": "disponible",
-    "options": ["Chocolate", "Vainilla", "Naranja Piña", "Uva", "Mantecado", "Fresa"]
+    "options": [
+      "Chocolate",
+      "Vainilla",
+      "Naranja Piña",
+      "Uva",
+      "Mantecado",
+      "Fresa"
+    ]
   },
   {
     "id": "hmk-010",
@@ -130,6 +144,51 @@
     "photo": "/assets/images/products/HeladeriaM&K/vaso  de Helado Y panetela con helado Extra -850.jpg",
     "price": 850,
     "stockStatus": "disponible",
-    "options": ["Vainilla", "Naranja Piña", "Uva", "Mantecado", "Fresa"]
+    "options": [
+      "Vainilla",
+      "Naranja Piña",
+      "Uva",
+      "Mantecado",
+      "Fresa"
+    ]
+  },
+  {
+    "id": "hmk-011",
+    "name": "Marquesitas",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Dulces",
+    "shortDescription": "Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+    "longDescription": "Marquesitas artesanales. Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+    "image": "🥐",
+    "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
+    "price": 90,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-012",
+    "name": "Rollitos",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Dulces",
+    "shortDescription": "Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+    "longDescription": "Rollitos artesanales. Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+    "image": "🌀",
+    "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
+    "price": 90,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-013",
+    "name": "Dobos",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Dulces",
+    "shortDescription": "Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+    "longDescription": "Dobos artesanales. Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+    "image": "🍩",
+    "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
+    "price": 90,
+    "stockStatus": "disponible"
   }
 ]

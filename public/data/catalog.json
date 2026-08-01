@@ -8413,6 +8413,45 @@
       ]
     },
     {
+      "id": "hmk-011",
+      "name": "Marquesitas",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Dulces",
+      "shortDescription": "Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+      "longDescription": "Marquesitas artesanales. Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+      "image": "🥐",
+      "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
+      "price": 90,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-012",
+      "name": "Rollitos",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Dulces",
+      "shortDescription": "Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+      "longDescription": "Rollitos artesanales. Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+      "image": "🌀",
+      "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
+      "price": 90,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "hmk-013",
+      "name": "Dobos",
+      "businessId": "heladeria-mk",
+      "businessName": "Heladería M&K",
+      "category": "Dulces",
+      "shortDescription": "Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+      "longDescription": "Dobos artesanales. Empaque obligatorio: 1 caja (50 CUP) por cada 4 unidades.",
+      "image": "🍩",
+      "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
+      "price": 90,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "lp-001",
       "name": "Bistec Uruguayo",
       "businessId": "las-palmitas",
