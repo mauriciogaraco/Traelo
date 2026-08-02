@@ -371,7 +371,7 @@
       "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
       "image": "🥛",
       "photo": "/assets/images/products/Cronos/Malteada.jpg",
-      "price": 750,
+      "price": 850,
       "stockStatus": "disponible"
     },
     {
@@ -8449,7 +8449,7 @@
       "longDescription": "Caja de 4 dobos artesanales.",
       "image": "🍩",
       "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
-      "price": 410,
+      "price": 400,
       "stockStatus": "disponible",
       "formato": 4
     },

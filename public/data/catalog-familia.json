@@ -371,7 +371,7 @@
       "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
       "image": "🥛",
       "photo": "/assets/images/products/Cronos/Malteada.jpg",
-      "price": 1.5,
+      "price": 1.7,
       "stockStatus": "disponible"
     },
     {
@@ -8421,7 +8421,7 @@
       "longDescription": "Caja de 4 marquesitas artesanales.",
       "image": "🥐",
       "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
-      "price": 0.72,
+      "price": 0.8,
       "stockStatus": "disponible",
       "formato": 4
     },
@@ -8435,7 +8435,7 @@
       "longDescription": "Caja de 4 rollitos artesanales.",
       "image": "🌀",
       "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
-      "price": 0.72,
+      "price": 0.8,
       "stockStatus": "disponible",
       "formato": 4
     },
@@ -8449,7 +8449,7 @@
       "longDescription": "Caja de 4 dobos artesanales.",
       "image": "🍩",
       "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
-      "price": 0.72,
+      "price": 0.8,
       "stockStatus": "disponible",
       "formato": 4
     },
