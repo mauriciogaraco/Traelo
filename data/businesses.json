@@ -7,7 +7,14 @@
     "color": "from-amber-100 to-orange-50",
     "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante. · El costo de mensajería indicado es referencial. Debido a la naturaleza del pedido, la tarifa final puede ajustarse en función del peso y volumen total de los productos. El mensajero le comunicará el monto definitivo al momento de coordinar la entrega.",
     "schedule": {
-      "days": [1, 2, 3, 4, 5, 6],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "17:00"
     }
@@ -20,7 +27,13 @@
     "color": "from-rose-100 to-orange-50",
     "deliveryFee": 350,
     "schedule": {
-      "days": [3, 4, 5, 6, 0],
+      "days": [
+        3,
+        4,
+        5,
+        6,
+        0
+      ],
       "open": "13:00",
       "close": "22:00",
       "label": "Mié–Dom · 1:00 pm – 10:00 pm"
@@ -33,7 +46,15 @@
     "image": "/assets/images/business/macus.jpg",
     "color": "from-yellow-100 to-amber-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
@@ -46,7 +67,15 @@
     "image": "/assets/images/business/Mercadito.jpg",
     "color": "from-emerald-100 to-teal-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
@@ -59,7 +88,15 @@
     "image": "/assets/images/products/pizza.jpg",
     "color": "from-red-100 to-orange-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
@@ -72,17 +109,27 @@
     "image": "/assets/images/business/Cronos.jpg",
     "color": "from-sky-100 to-cyan-50",
     "schedule": {
-      "days": [1, 2, 3, 4, 5, 6],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "12:00",
       "close": "18:00",
       "label": "Lun–Sáb · 12:00 pm – 6:00 pm · Dom · 12:00 pm – 6:00 pm"
     },
     "scheduleExtra": {
-      "days": [0],
+      "days": [
+        0
+      ],
       "open": "12:00",
       "close": "18:00",
       "label": "Dom · 12:00 pm – 6:00 pm"
-    }
+    },
+    "status": "cerrado"
   },
   {
     "id": "eme-boutique",
@@ -94,7 +141,15 @@
     "paymentNote": "Precios en USD · pago al cambio del día (El Toque). La mensajería se abona en CUP y se cobra aunque no se retenga la prenda.",
     "deliveryFee": 350,
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
@@ -107,7 +162,15 @@
     "image": "/assets/images/business/Tu-Kprichito.jpg",
     "color": "from-violet-100 to-purple-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "17:00",
       "label": "Todos los días · 9:00 am – 5:00 pm"
@@ -120,7 +183,15 @@
     "image": "/assets/images/business/Linea_Callejón.jpg",
     "color": "from-green-100 to-emerald-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
@@ -133,7 +204,14 @@
     "image": "/assets/images/business/Amore.jpg",
     "color": "from-pink-100 to-rose-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "17:00",
       "label": "Lun–Sáb · 9:00 am – 5:00 pm"
@@ -147,7 +225,15 @@
     "color": "from-yellow-100 to-amber-50",
     "status": "cerrado",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "17:00",
       "label": "Todos los días · 9:00 am – 5:00 pm"
@@ -160,7 +246,15 @@
     "image": "/assets/images/business/pizzeriaM&M.jpg",
     "color": "from-red-100 to-orange-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
@@ -175,7 +269,15 @@
     "deliveryFee": 350,
     "paymentNote": "Mensajería 350 CUP · después de las 7:00 pm sube a 450 CUP. · A su cuenta se le suma el 5% de servicio.",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "12:00",
       "close": "22:00",
       "label": "Todos los días · 12:00 pm – 10:00 pm"
@@ -188,7 +290,15 @@
     "image": "/assets/images/business/heladeria-mk.jpg",
     "color": "from-pink-100 to-fuchsia-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
@@ -201,7 +311,14 @@
     "image": "/assets/images/business/FerreGüira.jpg",
     "color": "from-orange-100 to-amber-50",
     "schedule": {
-      "days": [1, 2, 3, 4, 5, 6],
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
@@ -214,7 +331,15 @@
     "image": "/assets/images/business/AlCarbón.jpg",
     "color": "from-orange-100 to-red-50",
     "schedule": {
-      "days": [0, 1, 2, 3, 4, 5, 6],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "open": "11:00",
       "close": "21:00",
       "label": "Todos los días · 11:00 am – 9:00 pm"

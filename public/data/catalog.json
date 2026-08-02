@@ -129,7 +129,8 @@
         "open": "12:00",
         "close": "18:00",
         "label": "Dom · 12:00 pm – 6:00 pm"
-      }
+      },
+      "status": "cerrado"
     },
     {
       "id": "eme-boutique",
@@ -205,7 +206,6 @@
       "color": "from-pink-100 to-rose-50",
       "schedule": {
         "days": [
-          0,
           1,
           2,
           3,
@@ -8421,7 +8421,7 @@
       "longDescription": "Caja de 4 marquesitas artesanales.",
       "image": "🥐",
       "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
-      "price": 410,
+      "price": 400,
       "stockStatus": "disponible",
       "formato": 4
     },
@@ -8435,7 +8435,7 @@
       "longDescription": "Caja de 4 rollitos artesanales.",
       "image": "🌀",
       "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
-      "price": 410,
+      "price": 400,
       "stockStatus": "disponible",
       "formato": 4
     },
