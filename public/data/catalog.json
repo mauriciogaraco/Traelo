@@ -6210,7 +6210,7 @@
       "options": [
         "M"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-020",
@@ -6224,7 +6224,7 @@
       "photo": "/assets/images/products/Eme Boutique/ConfortCana-Conjunto-blanco.jpg",
       "price": 20,
       "options": [
-        "S"
+        "M"
       ],
       "stockStatus": "disponible"
     },
@@ -6444,7 +6444,7 @@
       "options": [
         "S"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-035",
@@ -6729,7 +6729,7 @@
         "S",
         "M"
       ],
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "eb-053",
