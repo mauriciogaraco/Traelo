@@ -270,7 +270,6 @@
     "schedule": {
       "days": [
         0,
-        1,
         2,
         3,
         4,
@@ -279,7 +278,7 @@
       ],
       "open": "12:00",
       "close": "22:00",
-      "label": "Todos los días · 12:00 pm – 10:00 pm"
+      "label": "Mar–Dom · 12:00 pm – 10:00 pm"
     }
   },
   {
