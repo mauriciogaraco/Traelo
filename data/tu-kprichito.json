@@ -167,7 +167,11 @@
     "photo": "/assets/images/products/TuKprichito/lata-de-spam-pollo-res-cerdo.jpg",
     "price": 1000,
     "stockStatus": "disponible",
-    "options": ["Pollo", "Res", "Cerdo"]
+    "options": [
+      "Pollo",
+      "Res",
+      "Cerdo"
+    ]
   },
   {
     "id": "tk-014",
@@ -207,7 +211,10 @@
     "photo": "/assets/images/products/TuKprichito/galletas dulces de cremita Vainilla y Chocolate.jpg",
     "price": 120,
     "stockStatus": "disponible",
-    "options": ["Vainilla", "Chocolate"]
+    "options": [
+      "Vainilla",
+      "Chocolate"
+    ]
   },
   {
     "id": "tk-018",
@@ -246,7 +253,11 @@
     "image": "🍮",
     "price": 300,
     "stockStatus": "disponible",
-    "options": ["Mandarina", "Naranja", "Frutos rojos"]
+    "options": [
+      "Mandarina",
+      "Naranja",
+      "Frutos rojos"
+    ]
   },
   {
     "id": "tk-021",
@@ -299,7 +310,11 @@
     "photo": "/assets/images/products/TuKprichito/refrezco-lata.jpg",
     "price": 350,
     "stockStatus": "disponible",
-    "options": ["Piña", "Limón", "Naranja"]
+    "options": [
+      "Piña",
+      "Limón",
+      "Naranja"
+    ]
   },
   {
     "id": "tk-025",
@@ -585,7 +600,7 @@
     "image": "🫙",
     "photo": "/assets/images/products/TuKprichito/Aceite-de-soja-2000.jpg",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-047",
@@ -637,7 +652,12 @@
     "photo": "/assets/images/products/TuKprichito/Estuches-6-jabones-1400.jpg",
     "price": 1400,
     "stockStatus": "agotado",
-    "options": ["Classic Creamy", "Tropical Blossom", "Savon Cologne", "Pearly Shine"]
+    "options": [
+      "Classic Creamy",
+      "Tropical Blossom",
+      "Savon Cologne",
+      "Pearly Shine"
+    ]
   },
   {
     "id": "tk-051",
