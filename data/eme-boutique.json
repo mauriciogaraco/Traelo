@@ -8,7 +8,9 @@
     "shortDescription": "Precio en USD.",
     "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
     "image": "👗",
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "photo": "/assets/images/products/Eme Boutique/Aloruh-perlado.jpg",
     "price": 25,
     "stockStatus": "disponible"
@@ -24,7 +26,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Aloruh-verde-con-nudo.jpg",
     "price": 25,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -51,7 +55,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Bikini-blanco-tirantes.jpg",
     "price": 16,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -65,7 +71,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Bikini-negro-con-tiras.jpg",
     "price": 16,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -79,7 +87,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/bikini-negro.jpg",
     "price": 15,
-    "options":["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "agotado"
   },
   {
@@ -93,7 +103,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Blusa-blanca-puntos.jpg",
     "price": 15,
-    "options":["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -107,7 +119,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Blusa-corta-mangas-negras.jpg",
     "price": 14,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "agotado"
   },
   {
@@ -121,7 +135,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Blusa-de-mangas-ancha.jpg",
     "price": 15,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -135,7 +151,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Blusa-Firerie-blanco.jpg",
     "price": 15,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -149,7 +167,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Blusa-Firerie-Marrón.jpg",
     "price": 15,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -163,7 +183,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Blusa-Maija-tiras.jpg",
     "price": 14,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -175,7 +197,9 @@
     "shortDescription": "Precio en USD.",
     "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
     "image": "👗",
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "photo": "/assets/images/products/Eme Boutique/blusa-roja.jpg",
     "price": 14,
     "stockStatus": "disponible"
@@ -191,7 +215,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Blusa-rojo-vino-Botones.jpg",
     "price": 14,
-    "options": ["XS"],
+    "options": [
+      "XS"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -205,7 +231,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/blusa-tirantes-blanca-tejida.jpg",
     "price": 14,
-    "options": ["L"],
+    "options": [
+      "L"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -258,8 +286,10 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/ConfortCana-cojunto-algodón.jpg",
     "price": 20,
-    "options": ["M"],
-    "stockStatus": "disponible"
+    "options": [
+      "M"
+    ],
+    "stockStatus": "agotado"
   },
   {
     "id": "eb-020",
@@ -272,7 +302,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/ConfortCana-Conjunto-blanco.jpg",
     "price": 20,
-    "options":["S"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -299,7 +331,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Conjunto de bikini y maya blanco.jpg",
     "price": 30,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -313,7 +347,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Conjunto-deportivo-negro.jpg",
     "price": 20,
-    "options":["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -325,7 +361,9 @@
     "shortDescription": "Precio en USD.",
     "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
     "image": "👗",
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "photo": "/assets/images/products/Eme Boutique/conjunto-lencería-negra-2-piezas.jpg",
     "price": 12,
     "stockStatus": "disponible"
@@ -341,7 +379,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Enterizo-levantaGlúeteo-azul.jpg",
     "price": 20,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -355,7 +395,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Firerie-Satín-verde.jpg",
     "price": 20,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -382,7 +424,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/lencería-enterisa-rojo-vino.jpg",
     "price": 16,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -396,7 +440,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Lencería-enteriso-azul.jpg",
     "price": 18,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -410,7 +456,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/lencería-negra-encaje.jpg",
     "price": 16,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -424,7 +472,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Licra-LevantaGlúteos-corta-azul.jpg",
     "price": 14,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -438,7 +488,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Licra-LevantaGlúteos-corta-negra.jpg",
     "price": 14,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -452,7 +504,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Licra-negra-pata-campana.jpg",
     "price": 18,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -466,8 +520,10 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Licras-LevantaGlúteos-larga-azul.jpg",
     "price": 18,
-    "options":["S"],
-    "stockStatus": "disponible"
+    "options": [
+      "S"
+    ],
+    "stockStatus": "agotado"
   },
   {
     "id": "eb-035",
@@ -480,7 +536,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Licras-LevantaGlúteos-larga-marrón.jpg",
     "price": 18,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -494,7 +552,11 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Licras-LevantaGlúteos-larga-negra.jpg",
     "price": 18,
-    "options": ["S", "M","L"],
+    "options": [
+      "S",
+      "M",
+      "L"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -508,7 +570,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/maya-negra-con-mangas.jpg",
     "price": 15,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -522,7 +586,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Mono-enterizo-celeste.jpg",
     "price": 20,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -549,7 +615,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/pantaloneta-negra.jpg",
     "price": 20,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -563,7 +631,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/pantaloneta-rosa.jpg",
     "price": 20,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "agotado"
   },
   {
@@ -577,7 +647,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/pullover-Shein-Essce-beige.jpg",
     "price": 14,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -591,7 +663,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Pullover-Shein-Essce.jpg",
     "price": 14,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -618,7 +692,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Selianne-Blanco-Negro.jpg",
     "price": 20,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -632,7 +708,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Shein-Bae-marrón.jpg",
     "price": 30,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -646,7 +724,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Shein-Petit-rayas-azules.jpg",
     "price": 25,
-    "options":["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -660,7 +740,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Shein-Swim-Maya-negro.jpg",
     "price": 18,
-    "options":["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "agotado"
   },
   {
@@ -674,7 +756,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Shein-Unity-blusa.jpg",
     "price": 18,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -688,7 +772,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Short-Mezclilla.jpg",
     "price": 15,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -702,7 +788,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Swim,-Mod-3-piezas-raya.jpg",
     "price": 25,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -716,8 +804,11 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Swim-Basisc-Maya-Negro.jpg",
     "price": 12,
-    "options": ["S","M"],
-    "stockStatus": "disponible"
+    "options": [
+      "S",
+      "M"
+    ],
+    "stockStatus": "agotado"
   },
   {
     "id": "eb-053",
@@ -730,7 +821,7 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/swim-SXY-negro.jpg",
     "price": 20,
-    "options":"S",
+    "options": "S",
     "stockStatus": "disponible"
   },
   {
@@ -744,7 +835,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Top-tejido-negro.jpg",
     "price": 8,
-    "options":[8],
+    "options": [
+      8
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -758,7 +851,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/trusa-aloruh-blanca.jpg",
     "price": 18,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -772,7 +867,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Vesido-Aloruh.jpg",
     "price": 20,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -786,7 +883,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-Aloruh-azul-metálico.jpg",
     "price": 25,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -800,7 +899,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-aloruh-blanco.jpg",
     "price": 20,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -814,7 +915,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-aloruh-marrón.jpg",
     "price": 20,
-    "options": ["XS"],
+    "options": [
+      "XS"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -828,7 +931,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-blanco-tejido.jpg",
     "price": 20,
-    "options":["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -842,7 +947,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-blanco-un-solo-hombro.jpg",
     "price": 22,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -856,7 +963,10 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-brillora-blanco-negro.jpg",
     "price": 20,
-    "options": ["M", "L"],
+    "options": [
+      "M",
+      "L"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -870,7 +980,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-escote-carmelita.jpg",
     "price": 25,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -884,7 +996,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-hauture-gasa.jpg",
     "price": 15,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -898,7 +1012,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-rojo.jpg",
     "price": 15,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -912,7 +1028,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-selianne-blanco.jpg",
     "price": 20,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -926,7 +1044,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-tirantes-rojo-vino.jpg",
     "price": 22,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -940,7 +1060,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido-verde-escote.jpg",
     "price": 22,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -954,7 +1076,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestido.jpg",
     "price": 12,
-    "options": ["M"],
+    "options": [
+      "M"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -968,7 +1092,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/vestigo-aloruh-rojo-vino.jpg",
     "price": 20,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -995,7 +1121,9 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/Conjunto-Aloruh-rojo-vino.jpg",
     "price": 30,
-    "options": ["S"],
+    "options": [
+      "S"
+    ],
     "stockStatus": "disponible"
   },
   {
