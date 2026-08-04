@@ -1,0 +1,624 @@
+<title>Guía de Gestión — Tráelo</title>
+<style>
+  :root {
+    --bg: #F7F5F0;
+    --bg2: #EDEAE3;
+    --border: #D6D1C7;
+    --text: #1C1A17;
+    --muted: #6B6560;
+    --accent: #D4720A;
+    --accent-bg: #FDF0E3;
+    --code-bg: #E8E4DC;
+    --code-text: #8B3A00;
+    --green: #1E6E3A;
+    --green-bg: #E6F4EC;
+    --red: #9B2020;
+    --red-bg: #FBEAEA;
+    --tag-bg: #E2DDD5;
+    --tag-text: #4A4540;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111210;
+      --bg2: #1A1916;
+      --border: #2E2C28;
+      --text: #E6E2DB;
+      --muted: #8A857D;
+      --accent: #E8900F;
+      --accent-bg: #241A0A;
+      --code-bg: #1E1C18;
+      --code-text: #F0A050;
+      --green: #4BBD77;
+      --green-bg: #0D1F14;
+      --red: #E06060;
+      --red-bg: #1F0D0D;
+      --tag-bg: #252320;
+      --tag-text: #A09890;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  header {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--border);
+    padding: 28px 32px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logo-mark {
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+    margin-top: 2px;
+  }
+
+  .header-text h1 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text);
+  }
+  .header-text p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  nav {
+    border-right: 1px solid var(--border);
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  nav .nav-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 0 20px 8px;
+  }
+
+  nav a {
+    display: block;
+    padding: 6px 20px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  nav a:hover { color: var(--text); border-left-color: var(--border); }
+  nav a.active { color: var(--accent); border-left-color: var(--accent); font-weight: 500; }
+
+  main {
+    padding: 32px 40px 80px;
+    overflow-x: auto;
+  }
+
+  .section {
+    margin-bottom: 56px;
+    scroll-margin-top: 24px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .section-num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    min-width: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    margin: 20px 0 8px;
+  }
+
+  p { margin-bottom: 12px; color: var(--text); }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 56px;
+  }
+
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    font-size: 12.5px;
+    background: var(--code-bg);
+    color: var(--code-text);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  pre {
+    background: var(--code-bg);
+    border-radius: 8px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    margin: 10px 0 16px;
+    border: 1px solid var(--border);
+  }
+  pre code {
+    background: none;
+    padding: 0;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--code-text);
+  }
+
+  .file-path {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 12.5px;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+  .file-path span { color: var(--muted); font-size: 11px; }
+
+  .callout {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+  }
+  .callout.info { background: var(--accent-bg); border-left: 3px solid var(--accent); }
+  .callout.success { background: var(--green-bg); border-left: 3px solid var(--green); }
+  .callout.warning { background: var(--red-bg); border-left: 3px solid var(--red); }
+  .callout-icon { flex-shrink: 0; font-size: 15px; margin-top: 1px; }
+  .callout p { margin: 0; }
+
+  .steps {
+    counter-reset: steps;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .steps li {
+    counter-increment: steps;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 14px;
+  }
+  .steps li::before {
+    content: counter(steps);
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .fields-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 12px 0;
+  }
+  .fields-table th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+  }
+  .fields-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .fields-table tr:last-child td { border-bottom: none; }
+  .fields-table td code { font-size: 12px; }
+  .fields-table td.desc { color: var(--muted); font-size: 13px; }
+
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+  }
+  .tag.required { background: var(--accent-bg); color: var(--accent); }
+  .tag.optional { background: var(--tag-bg); color: var(--muted); }
+
+  .cmd-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 10px 0;
+  }
+  .cmd-prompt { color: var(--accent); font-family: monospace; font-weight: 700; font-size: 14px; }
+  .cmd-text { font-family: 'SF Mono', monospace; font-size: 13px; color: var(--text); }
+
+  @media (max-width: 720px) {
+    .layout { grid-template-columns: 1fr; }
+    nav { display: none; }
+    main { padding: 24px 20px 60px; }
+    header { padding: 20px; }
+  }
+</style>
+
+<div class="layout">
+  <header>
+    <div class="logo-mark">🛵</div>
+    <div class="header-text">
+      <h1>Guía de gestión del catálogo</h1>
+      <p>Referencia para actualizar precios, horarios, inventario y negocios en Tráelo — sin IA.</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-label">Contenido</div>
+    <a href="#estructura">Estructura de archivos</a>
+    <a href="#precios">Cambiar precios</a>
+    <a href="#stock">Agotado / Disponible</a>
+    <a href="#horarios">Horarios</a>
+    <a href="#cerrar">Cerrar un negocio</a>
+    <a href="#producto-nuevo">Nuevo producto</a>
+    <a href="#negocio-nuevo">Nuevo negocio</a>
+    <a href="#catalogo">Reconstruir el catálogo</a>
+    <a href="#git">Subir cambios a GitHub</a>
+  </nav>
+
+  <main>
+
+    <div class="section" id="estructura">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2>Estructura de archivos</h2>
+      </div>
+      <p>Todos los datos del catálogo viven en la carpeta <code>data/</code>. Cada negocio tiene su propio archivo JSON de productos, y hay un archivo central de negocios.</p>
+      <h3>Archivos clave</h3>
+      <div class="file-path">📁 data/businesses.json <span>— lista de negocios, horarios y configuración</span></div>
+      <div class="file-path">📁 data/cronos.json <span>— productos del negocio "cronos"</span></div>
+      <div class="file-path">📁 data/mercadito-ahorro.json <span>— productos de El Mercadito</span></div>
+      <div class="file-path">📁 scripts/build-catalog.js <span>— script que genera el catálogo final</span></div>
+      <div class="file-path">📁 public/data/catalog.json <span>— catálogo generado (NO editar directamente)</span></div>
+      <div class="callout warning">
+        <span class="callout-icon">⚠️</span>
+        <p><strong>Importante:</strong> Nunca edites <code>public/data/catalog.json</code> directamente. Siempre edita los archivos en <code>data/</code> y ejecuta <code>npm run catalog</code> al finalizar.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="precios">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2>Cambiar precios</h2>
+      </div>
+      <p>Abre el archivo JSON del negocio correspondiente. Localiza el producto por su <code>name</code> y modifica el campo <code>price</code>. El precio siempre es en <strong>CUP</strong> (pesos cubanos).</p>
+      <pre><code>{
+  "id": "ma-003",
+  "name": "Perrito caliente",
+  "price": 1000,        ← cambia este número
+  "stockStatus": "disponible"
+}</code></pre>
+      <div class="callout info">
+        <span class="callout-icon">💡</span>
+        <p>El catálogo familia (para clientes en el exterior) convierte automáticamente a USD dividiendo entre <strong>500 CUP</strong> al ejecutar <code>npm run catalog</code>.</p>
+      </div>
+      <h3>Opciones con precios distintos</h3>
+      <p>Si un producto tiene variantes de precio diferente (ej. picoloro 10" vs 12"), el campo <code>price</code> contiene el precio de la variante más barata y se aclara en <code>shortDescription</code>:</p>
+      <pre><code>"price": 3500,
+"options": ["10 Pulgadas", "12 Pulgadas"],
+"shortDescription": "10\" → 3500 CUP · 12\" → 4000 CUP"</code></pre>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="stock">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2>Agotado / Disponible</h2>
+      </div>
+      <p>Cambia el campo <code>stockStatus</code> en el producto correspondiente:</p>
+      <pre><code>"stockStatus": "agotado"      ← bloquea el botón de añadir al carrito
+"stockStatus": "disponible"   ← permite ordenar</code></pre>
+      <h3>Opciones con un sabor agotado</h3>
+      <p>Si un producto tiene <code>options</code> y uno de los sabores se agota, <strong>elimínalo del array</strong> de opciones. No uses <code>stockStatus</code> en ese caso.</p>
+      <pre><code>"options": ["Vainilla", "Fresa", "Uva"]
+// Si Fresa se agota → quitar "Fresa" del array</code></pre>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="horarios">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2>Horarios</h2>
+      </div>
+      <p>Los horarios se configuran en <code>data/businesses.json</code> dentro del campo <code>schedule</code> de cada negocio.</p>
+      <h3>Referencia de días</h3>
+      <table class="fields-table">
+        <thead><tr><th>Número</th><th>Día</th></tr></thead>
+        <tbody>
+          <tr><td><code>0</code></td><td>Domingo</td></tr>
+          <tr><td><code>1</code></td><td>Lunes</td></tr>
+          <tr><td><code>2</code></td><td>Martes</td></tr>
+          <tr><td><code>3</code></td><td>Miércoles</td></tr>
+          <tr><td><code>4</code></td><td>Jueves</td></tr>
+          <tr><td><code>5</code></td><td>Viernes</td></tr>
+          <tr><td><code>6</code></td><td>Sábado</td></tr>
+        </tbody>
+      </table>
+      <h3>Ejemplo</h3>
+      <pre><code>"schedule": {
+  "days": [2, 3, 4, 5, 6],   ← Mar–Sáb (quitar día = cerrado ese día)
+  "open": "09:00",
+  "close": "18:00",
+  "label": "Mar–Sáb · 9:00 am – 6:00 pm"  ← texto que ve el usuario
+}</code></pre>
+      <div class="callout info">
+        <span class="callout-icon">💡</span>
+        <p>Si el negocio tiene horario diferenciado un día (ej. domingo abre más tarde), usa el campo opcional <code>scheduleExtra</code> con los mismos campos.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="cerrar">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2>Cerrar / abrir un negocio</h2>
+      </div>
+      <p>En <code>data/businesses.json</code>, agrega o elimina el campo <code>status</code> en el negocio:</p>
+      <h3>Cerrar</h3>
+      <pre><code>{
+  "id": "cronos",
+  "name": "Cronos",
+  "status": "cerrado",   ← agrega esta línea
+  "schedule": { ... }
+}</code></pre>
+      <h3>Abrir</h3>
+      <pre><code>{
+  "id": "cronos",
+  "name": "Cronos",
+  // elimina la línea "status" por completo
+  "schedule": { ... }
+}</code></pre>
+      <div class="callout warning">
+        <span class="callout-icon">⚠️</span>
+        <p>El campo <code>status: "cerrado"</code> bloquea completamente los pedidos al negocio, independientemente del horario.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="producto-nuevo">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2>Añadir un producto nuevo</h2>
+      </div>
+      <p>Abre el archivo JSON del negocio y agrega un objeto al final del array. Copia un producto existente como base y modifica los campos.</p>
+      <h3>Campos del producto</h3>
+      <table class="fields-table">
+        <thead><tr><th>Campo</th><th></th><th>Descripción</th></tr></thead>
+        <tbody>
+          <tr><td><code>id</code></td><td><span class="tag required">requerido</span></td><td class="desc">Identificador único. Ej: <code>cr-010</code></td></tr>
+          <tr><td><code>name</code></td><td><span class="tag required">requerido</span></td><td class="desc">Nombre visible del producto</td></tr>
+          <tr><td><code>businessId</code></td><td><span class="tag required">requerido</span></td><td class="desc">ID del negocio. Ej: <code>cronos</code></td></tr>
+          <tr><td><code>businessName</code></td><td><span class="tag required">requerido</span></td><td class="desc">Nombre del negocio. Ej: <code>Cronos</code></td></tr>
+          <tr><td><code>category</code></td><td><span class="tag required">requerido</span></td><td class="desc">Categoría. Ej: <code>Batidos</code>, <code>Comida</code></td></tr>
+          <tr><td><code>price</code></td><td><span class="tag required">requerido</span></td><td class="desc">Precio en CUP (número entero)</td></tr>
+          <tr><td><code>stockStatus</code></td><td><span class="tag required">requerido</span></td><td class="desc"><code>"disponible"</code> o <code>"agotado"</code></td></tr>
+          <tr><td><code>photo</code></td><td><span class="tag optional">opcional</span></td><td class="desc">Ruta: <code>/assets/images/products/NegocioX/imagen.jpg</code></td></tr>
+          <tr><td><code>shortDescription</code></td><td><span class="tag optional">opcional</span></td><td class="desc">Texto corto visible en tarjeta</td></tr>
+          <tr><td><code>options</code></td><td><span class="tag optional">opcional</span></td><td class="desc">Array de sabores/tamaños. Obliga al usuario a elegir antes de añadir</td></tr>
+          <tr><td><code>formato</code></td><td><span class="tag optional">opcional</span></td><td class="desc">Unidades por caja/paquete. Ej: <code>4</code> → "Caja × 4"</td></tr>
+          <tr><td><code>addons</code></td><td><span class="tag optional">opcional</span></td><td class="desc">Extras opcionales: <code>[{"name":"Termopack","price":200}]</code></td></tr>
+        </tbody>
+      </table>
+      <h3>Imagen del producto</h3>
+      <p>Copia la imagen a:</p>
+      <div class="file-path">📁 public/assets/images/products/NombreNegocio/nombre-imagen.jpg</div>
+      <p>Y referencia la ruta en el JSON:</p>
+      <pre><code>"photo": "/assets/images/products/NombreNegocio/nombre-imagen.jpg"</code></pre>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="negocio-nuevo">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2>Añadir un negocio nuevo</h2>
+      </div>
+      <p>Requiere tres pasos en tres archivos distintos:</p>
+      <ol class="steps">
+        <li>Agrega el negocio a <code>data/businesses.json</code> (nombre, imagen, horario, colores)</li>
+        <li>Crea el archivo de productos en <code>data/nombre-negocio.json</code></li>
+        <li>Agrega el ID a la lista <code>BUSINESS_FILES</code> en <code>scripts/build-catalog.js</code></li>
+      </ol>
+      <h3>Paso 1 — businesses.json</h3>
+      <pre><code>{
+  "id": "mi-negocio",
+  "name": "Mi Negocio",
+  "description": "Descripción breve.",
+  "image": "/assets/images/business/mi-negocio.jpg",
+  "color": "from-amber-100 to-orange-50",
+  "schedule": {
+    "days": [1,2,3,4,5,6],
+    "open": "09:00",
+    "close": "18:00",
+    "label": "Lun–Sáb · 9:00 am – 6:00 pm"
+  }
+}</code></pre>
+      <h3>Paso 2 — data/mi-negocio.json</h3>
+      <pre><code>[
+  {
+    "id": "mn-001",
+    "name": "Nombre del producto",
+    "businessId": "mi-negocio",
+    "businessName": "Mi Negocio",
+    "category": "Categoría",
+    "shortDescription": "Descripción corta",
+    "price": 500,
+    "stockStatus": "disponible"
+  }
+]</code></pre>
+      <h3>Paso 3 — build-catalog.js</h3>
+      <pre><code>const BUSINESS_FILES = [
+  'cronos',
+  'bodega-central',
+  // ... otros negocios ...
+  'mi-negocio',   ← agregar aquí
+];</code></pre>
+      <div class="callout info">
+        <span class="callout-icon">💡</span>
+        <p>La imagen del negocio va en <code>public/assets/images/business/</code> y también en <code>src/assets/images/business/</code> (la carpeta src es para el build de Vite).</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="catalogo">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2>Reconstruir el catálogo</h2>
+      </div>
+      <p>Cada vez que termines de editar archivos en <code>data/</code>, ejecuta este comando desde la terminal:</p>
+      <div class="cmd-block">
+        <span class="cmd-prompt">$</span>
+        <span class="cmd-text">npm run catalog</span>
+      </div>
+      <p>El script generará dos archivos automáticamente:</p>
+      <div class="file-path">📄 public/data/catalog.json <span>— catálogo en CUP (app principal)</span></div>
+      <div class="file-path">📄 public/data/catalog-familia.json <span>— catálogo en USD (÷ 500 CUP)</span></div>
+      <div class="callout success">
+        <span class="callout-icon">✅</span>
+        <p>Si todo va bien, verás algo como: <code>catalog.json — 16 negocios, 647 productos</code></p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section" id="git">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2>Subir cambios a GitHub</h2>
+      </div>
+      <p>Después de reconstruir el catálogo, sube los cambios con estos tres comandos:</p>
+      <ol class="steps">
+        <li>Prepara los archivos modificados</li>
+        <li>Crea un commit con descripción del cambio</li>
+        <li>Sube al repositorio remoto</li>
+      </ol>
+      <div class="cmd-block">
+        <span class="cmd-prompt">$</span>
+        <span class="cmd-text">git add data/negocio.json public/data/catalog.json public/data/catalog-familia.json</span>
+      </div>
+      <div class="cmd-block">
+        <span class="cmd-prompt">$</span>
+        <span class="cmd-text">git commit -m "chore: Negocio — descripción del cambio"</span>
+      </div>
+      <div class="cmd-block">
+        <span class="cmd-prompt">$</span>
+        <span class="cmd-text">git push</span>
+      </div>
+      <div class="callout info">
+        <span class="callout-icon">💡</span>
+        <p>Para abrir un Pull Request, ve a <strong>github.com/mauriciogaraco/Traelo</strong> → "Compare &amp; pull request" después del push.</p>
+      </div>
+      <h3>Si cambiaste businesses.json</h3>
+      <p>Inclúyelo también en el <code>git add</code>:</p>
+      <div class="cmd-block">
+        <span class="cmd-prompt">$</span>
+        <span class="cmd-text">git add data/businesses.json data/negocio.json public/data/catalog.json public/data/catalog-familia.json</span>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const navLinks = document.querySelectorAll('nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-10% 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+</script>
