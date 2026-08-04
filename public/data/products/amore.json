@@ -1,0 +1,145 @@
+[
+  {
+    "id": "am-001",
+    "name": "Caja de Torticas x15",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Dulcería",
+    "shortDescription": "Caja de 15 unidades.",
+    "longDescription": "Deliciosas torticas caseras. La caja trae 15 unidades.",
+    "image": "🍪",
+    "photo": "/assets/images/products/AmoRe/torticas.jpg",
+    "price": 1200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-002",
+    "name": "Caja de Pasteles x13",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Dulcería",
+    "shortDescription": "Caja de 13 unidades.",
+    "longDescription": "Pasteles esponjosos y rellenos. La caja trae 13 unidades.",
+    "image": "🥐",
+    "photo": "/assets/images/products/AmoRe/caja de pasteles.jpg",
+    "price": 1200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-003",
+    "name": "Caja de Rosquitas x13",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Dulcería",
+    "shortDescription": "Caja de 13 unidades.",
+    "longDescription": "Rosquitas caseras, crujientes y esponjosas. La caja trae 13 unidades.",
+    "image": "🍩",
+    "photo": "/assets/images/products/AmoRe/Rosquitas.jpg",
+    "price": 1200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-004",
+    "name": "Bolsa de Merenguitos x15",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Dulcería",
+    "shortDescription": "Bolsa de 15 unidades.",
+    "longDescription": "Merenguitos crujientes y ligeros. La bolsa trae 15 unidades.",
+    "image": "🍬",
+    "photo": "/assets/images/products/AmoRe/Merenguitos (bolsa de 15 ).jpg",
+    "price": 1000,
+    "stockStatus": "agotado"
+  },
+  {
+    "id": "am-005",
+    "name": "Caja de Tartaletas x6",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Dulcería",
+    "shortDescription": "Caja de 6 unidades.",
+    "longDescription": "Tartaletas artesanales. La caja trae 6 unidades.",
+    "image": "🥧",
+    "photo": "/assets/images/products/AmoRe/tartaletas.jpg",
+    "price": 1050,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-006",
+    "name": "3 Leches",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Postres",
+    "shortDescription": "Porción individual.",
+    "longDescription": "Esponjoso bizcocho bañado en tres leches, cremoso y suave en cada bocado.",
+    "image": "🍮",
+    "photo": "/assets/images/products/AmoRe/3-leches.jpg",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-007",
+    "name": "Minicake 3 Leches",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Cakes",
+    "shortDescription": "Minicake de 20 cm.",
+    "longDescription": "Minicake de tres leches de 20 cm. Esponjoso, bañado en tres leches y decorado con crema.",
+    "image": "🎂",
+    "photo": "/assets/images/products/AmoRe/Mini-cake-3-leches.jpg",
+    "price": 3000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-008",
+    "name": "Cake 3 Leches",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Cakes",
+    "shortDescription": "Solicítalo con anticipación · 8 am–3 pm.",
+    "longDescription": "Los cakes siempre los deben pedir un tiempo antes en el horario de 8 am a 3 de la tarde.",
+    "image": "🎂",
+    "photo": "/assets/images/products/AmoRe/cake-3-leches.jpg",
+    "price": 5000,
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 1000
+      }
+    ]
+  },
+  {
+    "id": "am-009",
+    "name": "Cake de Almíbar y Dulce de Leche",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Cakes",
+    "shortDescription": "Solicítalo con anticipación · 8 am–3 pm.",
+    "longDescription": "Los cakes siempre los deben pedir un tiempo antes en el horario de 8 am a 3 de la tarde.",
+    "image": "🎂",
+    "photo": "/assets/images/products/AmoRe/cake-de-almibar-y-dulce-de-leche.jpg",
+    "price": 4500,
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 1000
+      }
+    ]
+  },
+  {
+    "id": "am-010",
+    "name": "Bolsa de Pan de Bocadito x 20",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "Bolsa de 20 panes de bocadito.",
+    "longDescription": "Bolsa de 20 panes de bocadito artesanales.",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/Bolsa de Pan de Bocadito x 20 --400cup.jpg",
+    "price": 400,
+    "stockStatus": "disponible",
+    "formato": 20
+  }
+]
