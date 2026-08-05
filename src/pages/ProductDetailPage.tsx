@@ -15,7 +15,7 @@ import type { Addon, Packaging } from '../types'
 export function ProductDetailPage() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const { products, loading } = useCatalog()
+  const { products, loading, loadBusinessProducts, getFullProduct, isBusinessLoaded } = useCatalog()
   const { addItem } = useCart()
   const [qty, setQty] = useState(1)
   const [option, setOption] = useState<string | null>(null)
@@ -23,7 +23,15 @@ export function ProductDetailPage() {
   const [packaging, setPackaging] = useState<Packaging | null>(null)
   const [descExpanded, setDescExpanded] = useState(false)
 
-  const product = products.find((p) => p.id === id)
+  // Stub del índice (sin longDescription) — disponible de inmediato.
+  const stub = products.find((p) => p.id === id)
+  // Producto completo (con longDescription) — disponible tras cargar el negocio.
+  const product = stub ? getFullProduct(id!) : undefined
+
+  // Carga en segundo plano el archivo del negocio para obtener longDescription.
+  useEffect(() => {
+    if (stub?.businessId) loadBusinessProducts(stub.businessId)
+  }, [stub?.businessId]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Si solo hay un envase, se selecciona automáticamente (es obligatorio).
   useEffect(() => {
@@ -56,7 +64,8 @@ export function ProductDetailPage() {
   const biz = businessById(product.businessId)
   const closed = !biz || !isOpenNow(biz)
   const currency = product.currency ?? biz?.currency
-  const isLongDesc = product.longDescription.length > 200
+  const descLoaded = isBusinessLoaded(product.businessId)
+  const isLongDesc = (product.longDescription?.length ?? 0) > 200
   const canAdd =
     !isOut && !closed && (!needsOption || option !== null) && (!needsPackaging || packaging !== null)
   const unitPrice = product.price + (addon?.price ?? 0) + (packaging?.price ?? 0)
@@ -151,16 +160,26 @@ export function ProductDetailPage() {
 
         <div className="mt-5">
           <h2 className="text-sm font-bold text-text-primary mb-1.5">Descripción</h2>
-          <p className={`text-[15px] text-text-secondary leading-relaxed whitespace-pre-line ${isLongDesc && !descExpanded ? 'line-clamp-4' : ''}`}>
-            {product.longDescription}
-          </p>
-          {isLongDesc && (
-            <button
-              onClick={() => setDescExpanded(v => !v)}
-              className="mt-2 text-sm font-bold text-primary"
-            >
-              {descExpanded ? 'Ver menos' : 'Ver más'}
-            </button>
+          {!descLoaded ? (
+            <div className="space-y-2">
+              <div className="h-3.5 rounded-full bg-surface animate-pulse w-full" />
+              <div className="h-3.5 rounded-full bg-surface animate-pulse w-4/5" />
+              <div className="h-3.5 rounded-full bg-surface animate-pulse w-3/5" />
+            </div>
+          ) : (
+            <>
+              <p className={`text-[15px] text-text-secondary leading-relaxed whitespace-pre-line ${isLongDesc && !descExpanded ? 'line-clamp-4' : ''}`}>
+                {product.longDescription}
+              </p>
+              {isLongDesc && (
+                <button
+                  onClick={() => setDescExpanded(v => !v)}
+                  className="mt-2 text-sm font-bold text-primary"
+                >
+                  {descExpanded ? 'Ver menos' : 'Ver más'}
+                </button>
+              )}
+            </>
           )}
         </div>
 

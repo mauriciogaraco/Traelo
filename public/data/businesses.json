@@ -5,7 +5,7 @@
     "description": "Mercado Alpha: alimentos, bebidas y aseo del día a día.",
     "image": "/assets/images/business/alpha.jpg",
     "color": "from-amber-100 to-orange-50",
-    "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
+    "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante. · El costo de mensajería indicado es referencial. Debido a la naturaleza del pedido, la tarifa final puede ajustarse en función del peso y volumen total de los productos. El mensajero le comunicará el monto definitivo al momento de coordinar la entrega.",
     "schedule": {
       "days": [
         1,
@@ -16,8 +16,7 @@
         6
       ],
       "open": "09:00",
-      "close": "17:00",
-      "label": "Lun–Sáb · 9:00 am – 5:00 pm"
+      "close": "17:00"
     }
   },
   {
@@ -101,6 +100,247 @@
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
+  },
+  {
+    "id": "cronos",
+    "name": "Cronos",
+    "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
+    "image": "/assets/images/business/Cronos.jpg",
+    "color": "from-sky-100 to-cyan-50",
+    "schedule": {
+      "days": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "18:00",
+      "label": "Mar–Sáb · 9:00 am – 6:00 pm"
+    },
+    "scheduleExtra": {
+      "days": [
+        0
+      ],
+      "open": "12:00",
+      "close": "20:00",
+      "label": "Dom · 12:00 pm – 8:00 pm"
+    },
+    "status": "cerrado"
+  },
+  {
+    "id": "eme-boutique",
+    "name": "Eme Boutique",
+    "description": "Ropa, lencería, bolsos y accesorios de moda.",
+    "image": "/assets/images/business/Eme-Boutique.jpg",
+    "color": "from-pink-100 to-rose-50",
+    "currency": "USD",
+    "paymentNote": "Precios en USD · pago al cambio del día (El Toque). La mensajería se abona en CUP y se cobra aunque no se retenga la prenda.",
+    "deliveryFee": 350,
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Todos los días · 9:00 am – 9:00 pm"
+    }
+  },
+  {
+    "id": "tu-kprichito",
+    "name": "Tu Kprichito",
+    "description": "Bodega de confianza: alimentos, bebidas, aseo y más, todo en un solo lugar.",
+    "image": "/assets/images/business/Tu-Kprichito.jpg",
+    "color": "from-violet-100 to-purple-50",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Todos los días · 9:00 am – 5:00 pm"
+    }
+  },
+  {
+    "id": "linea-callejon",
+    "name": "Línea-Callejón",
+    "description": "Pizzas individuales y familiares, espaguetis, comidas criollas y picaderas.",
+    "image": "/assets/images/business/Linea_Callejón.jpg",
+    "color": "from-green-100 to-emerald-50",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "22:00",
+      "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
+  },
+  {
+    "id": "amore",
+    "name": "AmoRe Dulcería",
+    "description": "Torticas, pasteles, merenguitos, tartaletas y cakes artesanales.",
+    "image": "/assets/images/business/Amore.jpg",
+    "color": "from-pink-100 to-rose-50",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Lun–Sáb · 9:00 am – 5:00 pm"
+    }
+  },
+  {
+    "id": "cafeteria-d-leo",
+    "name": "Cafetería D' Leo",
+    "description": "Panes con bistec, hamburguesa y tortilla, preparados con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
+    "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
+    "color": "from-yellow-100 to-amber-50",
+    "status": "cerrado",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Todos los días · 9:00 am – 5:00 pm"
+    }
+  },
+  {
+    "id": "pizzeria-mm",
+    "name": "Pizzería M&M",
+    "description": "Pizzas artesanales con agregos a elección y bebidas frías.",
+    "image": "/assets/images/business/pizzeriaM&M.jpg",
+    "color": "from-red-100 to-orange-50",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "22:00",
+      "label": "Todos los días · 9:00 am – 10:00 pm"
+    }
+  },
+  {
+    "id": "las-palmitas",
+    "name": "Las Palmitas",
+    "description": "Restaurante Las Palmitas — carnes, mariscos, pollo, coctelería y más en Güira de Melena.",
+    "image": "/assets/images/business/LasPamitasLogo2.jpg",
+    "color": "from-green-100 to-lime-50",
+    "deliveryFee": 350,
+    "paymentNote": "Mensajería 350 CUP · después de las 7:00 pm sube a 450 CUP. · A su cuenta se le suma el 5% de servicio.",
+    "schedule": {
+      "days": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "12:00",
+      "close": "22:00",
+      "label": "Mar–Dom · 12:00 pm – 10:00 pm"
+    }
+  },
+  {
+    "id": "heladeria-mk",
+    "name": "Heladería M&K",
+    "description": "Helados artesanales en copas individuales y tinas familiares.",
+    "image": "/assets/images/business/heladeria-mk.jpg",
+    "color": "from-pink-100 to-fuchsia-50",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Todos los días · 9:00 am – 9:00 pm"
+    }
+  },
+  {
+    "id": "ferreguira",
+    "name": "FerreGüira",
+    "description": "Ferretería FerreGüira — herramientas, materiales eléctricos, fontanería y más en Güira de Melena.",
+    "image": "/assets/images/business/FerreGüira.jpg",
+    "color": "from-orange-100 to-amber-50",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "18:00",
+      "label": "Lun–Sáb · 9:00 am – 6:00 pm"
+    }
+  },
+  {
+    "id": "al-carbon",
+    "name": "Al Carbón",
+    "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
+    "image": "/assets/images/business/AlCarbón.jpg",
+    "color": "from-orange-100 to-red-50",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "11:00",
+      "close": "21:00",
+      "label": "Todos los días · 11:00 am – 9:00 pm"
     }
   }
 ]
