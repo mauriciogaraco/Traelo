@@ -11119,23 +11119,19 @@
       "shortDescription": "",
       "longDescription": "Limonada natural hecha con ingredientes frescos.",
       "image": "�",
-      "photo": "/assets/images/products/Los LLenik/Limonada Natural.jpg",
+      "photo": "/assets/images/products/Los Llenik/Limonada Natural.jpg",
       "price": 500,
+      "addons": [
+        {
+          "name": "Con Alchol",
+          "price": 150
+        }
+      ],
       "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Vaso Domo",
           "price": 200
-        }
-      ],
-      "options": [
-        {
-          "name": "Sin Alchol",
-          "price": 0
-        },
-        {
-          "name": "Con Alchol",
-          "price": 100
         }
       ]
     },
@@ -11149,22 +11145,18 @@
       "longDescription": "Limonada natural con hierva buena.",
       "image": "�",
       "price": 500,
+      "photo": "/assets/images/products/Los Llenik/Limonada Frescura.jpg",
+      "addons": [
+        {
+          "name": "Con Alchol",
+          "price": 150
+        }
+      ],
       "stockStatus": "disponible",
-      "photo": "/assets/images/products/Los LLenik/Limonada Frescura.jpg",
       "packaging": [
         {
           "name": "Vaso Domo",
           "price": 200
-        }
-      ],
-      "options": [
-        {
-          "name": "Sin Alchol",
-          "price": 0
-        },
-        {
-          "name": "Con Alchol",
-          "price": 150
         }
       ]
     },
@@ -11179,7 +11171,7 @@
       "image": "�",
       "price": 550,
       "stockStatus": "disponible",
-      "photo": "/assets/images/products/Los LLenik/Limonada Clarete.jpg",
+      "photo": "/assets/images/products/Los Llenik/Limonada Clarete.jpg",
       "packaging": [
         {
           "name": "Vaso Domo",
@@ -11197,22 +11189,18 @@
       "longDescription": "Limonada natural con hierva buena.",
       "image": "�",
       "price": 600,
+      "photo": "/assets/images/products/Los Llenik/pina-colada.jpg",
+      "addons": [
+        {
+          "name": "Con Alchol",
+          "price": 100
+        }
+      ],
       "stockStatus": "disponible",
-      "photo": "/assets/images/products/Los LLenik/Piña Colada.jpg",
       "packaging": [
         {
           "name": "Vaso Domo",
           "price": 200
-        }
-      ],
-      "options": [
-        {
-          "name": "Sin Alchol",
-          "price": 0
-        },
-        {
-          "name": "Con Alchol",
-          "price": 100
         }
       ]
     }
