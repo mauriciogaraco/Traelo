@@ -323,6 +323,26 @@
       }
     },
     {
+      "id": "los-llenik",
+      "name": "Los Llenik",
+      "description": "Los Llenik — El bar a tu casa",
+      "image": "/assets/images/business/Los Llenik.jpg",
+      "color": "from-sky-100 to-cyan-50",
+      "schedule": {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "label": "Lun–Dom · 9:00 am – 9:00 pm"
+      }
+    },
+    {
       "id": "al-carbon",
       "name": "Al Carbón",
       "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
@@ -4918,7 +4938,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
       "price": 1500,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -5116,7 +5136,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2000,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -5134,7 +5154,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 2000,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -5260,7 +5280,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🦞",
       "price": 2500,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -11089,6 +11109,112 @@
       "photo": "/assets/images/products/FerreGüira/Plasti Loka --1650 cup.jpg",
       "price": 1650,
       "stockStatus": "disponible"
+    },
+    {
+      "id": "lllk-001",
+      "name": "Limonada Natural",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural hecha con ingredientes frescos.",
+      "image": "�",
+      "photo": "/assets/images/products/Los LLenik/Limonada Natural.jpg",
+      "price": 500,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 200
+        }
+      ],
+      "options": [
+        {
+          "name": "Sin Alchol",
+          "price": 0
+        },
+        {
+          "name": "Con Alchol",
+          "price": 100
+        }
+      ]
+    },
+    {
+      "id": "lllk-002",
+      "name": "Limonada Frescura",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural con hierva buena.",
+      "image": "�",
+      "price": 500,
+      "stockStatus": "disponible",
+      "photo": "/assets/images/products/Los LLenik/Limonada Frescura.jpg",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 200
+        }
+      ],
+      "options": [
+        {
+          "name": "Sin Alchol",
+          "price": 0
+        },
+        {
+          "name": "Con Alchol",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "id": "lllk-003",
+      "name": "Limonada Clarete",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural con Vino Tinto",
+      "image": "�",
+      "price": 550,
+      "stockStatus": "disponible",
+      "photo": "/assets/images/products/Los LLenik/Limonada Clarete.jpg",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "id": "lllk-004",
+      "name": "Piña Colada",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural con hierva buena.",
+      "image": "�",
+      "price": 600,
+      "stockStatus": "disponible",
+      "photo": "/assets/images/products/Los LLenik/Piña Colada.jpg",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 200
+        }
+      ],
+      "options": [
+        {
+          "name": "Sin Alchol",
+          "price": 0
+        },
+        {
+          "name": "Con Alchol",
+          "price": 100
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "lllk-001",
+    "name": "Limonada Natural",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Limonada natural hecha con ingredientes frescos.",
+    "image": "�",
+    "photo":"/assets/images/products/Los LLenik/Limonada Natural.jpg",
+    "price": 500,
+    "stockStatus": "disponible",
+    
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ],
+    "options": [
+      {
+        "name": "Sin Alchol",
+        "price": 0
+      },
+      {
+        "name": "Con Alchol",
+        "price": 100
+      }
+    ]
+  },
+  {
+    "id": "lllk-002",
+    "name": "Limonada Frescura",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Limonada natural con hierva buena.",
+    "image": "�",
+    "price": 500,
+    "stockStatus": "disponible",
+    "photo":"/assets/images/products/Los LLenik/Limonada Frescura.jpg",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ],
+    "options": [
+      {
+        "name": "Sin Alchol",
+        "price": 0
+      },
+      {
+        "name": "Con Alchol",
+        "price": 150
+      }
+    ]
+  },
+    {
+    "id": "lllk-003",
+    "name": "Limonada Clarete",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Limonada natural con Vino Tinto",
+    "image": "�",
+    "price": 550,
+    "stockStatus": "disponible",
+    "photo":"/assets/images/products/Los LLenik/Limonada Clarete.jpg",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+
+  },
+   {
+    "id": "lllk-004",
+    "name": "Piña Colada",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Limonada natural con hierva buena.",
+    "image": "�",
+    "price": 600,
+    "stockStatus": "disponible",
+    "photo":"/assets/images/products/Los LLenik/Piña Colada.jpg",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ],
+    "options": [
+      {
+        "name": "Sin Alchol",
+        "price": 0
+      },
+      {
+        "name": "Con Alchol",
+        "price": 100
+      }
+    ]
+  }
+]
