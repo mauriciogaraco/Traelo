@@ -17,7 +17,7 @@ import type { Category } from "../types";
 const PAGE_SIZE = 20;
 
 export function HomePage() {
-  const { businesses: allBusinesses, products: allProducts, loading, syncing } = useCatalog();
+  const { businesses: allBusinesses, products: allProducts, loading, syncing, loadBusinessProducts } = useCatalog();
   const businesses = allBusinesses.filter((b) => !b.hidden);
   const products = allProducts.filter((p) => !allBusinesses.find((b) => b.id === p.businessId)?.hidden);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -75,12 +75,13 @@ export function HomePage() {
     return [];
   }, [loading, query, business, category, browseActive, products]);
 
-  // Al seleccionar un negocio, baja con scroll suave hasta los productos.
+  // Al seleccionar un negocio, baja con scroll suave y precarga sus productos completos.
   useEffect(() => {
     if (business) {
       resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      loadBusinessProducts(business);
     }
-  }, [business]);
+  }, [business]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (loading) {
     return (

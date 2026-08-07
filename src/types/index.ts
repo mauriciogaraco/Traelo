@@ -68,7 +68,8 @@ export interface Product {
   businessName: string
   category: Category
   shortDescription: string
-  longDescription: string
+  /** Descripción completa. Ausente en el search-index; presente en los archivos por negocio. */
+  longDescription?: string
   /** Emoji de respaldo (se muestra si no hay foto). */
   image: string
   /** Foto real del producto (URL importada). Opcional. */
