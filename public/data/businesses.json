@@ -127,8 +127,7 @@
       "open": "12:00",
       "close": "20:00",
       "label": "Dom · 12:00 pm – 8:00 pm"
-    },
-    "status": "cerrado"
+    }
   },
   {
     "id": "eme-boutique",
@@ -320,6 +319,46 @@
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
+    }
+  },
+  {
+    "id": "los-llenik",
+    "name": "Los Llenik",
+    "description": "Los Llenik — El bar a tu casa",
+    "image": "/assets/images/business/Los Llenik.jpg",
+    "color": "from-sky-100 to-cyan-50",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Lun–Dom · 9:00 am – 9:00 pm"
+    }
+  },
+  {
+    "id": "dulce-momento",
+    "name": "Dulce Momento",
+    "description": "Dulce Momento — Helados, dulces y postres a domicilio",
+    "image": "/assets/images/business/Dulce-momento.jpg",
+    "color": "from-sky-100 to-cyan-50",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Lun–Dom · 9:00 am – 9:00 pm"
     }
   },
   {

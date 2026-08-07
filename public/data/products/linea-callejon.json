@@ -45,7 +45,7 @@
     "longDescription": "Picaderas · Para empezar",
     "image": "🍤",
     "price": 1500,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
@@ -243,7 +243,7 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
@@ -261,7 +261,7 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
@@ -387,7 +387,7 @@
     "longDescription": "Comidas Criollas · Platos",
     "image": "🦞",
     "price": 2500,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",

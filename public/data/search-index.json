@@ -946,7 +946,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1400,
+    "price": 1950,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -963,7 +963,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1550,
+    "price": 1850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -980,7 +980,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 4550,
+    "price": 4850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1116,7 +1116,7 @@
     "category": "Comida",
     "shortDescription": "Guarniciones",
     "image": "🍚",
-    "price": 1150,
+    "price": 1550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -3291,7 +3291,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 500,
+    "price": 1600,
     "stockStatus": "disponible"
   },
   {
@@ -3435,20 +3435,20 @@
     "shortDescription": "Precio por libra.",
     "image": "🍚",
     "photo": "/assets/images/products/mercado/arroz_brasileño_agranel.jpg",
-    "price": 340,
+    "price": 350,
     "stockStatus": "disponible"
   },
   {
     "id": "ma-002",
-    "name": "Aceite (900 mL)",
+    "name": "Aceite (1000 mL)",
     "businessId": "mercadito-ahorro",
     "businessName": "El Mercadito",
     "category": "Alimentos",
     "shortDescription": "Botella de 900ml.",
     "image": "🫒",
     "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-    "price": 2100,
-    "stockStatus": "agotado"
+    "price": 4000,
+    "stockStatus": "disponible"
   },
   {
     "id": "ma-003",
@@ -3494,7 +3494,7 @@
     "shortDescription": "",
     "image": "🍚",
     "photo": "/assets/images/products/mercado/sopa_instantanea.jpg",
-    "price": 280,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -3518,7 +3518,7 @@
     "shortDescription": "",
     "image": "🍚",
     "photo": "/assets/images/products/mercado/arroz_sam1kg.jpg",
-    "price": 780,
+    "price": 800,
     "stockStatus": "disponible"
   },
   {
@@ -3530,7 +3530,7 @@
     "shortDescription": "",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/yogurt_vaso.webp",
-    "price": 320,
+    "price": 350,
     "stockStatus": "disponible"
   },
   {
@@ -3552,7 +3552,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🍅",
-    "price": 580,
+    "price": 600,
     "stockStatus": "disponible"
   },
   {
@@ -3563,7 +3563,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por pote.",
     "image": "🧈",
-    "price": 600,
+    "price": 650,
     "stockStatus": "disponible"
   },
   {
@@ -3596,7 +3596,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -3607,7 +3607,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -3618,7 +3618,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🍫",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -3630,7 +3630,7 @@
     "shortDescription": "Se vende por paquete.",
     "image": "🍫",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-022",
@@ -3640,7 +3640,7 @@
     "category": "Alimentos",
     "shortDescription": "5 a 6 muslos por paquete.",
     "image": "🍗",
-    "price": 1900,
+    "price": 2000,
     "stockStatus": "disponible"
   },
   {
@@ -3675,7 +3675,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por libra.",
     "image": "🍖",
-    "price": 520,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -3728,7 +3728,7 @@
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/leche condensada 800.jpg",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -3739,7 +3739,7 @@
     "category": "Alimentos",
     "shortDescription": "Paquete de 500 g.",
     "image": "🍝",
-    "price": 380,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -3751,7 +3751,7 @@
     "shortDescription": "Se vende por lata.",
     "image": "🐟",
     "photo": "/assets/images/products/mercado/lata de atún.jpg",
-    "price": 600,
+    "price": 800,
     "stockStatus": "disponible"
   },
   {
@@ -3806,7 +3806,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por unidad.",
     "image": "🍷",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -3850,7 +3850,7 @@
     "category": "Aseo",
     "shortDescription": "Paquete de 500 g.",
     "image": "🧺",
-    "price": 750,
+    "price": 800,
     "stockStatus": "disponible"
   },
   {
@@ -3898,7 +3898,7 @@
     "image": "🍯",
     "photo": "/assets/images/products/mercado/pasta de bocadito.jpg",
     "price": 1800,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-044",
@@ -3931,6 +3931,39 @@
     "shortDescription": "Porción de ½ libra.",
     "image": "🍖",
     "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-046",
+    "name": "Spam de Tuvo, 1100",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Embutidos",
+    "shortDescription": "Se vende por unidad.",
+    "image": "🥩",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-046",
+    "name": "Jabón de Baño",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Aseo",
+    "shortDescription": "Jabón de olor",
+    "image": "🧺",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-047",
+    "name": "Jabón de Lavar",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Aseo",
+    "shortDescription": "Jabón de Lavar ,150 gramos",
+    "image": "🧺",
+    "price": 350,
     "stockStatus": "disponible"
   },
   {
@@ -4147,7 +4180,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 500,
+    "price": 1600,
     "stockStatus": "disponible"
   },
   {
@@ -4314,7 +4347,7 @@
     "shortDescription": "Picaderas",
     "image": "🍤",
     "price": 1500,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
@@ -4501,7 +4534,7 @@
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
@@ -4518,7 +4551,7 @@
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
     "price": 2000,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
@@ -4637,7 +4670,7 @@
     "shortDescription": "Comidas Criollas",
     "image": "🦞",
     "price": 2500,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
@@ -7097,7 +7130,7 @@
     "shortDescription": "Caja de 15 unidades.",
     "image": "🍪",
     "photo": "/assets/images/products/AmoRe/torticas.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {
@@ -7109,7 +7142,7 @@
     "shortDescription": "Caja de 13 unidades.",
     "image": "🥐",
     "photo": "/assets/images/products/AmoRe/caja de pasteles.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {
@@ -7121,7 +7154,7 @@
     "shortDescription": "Caja de 13 unidades.",
     "image": "🍩",
     "photo": "/assets/images/products/AmoRe/Rosquitas.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {
@@ -7145,7 +7178,7 @@
     "shortDescription": "Caja de 6 unidades.",
     "image": "🥧",
     "photo": "/assets/images/products/AmoRe/tartaletas.jpg",
-    "price": 1050,
+    "price": 1400,
     "stockStatus": "disponible"
   },
   {
@@ -7157,7 +7190,7 @@
     "shortDescription": "Porción individual.",
     "image": "🍮",
     "photo": "/assets/images/products/AmoRe/3-leches.jpg",
-    "price": 700,
+    "price": 750,
     "stockStatus": "disponible"
   },
   {
@@ -7358,7 +7391,7 @@
     "category": "Comida",
     "shortDescription": "Brochetas a las brasas.",
     "image": "🍢",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -7369,7 +7402,7 @@
     "category": "Comida",
     "shortDescription": "Rellenas de queso, a las brasas.",
     "image": "🍢",
-    "price": 1100,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -7439,7 +7472,91 @@
     "shortDescription": "Posta de pollo asada a las brasas.",
     "image": "🍗",
     "photo": "/assets/images/products/posta de pollo asada 1000 cup.jpg",
-    "price": 1000,
+    "price": 1300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-001",
+    "name": "Cesta de Helado",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "3 Bolas con Sirope y gragea ",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/Cesta de helado.jpg",
+    "price": 460,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-002",
+    "name": "Coctel de Frutas",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Bebidas",
+    "shortDescription": "Clásico Coctel de frutas cubano",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/coctel de frutas.jpg",
+    "price": 400,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-003",
+    "name": "Termopack de Rollos x6",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Dulces",
+    "shortDescription": "Termopack de 6 rollos",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/termopack de rollos x 6.jpg",
+    "price": 820,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-004",
+    "name": "Vaso de Panetela con Helado",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "helado , panetela , helado doble , sirope y gragea",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/vaso de panetela con helado.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-004",
+    "name": "Termopack de Helado (8 bolas)",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "8 bolas de helado , sirope y gragea",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/termopackde helado 8 bolas de helado.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-005",
+    "name": "Tina de Helado 4 litros",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "Tina de Helado de Chocolate 4 litros",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/Tina de Helado.jpg",
+    "price": 5000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-006",
+    "name": "Combo de Tina de Helado y 10 conos",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "Combo de Tina de Helado de Chocolate 4 litros y 10 conos",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/tina de helado con 10 barquillos.jpg",
+    "price": 6000,
     "stockStatus": "disponible"
   },
   {
@@ -7456,15 +7573,15 @@
   },
   {
     "id": "hmk-002",
-    "name": "Helado de Dulce de Leche 750 ml",
+    "name": "Helado de Chocolate 280 ml",
     "businessId": "heladeria-mk",
     "businessName": "Heladería M&K",
     "category": "Helados",
-    "shortDescription": "Pote de 750 ml.",
-    "image": "🍮",
-    "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
-    "price": 1100,
-    "stockStatus": "agotado"
+    "shortDescription": "Copa de 280 ml.",
+    "image": "🍫",
+    "photo": "/assets/images/products/HeladeriaM&K/Pote-de-Helado-Chocolate-280ml-1.webp",
+    "price": 540,
+    "stockStatus": "disponible"
   },
   {
     "id": "hmk-003",
@@ -7507,7 +7624,8 @@
       "Manzana",
       "Naranja Piña",
       "Vainilla",
-      "Uva"
+      "Uva",
+      "Chocolate"
     ]
   },
   {
@@ -10096,5 +10214,131 @@
     "photo": "/assets/images/products/FerreGüira/Plasti Loka --1650 cup.jpg",
     "price": 1650,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "lllk-001",
+    "name": "Limonada Natural",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "�",
+    "photo": "/assets/images/products/Los Llenik/Limonada Natural.jpg",
+    "price": 500,
+    "addons": [
+      {
+        "name": "Con Alchol",
+        "price": 150
+      }
+    ],
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+  },
+  {
+    "id": "lllk-002",
+    "name": "Limonada Frescura",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "�",
+    "price": 500,
+    "photo": "/assets/images/products/Los Llenik/Limonada Frescura.jpg",
+    "addons": [
+      {
+        "name": "Con Alchol",
+        "price": 150
+      }
+    ],
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+  },
+  {
+    "id": "lllk-003",
+    "name": "Limonada Clarete",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "�",
+    "price": 550,
+    "stockStatus": "disponible",
+    "photo": "/assets/images/products/Los Llenik/Limonada Clarete.jpg",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+  },
+  {
+    "id": "lllk-004",
+    "name": "Piña Colada",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "�",
+    "price": 600,
+    "photo": "/assets/images/products/Los Llenik/pina-colada.jpg",
+    "addons": [
+      {
+        "name": "Con Alchol",
+        "price": 100
+      }
+    ],
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+  },
+  {
+    "id": "lllk-005",
+    "name": "Pan con Perro",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "�",
+    "price": 500,
+    "photo": "/assets/images/products/Los Llenik/Pan con Perro.webp",
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      }
+    ]
+  },
+  {
+    "id": "lllk-006",
+    "name": "Cóctel de Frutas",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "�",
+    "price": 450,
+    "photo": "/assets/images/products/Los Llenik/coctel de frutas.jpg",
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Vasos Domo",
+        "price": 200
+      }
+    ]
   }
 ]

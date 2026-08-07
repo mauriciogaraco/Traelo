@@ -8,7 +8,7 @@
     "shortDescription": "Brochetas a las brasas.",
     "longDescription": "Brochetas de cerdo asadas a las brasas. Se venden por unidad.",
     "image": "🍢",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -20,7 +20,7 @@
     "shortDescription": "Rellenas de queso, a las brasas.",
     "longDescription": "Brochetas de cerdo rellenas de queso, asadas a las brasas. Se venden por unidad.",
     "image": "🍢",
-    "price": 1100,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -95,7 +95,7 @@
     "longDescription": "Posta de pollo asada a las brasas.",
     "image": "🍗",
     "photo": "/assets/images/products/posta de pollo asada 1000 cup.jpg",
-    "price": 1000,
+    "price": 1300,
     "stockStatus": "disponible"
   }
 ]
