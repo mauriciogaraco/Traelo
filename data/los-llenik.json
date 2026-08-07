@@ -1,0 +1,132 @@
+[
+  {
+    "id": "lllk-001",
+    "name": "Limonada Natural",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Limonada natural hecha con ingredientes frescos.",
+    "image": "�",
+    "photo":"/assets/images/products/Los Llenik/Limonada Natural.jpg",
+    "price": 500,
+      "addons": [
+      {
+        "name": "Con Alchol",
+        "price": 150
+      }
+
+ 
+    ],
+    "stockStatus": "disponible",
+    
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+
+  },
+  {
+    "id": "lllk-002",
+    "name": "Limonada Frescura",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Limonada natural con hierva buena.",
+    "image": "�",
+    "price": 500,
+   
+    "photo":"/assets/images/products/Los Llenik/Limonada Frescura.jpg",
+     "addons": [
+      {
+        "name": "Con Alchol",
+        "price": 150
+      }
+
+ 
+    ],
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+
+  },
+    {
+    "id": "lllk-003",
+    "name": "Limonada Clarete",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Limonada natural con Vino Tinto",
+    "image": "�",
+    "price": 550,
+    "stockStatus": "disponible",
+    "photo":"/assets/images/products/Los Llenik/Limonada Clarete.jpg",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+
+  },
+   {
+    "id": "lllk-004",
+    "name": "Piña Colada",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "La clásica piña colada con ingredientes frescos.",
+    "image": "�",
+    "price": 600,
+
+    "photo":"/assets/images/products/Los Llenik/pina-colada.jpg",
+     "addons": [
+      {
+        "name": "Con Alchol",
+        "price": 100
+      }
+
+ 
+    ],
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Vaso Domo",
+        "price": 200
+      }
+    ]
+
+  },
+   {
+    "id": "lllk-00",
+    "name": "Pan con Perro",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "El Clásico pan con perro caliente , ketchup y mostaza",
+    "image": "�",
+    "price": 600,
+
+    "photo":"/assets/images/products/Los Llenik/Pan con Perro.webp",
+  
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      }
+    ]
+
+  }
+]
+

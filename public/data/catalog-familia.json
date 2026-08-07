@@ -128,8 +128,7 @@
         "open": "12:00",
         "close": "20:00",
         "label": "Dom · 12:00 pm – 8:00 pm"
-      },
-      "status": "cerrado"
+      }
     },
     {
       "id": "eme-boutique",
@@ -321,6 +320,26 @@
         "open": "09:00",
         "close": "18:00",
         "label": "Lun–Sáb · 9:00 am – 6:00 pm"
+      }
+    },
+    {
+      "id": "los-llenik",
+      "name": "Los Llenik",
+      "description": "Los Llenik — El bar a tu casa",
+      "image": "/assets/images/business/Los Llenik.jpg",
+      "color": "from-sky-100 to-cyan-50",
+      "schedule": {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "label": "Lun–Dom · 9:00 am – 9:00 pm"
       }
     },
     {
@@ -4919,7 +4938,7 @@
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
       "price": 3,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -5117,7 +5136,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 4,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -5135,7 +5154,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
       "price": 4,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -5261,7 +5280,7 @@
       "longDescription": "Comidas Criollas · Platos",
       "image": "🦞",
       "price": 5,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "packaging": [
         {
           "name": "Termopack",
@@ -11090,6 +11109,100 @@
       "photo": "/assets/images/products/FerreGüira/Plasti Loka --1650 cup.jpg",
       "price": 3.3,
       "stockStatus": "disponible"
+    },
+    {
+      "id": "lllk-001",
+      "name": "Limonada Natural",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural hecha con ingredientes frescos.",
+      "image": "�",
+      "photo": "/assets/images/products/Los Llenik/Limonada Natural.jpg",
+      "price": 1,
+      "addons": [
+        {
+          "name": "Con Alchol",
+          "price": 0.3
+        }
+      ],
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 0.4
+        }
+      ]
+    },
+    {
+      "id": "lllk-002",
+      "name": "Limonada Frescura",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural con hierva buena.",
+      "image": "�",
+      "price": 1,
+      "photo": "/assets/images/products/Los Llenik/Limonada Frescura.jpg",
+      "addons": [
+        {
+          "name": "Con Alchol",
+          "price": 0.3
+        }
+      ],
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 0.4
+        }
+      ]
+    },
+    {
+      "id": "lllk-003",
+      "name": "Limonada Clarete",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural con Vino Tinto",
+      "image": "�",
+      "price": 1.1,
+      "stockStatus": "disponible",
+      "photo": "/assets/images/products/Los Llenik/Limonada Clarete.jpg",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 0.4
+        }
+      ]
+    },
+    {
+      "id": "lllk-004",
+      "name": "Piña Colada",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Bebidas",
+      "shortDescription": "",
+      "longDescription": "Limonada natural con hierva buena.",
+      "image": "�",
+      "price": 1.2,
+      "photo": "/assets/images/products/Los Llenik/pina-colada.jpg",
+      "addons": [
+        {
+          "name": "Con Alchol",
+          "price": 0.2
+        }
+      ],
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Vaso Domo",
+          "price": 0.4
+        }
+      ]
     }
   ]
 }
