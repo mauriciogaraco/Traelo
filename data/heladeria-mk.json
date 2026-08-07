@@ -12,19 +12,21 @@
     "price": 540,
     "stockStatus": "agotado"
   },
+
   {
     "id": "hmk-002",
-    "name": "Helado de Dulce de Leche 750 ml",
+    "name": "Helado de Chocolate 280 ml",
     "businessId": "heladeria-mk",
     "businessName": "Heladería M&K",
     "category": "Helados",
-    "shortDescription": "Pote de 750 ml.",
-    "longDescription": "Helado artesanal de dulce de leche en pote de 750 ml.",
-    "image": "🍮",
-    "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
-    "price": 1100,
-    "stockStatus": "agotado"
+    "shortDescription": "Copa de 280 ml.",
+    "longDescription": "Helado artesanal de chocolate en copa de 280 ml.",
+    "image": "🍫",
+    "photo": "/assets/images/products/HeladeriaM&K/Pote-de-Helado-Chocolate-280ml-1.webp",
+    "price": 540,
+    "stockStatus": "disponible"
   },
+
   {
     "id": "hmk-003",
     "name": "Helado de Leche Condensada 280 ml",
@@ -69,7 +71,8 @@
       "Manzana",
       "Naranja Piña",
       "Vainilla",
-      "Uva"
+      "Uva",
+      "Chocolate"
     ]
   },
   {
