@@ -105,5 +105,28 @@
       }
     ]
 
+  },
+   {
+    "id": "lllk-00",
+    "name": "Pan con Perro",
+    "businessId": "los-llenik",
+    "businessName": "Los Llenik",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "El Clásico pan con perro caliente , ketchup y mostaza",
+    "image": "�",
+    "price": 600,
+
+    "photo":"/assets/images/products/Los Llenik/Pan con Perro.webp",
+  
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      }
+    ]
+
   }
 ]
+
