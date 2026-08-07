@@ -8,25 +8,21 @@
     "shortDescription": "",
     "longDescription": "Limonada natural hecha con ingredientes frescos.",
     "image": "�",
-    "photo":"/assets/images/products/Los Llenik/Limonada Natural.jpg",
+    "photo": "/assets/images/products/Los Llenik/Limonada Natural.jpg",
     "price": 500,
-      "addons": [
+    "addons": [
       {
         "name": "Con Alchol",
         "price": 150
       }
-
- 
     ],
     "stockStatus": "disponible",
-    
     "packaging": [
       {
         "name": "Vaso Domo",
         "price": 200
       }
     ]
-
   },
   {
     "id": "lllk-002",
@@ -38,15 +34,12 @@
     "longDescription": "Limonada natural con hierva buena.",
     "image": "�",
     "price": 500,
-   
-    "photo":"/assets/images/products/Los Llenik/Limonada Frescura.jpg",
-     "addons": [
+    "photo": "/assets/images/products/Los Llenik/Limonada Frescura.jpg",
+    "addons": [
       {
         "name": "Con Alchol",
         "price": 150
       }
-
- 
     ],
     "stockStatus": "disponible",
     "packaging": [
@@ -55,9 +48,8 @@
         "price": 200
       }
     ]
-
   },
-    {
+  {
     "id": "lllk-003",
     "name": "Limonada Clarete",
     "businessId": "los-llenik",
@@ -68,16 +60,15 @@
     "image": "�",
     "price": 550,
     "stockStatus": "disponible",
-    "photo":"/assets/images/products/Los Llenik/Limonada Clarete.jpg",
+    "photo": "/assets/images/products/Los Llenik/Limonada Clarete.jpg",
     "packaging": [
       {
         "name": "Vaso Domo",
         "price": 200
       }
     ]
-
   },
-   {
+  {
     "id": "lllk-004",
     "name": "Piña Colada",
     "businessId": "los-llenik",
@@ -87,15 +78,12 @@
     "longDescription": "La clásica piña colada con ingredientes frescos.",
     "image": "�",
     "price": 600,
-
-    "photo":"/assets/images/products/Los Llenik/pina-colada.jpg",
-     "addons": [
+    "photo": "/assets/images/products/Los Llenik/pina-colada.jpg",
+    "addons": [
       {
         "name": "Con Alchol",
         "price": 100
       }
-
- 
     ],
     "stockStatus": "disponible",
     "packaging": [
@@ -104,9 +92,8 @@
         "price": 200
       }
     ]
-
   },
-   {
+  {
     "id": "lllk-005",
     "name": "Pan con Perro",
     "businessId": "los-llenik",
@@ -116,9 +103,7 @@
     "longDescription": "El Clásico pan con perro caliente , ketchup y mostaza",
     "image": "�",
     "price": 500,
-
-    "photo":"/assets/images/products/Los Llenik/Pan con Perro.webp",
-  
+    "photo": "/assets/images/products/Los Llenik/Pan con Perro.webp",
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -126,9 +111,8 @@
         "price": 50
       }
     ]
-
   },
-     {
+  {
     "id": "lllk-006",
     "name": "Cóctel de Frutas",
     "businessId": "los-llenik",
@@ -138,9 +122,7 @@
     "longDescription": "Coctel de frutas con ingredientes frescos ",
     "image": "�",
     "price": 450,
-
-    "photo":"/assets/images/products/Los Llenik/coctel de frutas.jpg",
-  
+    "photo": "/assets/images/products/Los Llenik/coctel de frutas.jpg",
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -148,7 +130,5 @@
         "price": 200
       }
     ]
-
   }
 ]
-

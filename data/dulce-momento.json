@@ -1,0 +1,108 @@
+[
+  {
+    "id": "dulceM-001",
+    "name": "Cesta de Helado",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "3 Bolas con Sirope y gragea ",
+
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/Cesta de helado.jpg",
+    "price": 460,
+
+    "stockStatus": "disponible"
+
+  },
+   {
+    "id": "dulceM-002",
+    "name": "Coctel de Frutas",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Bebidas",
+    "shortDescription": "Clásico Coctel de frutas cubano",
+
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/coctel de frutas.jpg",
+    "price": 400,
+
+    "stockStatus": "disponible"
+
+  },
+     {
+    "id": "dulceM-003",
+    "name": "Termopack de Rollos x6",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Dulces",
+    "shortDescription": "Termopack de 6 rollos",
+
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/termopack de rollos x 6.jpg",
+    "price": 820,
+
+    "stockStatus": "disponible"
+
+  },
+     {
+    "id": "dulceM-004",
+    "name": "Vaso de Panetela con Helado",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "helado , panetela , helado doble , sirope y gragea",
+
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/vaso de panetela con helado.jpg",
+    "price": 750,
+
+    "stockStatus": "disponible"
+
+  },
+       {
+    "id": "dulceM-004",
+    "name": "Termopack de Helado (8 bolas)",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "8 bolas de helado , sirope y gragea",
+     
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/termopackde helado 8 bolas de helado.jpg",
+    "price": 750,
+
+    "stockStatus": "disponible"
+
+  },
+         {
+    "id": "dulceM-005",
+    "name": "Tina de Helado 4 litros",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "Tina de Helado de Chocolate 4 litros",
+     
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/Tina de Helado.jpg",
+    "price": 5000,
+
+    "stockStatus": "disponible"
+
+  },
+         {
+    "id": "dulceM-006",
+    "name": "Combo de Tina de Helado y 10 conos",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "Combo de Tina de Helado de Chocolate 4 litros y 10 conos",
+     
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/tina de helado con 10 barquillos.jpg",
+    "price": 6000,
+
+    "stockStatus": "disponible"
+
+  }
+]
+

@@ -9,12 +9,12 @@
     "longDescription": "Arroz a granel, precio por libra. Indica la cantidad de libras al confirmar.",
     "image": "🍚",
     "photo": "/assets/images/products/mercado/arroz_brasileño_agranel.jpg",
-    "price": 340,
+    "price": 350,
     "stockStatus": "disponible"
   },
   {
     "id": "ma-002",
-    "name": "Aceite (900 mL)",
+    "name": "Aceite (1000 mL)",
     "businessId": "mercadito-ahorro",
     "businessName": "El Mercadito",
     "category": "Alimentos",
@@ -22,8 +22,8 @@
     "longDescription": "Aceite vegetal en botella de 900ml.",
     "image": "🫒",
     "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-    "price": 2100,
-    "stockStatus": "agotado"
+    "price": 4000,
+    "stockStatus": "disponible"
   },
   {
     "id": "ma-003",
@@ -73,7 +73,7 @@
     "longDescription": "Sopa intantanea.",
     "image": "🍚",
     "photo": "/assets/images/products/mercado/sopa_instantanea.jpg",
-    "price": 280,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -99,7 +99,7 @@
     "longDescription": "Arroz de 1kg.",
     "image": "🍚",
     "photo": "/assets/images/products/mercado/arroz_sam1kg.jpg",
-    "price": 780,
+    "price": 800,
     "stockStatus": "disponible"
   },
   {
@@ -112,7 +112,7 @@
     "longDescription": "Yogurt envasaado",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/yogurt_vaso.webp",
-    "price": 320,
+    "price": 350,
     "stockStatus": "disponible"
   },
   {
@@ -136,7 +136,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Pasta de tomate concentrada, se vende por lata.",
     "image": "🍅",
-    "price": 580,
+    "price": 600,
     "stockStatus": "disponible"
   },
   {
@@ -148,7 +148,7 @@
     "shortDescription": "Se vende por pote.",
     "longDescription": "Mantequilla, se vende por pote.",
     "image": "🧈",
-    "price": 600,
+    "price": 650,
     "stockStatus": "disponible"
   },
   {
@@ -184,7 +184,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Leche evaporada, se vende por lata.",
     "image": "🥛",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -196,7 +196,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Leche condensada, se vende por lata.",
     "image": "🥛",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -208,7 +208,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Fanguito, se vende por lata.",
     "image": "🍫",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -221,7 +221,7 @@
     "longDescription": "Chocolate, se vende por paquete.",
     "image": "🍫",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-022",
@@ -232,7 +232,7 @@
     "shortDescription": "5 a 6 muslos por paquete.",
     "longDescription": "Paquete de muslos de pollo, trae entre 5 y 6 unidades.",
     "image": "🍗",
-    "price": 1900,
+    "price": 2000,
     "stockStatus": "disponible"
   },
   {
@@ -270,7 +270,7 @@
     "shortDescription": "Precio por libra.",
     "longDescription": "Picadillo de pollo MDM, se vende por libra.",
     "image": "🍖",
-    "price": 520,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -327,7 +327,7 @@
     "longDescription": "Leche condensada, se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/leche condensada 800.jpg",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -339,7 +339,7 @@
     "shortDescription": "Paquete de 500 g.",
     "longDescription": "Coditos, paquete de 500 g.",
     "image": "🍝",
-    "price": 380,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -352,7 +352,7 @@
     "longDescription": "Atún en lata, se vende por unidad.",
     "image": "🐟",
     "photo": "/assets/images/products/mercado/lata de atún.jpg",
-    "price": 600,
+    "price": 800,
     "stockStatus": "disponible"
   },
   {
@@ -412,7 +412,7 @@
     "shortDescription": "Se vende por unidad.",
     "longDescription": "Vino seco, se vende por unidad.",
     "image": "🍷",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -460,7 +460,7 @@
     "shortDescription": "Paquete de 500 g.",
     "longDescription": "Detergente Defá, paquete de 500 g.",
     "image": "🧺",
-    "price": 750,
+    "price": 800,
     "stockStatus": "disponible"
   },
   {
@@ -512,7 +512,7 @@
     "image": "🍯",
     "photo": "/assets/images/products/mercado/pasta de bocadito.jpg",
     "price": 1800,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-044",
@@ -548,6 +548,42 @@
     "longDescription": "Jamón en porción de media libra.",
     "image": "🍖",
     "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-046",
+    "name": "Spam de Tuvo, 1100",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Embutidos",
+    "shortDescription": "Se vende por unidad.",
+    "longDescription": "Jamonada.",
+    "image": "🥩",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-046",
+    "name": "Jabón de Baño",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Aseo",
+    "shortDescription": "Jabón de olor",
+    "longDescription": "100 gramos",
+    "image": "🧺",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-047",
+    "name": "Jabón de Lavar",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Aseo",
+    "shortDescription": "Jabón de Lavar ,150 gramos",
+    "longDescription": "",
+    "image": "🧺",
+    "price": 350,
     "stockStatus": "disponible"
   }
 ]

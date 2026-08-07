@@ -9,7 +9,7 @@
     "longDescription": "Deliciosas torticas caseras. La caja trae 15 unidades.",
     "image": "🍪",
     "photo": "/assets/images/products/AmoRe/torticas.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {
@@ -22,7 +22,7 @@
     "longDescription": "Pasteles esponjosos y rellenos. La caja trae 13 unidades.",
     "image": "🥐",
     "photo": "/assets/images/products/AmoRe/caja de pasteles.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {
@@ -35,7 +35,7 @@
     "longDescription": "Rosquitas caseras, crujientes y esponjosas. La caja trae 13 unidades.",
     "image": "🍩",
     "photo": "/assets/images/products/AmoRe/Rosquitas.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {
@@ -61,7 +61,7 @@
     "longDescription": "Tartaletas artesanales. La caja trae 6 unidades.",
     "image": "🥧",
     "photo": "/assets/images/products/AmoRe/tartaletas.jpg",
-    "price": 1050,
+    "price": 1400,
     "stockStatus": "disponible"
   },
   {
@@ -74,7 +74,7 @@
     "longDescription": "Esponjoso bizcocho bañado en tres leches, cremoso y suave en cada bocado.",
     "image": "🍮",
     "photo": "/assets/images/products/AmoRe/3-leches.jpg",
-    "price": 700,
+    "price": 750,
     "stockStatus": "disponible"
   },
   {

@@ -342,6 +342,26 @@
       "label": "Lun–Dom · 9:00 am – 9:00 pm"
     }
   },
+      {
+    "id": "dulce-momento",
+    "name": "Dulce Momento",
+    "description": "Dulce Momento — Helados, dulces y postres a domicilio",
+    "image": "/assets/images/business/Dulce-momento.jpg",
+    "color": "from-sky-100 to-cyan-50",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Lun–Dom · 9:00 am – 9:00 pm"
+    }
+  },
   {
     "id": "al-carbon",
     "name": "Al Carbón",
