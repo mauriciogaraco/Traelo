@@ -56,7 +56,7 @@
     "photo":"/assets/images/products/Dulce momento/vaso de panetela con helado.jpg",
     "price": 750,
 
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
 
   },
        {
@@ -71,7 +71,7 @@
     "photo":"/assets/images/products/Dulce momento/termopackde helado 8 bolas de helado.jpg",
     "price": 1750,
 
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
 
   },
          {
