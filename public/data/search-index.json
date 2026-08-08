@@ -776,7 +776,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 950,
+    "price": 1250,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -793,7 +793,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1150,
+    "price": 1450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -810,7 +810,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1150,
+    "price": 1450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -827,7 +827,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1300,
+    "price": 1600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -844,7 +844,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1300,
+    "price": 1600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -861,7 +861,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 950,
+    "price": 1250,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -878,7 +878,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 950,
+    "price": 1250,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -912,7 +912,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1350,
+    "price": 1650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -929,7 +929,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1650,
+    "price": 1950,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1235,7 +1235,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 3150,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1252,7 +1252,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 2150,
+    "price": 2450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1269,7 +1269,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 2150,
+    "price": 2450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1286,7 +1286,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 2050,
+    "price": 2350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1303,7 +1303,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 3550,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1320,7 +1320,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 3550,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1473,7 +1473,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 5050,
+    "price": 5350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1490,7 +1490,7 @@
     "category": "Comida",
     "shortDescription": "Res",
     "image": "🥩",
-    "price": 2250,
+    "price": 2550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1507,7 +1507,7 @@
     "category": "Comida",
     "shortDescription": "Res",
     "image": "🥩",
-    "price": 2250,
+    "price": 2550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1677,7 +1677,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 1600,
+    "price": 1850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7251,8 +7251,31 @@
     "image": "🍞",
     "photo": "/assets/images/products/AmoRe/Bolsa de Pan de Bocadito x 20 --400cup.jpg",
     "price": 400,
-    "stockStatus": "disponible",
-    "formato": 20
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-011",
+    "name": "Bolsa de Pan perro x 15",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "Bolsa de 15 panes de perro.",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/Bolsa de panes perro.jpg",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-012",
+    "name": "Caja de MiniCake 3 Leches y Tartaletas",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "Minicake de 3 leches y 5 tartaletas.",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/Mini-cake-3-leches-y-tartaletas.jpg",
+    "price": 8000,
+    "stockStatus": "disponible"
   },
   {
     "id": "cdl-001",
@@ -7263,7 +7286,7 @@
     "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
     "image": "🍔",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Hamburguesa-450.jpg",
-    "price": 450,
+    "price": 650,
     "stockStatus": "disponible"
   },
   {
@@ -7275,7 +7298,7 @@
     "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
     "image": "🥚",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla-400.jpg",
-    "price": 400,
+    "price": 600,
     "stockStatus": "disponible"
   },
   {
@@ -7287,7 +7310,7 @@
     "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
     "image": "🍔",
     "photo": "/assets/images/products/Cafetería-D'-Leo/pan-Con-Tortilla-y-Hamburguesa-600.jpg",
-    "price": 600,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -7299,7 +7322,7 @@
     "shortDescription": "Con ensalada, cebolla y papitas.",
     "image": "🥩",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-800.jpg",
-    "price": 800,
+    "price": 1000,
     "stockStatus": "disponible"
   },
   {
@@ -7311,7 +7334,7 @@
     "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
     "image": "🥩",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-Y-Hamburguesa-1000.jpg",
-    "price": 1000,
+    "price": 1250,
     "stockStatus": "disponible"
   },
   {
@@ -7368,7 +7391,7 @@
     "shortDescription": "Con ensalada, cebolla, papitas, ketchup y mostaza.",
     "image": "🍔",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla,Bistec y Hamburguesa-1200.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {
@@ -7509,7 +7532,7 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/termopack de rollos x 6.jpg",
     "price": 820,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-004",
@@ -7521,7 +7544,7 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/vaso de panetela con helado.jpg",
     "price": 750,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-004",
@@ -7532,8 +7555,8 @@
     "shortDescription": "8 bolas de helado , sirope y gragea",
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/termopackde helado 8 bolas de helado.jpg",
-    "price": 750,
-    "stockStatus": "disponible"
+    "price": 1750,
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-005",
@@ -7545,7 +7568,7 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/Tina de Helado.jpg",
     "price": 5000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-006",
@@ -7557,7 +7580,7 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/tina de helado con 10 barquillos.jpg",
     "price": 6000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "hmk-001",
@@ -7617,7 +7640,7 @@
     "image": "🧊",
     "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
     "price": 4650,
-    "stockStatus": "disponible",
+    "stockStatus": "agotado",
     "options": [
       "Mantecado",
       "Fresa",
