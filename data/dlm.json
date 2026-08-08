@@ -80,7 +80,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 950,
+    "price": 1250,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -98,7 +98,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 1150,
+    "price": 1450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -116,7 +116,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 1150,
+    "price": 1450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -134,7 +134,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 1300,
+    "price": 1600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -152,7 +152,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 1300,
+    "price": 1600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -170,7 +170,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 950,
+    "price": 1250,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -188,7 +188,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 950,
+    "price": 1250,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -224,7 +224,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 1350,
+    "price": 1650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -242,7 +242,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 1650,
+    "price": 1950,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -566,7 +566,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 3150,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -584,7 +584,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 2150,
+    "price": 2450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -602,7 +602,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 2150,
+    "price": 2450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -620,7 +620,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 2050,
+    "price": 2350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -638,7 +638,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 3550,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -656,7 +656,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 3550,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -818,7 +818,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 5050,
+    "price": 5350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -836,7 +836,7 @@
     "shortDescription": "Res",
     "longDescription": "Res · Parrilla",
     "image": "🥩",
-    "price": 2250,
+    "price": 2550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -854,7 +854,7 @@
     "shortDescription": "Res",
     "longDescription": "Res · Parrilla",
     "image": "🥩",
-    "price": 2250,
+    "price": 2550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1034,7 +1034,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 1600,
+    "price": 1850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1240,7 +1240,8 @@
       "Cola"
     ]
   },
-  {
+  { 
+    
     "id": "dlm-072",
     "name": "Malta",
     "businessId": "dlm",

@@ -222,7 +222,6 @@
       "description": "Panes con bistec, hamburguesa y tortilla, preparados con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
       "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
       "color": "from-yellow-100 to-amber-50",
-      "status": "cerrado",
       "schedule": {
         "days": [
           0,
@@ -1222,7 +1221,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 950,
+      "price": 1250,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1240,7 +1239,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 1150,
+      "price": 1450,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1258,7 +1257,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 1150,
+      "price": 1450,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1276,7 +1275,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 1300,
+      "price": 1600,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1294,7 +1293,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 1300,
+      "price": 1600,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1312,7 +1311,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 950,
+      "price": 1250,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1330,7 +1329,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 950,
+      "price": 1250,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1366,7 +1365,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 1350,
+      "price": 1650,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1384,7 +1383,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 1650,
+      "price": 1950,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1708,7 +1707,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 3150,
+      "price": 3850,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1726,7 +1725,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 2150,
+      "price": 2450,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1744,7 +1743,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 2150,
+      "price": 2450,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1762,7 +1761,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 2050,
+      "price": 2350,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1780,7 +1779,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 3550,
+      "price": 3850,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1798,7 +1797,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 3550,
+      "price": 3850,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1960,7 +1959,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 5050,
+      "price": 5350,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1978,7 +1977,7 @@
       "shortDescription": "Res",
       "longDescription": "Res · Parrilla",
       "image": "🥩",
-      "price": 2250,
+      "price": 2550,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1996,7 +1995,7 @@
       "shortDescription": "Res",
       "longDescription": "Res · Parrilla",
       "image": "🥩",
-      "price": 2250,
+      "price": 2550,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2176,7 +2175,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 1600,
+      "price": 1850,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -8090,8 +8089,33 @@
       "image": "🍞",
       "photo": "/assets/images/products/AmoRe/Bolsa de Pan de Bocadito x 20 --400cup.jpg",
       "price": 400,
-      "stockStatus": "disponible",
-      "formato": 20
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-011",
+      "name": "Bolsa de Pan perro x 15",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Panadería",
+      "shortDescription": "Bolsa de 15 panes de perro.",
+      "longDescription": "Bolsa de 15 panes de perro artesanales.",
+      "image": "🍞",
+      "photo": "/assets/images/products/AmoRe/Bolsa de panes perro.jpg",
+      "price": 800,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "am-012",
+      "name": "Caja de MiniCake 3 Leches y Tartaletas",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Panadería",
+      "shortDescription": "Minicake de 3 leches y 5 tartaletas.",
+      "longDescription": "El cake se puede hacer del color que desea el cliente",
+      "image": "🍞",
+      "photo": "/assets/images/products/AmoRe/Mini-cake-3-leches-y-tartaletas.jpg",
+      "price": 8000,
+      "stockStatus": "disponible"
     },
     {
       "id": "cdl-001",
@@ -8103,7 +8127,7 @@
       "longDescription": "Pan con hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
       "image": "🍔",
       "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Hamburguesa-450.jpg",
-      "price": 450,
+      "price": 650,
       "stockStatus": "disponible"
     },
     {
@@ -8116,7 +8140,7 @@
       "longDescription": "Pan con tortilla, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
       "image": "🥚",
       "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla-400.jpg",
-      "price": 400,
+      "price": 600,
       "stockStatus": "disponible"
     },
     {
@@ -8129,7 +8153,7 @@
       "longDescription": "Pan con tortilla y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
       "image": "🍔",
       "photo": "/assets/images/products/Cafetería-D'-Leo/pan-Con-Tortilla-y-Hamburguesa-600.jpg",
-      "price": 600,
+      "price": 850,
       "stockStatus": "disponible"
     },
     {
@@ -8142,7 +8166,7 @@
       "longDescription": "Pan con bistec, preparado con ensalada de estación, cebolla y papitas.",
       "image": "🥩",
       "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-800.jpg",
-      "price": 800,
+      "price": 1000,
       "stockStatus": "disponible"
     },
     {
@@ -8155,7 +8179,7 @@
       "longDescription": "Pan con bistec y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
       "image": "🥩",
       "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-Y-Hamburguesa-1000.jpg",
-      "price": 1000,
+      "price": 1250,
       "stockStatus": "disponible"
     },
     {
@@ -8217,7 +8241,7 @@
       "longDescription": "Pan con tortilla, bistec y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
       "image": "🍔",
       "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla,Bistec y Hamburguesa-1200.jpg",
-      "price": 1200,
+      "price": 1500,
       "stockStatus": "disponible"
     },
     {
@@ -8366,7 +8390,7 @@
       "image": "�",
       "photo": "/assets/images/products/Dulce momento/termopack de rollos x 6.jpg",
       "price": 820,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "dulceM-004",
@@ -8378,7 +8402,7 @@
       "image": "�",
       "photo": "/assets/images/products/Dulce momento/vaso de panetela con helado.jpg",
       "price": 750,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "dulceM-004",
@@ -8389,8 +8413,8 @@
       "shortDescription": "8 bolas de helado , sirope y gragea",
       "image": "�",
       "photo": "/assets/images/products/Dulce momento/termopackde helado 8 bolas de helado.jpg",
-      "price": 750,
-      "stockStatus": "disponible"
+      "price": 1750,
+      "stockStatus": "agotado"
     },
     {
       "id": "dulceM-005",
@@ -8402,7 +8426,7 @@
       "image": "�",
       "photo": "/assets/images/products/Dulce momento/Tina de Helado.jpg",
       "price": 5000,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "dulceM-006",
@@ -8414,19 +8438,19 @@
       "image": "�",
       "photo": "/assets/images/products/Dulce momento/tina de helado con 10 barquillos.jpg",
       "price": 6000,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-001",
-      "name": "Helado de Fresa 280 ml",
+      "name": "Helado de Chocolate 750 ml",
       "businessId": "heladeria-mk",
       "businessName": "Heladería M&K",
       "category": "Helados",
-      "shortDescription": "Copa de 280 ml.",
-      "longDescription": "Helado artesanal de fresa en copa de 280 ml.",
-      "image": "🍓",
-      "photo": "/assets/images/products/HeladeriaM&K/helado-fresa-280ml-540.jpg",
-      "price": 540,
+      "shortDescription": "Pote de 750 ml.",
+      "longDescription": "Helado artesanal de chocolate en pote de 750 ml.",
+      "image": "�",
+      "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
+      "price": 1200,
       "stockStatus": "agotado"
     },
     {
@@ -8466,7 +8490,7 @@
       "image": "🍦",
       "photo": "/assets/images/products/HeladeriaM&K/helado-vainilla-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-005",
@@ -8501,7 +8525,7 @@
       "image": "🍊",
       "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Naranja-Piña-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-007",
@@ -8514,7 +8538,7 @@
       "image": "🍦",
       "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Mantecado-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-008",
@@ -8580,7 +8604,7 @@
       "image": "🥐",
       "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
       "price": 400,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 4
     },
     {
@@ -8594,7 +8618,7 @@
       "image": "🌀",
       "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
       "price": 400,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 4
     },
     {
@@ -8608,7 +8632,7 @@
       "image": "🍩",
       "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
       "price": 400,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 4
     },
     {

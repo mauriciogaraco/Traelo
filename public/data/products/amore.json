@@ -139,7 +139,32 @@
     "image": "🍞",
     "photo": "/assets/images/products/AmoRe/Bolsa de Pan de Bocadito x 20 --400cup.jpg",
     "price": 400,
-    "stockStatus": "disponible",
-    "formato": 20
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-011",
+    "name": "Bolsa de Pan perro x 15",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "Bolsa de 15 panes de perro.",
+    "longDescription": "Bolsa de 15 panes de perro artesanales.",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/Bolsa de panes perro.jpg",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-012",
+    "name": "Caja de MiniCake 3 Leches y Tartaletas",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "Minicake de 3 leches y 5 tartaletas.",
+    "longDescription": "El cake se puede hacer del color que desea el cliente",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/Mini-cake-3-leches-y-tartaletas.jpg",
+    "price": 8000,
+    "stockStatus": "disponible"
   }
 ]

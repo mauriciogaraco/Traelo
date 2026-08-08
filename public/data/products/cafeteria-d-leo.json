@@ -9,7 +9,7 @@
     "longDescription": "Pan con hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
     "image": "🍔",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Hamburguesa-450.jpg",
-    "price": 450,
+    "price": 650,
     "stockStatus": "disponible"
   },
   {
@@ -22,7 +22,7 @@
     "longDescription": "Pan con tortilla, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
     "image": "🥚",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla-400.jpg",
-    "price": 400,
+    "price": 600,
     "stockStatus": "disponible"
   },
   {
@@ -35,7 +35,7 @@
     "longDescription": "Pan con tortilla y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
     "image": "🍔",
     "photo": "/assets/images/products/Cafetería-D'-Leo/pan-Con-Tortilla-y-Hamburguesa-600.jpg",
-    "price": 600,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -48,7 +48,7 @@
     "longDescription": "Pan con bistec, preparado con ensalada de estación, cebolla y papitas.",
     "image": "🥩",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-800.jpg",
-    "price": 800,
+    "price": 1000,
     "stockStatus": "disponible"
   },
   {
@@ -61,7 +61,7 @@
     "longDescription": "Pan con bistec y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
     "image": "🥩",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Bistec-Y-Hamburguesa-1000.jpg",
-    "price": 1000,
+    "price": 1250,
     "stockStatus": "disponible"
   },
   {
@@ -123,7 +123,7 @@
     "longDescription": "Pan con tortilla, bistec y hamburguesa, preparado con ensalada de estación, cebolla, papitas, ketchup y mostaza.",
     "image": "🍔",
     "photo": "/assets/images/products/Cafetería-D'-Leo/Pan-Con-Tortilla,Bistec y Hamburguesa-1200.jpg",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible"
   },
   {

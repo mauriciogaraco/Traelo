@@ -33,7 +33,7 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/termopack de rollos x 6.jpg",
     "price": 820,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-004",
@@ -45,7 +45,7 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/vaso de panetela con helado.jpg",
     "price": 750,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-004",
@@ -56,8 +56,8 @@
     "shortDescription": "8 bolas de helado , sirope y gragea",
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/termopackde helado 8 bolas de helado.jpg",
-    "price": 750,
-    "stockStatus": "disponible"
+    "price": 1750,
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-005",
@@ -69,7 +69,7 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/Tina de Helado.jpg",
     "price": 5000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "dulceM-006",
@@ -81,6 +81,6 @@
     "image": "�",
     "photo": "/assets/images/products/Dulce momento/tina de helado con 10 barquillos.jpg",
     "price": 6000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   }
 ]
