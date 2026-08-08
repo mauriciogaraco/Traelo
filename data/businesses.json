@@ -328,7 +328,7 @@
     "description": "Los Llenik — El bar a tu casa",
     "image": "/assets/images/business/Los Llenik.jpg",
     "color": "from-sky-100 to-cyan-50",
-    "status": "cerrado",
+ 
     "schedule": {
       "days": [
         1,

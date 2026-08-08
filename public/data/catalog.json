@@ -327,7 +327,6 @@
       "description": "Los Llenik — El bar a tu casa",
       "image": "/assets/images/business/Los Llenik.jpg",
       "color": "from-sky-100 to-cyan-50",
-      "status": "cerrado",
       "schedule": {
         "days": [
           1,
@@ -8443,15 +8442,15 @@
     },
     {
       "id": "hmk-001",
-      "name": "Helado de Fresa 280 ml",
+      "name": "Helado de Chocolate 750 ml",
       "businessId": "heladeria-mk",
       "businessName": "Heladería M&K",
       "category": "Helados",
-      "shortDescription": "Copa de 280 ml.",
-      "longDescription": "Helado artesanal de fresa en copa de 280 ml.",
-      "image": "🍓",
-      "photo": "/assets/images/products/HeladeriaM&K/helado-fresa-280ml-540.jpg",
-      "price": 540,
+      "shortDescription": "Pote de 750 ml.",
+      "longDescription": "Helado artesanal de chocolate en pote de 750 ml.",
+      "image": "�",
+      "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
+      "price": 1200,
       "stockStatus": "agotado"
     },
     {
@@ -8491,7 +8490,7 @@
       "image": "🍦",
       "photo": "/assets/images/products/HeladeriaM&K/helado-vainilla-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-005",
@@ -8504,7 +8503,7 @@
       "image": "🧊",
       "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
       "price": 4650,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "options": [
         "Mantecado",
         "Fresa",
@@ -8526,7 +8525,7 @@
       "image": "🍊",
       "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Naranja-Piña-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-007",
@@ -8539,7 +8538,7 @@
       "image": "🍦",
       "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Mantecado-280ml-540.jpg",
       "price": 540,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "hmk-008",
@@ -8605,7 +8604,7 @@
       "image": "🥐",
       "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
       "price": 400,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 4
     },
     {
@@ -8619,7 +8618,7 @@
       "image": "🌀",
       "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
       "price": 400,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 4
     },
     {
@@ -8633,7 +8632,7 @@
       "image": "🍩",
       "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
       "price": 400,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 4
     },
     {
