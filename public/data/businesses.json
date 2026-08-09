@@ -329,6 +329,7 @@
     "color": "from-sky-100 to-cyan-50",
     "schedule": {
       "days": [
+        0,
         1,
         2,
         3,
