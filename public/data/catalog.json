@@ -204,6 +204,7 @@
       "color": "from-pink-100 to-rose-50",
       "schedule": {
         "days": [
+          0,
           1,
           2,
           3,
