@@ -121,15 +121,8 @@
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Dom · 9:00 am – 6:00 pm"
-    },
-    "scheduleExtra": {
-      "days": [
-        0
-      ],
-      "open": "12:00",
-      "close": "20:00",
-      "label": "Dom · 12:00 pm – 8:00 pm"
     }
+    
     
   },
   {
