@@ -110,6 +110,8 @@
     "color": "from-sky-100 to-cyan-50",
     "schedule": {
       "days": [
+        0,
+        1,
         2,
         3,
         4,
@@ -118,7 +120,7 @@
       ],
       "open": "09:00",
       "close": "18:00",
-      "label": "Mar–Sáb · 9:00 am – 6:00 pm"
+      "label": "Lun–Dom · 9:00 am – 6:00 pm"
     },
     "scheduleExtra": {
       "days": [
