@@ -22,6 +22,7 @@ const BUSINESS_FILES = [
   'heladeria-mk',
   'las-palmitas',
   'pizzeria-mm',
+  'frappio',
   'ferreguira',
   'los-llenik',
 ];

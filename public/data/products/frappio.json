@@ -1,0 +1,140 @@
+[
+  {
+    "id": "frappio-001",
+    "name": "Frappio Tradicional",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café y leche, con canela espolvoreada.",
+    "image": "�",
+    "price": 750,
+    "photo": "/assets/images/products/Frappio/Frappio-Tradicional.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-002",
+    "name": "Frappio Mocha",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café y leche, con chocolate, sirope y galletas de chocolate espolvoreadas.",
+    "image": "�",
+    "price": 800,
+    "photo": "/assets/images/products/Frappio/Frappio-Mocha.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-003",
+    "name": "Frappio Dos Leches",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café y leche, con leche condensada y galletas espolvoreadas.",
+    "image": "�",
+    "price": 850,
+    "photo": "/assets/images/products/Frappio/Frappio 2 Leches.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-004",
+    "name": "Frappio Macchiato",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café y leche, con dulce de leche (fanguito) y galletas espolvoreadas.",
+    "image": "�",
+    "price": 900,
+    "photo": "/assets/images/products/Frappio/Frappio-Machiato.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-005",
+    "name": "Frappio Biscuit",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café y leche, con galletas de chocolate batidas, sirope y galletas de decoración.",
+    "image": "�",
+    "price": 950,
+    "photo": "/assets/images/products/Frappio/Frappio-Biscuit.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-006",
+    "name": "Super Frapio",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café y leche, con dulce de leche (fanguito), galletas de chocolate batidas, sirope y galletas de decoración.",
+    "image": "�",
+    "price": 1100,
+    "photo": "/assets/images/products/Frappio/Super-Frappio.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      }
+    ]
+  }
+]
