@@ -1,19 +1,46 @@
 [
   {
     "id": "cr-001",
-    "name": "Smoothie de Mamey",
+    "name": "Smoothie de Mango",
     "businessId": "cronos",
     "businessName": "Cronos",
     "category": "Batidos",
-    "shortDescription": "Batido natural de mamey.",
-    "longDescription": "Batido cremoso de mamey natural, suave y tropical. Coronado con crema batida, sirope y confituras de decoración.",
+    "shortDescription": "Batido natural de mango.",
+    "longDescription": "Batido cremoso de mango natural, suave y tropical. Coronado con crema batida, sirope y confituras de decoración.",
     "image": "🥤",
-    "photo": "/assets/images/products/Cronos/Mamey.jpg",
+    "photo": "/assets/images/products/Cronos/Mango.jpg",
     "price": 700,
     "stockStatus": "agotado"
   },
   {
     "id": "cr-002",
+    "name": "Smoothie Fruta-Bomba",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido natural de fruta bomba",
+    "longDescription": "Batido cremoso de fruta bomba natural, suave y tropical. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🥛",
+    "photo": "/assets/images/products/Cronos/Fruta-Bomba.jpg",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-003",
+    "name": "Smoothie de Maní",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido natural de maní",
+    "longDescription": "Batido cremoso de maní, suave y tropical. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🥛",
+    "photo": "/assets/images/products/Cronos/Maní.jpg",
+    "price": 850,
+    "featured": true,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-004",
     "name": "Smoothie Malteado",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -26,7 +53,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-003",
+    "id": "cr-005",
     "name": "Smoothie de Fresa",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -39,7 +66,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-004",
+    "id": "cr-006",
     "name": "Smoothie de Chocolate",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -53,7 +80,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-005",
+    "id": "cr-007",
     "name": "Smoothie de Vainilla",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -63,10 +90,10 @@
     "image": "🍦",
     "photo": "/assets/images/products/Cronos/helado-Vanilla.jpg",
     "price": 1100,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
-    "id": "cr-006",
+    "id": "cr-008",
     "name": "Smoothie de Naranja y Piña",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -79,7 +106,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-007",
+    "id": "cr-009",
     "name": "Smoothie de Avellana",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -89,11 +116,10 @@
     "image": "🌰",
     "photo": "/assets/images/products/Cronos/Helado-Sabor-Avellana.jpg",
     "price": 1100,
-    "featured": true,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
-    "id": "cr-008",
+    "id": "cr-010",
     "name": "Smoothie de Mantecado",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -106,7 +132,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-010",
+    "id": "cr-011",
     "name": "Smoothie de Caramelo",
     "businessId": "cronos",
     "businessName": "Cronos",
@@ -119,7 +145,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-009",
+    "id": "cr-012",
     "name": "Smoothie de Dulce de Leche",
     "businessId": "cronos",
     "businessName": "Cronos",
