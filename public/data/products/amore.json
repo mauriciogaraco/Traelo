@@ -1,6 +1,19 @@
 [
   {
     "id": "am-001",
+    "name": "Termopack de 4 marquesitas",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "",
+    "longDescription": "Termo  pack de marquesitas",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/marquesitas.jpg",
+    "price": 600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-002",
     "name": "Caja de Torticas x15",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -13,7 +26,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-002",
+    "id": "am-003",
     "name": "Caja de Pasteles x13",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -26,7 +39,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-003",
+    "id": "am-004",
     "name": "Caja de Rosquitas x13",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -39,7 +52,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-004",
+    "id": "am-005",
     "name": "Bolsa de Merenguitos x15",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -52,7 +65,7 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "am-005",
+    "id": "am-006",
     "name": "Caja de Tartaletas x6",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -65,7 +78,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-006",
+    "id": "am-007",
     "name": "3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -78,7 +91,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-007",
+    "id": "am-008",
     "name": "Minicake 3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -91,7 +104,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-008",
+    "id": "am-009",
     "name": "Cake 3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -110,7 +123,7 @@
     ]
   },
   {
-    "id": "am-009",
+    "id": "am-010",
     "name": "Cake de Almíbar y Dulce de Leche",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -129,7 +142,7 @@
     ]
   },
   {
-    "id": "am-010",
+    "id": "am-011",
     "name": "Bolsa de Pan de Bocadito x 20",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -142,7 +155,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-011",
+    "id": "am-012",
     "name": "Bolsa de Pan perro x 15",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -155,7 +168,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-012",
+    "id": "am-013",
     "name": "Caja de MiniCake 3 Leches y Tartaletas",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",

@@ -7147,6 +7147,18 @@
   },
   {
     "id": "am-001",
+    "name": "Termopack de 4 marquesitas",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "",
+    "image": "🍞",
+    "photo": "/assets/images/products/AmoRe/marquesitas.jpg",
+    "price": 600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "am-002",
     "name": "Caja de Torticas x15",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7158,7 +7170,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-002",
+    "id": "am-003",
     "name": "Caja de Pasteles x13",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7170,7 +7182,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-003",
+    "id": "am-004",
     "name": "Caja de Rosquitas x13",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7182,7 +7194,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-004",
+    "id": "am-005",
     "name": "Bolsa de Merenguitos x15",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7194,7 +7206,7 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "am-005",
+    "id": "am-006",
     "name": "Caja de Tartaletas x6",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7206,7 +7218,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-006",
+    "id": "am-007",
     "name": "3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7218,7 +7230,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-007",
+    "id": "am-008",
     "name": "Minicake 3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7230,7 +7242,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-008",
+    "id": "am-009",
     "name": "Cake 3 Leches",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7248,7 +7260,7 @@
     ]
   },
   {
-    "id": "am-009",
+    "id": "am-010",
     "name": "Cake de Almíbar y Dulce de Leche",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7266,7 +7278,7 @@
     ]
   },
   {
-    "id": "am-010",
+    "id": "am-011",
     "name": "Bolsa de Pan de Bocadito x 20",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7278,7 +7290,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-011",
+    "id": "am-012",
     "name": "Bolsa de Pan perro x 15",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7290,7 +7302,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "am-012",
+    "id": "am-013",
     "name": "Caja de MiniCake 3 Leches y Tartaletas",
     "businessId": "amore",
     "businessName": "AmoRe Dulcería",
@@ -7536,6 +7548,18 @@
   },
   {
     "id": "dulceM-002",
+    "name": "Cesta dulce momento",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "3 Bolas con Sirope , grajea y un dulce ",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/Cesta dulce Momento 580.jpg",
+    "price": 580,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "dulceM-003",
     "name": "Coctel de Frutas",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -7547,7 +7571,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "dulceM-003",
+    "id": "dulceM-004",
     "name": "Termopack de Rollos x6",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -7559,7 +7583,19 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "dulceM-004",
+    "id": "dulceM-005",
+    "name": "Helado en pote 280ml",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Dulces",
+    "shortDescription": "Helado de fábrica 280 ml",
+    "image": "�",
+    "photo": "/assets/images/products/Dulce momento/pote de helado 280ml.jpg",
+    "price": 580,
+    "stockStatus": "agotado"
+  },
+  {
+    "id": "dulceM-006",
     "name": "Vaso de Panetela con Helado",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -7571,7 +7607,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "dulceM-004",
+    "id": "dulceM-007",
     "name": "Termopack de Helado (8 bolas)",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -7583,7 +7619,7 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "dulceM-005",
+    "id": "dulceM-008",
     "name": "Tina de Helado 4 litros",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -7595,7 +7631,7 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "dulceM-006",
+    "id": "dulceM-009",
     "name": "Combo de Tina de Helado y 10 conos",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -7608,7 +7644,7 @@
   },
   {
     "id": "hmk-001",
-    "name": "Helado de Chocolate 750 ml",
+    "name": "Pote de Helado 750 ml",
     "businessId": "heladeria-mk",
     "businessName": "Heladería M&K",
     "category": "Helados",
@@ -7616,7 +7652,16 @@
     "image": "�",
     "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
     "price": 1200,
-    "stockStatus": "agotado"
+    "options": [
+      "Mantecado",
+      "Fresa",
+      "Manzana",
+      "Naranja Piña",
+      "Vainilla",
+      "Uva",
+      "Chocolate"
+    ],
+    "stockStatus": "disponible"
   },
   {
     "id": "hmk-002",
@@ -7708,7 +7753,7 @@
     "shortDescription": "Copa de 280 ml.",
     "image": "🍏",
     "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Manzana-280ml-540.jpg",
-    "price": 540,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -7720,7 +7765,7 @@
     "shortDescription": "Vaso con helado y panetela. Elige tu sabor.",
     "image": "🍫",
     "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
-    "price": 640,
+    "price": 650,
     "stockStatus": "disponible",
     "options": [
       "Vainilla",
@@ -7758,7 +7803,7 @@
     "shortDescription": "Caja de 4 marquesitas artesanales.",
     "image": "🥐",
     "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
-    "price": 400,
+    "price": 500,
     "stockStatus": "agotado",
     "formato": 4
   },
@@ -7771,7 +7816,7 @@
     "shortDescription": "Caja de 4 rollitos artesanales.",
     "image": "🌀",
     "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
-    "price": 400,
+    "price": 500,
     "stockStatus": "agotado",
     "formato": 4
   },
@@ -7784,7 +7829,7 @@
     "shortDescription": "Caja de 4 dobos artesanales.",
     "image": "🍩",
     "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
-    "price": 400,
+    "price": 500,
     "stockStatus": "agotado",
     "formato": 4
   },

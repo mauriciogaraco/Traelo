@@ -1,16 +1,25 @@
 [
   {
     "id": "hmk-001",
-    "name": "Helado de Chocolate 750 ml",
+    "name": "Pote de Helado 750 ml",
     "businessId": "heladeria-mk",
     "businessName": "Heladería M&K",
     "category": "Helados",
     "shortDescription": "Pote de 750 ml.",
-    "longDescription": "Helado artesanal de chocolate en pote de 750 ml.",
+    "longDescription": "Helado artesanal s en pote de 750 ml.",
     "image": "�",
     "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
     "price": 1200,
-    "stockStatus": "agotado"
+    "options": [
+      "Mantecado",
+      "Fresa",
+      "Manzana",
+      "Naranja Piña",
+      "Vainilla",
+      "Uva",
+      "Chocolate"
+    ],
+    "stockStatus": "disponible"
   },
   {
     "id": "hmk-002",
@@ -109,7 +118,7 @@
     "longDescription": "Helado artesanal de manzana en copa de 280 ml.",
     "image": "🍏",
     "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Manzana-280ml-540.jpg",
-    "price": 540,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -122,7 +131,7 @@
     "longDescription": "Vaso con helado artesanal y panetela. Elige tu sabor.",
     "image": "🍫",
     "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
-    "price": 640,
+    "price": 650,
     "stockStatus": "disponible",
     "options": [
       "Vainilla",
@@ -162,7 +171,7 @@
     "longDescription": "Caja de 4 marquesitas artesanales.",
     "image": "🥐",
     "photo": "/assets/images/products/HeladeriaM&K/marquesitas 90cup.jpg",
-    "price": 400,
+    "price": 500,
     "stockStatus": "agotado",
     "formato": 4
   },
@@ -176,7 +185,7 @@
     "longDescription": "Caja de 4 rollitos artesanales.",
     "image": "🌀",
     "photo": "/assets/images/products/HeladeriaM&K/rollitos 90cup.jpg",
-    "price": 400,
+    "price": 500,
     "stockStatus": "agotado",
     "formato": 4
   },
@@ -190,7 +199,7 @@
     "longDescription": "Caja de 4 dobos artesanales.",
     "image": "🍩",
     "photo": "/assets/images/products/HeladeriaM&K/Dobos 90 cup.jpg",
-    "price": 400,
+    "price": 500,
     "stockStatus": "agotado",
     "formato": 4
   }

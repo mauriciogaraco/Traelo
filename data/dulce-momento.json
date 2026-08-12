@@ -14,8 +14,23 @@
     "stockStatus": "disponible"
 
   },
-   {
+    {
     "id": "dulceM-002",
+    "name": "Cesta dulce momento",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Helados",
+    "shortDescription": "3 Bolas con Sirope , grajea y un dulce ",
+
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/Cesta dulce Momento 580.jpg",
+    "price": 580,
+
+    "stockStatus": "disponible"
+
+  },
+   {
+    "id": "dulceM-003",
     "name": "Coctel de Frutas",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -30,7 +45,7 @@
 
   },
      {
-    "id": "dulceM-003",
+    "id": "dulceM-004",
     "name": "Termopack de Rollos x6",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -44,8 +59,24 @@
     "stockStatus": "agotado"
 
   },
+    
      {
-    "id": "dulceM-004",
+    "id": "dulceM-005",
+    "name": "Helado en pote 280ml",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Dulces",
+    "shortDescription": "Helado de fábrica 280 ml",
+
+    "image": "�",
+    "photo":"/assets/images/products/Dulce momento/pote de helado 280ml.jpg",
+    "price": 580,
+
+    "stockStatus": "agotado"
+
+  },
+     {
+    "id": "dulceM-006",
     "name": "Vaso de Panetela con Helado",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -60,7 +91,7 @@
 
   },
        {
-    "id": "dulceM-004",
+    "id": "dulceM-007",
     "name": "Termopack de Helado (8 bolas)",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -75,7 +106,7 @@
 
   },
          {
-    "id": "dulceM-005",
+    "id": "dulceM-008",
     "name": "Tina de Helado 4 litros",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
@@ -90,7 +121,7 @@
 
   },
          {
-    "id": "dulceM-006",
+    "id": "dulceM-009",
     "name": "Combo de Tina de Helado y 10 conos",
     "businessId": "dulce-momento",
     "businessName": "Dulce Momento",
