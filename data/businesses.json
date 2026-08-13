@@ -401,5 +401,46 @@
       "close": "21:00",
       "label": "Todos los días · 11:00 am – 9:00 pm"
     }
+  },
+  {
+    "id": "los-4-hermanos",
+    "name": "Los 4 Hermanos",
+    "description": "Los 4 Hermanos — Comida casera a domicilio.",
+    "image": "/assets/images/business/Los 4 Hermanos.jpg",
+    "color": "from-sky-100 to-cyan-50",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Lun–Dom · 9:00 am – 9:00 pm"
+    }
+  },
+  {
+    "id": "agro-los-prietos",
+    "name": "Agro Los Prietos",
+    "description": "Agro Los Prietos — Viandas, frutas y vegetales frescos.",
+    "image": "/assets/images/business/Los Prietos.jpg",
+    "color": "from-lime-100 to-green-50",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "18:00",
+      "label": "Lun–Sáb · 9:00 am – 6:00 pm"
+    }
   }
 ]
