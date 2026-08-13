@@ -120,8 +120,8 @@
           6
         ],
         "open": "09:00",
-        "close": "18:00",
-        "label": "Lun–Dom · 9:00 am – 6:00 pm"
+        "close": "19:00",
+        "label": "Lun–Dom · 9:00 am – 7:00 pm"
       }
     },
     {
@@ -397,6 +397,47 @@
         "open": "11:00",
         "close": "21:00",
         "label": "Todos los días · 11:00 am – 9:00 pm"
+      }
+    },
+    {
+      "id": "los-4-hermanos",
+      "name": "Los 4 Hermanos",
+      "description": "Los 4 Hermanos — Comida casera a domicilio.",
+      "image": "/assets/images/business/Los 4 Hermanos.jpg",
+      "color": "from-sky-100 to-cyan-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "label": "Lun–Dom · 9:00 am – 9:00 pm"
+      }
+    },
+    {
+      "id": "agro-los-prietos",
+      "name": "Agro Los Prietos",
+      "description": "Agro Los Prietos — Viandas, frutas y vegetales frescos.",
+      "image": "/assets/images/business/Los Prietos.jpg",
+      "color": "from-lime-100 to-green-50",
+      "schedule": {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "18:00",
+        "label": "Lun–Sáb · 9:00 am – 6:00 pm"
       }
     }
   ],
@@ -4629,6 +4670,20 @@
       "image": "🧺",
       "price": 0.7,
       "stockStatus": "disponible"
+    },
+    {
+      "id": "los-4-hermanos-001",
+      "name": "Ensalada Fría",
+      "businessId": "los-4-hermanos",
+      "businessName": "Los 4 Hermanos",
+      "category": "Alimentos",
+      "shortDescription": "",
+      "longDescription": "Ensalada fría casera de Los 4 Hermanos.",
+      "image": "🥗",
+      "price": 0.8,
+      "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
+      "stockStatus": "disponible",
+      "featured": true
     },
     {
       "id": "lm-001",
@@ -11633,6 +11688,292 @@
           "price": 0.4
         }
       ]
+    },
+    {
+      "id": "alp-001",
+      "name": "Frijol Negro (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Frijol negro a granel, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🫘",
+      "photo": "/assets/images/products/Los Prietos/frijol-negro.jpg",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-002",
+      "name": "Frijol Colorado (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Frijol colorado a granel, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🫘",
+      "photo": "/assets/images/products/Los Prietos/frijol-colorado.webp",
+      "price": 1.1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-003",
+      "name": "Frijol Bayo (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Frijol bayo a granel, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🫘",
+      "photo": "/assets/images/products/Los Prietos/frijol-bayo.jpg",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-004",
+      "name": "Garbanzos (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Garbanzos a granel, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🫘",
+      "photo": "/assets/images/products/Los Prietos/garbanzos.jpg",
+      "price": 1.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-005",
+      "name": "Pepino (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Pepino fresco, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🥒",
+      "photo": "/assets/images/products/Los Prietos/pepino.jpg",
+      "price": 0.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-006",
+      "name": "Papa (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Papa fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🥔",
+      "photo": "/assets/images/products/Los Prietos/papa.jpg",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-007",
+      "name": "Ají Pimiento (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Ají pimiento fresco, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🫑",
+      "photo": "/assets/images/products/Los Prietos/Ají-Pimiento.webp",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-008",
+      "name": "Col (unidad)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Col fresca, se vende por unidad.",
+      "image": "🥬",
+      "photo": "/assets/images/products/Los Prietos/col.jpg",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-009",
+      "name": "Malanga (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Malanga fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍠",
+      "photo": "/assets/images/products/Los Prietos/malanga.jpg",
+      "price": 0.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-010",
+      "name": "Ají Cachucha (pote)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por pote.",
+      "longDescription": "Ají cachucha fresco, se vende por pote.",
+      "image": "🌶️",
+      "photo": "/assets/images/products/Los Prietos/ají-cachucha.webp",
+      "price": 0.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-011",
+      "name": "Plátano Fruta (mano)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por mano.",
+      "longDescription": "Plátano fruta, se vende por mano.",
+      "image": "🍌",
+      "photo": "/assets/images/products/Los Prietos/plátano-fruta.jpg",
+      "price": 0.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-012",
+      "name": "Plátano Macho (unidad)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Plátano macho, se vende por unidad.",
+      "image": "🍌",
+      "photo": "/assets/images/products/Los Prietos/plátano-macho.webp",
+      "price": 0.1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-013",
+      "name": "Piña (unidad)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Piña fresca, se vende por unidad.",
+      "image": "🍍",
+      "photo": "/assets/images/products/Los Prietos/piña.webp",
+      "price": 0.9,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-014",
+      "name": "Guayaba (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Guayaba fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍏",
+      "photo": "/assets/images/products/Los Prietos/guayaba.jpg",
+      "price": 0.24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-015",
+      "name": "Melón (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Melón fresco, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍈",
+      "photo": "/assets/images/products/Los Prietos/melón.jpg",
+      "price": 0.32,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-016",
+      "name": "Mango (unidad)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Mango fresco, se vende por unidad.",
+      "image": "🥭",
+      "photo": "/assets/images/products/Los Prietos/mango.jpg",
+      "price": 0.3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-017",
+      "name": "Fruta Bomba (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Fruta bomba fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍑",
+      "photo": "/assets/images/products/Los Prietos/fruta-bomba.jpg",
+      "price": 0.3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-018",
+      "name": "Cúrcuma (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Cúrcuma fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🫚",
+      "photo": "/assets/images/products/Los Prietos/cúrcuma.jpg",
+      "price": 0.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-019",
+      "name": "Uva (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Uva fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍇",
+      "photo": "/assets/images/products/Los Prietos/uva.jpg",
+      "price": 2.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-020",
+      "name": "Naranja Agria (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Naranja agria fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍊",
+      "photo": "/assets/images/products/Los Prietos/naranja-agria.webp",
+      "price": 0.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-021",
+      "name": "Tomate (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Tomate fresco, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🍅",
+      "photo": "/assets/images/products/Los Prietos/tomate.jpg",
+      "price": 1.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "alp-022",
+      "name": "Cebolla Blanca (por libra)",
+      "businessId": "agro-los-prietos",
+      "businessName": "Agro Los Prietos",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Cebolla blanca fresca, precio por libra. Indica la cantidad de libras al confirmar.",
+      "image": "🧅",
+      "photo": "/assets/images/products/Los Prietos/cebolla.jpg",
+      "price": 1.6,
+      "stockStatus": "disponible"
     }
   ]
 }

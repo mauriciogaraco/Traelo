@@ -1,0 +1,16 @@
+[
+  {
+    "id": "los-4-hermanos-001",
+    "name": "Ensalada Fría",
+    "businessId": "los-4-hermanos",
+    "businessName": "Los 4 Hermanos",
+    "category": "Alimentos",
+    "shortDescription": "",
+    "longDescription": "Ensalada fría casera de Los 4 Hermanos.",
+    "image": "🥗",
+    "price": 400,
+    "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
+    "stockStatus": "disponible",
+    "featured": true
+  }
+]
