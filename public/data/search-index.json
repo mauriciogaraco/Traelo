@@ -1575,7 +1575,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 2950,
+    "price": 3250,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -6217,6 +6217,21 @@
     "image": "👗",
     "photo": "/assets/images/products/Eme Boutique/conjunto-jemour-blanco.jpg",
     "price": 25,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "eb-083",
+    "name": "Bris Aura Blusa Negra",
+    "businessId": "eme-boutique",
+    "businessName": "Eme Boutique",
+    "category": "Ropa",
+    "shortDescription": "Precio en USD.",
+    "image": "👗",
+    "photo": "/assets/images/products/Eme Boutique/Bris Aura Blusa negra 14 , xs.jpg",
+    "price": 14,
+    "options": [
+      "XS"
+    ],
     "stockStatus": "disponible"
   },
   {
