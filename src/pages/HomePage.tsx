@@ -56,23 +56,28 @@ export function HomePage() {
   const filtered = useMemo(() => {
     if (loading) return [];
     const q = query.trim().toLowerCase();
+    let result;
     if (q) {
       // Búsqueda global: ignora negocio/categoría seleccionados.
-      return products.filter(
+      result = products.filter(
         (p) =>
           p.name.toLowerCase().includes(q) ||
           p.category.toLowerCase().includes(q) ||
           p.businessName.toLowerCase().includes(q),
       );
-    }
-    if (browseActive) {
-      return products.filter((p) => {
+    } else if (browseActive) {
+      result = products.filter((p) => {
         const matchBusiness = !business || p.businessId === business;
         const matchCategory = category === "Todos" || p.category === category;
         return matchBusiness && matchCategory;
       });
+    } else {
+      return [];
     }
-    return [];
+    // Disponibles (y con pocas unidades) primero, agotados al final.
+    return [...result].sort(
+      (a, b) => Number(a.stockStatus === "agotado") - Number(b.stockStatus === "agotado"),
+    );
   }, [loading, query, business, category, browseActive, products]);
 
   // Al seleccionar un negocio, baja con scroll suave y precarga sus productos completos.
