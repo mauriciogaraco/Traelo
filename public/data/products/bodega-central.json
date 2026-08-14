@@ -546,32 +546,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-048",
-    "name": "Pollo de postas",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "Precio por unidad.",
-    "longDescription": "Pollo de postas. Indica la cantidad al confirmar el pedido.",
-    "image": "🍗",
-    "price": 1900,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-046",
-    "name": "Detergente en polvo Viking Market (1 kg)",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Saco de 15 paquetes de 1 kg.",
-    "longDescription": "Detergente en polvo Viking Market Extra Clean Limón Fresh, 1 kg por paquete. Se vende por saco de 15 paquetes.",
-    "image": "🧺",
-    "photo": "/assets/images/products/mercadito/detergente_en-polvo-1kg.jpg",
-    "price": 1000,
-    "formato": 15,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "bc-049",
     "name": "Café Dufiltro",
     "businessId": "bodega-central",

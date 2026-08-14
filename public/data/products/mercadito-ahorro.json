@@ -13,19 +13,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "ma-002",
-    "name": "Aceite (1000 mL)",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Alimentos",
-    "shortDescription": "Botella de 900ml.",
-    "longDescription": "Aceite vegetal en botella de 900ml.",
-    "image": "🫒",
-    "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-    "price": 4000,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "ma-003",
     "name": "Perrito caliente",
     "businessId": "mercadito-ahorro",

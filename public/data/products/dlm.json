@@ -567,7 +567,7 @@
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
     "price": 3850,
-    "stockStatus": "disponible",
+    "stockStatus": "agotado",
     "packaging": [
       {
         "name": "Termopack",
@@ -584,7 +584,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 2450,
+    "price": 2750,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -602,7 +602,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 2450,
+    "price": 2750,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -620,7 +620,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 2350,
+    "price": 2650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -638,7 +638,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 3850,
+    "price": 4150,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -926,7 +926,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 2950,
+    "price": 3250,
     "stockStatus": "disponible",
     "packaging": [
       {
