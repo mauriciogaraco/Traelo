@@ -80,13 +80,16 @@ export function HomePage() {
     );
   }, [loading, query, business, category, browseActive, products]);
 
-  // Al seleccionar un negocio, baja con scroll suave y precarga sus productos completos.
+  // Al seleccionar un negocio (o al entrar por un enlace ?negocio=), baja con
+  // scroll suave y precarga sus productos completos. Se espera a que termine
+  // loading porque mientras carga el catálogo la sección de resultados (y su
+  // ref) todavía no existe en el DOM.
   useEffect(() => {
-    if (business) {
+    if (business && !loading) {
       resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       loadBusinessProducts(business);
     }
-  }, [business]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [business, loading]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (loading) {
     return (

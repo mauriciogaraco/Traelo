@@ -1149,32 +1149,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "bc-048",
-      "name": "Pollo de postas",
-      "businessId": "bodega-central",
-      "businessName": "Mercado Alpha",
-      "category": "Alimentos",
-      "shortDescription": "Precio por unidad.",
-      "longDescription": "Pollo de postas. Indica la cantidad al confirmar el pedido.",
-      "image": "🍗",
-      "price": 1900,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "bc-046",
-      "name": "Detergente en polvo Viking Market (1 kg)",
-      "businessId": "bodega-central",
-      "businessName": "Mercado Alpha",
-      "category": "Aseo",
-      "shortDescription": "Saco de 15 paquetes de 1 kg.",
-      "longDescription": "Detergente en polvo Viking Market Extra Clean Limón Fresh, 1 kg por paquete. Se vende por saco de 15 paquetes.",
-      "image": "🧺",
-      "photo": "/assets/images/products/mercadito/detergente_en-polvo-1kg.jpg",
-      "price": 1000,
-      "formato": 15,
-      "stockStatus": "disponible"
-    },
-    {
       "id": "bc-049",
       "name": "Café Dufiltro",
       "businessId": "bodega-central",
@@ -1794,7 +1768,7 @@
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
       "price": 3850,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Termopack",
@@ -1811,7 +1785,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 2450,
+      "price": 2750,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1829,7 +1803,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 2450,
+      "price": 2750,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1847,7 +1821,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 2350,
+      "price": 2650,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1865,7 +1839,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 3850,
+      "price": 4150,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -4100,19 +4074,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "ma-002",
-      "name": "Aceite (1000 mL)",
-      "businessId": "mercadito-ahorro",
-      "businessName": "El Mercadito",
-      "category": "Alimentos",
-      "shortDescription": "Botella de 900ml.",
-      "longDescription": "Aceite vegetal en botella de 900ml.",
-      "image": "🫒",
-      "photo": "/assets/images/products/mercado/aceite_900ml.jpg",
-      "price": 4000,
-      "stockStatus": "disponible"
-    },
-    {
       "id": "ma-003",
       "name": "Perrito caliente",
       "businessId": "mercadito-ahorro",
@@ -6171,22 +6132,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "eb-006",
-      "name": "Bikini Negro",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Precio en USD.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/bikini-negro.jpg",
-      "price": 15,
-      "options": [
-        "S"
-      ],
-      "stockStatus": "agotado"
-    },
-    {
       "id": "eb-007",
       "name": "Blusa Blanca Puntos",
       "businessId": "eme-boutique",
@@ -6201,22 +6146,6 @@
         "S"
       ],
       "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-008",
-      "name": "Blusa Corta Mangas Negras",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "S grande",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/Blusa-corta-mangas-negras.jpg",
-      "price": 14,
-      "options": [
-        "S"
-      ],
-      "stockStatus": "agotado"
     },
     {
       "id": "eb-009",
@@ -6331,19 +6260,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "eb-016",
-      "name": "Cartera Loewe",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Precio en USD.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/bolso-Loewe.jpg",
-      "price": 65,
-      "stockStatus": "disponible"
-    },
-    {
       "id": "eb-017",
       "name": "Bolso Rojo",
       "businessId": "eme-boutique",
@@ -6354,51 +6270,6 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/Bolso-rojo.jpg",
       "price": 12,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-018",
-      "name": "Bolso Milano 2 Piezas",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Las 2 piezas",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/Bolso_milano, 2-piezas.jpg",
-      "price": 20,
-      "stockStatus": "agotado"
-    },
-    {
-      "id": "eb-019",
-      "name": "ConfortCana Conjunto Algodón",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "100 % algodón",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/ConfortCana-cojunto-algodón.jpg",
-      "price": 20,
-      "options": [
-        "M"
-      ],
-      "stockStatus": "agotado"
-    },
-    {
-      "id": "eb-020",
-      "name": "ConfortCana Conjunto Blanco",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "100 % algodón",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/ConfortCana-Conjunto-blanco.jpg",
-      "price": 20,
-      "options": [
-        "M"
-      ],
       "stockStatus": "disponible"
     },
     {
@@ -6492,19 +6363,6 @@
       "options": [
         "M"
       ],
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-027",
-      "name": "Gafas",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Precio en USD.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/gafas.jpg",
-      "price": 7,
       "stockStatus": "disponible"
     },
     {
@@ -6604,22 +6462,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "eb-034",
-      "name": "Licras LevantaGlúteos Larga Azul",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Precio en USD.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/Licras-LevantaGlúteos-larga-azul.jpg",
-      "price": 18,
-      "options": [
-        "S"
-      ],
-      "stockStatus": "agotado"
-    },
-    {
       "id": "eb-035",
       "name": "Licras LevantaGlúteos Larga Marrón",
       "businessId": "eme-boutique",
@@ -6686,19 +6528,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "eb-039",
-      "name": "Organizador",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Precio en USD.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/organizador.jpg",
-      "price": 12,
-      "stockStatus": "agotado"
-    },
-    {
       "id": "eb-040",
       "name": "Pantaloneta Negra",
       "businessId": "eme-boutique",
@@ -6713,22 +6542,6 @@
         "S"
       ],
       "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-041",
-      "name": "Pantaloneta Rosa",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Precio en USD.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/pantaloneta-rosa.jpg",
-      "price": 20,
-      "options": [
-        "M"
-      ],
-      "stockStatus": "agotado"
     },
     {
       "id": "eb-042",
@@ -6760,19 +6573,6 @@
       "options": [
         "S"
       ],
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-044",
-      "name": "Romwe Bolso Tejido",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Precio en USD.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/Rowne-bolso-tejido.jpg",
-      "price": 20,
       "stockStatus": "disponible"
     },
     {
@@ -6824,22 +6624,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "eb-048",
-      "name": "Shein Swim Maya Negro",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Solo la maya.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/Shein-Swim-Maya-negro.jpg",
-      "price": 18,
-      "options": [
-        "S"
-      ],
-      "stockStatus": "agotado"
-    },
-    {
       "id": "eb-049",
       "name": "Shein Unity Blusa",
       "businessId": "eme-boutique",
@@ -6886,23 +6670,6 @@
         "S"
       ],
       "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-052",
-      "name": "Swim Basic Maya Negro",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Solo la maya.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/Swim-Basisc-Maya-Negro.jpg",
-      "price": 12,
-      "options": [
-        "S",
-        "M"
-      ],
-      "stockStatus": "agotado"
     },
     {
       "id": "eb-053",
@@ -7205,22 +6972,6 @@
       "stockStatus": "disponible"
     },
     {
-      "id": "eb-072",
-      "name": "Conjunto Aloruh Rojo Vino",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Conjunto de 2 piezas.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👗",
-      "photo": "/assets/images/products/Eme Boutique/Conjunto-Aloruh-rojo-vino.jpg",
-      "price": 30,
-      "options": [
-        "S"
-      ],
-      "stockStatus": "disponible"
-    },
-    {
       "id": "eb-073",
       "name": "Patek Philippe Rosa",
       "businessId": "eme-boutique",
@@ -7245,58 +6996,6 @@
       "photo": "/assets/images/products/Eme Boutique/Patek-phillipe-plateado-cara-negra.jpg",
       "price": 140,
       "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-075",
-      "name": "Rolex Daytona Cara Negra",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Reloj de lujo.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "⌚",
-      "photo": "/assets/images/products/Eme Boutique/rolex-daytona-cara-negra.jpg",
-      "price": 130,
-      "stockStatus": "agotado"
-    },
-    {
-      "id": "eb-076",
-      "name": "Rolex Daytona De Hombre",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Reloj de lujo.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "⌚",
-      "photo": "/assets/images/products/Eme Boutique/rolex-daytona-de-hombre.jpg",
-      "price": 130,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-077",
-      "name": "Rolex Presidente Mujer",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Reloj de lujo.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "⌚",
-      "photo": "/assets/images/products/Eme Boutique/Rolex-presidente-mujer.jpg",
-      "price": 120,
-      "stockStatus": "agotado"
-    },
-    {
-      "id": "eb-078",
-      "name": "Rolex Presidente Dorado Mujer",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Reloj de lujo.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "⌚",
-      "photo": "/assets/images/products/Eme Boutique/rolex-presidente-dorado-mujer.jpg",
-      "price": 120,
-      "stockStatus": "agotado"
     },
     {
       "id": "eb-079",
@@ -7335,19 +7034,6 @@
       "image": "👗",
       "photo": "/assets/images/products/Eme Boutique/conjunto-jemour-blanco.jpg",
       "price": 25,
-      "stockStatus": "disponible"
-    },
-    {
-      "id": "eb-082",
-      "name": "Bolso Milano",
-      "businessId": "eme-boutique",
-      "businessName": "Eme Boutique",
-      "category": "Ropa",
-      "shortDescription": "Solo el bolso.",
-      "longDescription": "Precio en USD. Equivalente en CUP al cambio del día en \"El Toque\".",
-      "image": "👜",
-      "photo": "/assets/images/products/Eme Boutique/bolso-milano-solo-bolso.jpg",
-      "price": 18,
       "stockStatus": "disponible"
     },
     {
