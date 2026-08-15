@@ -27,6 +27,7 @@ const BUSINESS_FILES = [
   'ferreguira',
   'los-llenik',
   'agro-los-prietos',
+  'la-nevada',
 ];
 
 function read(file) {

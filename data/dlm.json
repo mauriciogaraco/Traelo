@@ -206,7 +206,7 @@
     "shortDescription": "Entrantes",
     "longDescription": "Entrantes · Para empezar",
     "image": "🍤",
-    "price": 500,
+    "price": 950,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -440,7 +440,7 @@
     "shortDescription": "Guarniciones",
     "longDescription": "Guarniciones · Acompañantes",
     "image": "🍚",
-    "price": 1550,
+    "price": 1150,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -566,7 +566,7 @@
     "shortDescription": "Pollo",
     "longDescription": "Pollo · Fuertes",
     "image": "🍗",
-    "price": 3850,
+    "price": 4150,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -674,7 +674,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 3150,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -692,7 +692,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 2150,
+    "price": 2450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -710,7 +710,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 2050,
+    "price": 2350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -728,7 +728,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 3550,
+    "price": 3850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -746,7 +746,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 2050,
+    "price": 2350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -764,7 +764,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 2250,
+    "price": 2550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -782,7 +782,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 3350,
+    "price": 3650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -800,7 +800,7 @@
     "shortDescription": "Cerdo",
     "longDescription": "Cerdo · Parrilla",
     "image": "🥩",
-    "price": 3850,
+    "price": 4150,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -872,7 +872,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 2600,
+    "price": 2900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -890,7 +890,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 2700,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -908,7 +908,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 3050,
+    "price": 3350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -944,7 +944,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 3150,
+    "price": 3450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -962,7 +962,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 3350,
+    "price": 3650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -980,7 +980,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 3350,
+    "price": 3650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -998,7 +998,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 3150,
+    "price": 3450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1016,7 +1016,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 3350,
+    "price": 3650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1034,7 +1034,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 1850,
+    "price": 1900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1052,7 +1052,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 1850,
+    "price": 2150,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1070,7 +1070,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 2150,
+    "price": 2450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1088,7 +1088,7 @@
     "shortDescription": "Mar",
     "longDescription": "Mar · Del mar",
     "image": "🦞",
-    "price": 2150,
+    "price": 2450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1142,7 +1142,7 @@
     "shortDescription": "Postres",
     "longDescription": "Postres · Final dulce",
     "image": "🍮",
-    "price": 550,
+    "price": 1550,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -1196,7 +1196,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 480,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -1208,7 +1208,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 580,
+    "price": 700,
     "stockStatus": "disponible"
   },
   {
@@ -1232,7 +1232,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 480,
+    "price": 500,
     "stockStatus": "disponible",
     "options": [
       "Naranja",
@@ -1240,8 +1240,7 @@
       "Cola"
     ]
   },
-  { 
-    
+  {
     "id": "dlm-072",
     "name": "Malta",
     "businessId": "dlm",
@@ -1250,7 +1249,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 430,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -1262,7 +1261,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 880,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -1274,7 +1273,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 480,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -1286,7 +1285,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 880,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -1298,7 +1297,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 330,
+    "price": 350,
     "stockStatus": "disponible"
   },
   {
@@ -1310,7 +1309,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 480,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -1322,7 +1321,7 @@
     "shortDescription": "Bebidas",
     "longDescription": "Bebidas · Refrescantes y Energéticas",
     "image": "🥤",
-    "price": 280,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -1334,7 +1333,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 8030,
+    "price": 8050,
     "stockStatus": "disponible"
   },
   {
@@ -1346,7 +1345,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 8030,
+    "price": 8050,
     "stockStatus": "disponible"
   },
   {
@@ -1358,7 +1357,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 13030,
+    "price": 13050,
     "stockStatus": "disponible"
   },
   {
@@ -1370,7 +1369,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 21530,
+    "price": 21550,
     "stockStatus": "disponible"
   },
   {
@@ -1382,7 +1381,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 9030,
+    "price": 15050,
     "stockStatus": "disponible"
   },
   {
@@ -1394,7 +1393,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 16530,
+    "price": 16550,
     "stockStatus": "disponible"
   },
   {
@@ -1406,7 +1405,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 9530,
+    "price": 16050,
     "stockStatus": "disponible"
   },
   {
@@ -1418,7 +1417,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 9030,
+    "price": 9050,
     "stockStatus": "disponible"
   },
   {
@@ -1430,7 +1429,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 13030,
+    "price": 13050,
     "stockStatus": "disponible"
   },
   {
@@ -1442,7 +1441,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 17530,
+    "price": 17550,
     "stockStatus": "disponible"
   },
   {
@@ -1454,7 +1453,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 19530,
+    "price": 19550,
     "stockStatus": "disponible"
   },
   {
@@ -1466,7 +1465,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 29530,
+    "price": 30050,
     "stockStatus": "disponible"
   },
   {
@@ -1490,7 +1489,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 28530,
+    "price": 35050,
     "stockStatus": "disponible"
   },
   {
@@ -1502,7 +1501,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 14030,
+    "price": 14050,
     "stockStatus": "disponible"
   },
   {
@@ -1526,7 +1525,7 @@
     "shortDescription": "Botellas en Ofertas",
     "longDescription": "Botellas en Ofertas · Promociones Especiales",
     "image": "🍾",
-    "price": 19530,
+    "price": 19550,
     "stockStatus": "disponible"
   }
 ]
