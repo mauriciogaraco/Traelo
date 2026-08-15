@@ -441,6 +441,27 @@
         "close": "18:00",
         "label": "Lun–Sáb · 9:00 am – 6:00 pm"
       }
+    },
+    {
+      "id": "la-nevada",
+      "name": "La Nevada",
+      "description": "La Nevada — Helados, cakes y dulces artesanales.",
+      "image": "/assets/images/business/La Nevada.jpg",
+      "color": "from-pink-100 to-rose-50",
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "label": "Todos los días · 9:00 am – 9:00 pm"
+      }
     }
   ],
   "products": [
@@ -1407,7 +1428,7 @@
       "shortDescription": "Entrantes",
       "longDescription": "Entrantes · Para empezar",
       "image": "🍤",
-      "price": 1,
+      "price": 1.9,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1641,7 +1662,7 @@
       "shortDescription": "Guarniciones",
       "longDescription": "Guarniciones · Acompañantes",
       "image": "🍚",
-      "price": 3.1,
+      "price": 2.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1767,7 +1788,7 @@
       "shortDescription": "Pollo",
       "longDescription": "Pollo · Fuertes",
       "image": "🍗",
-      "price": 7.7,
+      "price": 8.3,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -1875,7 +1896,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 6.3,
+      "price": 7.7,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1893,7 +1914,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 4.3,
+      "price": 4.9,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1911,7 +1932,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 4.1,
+      "price": 4.7,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1929,7 +1950,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 7.1,
+      "price": 7.7,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1947,7 +1968,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 4.1,
+      "price": 4.7,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1965,7 +1986,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 4.5,
+      "price": 5.1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1983,7 +2004,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 6.7,
+      "price": 7.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2001,7 +2022,7 @@
       "shortDescription": "Cerdo",
       "longDescription": "Cerdo · Parrilla",
       "image": "🥩",
-      "price": 7.7,
+      "price": 8.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2073,7 +2094,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 5.2,
+      "price": 5.8,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2091,7 +2112,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 5.4,
+      "price": 6,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2109,7 +2130,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 6.1,
+      "price": 6.7,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2145,7 +2166,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 6.3,
+      "price": 6.9,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2163,7 +2184,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 6.7,
+      "price": 7.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2181,7 +2202,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 6.7,
+      "price": 7.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2199,7 +2220,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 6.3,
+      "price": 6.9,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2217,7 +2238,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 6.7,
+      "price": 7.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2235,7 +2256,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 3.7,
+      "price": 3.8,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2253,7 +2274,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 3.7,
+      "price": 4.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2271,7 +2292,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 4.3,
+      "price": 4.9,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2289,7 +2310,7 @@
       "shortDescription": "Mar",
       "longDescription": "Mar · Del mar",
       "image": "🦞",
-      "price": 4.3,
+      "price": 4.9,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2343,7 +2364,7 @@
       "shortDescription": "Postres",
       "longDescription": "Postres · Final dulce",
       "image": "🍮",
-      "price": 1.1,
+      "price": 3.1,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -2397,7 +2418,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.96,
+      "price": 1.1,
       "stockStatus": "disponible"
     },
     {
@@ -2409,7 +2430,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 1.16,
+      "price": 1.4,
       "stockStatus": "disponible"
     },
     {
@@ -2433,7 +2454,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.96,
+      "price": 1,
       "stockStatus": "disponible",
       "options": [
         "Naranja",
@@ -2450,7 +2471,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.86,
+      "price": 0.9,
       "stockStatus": "disponible"
     },
     {
@@ -2462,7 +2483,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 1.76,
+      "price": 1.8,
       "stockStatus": "disponible"
     },
     {
@@ -2474,7 +2495,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.96,
+      "price": 1.1,
       "stockStatus": "disponible"
     },
     {
@@ -2486,7 +2507,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 1.76,
+      "price": 1.8,
       "stockStatus": "disponible"
     },
     {
@@ -2498,7 +2519,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.66,
+      "price": 0.7,
       "stockStatus": "disponible"
     },
     {
@@ -2510,7 +2531,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.96,
+      "price": 1,
       "stockStatus": "disponible"
     },
     {
@@ -2522,7 +2543,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 0.56,
+      "price": 0.6,
       "stockStatus": "disponible"
     },
     {
@@ -2534,7 +2555,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 16.06,
+      "price": 16.1,
       "stockStatus": "disponible"
     },
     {
@@ -2546,7 +2567,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 16.06,
+      "price": 16.1,
       "stockStatus": "disponible"
     },
     {
@@ -2558,7 +2579,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 26.06,
+      "price": 26.1,
       "stockStatus": "disponible"
     },
     {
@@ -2570,7 +2591,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 43.06,
+      "price": 43.1,
       "stockStatus": "disponible"
     },
     {
@@ -2582,7 +2603,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 18.06,
+      "price": 30.1,
       "stockStatus": "disponible"
     },
     {
@@ -2594,7 +2615,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 33.06,
+      "price": 33.1,
       "stockStatus": "disponible"
     },
     {
@@ -2606,7 +2627,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 19.06,
+      "price": 32.1,
       "stockStatus": "disponible"
     },
     {
@@ -2618,7 +2639,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 18.06,
+      "price": 18.1,
       "stockStatus": "disponible"
     },
     {
@@ -2630,7 +2651,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 26.06,
+      "price": 26.1,
       "stockStatus": "disponible"
     },
     {
@@ -2642,7 +2663,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 35.06,
+      "price": 35.1,
       "stockStatus": "disponible"
     },
     {
@@ -2654,7 +2675,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 39.06,
+      "price": 39.1,
       "stockStatus": "disponible"
     },
     {
@@ -2666,7 +2687,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 59.06,
+      "price": 60.1,
       "stockStatus": "disponible"
     },
     {
@@ -2690,7 +2711,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 57.06,
+      "price": 70.1,
       "stockStatus": "disponible"
     },
     {
@@ -2702,7 +2723,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 28.06,
+      "price": 28.1,
       "stockStatus": "disponible"
     },
     {
@@ -2726,7 +2747,7 @@
       "shortDescription": "Botellas en Ofertas",
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
-      "price": 39.06,
+      "price": 39.1,
       "stockStatus": "disponible"
     },
     {
@@ -7933,6 +7954,19 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "am-014",
+      "name": "Galletas Panaderas",
+      "businessId": "amore",
+      "businessName": "AmoRe Dulcería",
+      "category": "Panadería",
+      "shortDescription": "Paquete.",
+      "longDescription": "Galletas panaderas artesanales de AmoRe, por paquete.",
+      "image": "🍪",
+      "photo": "/assets/images/products/AmoRe/galletas panaderas 300.jpg",
+      "price": 0.6,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "cdl-001",
       "name": "Pan con Hamburguesa",
       "businessId": "cafeteria-d-leo",
@@ -8280,6 +8314,19 @@
       "stockStatus": "agotado"
     },
     {
+      "id": "dulceM-010",
+      "name": "Brazos Gitanos",
+      "businessId": "dulce-momento",
+      "businessName": "Dulce Momento",
+      "category": "Dulces",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Brazos gitanos artesanales de Dulce Momento.",
+      "image": "🍰",
+      "photo": "/assets/images/products/Dulce momento/brazos-gitanos-900.jpg",
+      "price": 1.8,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "hmk-001",
       "name": "Pote de Helado 750 ml",
       "businessId": "heladeria-mk",
@@ -8353,12 +8400,9 @@
       "price": 9.3,
       "stockStatus": "disponible",
       "options": [
-        "Mantecado",
         "Fresa",
-        "Manzana",
-        "Naranja Piña",
         "Vainilla",
-        "Uva",
+        "3 Leches",
         "Chocolate"
       ]
     },
@@ -11677,6 +11721,278 @@
       "image": "🧅",
       "photo": "/assets/images/products/Los Prietos/cebolla.jpg",
       "price": 1.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-001",
+      "name": "Bolsa de Panqués",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Bolsa de panqués artesanales de La Nevada.",
+      "image": "🧁",
+      "photo": "/assets/images/products/La Nevada/bolsa de panques 1500.jpg",
+      "price": 3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-002",
+      "name": "Bombas Rellenas",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Bombas rellenas artesanales de La Nevada.",
+      "image": "🍩",
+      "photo": "/assets/images/products/La Nevada/bombas rellenas 420.jpg",
+      "price": 0.84,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-003",
+      "name": "Brownie de Frutos Secos",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Brownie de frutos secos artesanal de La Nevada.",
+      "image": "🍫",
+      "photo": "/assets/images/products/La Nevada/Brownie de frutos secos 600.jpg",
+      "price": 1.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-004",
+      "name": "Cake Especial de Crema Blanca de Galleta",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Cakes",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Cake especial de crema blanca de galleta, artesanal de La Nevada.",
+      "image": "🎂",
+      "photo": "/assets/images/products/La Nevada/Cake especial de cremas blanca de galleta 6000.jpg",
+      "price": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-005",
+      "name": "Cake de Leche Condensada",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Cakes",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Cake de leche condensada artesanal de La Nevada.",
+      "image": "🎂",
+      "photo": "/assets/images/products/La Nevada/cakes de leche condensada 4600.jpg",
+      "price": 9.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-006",
+      "name": "Cono de Helado",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Helados",
+      "shortDescription": "Sabor chocolate.",
+      "longDescription": "Cono de helado artesanal de La Nevada, sabor chocolate.",
+      "image": "🍦",
+      "photo": "/assets/images/products/La Nevada/Cono de helado.jpg",
+      "price": 0.6,
+      "options": [
+        "Chocolate"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-007",
+      "name": "Cuñas Sencillas",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Cuñas sencillas artesanales de La Nevada.",
+      "image": "🥐",
+      "photo": "/assets/images/products/La Nevada/cuñas sencillas 550.jpg",
+      "price": 1.1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-008",
+      "name": "Donas con Cobertura",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Donas con cobertura artesanales de La Nevada.",
+      "image": "🍩",
+      "photo": "/assets/images/products/La Nevada/donas con cobertura -370.jpg",
+      "price": 0.74,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-009",
+      "name": "Eclair",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Eclair artesanal de La Nevada.",
+      "image": "🍰",
+      "photo": "/assets/images/products/La Nevada/eclear -350.jpg",
+      "price": 0.7,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-010",
+      "name": "Masa Real (Guayaba y Coco)",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Guayaba y coco.",
+      "longDescription": "Masa real artesanal de guayaba y coco, de La Nevada.",
+      "image": "🍮",
+      "photo": "/assets/images/products/La Nevada/Masa real 320 (guayaba y coco).jpg",
+      "price": 0.64,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-011",
+      "name": "Paleticas",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Helados",
+      "shortDescription": "Sabor chocolate.",
+      "longDescription": "Paleticas heladas artesanales de La Nevada, sabor chocolate.",
+      "image": "🍭",
+      "photo": "/assets/images/products/La Nevada/paleticas 240.jpg",
+      "price": 0.44,
+      "options": [
+        "Chocolate"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-012",
+      "name": "Pastel",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Cakes",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Pastel artesanal de La Nevada.",
+      "image": "🍰",
+      "photo": "/assets/images/products/La Nevada/pastel 400.jpg",
+      "price": 0.8,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-013",
+      "name": "Pie (Guayaba y Coco)",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Guayaba y coco.",
+      "longDescription": "Pie artesanal de guayaba y coco, de La Nevada.",
+      "image": "🥧",
+      "photo": "/assets/images/products/La Nevada/pie (guayaba y coco ) 1750.jpg",
+      "price": 3.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-014",
+      "name": "Pote de Helado 280 ml",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Helados",
+      "shortDescription": "Pote de 280 ml.",
+      "longDescription": "Helado artesanal de La Nevada en pote de 280 ml.",
+      "image": "🍨",
+      "photo": "/assets/images/products/La Nevada/pote de helado 280 ml 440.jpg",
+      "price": 0.84,
+      "options": [
+        "Fresa",
+        "Vainilla"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-015",
+      "name": "Pote de Helado 1 Litro",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Helados",
+      "shortDescription": "Pote de 1 litro.",
+      "longDescription": "Helado artesanal de La Nevada en pote de 1 litro.",
+      "image": "🍨",
+      "price": 3.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-016",
+      "name": "Quesito Siciliano",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Quesito siciliano artesanal de La Nevada.",
+      "image": "🧀",
+      "photo": "/assets/images/products/La Nevada/Quesito ciciliano 550.jpg",
+      "price": 1.1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-017",
+      "name": "Señorita",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Señorita artesanal de La Nevada.",
+      "image": "🍰",
+      "photo": "/assets/images/products/La Nevada/Señorita-600.jpg",
+      "price": 1.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-018",
+      "name": "Tarta Nata",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Tarta nata artesanal de La Nevada.",
+      "image": "🥧",
+      "photo": "/assets/images/products/La Nevada/tarta nata -370.jpg",
+      "price": 0.74,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-019",
+      "name": "Tina de Helado 4 Litros",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Helados",
+      "shortDescription": "Tina de 4 litros, sabor chocolate.",
+      "longDescription": "Tina de helado artesanal de La Nevada, 4 litros, sabor chocolate.",
+      "image": "🍨",
+      "photo": "/assets/images/products/La Nevada/Tina de Helado 4 litros , 4500.jpg",
+      "price": 9.1,
+      "options": [
+        "Chocolate"
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ln-020",
+      "name": "Tocinillo del Cielo",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Tocinillo del cielo artesanal de La Nevada.",
+      "image": "🍮",
+      "photo": "/assets/images/products/La Nevada/tocinillo del clielo - 500.jpg",
+      "price": 1,
       "stockStatus": "disponible"
     }
   ]

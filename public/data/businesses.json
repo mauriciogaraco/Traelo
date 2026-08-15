@@ -440,5 +440,26 @@
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
     }
+  },
+  {
+    "id": "la-nevada",
+    "name": "La Nevada",
+    "description": "La Nevada — Helados, cakes y dulces artesanales.",
+    "image": "/assets/images/business/La Nevada.jpg",
+    "color": "from-pink-100 to-rose-50",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Todos los días · 9:00 am – 9:00 pm"
+    }
   }
 ]

@@ -134,6 +134,19 @@
 
     "stockStatus": "agotado"
 
+  },
+  {
+    "id": "dulceM-010",
+    "name": "Brazos Gitanos",
+    "businessId": "dulce-momento",
+    "businessName": "Dulce Momento",
+    "category": "Dulces",
+    "shortDescription": "Precio en CUP.",
+    "longDescription": "Brazos gitanos artesanales de Dulce Momento.",
+    "image": "🍰",
+    "photo": "/assets/images/products/Dulce momento/brazos-gitanos-900.jpg",
+    "price": 900,
+    "stockStatus": "disponible"
   }
 ]
 

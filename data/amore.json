@@ -181,7 +181,20 @@
     "photo": "/assets/images/products/AmoRe/Mini-cake-3-leches-y-tartaletas.jpg",
     "price": 8000,
     "stockStatus": "disponible"
-   
+
+  },
+  {
+    "id": "am-014",
+    "name": "Galletas Panaderas",
+    "businessId": "amore",
+    "businessName": "AmoRe Dulcería",
+    "category": "Panadería",
+    "shortDescription": "Paquete.",
+    "longDescription": "Galletas panaderas artesanales de AmoRe, por paquete.",
+    "image": "🍪",
+    "photo": "/assets/images/products/AmoRe/galletas panaderas 300.jpg",
+    "price": 300,
+    "stockStatus": "disponible"
   }
-  
+
 ]
