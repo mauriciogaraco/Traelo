@@ -54,3 +54,26 @@ export function computeFee(items: CartItem[], when: Date = new Date()): FeeBreak
 export function subtotalOf(items: CartItem[]): number {
   return items.reduce((sum, i) => sum + lineTotal(i), 0)
 }
+
+/**
+ * "Servicio Tráelo": suma de las comisiones (negocio + cliente) de cada
+ * negocio del carrito, aplicadas sobre su subtotal en CUP, y redondeada
+ * siempre hacia arriba al múltiplo de 10 más cercano. No aplica sobre
+ * productos en USD (igual que el umbral de volumen de la mensajería).
+ */
+export function computeServiceFee(items: CartItem[]): number {
+  const cupSubtotalByBusiness = new Map<string, number>()
+  for (const item of items) {
+    const isUsd = (item.product.currency ?? businessById(item.product.businessId)?.currency) === 'USD'
+    if (isUsd) continue
+    const id = item.product.businessId
+    cupSubtotalByBusiness.set(id, (cupSubtotalByBusiness.get(id) ?? 0) + lineTotal(item))
+  }
+  let raw = 0
+  for (const [businessId, businessSubtotal] of cupSubtotalByBusiness) {
+    const biz = businessById(businessId)
+    const pct = (biz?.businessCommission ?? 0) + (biz?.clientCommission ?? 0)
+    raw += (businessSubtotal * pct) / 100
+  }
+  return Math.ceil(raw / 10) * 10
+}

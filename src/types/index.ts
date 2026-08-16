@@ -37,6 +37,10 @@ export interface Business {
   paymentNote?: string
   /** Tarifa de mensajería propia del negocio. Si no se define, se usa FEE_BASE global. */
   deliveryFee?: number
+  /** Comisión (%) que asume el propio negocio. */
+  businessCommission?: number
+  /** Comisión (%) que asume el cliente. */
+  clientCommission?: number
   /** Moneda en que se muestran los precios. Por defecto CUP. */
   currency?: 'USD'
   /** Cierre manual que anula el horario. 'cerrado' = bloqueado sin importar schedule. */
@@ -135,7 +139,9 @@ export interface Order {
   subtotal?: number
   /** Tarifa de mensajería aplicada. */
   fee?: number
-  /** subtotal + fee. */
+  /** "Servicio Tráelo": comisiones del pedido, redondeadas al múltiplo de 10 superior. */
+  serviceFee?: number
+  /** subtotal + fee + serviceFee. */
   total: number
   /** Momento de entrega elegido, ej: "Lo antes posible" o "Hoy 7:30 pm". */
   delivery?: string

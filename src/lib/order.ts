@@ -1,6 +1,6 @@
 import type { Address, CartItem, Order } from '../types'
 import { lineTotal } from './cart'
-import { computeFee } from './fees'
+import { computeFee, computeServiceFee } from './fees'
 
 export interface DeliveryChoice {
   /** Etiqueta legible para mostrar/guardar, ej: "Lo antes posible". */
@@ -41,13 +41,15 @@ function generateOrderId(): string {
 export function makeOrder(items: CartItem[], address: Address, delivery: DeliveryChoice): Order {
   const subtotal = items.reduce((sum, i) => sum + lineTotal(i), 0)
   const fee = computeFee(items, delivery.when).fee
+  const serviceFee = computeServiceFee(items)
   return {
     id: generateOrderId(),
     date: new Date().toISOString(),
     items: items.map((i) => ({ ...i })),
     subtotal,
     fee,
-    total: subtotal + fee,
+    serviceFee,
+    total: subtotal + fee + serviceFee,
     delivery: delivery.label,
     status: 'pendiente',
     address,

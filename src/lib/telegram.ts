@@ -66,7 +66,10 @@ export function buildOrderMessage(order: Order): string {
   }
 
   const fee = order.fee ?? 0
+  const serviceFee = order.serviceFee ?? 0
   lines.push(`🛵 <b>Mensajería:</b> ${formatPrice(fee)} <i>(siempre en CUP)</i>`)
+  if (serviceFee > 0)
+    lines.push(`🧾 <b>Servicio Tráelo:</b> ${formatPrice(serviceFee)} <i>(siempre en CUP)</i>`)
 
   if (hasUsd) {
     if (usdTotal > 0)
@@ -74,10 +77,12 @@ export function buildOrderMessage(order: Order): string {
     if (cupTotal > 0)
       lines.push(`💵 <b>Productos CUP: ${formatPrice(cupTotal)}</b>`)
     lines.push(`💵 <b>Mensajería a cobrar: ${formatPrice(fee)}</b>`)
+    if (serviceFee > 0)
+      lines.push(`💵 <b>Servicio Tráelo a cobrar: ${formatPrice(serviceFee)}</b>`)
     if (hasEmePolicy)
       lines.push(`<i>⚠️ La mensajería se cobra en CUP aunque no se retenga la prenda.</i>`)
   } else {
-    lines.push(`💵 <b>Total: ${formatPrice(cupTotal + fee)}</b>`)
+    lines.push(`💵 <b>Total: ${formatPrice(cupTotal + fee + serviceFee)}</b>`)
   }
 
   return lines.join('\n')

@@ -10,7 +10,7 @@ import {
 import type { Addon, CartItem, Packaging, Product } from '../types'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../lib/storage'
 import { lineTotal, lineId, itemLineId } from '../lib/cart'
-import { computeFee } from '../lib/fees'
+import { computeFee, computeServiceFee } from '../lib/fees'
 import { useCatalog } from './CatalogContext'
 
 interface CartContextValue {
@@ -33,6 +33,8 @@ interface CartContextValue {
   subtotal: number
   /** Tarifa de mensajería (0 si el carrito está vacío). */
   fee: number
+  /** "Servicio Tráelo": comisiones del pedido, redondeadas al múltiplo de 10 superior. */
+  serviceFee: number
   total: number
   itemCount: number
 }
@@ -40,6 +42,11 @@ interface CartContextValue {
 const CartContext = createContext<CartContextValue | null>(null)
 
 export function CartProvider({ children }: { children: ReactNode }) {
+  // Se suscribe al catálogo para recalcular fee/serviceFee en cuanto los
+  // negocios terminan de cargar (businessById lee un caché que se llena de
+  // forma asíncrona; sin esta suscripción, CartProvider podría quedarse con
+  // valores calculados antes de que el caché estuviera listo).
+  const { businesses } = useCatalog()
   const [items, setItems] = useState<CartItem[]>(() =>
     readStorage<CartItem[]>(STORAGE_KEYS.cart, [])
   )
@@ -135,7 +142,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
   )
 
   // Estimación de tarifa "ahora" (en checkout se recalcula con la hora elegida).
-  const fee = computeFee(items).fee
+  // `businesses` está en las dependencias para recalcular en cuanto el
+  // catálogo (y con él, businessById) esté listo.
+  const fee = useMemo(() => computeFee(items).fee, [items, businesses])
+  const serviceFee = useMemo(() => computeServiceFee(items), [items, businesses])
 
   const value: CartContextValue = {
     items,
@@ -147,7 +157,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     syncPrices,
     subtotal,
     fee,
-    total: subtotal + fee,
+    serviceFee,
+    total: subtotal + fee + serviceFee,
     itemCount,
   }
 

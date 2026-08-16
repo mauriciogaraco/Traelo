@@ -65,55 +65,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cdl-006",
-    "name": "Malta Morena",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "longDescription": "Malta morena fría, se vende por unidad.",
-    "image": "🍺",
-    "price": 350,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cdl-007",
-    "name": "Cerveza Presidente",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Lata fría.",
-    "longDescription": "Cerveza Presidente fría, se vende por unidad.",
-    "image": "🍺",
-    "photo": "/assets/images/products/Cafetería-D'-Leo/cerveza-presidente-380.jpg",
-    "price": 380,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cdl-008",
-    "name": "Refresco de Limón",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "longDescription": "Refresco de limón frío, se vende por unidad.",
-    "image": "🥤",
-    "price": 350,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cdl-009",
-    "name": "Cerveza 3 Caballos",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "longDescription": "Cerveza 3 Caballos fría, se vende por unidad.",
-    "image": "🍺",
-    "price": 400,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "cdl-010",
     "name": "Pan con Tortilla, Bistec y Hamburguesa",
     "businessId": "cafeteria-d-leo",

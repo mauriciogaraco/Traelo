@@ -708,7 +708,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 950,
+    "price": 900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -725,7 +725,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 850,
+    "price": 800,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -742,7 +742,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1400,
+    "price": 1350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -759,7 +759,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1750,
+    "price": 1700,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -776,7 +776,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1250,
+    "price": 1200,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -793,7 +793,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1450,
+    "price": 1400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -810,7 +810,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1450,
+    "price": 1400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -827,7 +827,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1600,
+    "price": 1550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -844,7 +844,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1600,
+    "price": 1550,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -861,7 +861,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1250,
+    "price": 1200,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -878,7 +878,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1250,
+    "price": 1200,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -895,7 +895,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 950,
+    "price": 900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -912,7 +912,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1650,
+    "price": 1600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -929,7 +929,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1950,
+    "price": 1900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -946,7 +946,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1950,
+    "price": 1900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -963,7 +963,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 1850,
+    "price": 1800,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -980,7 +980,7 @@
     "category": "Comida",
     "shortDescription": "Entrantes",
     "image": "🍤",
-    "price": 4850,
+    "price": 4800,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -997,7 +997,7 @@
     "category": "Comida",
     "shortDescription": "Fríos",
     "image": "🥗",
-    "price": 950,
+    "price": 900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1014,7 +1014,7 @@
     "category": "Comida",
     "shortDescription": "Fríos",
     "image": "🥗",
-    "price": 1000,
+    "price": 950,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1031,7 +1031,7 @@
     "category": "Comida",
     "shortDescription": "Fríos",
     "image": "🥗",
-    "price": 950,
+    "price": 900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1048,7 +1048,7 @@
     "category": "Comida",
     "shortDescription": "Fríos",
     "image": "🥗",
-    "price": 1150,
+    "price": 1100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1065,7 +1065,7 @@
     "category": "Comida",
     "shortDescription": "Cocteles",
     "image": "🦐",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1082,7 +1082,7 @@
     "category": "Comida",
     "shortDescription": "Cocteles",
     "image": "🦐",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1099,7 +1099,7 @@
     "category": "Comida",
     "shortDescription": "Guarniciones",
     "image": "🍚",
-    "price": 500,
+    "price": 450,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1116,7 +1116,7 @@
     "category": "Comida",
     "shortDescription": "Guarniciones",
     "image": "🍚",
-    "price": 1150,
+    "price": 1100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1133,7 +1133,7 @@
     "category": "Comida",
     "shortDescription": "Pastas & arroz",
     "image": "🍝",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1150,7 +1150,7 @@
     "category": "Comida",
     "shortDescription": "Pastas & arroz",
     "image": "🍝",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1167,7 +1167,7 @@
     "category": "Comida",
     "shortDescription": "Pastas & arroz",
     "image": "🍝",
-    "price": 1400,
+    "price": 1350,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1184,7 +1184,7 @@
     "category": "Comida",
     "shortDescription": "Pastas & arroz",
     "image": "🍝",
-    "price": 350,
+    "price": 300,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1201,7 +1201,7 @@
     "category": "Comida",
     "shortDescription": "Pastas & arroz",
     "image": "🍝",
-    "price": 550,
+    "price": 500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1218,7 +1218,7 @@
     "category": "Comida",
     "shortDescription": "Pastas & arroz",
     "image": "🍝",
-    "price": 1150,
+    "price": 1100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1235,7 +1235,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 4150,
+    "price": 4100,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -1252,7 +1252,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 2750,
+    "price": 2700,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1269,7 +1269,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 2750,
+    "price": 2700,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1286,7 +1286,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 2650,
+    "price": 2600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1303,7 +1303,7 @@
     "category": "Comida",
     "shortDescription": "Pollo",
     "image": "🍗",
-    "price": 4150,
+    "price": 4100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1320,7 +1320,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 3850,
+    "price": 3800,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1337,7 +1337,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 3850,
+    "price": 3800,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1354,7 +1354,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 2450,
+    "price": 2400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1371,7 +1371,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 2350,
+    "price": 2300,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1388,7 +1388,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 3850,
+    "price": 3800,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1405,7 +1405,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 2350,
+    "price": 2300,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1422,7 +1422,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1439,7 +1439,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 3650,
+    "price": 3600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1456,7 +1456,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 4150,
+    "price": 4100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1473,7 +1473,7 @@
     "category": "Comida",
     "shortDescription": "Cerdo",
     "image": "🥩",
-    "price": 5350,
+    "price": 5300,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1490,7 +1490,7 @@
     "category": "Comida",
     "shortDescription": "Res",
     "image": "🥩",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1507,7 +1507,7 @@
     "category": "Comida",
     "shortDescription": "Res",
     "image": "🥩",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1524,7 +1524,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 2900,
+    "price": 2850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1541,7 +1541,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3000,
+    "price": 2950,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1558,7 +1558,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3350,
+    "price": 3300,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1575,7 +1575,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3250,
+    "price": 3200,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1592,7 +1592,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3450,
+    "price": 3400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1609,7 +1609,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3650,
+    "price": 3600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1626,7 +1626,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3650,
+    "price": 3600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1643,7 +1643,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3450,
+    "price": 3400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1660,7 +1660,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 3650,
+    "price": 3600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1677,7 +1677,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 1900,
+    "price": 1850,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1694,7 +1694,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 2150,
+    "price": 2100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1711,7 +1711,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 2450,
+    "price": 2400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1728,7 +1728,7 @@
     "category": "Comida",
     "shortDescription": "Mar",
     "image": "🦞",
-    "price": 2450,
+    "price": 2400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1745,7 +1745,7 @@
     "category": "Comida",
     "shortDescription": "Postres",
     "image": "🍮",
-    "price": 600,
+    "price": 550,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -1762,7 +1762,7 @@
     "category": "Comida",
     "shortDescription": "Postres",
     "image": "🍮",
-    "price": 800,
+    "price": 750,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -1779,7 +1779,7 @@
     "category": "Comida",
     "shortDescription": "Postres",
     "image": "🍮",
-    "price": 1550,
+    "price": 1500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -1796,7 +1796,7 @@
     "category": "Comida",
     "shortDescription": "Cake",
     "image": "🍮",
-    "price": 950,
+    "price": 900,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7122,51 +7122,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cdl-006",
-    "name": "Malta Morena",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "image": "🍺",
-    "price": 350,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cdl-007",
-    "name": "Cerveza Presidente",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Lata fría.",
-    "image": "🍺",
-    "photo": "/assets/images/products/Cafetería-D'-Leo/cerveza-presidente-380.jpg",
-    "price": 380,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cdl-008",
-    "name": "Refresco de Limón",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "image": "🥤",
-    "price": 350,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cdl-009",
-    "name": "Cerveza 3 Caballos",
-    "businessId": "cafeteria-d-leo",
-    "businessName": "Cafetería D' Leo",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "image": "🍺",
-    "price": 400,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "cdl-010",
     "name": "Pan con Tortilla, Bistec y Hamburguesa",
     "businessId": "cafeteria-d-leo",
@@ -7598,12 +7553,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 3150,
+    "price": 3100,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7615,12 +7570,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 3150,
+    "price": 3100,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7632,12 +7587,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2450,
+    "price": 2400,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7649,12 +7604,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 2350,
+    "price": 2300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7666,12 +7621,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 2350,
+    "price": 2300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7683,12 +7638,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 2450,
+    "price": 2400,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7700,12 +7655,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 1950,
+    "price": 1900,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7717,12 +7672,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2450,
+    "price": 2400,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7734,12 +7689,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7751,12 +7706,12 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2350,
+    "price": 2300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7768,12 +7723,12 @@
     "category": "Res",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2750,
+    "price": 2700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7785,12 +7740,12 @@
     "category": "Res",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2750,
+    "price": 2700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7802,12 +7757,12 @@
     "category": "Arroz",
     "shortDescription": "",
     "image": "🍚",
-    "price": 450,
+    "price": 400,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7819,12 +7774,12 @@
     "category": "Arroz",
     "shortDescription": "",
     "image": "🍚",
-    "price": 350,
+    "price": 300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7853,12 +7808,12 @@
     "category": "Arroz",
     "shortDescription": "",
     "image": "🍚",
-    "price": 450,
+    "price": 400,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7870,12 +7825,12 @@
     "category": "Viandas",
     "shortDescription": "",
     "image": "🌿",
-    "price": 450,
+    "price": 400,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7887,12 +7842,12 @@
     "category": "Viandas",
     "shortDescription": "",
     "image": "🌿",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7904,12 +7859,12 @@
     "category": "Viandas",
     "shortDescription": "",
     "image": "🌿",
-    "price": 550,
+    "price": 500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7921,12 +7876,12 @@
     "category": "Viandas",
     "shortDescription": "",
     "image": "🥗",
-    "price": 550,
+    "price": 500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7938,12 +7893,12 @@
     "category": "Postres",
     "shortDescription": "",
     "image": "🍮",
-    "price": 550,
+    "price": 500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7955,12 +7910,12 @@
     "category": "Postres",
     "shortDescription": "",
     "image": "🍦",
-    "price": 650,
+    "price": 600,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7972,12 +7927,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🫘",
-    "price": 1550,
+    "price": 1500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -7989,12 +7944,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🦞",
-    "price": 2250,
+    "price": 2200,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8006,12 +7961,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🦞",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8023,12 +7978,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🥩",
-    "price": 6050,
+    "price": 6000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8040,12 +7995,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🐟",
-    "price": 2250,
+    "price": 2200,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8057,12 +8012,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "Pescado, camarón, bechamel y queso.",
     "image": "🐟",
-    "price": 4250,
+    "price": 4200,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8074,12 +8029,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2950,
+    "price": 2900,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8091,12 +8046,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2750,
+    "price": 2700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8108,12 +8063,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "Masa de cerdo, aceitunas, queso, jamón, fajitas de pollo, croquetas y tostones rellenos.",
     "image": "🍽️",
-    "price": 6050,
+    "price": 6000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8125,12 +8080,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🍖",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8142,12 +8097,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🌮",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8159,12 +8114,12 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🥘",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8462,12 +8417,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🧀",
-    "price": 850,
+    "price": 800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8479,12 +8434,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8496,12 +8451,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2700,
+    "price": 2650,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8513,12 +8468,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8530,12 +8485,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2700,
+    "price": 2650,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8547,12 +8502,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🐟",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8564,12 +8519,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🐟",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8581,12 +8536,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍽️",
-    "price": 1350,
+    "price": 1300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8598,12 +8553,12 @@
     "category": "Entrantes",
     "shortDescription": "Jamón, queso y aceituna.",
     "image": "🍽️",
-    "price": 1750,
+    "price": 1700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8615,12 +8570,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍘",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8632,12 +8587,12 @@
     "category": "Entrantes",
     "shortDescription": "Jamón, queso y salsa rosa.",
     "image": "🫔",
-    "price": 1550,
+    "price": 1500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8649,12 +8604,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🫔",
-    "price": 1750,
+    "price": 1700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8666,12 +8621,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🫔",
-    "price": 1750,
+    "price": 1700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8683,12 +8638,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🥙",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8700,12 +8655,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🦞",
-    "price": 1750,
+    "price": 1700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8717,12 +8672,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🫒",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8734,12 +8689,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍤",
-    "price": 1850,
+    "price": 1800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8751,12 +8706,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍟",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8768,12 +8723,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍟",
-    "price": 1350,
+    "price": 1300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8785,12 +8740,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🍽️",
-    "price": 1550,
+    "price": 1500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8802,12 +8757,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🦞",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8819,12 +8774,12 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🧀",
-    "price": 1250,
+    "price": 1200,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8836,12 +8791,12 @@
     "category": "Cremas",
     "shortDescription": "",
     "image": "🍲",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8853,12 +8808,12 @@
     "category": "Cremas",
     "shortDescription": "",
     "image": "🍲",
-    "price": 1250,
+    "price": 1200,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8870,12 +8825,12 @@
     "category": "Cremas",
     "shortDescription": "",
     "image": "🍲",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8887,12 +8842,12 @@
     "category": "Pastas",
     "shortDescription": "",
     "image": "🍝",
-    "price": 850,
+    "price": 800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8904,12 +8859,12 @@
     "category": "Pastas",
     "shortDescription": "",
     "image": "🍝",
-    "price": 1050,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8921,12 +8876,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🦞",
-    "price": 2850,
+    "price": 2800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8938,12 +8893,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🦞",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8955,12 +8910,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🦞",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8972,12 +8927,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🦞",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -8989,12 +8944,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🦞",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9006,12 +8961,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🍤",
-    "price": 2350,
+    "price": 2300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9023,12 +8978,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🍤",
-    "price": 2350,
+    "price": 2300,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9040,12 +8995,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🍤",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9057,12 +9012,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🍤",
-    "price": 2250,
+    "price": 2200,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9074,12 +9029,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🐙",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9091,12 +9046,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🐙",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9108,12 +9063,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🐟",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9125,12 +9080,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🐟",
-    "price": 1850,
+    "price": 1800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9142,12 +9097,12 @@
     "category": "Del Mar",
     "shortDescription": "Pescado, jamón y queso.",
     "image": "🐟",
-    "price": 2850,
+    "price": 2800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9159,12 +9114,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🦑",
-    "price": 3050,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9176,12 +9131,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🐟",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9193,12 +9148,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🍤",
-    "price": 2150,
+    "price": 2100,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9210,12 +9165,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🐟",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9227,12 +9182,12 @@
     "category": "Del Mar",
     "shortDescription": "",
     "image": "🍤",
-    "price": 2550,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9244,12 +9199,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2750,
+    "price": 2700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9261,12 +9216,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 1850,
+    "price": 1800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9278,12 +9233,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9295,12 +9250,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 1850,
+    "price": 1800,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9312,12 +9267,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 1950,
+    "price": 1900,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9329,12 +9284,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 1750,
+    "price": 1700,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9346,12 +9301,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
@@ -9363,12 +9318,12 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2050,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
         "name": "Termopack",
-        "price": 200
+        "price": 150
       }
     ]
   },
