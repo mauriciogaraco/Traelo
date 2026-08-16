@@ -11410,7 +11410,7 @@
       "image": "�",
       "price": 1,
       "photo": "/assets/images/products/Los Llenik/Pan con Perro.webp",
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "packaging": [
         {
           "name": "Caja",
@@ -11436,6 +11436,45 @@
           "price": 0.4
         }
       ]
+    },
+    {
+      "id": "lllk-007",
+      "name": "Completa de Ropa Vieja",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Comida",
+      "shortDescription": "Arroz moro, tostones y aguacate.",
+      "longDescription": "Ropa vieja de res con arroz moro, tostones y aguacate.",
+      "image": "🍽️",
+      "price": 2.7,
+      "photo": "/assets/images/products/Los Llenik/completa de ropa vieja.jpg",
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lllk-008",
+      "name": "Completa de Bistec",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Comida",
+      "shortDescription": "Arroz moro, tostones y aguacate.",
+      "longDescription": "Bistec con arroz moro, tostones y aguacate.",
+      "image": "🍽️",
+      "price": 2.5,
+      "photo": "/assets/images/products/Los Llenik/completa de bistec.jpg",
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lllk-009",
+      "name": "Completa de Minuta",
+      "businessId": "los-llenik",
+      "businessName": "Los Llenik",
+      "category": "Comida",
+      "shortDescription": "Arroz moro, tostones y aguacate.",
+      "longDescription": "Minuta de pescado con arroz moro, tostones y aguacate.",
+      "image": "🍽️",
+      "price": 2.4,
+      "photo": "/assets/images/products/Los Llenik/completa de minuta.jpg",
+      "stockStatus": "disponible"
     },
     {
       "id": "alp-001",
