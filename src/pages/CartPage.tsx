@@ -4,6 +4,7 @@ import { ProductImage } from "../components/ui/ProductImage";
 import { Button } from "../components/ui/Button";
 import { EmptyState } from "../components/ui/EmptyState";
 import { MessagingFeeRow } from "../components/ui/MessagingFeeRow";
+import { ServiceFeeRow } from "../components/ui/ServiceFeeRow";
 import { PaymentNote } from "../components/ui/PaymentNote";
 import { formatAmount, formatPrice } from "../lib/format";
 import { groupByBusiness } from "../lib/order";
@@ -14,13 +15,14 @@ import {
   packSize,
   unitsOf,
 } from "../lib/cart";
-import { computeFee } from "../lib/fees";
+import { computeFee, computeServiceFee } from "../lib/fees";
 import { businessById } from "../data/catalog";
 import type { CartItem } from "../types";
 
 export function CartPage() {
   const navigate = useNavigate();
   const { items, setQuantity, removeItem, subtotal, total } = useCart();
+  const serviceFee = computeServiceFee(items);
 
   if (items.length === 0) {
     return (
@@ -153,12 +155,13 @@ export function CartPage() {
             </div>
           )}
           <MessagingFeeRow fee={feeInfo.fee} note={feeNote} />
+          <ServiceFeeRow fee={serviceFee} />
           {hasAnyUsd ? (
             <div className="border-t border-border pt-3 space-y-1">
               {cupSubtotal > 0 && (
                 <div className="flex justify-between items-baseline">
                   <span className="font-bold text-text-primary">Total CUP</span>
-                  <span className="text-xl font-bold text-primary">{formatPrice(cupSubtotal + feeInfo.fee)}</span>
+                  <span className="text-xl font-bold text-primary">{formatPrice(cupSubtotal + feeInfo.fee + serviceFee)}</span>
                 </div>
               )}
               {usdSubtotal > 0 && (

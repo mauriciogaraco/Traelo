@@ -9,12 +9,13 @@ import { ProductImage } from '../components/ui/ProductImage'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { MessagingFeeRow } from '../components/ui/MessagingFeeRow'
+import { ServiceFeeRow } from '../components/ui/ServiceFeeRow'
 import { PaymentNote } from '../components/ui/PaymentNote'
 import { TimeWheel } from '../components/ui/TimeWheel'
 import { formatAmount, formatPrice, formatTime12h } from '../lib/format'
 import { makeOrder, groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
-import { computeFee } from '../lib/fees'
+import { computeFee, computeServiceFee } from '../lib/fees'
 import { isOpenNow, ordersClosedForToday } from '../lib/hours'
 import { sendOrderToTelegram } from '../lib/telegram'
 import { businessById } from '../data/catalog'
@@ -95,7 +96,8 @@ export function CheckoutPage() {
       : 'Lo antes posible'
 
   const feeInfo = computeFee(items, when)
-  const total = subtotal + feeInfo.fee
+  const serviceFee = computeServiceFee(items)
+  const total = subtotal + feeInfo.fee + serviceFee
   const feeNote = [
     feeInfo.isLate ? 'después de las 7 pm' : null,
     feeInfo.multiBusiness ? '+100 por varios negocios' : null,
@@ -294,6 +296,7 @@ export function CheckoutPage() {
                 </span>
               </div>
               <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
+              <ServiceFeeRow fee={serviceFee} />
               {hasUsdGroups && (
                 <div className="border-t border-border pt-3">
                   <p className="text-[11px] text-warning font-semibold">
@@ -317,6 +320,7 @@ export function CheckoutPage() {
                 </span>
               </div>
               <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
+              <ServiceFeeRow fee={serviceFee} />
               <div className="border-t border-border pt-3 flex justify-between items-baseline">
                 <span className="font-bold text-text-primary">Total a pagar</span>
                 <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>

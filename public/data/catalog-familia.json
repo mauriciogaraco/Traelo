@@ -7,6 +7,8 @@
       "image": "/assets/images/business/alpha.jpg",
       "color": "from-amber-100 to-orange-50",
       "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante. · El costo de mensajería indicado es referencial. Debido a la naturaleza del pedido, la tarifa final puede ajustarse en función del peso y volumen total de los productos. El mensajero le comunicará el monto definitivo al momento de coordinar la entrega.",
+      "businessCommission": 0,
+      "clientCommission": 2,
       "schedule": {
         "days": [
           1,
@@ -27,6 +29,8 @@
       "image": "/assets/images/business/DLM.jpg",
       "color": "from-rose-100 to-orange-50",
       "deliveryFee": 350,
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           3,
@@ -46,6 +50,8 @@
       "description": "Panadería: panes recién hechos y bebidas frías.",
       "image": "/assets/images/business/macus.jpg",
       "color": "from-yellow-100 to-amber-50",
+      "businessCommission": 0,
+      "clientCommission": 4,
       "schedule": {
         "days": [
           0,
@@ -67,6 +73,8 @@
       "description": "Granos por libra, aceite y embutidos frescos.",
       "image": "/assets/images/business/Mercadito.jpg",
       "color": "from-emerald-100 to-teal-50",
+      "businessCommission": 0,
+      "clientCommission": 3,
       "schedule": {
         "days": [
           0,
@@ -88,6 +96,8 @@
       "description": "Pizzas y espaguetis con agregos a elección, más bebidas frías.",
       "image": "/assets/images/products/pizza.jpg",
       "color": "from-red-100 to-orange-50",
+      "businessCommission": 0,
+      "clientCommission": 4,
       "schedule": {
         "days": [
           0,
@@ -109,6 +119,8 @@
       "description": "Batidos artesanales y malteadas con crema batida, sirope y confituras.",
       "image": "/assets/images/business/Cronos.jpg",
       "color": "from-sky-100 to-cyan-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -130,9 +142,11 @@
       "description": "Ropa, lencería, bolsos y accesorios de moda.",
       "image": "/assets/images/business/Eme-Boutique.jpg",
       "color": "from-pink-100 to-rose-50",
-      "currency": "USD",
       "paymentNote": "Precios en USD · pago al cambio del día (El Toque). La mensajería se abona en CUP y se cobra aunque no se retenga la prenda.",
       "deliveryFee": 350,
+      "currency": "USD",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -154,6 +168,8 @@
       "description": "Bodega de confianza: alimentos, bebidas, aseo y más, todo en un solo lugar.",
       "image": "/assets/images/business/Tu-Kprichito.jpg",
       "color": "from-violet-100 to-purple-50",
+      "businessCommission": 0,
+      "clientCommission": 3,
       "schedule": {
         "days": [
           0,
@@ -175,6 +191,8 @@
       "description": "Pizzas individuales y familiares, espaguetis, comidas criollas y picaderas.",
       "image": "/assets/images/business/Linea_Callejón.jpg",
       "color": "from-green-100 to-emerald-50",
+      "businessCommission": 0,
+      "clientCommission": 4,
       "schedule": {
         "days": [
           0,
@@ -196,6 +214,8 @@
       "description": "Torticas, pasteles, merenguitos, tartaletas y cakes artesanales.",
       "image": "/assets/images/business/Amore.jpg",
       "color": "from-pink-100 to-rose-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -218,6 +238,8 @@
       "image": "/assets/images/business/Cafetería_D'-Leo.jpg",
       "color": "from-yellow-100 to-amber-50",
       "status": "cerrado",
+      "businessCommission": 0,
+      "clientCommission": 4,
       "schedule": {
         "days": [
           0,
@@ -239,6 +261,8 @@
       "description": "Pizzas artesanales con agregos a elección y bebidas frías.",
       "image": "/assets/images/business/pizzeriaM&M.jpg",
       "color": "from-red-100 to-orange-50",
+      "businessCommission": 0,
+      "clientCommission": 4,
       "schedule": {
         "days": [
           0,
@@ -260,8 +284,10 @@
       "description": "Restaurante Las Palmitas — carnes, mariscos, pollo, coctelería y más en Güira de Melena.",
       "image": "/assets/images/business/LasPamitasLogo2.jpg",
       "color": "from-green-100 to-lime-50",
-      "deliveryFee": 350,
       "paymentNote": "Mensajería 350 CUP · después de las 7:00 pm sube a 450 CUP. · A su cuenta se le suma el 5% de servicio.",
+      "deliveryFee": 350,
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -282,6 +308,8 @@
       "description": "Helados artesanales en copas individuales y tinas familiares.",
       "image": "/assets/images/business/heladeria-mk.jpg",
       "color": "from-pink-100 to-fuchsia-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -303,6 +331,8 @@
       "description": "Ferretería FerreGüira — herramientas, materiales eléctricos, fontanería y más en Güira de Melena.",
       "image": "/assets/images/business/FerreGüira.jpg",
       "color": "from-orange-100 to-amber-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           1,
@@ -323,6 +353,8 @@
       "description": "Los Llenik — El bar a tu casa",
       "image": "/assets/images/business/Los Llenik.jpg",
       "color": "from-sky-100 to-cyan-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -345,6 +377,8 @@
       "image": "/assets/images/business/Dulce-momento.jpg",
       "color": "from-sky-100 to-cyan-50",
       "status": "cerrado",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           1,
@@ -365,6 +399,8 @@
       "description": "Frappio — Otra forma de disfrutar el café.",
       "image": "/assets/images/business/Frappio.jpg",
       "color": "from-sky-100 to-cyan-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -386,6 +422,8 @@
       "description": "Brochetas y cerdo asado a las brasas, directo a tu puerta.",
       "image": "/assets/images/business/AlCarbón.jpg",
       "color": "from-orange-100 to-red-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -407,6 +445,8 @@
       "description": "Los 4 Hermanos — Comida casera a domicilio.",
       "image": "/assets/images/business/Los 4 Hermanos.jpg",
       "color": "from-sky-100 to-cyan-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
@@ -428,6 +468,8 @@
       "description": "Agro Los Prietos — Viandas, frutas y vegetales frescos.",
       "image": "/assets/images/business/Los Prietos.jpg",
       "color": "from-lime-100 to-green-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           1,
@@ -448,6 +490,8 @@
       "description": "La Nevada — Helados, cakes y dulces artesanales.",
       "image": "/assets/images/business/La Nevada.jpg",
       "color": "from-pink-100 to-rose-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
       "schedule": {
         "days": [
           0,
