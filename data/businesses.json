@@ -379,6 +379,7 @@
     "clientCommission": 5,
     "schedule": {
       "days": [
+        0,
         1,
         2,
         3,
