@@ -376,7 +376,6 @@
       "description": "Dulce Momento — Helados, dulces y postres a domicilio",
       "image": "/assets/images/business/Dulce-momento.jpg",
       "color": "from-sky-100 to-cyan-50",
-      "status": "cerrado",
       "businessCommission": 0,
       "clientCommission": 5,
       "schedule": {
