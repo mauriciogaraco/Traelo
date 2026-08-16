@@ -7,6 +7,11 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      // Registro manual (ver src/pwa.ts): el script auto-inyectado por defecto
+      // solo registra el service worker, sin detectar cuando hay una versión
+      // nueva. Registrar a mano con `virtual:pwa-register` sí recarga la
+      // página sola en cuanto el SW nuevo toma control.
+      injectRegister: false,
       includeAssets: ['logo.webp', 'traelo_192x192.png', 'traelo_512x512.png'],
       manifest: {
         name: 'Tráelo',
