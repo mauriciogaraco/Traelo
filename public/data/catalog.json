@@ -677,6 +677,19 @@
       "stockStatus": "agotado"
     },
     {
+      "id": "cr-013",
+      "name": "Cronos de Nutella",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado con Nutella.",
+      "longDescription": "Batido de helado con Nutella, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍫",
+      "photo": "/assets/images/products/Cronos/nutella.jpg",
+      "price": 1100,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "bc-001",
       "name": "Avena con leche",
       "businessId": "bodega-central",
