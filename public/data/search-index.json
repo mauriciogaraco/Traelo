@@ -3459,7 +3459,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍬",
     "photo": "/assets/images/products/mercado/azucar_blanca_lb.jpg",
-    "price": 450,
+    "price": 480,
     "stockStatus": "disponible"
   },
   {
@@ -3540,7 +3540,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🍅",
-    "price": 600,
+    "price": 650,
     "stockStatus": "disponible"
   },
   {
@@ -3584,7 +3584,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -3750,7 +3750,7 @@
     "category": "Alimentos",
     "shortDescription": "",
     "image": "☕",
-    "price": 2000,
+    "price": 2400,
     "stockStatus": "disponible"
   },
   {
@@ -3945,13 +3945,24 @@
   },
   {
     "id": "ma-047",
-    "name": "Jabón de Lavar",
+    "name": "Jabón de Lavar Albaraka",
     "businessId": "mercadito-ahorro",
     "businessName": "El Mercadito",
     "category": "Aseo",
     "shortDescription": "Jabón de Lavar ,150 gramos",
     "image": "🧺",
-    "price": 350,
+    "price": 380,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-048",
+    "name": "Pechuga de Pollo (1 kg)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 1 kg.",
+    "image": "🍗",
+    "price": 4500,
     "stockStatus": "disponible"
   },
   {
@@ -10285,7 +10296,7 @@
     "category": "Comida",
     "shortDescription": "Arroz moro, tostones y aguacate.",
     "image": "🍽️",
-    "price": 1350,
+    "price": 1400,
     "photo": "/assets/images/products/Los Llenik/completa de ropa vieja.jpg",
     "stockStatus": "disponible"
   },
@@ -10347,7 +10358,7 @@
     "image": "🫘",
     "photo": "/assets/images/products/Los Prietos/frijol-bayo.jpg",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-004",
@@ -10359,7 +10370,7 @@
     "image": "🫘",
     "photo": "/assets/images/products/Los Prietos/garbanzos.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-005",
@@ -10395,7 +10406,7 @@
     "image": "🫑",
     "photo": "/assets/images/products/Los Prietos/Ají-Pimiento.webp",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-008",
@@ -10423,14 +10434,14 @@
   },
   {
     "id": "alp-010",
-    "name": "Ají Cachucha (pote)",
+    "name": "Ají Cachucha (por libra)",
     "businessId": "agro-los-prietos",
     "businessName": "Agro Los Prietos",
     "category": "Alimentos",
-    "shortDescription": "Precio por pote.",
+    "shortDescription": "Precio por libra.",
     "image": "🌶️",
     "photo": "/assets/images/products/Los Prietos/ají-cachucha.webp",
-    "price": 200,
+    "price": 250,
     "stockStatus": "disponible"
   },
   {
@@ -10443,7 +10454,7 @@
     "image": "🍌",
     "photo": "/assets/images/products/Los Prietos/plátano-fruta.jpg",
     "price": 250,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-012",
@@ -10467,7 +10478,7 @@
     "image": "🍍",
     "photo": "/assets/images/products/Los Prietos/piña.webp",
     "price": 450,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-014",
@@ -10515,7 +10526,7 @@
     "image": "🍑",
     "photo": "/assets/images/products/Los Prietos/fruta-bomba.jpg",
     "price": 150,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-018",
@@ -10527,7 +10538,7 @@
     "image": "🫚",
     "photo": "/assets/images/products/Los Prietos/cúrcuma.jpg",
     "price": 300,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-019",
@@ -10563,7 +10574,7 @@
     "image": "🍅",
     "photo": "/assets/images/products/Los Prietos/tomate.jpg",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-022",
@@ -10575,6 +10586,95 @@
     "image": "🧅",
     "photo": "/assets/images/products/Los Prietos/cebolla.jpg",
     "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-023",
+    "name": "Cebollino (mazo)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por mazo.",
+    "image": "🌱",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-024",
+    "name": "Ristras de Cebolla",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧅",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-025",
+    "name": "Naranja Dulce (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🍊",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-026",
+    "name": "Cebolla Morada (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🧅",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-027",
+    "name": "Boniato (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🍠",
+    "price": 80,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-028",
+    "name": "Calabaza (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🎃",
+    "photo": "/assets/images/products/Los Prietos/calabaza.jpg",
+    "price": 80,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-029",
+    "name": "Ajo (cabeza)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por cabeza.",
+    "image": "🧄",
+    "price": 30,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-030",
+    "name": "Aguacate (unidad)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥑",
+    "price": 250,
     "stockStatus": "disponible"
   },
   {
