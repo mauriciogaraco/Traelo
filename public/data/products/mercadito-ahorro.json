@@ -35,7 +35,7 @@
     "longDescription": "Azúcar a granel, precio por libra. Indica la cantidad de libras al confirmar.",
     "image": "🍬",
     "photo": "/assets/images/products/mercado/azucar_blanca_lb.jpg",
-    "price": 450,
+    "price": 480,
     "stockStatus": "disponible"
   },
   {
@@ -123,7 +123,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Pasta de tomate concentrada, se vende por lata.",
     "image": "🍅",
-    "price": 600,
+    "price": 650,
     "stockStatus": "disponible"
   },
   {
@@ -171,7 +171,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Leche evaporada, se vende por lata.",
     "image": "🥛",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -351,7 +351,7 @@
     "shortDescription": "",
     "longDescription": "Café Bárbaro, se vende por unidad.",
     "image": "☕",
-    "price": 2000,
+    "price": 2400,
     "stockStatus": "disponible"
   },
   {
@@ -563,14 +563,26 @@
   },
   {
     "id": "ma-047",
-    "name": "Jabón de Lavar",
+    "name": "Jabón de Lavar Albaraka",
     "businessId": "mercadito-ahorro",
     "businessName": "El Mercadito",
     "category": "Aseo",
     "shortDescription": "Jabón de Lavar ,150 gramos",
     "longDescription": "",
     "image": "🧺",
-    "price": 350,
+    "price": 380,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-048",
+    "name": "Pechuga de Pollo (1 kg)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 1 kg.",
+    "longDescription": "Pechuga de pollo, paquete de 1 kg.",
+    "image": "🍗",
+    "price": 4500,
     "stockStatus": "disponible"
   }
 ]
