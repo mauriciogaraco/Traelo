@@ -4311,7 +4311,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🍤",
-    "price": 1500,
+    "price": 2000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4328,7 +4328,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🍤",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4345,7 +4345,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🍤",
-    "price": 1500,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -4362,7 +4362,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🍤",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4379,7 +4379,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🍗",
-    "price": 1500,
+    "price": 2000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4396,7 +4396,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🍤",
-    "price": 700,
+    "price": 1000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4413,7 +4413,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🐟",
-    "price": 1500,
+    "price": 2000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4430,7 +4430,7 @@
     "category": "Comida",
     "shortDescription": "Picaderas",
     "image": "🍽️",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4498,7 +4498,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🍗",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4549,7 +4549,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
-    "price": 2000,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -4566,7 +4566,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4583,7 +4583,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
-    "price": 2500,
+    "price": 3000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4600,7 +4600,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
-    "price": 2500,
+    "price": 3000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4617,7 +4617,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
-    "price": 2500,
+    "price": 3000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4668,7 +4668,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🦞",
-    "price": 2500,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -4685,7 +4685,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
-    "price": 2500,
+    "price": 3000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4702,7 +4702,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🐟",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4719,7 +4719,7 @@
     "category": "Comida",
     "shortDescription": "Comidas Criollas",
     "image": "🥩",
-    "price": 2000,
+    "price": 3000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -4883,7 +4883,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 300,
+    "price": 500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -4904,7 +4904,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 500,
+    "price": 700,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -4946,7 +4946,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 500,
+    "price": 700,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -4967,7 +4967,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 500,
+    "price": 700,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -5009,7 +5009,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 500,
+    "price": 700,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -5030,7 +5030,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 700,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -5051,7 +5051,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 700,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -5072,7 +5072,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 700,
+    "price": 1000,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -5093,7 +5093,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 900,
+    "price": 1200,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -5114,7 +5114,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 900,
+    "price": 1200,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -5135,7 +5135,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 900,
+    "price": 1200,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -5156,7 +5156,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 700,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -5177,7 +5177,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas",
     "image": "🍕",
-    "price": 1100,
+    "price": 1500,
     "stockStatus": "agotado",
     "packaging": [
       {
@@ -5198,7 +5198,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas Familiares",
     "image": "🍕",
-    "price": 1200,
+    "price": 1500,
     "stockStatus": "disponible",
     "addons": [
       {
@@ -5225,7 +5225,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas Familiares",
     "image": "🍕",
-    "price": 1500,
+    "price": 2000,
     "stockStatus": "disponible",
     "addons": [
       {
@@ -5252,7 +5252,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas Familiares",
     "image": "🍕",
-    "price": 1500,
+    "price": 2000,
     "stockStatus": "agotado",
     "addons": [
       {
@@ -5279,7 +5279,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas Familiares",
     "image": "🍕",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "agotado",
     "addons": [
       {

@@ -191,7 +191,6 @@
       "description": "Pizzas individuales y familiares, espaguetis, comidas criollas y picaderas.",
       "image": "/assets/images/business/Linea_Callejón.jpg",
       "color": "from-green-100 to-emerald-50",
-      "status": "cerrado",
       "businessCommission": 0,
       "clientCommission": 4,
       "schedule": {
@@ -5089,7 +5088,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 3,
+      "price": 4,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5107,7 +5106,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 4,
+      "price": 5,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5125,7 +5124,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 3,
+      "price": 4,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5143,7 +5142,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 4,
+      "price": 5,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5161,7 +5160,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍗",
-      "price": 3,
+      "price": 4,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5179,7 +5178,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 1.4,
+      "price": 2,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5197,7 +5196,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🐟",
-      "price": 3,
+      "price": 4,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5215,7 +5214,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍽️",
-      "price": 4,
+      "price": 5,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5287,7 +5286,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🍗",
-      "price": 4,
+      "price": 5,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5341,7 +5340,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 4,
+      "price": 6,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5359,7 +5358,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 4,
+      "price": 5,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5377,7 +5376,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 5,
+      "price": 6,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5395,7 +5394,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 5,
+      "price": 6,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5413,7 +5412,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 5,
+      "price": 6,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5467,7 +5466,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🦞",
-      "price": 5,
+      "price": 6,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5485,7 +5484,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 5,
+      "price": 6,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5503,7 +5502,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🐟",
-      "price": 4,
+      "price": 5,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5521,7 +5520,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 4,
+      "price": 6,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5693,7 +5692,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 0.6,
+      "price": 1,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5715,7 +5714,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 1,
+      "price": 1.4,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5759,7 +5758,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 1,
+      "price": 1.4,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5781,7 +5780,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 1,
+      "price": 1.4,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5825,7 +5824,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Doble queso",
       "image": "🍕",
-      "price": 1,
+      "price": 1.4,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5847,7 +5846,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Doble queso",
       "image": "🍕",
-      "price": 1.4,
+      "price": 2,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5869,7 +5868,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Doble queso",
       "image": "🍕",
-      "price": 1.4,
+      "price": 2,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5891,7 +5890,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 1.4,
+      "price": 2,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5913,7 +5912,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 1.8,
+      "price": 2.4,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5935,7 +5934,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 1.8,
+      "price": 2.4,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5957,7 +5956,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 1.8,
+      "price": 2.4,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5979,7 +5978,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Especiales",
       "image": "🍕",
-      "price": 1.4,
+      "price": 2,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -6001,7 +6000,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Especiales",
       "image": "🍕",
-      "price": 2.2,
+      "price": 3,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -6023,7 +6022,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 2.4,
+      "price": 3,
       "stockStatus": "disponible",
       "addons": [
         {
@@ -6051,7 +6050,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 3,
+      "price": 4,
       "stockStatus": "disponible",
       "addons": [
         {
@@ -6079,7 +6078,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 3,
+      "price": 4,
       "stockStatus": "agotado",
       "addons": [
         {
@@ -6107,7 +6106,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 4,
+      "price": 5,
       "stockStatus": "agotado",
       "addons": [
         {
