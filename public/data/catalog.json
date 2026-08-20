@@ -520,7 +520,7 @@
   "products": [
     {
       "id": "cr-001",
-      "name": "Smoothie de Mango",
+      "name": "Cronos de Mango",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -533,7 +533,7 @@
     },
     {
       "id": "cr-002",
-      "name": "Smoothie Fruta-Bomba",
+      "name": "Cronos Fruta-Bomba",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -546,7 +546,7 @@
     },
     {
       "id": "cr-003",
-      "name": "Smoothie de Maní",
+      "name": "Cronos de Maní",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -560,7 +560,7 @@
     },
     {
       "id": "cr-004",
-      "name": "Smoothie Malteado",
+      "name": "Cronos Malteado",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Malteadas",
@@ -572,8 +572,21 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "cr-014",
+      "name": "Cronos de Oreo",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado con Oreo.",
+      "longDescription": "Batido de helado con galletas Oreo, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍪",
+      "photo": "/assets/images/products/Cronos/Oreo.jpg",
+      "price": 850,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "cr-005",
-      "name": "Smoothie de Fresa",
+      "name": "Cronos de Fresa",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -586,7 +599,7 @@
     },
     {
       "id": "cr-006",
-      "name": "Smoothie de Chocolate",
+      "name": "Cronos de Chocolate",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -600,7 +613,7 @@
     },
     {
       "id": "cr-007",
-      "name": "Smoothie de Vainilla",
+      "name": "Cronos de Vainilla",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -613,7 +626,7 @@
     },
     {
       "id": "cr-008",
-      "name": "Smoothie de Naranja y Piña",
+      "name": "Cronos de Naranja y Piña",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -626,7 +639,7 @@
     },
     {
       "id": "cr-009",
-      "name": "Smoothie de Avellana",
+      "name": "Cronos de Avellana",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -639,7 +652,7 @@
     },
     {
       "id": "cr-010",
-      "name": "Smoothie de Mantecado",
+      "name": "Cronos de Mantecado",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -652,7 +665,7 @@
     },
     {
       "id": "cr-011",
-      "name": "Smoothie de Caramelo",
+      "name": "Cronos de Caramelo",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
@@ -665,7 +678,7 @@
     },
     {
       "id": "cr-012",
-      "name": "Smoothie de Dulce de Leche",
+      "name": "Cronos de Dulce de Leche",
       "businessId": "cronos",
       "businessName": "Cronos",
       "category": "Batidos",
