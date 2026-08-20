@@ -235,20 +235,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "ma-026",
-    "name": "Licor Crema de Vie",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Bebidas",
-    "shortDescription": "Deliciosa crema de vie artesanal.",
-    "longDescription": "Licor Crema de Vie artesanal. Se vende por unidad.",
-    "image": "🍶",
-    "photo": "/assets/images/crema-de-vie.jpg",
-    "price": 2300,
-    "featured": true,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "ma-025",
     "name": "Picadillo de pollo MDM (1 lb)",
     "businessId": "mercadito-ahorro",
@@ -258,20 +244,6 @@
     "longDescription": "Picadillo de pollo MDM, se vende por libra.",
     "image": "🍖",
     "price": 550,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "ma-027",
-    "name": "Café El Arriero (250 g)",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Alimentos",
-    "shortDescription": "Café molido 250 g.",
-    "longDescription": "Café El Arriero molido, presentación de 250 gramos.",
-    "image": "☕",
-    "photo": "/assets/images/products/mercado/café_arreiro.jpg",
-    "price": 1800,
-    "featured": true,
     "stockStatus": "disponible"
   },
   {

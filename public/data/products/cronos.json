@@ -1,5 +1,19 @@
 [
   {
+    "id": "cr-014",
+    "name": "Cronos de Oreo",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado con Oreo.",
+    "longDescription": "Batido de helado con galletas Oreo, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🍪",
+    "photo": "/assets/images/products/Cronos/Oreo.jpg",
+    "price": 900,
+    "featured": true,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "cr-001",
     "name": "Cronos de Mango",
     "businessId": "cronos",
@@ -50,19 +64,6 @@
     "image": "🥛",
     "photo": "/assets/images/products/Cronos/Malteada.jpg",
     "price": 850,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cr-014",
-    "name": "Cronos de Oreo",
-    "businessId": "cronos",
-    "businessName": "Cronos",
-    "category": "Batidos",
-    "shortDescription": "Batido de helado con Oreo.",
-    "longDescription": "Batido de helado con galletas Oreo, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
-    "image": "🍪",
-    "photo": "/assets/images/products/Cronos/Oreo.jpg",
-    "price": 900,
     "stockStatus": "disponible"
   },
   {
