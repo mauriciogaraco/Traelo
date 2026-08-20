@@ -1,5 +1,18 @@
 [
   {
+    "id": "cr-014",
+    "name": "Cronos de Oreo",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado con Oreo.",
+    "image": "🍪",
+    "photo": "/assets/images/products/Cronos/Oreo.jpg",
+    "price": 900,
+    "featured": true,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "cr-001",
     "name": "Cronos de Mango",
     "businessId": "cronos",
@@ -46,18 +59,6 @@
     "image": "🥛",
     "photo": "/assets/images/products/Cronos/Malteada.jpg",
     "price": 850,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "cr-014",
-    "name": "Cronos de Oreo",
-    "businessId": "cronos",
-    "businessName": "Cronos",
-    "category": "Batidos",
-    "shortDescription": "Batido de helado con Oreo.",
-    "image": "🍪",
-    "photo": "/assets/images/products/Cronos/Oreo.jpg",
-    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -3655,19 +3656,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "ma-026",
-    "name": "Licor Crema de Vie",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Bebidas",
-    "shortDescription": "Deliciosa crema de vie artesanal.",
-    "image": "🍶",
-    "photo": "/assets/images/crema-de-vie.jpg",
-    "price": 2300,
-    "featured": true,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "ma-025",
     "name": "Picadillo de pollo MDM (1 lb)",
     "businessId": "mercadito-ahorro",
@@ -3676,19 +3664,6 @@
     "shortDescription": "Precio por libra.",
     "image": "🍖",
     "price": 550,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "ma-027",
-    "name": "Café El Arriero (250 g)",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Alimentos",
-    "shortDescription": "Café molido 250 g.",
-    "image": "☕",
-    "photo": "/assets/images/products/mercado/café_arreiro.jpg",
-    "price": 1800,
-    "featured": true,
     "stockStatus": "disponible"
   },
   {
