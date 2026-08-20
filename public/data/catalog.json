@@ -581,7 +581,7 @@
       "longDescription": "Batido de helado con galletas Oreo, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
       "image": "🍪",
       "photo": "/assets/images/products/Cronos/Oreo.jpg",
-      "price": 850,
+      "price": 900,
       "stockStatus": "disponible"
     },
     {
@@ -688,19 +688,6 @@
       "photo": "/assets/images/products/Cronos/Helado-Dulce-De-Leche.jpg",
       "price": 1100,
       "stockStatus": "agotado"
-    },
-    {
-      "id": "cr-013",
-      "name": "Cronos de Nutella",
-      "businessId": "cronos",
-      "businessName": "Cronos",
-      "category": "Batidos",
-      "shortDescription": "Batido de helado con Nutella.",
-      "longDescription": "Batido de helado con Nutella, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
-      "image": "🍫",
-      "photo": "/assets/images/products/Cronos/nutella.jpg",
-      "price": 1100,
-      "stockStatus": "disponible"
     },
     {
       "id": "bc-001",
@@ -11488,7 +11475,7 @@
       "shortDescription": "Arroz moro, tostones y aguacate.",
       "longDescription": "Ropa vieja de res con arroz moro, tostones y aguacate.",
       "image": "🍽️",
-      "price": 1400,
+      "price": 1350,
       "photo": "/assets/images/products/Los Llenik/completa de ropa vieja.jpg",
       "stockStatus": "disponible"
     },
