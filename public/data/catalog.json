@@ -191,7 +191,6 @@
       "description": "Pizzas individuales y familiares, espaguetis, comidas criollas y picaderas.",
       "image": "/assets/images/business/Linea_Callejón.jpg",
       "color": "from-green-100 to-emerald-50",
-      "status": "cerrado",
       "businessCommission": 0,
       "clientCommission": 4,
       "schedule": {
@@ -514,6 +513,29 @@
         "open": "09:00",
         "close": "21:00",
         "label": "Todos los días · 9:00 am – 9:00 pm"
+      }
+    },
+    {
+      "id": "mercado-daf",
+      "name": "Mercado DAF",
+      "description": "Mercado DAF — Productos importados, dulces y bebidas.",
+      "image": "/assets/images/business/Mercado DAF.jpg",
+      "color": "from-indigo-100 to-blue-50",
+      "businessCommission": 0,
+      "clientCommission": 3,
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "19:00",
+        "label": "Todos los días · 9:00 am – 7:00 pm"
       }
     }
   ],
@@ -5089,7 +5111,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 1500,
+      "price": 2000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5107,7 +5129,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 2000,
+      "price": 2500,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5125,7 +5147,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 1500,
+      "price": 2000,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5143,7 +5165,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 2000,
+      "price": 2500,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5161,7 +5183,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍗",
-      "price": 1500,
+      "price": 2000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5179,7 +5201,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍤",
-      "price": 700,
+      "price": 1000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5197,7 +5219,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🐟",
-      "price": 1500,
+      "price": 2000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5215,7 +5237,7 @@
       "shortDescription": "Picaderas",
       "longDescription": "Picaderas · Para empezar",
       "image": "🍽️",
-      "price": 2000,
+      "price": 2500,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5287,7 +5309,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🍗",
-      "price": 2000,
+      "price": 2500,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5341,7 +5363,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 2000,
+      "price": 3000,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5359,7 +5381,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 2000,
+      "price": 2500,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5377,7 +5399,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 2500,
+      "price": 3000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5395,7 +5417,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 2500,
+      "price": 3000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5413,7 +5435,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 2500,
+      "price": 3000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5467,7 +5489,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🦞",
-      "price": 2500,
+      "price": 3000,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5485,7 +5507,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 2500,
+      "price": 3000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5503,7 +5525,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🐟",
-      "price": 2000,
+      "price": 2500,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5521,7 +5543,7 @@
       "shortDescription": "Comidas Criollas",
       "longDescription": "Comidas Criollas · Platos",
       "image": "🥩",
-      "price": 2000,
+      "price": 3000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5693,7 +5715,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 300,
+      "price": 500,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5715,7 +5737,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 500,
+      "price": 700,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5759,7 +5781,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 500,
+      "price": 700,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5781,7 +5803,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Individuales",
       "image": "🍕",
-      "price": 500,
+      "price": 700,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5825,7 +5847,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Doble queso",
       "image": "🍕",
-      "price": 500,
+      "price": 700,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5847,7 +5869,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Doble queso",
       "image": "🍕",
-      "price": 700,
+      "price": 1000,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5869,7 +5891,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Doble queso",
       "image": "🍕",
-      "price": 700,
+      "price": 1000,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -5891,7 +5913,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 700,
+      "price": 1000,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5913,7 +5935,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 900,
+      "price": 1200,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5935,7 +5957,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 900,
+      "price": 1200,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5957,7 +5979,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Queso Gouda",
       "image": "🍕",
-      "price": 900,
+      "price": 1200,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -5979,7 +6001,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Especiales",
       "image": "🍕",
-      "price": 700,
+      "price": 1000,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -6001,7 +6023,7 @@
       "shortDescription": "Pizzas",
       "longDescription": "Pizzas · Especiales",
       "image": "🍕",
-      "price": 1100,
+      "price": 1500,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -6023,7 +6045,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 1200,
+      "price": 1500,
       "stockStatus": "disponible",
       "addons": [
         {
@@ -6051,7 +6073,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 1500,
+      "price": 2000,
       "stockStatus": "disponible",
       "addons": [
         {
@@ -6079,7 +6101,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 1500,
+      "price": 2000,
       "stockStatus": "agotado",
       "addons": [
         {
@@ -6107,7 +6129,7 @@
       "shortDescription": "Pizzas Familiares",
       "longDescription": "Pizzas Familiares · Tamaño grande",
       "image": "🍕",
-      "price": 2000,
+      "price": 2500,
       "stockStatus": "agotado",
       "addons": [
         {
@@ -12131,6 +12153,409 @@
       "image": "🍮",
       "photo": "/assets/images/products/La Nevada/tocinillo del clielo - 500.jpg",
       "price": 500,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-001",
+      "name": "Aceite (900 ml)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Botella de 900 ml.",
+      "longDescription": "Aceite de cocina, botella de 900 ml.",
+      "image": "🛢️",
+      "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
+      "price": 3700,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-002",
+      "name": "Agua Importada Sultán",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Agua importada Sultán, se vende por unidad.",
+      "image": "💧",
+      "photo": "/assets/images/products/DAF/Agua importada  Sultán- 140.jpg",
+      "price": 140,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-003",
+      "name": "Botonetas",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Botonetas, se venden por unidad.",
+      "image": "🍬",
+      "photo": "/assets/images/products/DAF/Botonetas - 70.jpg",
+      "price": 70,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-004",
+      "name": "Chanceler Golden Label",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Chanceler Golden Label, se vende por unidad.",
+      "image": "🥃",
+      "photo": "/assets/images/products/DAF/Chanceler Golden Label 3700.jpg",
+      "price": 3700,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-005",
+      "name": "CocoBar Galletas",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "CocoBar galletas, se venden por unidad.",
+      "image": "🍪",
+      "photo": "/assets/images/products/DAF/CocoBar galletas -60.jpg",
+      "price": 60,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-006",
+      "name": "Galletas María Biscobom",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Galletas María Biscobom, se venden por unidad.",
+      "image": "🍪",
+      "photo": "/assets/images/products/DAF/Galletas Maria Biscobom 350.jpg",
+      "price": 350,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-007",
+      "name": "Galletas Bambil",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Galletas Bambil, se venden por unidad.",
+      "image": "🍪",
+      "photo": "/assets/images/products/DAF/Galletas bambil -400.jpg",
+      "price": 400,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-008",
+      "name": "Garbanzos",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Garbanzos, se venden por unidad.",
+      "image": "🫘",
+      "photo": "/assets/images/products/DAF/Garbanzos -1000 cup.jpg",
+      "price": 1000,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-009",
+      "name": "Mini Vodka (200 ml)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Botella de 200 ml.",
+      "longDescription": "Mini vodka, botella de 200 ml.",
+      "image": "🍾",
+      "photo": "/assets/images/products/DAF/MIni Vodka 200 ml --920.jpg",
+      "price": 920,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-010",
+      "name": "Macarrones con Queso",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Macarrones con queso, se venden por unidad.",
+      "image": "🧀",
+      "photo": "/assets/images/products/DAF/Macarrones con Queso - 370 cup.jpg",
+      "price": 370,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-011",
+      "name": "Malvaviscos",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Malvaviscos, se venden por unidad.",
+      "image": "🍬",
+      "photo": "/assets/images/products/DAF/Malvaviscos - 30.jpg",
+      "price": 30,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-012",
+      "name": "Mermelada de Mango",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Mermelada de mango, se vende por unidad.",
+      "image": "🍯",
+      "photo": "/assets/images/products/DAF/Mermeladada de Mango 3850.jpg",
+      "price": 3850,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-013",
+      "name": "Mini Whisky (200 ml)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Botella de 200 ml.",
+      "longDescription": "Mini whisky, botella de 200 ml.",
+      "image": "🥃",
+      "photo": "/assets/images/products/DAF/Mini whisky 200ml --920.jpg",
+      "price": 920,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-014",
+      "name": "Moscatel Supremos",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Moscatel Supremos, se vende por unidad.",
+      "image": "🍷",
+      "photo": "/assets/images/products/DAF/Moscatel Supremos 950.jpg",
+      "price": 950,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-015",
+      "name": "Papitas Fresh Cucumber Flavored",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Papitas sabor a pepino (Fresh Cucumber Flavored), se venden por unidad.",
+      "image": "🥔",
+      "photo": "/assets/images/products/DAF/Papitas Fresh Cucumber flavored --1050.jpg",
+      "price": 1050,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-016",
+      "name": "Pelly Tigo Puff",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Pelly Tigo Puff, se vende por unidad.",
+      "image": "🍿",
+      "photo": "/assets/images/products/DAF/Pelly Tigo Puff --650.jpg",
+      "price": 650,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-017",
+      "name": "Refresco de Lata",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por lata.",
+      "longDescription": "Refresco de lata.",
+      "image": "🥤",
+      "photo": "/assets/images/products/DAF/Refresco de la ta 415.jpg",
+      "price": 415,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-018",
+      "name": "Salsa BBQ",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Salsa BBQ, se vende por unidad.",
+      "image": "🍖",
+      "photo": "/assets/images/products/DAF/Salsa BBQ- 650.jpg",
+      "price": 650,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-019",
+      "name": "Sorbeto Mr. Bite",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Sorbeto Mr. Bite, se vende por unidad.",
+      "image": "🍭",
+      "photo": "/assets/images/products/DAF/Sorbeto Mr.Bite 265.jpg",
+      "price": 265,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-020",
+      "name": "Vakik Vodka Energy",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "490 por unidad, 480 por caja.",
+      "longDescription": "Vakik Vodka Energy. Precio de 490 CUP por unidad; comprando por caja, 480 CUP por unidad.",
+      "image": "🥤",
+      "photo": "/assets/images/products/DAF/Vakik Vodka Energy -490 por unidad , 480 por caja.jpg",
+      "price": 490,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-021",
+      "name": "Vino El Sotillo (Tinto, Cosecha)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Tinto, cosecha.",
+      "longDescription": "Vino El Sotillo, tinto de cosecha.",
+      "image": "🍷",
+      "photo": "/assets/images/products/DAF/Vino el Sotillo (tinto , cosecha) -2500.jpg",
+      "price": 2500,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-022",
+      "name": "Vodka Premium",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Vodka Premium, se vende por unidad.",
+      "image": "🍾",
+      "photo": "/assets/images/products/DAF/Vodka Premium 3750.jpg",
+      "price": 3750,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-023",
+      "name": "Chupa Chupa Pirulito Good Smile",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "60 por unidad, 55 por paquete.",
+      "longDescription": "Chupa Chupa Pirulito Good Smile. Precio de 60 CUP por unidad; comprando por paquete, 55 CUP por unidad.",
+      "image": "🍭",
+      "photo": "/assets/images/products/DAF/chupa chupa pirulito good smile 60 por unidad , 55 por paquete.jpg",
+      "price": 60,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-024",
+      "name": "Donut",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Donut, se vende por unidad.",
+      "image": "🍩",
+      "photo": "/assets/images/products/DAF/donut 180.jpg",
+      "price": 180,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-025",
+      "name": "Gelatina (Fresa y Frutos Rojos)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Fresa y frutos rojos.",
+      "longDescription": "Gelatina sabor fresa y frutos rojos.",
+      "image": "🍮",
+      "photo": "/assets/images/products/DAF/gelantina - 320  (Fresa y Frutos Rojos).jpg",
+      "price": 320,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-026",
+      "name": "Galletas Pizza Kraker",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Galletas Pizza Kraker, se venden por unidad.",
+      "image": "🍪",
+      "photo": "/assets/images/products/DAF/gelletas pizza kraker - 1500.jpg",
+      "price": 1500,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-027",
+      "name": "Gomitas",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Gomitas, se venden por unidad.",
+      "image": "🍬",
+      "photo": "/assets/images/products/DAF/gomitas - 360.jpg",
+      "price": 360,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-028",
+      "name": "Huevo Sorpresa",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Huevo sorpresa, se vende por unidad.",
+      "image": "🥚",
+      "photo": "/assets/images/products/DAF/huevo sorpresa --235.jpg",
+      "price": 235,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-029",
+      "name": "Nutella Marwa",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Nutella Marwa, se vende por unidad.",
+      "image": "🍫",
+      "photo": "/assets/images/products/DAF/nutella Marwa 1100.jpg",
+      "price": 1100,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-030",
+      "name": "Popular Rojo",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Confituras",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Popular Rojo, se vende por unidad.",
+      "image": "🚬",
+      "photo": "/assets/images/products/DAF/popular rojo 850 por unidad.jpg",
+      "price": 850,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-031",
+      "name": "Espaguetis",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "350 por unidad, 340 por caja.",
+      "longDescription": "Espaguetis. Precio de 350 CUP por unidad; comprando por caja, 340 CUP por unidad.",
+      "image": "🍝",
+      "photo": "/assets/images/products/DAF/spaguettis 350 por unidad , 340 por caja.jpg",
+      "price": 350,
       "stockStatus": "disponible"
     }
   ]

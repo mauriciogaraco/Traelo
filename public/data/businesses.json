@@ -190,7 +190,6 @@
     "description": "Pizzas individuales y familiares, espaguetis, comidas criollas y picaderas.",
     "image": "/assets/images/business/Linea_Callejón.jpg",
     "color": "from-green-100 to-emerald-50",
-    "status": "cerrado",
     "businessCommission": 0,
     "clientCommission": 4,
     "schedule": {
@@ -513,6 +512,29 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
+    }
+  },
+  {
+    "id": "mercado-daf",
+    "name": "Mercado DAF",
+    "description": "Mercado DAF — Productos importados, dulces y bebidas.",
+    "image": "/assets/images/business/Mercado DAF.jpg",
+    "color": "from-indigo-100 to-blue-50",
+    "businessCommission": 0,
+    "clientCommission": 3,
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "19:00",
+      "label": "Todos los días · 9:00 am – 7:00 pm"
     }
   }
 ]
