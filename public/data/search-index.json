@@ -2176,7 +2176,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2221,7 +2221,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2266,7 +2266,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2291,7 +2291,7 @@
     "category": "Comida",
     "shortDescription": "Especialidad de la casa.",
     "image": "🥪",
-    "price": 650,
+    "price": 700,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2311,7 +2311,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2357,7 +2357,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2402,7 +2402,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2447,7 +2447,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2492,7 +2492,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2537,7 +2537,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2562,7 +2562,7 @@
     "category": "Comida",
     "shortDescription": "Tortilla recién hecha.",
     "image": "🥚",
-    "price": 350,
+    "price": 400,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2582,7 +2582,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2627,7 +2627,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2672,7 +2672,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2717,7 +2717,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2762,7 +2762,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2807,7 +2807,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2852,7 +2852,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2897,7 +2897,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2942,7 +2942,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2987,7 +2987,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3032,7 +3032,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3077,7 +3077,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3122,7 +3122,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3167,7 +3167,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3212,7 +3212,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3257,7 +3257,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -6241,19 +6241,19 @@
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/TuKprichito/leche-condensada.jpg",
-    "price": 750,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
     "id": "tk-002",
-    "name": "Mayonesa",
+    "name": "Mayonesa Celorrio",
     "businessId": "tu-kprichito",
     "businessName": "Tu Kprichito",
     "category": "Alimentos",
     "shortDescription": "Se vende por unidad.",
     "image": "🫙",
     "photo": "/assets/images/products/TuKprichito/mayonesa.jpg",
-    "price": 1500,
+    "price": 2400,
     "stockStatus": "disponible"
   },
   {
@@ -6313,7 +6313,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "🍝",
     "photo": "/assets/images/products/TuKprichito/spaguettis.jpg",
-    "price": 300,
+    "price": 360,
     "stockStatus": "disponible"
   },
   {
@@ -6518,7 +6518,7 @@
     "shortDescription": "Piña, limón o naranja.",
     "image": "🥤",
     "photo": "/assets/images/products/TuKprichito/refrezco-lata.jpg",
-    "price": 350,
+    "price": 450,
     "stockStatus": "disponible",
     "options": [
       "Piña",
@@ -6547,7 +6547,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "⚡",
     "photo": "/assets/images/products/TuKprichito/cerveza-shaka-energético.jpg",
-    "price": 360,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -6559,7 +6559,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "🍺",
     "photo": "/assets/images/products/TuKprichito/cerveza-beck's-400.jpg",
-    "price": 400,
+    "price": 460,
     "stockStatus": "disponible"
   },
   {
@@ -6643,7 +6643,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "🧼",
     "photo": "/assets/images/products/TuKprichito/jabón de lavar.jpg",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -6810,7 +6810,7 @@
     "shortDescription": "En aceite vegetal. Se vende por lata.",
     "image": "🥫",
     "photo": "/assets/images/products/TuKprichito/Atún-lata-550.jpg",
-    "price": 550,
+    "price": 650,
     "stockStatus": "agotado"
   },
   {
@@ -6877,6 +6877,149 @@
     "image": "🥛",
     "photo": "/assets/images/products/TuKprichito/Leche-en-polvo-400gramos-2000.jpg",
     "price": 2000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-054",
+    "name": "Aceite",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🛢️",
+    "price": 3700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-055",
+    "name": "Macarrones",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍝",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-056",
+    "name": "Frazadas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧹",
+    "price": 350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-057",
+    "name": "Chicharrón (bolsa de 1 kg)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Bolsa de 1 kg.",
+    "image": "🥓",
+    "price": 1200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-058",
+    "name": "Garbanzos (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 500 gramos.",
+    "image": "🫘",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-059",
+    "name": "Crema para la Piel",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧴",
+    "price": 1500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-060",
+    "name": "Detergente Defá (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 gramos.",
+    "image": "🧺",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-061",
+    "name": "Detergente Murex (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 gramos.",
+    "image": "🧺",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-062",
+    "name": "Jugo de Cajita",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Bebidas",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧃",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-063",
+    "name": "Cerveza Parranda (1.5 litros)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Bebidas",
+    "shortDescription": "Botella de 1.5 litros.",
+    "image": "🍺",
+    "price": 1300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-064",
+    "name": "Galletas Saltinas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "price": 130,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-065",
+    "name": "Galletas de Soda",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-066",
+    "name": "Jaba de Galletas Panaderas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por jaba.",
+    "image": "🍪",
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -10682,7 +10825,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍊",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-026",

@@ -319,7 +319,7 @@
     "longDescription": "Naranja dulce fresca, precio por libra. Indica la cantidad de libras al confirmar.",
     "image": "🍊",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-026",

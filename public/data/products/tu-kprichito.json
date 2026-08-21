@@ -9,12 +9,12 @@
     "longDescription": "Leche condensada, se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/TuKprichito/leche-condensada.jpg",
-    "price": 750,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
     "id": "tk-002",
-    "name": "Mayonesa",
+    "name": "Mayonesa Celorrio",
     "businessId": "tu-kprichito",
     "businessName": "Tu Kprichito",
     "category": "Alimentos",
@@ -22,7 +22,7 @@
     "longDescription": "Mayonesa, se vende por unidad.",
     "image": "🫙",
     "photo": "/assets/images/products/TuKprichito/mayonesa.jpg",
-    "price": 1500,
+    "price": 2400,
     "stockStatus": "disponible"
   },
   {
@@ -87,7 +87,7 @@
     "longDescription": "Espaguetis, se venden por unidad.",
     "image": "🍝",
     "photo": "/assets/images/products/TuKprichito/spaguettis.jpg",
-    "price": 300,
+    "price": 360,
     "stockStatus": "disponible"
   },
   {
@@ -308,7 +308,7 @@
     "longDescription": "Refresco en lata. Elige el sabor al confirmar.",
     "image": "🥤",
     "photo": "/assets/images/products/TuKprichito/refrezco-lata.jpg",
-    "price": 350,
+    "price": 450,
     "stockStatus": "disponible",
     "options": [
       "Piña",
@@ -339,7 +339,7 @@
     "longDescription": "Bebida energética Flash, se vende por unidad.",
     "image": "⚡",
     "photo": "/assets/images/products/TuKprichito/cerveza-shaka-energético.jpg",
-    "price": 360,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -352,7 +352,7 @@
     "longDescription": "Cerveza Becks, se vende por unidad.",
     "image": "🍺",
     "photo": "/assets/images/products/TuKprichito/cerveza-beck's-400.jpg",
-    "price": 400,
+    "price": 460,
     "stockStatus": "disponible"
   },
   {
@@ -443,7 +443,7 @@
     "longDescription": "Jabón de lavar ropa, se vende por unidad.",
     "image": "🧼",
     "photo": "/assets/images/products/TuKprichito/jabón de lavar.jpg",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -624,7 +624,7 @@
     "longDescription": "Atún en aceite vegetal Docanned Star, se vende por lata.",
     "image": "🥫",
     "photo": "/assets/images/products/TuKprichito/Atún-lata-550.jpg",
-    "price": 550,
+    "price": 650,
     "stockStatus": "agotado"
   },
   {
@@ -696,6 +696,162 @@
     "image": "🥛",
     "photo": "/assets/images/products/TuKprichito/Leche-en-polvo-400gramos-2000.jpg",
     "price": 2000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-054",
+    "name": "Aceite",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Aceite, se vende por unidad.",
+    "image": "🛢️",
+    "price": 3700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-055",
+    "name": "Macarrones",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Macarrones, se venden por unidad.",
+    "image": "🍝",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-056",
+    "name": "Frazadas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Frazadas, se venden por unidad.",
+    "image": "🧹",
+    "price": 350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-057",
+    "name": "Chicharrón (bolsa de 1 kg)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Bolsa de 1 kg.",
+    "longDescription": "Chicharrón, bolsa de 1 kg.",
+    "image": "🥓",
+    "price": 1200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-058",
+    "name": "Garbanzos (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 500 gramos.",
+    "longDescription": "Garbanzos, paquete de 500 gramos.",
+    "image": "🫘",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-059",
+    "name": "Crema para la Piel",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Crema para la piel, se vende por unidad.",
+    "image": "🧴",
+    "price": 1500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-060",
+    "name": "Detergente Defá (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 gramos.",
+    "longDescription": "Detergente Defá, paquete de 500 gramos.",
+    "image": "🧺",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-061",
+    "name": "Detergente Murex (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 gramos.",
+    "longDescription": "Detergente Murex, paquete de 500 gramos.",
+    "image": "🧺",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-062",
+    "name": "Jugo de Cajita",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Bebidas",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Jugo de cajita, se vende por unidad.",
+    "image": "🧃",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-063",
+    "name": "Cerveza Parranda (1.5 litros)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Bebidas",
+    "shortDescription": "Botella de 1.5 litros.",
+    "longDescription": "Cerveza Parranda, botella de 1.5 litros.",
+    "image": "🍺",
+    "price": 1300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-064",
+    "name": "Galletas Saltinas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Galletas Saltinas, se venden por unidad.",
+    "image": "🍪",
+    "price": 130,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-065",
+    "name": "Galletas de Soda",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Galletas de soda, se venden por unidad.",
+    "image": "🍪",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-066",
+    "name": "Jaba de Galletas Panaderas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por jaba.",
+    "longDescription": "Jaba de galletas panaderas.",
+    "image": "🍪",
+    "price": 300,
     "stockStatus": "disponible"
   }
 ]

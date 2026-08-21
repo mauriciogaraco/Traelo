@@ -28,7 +28,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -74,7 +74,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -120,7 +120,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -146,7 +146,7 @@
     "shortDescription": "Especialidad de la casa.",
     "longDescription": "Pan Macu preparado al momento.",
     "image": "🥪",
-    "price": 650,
+    "price": 700,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -166,7 +166,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -213,7 +213,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -259,7 +259,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -305,7 +305,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -351,7 +351,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -397,7 +397,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -423,7 +423,7 @@
     "shortDescription": "Tortilla recién hecha.",
     "longDescription": "Pan con tortilla.",
     "image": "🥚",
-    "price": 350,
+    "price": 400,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -443,7 +443,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -489,7 +489,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -535,7 +535,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -581,7 +581,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -627,7 +627,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -673,7 +673,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -719,7 +719,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -765,7 +765,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -811,7 +811,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -857,7 +857,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -903,7 +903,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -949,7 +949,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -995,7 +995,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -1041,7 +1041,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -1087,7 +1087,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -1133,7 +1133,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
