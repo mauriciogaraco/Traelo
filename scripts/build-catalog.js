@@ -28,6 +28,7 @@ const BUSINESS_FILES = [
   'los-llenik',
   'agro-los-prietos',
   'la-nevada',
+  'mercado-daf',
 ];
 
 function read(file) {
