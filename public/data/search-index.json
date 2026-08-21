@@ -2176,7 +2176,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2221,7 +2221,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2266,7 +2266,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2291,7 +2291,7 @@
     "category": "Comida",
     "shortDescription": "Especialidad de la casa.",
     "image": "🥪",
-    "price": 650,
+    "price": 700,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2311,7 +2311,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2357,7 +2357,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2402,7 +2402,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2447,7 +2447,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2492,7 +2492,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2537,7 +2537,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2562,7 +2562,7 @@
     "category": "Comida",
     "shortDescription": "Tortilla recién hecha.",
     "image": "🥚",
-    "price": 350,
+    "price": 400,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2582,7 +2582,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2627,7 +2627,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2672,7 +2672,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2717,7 +2717,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2762,7 +2762,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2807,7 +2807,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2852,7 +2852,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2897,7 +2897,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2942,7 +2942,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -2987,7 +2987,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3032,7 +3032,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3077,7 +3077,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3122,7 +3122,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3167,7 +3167,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3212,7 +3212,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -3257,7 +3257,7 @@
       },
       {
         "name": "Tortilla",
-        "price": 140
+        "price": 200
       },
       {
         "name": "Mortadella",
@@ -6241,19 +6241,19 @@
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/TuKprichito/leche-condensada.jpg",
-    "price": 750,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
     "id": "tk-002",
-    "name": "Mayonesa",
+    "name": "Mayonesa Celorrio",
     "businessId": "tu-kprichito",
     "businessName": "Tu Kprichito",
     "category": "Alimentos",
     "shortDescription": "Se vende por unidad.",
     "image": "🫙",
     "photo": "/assets/images/products/TuKprichito/mayonesa.jpg",
-    "price": 1500,
+    "price": 2400,
     "stockStatus": "disponible"
   },
   {
@@ -6313,7 +6313,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "🍝",
     "photo": "/assets/images/products/TuKprichito/spaguettis.jpg",
-    "price": 300,
+    "price": 360,
     "stockStatus": "disponible"
   },
   {
@@ -6518,7 +6518,7 @@
     "shortDescription": "Piña, limón o naranja.",
     "image": "🥤",
     "photo": "/assets/images/products/TuKprichito/refrezco-lata.jpg",
-    "price": 350,
+    "price": 450,
     "stockStatus": "disponible",
     "options": [
       "Piña",
@@ -6547,7 +6547,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "⚡",
     "photo": "/assets/images/products/TuKprichito/cerveza-shaka-energético.jpg",
-    "price": 360,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -6559,7 +6559,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "🍺",
     "photo": "/assets/images/products/TuKprichito/cerveza-beck's-400.jpg",
-    "price": 400,
+    "price": 460,
     "stockStatus": "disponible"
   },
   {
@@ -6643,7 +6643,7 @@
     "shortDescription": "Se vende por unidad.",
     "image": "🧼",
     "photo": "/assets/images/products/TuKprichito/jabón de lavar.jpg",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible"
   },
   {
@@ -6810,7 +6810,7 @@
     "shortDescription": "En aceite vegetal. Se vende por lata.",
     "image": "🥫",
     "photo": "/assets/images/products/TuKprichito/Atún-lata-550.jpg",
-    "price": 550,
+    "price": 650,
     "stockStatus": "agotado"
   },
   {
@@ -6877,6 +6877,149 @@
     "image": "🥛",
     "photo": "/assets/images/products/TuKprichito/Leche-en-polvo-400gramos-2000.jpg",
     "price": 2000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-054",
+    "name": "Aceite",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🛢️",
+    "price": 3700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-055",
+    "name": "Macarrones",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍝",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-056",
+    "name": "Frazadas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧹",
+    "price": 350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-057",
+    "name": "Chicharrón (bolsa de 1 kg)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Bolsa de 1 kg.",
+    "image": "🥓",
+    "price": 1200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-058",
+    "name": "Garbanzos (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 500 gramos.",
+    "image": "🫘",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-059",
+    "name": "Crema para la Piel",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧴",
+    "price": 1500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-060",
+    "name": "Detergente Defá (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 gramos.",
+    "image": "🧺",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-061",
+    "name": "Detergente Murex (500 g)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 gramos.",
+    "image": "🧺",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-062",
+    "name": "Jugo de Cajita",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Bebidas",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧃",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-063",
+    "name": "Cerveza Parranda (1.5 litros)",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Bebidas",
+    "shortDescription": "Botella de 1.5 litros.",
+    "image": "🍺",
+    "price": 1300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-064",
+    "name": "Galletas Saltinas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "price": 130,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-065",
+    "name": "Galletas de Soda",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "tk-066",
+    "name": "Jaba de Galletas Panaderas",
+    "businessId": "tu-kprichito",
+    "businessName": "Tu Kprichito",
+    "category": "Confituras",
+    "shortDescription": "Precio por jaba.",
+    "image": "🍪",
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -9524,6 +9667,10 @@
       {
         "name": "Dulce de Leche",
         "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
       }
     ]
   },
@@ -9545,6 +9692,10 @@
       },
       {
         "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
         "price": 150
       }
     ]
@@ -9568,6 +9719,10 @@
       {
         "name": "Dulce de Leche",
         "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
       }
     ]
   },
@@ -9589,6 +9744,10 @@
       },
       {
         "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
         "price": 150
       }
     ]
@@ -9612,6 +9771,10 @@
       {
         "name": "Dulce de Leche",
         "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
       }
     ]
   },
@@ -9633,6 +9796,62 @@
       },
       {
         "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-007",
+    "name": "Frappio Bombón",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "🍫",
+    "price": 1100,
+    "photo": "/assets/images/products/Frappio/Frappio-Bombón 1100.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-008",
+    "name": "Frappio Pacha",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "🥜",
+    "price": 900,
+    "photo": "/assets/images/products/Frappio/Frappio Pacha - 900.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
         "price": 150
       }
     ]
@@ -10606,7 +10825,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍊",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-026",
@@ -10925,7 +11144,7 @@
     "shortDescription": "Botella de 900 ml.",
     "image": "🛢️",
     "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
-    "price": 3700,
+    "price": 3500,
     "stockStatus": "disponible"
   },
   {
@@ -11286,6 +11505,630 @@
     "image": "🍝",
     "photo": "/assets/images/products/DAF/spaguettis 350 por unidad , 340 por caja.jpg",
     "price": 350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-032",
+    "name": "Arroz Blanco Seleccionado",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍚",
+    "photo": "/assets/images/products/DAF/Arroz Blanco Seleccionado , 280 cup.jpg",
+    "price": 280,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-033",
+    "name": "Arroz Karibee (1 kg)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 1 kg.",
+    "image": "🍚",
+    "photo": "/assets/images/products/DAF/Arroz Karibee 1kg -800.jpg",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-034",
+    "name": "Azúcar (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🍬",
+    "photo": "/assets/images/products/DAF/Azúcar por libra -- 480.jpg",
+    "price": 480,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-035",
+    "name": "Bandeja de Bistec de Cerdo Empanados",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por bandeja.",
+    "image": "🍖",
+    "photo": "/assets/images/products/DAF/Bandeja de Bistec de cerdo empanados -1700.jpg",
+    "price": 1700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-036",
+    "name": "Café Dufiltro",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "☕",
+    "photo": "/assets/images/products/DAF/Café dufiltro 1600.jpg",
+    "price": 1600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-037",
+    "name": "Cazuela Mediana",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍲",
+    "photo": "/assets/images/products/DAF/Cazuela Mediana --2350.jpg",
+    "price": 2350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-038",
+    "name": "Cinta Adhesiva",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "📦",
+    "photo": "/assets/images/products/DAF/Cinta Adhesiva 800 cup.jpg",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-039",
+    "name": "Cóctel de Frutas (16 onzas)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Envase de 16 onzas.",
+    "image": "🍹",
+    "photo": "/assets/images/products/DAF/Coctel de Frutas 16 onzas 450.jpg",
+    "price": 450,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-040",
+    "name": "Detergente en Polvo (400 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 400 gramos.",
+    "image": "🧺",
+    "photo": "/assets/images/products/DAF/Detergente en polvo 400 gramos -- 750.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-041",
+    "name": "Espumadera",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍳",
+    "photo": "/assets/images/products/DAF/Espumadera --610.jpg",
+    "price": 610,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-042",
+    "name": "Fosforeras",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "🔥",
+    "photo": "/assets/images/products/DAF/Fosforeras - 85.jpg",
+    "price": 85,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-043",
+    "name": "Frijoles Negros (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🫘",
+    "photo": "/assets/images/products/DAF/Frijoles negros (por libra) --430.jpg",
+    "price": 430,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-044",
+    "name": "Fritada de Vegetales Cubanito",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥫",
+    "photo": "/assets/images/products/DAF/Fritada de Vegetales Cubanito - 720.jpg",
+    "price": 720,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-045",
+    "name": "Harina (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🌾",
+    "photo": "/assets/images/products/DAF/Harina por libras --400.jpg",
+    "price": 400,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-046",
+    "name": "Jabón de Baño",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧼",
+    "photo": "/assets/images/products/DAF/Jabón de Baño --300.jpg",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-047",
+    "name": "Jabón de Lavar Ríos",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧼",
+    "photo": "/assets/images/products/DAF/Jabón de Lavar Rios -420.jpg",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-048",
+    "name": "Jarra Blanca",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "🫙",
+    "photo": "/assets/images/products/DAF/Jarra Blanca --840.jpg",
+    "price": 840,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-049",
+    "name": "Juego de Pozuelos (250 ml x 3)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Juego de 3, 250 ml c/u.",
+    "image": "🥣",
+    "photo": "/assets/images/products/DAF/Juego de Pozuelos 250 ml x 3 --1000.jpg",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-050",
+    "name": "Juego de Shampoo y Acondicionador",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por juego.",
+    "image": "🧴",
+    "photo": "/assets/images/products/DAF/Juego de Shampoo y Acondicionador -- 2000.jpg",
+    "price": 2000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-051",
+    "name": "Mantequilla",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧈",
+    "photo": "/assets/images/products/DAF/Mantequilla --600.jpg",
+    "price": 600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-052",
+    "name": "Mayonesa Tropigusto",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥫",
+    "photo": "/assets/images/products/DAF/Mayonesa Tropi gusto 700.jpg",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-053",
+    "name": "Mermelada de Guayaba (8 onzas)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Envase de 8 onzas.",
+    "image": "🍯",
+    "photo": "/assets/images/products/DAF/Mermelada de guayaba 8 onzas --320.jpg",
+    "price": 320,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-054",
+    "name": "Moldes de Cerámica",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍮",
+    "photo": "/assets/images/products/DAF/Moldes de cerámica --360.jpg",
+    "price": 360,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-055",
+    "name": "Naranja Agria (Zumo)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍊",
+    "photo": "/assets/images/products/DAF/Naranja Agria (Zumo ) - 290.jpg",
+    "price": 290,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-056",
+    "name": "Pasta Dental Dentix",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🪥",
+    "photo": "/assets/images/products/DAF/Pasta dental dentix --460.jpg",
+    "price": 460,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-057",
+    "name": "Picadillo de Tubo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥩",
+    "photo": "/assets/images/products/DAF/Picadillo de tubo -- 800.jpg",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-058",
+    "name": "Pinzas",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "🗜️",
+    "photo": "/assets/images/products/DAF/Pinzas -600.jpg",
+    "price": 600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-059",
+    "name": "Rollos de Jamón y Queso (4 unidades)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 4 unidades.",
+    "image": "🧀",
+    "photo": "/assets/images/products/DAF/Rollos de jamón y queso (4 unidades) --2000.jpg",
+    "price": 2000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-060",
+    "name": "Sal Marina (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🧂",
+    "photo": "/assets/images/products/DAF/Sal Marina ( por libra) --190.jpg",
+    "price": 190,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-061",
+    "name": "Suavizante de Tela",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧺",
+    "photo": "/assets/images/products/DAF/Suabizante de tela --1000.jpg",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-062",
+    "name": "Vinagre",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍶",
+    "photo": "/assets/images/products/DAF/Vinagre 290.jpg",
+    "price": 290,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-063",
+    "name": "Vinagre Claro",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍶",
+    "photo": "/assets/images/products/DAF/Vinagre claro 290.jpg",
+    "price": 290,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-064",
+    "name": "Vinagre de Vino Tinto",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍶",
+    "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
+    "price": 290,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-065",
+    "name": "Vino Seco",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍷",
+    "photo": "/assets/images/products/DAF/Vino seco 270.jpg",
+    "price": 270,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-066",
+    "name": "Yogurt Probiótico (4 litros)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Envase de 4 litros.",
+    "image": "🥛",
+    "photo": "/assets/images/products/DAF/Yogurt Probiótico 4 Litros , 3500 cup.jpg",
+    "price": 3500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-067",
+    "name": "Yogurt Probiótico (500 ml)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Envase de 500 ml.",
+    "image": "🥛",
+    "photo": "/assets/images/products/DAF/Yogurt probiótico 500 ml , 1150.jpg",
+    "price": 1150,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-068",
+    "name": "Zumo de Limón",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍋",
+    "photo": "/assets/images/products/DAF/Zumo de Limón 290.jpg",
+    "price": 290,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-069",
+    "name": "Atún (185 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Lata de 185 g.",
+    "image": "🐟",
+    "photo": "/assets/images/products/DAF/atún 185 g - 900.jpg",
+    "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-070",
+    "name": "Cucharón",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Menaje",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥄",
+    "photo": "/assets/images/products/DAF/cucharon --770.jpg",
+    "price": 770,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-071",
+    "name": "Ensalada Fría (8 onzas)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Envase de 8 onzas.",
+    "image": "🥗",
+    "photo": "/assets/images/products/DAF/ensala fría 8 onzas --650.jpg",
+    "price": 650,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-072",
+    "name": "Esponjas de Fregar (x10)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 10 unidades.",
+    "image": "🧽",
+    "photo": "/assets/images/products/DAF/esponjas de fregar x 10 -- 500.jpg",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-073",
+    "name": "Gel de Baño",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧴",
+    "photo": "/assets/images/products/DAF/gel de baño -- 850.jpg",
+    "price": 850,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-074",
+    "name": "Helado Cid (1 litro)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Envase de 1 litro.",
+    "image": "🍨",
+    "photo": "/assets/images/products/DAF/helado Cid - 1 litro - 2100.jpg",
+    "price": 2100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-075",
+    "name": "Jaba de Pollo (3 lbs)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Jaba de 3 libras.",
+    "image": "🍗",
+    "photo": "/assets/images/products/DAF/jabas de pollo 3 lbs --2600.jpg",
+    "price": 2600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-076",
+    "name": "Mermelada de Guayaba (grande)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Envase grande.",
+    "image": "🍯",
+    "photo": "/assets/images/products/DAF/mermelada de guayaba - 3800.jpg",
+    "price": 3800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-077",
+    "name": "Pastillita de Congrí",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥟",
+    "photo": "/assets/images/products/DAF/pastillita de congrí 60.jpg",
+    "price": 60,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-078",
+    "name": "Pastillita de Pollo con Tomate",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥟",
+    "photo": "/assets/images/products/DAF/pastillita de pollo con tomate 30 cup.jpg",
+    "price": 30,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-079",
+    "name": "Perrito Caliente",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🌭",
+    "photo": "/assets/images/products/DAF/perrito caliente - 1200.jpg",
+    "price": 1200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-080",
+    "name": "Protectores (paquete de 30 unidades)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 30 unidades.",
+    "image": "🧴",
+    "photo": "/assets/images/products/DAF/protectores , paquete de 30 unidades --420.jpg",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-081",
+    "name": "Toallitas Húmedas",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧻",
+    "photo": "/assets/images/products/DAF/toallitas húmedas - 710.jpg",
+    "price": 710,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-082",
+    "name": "Detergente Líquido para Lavar",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧴",
+    "photo": "/assets/images/products/DAF/detergente líquido para lavar --900.jpg",
+    "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-083",
+    "name": "Leche Condensada",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥛",
+    "photo": "/assets/images/products/DAF/leche condensada -- 900.jpg",
+    "price": 900,
     "stockStatus": "disponible"
   }
 ]
