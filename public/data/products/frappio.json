@@ -19,6 +19,10 @@
       {
         "name": "Dulce de Leche",
         "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
       }
     ]
   },
@@ -41,6 +45,10 @@
       },
       {
         "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
         "price": 150
       }
     ]
@@ -65,6 +73,10 @@
       {
         "name": "Dulce de Leche",
         "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
       }
     ]
   },
@@ -87,6 +99,10 @@
       },
       {
         "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
         "price": 150
       }
     ]
@@ -111,6 +127,10 @@
       {
         "name": "Dulce de Leche",
         "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
       }
     ]
   },
@@ -133,6 +153,64 @@
       },
       {
         "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-007",
+    "name": "Frappio Bombón",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café, leche, nutella, galletas y peter de chocolate.",
+    "image": "🍫",
+    "price": 1100,
+    "photo": "/assets/images/products/Frappio/Frappio-Bombón 1100.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "frappio-008",
+    "name": "Frappio Pacha",
+    "businessId": "frappio",
+    "businessName": "Frappio",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refrescante bebida frappé (12 oz) a base de café, leche, maní molido y en grano, sirope de chocolate y galletas.",
+    "image": "🥜",
+    "price": 900,
+    "photo": "/assets/images/products/Frappio/Frappio Pacha - 900.jpg",
+    "stockStatus": "disponible",
+    "addons": [
+      {
+        "name": "Leche Condensada",
+        "price": 150
+      },
+      {
+        "name": "Dulce de Leche",
+        "price": 150
+      },
+      {
+        "name": "Sirope de Chocolate",
         "price": 150
       }
     ]
