@@ -4,6 +4,8 @@ import { useOrders } from '../context/OrdersContext'
 import { useToast } from '../context/ToastContext'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
+import { MessagingFeeRow } from '../components/ui/MessagingFeeRow'
+import { ServiceFeeRow } from '../components/ui/ServiceFeeRow'
 import { formatDate, formatPrice } from '../lib/format'
 import { groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, unitsOf } from '../lib/cart'
@@ -135,6 +137,18 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Desglose: subtotal, mensajería y servicio Tráelo */}
+      <div className="px-4 pb-3 pt-1 border-t border-border space-y-1.5">
+        {order.subtotal !== undefined && (
+          <div className="flex justify-between text-sm">
+            <span className="text-text-secondary">Subtotal</span>
+            <span className="font-semibold text-text-primary">{formatPrice(order.subtotal)}</span>
+          </div>
+        )}
+        {order.fee !== undefined && <MessagingFeeRow fee={order.fee} />}
+        {order.serviceFee !== undefined && <ServiceFeeRow fee={order.serviceFee} />}
       </div>
 
       <div className="px-4 pb-4 pt-1 border-t border-border flex items-center justify-between gap-3">

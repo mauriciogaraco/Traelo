@@ -100,7 +100,7 @@
     "shortDescription": "Hamburguesa de la casa.",
     "longDescription": "Hamburguesa preparada al momento.",
     "image": "🍔",
-    "price": 450,
+    "price": 500,
     "addons": [
       {
         "name": "Hamburguesa",

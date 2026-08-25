@@ -58,7 +58,7 @@
     "shortDescription": "Malteada espesa y cremosa.",
     "image": "🥛",
     "photo": "/assets/images/products/Cronos/Malteada.jpg",
-    "price": 850,
+    "price": 1000,
     "stockStatus": "disponible"
   },
   {
@@ -2246,7 +2246,7 @@
     "category": "Comida",
     "shortDescription": "Hamburguesa de la casa.",
     "image": "🍔",
-    "price": 450,
+    "price": 500,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -3960,7 +3960,7 @@
     "category": "Alimentos",
     "shortDescription": "",
     "image": "🥗",
-    "price": 400,
+    "price": 450,
     "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
     "stockStatus": "disponible",
     "featured": true
