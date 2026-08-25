@@ -123,16 +123,15 @@
     "schedule": {
       "days": [
         0,
-        1,
         2,
         3,
         4,
         5,
         6
       ],
-      "open": "09:00",
+      "open": "10:00",
       "close": "19:00",
-      "label": "Lun–Dom · 9:00 am – 7:00 pm"
+      "label": "Mar–Dom · 10:00 am – 7:00 pm"
     }
   },
   {
@@ -357,7 +356,6 @@
     "schedule": {
       "days": [
         0,
-        1,
         2,
         3,
         4,
@@ -366,7 +364,7 @@
       ],
       "open": "09:00",
       "close": "21:00",
-      "label": "Lun–Dom · 9:00 am – 9:00 pm"
+      "label": "Mar–Dom · 9:00 am – 9:00 pm"
     }
   },
   {

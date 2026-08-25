@@ -124,16 +124,15 @@
       "schedule": {
         "days": [
           0,
-          1,
           2,
           3,
           4,
           5,
           6
         ],
-        "open": "09:00",
+        "open": "10:00",
         "close": "19:00",
-        "label": "Lun–Dom · 9:00 am – 7:00 pm"
+        "label": "Mar–Dom · 10:00 am – 7:00 pm"
       }
     },
     {
@@ -358,7 +357,6 @@
       "schedule": {
         "days": [
           0,
-          1,
           2,
           3,
           4,
@@ -367,7 +365,7 @@
         ],
         "open": "09:00",
         "close": "21:00",
-        "label": "Lun–Dom · 9:00 am – 9:00 pm"
+        "label": "Mar–Dom · 9:00 am – 9:00 pm"
       }
     },
     {
@@ -604,7 +602,7 @@
       "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
       "image": "🥛",
       "photo": "/assets/images/products/Cronos/Malteada.jpg",
-      "price": 850,
+      "price": 1000,
       "stockStatus": "disponible"
     },
     {
@@ -2940,7 +2938,7 @@
       "shortDescription": "Hamburguesa de la casa.",
       "longDescription": "Hamburguesa preparada al momento.",
       "image": "🍔",
-      "price": 450,
+      "price": 500,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -4083,7 +4081,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "⚡",
-      "price": 450,
+      "price": 500,
       "stockStatus": "disponible"
     },
     {
@@ -4095,7 +4093,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -4107,7 +4105,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -4119,7 +4117,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -4131,7 +4129,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -4737,7 +4735,7 @@
       "shortDescription": "",
       "longDescription": "Ensalada fría casera de Los 4 Hermanos.",
       "image": "🥗",
-      "price": 400,
+      "price": 450,
       "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
       "stockStatus": "disponible",
       "featured": true
@@ -5027,7 +5025,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "⚡",
-      "price": 450,
+      "price": 500,
       "stockStatus": "disponible"
     },
     {
@@ -5039,7 +5037,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -5051,7 +5049,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -5063,7 +5061,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -5075,7 +5073,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🍺",
-      "price": 450,
+      "price": 520,
       "stockStatus": "disponible"
     },
     {
@@ -8076,7 +8074,7 @@
       "longDescription": "Tartaletas artesanales. La caja trae 6 unidades.",
       "image": "🥧",
       "photo": "/assets/images/products/AmoRe/tartaletas.jpg",
-      "price": 1400,
+      "price": 1500,
       "stockStatus": "disponible"
     },
     {
@@ -12166,7 +12164,7 @@
       "longDescription": "Cake especial de crema blanca de galleta, artesanal de La Nevada.",
       "image": "🎂",
       "photo": "/assets/images/products/La Nevada/Cake especial de cremas blanca de galleta 6000.jpg",
-      "price": 6000,
+      "price": 7000,
       "stockStatus": "disponible"
     },
     {
@@ -12179,7 +12177,7 @@
       "longDescription": "Cake de leche condensada artesanal de La Nevada.",
       "image": "🎂",
       "photo": "/assets/images/products/La Nevada/cakes de leche condensada 4600.jpg",
-      "price": 4600,
+      "price": 7000,
       "stockStatus": "disponible"
     },
     {
@@ -13244,7 +13242,7 @@
       "longDescription": "Yogurt probiótico, envase de 4 litros.",
       "image": "🥛",
       "photo": "/assets/images/products/DAF/Yogurt Probiótico 4 Litros , 3500 cup.jpg",
-      "price": 3500,
+      "price": 8500,
       "stockStatus": "disponible"
     },
     {
@@ -13414,7 +13412,7 @@
       "image": "🌭",
       "photo": "/assets/images/products/DAF/perrito caliente - 1200.jpg",
       "price": 1200,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-080",
@@ -13466,6 +13464,30 @@
       "image": "🥛",
       "photo": "/assets/images/products/DAF/leche condensada -- 900.jpg",
       "price": 900,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-084",
+      "name": "Chorizo",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Chorizo, se vende por unidad.",
+      "image": "🌭",
+      "price": 250,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-085",
+      "name": "Papa (por libra)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Papa, precio por libra.",
+      "image": "🥔",
+      "price": 350,
       "stockStatus": "disponible"
     }
   ]
