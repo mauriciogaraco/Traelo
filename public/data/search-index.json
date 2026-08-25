@@ -3359,7 +3359,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "⚡",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -3370,7 +3370,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -3381,7 +3381,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -3392,7 +3392,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -3403,7 +3403,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -4234,7 +4234,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "⚡",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -4245,7 +4245,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -4256,7 +4256,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -4267,7 +4267,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -4278,7 +4278,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 450,
+    "price": 520,
     "stockStatus": "disponible"
   },
   {
@@ -12081,7 +12081,7 @@
     "image": "🌭",
     "photo": "/assets/images/products/DAF/perrito caliente - 1200.jpg",
     "price": 1200,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-080",
@@ -12129,6 +12129,28 @@
     "image": "🥛",
     "photo": "/assets/images/products/DAF/leche condensada -- 900.jpg",
     "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-084",
+    "name": "Chorizo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🌭",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-085",
+    "name": "Papa (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🥔",
+    "price": 350,
     "stockStatus": "disponible"
   }
 ]
