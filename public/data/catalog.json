@@ -1666,7 +1666,7 @@
       "shortDescription": "Fríos",
       "longDescription": "Fríos · Frescos",
       "image": "🥗",
-      "price": 900,
+      "price": 1200,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -1766,24 +1766,6 @@
       ]
     },
     {
-      "id": "dlm-026",
-      "name": "Espaguetis de jamón",
-      "businessId": "dlm",
-      "businessName": "Bar Restaurante DLM",
-      "category": "Comida",
-      "shortDescription": "Pastas & arroz",
-      "longDescription": "Pastas & arroz · Clásicos",
-      "image": "🍝",
-      "price": 1000,
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Termopack",
-          "price": 200
-        }
-      ]
-    },
-    {
       "id": "dlm-027",
       "name": "Espaguetis con  queso",
       "businessId": "dlm",
@@ -1810,7 +1792,7 @@
       "shortDescription": "Pastas & arroz",
       "longDescription": "Pastas & arroz · Clásicos",
       "image": "🍝",
-      "price": 1350,
+      "price": 1400,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -2458,7 +2440,7 @@
       "shortDescription": "Postres",
       "longDescription": "Postres · Final dulce",
       "image": "🍮",
-      "price": 1500,
+      "price": 700,
       "stockStatus": "agotado",
       "packaging": [
         {
@@ -2565,7 +2547,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 450,
+      "price": 500,
       "stockStatus": "disponible"
     },
     {
@@ -2589,7 +2571,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 550,
+      "price": 650,
       "stockStatus": "disponible"
     },
     {
@@ -2601,7 +2583,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 900,
+      "price": 950,
       "stockStatus": "disponible"
     },
     {
@@ -2625,7 +2607,7 @@
       "shortDescription": "Bebidas",
       "longDescription": "Bebidas · Refrescantes y Energéticas",
       "image": "🥤",
-      "price": 500,
+      "price": 550,
       "stockStatus": "disponible"
     },
     {
@@ -2842,6 +2824,18 @@
       "longDescription": "Botellas en Ofertas · Promociones Especiales",
       "image": "🍾",
       "price": 19550,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "dlm-096",
+      "name": "Cerveza Heineken (lata)",
+      "businessId": "dlm",
+      "businessName": "Bar Restaurante DLM",
+      "category": "Bebidas",
+      "shortDescription": "Bebidas",
+      "longDescription": "Bebidas · Refrescantes y Energéticas",
+      "image": "🍺",
+      "price": 750,
       "stockStatus": "disponible"
     },
     {
