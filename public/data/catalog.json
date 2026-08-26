@@ -123,16 +123,23 @@
       "clientCommission": 5,
       "schedule": {
         "days": [
-          0,
           2,
-          3,
           4,
           5,
           6
         ],
         "open": "10:00",
         "close": "19:00",
-        "label": "Mar–Dom · 10:00 am – 7:00 pm"
+        "label": "Mar, Jue, Vie y Sáb · 10:00 am – 7:00 pm · Mié y Dom · 12:00 pm – 7:00 pm"
+      },
+      "scheduleExtra": {
+        "days": [
+          0,
+          3
+        ],
+        "open": "12:00",
+        "close": "19:00",
+        "label": "Mié y Dom · 12:00 pm – 7:00 pm"
       }
     },
     {
@@ -12397,7 +12404,7 @@
       "longDescription": "Aceite de cocina, botella de 900 ml.",
       "image": "🛢️",
       "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
-      "price": 3500,
+      "price": 3600,
       "stockStatus": "disponible"
     },
     {
@@ -12476,7 +12483,7 @@
       "image": "🍪",
       "photo": "/assets/images/products/DAF/Galletas bambil -400.jpg",
       "price": 400,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-008",
@@ -12723,7 +12730,7 @@
       "image": "🍪",
       "photo": "/assets/images/products/DAF/gelletas pizza kraker - 1500.jpg",
       "price": 1500,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-027",
@@ -12736,7 +12743,7 @@
       "image": "🍬",
       "photo": "/assets/images/products/DAF/gomitas - 360.jpg",
       "price": 360,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-028",
@@ -12762,7 +12769,7 @@
       "image": "🍫",
       "photo": "/assets/images/products/DAF/nutella Marwa 1100.jpg",
       "price": 1100,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-030",
@@ -12970,7 +12977,7 @@
       "image": "🌾",
       "photo": "/assets/images/products/DAF/Harina por libras --400.jpg",
       "price": 400,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-046",
@@ -13113,16 +13120,16 @@
       "image": "🪥",
       "photo": "/assets/images/products/DAF/Pasta dental dentix --460.jpg",
       "price": 460,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-057",
-      "name": "Picadillo de Tubo",
+      "name": "Tubo de Picadillo El Cocinerito",
       "businessId": "mercado-daf",
       "businessName": "Mercado DAF",
       "category": "Alimentos",
       "shortDescription": "Precio por unidad.",
-      "longDescription": "Picadillo de tubo, se vende por unidad.",
+      "longDescription": "Tubo de picadillo El Cocinerito, se vende por unidad.",
       "image": "🥩",
       "photo": "/assets/images/products/DAF/Picadillo de tubo -- 800.jpg",
       "price": 800,
@@ -13347,7 +13354,7 @@
       "image": "🍨",
       "photo": "/assets/images/products/DAF/helado Cid - 1 litro - 2100.jpg",
       "price": 2100,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-075",
@@ -13488,6 +13495,54 @@
       "longDescription": "Papa, precio por libra.",
       "image": "🥔",
       "price": 350,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "daf-086",
+      "name": "Cartón de Huevo",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por cartón.",
+      "longDescription": "Cartón de huevo, se vende por cartón.",
+      "image": "🥚",
+      "price": 45500,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-087",
+      "name": "Leche Evaporada",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Leche evaporada, se vende por unidad.",
+      "image": "🥛",
+      "price": 820,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-088",
+      "name": "Yogurt Probiótico (1 litro)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Envase de 1 litro.",
+      "longDescription": "Yogurt probiótico, envase de 1 litro.",
+      "image": "🥛",
+      "price": 2300,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "daf-089",
+      "name": "Pasta de Tomate",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Pasta de tomate, se vende por unidad.",
+      "image": "🍅",
+      "price": 675,
       "stockStatus": "disponible"
     }
   ]
