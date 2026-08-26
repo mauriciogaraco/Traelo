@@ -122,16 +122,23 @@
     "clientCommission": 5,
     "schedule": {
       "days": [
-        0,
         2,
-        3,
         4,
         5,
         6
       ],
       "open": "10:00",
       "close": "19:00",
-      "label": "Mar–Dom · 10:00 am – 7:00 pm"
+      "label": "Mar, Jue, Vie y Sáb · 10:00 am – 7:00 pm · Mié y Dom · 12:00 pm – 7:00 pm"
+    },
+    "scheduleExtra": {
+      "days": [
+        0,
+        3
+      ],
+      "open": "12:00",
+      "close": "19:00",
+      "label": "Mié y Dom · 12:00 pm – 7:00 pm"
     }
   },
   {
