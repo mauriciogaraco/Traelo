@@ -856,7 +856,7 @@
       "longDescription": "Se vende por estuches de 12 unidades",
       "image": "🍪",
       "photo": "/assets/images/products/mercadito/coconut.jpg",
-      "price": 75,
+      "price": 960,
       "formato": 12,
       "stockStatus": "disponible"
     },
@@ -1113,7 +1113,7 @@
       "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
       "price": 360,
       "formato": 10,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-034",
@@ -1126,7 +1126,7 @@
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/toallitas_indoxa.jpg",
       "price": 620,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-035",
@@ -1220,7 +1220,7 @@
       "longDescription": "Se vende por saco",
       "image": "🍚",
       "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-      "price": 29500,
+      "price": 29700,
       "stockStatus": "disponible"
     },
     {
@@ -4217,7 +4217,7 @@
       "shortDescription": "Una libra, en bistec.",
       "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
       "image": "🥩",
-      "price": 1600,
+      "price": 1650,
       "stockStatus": "disponible"
     },
     {
@@ -4653,7 +4653,7 @@
       "longDescription": "Jamonada.",
       "image": "🥩",
       "price": 850,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "ma-045",
@@ -4665,7 +4665,7 @@
       "longDescription": "Jamón en porción de 1 libra.",
       "image": "🍖",
       "price": 1500,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "ma-046",
@@ -4677,7 +4677,7 @@
       "longDescription": "Jamón en porción de media libra.",
       "image": "🍖",
       "price": 750,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "ma-046",
@@ -4725,6 +4725,18 @@
       "longDescription": "Pechuga de pollo, paquete de 1 kg.",
       "image": "🍗",
       "price": 4500,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-049",
+      "name": "Jamón",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Embutidos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Jamón, se vende por unidad.",
+      "image": "🍖",
+      "price": 950,
       "stockStatus": "disponible"
     },
     {
@@ -13244,7 +13256,7 @@
       "image": "🥛",
       "photo": "/assets/images/products/DAF/Yogurt Probiótico 4 Litros , 3500 cup.jpg",
       "price": 8500,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-067",
@@ -13257,7 +13269,7 @@
       "image": "🥛",
       "photo": "/assets/images/products/DAF/Yogurt probiótico 500 ml , 1150.jpg",
       "price": 1150,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-068",
