@@ -6871,7 +6871,7 @@
     "image": "🥛",
     "photo": "/assets/images/products/TuKprichito/Leche-en-polvo-400gramos-2000.jpg",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "tk-054",
@@ -11835,7 +11835,7 @@
     "image": "🧀",
     "photo": "/assets/images/products/DAF/Rollos de jamón y queso (4 unidades) --2000.jpg",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-060",
@@ -12155,7 +12155,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por cartón.",
     "image": "🥚",
-    "price": 45500,
+    "price": 4550,
     "stockStatus": "disponible"
   },
   {

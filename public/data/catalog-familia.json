@@ -7842,7 +7842,7 @@
       "image": "🥛",
       "photo": "/assets/images/products/TuKprichito/Leche-en-polvo-400gramos-2000.jpg",
       "price": 4,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "tk-054",
@@ -13153,7 +13153,7 @@
       "image": "🧀",
       "photo": "/assets/images/products/DAF/Rollos de jamón y queso (4 unidades) --2000.jpg",
       "price": 4,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-060",
@@ -13500,7 +13500,7 @@
       "shortDescription": "Precio por cartón.",
       "longDescription": "Cartón de huevo, se vende por cartón.",
       "image": "🥚",
-      "price": 91,
+      "price": 9.1,
       "stockStatus": "disponible"
     },
     {

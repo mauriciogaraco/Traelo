@@ -764,7 +764,7 @@
     "image": "🧀",
     "photo": "/assets/images/products/DAF/Rollos de jamón y queso (4 unidades) --2000.jpg",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-060",
@@ -1111,7 +1111,7 @@
     "shortDescription": "Precio por cartón.",
     "longDescription": "Cartón de huevo, se vende por cartón.",
     "image": "🥚",
-    "price": 45500,
+    "price": 4550,
     "stockStatus": "disponible"
   },
   {
