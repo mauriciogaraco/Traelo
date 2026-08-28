@@ -855,7 +855,7 @@
     "image": "🥛",
     "photo": "/assets/images/products/DAF/Yogurt Probiótico 4 Litros , 3500 cup.jpg",
     "price": 8500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-067",
@@ -868,7 +868,7 @@
     "image": "🥛",
     "photo": "/assets/images/products/DAF/Yogurt probiótico 500 ml , 1150.jpg",
     "price": 1150,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-068",

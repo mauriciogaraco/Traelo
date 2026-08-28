@@ -1,5 +1,4 @@
 [
-
   {
     "id": "hmk-001",
     "name": "Pote de Helado 750 ml",
@@ -11,7 +10,7 @@
     "image": "�",
     "photo": "/assets/images/products/HeladeriaM&K/helado-dulce-de-leche-750ml-1100.jpg",
     "price": 1200,
-     "options": [
+    "options": [
       "Mantecado",
       "Fresa",
       "Manzana",
@@ -21,46 +20,6 @@
       "Chocolate"
     ],
     "stockStatus": "disponible"
-  },
-  {
-    "id": "hmk-002",
-    "name": "Helado de Chocolate 280 ml",
-    "businessId": "heladeria-mk",
-    "businessName": "Heladería M&K",
-    "category": "Helados",
-    "shortDescription": "Copa de 280 ml.",
-    "longDescription": "Helado artesanal de chocolate en copa de 280 ml.",
-    "image": "🍫",
-    "photo": "/assets/images/products/HeladeriaM&K/Pote-de-Helado-Chocolate-280ml-1.webp",
-    "price": 540,
-    "stockStatus": "disponible"
-  },
-
-  {
-    "id": "hmk-003",
-    "name": "Helado de Leche Condensada 280 ml",
-    "businessId": "heladeria-mk",
-    "businessName": "Heladería M&K",
-    "category": "Helados",
-    "shortDescription": "Copa de 280 ml.",
-    "longDescription": "Helado artesanal de leche condensada en copa de 280 ml.",
-    "image": "🍦",
-    "photo": "/assets/images/products/HeladeriaM&K/helado-leche-condensada-280ml-540.jpg",
-    "price": 540,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "hmk-004",
-    "name": "Helado de Vainilla 280 ml",
-    "businessId": "heladeria-mk",
-    "businessName": "Heladería M&K",
-    "category": "Helados",
-    "shortDescription": "Copa de 280 ml.",
-    "longDescription": "Helado artesanal de vainilla en copa de 280 ml.",
-    "image": "🍦",
-    "photo": "/assets/images/products/HeladeriaM&K/helado-vainilla-280ml-540.jpg",
-    "price": 540,
-    "stockStatus": "agotado"
   },
   {
     "id": "hmk-005",
@@ -80,45 +39,6 @@
       "3 Leches",
       "Chocolate"
     ]
-  },
-  {
-    "id": "hmk-006",
-    "name": "Helado de Naranja Piña 280 ml",
-    "businessId": "heladeria-mk",
-    "businessName": "Heladería M&K",
-    "category": "Helados",
-    "shortDescription": "Copa de 280 ml.",
-    "longDescription": "Helado artesanal de naranja piña en copa de 280 ml.",
-    "image": "🍊",
-    "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Naranja-Piña-280ml-540.jpg",
-    "price": 540,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "hmk-007",
-    "name": "Helado de Mantecado 280 ml",
-    "businessId": "heladeria-mk",
-    "businessName": "Heladería M&K",
-    "category": "Helados",
-    "shortDescription": "Copa de 280 ml.",
-    "longDescription": "Helado artesanal de mantecado en copa de 280 ml.",
-    "image": "🍦",
-    "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Mantecado-280ml-540.jpg",
-    "price": 540,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "hmk-008",
-    "name": "Helado de Manzana 280 ml",
-    "businessId": "heladeria-mk",
-    "businessName": "Heladería M&K",
-    "category": "Helados",
-    "shortDescription": "Copa de 280 ml.",
-    "longDescription": "Helado artesanal de manzana en copa de 280 ml.",
-    "image": "🍏",
-    "photo": "/assets/images/products/HeladeriaM&K/Helado-de-Manzana-280ml-540.jpg",
-    "price": 550,
-    "stockStatus": "disponible"
   },
   {
     "id": "hmk-009",
@@ -201,5 +121,36 @@
     "price": 500,
     "stockStatus": "agotado",
     "formato": 4
+  },
+  {
+    "id": "hmk-014",
+    "name": "Pote de Helado 280 ml",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Copa de 280 ml.",
+    "longDescription": "Helado artesanal en copa de 280 ml. Elige tu sabor.",
+    "image": "🍨",
+    "photo": "/assets/images/products/HeladeriaM&K/pote de helado 280 ml.jpg",
+    "price": 540,
+    "options": [
+      "3 Leches",
+      "Dulce de Leche",
+      "Vainilla"
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-015",
+    "name": "Tina de Helado 4 Litros con Cestas y Palitos",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Tina de 4 litros con cestas y palitos incluidos.",
+    "longDescription": "Tina familiar de helado artesanal de 4 litros, incluye cestas y sus palitos.",
+    "image": "🍦",
+    "photo": "/assets/images/products/HeladeriaM&K/tina de helado con 10 cestas 5500.jpg",
+    "price": 5500,
+    "stockStatus": "disponible"
   }
 ]

@@ -47,7 +47,7 @@
     "shortDescription": "Una libra, en bistec.",
     "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
     "image": "🥩",
-    "price": 1600,
+    "price": 1650,
     "stockStatus": "disponible"
   },
   {
@@ -483,7 +483,7 @@
     "longDescription": "Jamonada.",
     "image": "🥩",
     "price": 850,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-045",
@@ -495,7 +495,7 @@
     "longDescription": "Jamón en porción de 1 libra.",
     "image": "🍖",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-046",
@@ -507,7 +507,7 @@
     "longDescription": "Jamón en porción de media libra.",
     "image": "🍖",
     "price": 750,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-046",
@@ -555,6 +555,18 @@
     "longDescription": "Pechuga de pollo, paquete de 1 kg.",
     "image": "🍗",
     "price": 4500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-049",
+    "name": "Jamón",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Embutidos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Jamón, se vende por unidad.",
+    "image": "🍖",
+    "price": 950,
     "stockStatus": "disponible"
   }
 ]
