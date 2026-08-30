@@ -135,18 +135,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-011",
-    "name": "Cronos de Caramelo",
-    "businessId": "cronos",
-    "businessName": "Cronos",
-    "category": "Batidos",
-    "shortDescription": "Batido de helado de caramelo.",
-    "image": "🍯",
-    "photo": "/assets/images/products/Cronos/Helado-De-Caramelo.jpg",
-    "price": 1100,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "cr-012",
     "name": "Cronos de Dulce de Leche",
     "businessId": "cronos",
@@ -156,7 +144,19 @@
     "image": "🍮",
     "photo": "/assets/images/products/Cronos/Helado-Dulce-De-Leche.jpg",
     "price": 1100,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-015",
+    "name": "Cronos de 3 Leches",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de 3 leches.",
+    "image": "🥛",
+    "photo": "/assets/images/products/Cronos/Helado-3-leches.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-001",
@@ -3470,6 +3470,17 @@
     "stockStatus": "disponible"
   },
   {
+    "id": "ma-050",
+    "name": "Lomo de Cerdo (1 lb)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Una libra.",
+    "image": "🥩",
+    "price": 1700,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "ma-006",
     "name": "Lomo de cerdo en bistec (1 lb)",
     "businessId": "mercadito-ahorro",
@@ -3477,7 +3488,7 @@
     "category": "Alimentos",
     "shortDescription": "Una libra, en bistec.",
     "image": "🥩",
-    "price": 1650,
+    "price": 1750,
     "stockStatus": "disponible"
   },
   {
@@ -11107,7 +11118,7 @@
     "image": "🛢️",
     "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
     "price": 3600,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-002",
@@ -11479,7 +11490,7 @@
     "image": "🍚",
     "photo": "/assets/images/products/DAF/Arroz Blanco Seleccionado , 280 cup.jpg",
     "price": 280,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-033",
@@ -11863,7 +11874,7 @@
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
     "price": 290,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-065",

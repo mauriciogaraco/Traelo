@@ -146,19 +146,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "cr-011",
-    "name": "Cronos de Caramelo",
-    "businessId": "cronos",
-    "businessName": "Cronos",
-    "category": "Batidos",
-    "shortDescription": "Batido de helado de caramelo.",
-    "longDescription": "Batido de helado de caramelo, dulce e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
-    "image": "🍯",
-    "photo": "/assets/images/products/Cronos/Helado-De-Caramelo.jpg",
-    "price": 1100,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "cr-012",
     "name": "Cronos de Dulce de Leche",
     "businessId": "cronos",
@@ -169,6 +156,19 @@
     "image": "🍮",
     "photo": "/assets/images/products/Cronos/Helado-Dulce-De-Leche.jpg",
     "price": 1100,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-015",
+    "name": "Cronos de 3 Leches",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de 3 leches.",
+    "longDescription": "Batido de helado de 3 leches, cremoso e irresistible. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🥛",
+    "photo": "/assets/images/products/Cronos/Helado-3-leches.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
   }
 ]
