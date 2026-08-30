@@ -224,7 +224,6 @@
       "clientCommission": 5,
       "schedule": {
         "days": [
-          0,
           1,
           2,
           3,
@@ -271,7 +270,6 @@
       "clientCommission": 4,
       "schedule": {
         "days": [
-          0,
           1,
           2,
           3,
@@ -281,7 +279,7 @@
         ],
         "open": "09:00",
         "close": "22:00",
-        "label": "Todos los días · 9:00 am – 10:00 pm"
+        "label": "Lun–Sáb · 9:00 am – 10:00 pm"
       }
     },
     {
