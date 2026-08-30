@@ -10,7 +10,7 @@
     "image": "🛢️",
     "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
     "price": 3600,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-002",
@@ -413,7 +413,7 @@
     "image": "🍚",
     "photo": "/assets/images/products/DAF/Arroz Blanco Seleccionado , 280 cup.jpg",
     "price": 280,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-033",
@@ -829,7 +829,7 @@
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
     "price": 290,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-065",
