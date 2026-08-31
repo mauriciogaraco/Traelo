@@ -409,14 +409,13 @@
           0,
           1,
           2,
-          3,
           4,
           5,
           6
         ],
         "open": "10:00",
         "close": "21:00",
-        "label": "Lun–Dom · 10:00 am – 9:00 pm"
+        "label": "Lun, Mar, Jue, Vie, Sáb y Dom · 10:00 am – 9:00 pm"
       }
     },
     {
@@ -539,6 +538,29 @@
         "open": "09:00",
         "close": "19:00",
         "label": "Todos los días · 9:00 am – 7:00 pm"
+      }
+    },
+    {
+      "id": "el-monito",
+      "name": "El Monito",
+      "description": "El Monito — Comida criolla a la brasa.",
+      "image": "/assets/images/business/La Paladar del Monito.jpg",
+      "color": "from-amber-100 to-yellow-50",
+      "businessCommission": 0,
+      "clientCommission": 5,
+      "schedule": {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "09:00",
+        "close": "21:00",
+        "label": "Todos los días · 9:00 am – 9:00 pm"
       }
     }
   ],
@@ -13512,6 +13534,82 @@
       "longDescription": "Pasta de tomate, se vende por unidad.",
       "image": "🍅",
       "price": 1.35,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "em-001",
+      "name": "Completa de Masa Frita",
+      "businessId": "el-monito",
+      "businessName": "El Monito",
+      "category": "Comida",
+      "shortDescription": "Arroz moro, ensalada, yuca con mojo y chicharritas.",
+      "longDescription": "Masas fritas con arroz moro, ensalada, yuca con mojo y chicharritas.",
+      "image": "🍖",
+      "photo": "/assets/images/products/El Monito/Completa de masa frita.jpg",
+      "price": 5,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "em-002",
+      "name": "Completa de Bistec",
+      "businessId": "el-monito",
+      "businessName": "El Monito",
+      "category": "Comida",
+      "shortDescription": "Arroz moro, yuca con mojo, ensalada y chicharritas.",
+      "longDescription": "Bistec con arroz moro, yuca con mojo, ensalada y chicharritas.",
+      "image": "🥩",
+      "photo": "/assets/images/products/El Monito/completa de bistec.jpg",
+      "price": 4.6,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "em-003",
+      "name": "Posta de Pollo Asada",
+      "businessId": "el-monito",
+      "businessName": "El Monito",
+      "category": "Comida",
+      "shortDescription": "Posta grande.",
+      "longDescription": "Posta de pollo asada, tamaño grande.",
+      "image": "🍗",
+      "photo": "/assets/images/products/El Monito/posta de pollo asada.jpg",
+      "price": 4,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "em-004",
+      "name": "Pinchos",
+      "businessId": "el-monito",
+      "businessName": "El Monito",
+      "category": "Comida",
+      "shortDescription": "Pinchos asados.",
+      "longDescription": "Pinchos asados a la brasa.",
+      "image": "🍢",
+      "photo": "/assets/images/products/El Monito/pinchitos asados.jpg",
+      "price": 2.2,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
       "stockStatus": "disponible"
     }
   ]

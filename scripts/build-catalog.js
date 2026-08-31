@@ -29,6 +29,7 @@ const BUSINESS_FILES = [
   'agro-los-prietos',
   'la-nevada',
   'mercado-daf',
+  'el-monito',
 ];
 
 function read(file) {
