@@ -12169,5 +12169,77 @@
     "image": "🍅",
     "price": 675,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "em-001",
+    "name": "Completa de Masa Frita",
+    "businessId": "el-monito",
+    "businessName": "El Monito",
+    "category": "Comida",
+    "shortDescription": "Arroz moro, ensalada, yuca con mojo y chicharritas.",
+    "image": "🍖",
+    "photo": "/assets/images/products/El Monito/Completa de masa frita.jpg",
+    "price": 2500,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "em-002",
+    "name": "Completa de Bistec",
+    "businessId": "el-monito",
+    "businessName": "El Monito",
+    "category": "Comida",
+    "shortDescription": "Arroz moro, yuca con mojo, ensalada y chicharritas.",
+    "image": "🥩",
+    "photo": "/assets/images/products/El Monito/completa de bistec.jpg",
+    "price": 2300,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "em-003",
+    "name": "Posta de Pollo Asada",
+    "businessId": "el-monito",
+    "businessName": "El Monito",
+    "category": "Comida",
+    "shortDescription": "Posta grande.",
+    "image": "🍗",
+    "photo": "/assets/images/products/El Monito/posta de pollo asada.jpg",
+    "price": 2000,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "em-004",
+    "name": "Pinchos",
+    "businessId": "el-monito",
+    "businessName": "El Monito",
+    "category": "Comida",
+    "shortDescription": "Pinchos asados.",
+    "image": "🍢",
+    "photo": "/assets/images/products/El Monito/pinchitos asados.jpg",
+    "price": 1100,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
   }
 ]
