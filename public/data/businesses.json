@@ -546,7 +546,7 @@
     "image": "/assets/images/business/La Paladar del Monito.jpg",
     "color": "from-amber-100 to-yellow-50",
     "businessCommission": 0,
-    "clientCommission": 5,
+    "clientCommission": 4,
     "schedule": {
       "days": [
         0,

@@ -31,7 +31,7 @@
     "longDescription": "Tina familiar de helado artesanal de 4 litros. Elige tu sabor.",
     "image": "🧊",
     "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
-    "price": 4650,
+    "price": 4500,
     "stockStatus": "disponible",
     "options": [
       "Fresa",
@@ -50,7 +50,7 @@
     "longDescription": "Vaso con helado artesanal y panetela. Elige tu sabor.",
     "image": "🍫",
     "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
-    "price": 650,
+    "price": 600,
     "stockStatus": "disponible",
     "options": [
       "Vainilla",
@@ -70,7 +70,7 @@
     "longDescription": "Vaso con helado artesanal extra y panetela. Elige tu sabor.",
     "image": "🍨",
     "photo": "/assets/images/products/HeladeriaM&K/vaso  de Helado Y panetela con helado Extra -850.jpg",
-    "price": 850,
+    "price": 800,
     "stockStatus": "disponible",
     "options": [
       "Vainilla",
