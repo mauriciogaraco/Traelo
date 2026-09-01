@@ -140,7 +140,7 @@
     "image": "🍬",
     "photo": "/assets/images/products/DAF/Malvaviscos - 30.jpg",
     "price": 30,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-012",
@@ -166,7 +166,7 @@
     "image": "🥃",
     "photo": "/assets/images/products/DAF/Mini whisky 200ml --920.jpg",
     "price": 920,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-014",
@@ -308,7 +308,7 @@
     "longDescription": "Donut, se vende por unidad.",
     "image": "🍩",
     "photo": "/assets/images/products/DAF/donut 180.jpg",
-    "price": 180,
+    "price": 210,
     "stockStatus": "disponible"
   },
   {
@@ -322,7 +322,7 @@
     "image": "🍮",
     "photo": "/assets/images/products/DAF/gelantina - 320  (Fresa y Frutos Rojos).jpg",
     "price": 320,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-026",
@@ -373,8 +373,8 @@
     "longDescription": "Nutella Marwa, se vende por unidad.",
     "image": "🍫",
     "photo": "/assets/images/products/DAF/nutella Marwa 1100.jpg",
-    "price": 1100,
-    "stockStatus": "agotado"
+    "price": 1230,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-030",
@@ -400,7 +400,7 @@
     "image": "🍝",
     "photo": "/assets/images/products/DAF/spaguettis 350 por unidad , 340 por caja.jpg",
     "price": 350,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-032",
@@ -426,7 +426,7 @@
     "image": "🍚",
     "photo": "/assets/images/products/DAF/Arroz Karibee 1kg -800.jpg",
     "price": 800,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-034",
@@ -517,7 +517,7 @@
     "image": "🧺",
     "photo": "/assets/images/products/DAF/Detergente en polvo 400 gramos -- 750.jpg",
     "price": 750,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-041",
@@ -543,7 +543,7 @@
     "image": "🔥",
     "photo": "/assets/images/products/DAF/Fosforeras - 85.jpg",
     "price": 85,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-043",
@@ -660,7 +660,7 @@
     "image": "🧈",
     "photo": "/assets/images/products/DAF/Mantequilla --600.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-052",
@@ -894,7 +894,7 @@
     "image": "🐟",
     "photo": "/assets/images/products/DAF/atún 185 g - 900.jpg",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-070",
@@ -1076,7 +1076,7 @@
     "image": "🥛",
     "photo": "/assets/images/products/DAF/leche condensada -- 900.jpg",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-084",
@@ -1148,6 +1148,114 @@
     "longDescription": "Pasta de tomate, se vende por unidad.",
     "image": "🍅",
     "price": 675,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-090",
+    "name": "Refresco Instantáneo (5 litros)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Envase de 5 litros.",
+    "longDescription": "Refresco instantáneo, envase de 5 litros.",
+    "image": "🥤",
+    "photo": "/assets/images/products/DAF/Refresco Instantáneo 5 litros.jpg",
+    "price": 860,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-091",
+    "name": "Galletas Show Gol",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Galletas Show Gol, se venden por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas show gol.jpg",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-092",
+    "name": "Ron 5 Shot (750 ml)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Botella de 750 ml.",
+    "longDescription": "Ron 5 Shot, botella de 750 ml.",
+    "image": "🥃",
+    "photo": "/assets/images/products/DAF/Ron 5 shots.jpg",
+    "price": 3950,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-093",
+    "name": "Galletas María Clásicas",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Galletas María Clásicas, se venden por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas marie clasicas.jpg",
+    "price": 510,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-094",
+    "name": "Mini Galletas Amori",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Fresa o chocolate.",
+    "longDescription": "Mini galletas Amori, se venden por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/mini galletas amori.jpg",
+    "price": 170,
+    "options": [
+      "Fresa",
+      "Chocolate"
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-095",
+    "name": "Galletas María Biscuits",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Galletas María Biscuits, se venden por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas Marie Biscuit.jpg",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-096",
+    "name": "Galletas Dulce Estrella",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Galletas Dulce Estrella, se venden por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas dulce estrella.jpg",
+    "price": 230,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-097",
+    "name": "Sopita Instantánea",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Sopita instantánea, se vende por unidad.",
+    "image": "🍜",
+    "photo": "/assets/images/products/DAF/sopitas instantánea.jpg",
+    "price": 275,
     "stockStatus": "disponible"
   }
 ]

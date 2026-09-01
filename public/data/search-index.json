@@ -625,7 +625,7 @@
     "shortDescription": "",
     "image": "🍚",
     "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
-    "price": 29700,
+    "price": 31000,
     "stockStatus": "disponible"
   },
   {
@@ -7544,7 +7544,7 @@
     "shortDescription": "Tina familiar de 4 litros.",
     "image": "🧊",
     "photo": "/assets/images/products/HeladeriaM&K/tina-helado-4l-4650.jpg",
-    "price": 4650,
+    "price": 4500,
     "stockStatus": "disponible",
     "options": [
       "Fresa",
@@ -7562,7 +7562,7 @@
     "shortDescription": "Vaso con helado y panetela. Elige tu sabor.",
     "image": "🍫",
     "photo": "/assets/images/products/HeladeriaM&K/Vaso de Helado y panetela -600.jpg",
-    "price": 650,
+    "price": 600,
     "stockStatus": "disponible",
     "options": [
       "Vainilla",
@@ -7581,7 +7581,7 @@
     "shortDescription": "Vaso con helado extra y panetela. Elige tu sabor.",
     "image": "🍨",
     "photo": "/assets/images/products/HeladeriaM&K/vaso  de Helado Y panetela con helado Extra -850.jpg",
-    "price": 850,
+    "price": 800,
     "stockStatus": "disponible",
     "options": [
       "Vainilla",
@@ -10597,7 +10597,7 @@
     "image": "🥬",
     "photo": "/assets/images/products/Los Prietos/col.jpg",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-009",
@@ -10613,14 +10613,14 @@
   },
   {
     "id": "alp-010",
-    "name": "Ají Cachucha (por libra)",
+    "name": "Ají Cachucha (pote)",
     "businessId": "agro-los-prietos",
     "businessName": "Agro Los Prietos",
     "category": "Alimentos",
-    "shortDescription": "Precio por libra.",
+    "shortDescription": "Precio por pote.",
     "image": "🌶️",
     "photo": "/assets/images/products/Los Prietos/ají-cachucha.webp",
-    "price": 250,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -10632,8 +10632,8 @@
     "shortDescription": "Precio por mano.",
     "image": "🍌",
     "photo": "/assets/images/products/Los Prietos/plátano-fruta.jpg",
-    "price": 250,
-    "stockStatus": "agotado"
+    "price": 200,
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-012",
@@ -10645,7 +10645,7 @@
     "image": "🍌",
     "photo": "/assets/images/products/Los Prietos/plátano-macho.webp",
     "price": 50,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-013",
@@ -10656,8 +10656,8 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍍",
     "photo": "/assets/images/products/Los Prietos/piña.webp",
-    "price": 450,
-    "stockStatus": "agotado"
+    "price": 500,
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-014",
@@ -10669,7 +10669,7 @@
     "image": "🍏",
     "photo": "/assets/images/products/Los Prietos/guayaba.jpg",
     "price": 120,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-015",
@@ -10693,19 +10693,19 @@
     "image": "🥭",
     "photo": "/assets/images/products/Los Prietos/mango.jpg",
     "price": 150,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-017",
-    "name": "Fruta Bomba (por libra)",
+    "name": "Fruta Bomba Verde (por libra)",
     "businessId": "agro-los-prietos",
     "businessName": "Agro Los Prietos",
     "category": "Alimentos",
     "shortDescription": "Precio por libra.",
     "image": "🍑",
     "photo": "/assets/images/products/Los Prietos/fruta-bomba.jpg",
-    "price": 150,
-    "stockStatus": "agotado"
+    "price": 100,
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-018",
@@ -10717,7 +10717,7 @@
     "image": "🫚",
     "photo": "/assets/images/products/Los Prietos/cúrcuma.jpg",
     "price": 300,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-019",
@@ -10728,7 +10728,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍇",
     "photo": "/assets/images/products/Los Prietos/uva.jpg",
-    "price": 1300,
+    "price": 1200,
     "stockStatus": "disponible"
   },
   {
@@ -10753,7 +10753,7 @@
     "image": "🍅",
     "photo": "/assets/images/products/Los Prietos/tomate.jpg",
     "price": 700,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-022",
@@ -10764,16 +10764,16 @@
     "shortDescription": "Precio por libra.",
     "image": "🧅",
     "photo": "/assets/images/products/Los Prietos/cebolla.jpg",
-    "price": 900,
+    "price": 1400,
     "stockStatus": "disponible"
   },
   {
     "id": "alp-023",
-    "name": "Cebollino (mazo)",
+    "name": "Cebollino (unidad)",
     "businessId": "agro-los-prietos",
     "businessName": "Agro Los Prietos",
     "category": "Alimentos",
-    "shortDescription": "Precio por mazo.",
+    "shortDescription": "Precio por unidad.",
     "image": "🌱",
     "price": 300,
     "stockStatus": "disponible"
@@ -10787,7 +10787,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🧅",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-025",
@@ -10797,8 +10797,8 @@
     "category": "Alimentos",
     "shortDescription": "Precio por libra.",
     "image": "🍊",
-    "price": 500,
-    "stockStatus": "agotado"
+    "price": 600,
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-026",
@@ -10809,7 +10809,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🧅",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-027",
@@ -10832,7 +10832,7 @@
     "image": "🎃",
     "photo": "/assets/images/products/Los Prietos/calabaza.jpg",
     "price": 80,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-029",
@@ -10853,6 +10853,39 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🥑",
+    "price": 200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-031",
+    "name": "Jengibre (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🫚",
+    "price": 600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-032",
+    "name": "Vinagre",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍶",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-033",
+    "name": "Adobo",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧂",
     "price": 250,
     "stockStatus": "disponible"
   },
@@ -11238,7 +11271,7 @@
     "image": "🍬",
     "photo": "/assets/images/products/DAF/Malvaviscos - 30.jpg",
     "price": 30,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-012",
@@ -11262,7 +11295,7 @@
     "image": "🥃",
     "photo": "/assets/images/products/DAF/Mini whisky 200ml --920.jpg",
     "price": 920,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-014",
@@ -11393,7 +11426,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍩",
     "photo": "/assets/images/products/DAF/donut 180.jpg",
-    "price": 180,
+    "price": 210,
     "stockStatus": "disponible"
   },
   {
@@ -11406,7 +11439,7 @@
     "image": "🍮",
     "photo": "/assets/images/products/DAF/gelantina - 320  (Fresa y Frutos Rojos).jpg",
     "price": 320,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-026",
@@ -11453,8 +11486,8 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍫",
     "photo": "/assets/images/products/DAF/nutella Marwa 1100.jpg",
-    "price": 1100,
-    "stockStatus": "agotado"
+    "price": 1230,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-030",
@@ -11478,7 +11511,7 @@
     "image": "🍝",
     "photo": "/assets/images/products/DAF/spaguettis 350 por unidad , 340 por caja.jpg",
     "price": 350,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-032",
@@ -11502,7 +11535,7 @@
     "image": "🍚",
     "photo": "/assets/images/products/DAF/Arroz Karibee 1kg -800.jpg",
     "price": 800,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-034",
@@ -11586,7 +11619,7 @@
     "image": "🧺",
     "photo": "/assets/images/products/DAF/Detergente en polvo 400 gramos -- 750.jpg",
     "price": 750,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-041",
@@ -11610,7 +11643,7 @@
     "image": "🔥",
     "photo": "/assets/images/products/DAF/Fosforeras - 85.jpg",
     "price": 85,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-043",
@@ -11718,7 +11751,7 @@
     "image": "🧈",
     "photo": "/assets/images/products/DAF/Mantequilla --600.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-052",
@@ -11934,7 +11967,7 @@
     "image": "🐟",
     "photo": "/assets/images/products/DAF/atún 185 g - 900.jpg",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-070",
@@ -12102,7 +12135,7 @@
     "image": "🥛",
     "photo": "/assets/images/products/DAF/leche condensada -- 900.jpg",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-084",
@@ -12168,6 +12201,106 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍅",
     "price": 675,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-090",
+    "name": "Refresco Instantáneo (5 litros)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Envase de 5 litros.",
+    "image": "🥤",
+    "photo": "/assets/images/products/DAF/Refresco Instantáneo 5 litros.jpg",
+    "price": 860,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-091",
+    "name": "Galletas Show Gol",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas show gol.jpg",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-092",
+    "name": "Ron 5 Shot (750 ml)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Botella de 750 ml.",
+    "image": "🥃",
+    "photo": "/assets/images/products/DAF/Ron 5 shots.jpg",
+    "price": 3950,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-093",
+    "name": "Galletas María Clásicas",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas marie clasicas.jpg",
+    "price": 510,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-094",
+    "name": "Mini Galletas Amori",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Fresa o chocolate.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/mini galletas amori.jpg",
+    "price": 170,
+    "options": [
+      "Fresa",
+      "Chocolate"
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-095",
+    "name": "Galletas María Biscuits",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas Marie Biscuit.jpg",
+    "price": 420,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-096",
+    "name": "Galletas Dulce Estrella",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas dulce estrella.jpg",
+    "price": 230,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-097",
+    "name": "Sopita Instantánea",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍜",
+    "photo": "/assets/images/products/DAF/sopitas instantánea.jpg",
+    "price": 275,
     "stockStatus": "disponible"
   },
   {
