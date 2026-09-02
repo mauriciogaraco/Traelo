@@ -98,9 +98,9 @@
     "longDescription": "Se vende por estuches de 48 unidades.",
     "image": "🍭",
     "photo": "/assets/images/products/mercadito/chups_chups.jpg",
-    "price": 48,
+    "price": 25,
     "formato": 48,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-010",
@@ -138,7 +138,7 @@
     "longDescription": "Se vende por estuches de 12 unidades",
     "image": "🍪",
     "photo": "/assets/images/products/mercadito/coconut.jpg",
-    "price": 960,
+    "price": 80,
     "formato": 12,
     "stockStatus": "disponible"
   },
@@ -362,7 +362,7 @@
     "longDescription": "Se vende por blister de 10 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-    "price": 260,
+    "price": 290,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -393,9 +393,9 @@
     "longDescription": "Se venden por blister 10 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-    "price": 360,
+    "price": 400,
     "formato": 10,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-034",
@@ -460,7 +460,7 @@
     "longDescription": "Se vende por blister de 10 unidades.",
     "image": "🍊",
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-    "price": 260,
+    "price": 290,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -474,7 +474,7 @@
     "longDescription": "Se vende por blister de 10 unidades.",
     "image": "🍋",
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-    "price": 260,
+    "price": 290,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -539,11 +539,12 @@
     "businessId": "bodega-central",
     "businessName": "Mercado Alpha",
     "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
+    "shortDescription": "Blister de 10 unidades.",
     "longDescription": "Vino seco, se vende por unidad.",
     "image": "🍷",
-    "price": 260,
-    "stockStatus": "disponible"
+    "price": 290,
+    "stockStatus": "disponible",
+    "formato": 10
   },
   {
     "id": "bc-049",

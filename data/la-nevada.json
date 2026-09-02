@@ -10,7 +10,17 @@
     "image": "🧁",
     "photo": "/assets/images/products/La Nevada/bolsa de panques 1500.jpg",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-002",
@@ -23,7 +33,17 @@
     "image": "🍩",
     "photo": "/assets/images/products/La Nevada/bombas rellenas 420.jpg",
     "price": 420,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-003",
@@ -36,7 +56,17 @@
     "image": "🍫",
     "photo": "/assets/images/products/La Nevada/Brownie de frutos secos 600.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-004",
@@ -78,7 +108,17 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-007",
@@ -91,7 +131,17 @@
     "image": "🥐",
     "photo": "/assets/images/products/La Nevada/cuñas sencillas 550.jpg",
     "price": 580,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-008",
@@ -104,7 +154,17 @@
     "image": "🍩",
     "photo": "/assets/images/products/La Nevada/donas con cobertura -370.jpg",
     "price": 370,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-009",
@@ -117,7 +177,17 @@
     "image": "🍰",
     "photo": "/assets/images/products/La Nevada/eclear -350.jpg",
     "price": 350,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-010",
@@ -130,7 +200,17 @@
     "image": "🍮",
     "photo": "/assets/images/products/La Nevada/Masa real 320 (guayaba y coco).jpg",
     "price": 320,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-011",
@@ -146,7 +226,17 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-012",
@@ -172,7 +262,17 @@
     "image": "🥧",
     "photo": "/assets/images/products/La Nevada/pie (guayaba y coco ) 1750.jpg",
     "price": 1750,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-014",
@@ -189,7 +289,17 @@
       "Fresa",
       "Vainilla"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-015",
@@ -201,7 +311,17 @@
     "longDescription": "Helado artesanal de La Nevada en pote de 1 litro.",
     "image": "🍨",
     "price": 1600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-016",
@@ -214,7 +334,17 @@
     "image": "🧀",
     "photo": "/assets/images/products/La Nevada/Quesito ciciliano 550.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-017",
@@ -227,7 +357,17 @@
     "image": "🍰",
     "photo": "/assets/images/products/La Nevada/Señorita-600.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-018",
@@ -240,7 +380,17 @@
     "image": "🥧",
     "photo": "/assets/images/products/La Nevada/tarta nata -370.jpg",
     "price": 370,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-019",
@@ -256,7 +406,17 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-020",
@@ -269,6 +429,16 @@
     "image": "🍮",
     "photo": "/assets/images/products/La Nevada/tocinillo del clielo - 500.jpg",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   }
 ]

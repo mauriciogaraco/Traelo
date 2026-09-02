@@ -561,5 +561,28 @@
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
     }
+  },
+  {
+    "id": "ella-y-yo",
+    "name": "Ella y Yo",
+    "description": "Heladería Ella y Yo — Panes, pizzas y helados. Sabores que enamoran.",
+    "image": "/assets/images/business/Ella y Yo.jpg",
+    "color": "from-pink-100 to-rose-50",
+    "businessCommission": 0,
+    "clientCommission": 5,
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Todos los días · 9:00 am – 9:00 pm"
+    }
   }
 ]

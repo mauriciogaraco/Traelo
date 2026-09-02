@@ -250,9 +250,9 @@
     "shortDescription": "Estuche de 48 unidades.",
     "image": "🍭",
     "photo": "/assets/images/products/mercadito/chups_chups.jpg",
-    "price": 48,
+    "price": 25,
     "formato": 48,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-010",
@@ -287,7 +287,7 @@
     "shortDescription": "De coco.",
     "image": "🍪",
     "photo": "/assets/images/products/mercadito/coconut.jpg",
-    "price": 960,
+    "price": 80,
     "formato": 12,
     "stockStatus": "disponible"
   },
@@ -495,7 +495,7 @@
     "shortDescription": "Pomo de 1 litro.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-    "price": 260,
+    "price": 290,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -524,9 +524,9 @@
     "shortDescription": "Detergente líquido multiuso",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-    "price": 360,
+    "price": 400,
     "formato": 10,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-034",
@@ -586,7 +586,7 @@
     "shortDescription": "Blister de 10 unidades.",
     "image": "🍊",
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-    "price": 260,
+    "price": 290,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -599,7 +599,7 @@
     "shortDescription": "Blister de 10 unidades.",
     "image": "🍋",
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-    "price": 260,
+    "price": 290,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -660,10 +660,11 @@
     "businessId": "bodega-central",
     "businessName": "Mercado Alpha",
     "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
+    "shortDescription": "Blister de 10 unidades.",
     "image": "🍷",
-    "price": 260,
-    "stockStatus": "disponible"
+    "price": 290,
+    "stockStatus": "disponible",
+    "formato": 10
   },
   {
     "id": "bc-049",
@@ -4008,7 +4009,7 @@
     "packaging": [
       {
         "name": "Jaba",
-        "price": 10
+        "price": 20
       },
       {
         "name": "Termopack",
@@ -5241,7 +5242,7 @@
     "category": "Comida",
     "shortDescription": "Pizzas Familiares",
     "image": "🍕",
-    "price": 2000,
+    "price": 2200,
     "stockStatus": "disponible",
     "addons": [
       {
@@ -7672,7 +7673,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7689,7 +7690,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7706,7 +7707,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7723,7 +7724,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7740,7 +7741,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7757,7 +7758,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7774,7 +7775,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7791,7 +7792,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7808,7 +7809,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7825,7 +7826,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7842,7 +7843,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7859,7 +7860,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7876,7 +7877,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7893,7 +7894,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7927,7 +7928,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7944,7 +7945,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7961,7 +7962,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7978,7 +7979,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -7995,7 +7996,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8012,7 +8013,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8029,7 +8030,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8046,7 +8047,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8063,7 +8064,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8080,7 +8081,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8097,7 +8098,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8114,7 +8115,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8131,7 +8132,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8148,7 +8149,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8165,7 +8166,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8182,7 +8183,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8199,7 +8200,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8216,7 +8217,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8233,7 +8234,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8536,7 +8537,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8553,7 +8554,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8570,7 +8571,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8587,7 +8588,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8604,7 +8605,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8621,7 +8622,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8638,7 +8639,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8655,7 +8656,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8672,7 +8673,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8689,7 +8690,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8706,7 +8707,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8723,7 +8724,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8740,7 +8741,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8757,7 +8758,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8774,7 +8775,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8791,7 +8792,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8808,7 +8809,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8825,7 +8826,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8842,7 +8843,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8859,7 +8860,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8876,7 +8877,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8893,7 +8894,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8910,7 +8911,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8927,7 +8928,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8944,7 +8945,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8961,7 +8962,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8978,7 +8979,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -8995,7 +8996,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9012,7 +9013,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9029,7 +9030,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9046,7 +9047,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9063,7 +9064,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9080,7 +9081,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9097,7 +9098,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9114,7 +9115,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9131,7 +9132,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9148,7 +9149,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9165,7 +9166,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9182,7 +9183,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9199,7 +9200,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9216,7 +9217,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9233,7 +9234,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9250,7 +9251,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9267,7 +9268,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9284,7 +9285,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9301,7 +9302,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9318,7 +9319,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9335,7 +9336,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9352,7 +9353,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9369,7 +9370,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9386,7 +9387,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9403,7 +9404,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9420,7 +9421,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -9437,7 +9438,7 @@
     "packaging": [
       {
         "name": "Termopack",
-        "price": 150
+        "price": 200
       }
     ]
   },
@@ -10899,7 +10900,17 @@
     "image": "🧁",
     "photo": "/assets/images/products/La Nevada/bolsa de panques 1500.jpg",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-002",
@@ -10911,7 +10922,17 @@
     "image": "🍩",
     "photo": "/assets/images/products/La Nevada/bombas rellenas 420.jpg",
     "price": 420,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-003",
@@ -10923,7 +10944,17 @@
     "image": "🍫",
     "photo": "/assets/images/products/La Nevada/Brownie de frutos secos 600.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-004",
@@ -10962,7 +10993,17 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-007",
@@ -10974,7 +11015,17 @@
     "image": "🥐",
     "photo": "/assets/images/products/La Nevada/cuñas sencillas 550.jpg",
     "price": 580,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-008",
@@ -10986,7 +11037,17 @@
     "image": "🍩",
     "photo": "/assets/images/products/La Nevada/donas con cobertura -370.jpg",
     "price": 370,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-009",
@@ -10998,7 +11059,17 @@
     "image": "🍰",
     "photo": "/assets/images/products/La Nevada/eclear -350.jpg",
     "price": 350,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-010",
@@ -11010,7 +11081,17 @@
     "image": "🍮",
     "photo": "/assets/images/products/La Nevada/Masa real 320 (guayaba y coco).jpg",
     "price": 320,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-011",
@@ -11025,7 +11106,17 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-012",
@@ -11049,7 +11140,17 @@
     "image": "🥧",
     "photo": "/assets/images/products/La Nevada/pie (guayaba y coco ) 1750.jpg",
     "price": 1750,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-014",
@@ -11065,7 +11166,17 @@
       "Fresa",
       "Vainilla"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-015",
@@ -11076,7 +11187,17 @@
     "shortDescription": "Pote de 1 litro.",
     "image": "🍨",
     "price": 1600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-016",
@@ -11088,7 +11209,17 @@
     "image": "🧀",
     "photo": "/assets/images/products/La Nevada/Quesito ciciliano 550.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-017",
@@ -11100,7 +11231,17 @@
     "image": "🍰",
     "photo": "/assets/images/products/La Nevada/Señorita-600.jpg",
     "price": 600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-018",
@@ -11112,7 +11253,17 @@
     "image": "🥧",
     "photo": "/assets/images/products/La Nevada/tarta nata -370.jpg",
     "price": 370,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-019",
@@ -11127,7 +11278,17 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "ln-020",
@@ -11139,7 +11300,17 @@
     "image": "🍮",
     "photo": "/assets/images/products/La Nevada/tocinillo del clielo - 500.jpg",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
   },
   {
     "id": "daf-001",
@@ -12373,6 +12544,972 @@
         "price": 200
       }
     ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-001",
+    "name": "Pan con Hamburguesa de Cerdo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Panes",
+    "shortDescription": "Queso gouda, tocino, salsa de la casa y papas fritas.",
+    "image": "🍔",
+    "photo": "/assets/images/products/Ella y Yo/Hamburguesa de cerdo.jpg",
+    "price": 1300,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Huevo Frito",
+        "price": 250
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-002",
+    "name": "Pan con Doble Hamburguesa de Cerdo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Panes",
+    "shortDescription": "Doble queso gouda, tocino, salsa de la casa y papas fritas.",
+    "image": "🍔",
+    "photo": "/assets/images/products/Ella y Yo/Hamburguesa Doble.jpg",
+    "price": 1800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Huevo Frito",
+        "price": 250
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-003",
+    "name": "Pizza Queso Criollo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1000,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-004",
+    "name": "Pizza Queso Doble Criollo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1200,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-005",
+    "name": "Pizza de Jamón Bravo (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
+    "price": 1350,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-006",
+    "name": "Pizza de Peperoni (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
+    "price": 1400,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-007",
+    "name": "Pizza de Chorizo Bela (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
+    "price": 1500,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-008",
+    "name": "Pizza de Atún (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
+    "price": 1700,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-009",
+    "name": "Pizza de Perrito (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1100,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-010",
+    "name": "Pizza Queso Gouda",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1350,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-011",
+    "name": "Pizza Doble Queso Gouda",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1550,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-012",
+    "name": "Pizza de Jamón Bravo (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
+    "price": 1600,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-013",
+    "name": "Pizza de Peperoni (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
+    "price": 1750,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-014",
+    "name": "Pizza de Chorizo Bela (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
+    "price": 1800,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-015",
+    "name": "Pizza de Atún (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
+    "price": 2000,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-016",
+    "name": "Jimagua",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Jimagua.jpg",
+    "price": 550,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-017",
+    "name": "Tres Gracias",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/3 Gracias.jpg",
+    "price": 700,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-018",
+    "name": "Ice Cream",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Ice Cream-Helado.jpg",
+    "price": 800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-019",
+    "name": "Cake a la Moda",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍰",
+    "photo": "/assets/images/products/Ella y Yo/cake a la moda-Helado.jpg",
+    "price": 900,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-020",
+    "name": "Copa Lolita",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Copa Lolita -Helado.jpg",
+    "price": 950,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-021",
+    "name": "Supreme",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/cake supreme -helado.jpg",
+    "price": 800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-022",
+    "name": "Super Supreme",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Super Supreme -Helado.jpg",
+    "price": 900,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-023",
+    "name": "Especial",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "price": 1300,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-024",
+    "name": "Super Especial",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Super especial-Helado.jpg",
+    "price": 1800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-025",
+    "name": "Batido de Helado",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🥤",
+    "price": 1000,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-026",
+    "name": "Batido de Helado Especial",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "image": "🥤",
+    "price": 1250,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-027",
+    "name": "Refresco",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "🥤",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-028",
+    "name": "Jugos de Cajita",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "🧃",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-029",
+    "name": "Agua de Pomo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "💧",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-030",
+    "name": "Cerveza",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "image": "🍺",
+    "price": 700,
     "stockStatus": "disponible"
   }
 ]
