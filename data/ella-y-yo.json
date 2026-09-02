@@ -1,0 +1,998 @@
+[
+  {
+    "id": "ey-001",
+    "name": "Pan con Hamburguesa de Cerdo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Panes",
+    "shortDescription": "Queso gouda, tocino, salsa de la casa y papas fritas.",
+    "longDescription": "Pan con hamburguesa de cerdo, queso gouda, tocino, salsa de la casa y papas fritas.",
+    "image": "🍔",
+    "photo": "/assets/images/products/Ella y Yo/Hamburguesa de cerdo.jpg",
+    "price": 1300,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Huevo Frito",
+        "price": 250
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-002",
+    "name": "Pan con Doble Hamburguesa de Cerdo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Panes",
+    "shortDescription": "Doble queso gouda, tocino, salsa de la casa y papas fritas.",
+    "longDescription": "Pan con doble hamburguesa de cerdo, doble queso gouda, tocino, salsa de la casa y papas fritas.",
+    "image": "🍔",
+    "photo": "/assets/images/products/Ella y Yo/Hamburguesa Doble.jpg",
+    "price": 1800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Huevo Frito",
+        "price": 250
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-003",
+    "name": "Pizza Queso Criollo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza Queso Criollo — Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1000,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-004",
+    "name": "Pizza Queso Doble Criollo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza Queso Doble Criollo — Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1200,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-005",
+    "name": "Pizza de Jamón Bravo (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Jamón Bravo (Criollo) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
+    "price": 1350,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-006",
+    "name": "Pizza de Peperoni (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Peperoni (Criollo) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
+    "price": 1400,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-007",
+    "name": "Pizza de Chorizo Bela (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Chorizo Bela (Criollo) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
+    "price": 1500,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-008",
+    "name": "Pizza de Atún (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Atún (Criollo) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
+    "price": 1700,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-009",
+    "name": "Pizza de Perrito (Criollo)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Perrito (Criollo) — Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1100,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-010",
+    "name": "Pizza Queso Gouda",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza Queso Gouda — Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1350,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-011",
+    "name": "Pizza Doble Queso Gouda",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza Doble Queso Gouda — Pizza de 33 cm.",
+    "image": "🍕",
+    "price": 1550,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-012",
+    "name": "Pizza de Jamón Bravo (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Jamón Bravo (Gouda) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
+    "price": 1600,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-013",
+    "name": "Pizza de Peperoni (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Peperoni (Gouda) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
+    "price": 1750,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-014",
+    "name": "Pizza de Chorizo Bela (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Chorizo Bela (Gouda) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
+    "price": 1800,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-015",
+    "name": "Pizza de Atún (Gouda)",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Pizzas",
+    "shortDescription": "Pizza de 33 cm.",
+    "longDescription": "Pizza de Atún (Gouda) — Pizza de 33 cm.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
+    "price": 2000,
+    "addons": [
+      {
+        "name": "Jamón",
+        "price": 450
+      },
+      {
+        "name": "Chorizo",
+        "price": 550
+      },
+      {
+        "name": "Atún",
+        "price": 800
+      },
+      {
+        "name": "Peperoni",
+        "price": 500
+      },
+      {
+        "name": "Perrito",
+        "price": 200
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-016",
+    "name": "Jimagua",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Jimagua — Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Jimagua.jpg",
+    "price": 550,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-017",
+    "name": "Tres Gracias",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Tres Gracias — Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/3 Gracias.jpg",
+    "price": 700,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-018",
+    "name": "Ice Cream",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Ice Cream — Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Ice Cream-Helado.jpg",
+    "price": 800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-019",
+    "name": "Cake a la Moda",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Cake a la Moda — Helado CID.",
+    "image": "🍰",
+    "photo": "/assets/images/products/Ella y Yo/cake a la moda-Helado.jpg",
+    "price": 900,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-020",
+    "name": "Copa Lolita",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Copa Lolita — Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Copa Lolita -Helado.jpg",
+    "price": 950,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-021",
+    "name": "Supreme",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Supreme — Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/cake supreme -helado.jpg",
+    "price": 800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-022",
+    "name": "Super Supreme",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Super Supreme — Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Super Supreme -Helado.jpg",
+    "price": 900,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-023",
+    "name": "Especial",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Especial — Helado CID.",
+    "image": "🍨",
+    "price": 1300,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-024",
+    "name": "Super Especial",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Super Especial — Helado CID.",
+    "image": "🍨",
+    "photo": "/assets/images/products/Ella y Yo/Super especial-Helado.jpg",
+    "price": 1800,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-025",
+    "name": "Batido de Helado",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Batido de Helado — Helado CID.",
+    "image": "🥤",
+    "price": 1000,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-026",
+    "name": "Batido de Helado Especial",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Helados",
+    "shortDescription": "Helado CID.",
+    "longDescription": "Batido de Helado Especial — Helado CID.",
+    "image": "🥤",
+    "price": 1250,
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 200
+      }
+    ],
+    "addons": [
+      {
+        "name": "Helado",
+        "price": 250
+      },
+      {
+        "name": "Leche Condensada",
+        "price": 250
+      },
+      {
+        "name": "Fanguito",
+        "price": 300
+      },
+      {
+        "name": "Cake",
+        "price": 400
+      },
+      {
+        "name": "Flan",
+        "price": 400
+      }
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-027",
+    "name": "Refresco",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Refresco",
+    "image": "🥤",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-028",
+    "name": "Jugos de Cajita",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Jugos de Cajita",
+    "image": "🧃",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-029",
+    "name": "Agua de Pomo",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Agua de Pomo",
+    "image": "💧",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ey-030",
+    "name": "Cerveza",
+    "businessId": "ella-y-yo",
+    "businessName": "Ella y Yo",
+    "category": "Bebidas",
+    "shortDescription": "",
+    "longDescription": "Cerveza",
+    "image": "🍺",
+    "price": 700,
+    "stockStatus": "disponible"
+  }
+]

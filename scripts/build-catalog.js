@@ -30,6 +30,7 @@ const BUSINESS_FILES = [
   'la-nevada',
   'mercado-daf',
   'el-monito',
+  'ella-y-yo',
 ];
 
 function read(file) {
