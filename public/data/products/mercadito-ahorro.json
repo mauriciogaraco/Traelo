@@ -135,7 +135,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Pasta de tomate concentrada, se vende por lata.",
     "image": "🍅",
-    "price": 650,
+    "price": 700,
     "stockStatus": "disponible"
   },
   {
@@ -407,7 +407,7 @@
     "shortDescription": "Se vende por unidad.",
     "longDescription": "Toallas íntimas, se venden por unidad.",
     "image": "🌸",
-    "price": 550,
+    "price": 650,
     "stockStatus": "disponible"
   },
   {
@@ -579,6 +579,32 @@
     "longDescription": "Jamón, se vende por unidad.",
     "image": "🍖",
     "price": 950,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-051",
+    "name": "Papel Sanitario (paquete)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Aseo",
+    "shortDescription": "Se vende por paquete.",
+    "longDescription": "Papel sanitario, se vende por paquete.",
+    "image": "🧻",
+    "photo": "/assets/images/products/mercado/Papel sanitario.jpg",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-052",
+    "name": "Papel Sanitario (por rollo)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Aseo",
+    "shortDescription": "Precio por rollo.",
+    "longDescription": "Papel sanitario, precio por rollo.",
+    "image": "🧻",
+    "photo": "/assets/images/products/mercado/Papel sanitario.jpg",
+    "price": 220,
     "stockStatus": "disponible"
   }
 ]

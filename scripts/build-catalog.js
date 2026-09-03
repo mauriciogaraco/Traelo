@@ -31,6 +31,8 @@ const BUSINESS_FILES = [
   'mercado-daf',
   'el-monito',
   'ella-y-yo',
+  '4-esquinas',
+  'atrevete',
 ];
 
 function read(file) {

@@ -583,5 +583,50 @@
       "close": "21:00",
       "label": "Jue–Mar · 3:00 pm – 9:00 pm"
     }
+  },
+  {
+    "id": "4-esquinas",
+    "name": "4 Esquinas",
+    "description": "4 Esquinas — Pizzas, espaguetis y dulces caseros.",
+    "image": "/assets/images/business/4 esquinas.jpg",
+    "color": "from-orange-100 to-amber-50",
+    "businessCommission": 0,
+    "clientCommission": 4,
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Todos los días · 9:00 am – 9:00 pm"
+    }
+  },
+  {
+    "id": "atrevete",
+    "name": "Atrévete",
+    "description": "Atrévete — Mipyme S.U.R.L. Alimentos, aseo y confituras.",
+    "image": "/assets/images/business/Atrévete.jpg",
+    "color": "from-teal-100 to-cyan-50",
+    "businessCommission": 0,
+    "clientCommission": 2,
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "18:00",
+      "label": "Lun–Sáb · 9:00 am – 6:00 pm"
+    }
   }
 ]
