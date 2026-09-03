@@ -63,6 +63,12 @@ export interface Addon {
 export interface Packaging {
   name: string
   price: number
+  /**
+   * Unidades que caben en un envase antes de necesitar otro (ej: 4 dulces
+   * por caja). Si no se define, se cobra un envase por cada `quantity`
+   * (comportamiento anterior, para no afectar los envases ya existentes).
+   */
+  capacity?: number
 }
 
 export interface Product {

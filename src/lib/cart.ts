@@ -51,13 +51,20 @@ export function unitsOf(item: CartItem): number {
 }
 
 /**
- * Total de la línea. El packaging se cobra una vez por lote (quantity),
- * no por cada unidad dentro del formato. Para productos sin formato (packSize=1)
- * el resultado es idéntico al comportamiento anterior.
+ * Total de la línea. Sin `packaging.capacity`, el envase se cobra una vez
+ * por lote (quantity) — igual que antes. Con `capacity` (ej: 4 dulces por
+ * caja), se cobra un envase por cada bloque de esa cantidad de unidades,
+ * sin importar cuántas líneas de "quantity" hicieron falta para llegar ahí.
  */
 export function lineTotal(item: CartItem): number {
   const ps = packSize(item.product)
+  const units = item.quantity * ps
   const basePerUnit = item.product.price + (item.addon?.price ?? 0)
-  const packagingOnce = item.packaging?.price ?? 0
-  return (basePerUnit * ps + packagingOnce) * item.quantity
+  const capacity = item.packaging?.capacity
+  const packagingCount = !item.packaging
+    ? 0
+    : capacity && capacity > 0
+      ? Math.ceil(units / capacity)
+      : item.quantity
+  return basePerUnit * units + (item.packaging?.price ?? 0) * packagingCount
 }

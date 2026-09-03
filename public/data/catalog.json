@@ -4866,6 +4866,18 @@
       "stockStatus": "disponible"
     },
     {
+      "id": "ma-053",
+      "name": "Paquete de Pollo (Posta)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Alimentos",
+      "shortDescription": "Postas de pollo.",
+      "longDescription": "Paquete de postas de pollo.",
+      "image": "🍗",
+      "price": 2200,
+      "stockStatus": "disponible"
+    },
+    {
       "id": "los-4-hermanos-001",
       "name": "Ensalada Fría",
       "businessId": "los-4-hermanos",
@@ -12258,7 +12270,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12281,7 +12294,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12304,7 +12318,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12352,17 +12367,7 @@
       "options": [
         "Chocolate"
       ],
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Caja",
-          "price": 50
-        },
-        {
-          "name": "Jaba",
-          "price": 0
-        }
-      ]
+      "stockStatus": "disponible"
     },
     {
       "id": "ln-007",
@@ -12379,7 +12384,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12402,7 +12408,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12425,7 +12432,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12448,7 +12456,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12470,17 +12479,7 @@
       "options": [
         "Chocolate"
       ],
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Caja",
-          "price": 50
-        },
-        {
-          "name": "Jaba",
-          "price": 0
-        }
-      ]
+      "stockStatus": "disponible"
     },
     {
       "id": "ln-012",
@@ -12510,7 +12509,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12533,39 +12533,7 @@
         "Fresa",
         "Vainilla"
       ],
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Caja",
-          "price": 50
-        },
-        {
-          "name": "Jaba",
-          "price": 0
-        }
-      ]
-    },
-    {
-      "id": "ln-015",
-      "name": "Pote de Helado 1 Litro",
-      "businessId": "la-nevada",
-      "businessName": "La Nevada",
-      "category": "Helados",
-      "shortDescription": "Pote de 1 litro.",
-      "longDescription": "Helado artesanal de La Nevada en pote de 1 litro.",
-      "image": "🍨",
-      "price": 1600,
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Caja",
-          "price": 50
-        },
-        {
-          "name": "Jaba",
-          "price": 0
-        }
-      ]
+      "stockStatus": "disponible"
     },
     {
       "id": "ln-016",
@@ -12582,7 +12550,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12605,7 +12574,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12628,7 +12598,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -12650,17 +12621,7 @@
       "options": [
         "Chocolate"
       ],
-      "stockStatus": "disponible",
-      "packaging": [
-        {
-          "name": "Caja",
-          "price": 50
-        },
-        {
-          "name": "Jaba",
-          "price": 0
-        }
-      ]
+      "stockStatus": "disponible"
     },
     {
       "id": "ln-020",
@@ -12677,7 +12638,8 @@
       "packaging": [
         {
           "name": "Caja",
-          "price": 50
+          "price": 50,
+          "capacity": 4
         },
         {
           "name": "Jaba",
@@ -13137,7 +13099,7 @@
       "longDescription": "Bandeja de bistec de cerdo empanados.",
       "image": "🍖",
       "photo": "/assets/images/products/DAF/Bandeja de Bistec de cerdo empanados -1700.jpg",
-      "price": 1700,
+      "price": 2000,
       "stockStatus": "disponible"
     },
     {
@@ -13449,8 +13411,8 @@
       "longDescription": "Rollos de jamón y queso, paquete de 4 unidades.",
       "image": "🧀",
       "photo": "/assets/images/products/DAF/Rollos de jamón y queso (4 unidades) --2000.jpg",
-      "price": 2000,
-      "stockStatus": "agotado"
+      "price": 2350,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-060",
@@ -13942,6 +13904,18 @@
       "image": "🍜",
       "photo": "/assets/images/products/DAF/sopitas instantánea.jpg",
       "price": 275,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-098",
+      "name": "Agua (Pomo 500 ml)",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Bebidas",
+      "shortDescription": "Pomo de 500 ml.",
+      "longDescription": "Agua, pomo de 500 ml.",
+      "image": "💧",
+      "price": 170,
       "stockStatus": "disponible"
     },
     {
