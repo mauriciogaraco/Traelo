@@ -187,18 +187,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "ma-028",
-    "name": "Leche condensada (lata)",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Alimentos",
-    "shortDescription": "Se vende por lata.",
-    "longDescription": "Leche condensada, se vende por lata.",
-    "image": "🥛",
-    "price": 850,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "ma-020",
     "name": "Fanguito (lata)",
     "businessId": "mercadito-ahorro",
@@ -207,7 +195,7 @@
     "shortDescription": "Se vende por lata.",
     "longDescription": "Fanguito, se vende por lata.",
     "image": "🍫",
-    "price": 900,
+    "price": 950,
     "stockStatus": "disponible"
   },
   {
@@ -298,7 +286,7 @@
     "longDescription": "Leche condensada, se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/leche condensada 800.jpg",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {

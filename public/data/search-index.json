@@ -263,7 +263,7 @@
     "shortDescription": "Pañales desechables.",
     "image": "🧷",
     "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-    "price": 2600,
+    "price": 3480,
     "stockStatus": "disponible"
   },
   {
@@ -3607,17 +3607,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "ma-028",
-    "name": "Leche condensada (lata)",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Alimentos",
-    "shortDescription": "Se vende por lata.",
-    "image": "🥛",
-    "price": 850,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "ma-020",
     "name": "Fanguito (lata)",
     "businessId": "mercadito-ahorro",
@@ -3625,7 +3614,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🍫",
-    "price": 900,
+    "price": 950,
     "stockStatus": "disponible"
   },
   {
@@ -3709,7 +3698,7 @@
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/leche condensada 800.jpg",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -4014,6 +4003,18 @@
     "image": "🥗",
     "price": 450,
     "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "los-4-hermanos-002",
+    "name": "Natilla",
+    "businessId": "los-4-hermanos",
+    "businessName": "Los 4 Hermanos",
+    "category": "Alimentos",
+    "shortDescription": "",
+    "image": "🍮",
+    "price": 300,
+    "photo": "/assets/images/products/Los 4 Hermanos/natilla.jpg",
     "stockStatus": "disponible",
     "featured": true
   },
