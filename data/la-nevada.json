@@ -14,7 +14,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -37,7 +38,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -60,7 +62,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -108,17 +111,7 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Caja",
-        "price": 50
-      },
-      {
-        "name": "Jaba",
-        "price": 0
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "ln-007",
@@ -135,7 +128,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -158,7 +152,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -181,7 +176,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -204,7 +200,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -226,17 +223,7 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Caja",
-        "price": 50
-      },
-      {
-        "name": "Jaba",
-        "price": 0
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "ln-012",
@@ -266,7 +253,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -289,39 +277,7 @@
       "Fresa",
       "Vainilla"
     ],
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Caja",
-        "price": 50
-      },
-      {
-        "name": "Jaba",
-        "price": 0
-      }
-    ]
-  },
-  {
-    "id": "ln-015",
-    "name": "Pote de Helado 1 Litro",
-    "businessId": "la-nevada",
-    "businessName": "La Nevada",
-    "category": "Helados",
-    "shortDescription": "Pote de 1 litro.",
-    "longDescription": "Helado artesanal de La Nevada en pote de 1 litro.",
-    "image": "🍨",
-    "price": 1600,
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Caja",
-        "price": 50
-      },
-      {
-        "name": "Jaba",
-        "price": 0
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "ln-016",
@@ -338,7 +294,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -361,7 +318,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -384,7 +342,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",
@@ -406,17 +365,7 @@
     "options": [
       "Chocolate"
     ],
-    "stockStatus": "disponible",
-    "packaging": [
-      {
-        "name": "Caja",
-        "price": 50
-      },
-      {
-        "name": "Jaba",
-        "price": 0
-      }
-    ]
+    "stockStatus": "disponible"
   },
   {
     "id": "ln-020",
@@ -433,7 +382,8 @@
     "packaging": [
       {
         "name": "Caja",
-        "price": 50
+        "price": 50,
+        "capacity": 4
       },
       {
         "name": "Jaba",

@@ -39,9 +39,12 @@ export function ProductDetailPage() {
     if (stub?.businessId) loadBusinessProducts(stub.businessId)
   }, [stub?.businessId]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Si solo hay un envase, se selecciona automáticamente (es obligatorio).
+  // El envase es obligatorio, pero no se le pide elegir al cliente: se
+  // preselecciona el más barato (ej. "Jaba" sin costo) y puede cambiarlo.
   useEffect(() => {
-    if (product?.packaging?.length === 1) setPackaging(product.packaging[0]);
+    if (!product?.packaging?.length) return;
+    const cheapest = [...product.packaging].sort((a, b) => a.price - b.price)[0];
+    setPackaging(cheapest);
   }, [product]);
 
   if (loading) {
@@ -312,17 +315,9 @@ export function ProductDetailPage() {
               <h2 className="text-sm font-bold text-text-primary">
                 Envase para llevar
               </h2>
-              {multiPackaging ? (
-                packaging === null && (
-                  <span className="text-[11px] font-bold text-warning">
-                    Requerido
-                  </span>
-                )
-              ) : (
-                <span className="text-[11px] font-bold text-text-secondary">
-                  Obligatorio
-                </span>
-              )}
+              <span className="text-[11px] font-bold text-text-secondary">
+                Obligatorio
+              </span>
             </div>
             <div className="flex flex-wrap gap-2">
               {product.packaging!.map((pk) => {

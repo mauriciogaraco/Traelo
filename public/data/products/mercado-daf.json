@@ -451,7 +451,7 @@
     "longDescription": "Bandeja de bistec de cerdo empanados.",
     "image": "🍖",
     "photo": "/assets/images/products/DAF/Bandeja de Bistec de cerdo empanados -1700.jpg",
-    "price": 1700,
+    "price": 2000,
     "stockStatus": "disponible"
   },
   {
@@ -763,8 +763,8 @@
     "longDescription": "Rollos de jamón y queso, paquete de 4 unidades.",
     "image": "🧀",
     "photo": "/assets/images/products/DAF/Rollos de jamón y queso (4 unidades) --2000.jpg",
-    "price": 2000,
-    "stockStatus": "agotado"
+    "price": 2350,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-060",
@@ -1256,6 +1256,18 @@
     "image": "🍜",
     "photo": "/assets/images/products/DAF/sopitas instantánea.jpg",
     "price": 275,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-098",
+    "name": "Agua (Pomo 500 ml)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Pomo de 500 ml.",
+    "longDescription": "Agua, pomo de 500 ml.",
+    "image": "💧",
+    "price": 170,
     "stockStatus": "disponible"
   }
 ]

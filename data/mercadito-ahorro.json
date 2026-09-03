@@ -606,5 +606,17 @@
     "photo": "/assets/images/products/mercado/Papel sanitario.jpg",
     "price": 220,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-053",
+    "name": "Paquete de Pollo (Posta)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Postas de pollo.",
+    "longDescription": "Paquete de postas de pollo.",
+    "image": "🍗",
+    "price": 2200,
+    "stockStatus": "disponible"
   }
 ]
