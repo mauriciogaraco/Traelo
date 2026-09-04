@@ -10,6 +10,19 @@
     "image": "🥗",
     "price": 450,
     "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "los-4-hermanos-002",
+    "name": "Natilla",
+    "businessId": "los-4-hermanos",
+    "businessName": "Los 4 Hermanos",
+    "category": "Alimentos",
+    "shortDescription": "",
+    "longDescription": "Natilla casera de Los 4 Hermanos.",
+    "image": "🍮",
+    "price": 300,
+    "photo": "/assets/images/products/Los 4 Hermanos/natilla.jpg",
     "stockStatus": "disponible",
     "featured": true
   }

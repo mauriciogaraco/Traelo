@@ -263,7 +263,7 @@
     "shortDescription": "Pañales desechables.",
     "image": "🧷",
     "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-    "price": 2600,
+    "price": 3480,
     "stockStatus": "disponible"
   },
   {
@@ -3607,17 +3607,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "ma-028",
-    "name": "Leche condensada (lata)",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Alimentos",
-    "shortDescription": "Se vende por lata.",
-    "image": "🥛",
-    "price": 850,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "ma-020",
     "name": "Fanguito (lata)",
     "businessId": "mercadito-ahorro",
@@ -3625,7 +3614,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por lata.",
     "image": "🍫",
-    "price": 900,
+    "price": 950,
     "stockStatus": "disponible"
   },
   {
@@ -3709,7 +3698,7 @@
     "shortDescription": "Se vende por lata.",
     "image": "🥛",
     "photo": "/assets/images/products/mercado/leche condensada 800.jpg",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -4014,6 +4003,18 @@
     "image": "🥗",
     "price": 450,
     "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "los-4-hermanos-002",
+    "name": "Natilla",
+    "businessId": "los-4-hermanos",
+    "businessName": "Los 4 Hermanos",
+    "category": "Alimentos",
+    "shortDescription": "",
+    "image": "🍮",
+    "price": 300,
+    "photo": "/assets/images/products/Los 4 Hermanos/natilla.jpg",
     "stockStatus": "disponible",
     "featured": true
   },
@@ -12469,6 +12470,131 @@
     "shortDescription": "Pomo de 500 ml.",
     "image": "💧",
     "price": 170,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-099",
+    "name": "Aceite Pima (1 Litro)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Botella de 1 litro.",
+    "image": "🫒",
+    "photo": "/assets/images/products/DAF/aceite 1 Litro 3400 cup.jpg",
+    "price": 3400,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-100",
+    "name": "Arroz El Rey del Arroz (1 kg)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 1 kg.",
+    "image": "🍚",
+    "photo": "/assets/images/products/DAF/bolsa de arroz 1 kg 800.jpg",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-101",
+    "name": "Culeros Talla M",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Pañales desechables, talla M.",
+    "image": "🧷",
+    "photo": "/assets/images/products/DAF/culeros talla M 5700.jpg",
+    "price": 5700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-102",
+    "name": "Galletas Dolcero",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Sabor chocolate.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas dolcero 210.jpg",
+    "price": 210,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-103",
+    "name": "Galletas Fomitos",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Galletas rellenas.",
+    "image": "🍪",
+    "photo": "/assets/images/products/DAF/galletas fomitos 300.jpg",
+    "price": 300,
+    "options": [
+      "Fresa",
+      "Chocolate",
+      "Dulce de Leche"
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-104",
+    "name": "Mantequilla Excellent (500 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Pote de 500 g.",
+    "image": "🧈",
+    "photo": "/assets/images/products/DAF/Mantequilla 500 gramos 1160 cup.jpg",
+    "price": 1160,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-105",
+    "name": "Mayonesa Doña Mirta (400 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Pote de 400 g.",
+    "image": "🥫",
+    "photo": "/assets/images/products/DAF/mayonesa 400 gramos1860.jpg",
+    "price": 1860,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-106",
+    "name": "Melocotón en Almíbar",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Lata de melocotón en almíbar.",
+    "image": "🍑",
+    "photo": "/assets/images/products/DAF/melocotón en conserva 810.jpg",
+    "price": 810,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-107",
+    "name": "Mortadella Mulata Bonita",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥓",
+    "photo": "/assets/images/products/DAF/mortadella mulata bonita 900 cup.jpg",
+    "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-108",
+    "name": "Paleticas de Helado Cid",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍦",
+    "photo": "/assets/images/products/DAF/paleticas Cid 580.jpg",
+    "price": 580,
     "stockStatus": "disponible"
   },
   {
