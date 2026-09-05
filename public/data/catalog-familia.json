@@ -629,6 +629,30 @@
         "close": "18:00",
         "label": "Lun–Sáb · 9:00 am – 6:00 pm"
       }
+    },
+    {
+      "id": "cocina-de-claudia",
+      "name": "La Cocina de Claudia",
+      "description": "La Cocina de Claudia — De mi cocina a tu mesa. Comida casera, panes y postres.",
+      "image": "/assets/images/business/La Cocina de Claudia.jpg",
+      "color": "from-rose-100 to-pink-50",
+      "paymentNote": "Mensajería 250 CUP · después de las 7:00 pm sube a 350 CUP.",
+      "deliveryFee": 250,
+      "businessCommission": 0,
+      "clientCommission": 4,
+      "schedule": {
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          0
+        ],
+        "open": "12:30",
+        "close": "19:00",
+        "label": "Mar–Dom · 12:30 pm – 7:00 pm"
+      }
     }
   ],
   "products": [
@@ -15599,6 +15623,547 @@
       "image": "🍜",
       "photo": "/assets/images/products/Atrévete/Sopita Intantánea Pollo y Res --230 cup.jpg",
       "price": 0.46,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-001",
+      "name": "Bistec de Pollo Grille",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Bistec de pollo grille, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍗",
+      "photo": "/assets/images/products/La Cocina de Claudia/bistec de pollo grillé 2600 cup (con guarnición).jpg",
+      "price": 5.2,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-002",
+      "name": "Bistec de Pollo Empanado",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Bistec de pollo empanado, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍗",
+      "price": 5.4,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-003",
+      "name": "Muslo de Pollo Asado",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Muslo de pollo asado, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍗",
+      "price": 5,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-004",
+      "name": "Fajitas de Pollo",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Fajitas de pollo, servidas con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍗",
+      "price": 5.4,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-005",
+      "name": "Bistec de Pollo Gratinado",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Bistec de pollo gratinado, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍗",
+      "photo": "/assets/images/products/La Cocina de Claudia/bistec de pollo gratinado - 2900 cup ( con guarnición).jpg",
+      "price": 5.8,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-006",
+      "name": "Masas de Cerdo",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Masas de cerdo, servidas con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍖",
+      "price": 5.8,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-007",
+      "name": "Bistec de Cerdo Grille",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Bistec de cerdo grille, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🥩",
+      "price": 5.2,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-008",
+      "name": "Bistec de Cerdo Gratinado",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Bistec de cerdo gratinado, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🥩",
+      "price": 5.8,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-009",
+      "name": "Bistec de Cerdo Uruguayo",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Bistec de cerdo uruguayo, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🥩",
+      "price": 8,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-010",
+      "name": "Carne con Papa",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Carne con papa, servida con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍲",
+      "price": 6.4,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-011",
+      "name": "Picadillo a la Habanera",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Con guarnición (arroz moro o blanco, vianda y ensalada).",
+      "longDescription": "Picadillo a la habanera, servido con guarnición: arroz moro o arroz blanco, vianda y ensalada.",
+      "image": "🍲",
+      "price": 5.6,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-012",
+      "name": "Arroz Frito",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Especialidad de la casa.",
+      "longDescription": "Arroz frito, especialidad de la casa.",
+      "image": "🍚",
+      "photo": "/assets/images/products/La Cocina de Claudia/arroz frito - 1000 cup.jpg",
+      "price": 2,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-013",
+      "name": "Tamal en Cazuela con Carne",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Especialidad de la casa.",
+      "longDescription": "Tamal en cazuela con carne, especialidad de la casa.",
+      "image": "🌽",
+      "photo": "/assets/images/products/La Cocina de Claudia/tamal en casuela con carne - 2500 cup.jpg",
+      "price": 5,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-014",
+      "name": "Tamal",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Especialidad de la casa.",
+      "longDescription": "Tamal, especialidad de la casa.",
+      "image": "🌽",
+      "photo": "/assets/images/products/La Cocina de Claudia/tamal - 350 cup.jpg",
+      "price": 0.7,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-015",
+      "name": "Yuca",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Especialidad de la casa.",
+      "longDescription": "Yuca, especialidad de la casa.",
+      "image": "🍠",
+      "price": 1.8,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-016",
+      "name": "Guiso (por cucharón)",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Precio por cucharón.",
+      "longDescription": "Guiso, precio por cucharón.",
+      "image": "🍲",
+      "photo": "/assets/images/products/La Cocina de Claudia/guiso - 150 cup (por cucharón).jpg",
+      "price": 0.3,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-017",
+      "name": "Frijoles (por cucharón)",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Precio por cucharón.",
+      "longDescription": "Frijoles, precio por cucharón.",
+      "image": "🫘",
+      "price": 0.18,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-018",
+      "name": "Tostones Relleno",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Especialidad de la casa.",
+      "longDescription": "Tostones relleno, especialidad de la casa.",
+      "image": "🍽️",
+      "photo": "/assets/images/products/La Cocina de Claudia/tostones rellenos - 1600.jpg",
+      "price": 3.2,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-019",
+      "name": "Ensalada Fría (Termopack)",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Presentación en termopack.",
+      "longDescription": "Ensalada fría, presentación en termopack. El precio ya incluye el envase.",
+      "image": "🥗",
+      "photo": "/assets/images/products/La Cocina de Claudia/ensalada fría en termopack 1300.jpg",
+      "price": 2.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-020",
+      "name": "Ensalada Fría (Cubeta 4 Litros)",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Presentación en cubeta de 4 litros.",
+      "longDescription": "Ensalada fría, presentación en cubeta de 4 litros. El precio ya incluye el envase.",
+      "image": "🥗",
+      "price": 9,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-021",
+      "name": "Croquetas de la Casa",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Entrante.",
+      "longDescription": "Croquetas de la casa.",
+      "image": "🧆",
+      "price": 2,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-022",
+      "name": "Fajitas de Pollo (Entrante)",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Entrante.",
+      "longDescription": "Fajitas de pollo, porción de entrante.",
+      "image": "🍗",
+      "price": 3.2,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-023",
+      "name": "Picadera Especial",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Comida",
+      "shortDescription": "Entrante para compartir.",
+      "longDescription": "Picadera especial, entrante para compartir.",
+      "image": "🍽️",
+      "price": 7,
+      "packaging": [
+        {
+          "name": "Termopack",
+          "price": 0.4
+        }
+      ],
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-024",
+      "name": "Pudín",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Postres",
+      "shortDescription": "Postre casero.",
+      "longDescription": "Pudín, postre casero.",
+      "image": "🍮",
+      "photo": "/assets/images/products/La Cocina de Claudia/pudin 2700 cup.jpg",
+      "price": 5.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-025",
+      "name": "Flan",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Postres",
+      "shortDescription": "Postre casero.",
+      "longDescription": "Flan, postre casero.",
+      "image": "🍮",
+      "photo": "/assets/images/products/La Cocina de Claudia/flan - 3700 cup.jpg",
+      "price": 7.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-026",
+      "name": "Dulce de Fruta Bomba",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Postres",
+      "shortDescription": "Con queso.",
+      "longDescription": "Dulce de fruta bomba con queso.",
+      "image": "🍯",
+      "photo": "/assets/images/products/La Cocina de Claudia/dulce de frutabomba con queso --500 cup.jpg",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-027",
+      "name": "Arroz con Leche",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Postres",
+      "shortDescription": "Postre casero.",
+      "longDescription": "Arroz con leche, postre casero.",
+      "image": "🍮",
+      "photo": "/assets/images/products/La Cocina de Claudia/arroz con leche -500 cup.jpg",
+      "price": 1,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-028",
+      "name": "Pan con Bistec de Cerdo",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Panes",
+      "shortDescription": "Pan preparado.",
+      "longDescription": "Pan con bistec de cerdo.",
+      "image": "🥪",
+      "photo": "/assets/images/products/La Cocina de Claudia/pan con bistec de cerdo -1000 cup.jpg",
+      "price": 2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-029",
+      "name": "Pan con Hamburguesa",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Panes",
+      "shortDescription": "Pan preparado.",
+      "longDescription": "Pan con hamburguesa.",
+      "image": "🍔",
+      "price": 1.4,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-030",
+      "name": "Pan Especial",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Panes",
+      "shortDescription": "Bistec de cerdo, jamón y queso.",
+      "longDescription": "Pan especial: bistec de cerdo, jamón y queso.",
+      "image": "🥪",
+      "photo": "/assets/images/products/La Cocina de Claudia/pan especial bistec de cerdo , jamñon y queso 1500 cup.jpg",
+      "price": 3,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-031",
+      "name": "Pan con Carne Asada",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Panes",
+      "shortDescription": "Pan preparado.",
+      "longDescription": "Pan con carne asada.",
+      "image": "🥪",
+      "price": 2.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-032",
+      "name": "Refrescos",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Bebidas",
+      "shortDescription": "Coca-Cola, Sprite o Fanta.",
+      "longDescription": "Refresco de lata, a elegir entre Coca-Cola, Sprite o Fanta.",
+      "image": "🥤",
+      "options": [
+        "Coca-Cola",
+        "Sprite",
+        "Fanta"
+      ],
+      "price": 0.96,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cc-033",
+      "name": "Cerveza",
+      "businessId": "cocina-de-claudia",
+      "businessName": "La Cocina de Claudia",
+      "category": "Bebidas",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Cerveza, precio por unidad.",
+      "image": "🍺",
+      "price": 1,
       "stockStatus": "disponible"
     }
   ]

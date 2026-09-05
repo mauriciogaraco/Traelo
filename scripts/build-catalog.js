@@ -33,6 +33,7 @@ const BUSINESS_FILES = [
   'ella-y-yo',
   '4-esquinas',
   'atrevete',
+  'cocina-de-claudia',
 ];
 
 function read(file) {
