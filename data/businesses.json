@@ -19,7 +19,10 @@
       ],
       "open": "09:00",
       "close": "17:00"
-    }
+    },
+    "businessCategories": [
+      "Mercado"
+    ]
   },
   {
     "id": "dlm",
@@ -41,7 +44,11 @@
       "open": "13:00",
       "close": "22:00",
       "label": "Mié–Dom · 1:00 pm – 10:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Destacados",
+      "Restaurantes"
+    ]
   },
   {
     "id": "panes-macus",
@@ -64,7 +71,10 @@
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Panes"
+    ]
   },
   {
     "id": "mercadito-ahorro",
@@ -87,7 +97,11 @@
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Destacados",
+      "Mercado"
+    ]
   },
   {
     "id": "la-marina",
@@ -110,7 +124,10 @@
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Pizzas"
+    ]
   },
   {
     "id": "cronos",
@@ -139,7 +156,11 @@
       "open": "12:00",
       "close": "19:00",
       "label": "Mié y Dom · 12:00 pm – 7:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Destacados",
+      "Bebidas"
+    ]
   },
   {
     "id": "eme-boutique",
@@ -165,7 +186,10 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Ropa"
+    ]
   },
   {
     "id": "tu-kprichito",
@@ -188,7 +212,10 @@
       "open": "09:00",
       "close": "17:00",
       "label": "Todos los días · 9:00 am – 5:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Mercado"
+    ]
   },
   {
     "id": "linea-callejon",
@@ -211,7 +238,11 @@
       "open": "09:00",
       "close": "22:00",
       "label": "Todos los días · 9:00 am – 10:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Restaurantes",
+      "Pizzas"
+    ]
   },
   {
     "id": "amore",
@@ -233,7 +264,10 @@
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Dulces"
+    ]
   },
   {
     "id": "cafeteria-d-leo",
@@ -257,7 +291,10 @@
       "open": "09:00",
       "close": "17:00",
       "label": "Todos los días · 9:00 am – 5:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Panes"
+    ]
   },
   {
     "id": "pizzeria-mm",
@@ -279,7 +316,10 @@
       "open": "09:00",
       "close": "22:00",
       "label": "Lun–Sáb · 9:00 am – 10:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Pizzas"
+    ]
   },
   {
     "id": "las-palmitas",
@@ -303,7 +343,10 @@
       "open": "12:00",
       "close": "22:00",
       "label": "Mar–Dom · 12:00 pm – 10:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Restaurantes"
+    ]
   },
   {
     "id": "heladeria-mk",
@@ -326,7 +369,11 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Helados",
+      "Dulces"
+    ]
   },
   {
     "id": "ferreguira",
@@ -348,7 +395,10 @@
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Ferretería"
+    ]
   },
   {
     "id": "los-llenik",
@@ -370,7 +420,11 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Mar–Dom · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Restaurantes",
+      "Bebidas"
+    ]
   },
   {
     "id": "dulce-momento",
@@ -393,7 +447,12 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Lun–Dom · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Bebidas",
+      "Helados",
+      "Dulces"
+    ]
   },
   {
     "id": "frappio",
@@ -415,7 +474,10 @@
       "open": "10:00",
       "close": "21:00",
       "label": "Lun, Mar, Jue, Vie, Sáb y Dom · 10:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Bebidas"
+    ]
   },
   {
     "id": "al-carbon",
@@ -438,7 +500,10 @@
       "open": "11:00",
       "close": "21:00",
       "label": "Todos los días · 11:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Asados"
+    ]
   },
   {
     "id": "los-4-hermanos",
@@ -461,7 +526,10 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Lun–Dom · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Dulces"
+    ]
   },
   {
     "id": "agro-los-prietos",
@@ -491,7 +559,10 @@
       "open": "09:00",
       "close": "13:00",
       "label": "Domingo · 9:00 am – 1:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Restaurantes"
+    ]
   },
   {
     "id": "la-nevada",
@@ -514,7 +585,11 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Helados",
+      "Dulces"
+    ]
   },
   {
     "id": "mercado-daf",
@@ -537,7 +612,10 @@
       "open": "09:00",
       "close": "19:00",
       "label": "Todos los días · 9:00 am – 7:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Mercado"
+    ]
   },
   {
     "id": "el-monito",
@@ -560,7 +638,11 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Restaurantes",
+      "Asados"
+    ]
   },
   {
     "id": "ella-y-yo",
@@ -582,7 +664,12 @@
       "open": "15:00",
       "close": "21:00",
       "label": "Jue–Mar · 3:00 pm – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Pizzas",
+      "Helados",
+      "Panes"
+    ]
   },
   {
     "id": "4-esquinas",
@@ -605,7 +692,10 @@
       "open": "09:00",
       "close": "21:00",
       "label": "Todos los días · 9:00 am – 9:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Pizzas"
+    ]
   },
   {
     "id": "atrevete",
@@ -627,6 +717,9 @@
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Mercado"
+    ]
   }
 ]

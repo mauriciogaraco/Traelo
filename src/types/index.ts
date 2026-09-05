@@ -13,6 +13,20 @@ export type Category =
   | 'Ropa'
   | 'Electrónica'
 
+/** Categorías curadas para agrupar NEGOCIOS (distintas de `Category`, que agrupa productos). */
+export type BusinessCategory =
+  | 'Destacados'
+  | 'Restaurantes'
+  | 'Mercado'
+  | 'Pizzas'
+  | 'Bebidas'
+  | 'Helados'
+  | 'Panes'
+  | 'Asados'
+  | 'Dulces'
+  | 'Ropa'
+  | 'Ferretería'
+
 /** Horario de atención del negocio (para no permitir pedidos fuera de hora). */
 export interface BusinessSchedule {
   /** Días que abre: 0=Domingo … 6=Sábado. */
@@ -51,6 +65,8 @@ export interface Business {
   schedule: BusinessSchedule
   /** Bloque horario adicional para días con horario distinto (ej: domingo). */
   scheduleExtra?: BusinessSchedule
+  /** Categorías de negocio para la sección "Categorías" del bottom nav. */
+  businessCategories?: BusinessCategory[]
 }
 
 /** Agrego opcional (extra) que se puede sumar a un producto, ej: { name: 'Queso', price: 200 }. */
