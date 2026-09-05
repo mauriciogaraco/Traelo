@@ -717,9 +717,30 @@
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
-    },
-    "businessCategories": [
-      "Mercado"
-    ]
+    }
+  },
+  {
+    "id": "cocina-de-claudia",
+    "name": "La Cocina de Claudia",
+    "description": "La Cocina de Claudia — De mi cocina a tu mesa. Comida casera, panes y postres.",
+    "image": "/assets/images/business/La Cocina de Claudia.jpg",
+    "color": "from-rose-100 to-pink-50",
+    "paymentNote": "Mensajería 250 CUP · después de las 7:00 pm sube a 350 CUP.",
+    "deliveryFee": 250,
+    "businessCommission": 0,
+    "clientCommission": 4,
+    "schedule": {
+      "days": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        0
+      ],
+      "open": "12:30",
+      "close": "19:00",
+      "label": "Mar–Dom · 12:30 pm – 7:00 pm"
+    }
   }
 ]
