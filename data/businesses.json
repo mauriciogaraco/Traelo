@@ -742,6 +742,7 @@
       "open": "12:30",
       "close": "19:00",
       "label": "Mar–Dom · 12:30 pm – 7:00 pm"
-    }
+    },
+    "businessCategories": ["Restaurantes"]
   }
 ]
