@@ -13,6 +13,7 @@ import { ToastProvider } from "./context/ToastContext";
 import { CatalogProvider } from "./context/CatalogContext";
 import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
+import { CategoriesPage } from "./pages/CategoriesPage";
 import { ProductDetailPage } from "./pages/ProductDetailPage";
 import { CartPage } from "./pages/CartPage";
 import { CheckoutPage } from "./pages/CheckoutPage";
@@ -66,6 +67,7 @@ export default function App() {
         <AppShell>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/categorias" element={<CategoriesPage />} />
             <Route path="/producto/:id" element={<ProductDetailPage />} />
             <Route path="/carrito" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />

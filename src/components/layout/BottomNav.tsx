@@ -30,6 +30,25 @@ const navItems = [
     ),
   },
   {
+    to: "/categorias",
+    label: "Categorías",
+    icon: (active: boolean) => (
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill={active ? "currentColor" : "none"}
+        stroke="currentColor"
+        strokeWidth={active ? 0 : 1.8}
+      >
+        <rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1.8" />
+        <rect x="13" y="3.5" width="7.5" height="7.5" rx="1.8" />
+        <rect x="3.5" y="13" width="7.5" height="7.5" rx="1.8" />
+        <rect x="13" y="13" width="7.5" height="7.5" rx="1.8" />
+      </svg>
+    ),
+  },
+  {
     to: "/pedidos",
     label: "Pedidos",
     icon: (active: boolean) => (
