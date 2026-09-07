@@ -4204,7 +4204,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 500,
+      "price": 550,
       "stockStatus": "disponible"
     },
     {
@@ -4216,7 +4216,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 500,
+      "price": 550,
       "stockStatus": "disponible"
     },
     {
@@ -5211,7 +5211,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 500,
+      "price": 550,
       "stockStatus": "disponible"
     },
     {
@@ -5223,7 +5223,7 @@
       "shortDescription": "",
       "longDescription": "Se vende por unidad.",
       "image": "🥤",
-      "price": 500,
+      "price": 550,
       "stockStatus": "disponible"
     },
     {
@@ -13879,7 +13879,7 @@
       "longDescription": "Cartón de huevo, se vende por cartón.",
       "image": "🥚",
       "price": 4550,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-087",
@@ -14048,7 +14048,7 @@
       "image": "🫒",
       "photo": "/assets/images/products/DAF/aceite 1 Litro 3400 cup.jpg",
       "price": 3400,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-100",
@@ -14170,7 +14170,7 @@
       "image": "🍦",
       "photo": "/assets/images/products/DAF/paleticas Cid 580.jpg",
       "price": 580,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "em-001",
