@@ -726,7 +726,6 @@
     "description": "La Cocina de Claudia — De mi cocina a tu mesa. Comida casera, panes y postres.",
     "image": "/assets/images/business/La Cocina de Claudia.jpg",
     "color": "from-rose-100 to-pink-50",
-    "status": "cerrado",
     "paymentNote": "Mensajería 250 CUP · después de las 7:00 pm sube a 350 CUP.",
     "deliveryFee": 250,
     "businessCommission": 0,
