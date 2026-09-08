@@ -467,13 +467,14 @@
         0,
         1,
         2,
+        3,
         4,
         5,
         6
       ],
       "open": "10:00",
       "close": "21:00",
-      "label": "Lun, Mar, Jue, Vie, Sáb y Dom · 10:00 am – 9:00 pm"
+      "label": "Todos los días · 10:00 am – 9:00 pm"
     },
     "businessCategories": [
       "Bebidas"
