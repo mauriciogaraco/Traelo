@@ -36,7 +36,7 @@
     "image": "🍬",
     "photo": "/assets/images/products/DAF/Botonetas - 70.jpg",
     "price": 70,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-004",
@@ -205,7 +205,7 @@
     "image": "🍿",
     "photo": "/assets/images/products/DAF/Pelly Tigo Puff --650.jpg",
     "price": 650,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-017",
@@ -244,7 +244,7 @@
     "image": "🍭",
     "photo": "/assets/images/products/DAF/Sorbeto Mr.Bite 265.jpg",
     "price": 265,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-020",
@@ -608,7 +608,7 @@
     "image": "🧼",
     "photo": "/assets/images/products/DAF/Jabón de Lavar Rios -420.jpg",
     "price": 420,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-048",
@@ -777,7 +777,7 @@
     "image": "🧂",
     "photo": "/assets/images/products/DAF/Sal Marina ( por libra) --190.jpg",
     "price": 190,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-061",

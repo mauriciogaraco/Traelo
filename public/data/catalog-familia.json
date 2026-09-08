@@ -1048,7 +1048,7 @@
       "photo": "/assets/images/products/mercadito/pastilla_de_pollo_con_tomate.jpg",
       "price": 0.04,
       "formato": 12,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-028",
@@ -1060,9 +1060,9 @@
       "longDescription": "Se vende por cajas de 24 unidades",
       "image": "🍪",
       "photo": "/assets/images/products/mercadito/peter_neptun.jpg",
-      "price": 0.24,
+      "price": 0.36,
       "formato": 24,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-029",
@@ -1089,7 +1089,7 @@
       "photo": "/assets/images/products/mercadito/spaguetti.jpg",
       "price": 0.52,
       "formato": 20,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-031",
@@ -1101,7 +1101,7 @@
       "longDescription": "Se vende por blister de 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-      "price": 0.58,
+      "price": 0.6,
       "formato": 10,
       "stockStatus": "disponible"
     },
@@ -1115,7 +1115,7 @@
       "longDescription": "Se venden por blister 10 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-      "price": 0.8,
+      "price": 0.84,
       "formato": 10,
       "stockStatus": "disponible"
     },
@@ -1158,7 +1158,7 @@
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
       "price": 0.58,
       "formato": 10,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-039b",
@@ -1172,7 +1172,7 @@
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
       "price": 0.58,
       "formato": 10,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-043",
@@ -1224,7 +1224,7 @@
       "shortDescription": "Blister de 10 unidades.",
       "longDescription": "Vino seco, se vende por unidad.",
       "image": "🍷",
-      "price": 0.58,
+      "price": 0.6,
       "stockStatus": "disponible",
       "formato": 10
     },
@@ -1264,7 +1264,7 @@
       "longDescription": "Pote de margarina. Se vende por caja de 24 unidades.",
       "image": "🧈",
       "price": 1.06,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 24
     },
     {
@@ -1277,7 +1277,7 @@
       "longDescription": "Mayonesa Marwa. Se vende por blister de 12 unidades.",
       "image": "🫙",
       "price": 1.77,
-      "stockStatus": "disponible",
+      "stockStatus": "agotado",
       "formato": 12
     },
     {
@@ -1526,6 +1526,19 @@
       "price": 5.5,
       "stockStatus": "disponible",
       "formato": 12
+    },
+    {
+      "id": "bc-071",
+      "name": "Whisky Old Partner",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Bebidas",
+      "shortDescription": "Se vende por cajas de 6 unidades.",
+      "longDescription": "Whisky Old Partner, se vende por cajas de 6 unidades.",
+      "image": "🥃",
+      "price": 5.6,
+      "formato": 6,
+      "stockStatus": "disponible"
     },
     {
       "id": "dlm-001",
@@ -3059,7 +3072,7 @@
       "shortDescription": "Pan con jamón.",
       "longDescription": "Pan con jamón recién preparado.",
       "image": "🥪",
-      "price": 0.68,
+      "price": 0.7,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3105,7 +3118,7 @@
       "shortDescription": "Jamón y queso.",
       "longDescription": "Pan con jamón y queso.",
       "image": "🥪",
-      "price": 0.78,
+      "price": 0.8,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3197,7 +3210,7 @@
       "shortDescription": "Especialidad de la casa.",
       "longDescription": "Pan Macu preparado al momento.",
       "image": "🥪",
-      "price": 1.4,
+      "price": 1.5,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3244,7 +3257,7 @@
       "longDescription": "Versión especial del Macu con ingredientes premium.",
       "image": "🥪",
       "photo": "/assets/images/products/Macus/pan_macu.jpg",
-      "price": 2.84,
+      "price": 3.1,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3290,7 +3303,7 @@
       "shortDescription": "Aporreado tradicional.",
       "longDescription": "Pan con aporreado recién preparado.",
       "image": "🥪",
-      "price": 0.8,
+      "price": 0.9,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3336,7 +3349,7 @@
       "shortDescription": "Picadillo preparado.",
       "longDescription": "Pan con picadillo.",
       "image": "🥪",
-      "price": 0.42,
+      "price": 0.5,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3428,7 +3441,7 @@
       "shortDescription": "Versión especial.",
       "longDescription": "Pan surtido especial.",
       "image": "🥪",
-      "price": 1.5,
+      "price": 1.6,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3520,7 +3533,7 @@
       "shortDescription": "Versión especial.",
       "longDescription": "Pan con jamón y queso especial.",
       "image": "🥪",
-      "price": 1.1,
+      "price": 1.2,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3704,7 +3717,7 @@
       "shortDescription": "Mortadella.",
       "longDescription": "Pan con mortadella.",
       "image": "🥪",
-      "price": 0.64,
+      "price": 0.7,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3796,7 +3809,7 @@
       "shortDescription": "Bistec de cerdo.",
       "longDescription": "Pan con bistec de cerdo.",
       "image": "🥩",
-      "price": 1.7,
+      "price": 1.8,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -3980,7 +3993,7 @@
       "shortDescription": "Pan especial imperial",
       "longDescription": "",
       "image": "🥪",
-      "price": 2.8,
+      "price": 3,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -4072,7 +4085,7 @@
       "shortDescription": "Pan con lechón.",
       "longDescription": "Pan con lechonazo recién preparado.",
       "image": "🥩",
-      "price": 2.6,
+      "price": 3,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -4164,7 +4177,7 @@
       "shortDescription": "Carne asada.",
       "longDescription": "Pan con carne asada recién preparada.",
       "image": "🥩",
-      "price": 1.5,
+      "price": 1.7,
       "addons": [
         {
           "name": "Hamburguesa",
@@ -12809,7 +12822,7 @@
       "image": "🍬",
       "photo": "/assets/images/products/DAF/Botonetas - 70.jpg",
       "price": 0.14,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-004",
@@ -12978,7 +12991,7 @@
       "image": "🍿",
       "photo": "/assets/images/products/DAF/Pelly Tigo Puff --650.jpg",
       "price": 1.3,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-017",
@@ -13017,7 +13030,7 @@
       "image": "🍭",
       "photo": "/assets/images/products/DAF/Sorbeto Mr.Bite 265.jpg",
       "price": 0.53,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-020",
@@ -13381,7 +13394,7 @@
       "image": "🧼",
       "photo": "/assets/images/products/DAF/Jabón de Lavar Rios -420.jpg",
       "price": 0.84,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-048",
@@ -13550,7 +13563,7 @@
       "image": "🧂",
       "photo": "/assets/images/products/DAF/Sal Marina ( por libra) --190.jpg",
       "price": 0.38,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-061",

@@ -124,7 +124,7 @@
     "photo": "/assets/images/products/mercadito/pastilla_de_pollo_con_tomate.jpg",
     "price": 20,
     "formato": 12,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-028",
@@ -136,9 +136,9 @@
     "longDescription": "Se vende por cajas de 24 unidades",
     "image": "🍪",
     "photo": "/assets/images/products/mercadito/peter_neptun.jpg",
-    "price": 120,
+    "price": 180,
     "formato": 24,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-029",
@@ -165,7 +165,7 @@
     "photo": "/assets/images/products/mercadito/spaguetti.jpg",
     "price": 260,
     "formato": 20,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-031",
@@ -177,7 +177,7 @@
     "longDescription": "Se vende por blister de 10 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-    "price": 290,
+    "price": 300,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -191,7 +191,7 @@
     "longDescription": "Se venden por blister 10 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-    "price": 400,
+    "price": 420,
     "formato": 10,
     "stockStatus": "disponible"
   },
@@ -234,7 +234,7 @@
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
     "price": 290,
     "formato": 10,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-039b",
@@ -248,7 +248,7 @@
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
     "price": 290,
     "formato": 10,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-043",
@@ -300,7 +300,7 @@
     "shortDescription": "Blister de 10 unidades.",
     "longDescription": "Vino seco, se vende por unidad.",
     "image": "🍷",
-    "price": 290,
+    "price": 300,
     "stockStatus": "disponible",
     "formato": 10
   },
@@ -340,7 +340,7 @@
     "longDescription": "Pote de margarina. Se vende por caja de 24 unidades.",
     "image": "🧈",
     "price": 530,
-    "stockStatus": "disponible",
+    "stockStatus": "agotado",
     "formato": 24
   },
   {
@@ -353,7 +353,7 @@
     "longDescription": "Mayonesa Marwa. Se vende por blister de 12 unidades.",
     "image": "🫙",
     "price": 885,
-    "stockStatus": "disponible",
+    "stockStatus": "agotado",
     "formato": 12
   },
   {
@@ -602,5 +602,18 @@
     "price": 2750,
     "stockStatus": "disponible",
     "formato": 12
+  },
+  {
+    "id": "bc-071",
+    "name": "Whisky Old Partner",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por cajas de 6 unidades.",
+    "longDescription": "Whisky Old Partner, se vende por cajas de 6 unidades.",
+    "image": "🥃",
+    "price": 2800,
+    "formato": 6,
+    "stockStatus": "disponible"
   }
 ]
