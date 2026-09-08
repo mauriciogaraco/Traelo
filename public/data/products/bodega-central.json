@@ -1,18 +1,5 @@
 [
   {
-    "id": "bc-001",
-    "name": "Avena con leche",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "Lista para preparar.",
-    "longDescription": "Avena con leche, se vende por unidad.",
-    "image": "🥣",
-    "photo": "/assets/images/products/mercadito/avena.jpg",
-    "price": 2100,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-002",
     "name": "Chicharrones de viento",
     "businessId": "bodega-central",
@@ -26,55 +13,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-003",
-    "name": "Shaka (vodka energético)",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "Caja de 24 unidades.",
-    "longDescription": "Llévate la caja de 24 unidades y disfruta del sabor que todos aman.",
-    "image": "🥤",
-    "photo": "/assets/images/products/mercadito/shaka.jpg",
-    "price": 400,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-004",
-    "name": "Refresco Cana",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "Elige una opción para añadir al carrito",
-    "longDescription": "Excelente calidad. Se vende por blister de 12 unidades. Contiene 420ml",
-    "image": "🥤",
-    "photo": "/assets/images/products/mercadito/refresco_cana_cola.jpg",
-    "price": 240,
-    "formato": 12,
-    "options": [
-      "Cola",
-      "Uva",
-      "Limón",
-      "Naranja",
-      "Frambuesa"
-    ],
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-005",
-    "name": "Papel sanitario",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Extra suave.",
-    "longDescription": "Se vende por paca de 24 unidades.",
-    "image": "🧻",
-    "photo": "/assets/images/products/mercadito/papel_higienico.jpg",
-    "price": 470,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-008",
     "name": "Botonetas",
     "businessId": "bodega-central",
@@ -84,7 +22,7 @@
     "longDescription": "Se venden por tira de 24 unidades.",
     "image": "🧀",
     "photo": "/assets/images/products/mercadito/botonetas.jpg",
-    "price": 45,
+    "price": 62,
     "formato": 24,
     "stockStatus": "agotado"
   },
@@ -100,32 +38,6 @@
     "photo": "/assets/images/products/mercadito/chups_chups.jpg",
     "price": 25,
     "formato": 48,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-010",
-    "name": "Culeros Bebish",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Pañales desechables.",
-    "longDescription": "Se vende por unidad.",
-    "image": "🧷",
-    "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-    "price": 3480,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-012",
-    "name": "Bambil",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "",
-    "longDescription": "Se vende por unidad.",
-    "image": "🧃",
-    "photo": "/assets/images/products/mercadito/bambil.jpg",
-    "price": 250,
     "stockStatus": "disponible"
   },
   {
@@ -173,76 +85,6 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "bc-017",
-    "name": "Frijoles negros",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "500 gramos.",
-    "longDescription": "Se vende por unidad",
-    "image": "🫘",
-    "photo": "/assets/images/products/mercadito/frijoles.jpg",
-    "price": 400,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-018",
-    "name": "Gelatina",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "",
-    "longDescription": "Se vende por unidad.",
-    "image": "🍮",
-    "photo": "/assets/images/products/mercadito/gelatina.jpg",
-    "price": 300,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-019",
-    "name": "Gelatina en pomo",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "Lista para comer.",
-    "longDescription": "Gelatina en pomo. Se vende por pomos de 100 unidades",
-    "image": "🍮",
-    "photo": "/assets/images/products/mercadito/gelatina_pomo.jpg",
-    "price": 3100,
-    "options": [
-      "Pingüino",
-      "Mono"
-    ],
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-020",
-    "name": "Diarias",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "",
-    "longDescription": "Se vende por unidad.",
-    "image": "🧻",
-    "photo": "/assets/images/products/mercadito/intimas.jpg",
-    "price": 580,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-022",
-    "name": "Jugos Petit",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "El mejor jugo del mercado",
-    "longDescription": "Se vende por cajas de 24 unidades, viene surtido los 3 sabores en la caja",
-    "image": "🧃",
-    "photo": "/assets/images/products/mercadito/jugos_petit.jpg",
-    "price": 200,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-023",
     "name": "Galletas Jumbo",
     "businessId": "bodega-central",
@@ -254,19 +96,6 @@
     "photo": "/assets/images/products/mercadito/jumbo.jpg",
     "price": 75,
     "formato": 12,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-024",
-    "name": "Lavavajillas",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Pote Lavavajillas",
-    "longDescription": "Lavavajillas líquido. Se vende por unidad.",
-    "image": "🧴",
-    "photo": "/assets/images/products/mercadito/lavavajillas.jpg",
-    "price": 500,
     "stockStatus": "agotado"
   },
   {
@@ -284,20 +113,6 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "bc-026",
-    "name": "Pastilla para congrí",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "Sazón en pastilla.",
-    "longDescription": "Se vende por caja de 48 pastillitas",
-    "image": "🧂",
-    "photo": "/assets/images/products/mercadito/pastillaCongrís.jpg",
-    "price": 50,
-    "formato": 48,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "bc-027",
     "name": "Pastilla de pollo con tomate",
     "businessId": "bodega-central",
@@ -309,7 +124,7 @@
     "photo": "/assets/images/products/mercadito/pastilla_de_pollo_con_tomate.jpg",
     "price": 20,
     "formato": 12,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-028",
@@ -321,9 +136,9 @@
     "longDescription": "Se vende por cajas de 24 unidades",
     "image": "🍪",
     "photo": "/assets/images/products/mercadito/peter_neptun.jpg",
-    "price": 120,
+    "price": 180,
     "formato": 24,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-029",
@@ -350,7 +165,7 @@
     "photo": "/assets/images/products/mercadito/spaguetti.jpg",
     "price": 260,
     "formato": 20,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-031",
@@ -362,26 +177,9 @@
     "longDescription": "Se vende por blister de 10 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-    "price": 290,
+    "price": 300,
     "formato": 10,
     "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-032",
-    "name": "Yogurt Vima",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "x4",
-    "longDescription": " Se vende por estuche de 4 vasitos",
-    "image": "🥛",
-    "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
-    "price": 800,
-    "options": [
-      "Fresa",
-      "Natural"
-    ],
-    "stockStatus": "agotado"
   },
   {
     "id": "bc-033",
@@ -393,22 +191,9 @@
     "longDescription": "Se venden por blister 10 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-    "price": 400,
+    "price": 420,
     "formato": 10,
     "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-034",
-    "name": "Toallitas Húmedas",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Toallitas húmedas para el cuidado personal",
-    "longDescription": "Se venden por unnidad.",
-    "image": "🧴",
-    "photo": "/assets/images/products/mercadito/toallitas_indoxa.jpg",
-    "price": 620,
-    "stockStatus": "agotado"
   },
   {
     "id": "bc-035",
@@ -438,19 +223,6 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "bc-038",
-    "name": "Queso criollo",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "",
-    "longDescription": "Se vende por libra",
-    "image": "🧀",
-    "photo": "/assets/images/products/mercadito/queso_criollo.jpg",
-    "price": 750,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-039",
     "name": "Zumo de Naranja",
     "businessId": "bodega-central",
@@ -462,7 +234,7 @@
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
     "price": 290,
     "formato": 10,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-039b",
@@ -476,21 +248,7 @@
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
     "price": 290,
     "formato": 10,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-042",
-    "name": "Leche condensada",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "",
-    "longDescription": "Se vende por caja de 24 unidades",
-    "image": "🍚",
-    "photo": "/assets/images/products/mercadito/leche_condensada.jpg",
-    "price": 650,
-    "formato": 24,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-043",
@@ -503,7 +261,7 @@
     "image": "🍚",
     "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
     "price": 31000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-044",
@@ -542,7 +300,7 @@
     "shortDescription": "Blister de 10 unidades.",
     "longDescription": "Vino seco, se vende por unidad.",
     "image": "🍷",
-    "price": 290,
+    "price": 300,
     "stockStatus": "disponible",
     "formato": 10
   },
@@ -582,7 +340,7 @@
     "longDescription": "Pote de margarina. Se vende por caja de 24 unidades.",
     "image": "🧈",
     "price": 530,
-    "stockStatus": "disponible",
+    "stockStatus": "agotado",
     "formato": 24
   },
   {
@@ -595,7 +353,267 @@
     "longDescription": "Mayonesa Marwa. Se vende por blister de 12 unidades.",
     "image": "🫙",
     "price": 885,
+    "stockStatus": "agotado",
+    "formato": 12
+  },
+  {
+    "id": "bc-053",
+    "name": "Medallitas de Chocolate",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Pomo de 125 unidades.",
+    "longDescription": "Medallitas de chocolate Pepe Super Coins. Se vende por pomo de 125 unidades.",
+    "image": "🍫",
+    "photo": "/assets/images/products/mercadito/Medallitas de chocolate , el pomo de 125 a 5000 cup.jpg",
+    "price": 5000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-054",
+    "name": "Arroz Guyanés (Saco 45 kg)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Saco de 45 kg.",
+    "longDescription": "Arroz guyanés, saco de 45 kg.",
+    "image": "🍚",
+    "photo": "/assets/images/products/mercadito/arroz guyanés , 29100 cup 45 kg.jpg",
+    "price": 29100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-055",
+    "name": "Cubitos de Pollo Marwa",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Caja de 60 unidades.",
+    "longDescription": "Cubitos de pollo Marwa. Se vende por caja de 60 unidades.",
+    "image": "🧂",
+    "photo": "/assets/images/products/mercadito/cubitos de pollo marwa a 27 cupse vende por caja de 60 unidades.jpg",
+    "price": 27,
+    "stockStatus": "disponible",
+    "formato": 60
+  },
+  {
+    "id": "bc-056",
+    "name": "Culeros Babexi (3ra Etapa)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Aseo",
+    "shortDescription": "Pañales desechables.",
+    "longDescription": "Culeros Babexi Premium, 3ra etapa.",
+    "image": "🧷",
+    "photo": "/assets/images/products/mercadito/culeros Babexi 3ra etapa , 3480 cup.jpg",
+    "price": 3480,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-057",
+    "name": "Donas Dulce (Sabor Chocolate)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Donas Dulce, sabor chocolate. Se vende por unidad.",
+    "image": "🍩",
+    "photo": "/assets/images/products/mercadito/donas.jpg 180 cup.jpg",
+    "price": 180,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-058",
+    "name": "Galletas Biscuit (Chocolate)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Caja de 24 unidades.",
+    "longDescription": "Galletas Dulce Chocolate Biscuit. Se vende por caja de 24 unidades.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas biscuit a 185 se vende por cajas de 24 unidades.jpg",
+    "price": 185,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-059",
+    "name": "Galletas Borbón",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Estuche de 12 unidades.",
+    "longDescription": "Galletas Borbón bañadas en chocolate. Se vende por estuche de 12 unidades.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas borbón a 1020 cup el estuche de 12 unidades.jpg",
+    "price": 1020,
     "stockStatus": "disponible",
     "formato": 12
+  },
+  {
+    "id": "bc-060",
+    "name": "Galletas Marie Biscuit",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Caja de 24 unidades.",
+    "longDescription": "Galletas Dulce Marie Biscuit. Se vende por caja de 24 unidades.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas marie biscuit a 360 cup se vende por cajas de 24 unidades.jpg",
+    "price": 360,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-061",
+    "name": "Galletas Saltinas",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Estuche de 9 paqueticos.",
+    "longDescription": "Galletas Saltinas Nestlé. Se vende por estuche de 9 paqueticos.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas saltinas, por estuche de 9  paqueticos a 940 cup.jpg",
+    "price": 940,
+    "stockStatus": "disponible",
+    "formato": 9
+  },
+  {
+    "id": "bc-062",
+    "name": "Jugos Twist",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Bebidas",
+    "shortDescription": "Sabor manzana y melocotón. Caja de 27 unidades.",
+    "longDescription": "Jugos Twist, sabor manzana y melocotón. Se vende por caja de 27 unidades.",
+    "image": "🧃",
+    "photo": "/assets/images/products/mercadito/jugos twist a 240 cup se vende por cajas de 27 unidades (sabor manzana y melocotón).jpg",
+    "price": 240,
+    "stockStatus": "disponible",
+    "formato": 27
+  },
+  {
+    "id": "bc-063",
+    "name": "Nutella Marwa",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Caja de 12 unidades.",
+    "longDescription": "Crema de cacao Nutella Marwa. Se vende por caja de 12 unidades.",
+    "image": "🍫",
+    "photo": "/assets/images/products/mercadito/nutella Marwa a 1010 cup (se vende por cajas de 12 unidades.jpg",
+    "price": 1010,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-064",
+    "name": "Pasta de Tomate (850 g)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "850 gramos. Caja de 12 unidades.",
+    "longDescription": "Pasta de tomate Mansana Roja, 850 gramos. Se vende por caja de 12 unidades.",
+    "image": "🍅",
+    "photo": "/assets/images/products/mercadito/pasta de tomate 900 cup 850 gramos, se vende por caja de 12 unidades.jpg",
+    "price": 900,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-065",
+    "name": "Pasta de Tomate Marwa (400 g)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "400 gramos. Caja de 24 unidades.",
+    "longDescription": "Pasta de tomate Marwa, 400 gramos. Se vende por caja de 24 unidades.",
+    "image": "🍅",
+    "photo": "/assets/images/products/mercadito/pasta de tomate marwa .400 g 645 cup , se vende por cajas de 24 unidades.jpg",
+    "price": 645,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-066",
+    "name": "Sazón Tropical",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Tira de 12 unidades.",
+    "longDescription": "Sazón Tropical. Se vende por tira de 12 unidades.",
+    "image": "🧂",
+    "photo": "/assets/images/products/mercadito/sazón tropical 625 cup la tira de 12 unidades.jpg",
+    "price": 625,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-067",
+    "name": "Sazón Tropical Marrón",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Tira de 12 unidades.",
+    "longDescription": "Sazón Tropical, variante marrón. Se vende por tira de 12 unidades.",
+    "image": "🧂",
+    "photo": "/assets/images/products/mercadito/sazón tropical marroón a 670 la tira de 12 unidades.jpg",
+    "price": 670,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-068",
+    "name": "Sopa Instantánea Marwa",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Sabor res y pollo. Caja de 24 unidades.",
+    "longDescription": "Sopa instantánea Marwa, sabor res y pollo. Se vende por caja de 24 unidades.",
+    "image": "🍜",
+    "photo": "/assets/images/products/mercadito/sopa de res a 215 cup , se vende por caja de 24 unidades (sabor res y pollo).jpg",
+    "price": 215,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-069",
+    "name": "Toallitas Húmedas",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 120 unidades.",
+    "longDescription": "Toallitas húmedas Puggy, paquete de 120 unidades.",
+    "image": "🧻",
+    "photo": "/assets/images/products/mercadito/toallitas húmedas a 680 cup.jpg",
+    "price": 680,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-070",
+    "name": "Whisky Chanceler Golden Label",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Bebidas",
+    "shortDescription": "Botella de 1 litro. Caja de 12 unidades.",
+    "longDescription": "Whisky Chanceler Golden Label, botella de 1 litro. Se vende por caja de 12 unidades.",
+    "image": "🥃",
+    "photo": "/assets/images/products/mercadito/wisky chancelier a 2750 cup se vende por cajas de 12 unidades.jpg",
+    "price": 2750,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-071",
+    "name": "Whisky Old Partner",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por cajas de 6 unidades.",
+    "longDescription": "Whisky Old Partner, se vende por cajas de 6 unidades.",
+    "image": "🥃",
+    "price": 2800,
+    "formato": 6,
+    "stockStatus": "disponible"
   }
 ]

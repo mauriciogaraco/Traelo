@@ -8,7 +8,7 @@
     "shortDescription": "Pan con jamón.",
     "longDescription": "Pan con jamón recién preparado.",
     "image": "🥪",
-    "price": 340,
+    "price": 350,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -54,7 +54,7 @@
     "shortDescription": "Jamón y queso.",
     "longDescription": "Pan con jamón y queso.",
     "image": "🥪",
-    "price": 390,
+    "price": 400,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -146,7 +146,7 @@
     "shortDescription": "Especialidad de la casa.",
     "longDescription": "Pan Macu preparado al momento.",
     "image": "🥪",
-    "price": 700,
+    "price": 750,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -193,7 +193,7 @@
     "longDescription": "Versión especial del Macu con ingredientes premium.",
     "image": "🥪",
     "photo": "/assets/images/products/Macus/pan_macu.jpg",
-    "price": 1420,
+    "price": 1550,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -239,7 +239,7 @@
     "shortDescription": "Aporreado tradicional.",
     "longDescription": "Pan con aporreado recién preparado.",
     "image": "🥪",
-    "price": 400,
+    "price": 450,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -285,7 +285,7 @@
     "shortDescription": "Picadillo preparado.",
     "longDescription": "Pan con picadillo.",
     "image": "🥪",
-    "price": 210,
+    "price": 250,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -377,7 +377,7 @@
     "shortDescription": "Versión especial.",
     "longDescription": "Pan surtido especial.",
     "image": "🥪",
-    "price": 750,
+    "price": 800,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -469,7 +469,7 @@
     "shortDescription": "Versión especial.",
     "longDescription": "Pan con jamón y queso especial.",
     "image": "🥪",
-    "price": 550,
+    "price": 600,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -653,7 +653,7 @@
     "shortDescription": "Mortadella.",
     "longDescription": "Pan con mortadella.",
     "image": "🥪",
-    "price": 320,
+    "price": 350,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -745,7 +745,7 @@
     "shortDescription": "Bistec de cerdo.",
     "longDescription": "Pan con bistec de cerdo.",
     "image": "🥩",
-    "price": 850,
+    "price": 900,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -929,7 +929,7 @@
     "shortDescription": "Pan especial imperial",
     "longDescription": "",
     "image": "🥪",
-    "price": 1400,
+    "price": 1500,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -1021,7 +1021,7 @@
     "shortDescription": "Pan con lechón.",
     "longDescription": "Pan con lechonazo recién preparado.",
     "image": "🥩",
-    "price": 1300,
+    "price": 1500,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -1113,7 +1113,7 @@
     "shortDescription": "Carne asada.",
     "longDescription": "Pan con carne asada recién preparada.",
     "image": "🥩",
-    "price": 750,
+    "price": 850,
     "addons": [
       {
         "name": "Hamburguesa",

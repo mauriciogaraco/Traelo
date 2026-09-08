@@ -159,18 +159,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-001",
-    "name": "Avena con leche",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "Lista para preparar.",
-    "image": "🥣",
-    "photo": "/assets/images/products/mercadito/avena.jpg",
-    "price": 2100,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-002",
     "name": "Chicharrones de viento",
     "businessId": "bodega-central",
@@ -183,52 +171,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-003",
-    "name": "Shaka (vodka energético)",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "Caja de 24 unidades.",
-    "image": "🥤",
-    "photo": "/assets/images/products/mercadito/shaka.jpg",
-    "price": 400,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-004",
-    "name": "Refresco Cana",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "Elige una opción para añadir al carrito",
-    "image": "🥤",
-    "photo": "/assets/images/products/mercadito/refresco_cana_cola.jpg",
-    "price": 240,
-    "formato": 12,
-    "options": [
-      "Cola",
-      "Uva",
-      "Limón",
-      "Naranja",
-      "Frambuesa"
-    ],
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-005",
-    "name": "Papel sanitario",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Extra suave.",
-    "image": "🧻",
-    "photo": "/assets/images/products/mercadito/papel_higienico.jpg",
-    "price": 470,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-008",
     "name": "Botonetas",
     "businessId": "bodega-central",
@@ -237,7 +179,7 @@
     "shortDescription": "Tira de 24 unidades.",
     "image": "🧀",
     "photo": "/assets/images/products/mercadito/botonetas.jpg",
-    "price": 45,
+    "price": 62,
     "formato": 24,
     "stockStatus": "agotado"
   },
@@ -252,30 +194,6 @@
     "photo": "/assets/images/products/mercadito/chups_chups.jpg",
     "price": 25,
     "formato": 48,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-010",
-    "name": "Culeros Bebish",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Pañales desechables.",
-    "image": "🧷",
-    "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-    "price": 3480,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-012",
-    "name": "Bambil",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "",
-    "image": "🧃",
-    "photo": "/assets/images/products/mercadito/bambil.jpg",
-    "price": 250,
     "stockStatus": "disponible"
   },
   {
@@ -320,71 +238,6 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "bc-017",
-    "name": "Frijoles negros",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "500 gramos.",
-    "image": "🫘",
-    "photo": "/assets/images/products/mercadito/frijoles.jpg",
-    "price": 400,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-018",
-    "name": "Gelatina",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "",
-    "image": "🍮",
-    "photo": "/assets/images/products/mercadito/gelatina.jpg",
-    "price": 300,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-019",
-    "name": "Gelatina en pomo",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "Lista para comer.",
-    "image": "🍮",
-    "photo": "/assets/images/products/mercadito/gelatina_pomo.jpg",
-    "price": 3100,
-    "options": [
-      "Pingüino",
-      "Mono"
-    ],
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-020",
-    "name": "Diarias",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "",
-    "image": "🧻",
-    "photo": "/assets/images/products/mercadito/intimas.jpg",
-    "price": 580,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-022",
-    "name": "Jugos Petit",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "El mejor jugo del mercado",
-    "image": "🧃",
-    "photo": "/assets/images/products/mercadito/jugos_petit.jpg",
-    "price": 200,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-023",
     "name": "Galletas Jumbo",
     "businessId": "bodega-central",
@@ -395,18 +248,6 @@
     "photo": "/assets/images/products/mercadito/jumbo.jpg",
     "price": 75,
     "formato": 12,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-024",
-    "name": "Lavavajillas",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Pote Lavavajillas",
-    "image": "🧴",
-    "photo": "/assets/images/products/mercadito/lavavajillas.jpg",
-    "price": 500,
     "stockStatus": "agotado"
   },
   {
@@ -423,19 +264,6 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "bc-026",
-    "name": "Pastilla para congrí",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "Sazón en pastilla.",
-    "image": "🧂",
-    "photo": "/assets/images/products/mercadito/pastillaCongrís.jpg",
-    "price": 50,
-    "formato": 48,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "bc-027",
     "name": "Pastilla de pollo con tomate",
     "businessId": "bodega-central",
@@ -446,7 +274,7 @@
     "photo": "/assets/images/products/mercadito/pastilla_de_pollo_con_tomate.jpg",
     "price": 20,
     "formato": 12,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-028",
@@ -457,9 +285,9 @@
     "shortDescription": "",
     "image": "🍪",
     "photo": "/assets/images/products/mercadito/peter_neptun.jpg",
-    "price": 120,
+    "price": 180,
     "formato": 24,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-029",
@@ -484,7 +312,7 @@
     "photo": "/assets/images/products/mercadito/spaguetti.jpg",
     "price": 260,
     "formato": 20,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-031",
@@ -495,25 +323,9 @@
     "shortDescription": "Pomo de 1 litro.",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/Vinagre.jpg",
-    "price": 290,
+    "price": 300,
     "formato": 10,
     "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-032",
-    "name": "Yogurt Vima",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "x4",
-    "image": "🥛",
-    "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
-    "price": 800,
-    "options": [
-      "Fresa",
-      "Natural"
-    ],
-    "stockStatus": "agotado"
   },
   {
     "id": "bc-033",
@@ -524,21 +336,9 @@
     "shortDescription": "Detergente líquido multiuso",
     "image": "🧴",
     "photo": "/assets/images/products/mercadito/detergente_liquido.jpg",
-    "price": 400,
+    "price": 420,
     "formato": 10,
     "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-034",
-    "name": "Toallitas Húmedas",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Toallitas húmedas para el cuidado personal",
-    "image": "🧴",
-    "photo": "/assets/images/products/mercadito/toallitas_indoxa.jpg",
-    "price": 620,
-    "stockStatus": "agotado"
   },
   {
     "id": "bc-035",
@@ -566,18 +366,6 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "bc-038",
-    "name": "Queso criollo",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "",
-    "image": "🧀",
-    "photo": "/assets/images/products/mercadito/queso_criollo.jpg",
-    "price": 750,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-039",
     "name": "Zumo de Naranja",
     "businessId": "bodega-central",
@@ -588,7 +376,7 @@
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
     "price": 290,
     "formato": 10,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-039b",
@@ -601,20 +389,7 @@
     "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
     "price": 290,
     "formato": 10,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-042",
-    "name": "Leche condensada",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "",
-    "image": "🍚",
-    "photo": "/assets/images/products/mercadito/leche_condensada.jpg",
-    "price": 650,
-    "formato": 24,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-043",
@@ -626,7 +401,7 @@
     "image": "🍚",
     "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
     "price": 31000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-044",
@@ -662,7 +437,7 @@
     "category": "Bebidas",
     "shortDescription": "Blister de 10 unidades.",
     "image": "🍷",
-    "price": 290,
+    "price": 300,
     "stockStatus": "disponible",
     "formato": 10
   },
@@ -699,7 +474,7 @@
     "shortDescription": "Caja de 24 unidades.",
     "image": "🧈",
     "price": 530,
-    "stockStatus": "disponible",
+    "stockStatus": "agotado",
     "formato": 24
   },
   {
@@ -711,8 +486,249 @@
     "shortDescription": "Blister de 12 unidades.",
     "image": "🫙",
     "price": 885,
+    "stockStatus": "agotado",
+    "formato": 12
+  },
+  {
+    "id": "bc-053",
+    "name": "Medallitas de Chocolate",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Pomo de 125 unidades.",
+    "image": "🍫",
+    "photo": "/assets/images/products/mercadito/Medallitas de chocolate , el pomo de 125 a 5000 cup.jpg",
+    "price": 5000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-054",
+    "name": "Arroz Guyanés (Saco 45 kg)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Saco de 45 kg.",
+    "image": "🍚",
+    "photo": "/assets/images/products/mercadito/arroz guyanés , 29100 cup 45 kg.jpg",
+    "price": 29100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-055",
+    "name": "Cubitos de Pollo Marwa",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Caja de 60 unidades.",
+    "image": "🧂",
+    "photo": "/assets/images/products/mercadito/cubitos de pollo marwa a 27 cupse vende por caja de 60 unidades.jpg",
+    "price": 27,
+    "stockStatus": "disponible",
+    "formato": 60
+  },
+  {
+    "id": "bc-056",
+    "name": "Culeros Babexi (3ra Etapa)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Aseo",
+    "shortDescription": "Pañales desechables.",
+    "image": "🧷",
+    "photo": "/assets/images/products/mercadito/culeros Babexi 3ra etapa , 3480 cup.jpg",
+    "price": 3480,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-057",
+    "name": "Donas Dulce (Sabor Chocolate)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍩",
+    "photo": "/assets/images/products/mercadito/donas.jpg 180 cup.jpg",
+    "price": 180,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-058",
+    "name": "Galletas Biscuit (Chocolate)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Caja de 24 unidades.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas biscuit a 185 se vende por cajas de 24 unidades.jpg",
+    "price": 185,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-059",
+    "name": "Galletas Borbón",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Estuche de 12 unidades.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas borbón a 1020 cup el estuche de 12 unidades.jpg",
+    "price": 1020,
     "stockStatus": "disponible",
     "formato": 12
+  },
+  {
+    "id": "bc-060",
+    "name": "Galletas Marie Biscuit",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Caja de 24 unidades.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas marie biscuit a 360 cup se vende por cajas de 24 unidades.jpg",
+    "price": 360,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-061",
+    "name": "Galletas Saltinas",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Estuche de 9 paqueticos.",
+    "image": "🍪",
+    "photo": "/assets/images/products/mercadito/galletas saltinas, por estuche de 9  paqueticos a 940 cup.jpg",
+    "price": 940,
+    "stockStatus": "disponible",
+    "formato": 9
+  },
+  {
+    "id": "bc-062",
+    "name": "Jugos Twist",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Bebidas",
+    "shortDescription": "Sabor manzana y melocotón. Caja de 27 unidades.",
+    "image": "🧃",
+    "photo": "/assets/images/products/mercadito/jugos twist a 240 cup se vende por cajas de 27 unidades (sabor manzana y melocotón).jpg",
+    "price": 240,
+    "stockStatus": "disponible",
+    "formato": 27
+  },
+  {
+    "id": "bc-063",
+    "name": "Nutella Marwa",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Confituras",
+    "shortDescription": "Caja de 12 unidades.",
+    "image": "🍫",
+    "photo": "/assets/images/products/mercadito/nutella Marwa a 1010 cup (se vende por cajas de 12 unidades.jpg",
+    "price": 1010,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-064",
+    "name": "Pasta de Tomate (850 g)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "850 gramos. Caja de 12 unidades.",
+    "image": "🍅",
+    "photo": "/assets/images/products/mercadito/pasta de tomate 900 cup 850 gramos, se vende por caja de 12 unidades.jpg",
+    "price": 900,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-065",
+    "name": "Pasta de Tomate Marwa (400 g)",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "400 gramos. Caja de 24 unidades.",
+    "image": "🍅",
+    "photo": "/assets/images/products/mercadito/pasta de tomate marwa .400 g 645 cup , se vende por cajas de 24 unidades.jpg",
+    "price": 645,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-066",
+    "name": "Sazón Tropical",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Tira de 12 unidades.",
+    "image": "🧂",
+    "photo": "/assets/images/products/mercadito/sazón tropical 625 cup la tira de 12 unidades.jpg",
+    "price": 625,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-067",
+    "name": "Sazón Tropical Marrón",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Tira de 12 unidades.",
+    "image": "🧂",
+    "photo": "/assets/images/products/mercadito/sazón tropical marroón a 670 la tira de 12 unidades.jpg",
+    "price": 670,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-068",
+    "name": "Sopa Instantánea Marwa",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Alimentos",
+    "shortDescription": "Sabor res y pollo. Caja de 24 unidades.",
+    "image": "🍜",
+    "photo": "/assets/images/products/mercadito/sopa de res a 215 cup , se vende por caja de 24 unidades (sabor res y pollo).jpg",
+    "price": 215,
+    "stockStatus": "disponible",
+    "formato": 24
+  },
+  {
+    "id": "bc-069",
+    "name": "Toallitas Húmedas",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 120 unidades.",
+    "image": "🧻",
+    "photo": "/assets/images/products/mercadito/toallitas húmedas a 680 cup.jpg",
+    "price": 680,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "bc-070",
+    "name": "Whisky Chanceler Golden Label",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Bebidas",
+    "shortDescription": "Botella de 1 litro. Caja de 12 unidades.",
+    "image": "🥃",
+    "photo": "/assets/images/products/mercadito/wisky chancelier a 2750 cup se vende por cajas de 12 unidades.jpg",
+    "price": 2750,
+    "stockStatus": "disponible",
+    "formato": 12
+  },
+  {
+    "id": "bc-071",
+    "name": "Whisky Old Partner",
+    "businessId": "bodega-central",
+    "businessName": "Mercado Alpha",
+    "category": "Bebidas",
+    "shortDescription": "Se vende por cajas de 6 unidades.",
+    "image": "🥃",
+    "price": 2800,
+    "formato": 6,
+    "stockStatus": "disponible"
   },
   {
     "id": "dlm-001",
@@ -2151,7 +2167,7 @@
     "category": "Comida",
     "shortDescription": "Pan con jamón.",
     "image": "🥪",
-    "price": 340,
+    "price": 350,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2196,7 +2212,7 @@
     "category": "Comida",
     "shortDescription": "Jamón y queso.",
     "image": "🥪",
-    "price": 390,
+    "price": 400,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2286,7 +2302,7 @@
     "category": "Comida",
     "shortDescription": "Especialidad de la casa.",
     "image": "🥪",
-    "price": 700,
+    "price": 750,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2332,7 +2348,7 @@
     "shortDescription": "Nuestro producto estrella.",
     "image": "🥪",
     "photo": "/assets/images/products/Macus/pan_macu.jpg",
-    "price": 1420,
+    "price": 1550,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2377,7 +2393,7 @@
     "category": "Comida",
     "shortDescription": "Aporreado tradicional.",
     "image": "🥪",
-    "price": 400,
+    "price": 450,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2422,7 +2438,7 @@
     "category": "Comida",
     "shortDescription": "Picadillo preparado.",
     "image": "🥪",
-    "price": 210,
+    "price": 250,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2512,7 +2528,7 @@
     "category": "Comida",
     "shortDescription": "Versión especial.",
     "image": "🥪",
-    "price": 750,
+    "price": 800,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2602,7 +2618,7 @@
     "category": "Comida",
     "shortDescription": "Versión especial.",
     "image": "🥪",
-    "price": 550,
+    "price": 600,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2782,7 +2798,7 @@
     "category": "Comida",
     "shortDescription": "Mortadella.",
     "image": "🥪",
-    "price": 320,
+    "price": 350,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -2872,7 +2888,7 @@
     "category": "Comida",
     "shortDescription": "Bistec de cerdo.",
     "image": "🥩",
-    "price": 850,
+    "price": 900,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -3052,7 +3068,7 @@
     "category": "Comida",
     "shortDescription": "Pan especial imperial",
     "image": "🥪",
-    "price": 1400,
+    "price": 1500,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -3142,7 +3158,7 @@
     "category": "Comida",
     "shortDescription": "Pan con lechón.",
     "image": "🥩",
-    "price": 1300,
+    "price": 1500,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -3232,7 +3248,7 @@
     "category": "Comida",
     "shortDescription": "Carne asada.",
     "image": "🥩",
-    "price": 750,
+    "price": 850,
     "addons": [
       {
         "name": "Hamburguesa",
@@ -11333,7 +11349,7 @@
     "image": "🍬",
     "photo": "/assets/images/products/DAF/Botonetas - 70.jpg",
     "price": 70,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-004",
@@ -11489,7 +11505,7 @@
     "image": "🍿",
     "photo": "/assets/images/products/DAF/Pelly Tigo Puff --650.jpg",
     "price": 650,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-017",
@@ -11500,7 +11516,7 @@
     "shortDescription": "Se vende por lata.",
     "image": "🥤",
     "photo": "/assets/images/products/DAF/Refresco de la ta 415.jpg",
-    "price": 415,
+    "price": 480,
     "stockStatus": "disponible"
   },
   {
@@ -11525,7 +11541,7 @@
     "image": "🍭",
     "photo": "/assets/images/products/DAF/Sorbeto Mr.Bite 265.jpg",
     "price": 265,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-020",
@@ -11861,7 +11877,7 @@
     "image": "🧼",
     "photo": "/assets/images/products/DAF/Jabón de Lavar Rios -420.jpg",
     "price": 420,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-048",
@@ -11956,7 +11972,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍊",
     "photo": "/assets/images/products/DAF/Naranja Agria (Zumo ) - 290.jpg",
-    "price": 290,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -12017,7 +12033,7 @@
     "image": "🧂",
     "photo": "/assets/images/products/DAF/Sal Marina ( por libra) --190.jpg",
     "price": 190,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-061",
@@ -12052,7 +12068,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre claro 290.jpg",
-    "price": 290,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -12064,8 +12080,8 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
-    "price": 290,
-    "stockStatus": "agotado"
+    "price": 330,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-065",
@@ -12076,7 +12092,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍷",
     "photo": "/assets/images/products/DAF/Vino seco 270.jpg",
-    "price": 270,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -12112,7 +12128,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍋",
     "photo": "/assets/images/products/DAF/Zumo de Limón 290.jpg",
-    "price": 290,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -12596,6 +12612,127 @@
     "photo": "/assets/images/products/DAF/paleticas Cid 580.jpg",
     "price": 580,
     "stockStatus": "agotado"
+  },
+  {
+    "id": "daf-109",
+    "name": "Arroz (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🍚",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-110",
+    "name": "Vinagre de Frutas",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧴",
+    "price": 330,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-111",
+    "name": "Bicarbonato de Sodio",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧂",
+    "price": 530,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-112",
+    "name": "Picantón Habanero",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🌶️",
+    "price": 180,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-113",
+    "name": "Sazón Completo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧂",
+    "price": 75,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-114",
+    "name": "Detergente en Polvo (500 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 g.",
+    "image": "🧼",
+    "price": 780,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-115",
+    "name": "Pastillita de Carne",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧂",
+    "price": 60,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-116",
+    "name": "Pastillita de Pollo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧂",
+    "price": 60,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-117",
+    "name": "Hojas de Laurel",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🌿",
+    "price": 360,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-118",
+    "name": "Nuez Moscada",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🌰",
+    "price": 660,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-119",
+    "name": "Canela en Polvo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🟤",
+    "price": 660,
+    "stockStatus": "disponible"
   },
   {
     "id": "em-001",
