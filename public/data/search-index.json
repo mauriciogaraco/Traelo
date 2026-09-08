@@ -159,18 +159,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-001",
-    "name": "Avena con leche",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "Lista para preparar.",
-    "image": "🥣",
-    "photo": "/assets/images/products/mercadito/avena.jpg",
-    "price": 2100,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-002",
     "name": "Chicharrones de viento",
     "businessId": "bodega-central",
@@ -183,52 +171,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-003",
-    "name": "Shaka (vodka energético)",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "Caja de 24 unidades.",
-    "image": "🥤",
-    "photo": "/assets/images/products/mercadito/shaka.jpg",
-    "price": 400,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-004",
-    "name": "Refresco Cana",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "Elige una opción para añadir al carrito",
-    "image": "🥤",
-    "photo": "/assets/images/products/mercadito/refresco_cana_cola.jpg",
-    "price": 240,
-    "formato": 12,
-    "options": [
-      "Cola",
-      "Uva",
-      "Limón",
-      "Naranja",
-      "Frambuesa"
-    ],
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-005",
-    "name": "Papel sanitario",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Extra suave.",
-    "image": "🧻",
-    "photo": "/assets/images/products/mercadito/papel_higienico.jpg",
-    "price": 470,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-008",
     "name": "Botonetas",
     "businessId": "bodega-central",
@@ -237,7 +179,7 @@
     "shortDescription": "Tira de 24 unidades.",
     "image": "🧀",
     "photo": "/assets/images/products/mercadito/botonetas.jpg",
-    "price": 45,
+    "price": 62,
     "formato": 24,
     "stockStatus": "agotado"
   },
@@ -252,30 +194,6 @@
     "photo": "/assets/images/products/mercadito/chups_chups.jpg",
     "price": 25,
     "formato": 48,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-010",
-    "name": "Culeros Bebish",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Pañales desechables.",
-    "image": "🧷",
-    "photo": "/assets/images/products/mercadito/culeros_bebish.jpg",
-    "price": 3480,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-012",
-    "name": "Bambil",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "",
-    "image": "🧃",
-    "photo": "/assets/images/products/mercadito/bambil.jpg",
-    "price": 250,
     "stockStatus": "disponible"
   },
   {
@@ -320,71 +238,6 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "bc-017",
-    "name": "Frijoles negros",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "500 gramos.",
-    "image": "🫘",
-    "photo": "/assets/images/products/mercadito/frijoles.jpg",
-    "price": 400,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-018",
-    "name": "Gelatina",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "",
-    "image": "🍮",
-    "photo": "/assets/images/products/mercadito/gelatina.jpg",
-    "price": 300,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-019",
-    "name": "Gelatina en pomo",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Confituras",
-    "shortDescription": "Lista para comer.",
-    "image": "🍮",
-    "photo": "/assets/images/products/mercadito/gelatina_pomo.jpg",
-    "price": 4500,
-    "options": [
-      "Pingüino",
-      "Mono"
-    ],
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-020",
-    "name": "Diarias",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "",
-    "image": "🧻",
-    "photo": "/assets/images/products/mercadito/intimas.jpg",
-    "price": 580,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-022",
-    "name": "Jugos Petit",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "El mejor jugo del mercado",
-    "image": "🧃",
-    "photo": "/assets/images/products/mercadito/jugos_petit.jpg",
-    "price": 200,
-    "formato": 24,
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-023",
     "name": "Galletas Jumbo",
     "businessId": "bodega-central",
@@ -395,18 +248,6 @@
     "photo": "/assets/images/products/mercadito/jumbo.jpg",
     "price": 75,
     "formato": 12,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-024",
-    "name": "Lavavajillas",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Pote Lavavajillas",
-    "image": "🧴",
-    "photo": "/assets/images/products/mercadito/lavavajillas.jpg",
-    "price": 500,
     "stockStatus": "agotado"
   },
   {
@@ -421,19 +262,6 @@
     "price": 830,
     "formato": 12,
     "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-026",
-    "name": "Pastilla para congrí",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "Sazón en pastilla.",
-    "image": "🧂",
-    "photo": "/assets/images/products/mercadito/pastillaCongrís.jpg",
-    "price": 50,
-    "formato": 48,
-    "stockStatus": "disponible"
   },
   {
     "id": "bc-027",
@@ -500,22 +328,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-032",
-    "name": "Yogurt Vima",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Bebidas",
-    "shortDescription": "x4",
-    "image": "🥛",
-    "photo": "/assets/images/products/mercadito/yogurt_vima.jpg",
-    "price": 800,
-    "options": [
-      "Fresa",
-      "Natural"
-    ],
-    "stockStatus": "agotado"
-  },
-  {
     "id": "bc-033",
     "name": "Detergente Líquido",
     "businessId": "bodega-central",
@@ -527,18 +339,6 @@
     "price": 400,
     "formato": 10,
     "stockStatus": "disponible"
-  },
-  {
-    "id": "bc-034",
-    "name": "Toallitas Húmedas",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Aseo",
-    "shortDescription": "Toallitas húmedas para el cuidado personal",
-    "image": "🧴",
-    "photo": "/assets/images/products/mercadito/toallitas_indoxa.jpg",
-    "price": 620,
-    "stockStatus": "agotado"
   },
   {
     "id": "bc-035",
@@ -563,18 +363,6 @@
     "photo": "/assets/images/products/mercadito/bombones.jpg",
     "price": 360,
     "formato": 12,
-    "stockStatus": "agotado"
-  },
-  {
-    "id": "bc-038",
-    "name": "Queso criollo",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "",
-    "image": "🧀",
-    "photo": "/assets/images/products/mercadito/queso_criollo.jpg",
-    "price": 750,
     "stockStatus": "agotado"
   },
   {
@@ -604,19 +392,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "bc-042",
-    "name": "Leche condensada",
-    "businessId": "bodega-central",
-    "businessName": "Mercado Alpha",
-    "category": "Alimentos",
-    "shortDescription": "",
-    "image": "🍚",
-    "photo": "/assets/images/products/mercadito/leche_condensada.jpg",
-    "price": 650,
-    "formato": 24,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "bc-043",
     "name": "Arroz de Guyana 110lbs",
     "businessId": "bodega-central",
@@ -626,7 +401,7 @@
     "image": "🍚",
     "photo": "/assets/images/products/mercadito/arroz_saco_guyana.jpg",
     "price": 31000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "bc-044",
