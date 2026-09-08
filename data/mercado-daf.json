@@ -217,7 +217,7 @@
     "longDescription": "Refresco de lata.",
     "image": "🥤",
     "photo": "/assets/images/products/DAF/Refresco de la ta 415.jpg",
-    "price": 415,
+    "price": 480,
     "stockStatus": "disponible"
   },
   {
@@ -711,7 +711,7 @@
     "longDescription": "Zumo de naranja agria, se vende por unidad.",
     "image": "🍊",
     "photo": "/assets/images/products/DAF/Naranja Agria (Zumo ) - 290.jpg",
-    "price": 290,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -815,7 +815,7 @@
     "longDescription": "Vinagre claro, se vende por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre claro 290.jpg",
-    "price": 290,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -828,8 +828,8 @@
     "longDescription": "Vinagre de vino tinto, se vende por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
-    "price": 290,
-    "stockStatus": "agotado"
+    "price": 330,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-065",
@@ -841,7 +841,7 @@
     "longDescription": "Vino seco, se vende por unidad.",
     "image": "🍷",
     "photo": "/assets/images/products/DAF/Vino seco 270.jpg",
-    "price": 270,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -880,7 +880,7 @@
     "longDescription": "Zumo de limón, se vende por unidad.",
     "image": "🍋",
     "photo": "/assets/images/products/DAF/Zumo de Limón 290.jpg",
-    "price": 290,
+    "price": 330,
     "stockStatus": "disponible"
   },
   {
@@ -1333,7 +1333,11 @@
     "image": "🍪",
     "photo": "/assets/images/products/DAF/galletas fomitos 300.jpg",
     "price": 300,
-    "options": ["Fresa", "Chocolate", "Dulce de Leche"],
+    "options": [
+      "Fresa",
+      "Chocolate",
+      "Dulce de Leche"
+    ],
     "stockStatus": "disponible"
   },
   {
@@ -1400,5 +1404,137 @@
     "photo": "/assets/images/products/DAF/paleticas Cid 580.jpg",
     "price": 580,
     "stockStatus": "agotado"
+  },
+  {
+    "id": "daf-109",
+    "name": "Arroz (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "longDescription": "Arroz, precio por libra.",
+    "image": "🍚",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-110",
+    "name": "Vinagre de Frutas",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Vinagre de Frutas, se vende por unidad.",
+    "image": "🧴",
+    "price": 330,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-111",
+    "name": "Bicarbonato de Sodio",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Bicarbonato de Sodio, se vende por unidad.",
+    "image": "🧂",
+    "price": 530,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-112",
+    "name": "Picantón Habanero",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Picantón Habanero, se vende por unidad.",
+    "image": "🌶️",
+    "price": 180,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-113",
+    "name": "Sazón Completo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Sazón Completo, se vende por unidad.",
+    "image": "🧂",
+    "price": 75,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-114",
+    "name": "Detergente en Polvo (500 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Paquete de 500 g.",
+    "longDescription": "Detergente en polvo, paquete de 500 g.",
+    "image": "🧼",
+    "price": 780,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-115",
+    "name": "Pastillita de Carne",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Pastillita de Carne, se vende por unidad.",
+    "image": "🧂",
+    "price": 60,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-116",
+    "name": "Pastillita de Pollo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Pastillita de Pollo, se vende por unidad.",
+    "image": "🧂",
+    "price": 60,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-117",
+    "name": "Hojas de Laurel",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Hojas de Laurel, se vende por unidad.",
+    "image": "🌿",
+    "price": 360,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-118",
+    "name": "Nuez Moscada",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Nuez Moscada, se vende por unidad.",
+    "image": "🌰",
+    "price": 660,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-119",
+    "name": "Canela en Polvo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Canela en Polvo, se vende por unidad.",
+    "image": "🟤",
+    "price": 660,
+    "stockStatus": "disponible"
   }
 ]
