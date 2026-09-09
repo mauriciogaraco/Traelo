@@ -3339,7 +3339,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 500,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -3666,7 +3666,7 @@
     "shortDescription": "5 a 6 muslos por paquete.",
     "image": "🍗",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-023",
@@ -3676,7 +3676,7 @@
     "category": "Aseo",
     "shortDescription": "Se vende por unidad.",
     "image": "🌸",
-    "price": 2000,
+    "price": 2200,
     "stockStatus": "disponible"
   },
   {
@@ -3884,7 +3884,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por paquete.",
     "image": "🍪",
-    "price": 250,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -3933,18 +3933,7 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "ma-046",
-    "name": "Spam de Tuvo, 1100",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Embutidos",
-    "shortDescription": "Se vende por unidad.",
-    "image": "🥩",
-    "price": 1100,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "ma-046",
+    "id": "ma-054",
     "name": "Jabón de Baño",
     "businessId": "mercadito-ahorro",
     "businessName": "El Mercadito",
@@ -4019,7 +4008,7 @@
     "category": "Alimentos",
     "shortDescription": "Postas de pollo.",
     "image": "🍗",
-    "price": 2200,
+    "price": 2300,
     "stockStatus": "disponible"
   },
   {
@@ -4272,7 +4261,7 @@
     "category": "Bebidas",
     "shortDescription": "",
     "image": "🍺",
-    "price": 500,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -12656,6 +12645,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🧂",
+    "photo": "/assets/images/products/DAF/Bicarbonato de sodio.jpg",
     "price": 530,
     "stockStatus": "disponible"
   },
@@ -12667,6 +12657,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🌶️",
+    "photo": "/assets/images/products/DAF/picantón habanero 180 cup.jpg",
     "price": 180,
     "stockStatus": "disponible"
   },
@@ -12678,6 +12669,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🧂",
+    "photo": "/assets/images/products/DAF/sazón completo 75 cup.jpg",
     "price": 75,
     "stockStatus": "disponible"
   },
@@ -12689,6 +12681,7 @@
     "category": "Aseo",
     "shortDescription": "Paquete de 500 g.",
     "image": "🧼",
+    "photo": "/assets/images/products/DAF/detergente en polvo 500 gramos 780 cup.jpg",
     "price": 780,
     "stockStatus": "disponible"
   },
@@ -12700,6 +12693,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🧂",
+    "photo": "/assets/images/products/DAF/pastillita de carne 60 cup.jpg",
     "price": 60,
     "stockStatus": "disponible"
   },
@@ -12711,6 +12705,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🧂",
+    "photo": "/assets/images/products/DAF/pastillita de pollo 660.jpg",
     "price": 60,
     "stockStatus": "disponible"
   },
@@ -12722,6 +12717,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🌿",
+    "photo": "/assets/images/products/DAF/hojas de laurel 360 cup.jpg",
     "price": 360,
     "stockStatus": "disponible"
   },
@@ -12733,6 +12729,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🌰",
+    "photo": "/assets/images/products/DAF/nuez moscada 660.jpg",
     "price": 660,
     "stockStatus": "disponible"
   },
@@ -12744,6 +12741,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🟤",
+    "photo": "/assets/images/products/DAF/canela en polvo 660 cup.jpg",
     "price": 660,
     "stockStatus": "disponible"
   },
@@ -14136,7 +14134,7 @@
     "shortDescription": "Se vende la pieza completa.",
     "image": "🥩",
     "photo": "/assets/images/products/Atrévete/lomo de cerdo -1600 cup (se vende la pieza completa).jpg",
-    "price": 1600,
+    "price": 1725,
     "stockStatus": "disponible"
   },
   {
@@ -14729,6 +14727,88 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍺",
     "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-001",
+    "name": "Pizza Hawaiana",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🍍",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-002",
+    "name": "Pizza de Jamón",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Iron Bross Pizzas/PPizza de Jamón 650.jpg",
+    "price": 650,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-003",
+    "name": "Pizza de Queso",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🧀",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza de queso.jpg",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-004",
+    "name": "Pizza de Queso Doble",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🧀",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-005",
+    "name": "Pizza de Perrito",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🌭",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza de Perrito.jpg",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-006",
+    "name": "Pizza de Cebolla",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🧅",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza de Cebolla.jpg",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-007",
+    "name": "Pizza de Lomo de Cerdo",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🥩",
+    "photo": "/assets/images/products/Iron Bross Pizzas/Pizza de Lomo de cerdo 750.jpg",
+    "price": 750,
     "stockStatus": "disponible"
   }
 ]

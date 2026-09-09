@@ -220,7 +220,7 @@
     "longDescription": "Paquete de muslos de pollo, trae entre 5 y 6 unidades.",
     "image": "🍗",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "ma-023",
@@ -231,7 +231,7 @@
     "shortDescription": "Se vende por unidad.",
     "longDescription": "Colonias y perfumes, se venden por unidad.",
     "image": "🌸",
-    "price": 2000,
+    "price": 2200,
     "stockStatus": "disponible"
   },
   {
@@ -457,7 +457,7 @@
     "shortDescription": "Se vende por paquete.",
     "longDescription": "Galletas María, se venden por paquete.",
     "image": "🍪",
-    "price": 250,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -510,19 +510,7 @@
     "stockStatus": "agotado"
   },
   {
-    "id": "ma-046",
-    "name": "Spam de Tuvo, 1100",
-    "businessId": "mercadito-ahorro",
-    "businessName": "El Mercadito",
-    "category": "Embutidos",
-    "shortDescription": "Se vende por unidad.",
-    "longDescription": "Jamonada.",
-    "image": "🥩",
-    "price": 1100,
-    "stockStatus": "disponible"
-  },
-  {
-    "id": "ma-046",
+    "id": "ma-054",
     "name": "Jabón de Baño",
     "businessId": "mercadito-ahorro",
     "businessName": "El Mercadito",
@@ -604,7 +592,7 @@
     "shortDescription": "Postas de pollo.",
     "longDescription": "Paquete de postas de pollo.",
     "image": "🍗",
-    "price": 2200,
+    "price": 2300,
     "stockStatus": "disponible"
   }
 ]
