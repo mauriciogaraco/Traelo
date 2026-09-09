@@ -158,7 +158,7 @@ export function CartPage() {
           <ServiceFeeRow fee={serviceFee} />
           {hasAnyUsd ? (
             <div className="border-t border-border pt-3 space-y-1">
-              {cupSubtotal > 0 && (
+              {(cupSubtotal > 0 || feeInfo.fee > 0 || serviceFee > 0) && (
                 <div className="flex justify-between items-baseline">
                   <span className="font-bold text-text-primary">Total CUP</span>
                   <span className="text-xl font-bold text-primary">{formatPrice(cupSubtotal + feeInfo.fee + serviceFee)}</span>
