@@ -1,0 +1,91 @@
+[
+  {
+    "id": "ib-001",
+    "name": "Pizza Hawaiana",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza Hawaiana, pizza fitness.",
+    "image": "🍍",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-002",
+    "name": "Pizza de Jamón",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza de jamón, pizza fitness.",
+    "image": "🍕",
+    "photo": "/assets/images/products/Iron Bross Pizzas/PPizza de Jamón 650.jpg",
+    "price": 650,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-003",
+    "name": "Pizza de Queso",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza de queso, pizza fitness.",
+    "image": "🧀",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza de queso.jpg",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-004",
+    "name": "Pizza de Queso Doble",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza de queso doble, pizza fitness.",
+    "image": "🧀",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-005",
+    "name": "Pizza de Perrito",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza de perrito, pizza fitness.",
+    "image": "🌭",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza de Perrito.jpg",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-006",
+    "name": "Pizza de Cebolla",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza de cebolla, pizza fitness.",
+    "image": "🧅",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza de Cebolla.jpg",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-007",
+    "name": "Pizza de Lomo de Cerdo",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza de lomo de cerdo, pizza fitness.",
+    "image": "🥩",
+    "photo": "/assets/images/products/Iron Bross Pizzas/Pizza de Lomo de cerdo 750.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  }
+]

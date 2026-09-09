@@ -726,7 +726,6 @@
     "description": "La Cocina de Claudia — De mi cocina a tu mesa. Comida casera, panes y postres.",
     "image": "/assets/images/business/La Cocina de Claudia.jpg",
     "color": "from-rose-100 to-pink-50",
-    "status": "cerrado",
     "paymentNote": "Mensajería 250 CUP · después de las 7:00 pm sube a 350 CUP.",
     "deliveryFee": 250,
     "businessCommission": 0,
@@ -745,5 +744,21 @@
       "label": "Mar–Dom · 12:30 pm – 7:00 pm"
     },
     "businessCategories": ["Restaurantes"]
+  },
+  {
+    "id": "iron-bross",
+    "name": "Iron Bross Pizzas",
+    "description": "Iron Bross Pizzas — Pizzas fitness.",
+    "image": "/assets/images/business/Iron Bross Pizzas.jpg",
+    "color": "from-red-100 to-orange-50",
+    "businessCommission": 0,
+    "clientCommission": 4,
+    "schedule": {
+      "days": [0, 1, 2, 3, 4, 5, 6],
+      "open": "09:00",
+      "close": "14:00",
+      "label": "Todos los días · 9:00 am – 2:00 pm"
+    },
+    "businessCategories": ["Pizzas"]
   }
 ]
