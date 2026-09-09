@@ -718,7 +718,10 @@
       "open": "09:00",
       "close": "18:00",
       "label": "Lun–Sáb · 9:00 am – 6:00 pm"
-    }
+    },
+    "businessCategories": [
+      "Mercado"
+    ]
   },
   {
     "id": "cocina-de-claudia",
@@ -771,6 +774,41 @@
     },
     "businessCategories": [
       "Pizzas"
+    ]
+  },
+  {
+    "id": "los-reales",
+    "name": "Los Reales Tiendas de Electrodomésticos",
+    "description": "Los Reales — Electrodomésticos, paneles solares e inversores.",
+    "image": "/assets/images/business/Los Reales Tiendas de Electrodomésticos.jpg",
+    "color": "from-slate-100 to-zinc-50",
+    "paymentNote": "Precios en USD, salvo indicación contraria. La mensajería puede variar en función de la distancia y el peso del equipo.",
+    "deliveryFee": 350,
+    "businessCommission": 0,
+    "clientCommission": 1,
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "open": "09:00",
+      "close": "17:00",
+      "label": "Lun–Sáb · 9:00 am – 5:00 pm · Dom · 9:00 am – 12:00 pm"
+    },
+    "scheduleExtra": {
+      "days": [
+        0
+      ],
+      "open": "09:00",
+      "close": "12:00",
+      "label": "Domingo · 9:00 am – 12:00 pm"
+    },
+    "businessCategories": [
+      "Electrodomésticos"
     ]
   }
 ]

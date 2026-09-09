@@ -25,5 +25,18 @@
     "photo": "/assets/images/products/Los 4 Hermanos/natilla.jpg",
     "stockStatus": "disponible",
     "featured": true
+  },
+  {
+    "id": "los-4-hermanos-003",
+    "name": "Arroz con Leche",
+    "businessId": "los-4-hermanos",
+    "businessName": "Los 4 Hermanos",
+    "category": "Alimentos",
+    "shortDescription": "Preparado con 4 leches.",
+    "longDescription": "Arroz con leche casero de Los 4 Hermanos, preparado con 4 leches.",
+    "image": "🍮",
+    "price": 350,
+    "photo": "/assets/images/products/Los 4 Hermanos/Arroz con Leche -350 cup.jpg",
+    "stockStatus": "disponible"
   }
 ]

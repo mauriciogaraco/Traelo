@@ -1,6 +1,7 @@
 import type { CartItem } from '../types'
 import { lineTotal } from './cart'
 import { businessById } from '../data/catalog'
+import { USD_EXCHANGE_RATE } from './config'
 
 /** Tarifa base global (negocios sin tarifa propia). */
 export const FEE_BASE = 250
@@ -57,23 +58,30 @@ export function subtotalOf(items: CartItem[]): number {
 
 /**
  * "Servicio Tráelo": suma de las comisiones (negocio + cliente) de cada
- * negocio del carrito, aplicadas sobre su subtotal en CUP, y redondeada
- * siempre hacia arriba al múltiplo de 10 más cercano. No aplica sobre
- * productos en USD (igual que el umbral de volumen de la mensajería).
+ * negocio del carrito, siempre cobrada en CUP, redondeada hacia arriba al
+ * múltiplo de 10 más cercano. Se aplica sobre el subtotal en CUP tal cual;
+ * sobre el subtotal en USD (productos en esa moneda, ej: Los Reales, Eme
+ * Boutique) se aplica igual el % pero convertido a CUP con USD_EXCHANGE_RATE,
+ * ya que el servicio nunca se cobra en USD.
  */
 export function computeServiceFee(items: CartItem[]): number {
   const cupSubtotalByBusiness = new Map<string, number>()
+  const usdSubtotalByBusiness = new Map<string, number>()
   for (const item of items) {
     const isUsd = (item.product.currency ?? businessById(item.product.businessId)?.currency) === 'USD'
-    if (isUsd) continue
     const id = item.product.businessId
-    cupSubtotalByBusiness.set(id, (cupSubtotalByBusiness.get(id) ?? 0) + lineTotal(item))
+    const map = isUsd ? usdSubtotalByBusiness : cupSubtotalByBusiness
+    map.set(id, (map.get(id) ?? 0) + lineTotal(item))
   }
+  const businessIds = new Set([...cupSubtotalByBusiness.keys(), ...usdSubtotalByBusiness.keys()])
   let raw = 0
-  for (const [businessId, businessSubtotal] of cupSubtotalByBusiness) {
+  for (const businessId of businessIds) {
     const biz = businessById(businessId)
     const pct = (biz?.businessCommission ?? 0) + (biz?.clientCommission ?? 0)
-    raw += (businessSubtotal * pct) / 100
+    const cupSubtotal = cupSubtotalByBusiness.get(businessId) ?? 0
+    const usdSubtotal = usdSubtotalByBusiness.get(businessId) ?? 0
+    raw += (cupSubtotal * pct) / 100
+    raw += ((usdSubtotal * pct) / 100) * USD_EXCHANGE_RATE
   }
   return Math.ceil(raw / 10) * 10
 }

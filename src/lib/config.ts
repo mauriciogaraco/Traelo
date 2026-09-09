@@ -14,3 +14,6 @@ export const SITE_URL = 'https://traelo-sigma.vercel.app'
  */
 export const TELEGRAM_BOT_TOKEN = '8881629308:AAFNmGVPIGK41ZbRPFQ6z0p-42ZIWZUc7As'
 export const TELEGRAM_CHAT_ID = '-1004466308918'
+
+/** Tasa de cambio USD → CUP, usada para cobrar en CUP el "Servicio Tráelo" de productos en USD. */
+export const USD_EXCHANGE_RATE = 700

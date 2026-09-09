@@ -25,6 +25,7 @@ export const businessCategories: BusinessCategory[] = [
   'Dulces',
   'Ropa',
   'Ferretería',
+  'Electrodomésticos',
 ]
 
 export const businessCategoryEmoji: Record<BusinessCategory, string> = {
@@ -39,6 +40,7 @@ export const businessCategoryEmoji: Record<BusinessCategory, string> = {
   Dulces: '🍬',
   Ropa: '👗',
   Ferretería: '🔧',
+  Electrodomésticos: '🔌',
 }
 
 /**
@@ -56,6 +58,7 @@ export const productCategoryHints: Partial<Record<BusinessCategory, string[]>> =
   Asados: ['Carnes', 'Res', 'Cerdo', 'Pollo', 'Del Mar'],
   Ferretería: ['Herramientas', 'Materiales', 'Electricidad', 'Fontanería', 'Cerrajería', 'Discos y Corte', 'Menaje'],
   Ropa: ['Ropa'],
+  Electrodomésticos: ['Electrónica'],
 }
 
 // Populated by CatalogContext once the JSON loads.
