@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useOrders } from '../context/OrdersContext'
 import { useToast } from '../context/ToastContext'
@@ -9,7 +9,10 @@ import { ServiceFeeRow } from '../components/ui/ServiceFeeRow'
 import { formatDate, formatPrice } from '../lib/format'
 import { groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, unitsOf } from '../lib/cart'
+import { isOpenNow, ordersClosedForToday } from '../lib/hours'
+import { markSendAttempt, msUntilNextSend } from '../lib/rateLimit'
 import { sendOrderToTelegram } from '../lib/telegram'
+import { businessById } from '../data/catalog'
 import type { Order } from '../types'
 
 const statusConfig = {
@@ -69,13 +72,46 @@ export function OrdersPage() {
 function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void }) {
   const { showToast } = useToast()
   const [resending, setResending] = useState(false)
+  // Igual que en CheckoutPage: guarda síncrona para que un doble tap no cuele
+  // dos reenvíos antes de que `resending` (estado de React) se actualice.
+  const resendingRef = useRef(false)
   const status = statusConfig[order.status]
   const groups = groupByBusiness(order.items)
 
   async function resend() {
-    if (resending) return
+    if (resending || resendingRef.current) return
+    resendingRef.current = true
+
+    // Revalida en el momento del click (no en el render): mismas reglas que
+    // el checkout, para que "Reenviar" no sea una puerta trasera fuera de horario.
+    const closedGroups = groups.filter((g) => {
+      const b = businessById(g.businessId)
+      return b ? !isOpenNow(b) : false
+    })
+    if (closedGroups.length > 0) {
+      resendingRef.current = false
+      showToast(
+        `${closedGroups.map((g) => g.businessName).join(', ')} está cerrado ahora. No puedes reenviar este pedido.`,
+        'error'
+      )
+      return
+    }
+    if (ordersClosedForToday()) {
+      resendingRef.current = false
+      showToast('Ya no se toman pedidos por hoy. Vuelve mañana a partir de las 9:00 am.', 'error')
+      return
+    }
+    const cooldown = msUntilNextSend()
+    if (cooldown > 0) {
+      resendingRef.current = false
+      showToast(`Espera ${Math.ceil(cooldown / 1000)}s antes de enviar otro pedido.`, 'error')
+      return
+    }
+
     setResending(true)
+    markSendAttempt()
     const ok = await sendOrderToTelegram(order)
+    resendingRef.current = false
     setResending(false)
     showToast(
       ok ? 'Pedido reenviado correctamente.' : 'No se pudo reenviar. Inténtalo de nuevo.',

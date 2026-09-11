@@ -26,6 +26,7 @@ export const businessCategories: BusinessCategory[] = [
   'Ropa',
   'Ferretería',
   'Electrodomésticos',
+  'Viandas',
 ]
 
 export const businessCategoryEmoji: Record<BusinessCategory, string> = {
@@ -41,6 +42,7 @@ export const businessCategoryEmoji: Record<BusinessCategory, string> = {
   Ropa: '👗',
   Ferretería: '🔧',
   Electrodomésticos: '🔌',
+  Viandas: '🥔',
 }
 
 /**

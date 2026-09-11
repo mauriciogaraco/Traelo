@@ -27,6 +27,7 @@ export type BusinessCategory =
   | 'Ropa'
   | 'Ferretería'
   | 'Electrodomésticos'
+  | 'Viandas'
 
 /** Horario de atención del negocio (para no permitir pedidos fuera de hora). */
 export interface BusinessSchedule {
