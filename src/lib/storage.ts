@@ -21,4 +21,5 @@ export const STORAGE_KEYS = {
   cart: 'traelo_cart',
   orders: 'traelo_orders',
   address: 'traelo_address',
+  lastSendAt: 'traelo_last_send_at',
 } as const

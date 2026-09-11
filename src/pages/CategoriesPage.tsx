@@ -69,6 +69,13 @@ export function CategoriesPage() {
     );
   }, [cat, business, products]);
 
+  // Al entrar o salir de una categoría (cambia ?cat=), la ruta sigue siendo
+  // /categorias así que el ScrollToTop global (basado en pathname) no se
+  // dispara; sin esto, la página hereda el scroll que tenía la grilla.
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [cat]);
+
   useEffect(() => {
     if (business && !loading) {
       resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });

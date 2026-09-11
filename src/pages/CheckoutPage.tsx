@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { useOrders } from '../context/OrdersContext'
@@ -17,6 +17,7 @@ import { makeOrder, groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
 import { computeFee, computeServiceFee } from '../lib/fees'
 import { isOpenNow, ordersClosedForToday } from '../lib/hours'
+import { markSendAttempt, msUntilNextSend } from '../lib/rateLimit'
 import { sendOrderToTelegram } from '../lib/telegram'
 import { businessById } from '../data/catalog'
 
@@ -59,10 +60,23 @@ export function CheckoutPage() {
   const { address } = useAddress()
   const { showToast } = useToast()
   const [sending, setSending] = useState(false)
+  // Guarda síncrona (a diferencia de `sending`, que es estado de React y por
+  // tanto puede quedar "stale" entre dos clics disparados en el mismo tick):
+  // sin esto, un doble tap muy rápido puede colar dos envíos del mismo
+  // pedido antes de que el primer setSending(true) llegue a re-renderizar.
+  const sendingRef = useRef(false)
   const [deliveryMode, setDeliveryMode] = useState<DeliveryMode>('asap')
   const [deliveryTime, setDeliveryTime] = useState('')
   // Franjas de hoy desde la hora actual (se calculan una vez al abrir).
   const timeSlots = useMemo(() => buildTimeSlots(new Date()), [])
+  // Reloj en vivo: sin esto, el cierre por horario (9pm) y el cooldown de envío
+  // quedarían "congelados" con el valor del último render mientras el usuario
+  // se queda parado en esta pantalla, permitiendo confirmar fuera de horario.
+  const [nowTick, setNowTick] = useState(() => Date.now())
+  useEffect(() => {
+    const id = setInterval(() => setNowTick(Date.now()), 1000)
+    return () => clearInterval(id)
+  }, [])
 
   if (items.length === 0) {
     return (
@@ -78,10 +92,11 @@ export function CheckoutPage() {
     )
   }
 
+  const now = new Date(nowTick)
   const groups = groupByBusiness(items)
   const closedGroups = groups.filter((g) => {
     const b = businessById(g.businessId)
-    return b ? !isOpenNow(b) : false
+    return b ? !isOpenNow(b, now) : false
   })
   const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD')
   const hasAnyUsd = hasUsdGroups || groups.some(g => g.items.some(i => i.product.currency === 'USD'))
@@ -89,7 +104,7 @@ export function CheckoutPage() {
 
   // Entrega elegida → momento para calcular la tarifa
   const scheduledMissing = deliveryMode === 'scheduled' && !deliveryTime
-  const when = deliveryMode === 'scheduled' && deliveryTime ? todayAt(deliveryTime) : new Date()
+  const when = deliveryMode === 'scheduled' && deliveryTime ? todayAt(deliveryTime) : now
   const deliveryLabel =
     deliveryMode === 'scheduled' && deliveryTime
       ? `Hoy a las ${formatTime12h(deliveryTime)}`
@@ -106,12 +121,16 @@ export function CheckoutPage() {
     .filter(Boolean)
     .join(' · ')
 
-  const ordersClosed = ordersClosedForToday()
-  const canConfirm = !!address && !sending && !hasClosed && !scheduledMissing && !ordersClosed
+  const ordersClosed = ordersClosedForToday(now)
+  const cooldownMs = msUntilNextSend(nowTick)
+  const onCooldown = cooldownMs > 0
+  const canConfirm = !!address && !sending && !hasClosed && !scheduledMissing && !ordersClosed && !onCooldown
 
   async function confirm() {
-    if (!canConfirm) return
+    if (!canConfirm || sendingRef.current) return
+    sendingRef.current = true
     setSending(true)
+    markSendAttempt()
 
     const order = makeOrder(items, address!, { label: deliveryLabel, when })
     const ok = await sendOrderToTelegram(order)
@@ -122,6 +141,7 @@ export function CheckoutPage() {
       showToast('¡Pedido enviado! Te contactaremos pronto.', 'success')
       navigate('/pedidos', { replace: true, state: { justOrdered: order.id } })
     } else {
+      sendingRef.current = false
       setSending(false)
       showToast('No se pudo enviar el pedido. Inténtalo de nuevo.', 'error')
     }
@@ -360,6 +380,15 @@ export function CheckoutPage() {
           </div>
         )}
 
+        {onCooldown && !ordersClosed && !hasClosed && (
+          <div className="flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-2xl p-3">
+            <span className="text-lg flex-shrink-0">⏳</span>
+            <p className="text-xs text-amber-900 leading-relaxed">
+              Espera {Math.ceil(cooldownMs / 1000)}s antes de enviar otro pedido.
+            </p>
+          </div>
+        )}
+
         {/* Aviso */}
         <div className="flex items-start gap-2.5 bg-sky-50 border border-sky-200 rounded-2xl p-3">
           <span className="text-lg flex-shrink-0">📨</span>
@@ -373,7 +402,13 @@ export function CheckoutPage() {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M21.7 3.3 2.5 11.1c-.9.4-.9 1.6 0 1.9l4.8 1.6 1.8 5.8c.2.7 1.1.9 1.6.3l2.7-2.9 4.7 3.4c.6.4 1.5.1 1.7-.6l3.4-15.6c.2-1-.8-1.9-1.5-1.7Z" />
           </svg>
-          {sending ? 'Enviando pedido...' : ordersClosed ? 'Pedidos cerrados por hoy' : 'Confirmar pedido'}
+          {sending
+            ? 'Enviando pedido...'
+            : ordersClosed
+              ? 'Pedidos cerrados por hoy'
+              : onCooldown
+                ? `Espera ${Math.ceil(cooldownMs / 1000)}s`
+                : 'Confirmar pedido'}
         </Button>
       </div>
     </div>
