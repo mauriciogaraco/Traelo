@@ -101,7 +101,7 @@
     "image": "🫘",
     "photo": "/assets/images/products/DAF/Garbanzos -1000 cup.jpg",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-009",
@@ -933,7 +933,7 @@
     "image": "🧽",
     "photo": "/assets/images/products/DAF/esponjas de fregar x 10 -- 500.jpg",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-073",
@@ -1243,7 +1243,7 @@
     "image": "🍪",
     "photo": "/assets/images/products/DAF/galletas dulce estrella.jpg",
     "price": 230,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-097",
@@ -1518,7 +1518,7 @@
     "image": "🌿",
     "photo": "/assets/images/products/DAF/hojas de laurel 360 cup.jpg",
     "price": 360,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-118",

@@ -8,7 +8,7 @@
     "shortDescription": "",
     "longDescription": "Bistec uruguayo de cerdo.",
     "image": "🥩",
-    "price": 3100,
+    "price": 3500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -26,7 +26,7 @@
     "shortDescription": "",
     "longDescription": "Rollo de cerdo.",
     "image": "🥩",
-    "price": 3100,
+    "price": 3500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -44,7 +44,7 @@
     "shortDescription": "",
     "longDescription": "Bistec de cerdo a la parrilla.",
     "image": "🥩",
-    "price": 2400,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -62,7 +62,7 @@
     "shortDescription": "",
     "longDescription": "Masa de cerdo frita.",
     "image": "🍖",
-    "price": 2300,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -80,7 +80,7 @@
     "shortDescription": "",
     "longDescription": "Masa de cerdo asada en cazuela.",
     "image": "🍖",
-    "price": 2300,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -98,7 +98,7 @@
     "shortDescription": "",
     "longDescription": "Fricasé de cerdo.",
     "image": "🍖",
-    "price": 2400,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -116,7 +116,7 @@
     "shortDescription": "",
     "longDescription": "Cerdo a la Juliana.",
     "image": "🍖",
-    "price": 1900,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -134,7 +134,7 @@
     "shortDescription": "",
     "longDescription": "Chuleta de cerdo.",
     "image": "🥩",
-    "price": 2400,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -188,7 +188,7 @@
     "shortDescription": "",
     "longDescription": "Ropa vieja de res.",
     "image": "🥩",
-    "price": 2700,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -206,7 +206,7 @@
     "shortDescription": "",
     "longDescription": "Vaca frita.",
     "image": "🥩",
-    "price": 2700,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -368,7 +368,7 @@
     "shortDescription": "",
     "longDescription": "Flan casero.",
     "image": "🍮",
-    "price": 500,
+    "price": 600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -512,7 +512,7 @@
     "shortDescription": "",
     "longDescription": "Bistec de cerdo gratinado.",
     "image": "🥩",
-    "price": 2900,
+    "price": 3100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -530,7 +530,7 @@
     "shortDescription": "",
     "longDescription": "Bistec de pollo gratinado.",
     "image": "🍗",
-    "price": 2700,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -932,7 +932,7 @@
     "shortDescription": "",
     "longDescription": "Bolitas de queso.",
     "image": "🧀",
-    "price": 800,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1760,7 +1760,7 @@
     "shortDescription": "",
     "longDescription": "Pollo Golden Blue.",
     "image": "🍗",
-    "price": 2700,
+    "price": 3500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -1886,7 +1886,7 @@
     "shortDescription": "",
     "longDescription": "Pechuga de pollo a la parrilla.",
     "image": "🍗",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {

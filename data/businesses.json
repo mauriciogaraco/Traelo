@@ -30,6 +30,7 @@
     "description": "Sabores de la casa, bebidas, picaderas y platos fuertes para compartir.",
     "image": "/assets/images/business/DLM.jpg",
     "color": "from-rose-100 to-orange-50",
+    "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante.",
     "deliveryFee": 350,
     "businessCommission": 0,
     "clientCommission": 5,
@@ -785,5 +786,22 @@
       "label": "Domingo · 9:00 am – 12:00 pm"
     },
     "businessCategories": ["Electrodomésticos"]
+  },
+  {
+    "id": "la-lomita",
+    "name": "Restaurante La Lomita",
+    "description": "Restaurante La Lomita — Carnes, pollo, pastas y entrantes.",
+    "image": "/assets/images/business/La Lomita.jpg",
+    "color": "from-amber-100 to-yellow-50",
+    "deliveryFee": 350,
+    "businessCommission": 0,
+    "clientCommission": 5,
+    "schedule": {
+      "days": [4, 5, 6, 0],
+      "open": "09:00",
+      "close": "21:00",
+      "label": "Jue–Dom · 9:00 am – 9:00 pm"
+    },
+    "businessCategories": ["Restaurantes"]
   }
 ]

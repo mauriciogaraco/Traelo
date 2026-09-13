@@ -1244,7 +1244,7 @@
     "category": "Comida",
     "shortDescription": "Pastas & arroz",
     "image": "🍝",
-    "price": 1100,
+    "price": 1300,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -3985,7 +3985,7 @@
     "shortDescription": "Se vende por paquete.",
     "image": "🧻",
     "photo": "/assets/images/products/mercado/Papel sanitario.jpg",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -4009,6 +4009,17 @@
     "shortDescription": "Postas de pollo.",
     "image": "🍗",
     "price": 2300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-055",
+    "name": "Spam de Lata",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Se vende por lata.",
+    "image": "🥫",
+    "price": 1100,
     "stockStatus": "disponible"
   },
   {
@@ -7727,6 +7738,30 @@
     "stockStatus": "disponible"
   },
   {
+    "id": "hmk-016",
+    "name": "Combo de Tina de Helado y 10 Conos",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Tina de 4 litros con 10 conos.",
+    "image": "🍦",
+    "photo": "/assets/images/products/HeladeriaM&K/Combo de Tina de Helado y 10 conos 5500 cup.jpg",
+    "price": 5500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-017",
+    "name": "Combo de Tina de Helado, 10 Conos y 10 Dulces",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Tina de 4 litros con 10 conos y 10 dulces.",
+    "image": "🍦",
+    "photo": "/assets/images/products/HeladeriaM&K/combo de Tina de Helado , 10 conos y 10 dulces 6500 cup.jpg",
+    "price": 6500,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "lp-001",
     "name": "Bistec Uruguayo",
     "businessId": "las-palmitas",
@@ -7734,7 +7769,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 3100,
+    "price": 3500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7751,7 +7786,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 3100,
+    "price": 3500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7768,7 +7803,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2400,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7785,7 +7820,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 2300,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7802,7 +7837,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 2300,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7819,7 +7854,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 2400,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7836,7 +7871,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🍖",
-    "price": 1900,
+    "price": 2000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7853,7 +7888,7 @@
     "category": "Cerdo",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2400,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7904,7 +7939,7 @@
     "category": "Res",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2700,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -7921,7 +7956,7 @@
     "category": "Res",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2700,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -8074,7 +8109,7 @@
     "category": "Postres",
     "shortDescription": "",
     "image": "🍮",
-    "price": 500,
+    "price": 600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -8210,7 +8245,7 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🥩",
-    "price": 2900,
+    "price": 3100,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -8227,7 +8262,7 @@
     "category": "Sugerencias del Chef",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2700,
+    "price": 3000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -8598,7 +8633,7 @@
     "category": "Entrantes",
     "shortDescription": "",
     "image": "🧀",
-    "price": 800,
+    "price": 1000,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -9380,7 +9415,7 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2700,
+    "price": 3500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -9499,7 +9534,7 @@
     "category": "Pollo",
     "shortDescription": "",
     "image": "🍗",
-    "price": 2000,
+    "price": 2500,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -10579,7 +10614,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🫘",
     "photo": "/assets/images/products/Los Prietos/frijol-negro.jpg",
-    "price": 400,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -10616,7 +10651,7 @@
     "image": "🫘",
     "photo": "/assets/images/products/Los Prietos/garbanzos.jpg",
     "price": 600,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-005",
@@ -10627,7 +10662,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🥒",
     "photo": "/assets/images/products/Los Prietos/pepino.jpg",
-    "price": 200,
+    "price": 250,
     "stockStatus": "disponible"
   },
   {
@@ -10651,8 +10686,8 @@
     "shortDescription": "Precio por libra.",
     "image": "🫑",
     "photo": "/assets/images/products/Los Prietos/Ají-Pimiento.webp",
-    "price": 500,
-    "stockStatus": "agotado"
+    "price": 750,
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-008",
@@ -10699,7 +10734,7 @@
     "shortDescription": "Precio por mano.",
     "image": "🍌",
     "photo": "/assets/images/products/Los Prietos/plátano-fruta.jpg",
-    "price": 200,
+    "price": 250,
     "stockStatus": "disponible"
   },
   {
@@ -10712,7 +10747,7 @@
     "image": "🍌",
     "photo": "/assets/images/products/Los Prietos/plátano-macho.webp",
     "price": 50,
-    "stockStatus": "agotado"
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-013",
@@ -10723,7 +10758,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍍",
     "photo": "/assets/images/products/Los Prietos/piña.webp",
-    "price": 500,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -10795,7 +10830,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍇",
     "photo": "/assets/images/products/Los Prietos/uva.jpg",
-    "price": 1200,
+    "price": 1000,
     "stockStatus": "disponible"
   },
   {
@@ -10819,8 +10854,8 @@
     "shortDescription": "Precio por libra.",
     "image": "🍅",
     "photo": "/assets/images/products/Los Prietos/tomate.jpg",
-    "price": 700,
-    "stockStatus": "disponible"
+    "price": 800,
+    "stockStatus": "agotado"
   },
   {
     "id": "alp-022",
@@ -10898,8 +10933,8 @@
     "shortDescription": "Precio por libra.",
     "image": "🎃",
     "photo": "/assets/images/products/Los Prietos/calabaza.jpg",
-    "price": 80,
-    "stockStatus": "agotado"
+    "price": 120,
+    "stockStatus": "disponible"
   },
   {
     "id": "alp-029",
@@ -10953,6 +10988,94 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🧂",
+    "price": 250,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-034",
+    "name": "Coco Seco (unidad)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥥",
+    "price": 200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-035",
+    "name": "Fruta Bomba Madura (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🍈",
+    "price": 150,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-036",
+    "name": "Cebolla Morada Chiquita (pote)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por pote.",
+    "image": "🧅",
+    "price": 800,
+    "stockStatus": "agotado"
+  },
+  {
+    "id": "alp-037",
+    "name": "Limón (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🍋",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-038",
+    "name": "Yuca (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🍠",
+    "price": 80,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-039",
+    "name": "Habichuela (mazo)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por mazo.",
+    "image": "🫛",
+    "price": 200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-040",
+    "name": "Plátano Burro (mano)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por mano.",
+    "image": "🍌",
+    "price": 200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "alp-041",
+    "name": "Zanahoria (por libra)",
+    "businessId": "agro-los-prietos",
+    "businessName": "Agro Los Prietos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🥕",
     "price": 250,
     "stockStatus": "disponible"
   },
@@ -11423,7 +11546,7 @@
     "image": "🫘",
     "photo": "/assets/images/products/DAF/Garbanzos -1000 cup.jpg",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-009",
@@ -12191,7 +12314,7 @@
     "image": "🧽",
     "photo": "/assets/images/products/DAF/esponjas de fregar x 10 -- 500.jpg",
     "price": 500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-073",
@@ -12477,7 +12600,7 @@
     "image": "🍪",
     "photo": "/assets/images/products/DAF/galletas dulce estrella.jpg",
     "price": 230,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-097",
@@ -12731,7 +12854,7 @@
     "image": "🌿",
     "photo": "/assets/images/products/DAF/hojas de laurel 360 cup.jpg",
     "price": 360,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-118",
@@ -15028,6 +15151,375 @@
     "photo": "/assets/images/products/Los Reales Electrodomésticos/paneles  solares bifaciales 600 w - 200usd.jpg",
     "price": 200,
     "currency": "USD",
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-001",
+    "name": "Pechuga Grille",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍗",
+    "price": 2600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-002",
+    "name": "Pechuga Gratinada",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍗",
+    "price": 2800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-003",
+    "name": "Pechuga con Jamón y Queso",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍗",
+    "price": 3200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-004",
+    "name": "Pechuga Empanada",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍗",
+    "price": 2500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-005",
+    "name": "Pechuga Cordon Blue",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍗",
+    "price": 4200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-006",
+    "name": "Pechuga Fajitas",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍗",
+    "price": 2500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-007",
+    "name": "Bistec Grille",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "price": 2400,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-008",
+    "name": "Bistec Empanado",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "price": 2500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-009",
+    "name": "Bistec Gratinado",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "price": 2700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-010",
+    "name": "Bistec Especial",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "price": 3000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-011",
+    "name": "Bistec Uruguayo",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "photo": "/assets/images/products/La Lomita/bistec uruguayo.jpg",
+    "price": 3600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-012",
+    "name": "Bistec Rollo",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "price": 2800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-013",
+    "name": "Lonjas de Cerdo",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "price": 2900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-014",
+    "name": "Fajitas de Cerdo",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🥩",
+    "price": 2400,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-015",
+    "name": "Espagueti Queso",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍝",
+    "photo": "/assets/images/products/La Lomita/spaguettis de queso.jpg",
+    "price": 2000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-016",
+    "name": "Espagueti Jamón y Queso",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍝",
+    "photo": "/assets/images/products/La Lomita/spaguettis de jamón y queso.jpg",
+    "price": 2500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-017",
+    "name": "Papas Fritas",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Entrante.",
+    "image": "🍟",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-018",
+    "name": "Entremés de la Casa",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Entrante.",
+    "image": "🍽️",
+    "price": 1500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-019",
+    "name": "Tostón Relleno",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Entrante.",
+    "image": "🍽️",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-020",
+    "name": "Tostón Natural",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Entrante.",
+    "image": "🍽️",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-021",
+    "name": "Chicharritas",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Entrante.",
+    "image": "🍽️",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-022",
+    "name": "Croquetas",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Ración de croquetas.",
+    "image": "🧆",
+    "photo": "/assets/images/products/La Lomita/ración de croquetas.jpg",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-023",
+    "name": "Picadera",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Para compartir.",
+    "image": "🍽️",
+    "price": 4000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-024",
+    "name": "Arroz Blanco",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Guarnición.",
+    "image": "🍚",
+    "price": 350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-025",
+    "name": "Arroz Moro",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Guarnición.",
+    "image": "🍚",
+    "photo": "/assets/images/products/La Lomita/arroz moro.jpg",
+    "price": 700,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-026",
+    "name": "Arroz Frito",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Guarnición.",
+    "image": "🍚",
+    "photo": "/assets/images/products/La Lomita/arroz frito.jpg",
+    "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-027",
+    "name": "Ensalada Mixta",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Guarnición.",
+    "image": "🥗",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-028",
+    "name": "Flan",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Postres",
+    "shortDescription": "Postre.",
+    "image": "🍮",
+    "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-029",
+    "name": "Cuña de Cake Tres Leches",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Postres",
+    "shortDescription": "Postre.",
+    "image": "🍰",
+    "price": 1000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-030",
+    "name": "Ropa Vieja",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Comida",
+    "shortDescription": "Especial de la casa.",
+    "image": "🍲",
+    "price": 3200,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-031",
+    "name": "Cerveza",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Bebidas",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍺",
+    "price": 550,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-032",
+    "name": "Refresco",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Bebidas",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥤",
+    "price": 500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ll-033",
+    "name": "Jugos",
+    "businessId": "la-lomita",
+    "businessName": "Restaurante La Lomita",
+    "category": "Bebidas",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧃",
+    "price": 480,
     "stockStatus": "disponible"
   }
 ]
