@@ -567,7 +567,7 @@
     "longDescription": "Papel sanitario, se vende por paquete.",
     "image": "🧻",
     "photo": "/assets/images/products/mercado/Papel sanitario.jpg",
-    "price": 800,
+    "price": 850,
     "stockStatus": "disponible"
   },
   {
@@ -593,6 +593,18 @@
     "longDescription": "Paquete de postas de pollo.",
     "image": "🍗",
     "price": 2300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-055",
+    "name": "Spam de Lata",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Se vende por lata.",
+    "longDescription": "Spam, se vende por lata.",
+    "image": "🥫",
+    "price": 1100,
     "stockStatus": "disponible"
   }
 ]

@@ -152,5 +152,31 @@
     "photo": "/assets/images/products/HeladeriaM&K/tina de helado con 10 cestas 5500.jpg",
     "price": 5500,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-016",
+    "name": "Combo de Tina de Helado y 10 Conos",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Tina de 4 litros con 10 conos.",
+    "longDescription": "Combo: tina de helado artesanal de 4 litros junto a 10 conos.",
+    "image": "🍦",
+    "photo": "/assets/images/products/HeladeriaM&K/Combo de Tina de Helado y 10 conos 5500 cup.jpg",
+    "price": 5500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "hmk-017",
+    "name": "Combo de Tina de Helado, 10 Conos y 10 Dulces",
+    "businessId": "heladeria-mk",
+    "businessName": "Heladería M&K",
+    "category": "Helados",
+    "shortDescription": "Tina de 4 litros con 10 conos y 10 dulces.",
+    "longDescription": "Combo: tina de helado artesanal de 4 litros, 10 conos y 10 dulces.",
+    "image": "🍦",
+    "photo": "/assets/images/products/HeladeriaM&K/combo de Tina de Helado , 10 conos y 10 dulces 6500 cup.jpg",
+    "price": 6500,
+    "stockStatus": "disponible"
   }
 ]
