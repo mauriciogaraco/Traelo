@@ -11618,7 +11618,7 @@
     "image": "🍷",
     "photo": "/assets/images/products/DAF/Moscatel Supremos 950.jpg",
     "price": 950,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-015",
@@ -12688,7 +12688,7 @@
       "Chocolate",
       "Dulce de Leche"
     ],
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-104",
@@ -12700,7 +12700,7 @@
     "image": "🧈",
     "photo": "/assets/images/products/DAF/Mantequilla 500 gramos 1160 cup.jpg",
     "price": 1160,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-105",

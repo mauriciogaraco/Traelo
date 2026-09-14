@@ -411,16 +411,16 @@
     "clientCommission": 5,
     "schedule": {
       "days": [
-        0,
-        2,
+        1,
         3,
         4,
         5,
-        6
+        6,
+        0
       ],
       "open": "09:00",
       "close": "21:00",
-      "label": "Mar–Dom · 9:00 am – 9:00 pm"
+      "label": "Mié–Lun · 9:00 am – 9:00 pm"
     },
     "businessCategories": [
       "Restaurantes",
@@ -466,7 +466,6 @@
     "schedule": {
       "days": [
         0,
-        1,
         2,
         3,
         4,
@@ -475,7 +474,7 @@
       ],
       "open": "10:00",
       "close": "21:00",
-      "label": "Todos los días · 10:00 am – 9:00 pm"
+      "label": "Mar–Dom · 10:00 am – 9:00 pm"
     },
     "businessCategories": [
       "Bebidas"
