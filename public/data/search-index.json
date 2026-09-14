@@ -14872,6 +14872,7 @@
     "category": "Pizzas",
     "shortDescription": "Pizza fitness.",
     "image": "🍍",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza hawaina.jpg",
     "price": 700,
     "stockStatus": "disponible"
   },
@@ -14907,6 +14908,7 @@
     "category": "Pizzas",
     "shortDescription": "Pizza fitness.",
     "image": "🧀",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza dobl queso.jpg",
     "price": 500,
     "stockStatus": "disponible"
   },

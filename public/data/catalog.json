@@ -16665,6 +16665,7 @@
       "shortDescription": "Pizza fitness.",
       "longDescription": "Pizza Hawaiana, pizza fitness.",
       "image": "🍍",
+      "photo": "/assets/images/products/Iron Bross Pizzas/pizza hawaina.jpg",
       "price": 700,
       "stockStatus": "disponible"
     },
@@ -16703,6 +16704,7 @@
       "shortDescription": "Pizza fitness.",
       "longDescription": "Pizza de queso doble, pizza fitness.",
       "image": "🧀",
+      "photo": "/assets/images/products/Iron Bross Pizzas/pizza dobl queso.jpg",
       "price": 500,
       "stockStatus": "disponible"
     },
