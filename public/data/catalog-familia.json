@@ -13759,7 +13759,7 @@
       "longDescription": "Tubo de picadillo El Cocinerito, se vende por unidad.",
       "image": "🥩",
       "photo": "/assets/images/products/DAF/Picadillo de tubo -- 800.jpg",
-      "price": 1.6,
+      "price": 1.34,
       "stockStatus": "disponible"
     },
     {
@@ -16666,7 +16666,7 @@
       "longDescription": "Pizza Hawaiana, pizza fitness.",
       "image": "🍍",
       "photo": "/assets/images/products/Iron Bross Pizzas/pizza hawaina.jpg",
-      "price": 1.4,
+      "price": 1.5,
       "stockStatus": "disponible"
     },
     {
@@ -16744,6 +16744,18 @@
       "longDescription": "Pizza de lomo de cerdo, pizza fitness.",
       "image": "🥩",
       "photo": "/assets/images/products/Iron Bross Pizzas/Pizza de Lomo de cerdo 750.jpg",
+      "price": 1.5,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ib-008",
+      "name": "Pizza de Lomo Ahumado",
+      "businessId": "iron-bross",
+      "businessName": "Iron Bross Pizzas",
+      "category": "Pizzas",
+      "shortDescription": "Pizza fitness.",
+      "longDescription": "Pizza de lomo ahumado, pizza fitness.",
+      "image": "🥓",
       "price": 1.5,
       "stockStatus": "disponible"
     },

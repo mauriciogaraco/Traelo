@@ -12133,7 +12133,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🥩",
     "photo": "/assets/images/products/DAF/Picadillo de tubo -- 800.jpg",
-    "price": 800,
+    "price": 670,
     "stockStatus": "disponible"
   },
   {
@@ -14873,7 +14873,7 @@
     "shortDescription": "Pizza fitness.",
     "image": "🍍",
     "photo": "/assets/images/products/Iron Bross Pizzas/pizza hawaina.jpg",
-    "price": 700,
+    "price": 750,
     "stockStatus": "disponible"
   },
   {
@@ -14945,6 +14945,17 @@
     "shortDescription": "Pizza fitness.",
     "image": "🥩",
     "photo": "/assets/images/products/Iron Bross Pizzas/Pizza de Lomo de cerdo 750.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-008",
+    "name": "Pizza de Lomo Ahumado",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🥓",
     "price": 750,
     "stockStatus": "disponible"
   },
