@@ -8,7 +8,8 @@
     "shortDescription": "Pizza fitness.",
     "longDescription": "Pizza Hawaiana, pizza fitness.",
     "image": "🍍",
-    "price": 700,
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza hawaina.jpg",
+    "price": 750,
     "stockStatus": "disponible"
   },
   {
@@ -46,6 +47,7 @@
     "shortDescription": "Pizza fitness.",
     "longDescription": "Pizza de queso doble, pizza fitness.",
     "image": "🧀",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza dobl queso.jpg",
     "price": 500,
     "stockStatus": "disponible"
   },
@@ -85,6 +87,18 @@
     "longDescription": "Pizza de lomo de cerdo, pizza fitness.",
     "image": "🥩",
     "photo": "/assets/images/products/Iron Bross Pizzas/Pizza de Lomo de cerdo 750.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-008",
+    "name": "Pizza de Lomo Ahumado",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "longDescription": "Pizza de lomo ahumado, pizza fitness.",
+    "image": "🥓",
     "price": 750,
     "stockStatus": "disponible"
   }

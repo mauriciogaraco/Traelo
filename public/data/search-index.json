@@ -6657,18 +6657,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "tk-028",
-    "name": "Malta morena",
-    "businessId": "tu-kprichito",
-    "businessName": "Tu Kprichito",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "image": "🍺",
-    "photo": "/assets/images/products/TuKprichito/malta-morena-350.jpg",
-    "price": 350,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "tk-029",
     "name": "Cigarro H. Upman (caja)",
     "businessId": "tu-kprichito",
@@ -12133,7 +12121,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🥩",
     "photo": "/assets/images/products/DAF/Picadillo de tubo -- 800.jpg",
-    "price": 800,
+    "price": 670,
     "stockStatus": "disponible"
   },
   {
@@ -14872,7 +14860,8 @@
     "category": "Pizzas",
     "shortDescription": "Pizza fitness.",
     "image": "🍍",
-    "price": 700,
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza hawaina.jpg",
+    "price": 750,
     "stockStatus": "disponible"
   },
   {
@@ -14907,6 +14896,7 @@
     "category": "Pizzas",
     "shortDescription": "Pizza fitness.",
     "image": "🧀",
+    "photo": "/assets/images/products/Iron Bross Pizzas/pizza dobl queso.jpg",
     "price": 500,
     "stockStatus": "disponible"
   },
@@ -14943,6 +14933,17 @@
     "shortDescription": "Pizza fitness.",
     "image": "🥩",
     "photo": "/assets/images/products/Iron Bross Pizzas/Pizza de Lomo de cerdo 750.jpg",
+    "price": 750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ib-008",
+    "name": "Pizza de Lomo Ahumado",
+    "businessId": "iron-bross",
+    "businessName": "Iron Bross Pizzas",
+    "category": "Pizzas",
+    "shortDescription": "Pizza fitness.",
+    "image": "🥓",
     "price": 750,
     "stockStatus": "disponible"
   },
