@@ -6657,18 +6657,6 @@
     "stockStatus": "disponible"
   },
   {
-    "id": "tk-028",
-    "name": "Malta morena",
-    "businessId": "tu-kprichito",
-    "businessName": "Tu Kprichito",
-    "category": "Bebidas",
-    "shortDescription": "Se vende por unidad.",
-    "image": "🍺",
-    "photo": "/assets/images/products/TuKprichito/malta-morena-350.jpg",
-    "price": 350,
-    "stockStatus": "disponible"
-  },
-  {
     "id": "tk-029",
     "name": "Cigarro H. Upman (caja)",
     "businessId": "tu-kprichito",
