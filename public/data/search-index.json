@@ -58,7 +58,7 @@
     "shortDescription": "Malteada espesa y cremosa.",
     "image": "🥛",
     "photo": "/assets/images/products/Cronos/Malteada.jpg",
-    "price": 1000,
+    "price": 1200,
     "stockStatus": "disponible"
   },
   {
@@ -170,6 +170,30 @@
     "price": 1100,
     "stockStatus": "disponible",
     "featured": true
+  },
+  {
+    "id": "cr-017",
+    "name": "Cronos de Almendra",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de almendra.",
+    "image": "🌰",
+    "photo": "/assets/images/products/Cronos/Cronos de Almendra.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-018",
+    "name": "Cronos de Mamey",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de mamey.",
+    "image": "🍑",
+    "photo": "/assets/images/products/Cronos/Mamey.jpg",
+    "price": 900,
+    "stockStatus": "disponible"
   },
   {
     "id": "bc-002",
