@@ -101,7 +101,8 @@
     },
     "businessCategories": [
       "Destacados",
-      "Mercado"
+      "Mercado",
+      "Cárnicos"
     ]
   },
   {
@@ -615,7 +616,8 @@
       "label": "Todos los días · 9:00 am – 7:00 pm"
     },
     "businessCategories": [
-      "Mercado"
+      "Mercado",
+      "Cárnicos"
     ]
   },
   {
@@ -818,6 +820,6 @@
       "close": "18:00",
       "label": "Todos los días · 9:00 am – 6:00 pm"
     },
-    "businessCategories": ["Mercado"]
+    "businessCategories": ["Mercado", "Cárnicos"]
   }
 ]

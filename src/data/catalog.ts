@@ -16,6 +16,7 @@ export const categoryEmoji: Record<Category, string> = {
 export const businessCategories: BusinessCategory[] = [
   'Destacados',
   'Restaurantes',
+  'Cárnicos',
   'Mercado',
   'Pizzas',
   'Bebidas',
@@ -32,6 +33,7 @@ export const businessCategories: BusinessCategory[] = [
 export const businessCategoryEmoji: Record<BusinessCategory, string> = {
   Destacados: '🌟',
   Restaurantes: '🍽️',
+  Cárnicos: '🥩',
   Mercado: '🛒',
   Pizzas: '🍕',
   Bebidas: '🥤',
@@ -52,6 +54,7 @@ export const businessCategoryEmoji: Record<BusinessCategory, string> = {
  * Destacados — demasiado amplias), se muestran todos los productos del negocio.
  */
 export const productCategoryHints: Partial<Record<BusinessCategory, string[]>> = {
+  Cárnicos: ['Cárnicos'],
   Pizzas: ['Pizzas'],
   Helados: ['Helados'],
   Panes: ['Panes', 'Panadería'],

@@ -17,6 +17,7 @@ export type Category =
 export type BusinessCategory =
   | 'Destacados'
   | 'Restaurantes'
+  | 'Cárnicos'
   | 'Mercado'
   | 'Pizzas'
   | 'Bebidas'
