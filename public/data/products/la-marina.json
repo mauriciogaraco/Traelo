@@ -1,24 +1,44 @@
 [
   {
     "id": "lm-001",
-    "name": "Espaguetis",
+    "name": "Espagueti Queso",
     "businessId": "la-marina",
     "businessName": "La Marina",
     "category": "Comida",
-    "shortDescription": "Con salsa de la casa.",
-    "longDescription": "Espaguetis recién hechos. Puedes añadir un agrego.",
+    "shortDescription": "Con salsa de la casa y queso.",
+    "longDescription": "Espagueti con queso, recién hecho. Puedes añadir un agrego.",
     "image": "🍝",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible",
     "addons": [
       {
-        "name": "Jamón",
-        "price": 150
+        "name": "Cebolla",
+        "price": 100
+      }
+    ],
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 20
       },
       {
-        "name": "Queso",
-        "price": 200
-      },
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "lm-001b",
+    "name": "Espagueti Jamón",
+    "businessId": "la-marina",
+    "businessName": "La Marina",
+    "category": "Comida",
+    "shortDescription": "Con salsa de la casa y jamón.",
+    "longDescription": "Espagueti con jamón, recién hecho. Puedes añadir un agrego.",
+    "image": "🍝",
+    "price": 650,
+    "stockStatus": "disponible",
+    "addons": [
       {
         "name": "Cebolla",
         "price": 100

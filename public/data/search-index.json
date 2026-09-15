@@ -4085,23 +4085,42 @@
   },
   {
     "id": "lm-001",
-    "name": "Espaguetis",
+    "name": "Espagueti Queso",
     "businessId": "la-marina",
     "businessName": "La Marina",
     "category": "Comida",
-    "shortDescription": "Con salsa de la casa.",
+    "shortDescription": "Con salsa de la casa y queso.",
     "image": "🍝",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible",
     "addons": [
       {
-        "name": "Jamón",
-        "price": 150
+        "name": "Cebolla",
+        "price": 100
+      }
+    ],
+    "packaging": [
+      {
+        "name": "Jaba",
+        "price": 20
       },
       {
-        "name": "Queso",
-        "price": 200
-      },
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "lm-001b",
+    "name": "Espagueti Jamón",
+    "businessId": "la-marina",
+    "businessName": "La Marina",
+    "category": "Comida",
+    "shortDescription": "Con salsa de la casa y jamón.",
+    "image": "🍝",
+    "price": 650,
+    "stockStatus": "disponible",
+    "addons": [
       {
         "name": "Cebolla",
         "price": 100
@@ -11473,8 +11492,8 @@
     "shortDescription": "Botella de 900 ml.",
     "image": "🛢️",
     "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
-    "price": 3600,
-    "stockStatus": "agotado"
+    "price": 3000,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-002",
@@ -11509,7 +11528,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🥃",
     "photo": "/assets/images/products/DAF/Chanceler Golden Label 3700.jpg",
-    "price": 3700,
+    "price": 3400,
     "stockStatus": "disponible"
   },
   {
@@ -11605,7 +11624,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍯",
     "photo": "/assets/images/products/DAF/Mermeladada de Mango 3850.jpg",
-    "price": 3850,
+    "price": 3600,
     "stockStatus": "disponible"
   },
   {
@@ -11785,7 +11804,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍬",
     "photo": "/assets/images/products/DAF/gomitas - 360.jpg",
-    "price": 360,
+    "price": 300,
     "stockStatus": "agotado"
   },
   {
@@ -11869,7 +11888,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍬",
     "photo": "/assets/images/products/DAF/Azúcar por libra -- 480.jpg",
-    "price": 480,
+    "price": 360,
     "stockStatus": "disponible"
   },
   {
@@ -12013,7 +12032,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🧼",
     "photo": "/assets/images/products/DAF/Jabón de Baño --300.jpg",
-    "price": 300,
+    "price": 290,
     "stockStatus": "disponible"
   },
   {
@@ -12121,7 +12140,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍊",
     "photo": "/assets/images/products/DAF/Naranja Agria (Zumo ) - 290.jpg",
-    "price": 330,
+    "price": 290,
     "stockStatus": "disponible"
   },
   {
@@ -12133,8 +12152,8 @@
     "shortDescription": "Precio por unidad.",
     "image": "🪥",
     "photo": "/assets/images/products/DAF/Pasta dental dentix --460.jpg",
-    "price": 460,
-    "stockStatus": "agotado"
+    "price": 420,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-057",
@@ -12181,8 +12200,8 @@
     "shortDescription": "Precio por libra.",
     "image": "🧂",
     "photo": "/assets/images/products/DAF/Sal Marina ( por libra) --190.jpg",
-    "price": 190,
-    "stockStatus": "agotado"
+    "price": 150,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-061",
@@ -12217,7 +12236,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre claro 290.jpg",
-    "price": 330,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -12229,7 +12248,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
-    "price": 330,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -12277,7 +12296,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍋",
     "photo": "/assets/images/products/DAF/Zumo de Limón 290.jpg",
-    "price": 330,
+    "price": 290,
     "stockStatus": "disponible"
   },
   {
@@ -12337,7 +12356,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🧴",
     "photo": "/assets/images/products/DAF/gel de baño -- 850.jpg",
-    "price": 850,
+    "price": 730,
     "stockStatus": "disponible"
   },
   {
@@ -12361,7 +12380,7 @@
     "shortDescription": "Jaba de 3 libras.",
     "image": "🍗",
     "photo": "/assets/images/products/DAF/jabas de pollo 3 lbs --2600.jpg",
-    "price": 2600,
+    "price": 2300,
     "stockStatus": "disponible"
   },
   {
@@ -12421,7 +12440,7 @@
     "shortDescription": "Paquete de 30 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/DAF/protectores , paquete de 30 unidades --420.jpg",
-    "price": 420,
+    "price": 380,
     "stockStatus": "disponible"
   },
   {
@@ -12490,8 +12509,8 @@
     "category": "Alimentos",
     "shortDescription": "Precio por cartón.",
     "image": "🥚",
-    "price": 4550,
-    "stockStatus": "agotado"
+    "price": 4250,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-087",
@@ -12501,7 +12520,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🥛",
-    "price": 820,
+    "price": 760,
     "stockStatus": "disponible"
   },
   {
@@ -12523,7 +12542,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🍅",
-    "price": 675,
+    "price": 600,
     "stockStatus": "disponible"
   },
   {
@@ -12634,7 +12653,7 @@
     "category": "Bebidas",
     "shortDescription": "Pomo de 500 ml.",
     "image": "💧",
-    "price": 170,
+    "price": 160,
     "stockStatus": "disponible"
   },
   {
@@ -12658,7 +12677,7 @@
     "shortDescription": "Paquete de 1 kg.",
     "image": "🍚",
     "photo": "/assets/images/products/DAF/bolsa de arroz 1 kg 800.jpg",
-    "price": 800,
+    "price": 740,
     "stockStatus": "disponible"
   },
   {
@@ -12723,7 +12742,7 @@
     "shortDescription": "Pote de 400 g.",
     "image": "🥫",
     "photo": "/assets/images/products/DAF/mayonesa 400 gramos1860.jpg",
-    "price": 1860,
+    "price": 1630,
     "stockStatus": "disponible"
   },
   {
@@ -12735,7 +12754,7 @@
     "shortDescription": "Lata de melocotón en almíbar.",
     "image": "🍑",
     "photo": "/assets/images/products/DAF/melocotón en conserva 810.jpg",
-    "price": 810,
+    "price": 730,
     "stockStatus": "disponible"
   },
   {
@@ -12747,7 +12766,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🥓",
     "photo": "/assets/images/products/DAF/mortadella mulata bonita 900 cup.jpg",
-    "price": 900,
+    "price": 1200,
     "stockStatus": "disponible"
   },
   {
@@ -12781,7 +12800,7 @@
     "category": "Alimentos",
     "shortDescription": "Precio por unidad.",
     "image": "🧴",
-    "price": 330,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -12829,7 +12848,7 @@
     "shortDescription": "Paquete de 500 g.",
     "image": "🧼",
     "photo": "/assets/images/products/DAF/detergente en polvo 500 gramos 780 cup.jpg",
-    "price": 780,
+    "price": 740,
     "stockStatus": "disponible"
   },
   {
@@ -12890,6 +12909,149 @@
     "image": "🟤",
     "photo": "/assets/images/products/DAF/canela en polvo 660 cup.jpg",
     "price": 660,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-120",
+    "name": "Galletas Todeshini",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍪",
+    "price": 930,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-121",
+    "name": "Pudín de Caramelo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍮",
+    "price": 205,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-122",
+    "name": "Flan de Chocolate",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍮",
+    "price": 440,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-123",
+    "name": "Cepillo de Dientes",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🪥",
+    "price": 105,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-124",
+    "name": "Gelatina Boom",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍬",
+    "price": 350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-125",
+    "name": "Coditos (500 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 500 g.",
+    "image": "🍝",
+    "price": 510,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-126",
+    "name": "Hígado de Pollo (1 kg)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "1 kg.",
+    "image": "🍗",
+    "price": 1750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-127",
+    "name": "Lomo Ahumado",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥓",
+    "price": 1850,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-128",
+    "name": "Lomo (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🥩",
+    "price": 1800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-129",
+    "name": "Gelatina Apti",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍮",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-130",
+    "name": "Mermelada de Guayaba Conchita",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🍯",
+    "price": 3500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-131",
+    "name": "Mermelada de Guayaba Tropical (330 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Pomo de 330 g.",
+    "image": "🍯",
+    "price": 3500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-132",
+    "name": "Refresco Fresh Mix",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Refresco con gas.",
+    "image": "🥤",
+    "price": 280,
     "stockStatus": "disponible"
   },
   {
@@ -15545,6 +15707,126 @@
     "shortDescription": "Precio por unidad.",
     "image": "🧃",
     "price": 480,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-001",
+    "name": "Chorizo Especial",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🌭",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/Chorizo especial 2500 la libra.jpg",
+    "price": 2500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-002",
+    "name": "Jamonada (500 g)",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "500 g. 1-9 uds: 1100 CUP c/u · 10+ uds: 850 CUP c/u.",
+    "image": "🥓",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/Jamonada 500 g 850 por cantidad , 1100 por unidad.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-003",
+    "name": "Jamón Escaldado",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🥓",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/Jamón Escaldado 1800 la libra.jpg",
+    "price": 1800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-004",
+    "name": "Lomo Ahumado",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🥩",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/Lomo Ahumado 1800 la libra.jpg",
+    "price": 1800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-005",
+    "name": "Bistec de Cerdo",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🥩",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/bistec de cerdo 1800 la libra.jpg",
+    "price": 1800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-006",
+    "name": "Jamonada (1 kg)",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "1 kg. 1-9 uds: 1800 CUP c/u · 10+ uds: 1500 CUP c/u.",
+    "image": "🥓",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/jamonada de 1kh 1500 por cantidad , por unidad 1800 cup.jpg",
+    "price": 1800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-007",
+    "name": "Jamón Embuchado en Bicora",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥓",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/jamón embuchado en bicora - 1800cup.jpg",
+    "price": 1800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-008",
+    "name": "Manteca de Cerdo en Rama (Jaba 5 lb)",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "Jaba de 5 libras.",
+    "image": "🧈",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/manteca de cerdo en rama jabas de 5 lb a 7mil.jpg",
+    "price": 7000,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-009",
+    "name": "Manteca en Rama",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "Precio por libra.",
+    "image": "🧈",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/manteca en rama 1600 la libra.jpg",
+    "price": 1600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "lpin-010",
+    "name": "Mini Chorizo",
+    "businessId": "la-pino",
+    "businessName": "La Pino - Tienda de Alimentos",
+    "category": "Alimentos",
+    "shortDescription": "1-9 uds: 800 CUP c/u · 10+ uds: 550 CUP c/u.",
+    "image": "🌭",
+    "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/mini chorizo por cantidad 550 por unidad 800.jpg",
+    "price": 800,
     "stockStatus": "disponible"
   }
 ]
