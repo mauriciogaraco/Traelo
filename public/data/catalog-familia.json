@@ -467,15 +467,15 @@
       "schedule": {
         "days": [
           0,
+          1,
           2,
-          3,
           4,
           5,
           6
         ],
         "open": "10:00",
         "close": "21:00",
-        "label": "Mar–Dom · 10:00 am – 9:00 pm"
+        "label": "Lun, Mar, Jue, Vie, Sáb y Dom · 10:00 am – 9:00 pm"
       },
       "businessCategories": [
         "Bebidas"
@@ -652,6 +652,7 @@
       "description": "Heladería Ella y Yo — Panes, pizzas y helados. Sabores que enamoran.",
       "image": "/assets/images/business/Ella y Yo.jpg",
       "color": "from-pink-100 to-rose-50",
+      "deliveryFee": 350,
       "businessCommission": 0,
       "clientCommission": 5,
       "schedule": {
@@ -902,7 +903,7 @@
       "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
       "image": "🥛",
       "photo": "/assets/images/products/Cronos/Malteada.jpg",
-      "price": 2,
+      "price": 2.4,
       "stockStatus": "disponible"
     },
     {
@@ -1023,6 +1024,32 @@
       "price": 2.2,
       "stockStatus": "disponible",
       "featured": true
+    },
+    {
+      "id": "cr-017",
+      "name": "Cronos de Almendra",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de almendra.",
+      "longDescription": "Batido de helado de almendra, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🌰",
+      "photo": "/assets/images/products/Cronos/Cronos de Almendra.jpg",
+      "price": 2.2,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "cr-018",
+      "name": "Cronos de Mamey",
+      "businessId": "cronos",
+      "businessName": "Cronos",
+      "category": "Batidos",
+      "shortDescription": "Batido de helado de mamey.",
+      "longDescription": "Batido de helado de mamey, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+      "image": "🍑",
+      "photo": "/assets/images/products/Cronos/Mamey.jpg",
+      "price": 1.8,
+      "stockStatus": "disponible"
     },
     {
       "id": "bc-002",

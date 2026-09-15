@@ -63,7 +63,7 @@
     "longDescription": "Malteada artesanal, espesa y aterciopelada. Coronada con crema batida, sirope y confituras de decoración.",
     "image": "🥛",
     "photo": "/assets/images/products/Cronos/Malteada.jpg",
-    "price": 1000,
+    "price": 1200,
     "stockStatus": "disponible"
   },
   {
@@ -184,5 +184,31 @@
     "price": 1100,
     "stockStatus": "disponible",
     "featured": true
+  },
+  {
+    "id": "cr-017",
+    "name": "Cronos de Almendra",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de almendra.",
+    "longDescription": "Batido de helado de almendra, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🌰",
+    "photo": "/assets/images/products/Cronos/Cronos de Almendra.jpg",
+    "price": 1100,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "cr-018",
+    "name": "Cronos de Mamey",
+    "businessId": "cronos",
+    "businessName": "Cronos",
+    "category": "Batidos",
+    "shortDescription": "Batido de helado de mamey.",
+    "longDescription": "Batido de helado de mamey, intenso y refrescante. Coronado con crema batida, sirope y confituras de decoración.",
+    "image": "🍑",
+    "photo": "/assets/images/products/Cronos/Mamey.jpg",
+    "price": 900,
+    "stockStatus": "disponible"
   }
 ]
