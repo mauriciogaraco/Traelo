@@ -1117,8 +1117,8 @@
       "longDescription": "Se vende por estuches de 48 unidades.",
       "image": "🍭",
       "photo": "/assets/images/products/mercadito/chups_chups.jpg",
-      "price": 0.05,
-      "formato": 48,
+      "price": 0.13,
+      "formato": 50,
       "stockStatus": "disponible"
     },
     {
@@ -1283,10 +1283,10 @@
       "businessName": "Mercado Alpha",
       "category": "Confituras",
       "shortDescription": "",
-      "longDescription": "Se venden por paquete 80/90 bombones",
+      "longDescription": "Se vende por caja, trae alrededor de 75 bombones.",
       "image": "🍫",
       "photo": "/assets/images/products/mercadito/bombones.jpg",
-      "price": 6.4,
+      "price": 7.5,
       "stockStatus": "agotado"
     },
     {
@@ -1313,7 +1313,7 @@
       "longDescription": "Se vende por blister de 10 unidades.",
       "image": "🍊",
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-      "price": 0.58,
+      "price": 0.6,
       "formato": 10,
       "stockStatus": "agotado"
     },
@@ -1327,7 +1327,7 @@
       "longDescription": "Se vende por blister de 10 unidades.",
       "image": "🍋",
       "photo": "/assets/images/products/mercadito/zumo_naranja_limon.jpg",
-      "price": 0.58,
+      "price": 0.6,
       "formato": 10,
       "stockStatus": "agotado"
     },
@@ -1487,7 +1487,7 @@
       "longDescription": "Culeros Babexi Premium, 3ra etapa.",
       "image": "🧷",
       "photo": "/assets/images/products/mercadito/culeros Babexi 3ra etapa , 3480 cup.jpg",
-      "price": 6.96,
+      "price": 7,
       "stockStatus": "disponible"
     },
     {
@@ -1569,7 +1569,7 @@
       "longDescription": "Jugos Twist, sabor manzana y melocotón. Se vende por caja de 27 unidades.",
       "image": "🧃",
       "photo": "/assets/images/products/mercadito/jugos twist a 240 cup se vende por cajas de 27 unidades (sabor manzana y melocotón).jpg",
-      "price": 0.48,
+      "price": 0.5,
       "stockStatus": "disponible",
       "formato": 27
     },
@@ -1613,7 +1613,7 @@
       "photo": "/assets/images/products/mercadito/pasta de tomate marwa .400 g 645 cup , se vende por cajas de 24 unidades.jpg",
       "price": 1.29,
       "stockStatus": "disponible",
-      "formato": 24
+      "formato": 12
     },
     {
       "id": "bc-066",
@@ -1625,7 +1625,7 @@
       "longDescription": "Sazón Tropical. Se vende por tira de 12 unidades.",
       "image": "🧂",
       "photo": "/assets/images/products/mercadito/sazón tropical 625 cup la tira de 12 unidades.jpg",
-      "price": 1.25,
+      "price": 1.26,
       "stockStatus": "disponible",
       "formato": 12
     },
@@ -1667,7 +1667,7 @@
       "longDescription": "Toallitas húmedas Puggy, paquete de 120 unidades.",
       "image": "🧻",
       "photo": "/assets/images/products/mercadito/toallitas húmedas a 680 cup.jpg",
-      "price": 1.36,
+      "price": 1.4,
       "stockStatus": "disponible"
     },
     {
@@ -1680,7 +1680,7 @@
       "longDescription": "Whisky Chanceler Golden Label, botella de 1 litro. Se vende por caja de 12 unidades.",
       "image": "🥃",
       "photo": "/assets/images/products/mercadito/wisky chancelier a 2750 cup se vende por cajas de 12 unidades.jpg",
-      "price": 5.5,
+      "price": 5.6,
       "stockStatus": "disponible",
       "formato": 12
     },
@@ -1695,6 +1695,45 @@
       "image": "🥃",
       "price": 5.6,
       "formato": 6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-072",
+      "name": "Aceite Casaliva (900 ml)",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Alimentos",
+      "shortDescription": "Botella de 900 ml.",
+      "longDescription": "Se vende por caja de 12 unidades.",
+      "image": "🛢️",
+      "price": 6,
+      "formato": 12,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-073",
+      "name": "Peter Jouven",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "",
+      "longDescription": "Se vende por caja de 24 unidades.",
+      "image": "🍪",
+      "price": 0.5,
+      "formato": 24,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "bc-074",
+      "name": "Galletas Milk",
+      "businessId": "bodega-central",
+      "businessName": "Mercado Alpha",
+      "category": "Confituras",
+      "shortDescription": "",
+      "longDescription": "Se vende por estuche de 21 paqueticos.",
+      "image": "🍪",
+      "price": 0.17,
+      "formato": 21,
       "stockStatus": "disponible"
     },
     {
@@ -13355,7 +13394,7 @@
       "image": "🍷",
       "photo": "/assets/images/products/DAF/Vino el Sotillo (tinto , cosecha) -2500.jpg",
       "price": 5,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-022",
@@ -13446,7 +13485,7 @@
       "image": "🥚",
       "photo": "/assets/images/products/DAF/huevo sorpresa --235.jpg",
       "price": 0.47,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-029",
@@ -14475,7 +14514,7 @@
       "image": "🥓",
       "photo": "/assets/images/products/DAF/mortadella mulata bonita 900 cup.jpg",
       "price": 2.4,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-108",
@@ -14550,7 +14589,7 @@
       "longDescription": "Sazón Completo, se vende por unidad.",
       "image": "🧂",
       "photo": "/assets/images/products/DAF/sazón completo 75 cup.jpg",
-      "price": 0.15,
+      "price": 0.14,
       "stockStatus": "disponible"
     },
     {
@@ -14629,7 +14668,7 @@
       "image": "🟤",
       "photo": "/assets/images/products/DAF/canela en polvo 660 cup.jpg",
       "price": 1.32,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-120",
@@ -14786,6 +14825,42 @@
       "image": "🥤",
       "price": 0.56,
       "stockStatus": "disponible"
+    },
+    {
+      "id": "daf-133",
+      "name": "Picadillo MDM",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Picadillo MDM, se vende por unidad.",
+      "image": "🥩",
+      "price": 1.16,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "daf-134",
+      "name": "Detergente Friegasuelos",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Aseo",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Detergente friegasuelos, se vende por unidad.",
+      "image": "🧴",
+      "price": 0,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "daf-135",
+      "name": "Paquete de Ligas",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Aseo",
+      "shortDescription": "Paquete.",
+      "longDescription": "Paquete de ligas, se vende por unidad.",
+      "image": "🔗",
+      "price": 0,
+      "stockStatus": "agotado"
     },
     {
       "id": "em-001",
