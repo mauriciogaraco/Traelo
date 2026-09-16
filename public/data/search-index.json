@@ -11733,7 +11733,7 @@
     "image": "🍷",
     "photo": "/assets/images/products/DAF/Vino el Sotillo (tinto , cosecha) -2500.jpg",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-022",
@@ -11817,7 +11817,7 @@
     "image": "🥚",
     "photo": "/assets/images/products/DAF/huevo sorpresa --235.jpg",
     "price": 235,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-029",
@@ -12767,7 +12767,7 @@
     "image": "🥓",
     "photo": "/assets/images/products/DAF/mortadella mulata bonita 900 cup.jpg",
     "price": 1200,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-108",
@@ -12836,7 +12836,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🧂",
     "photo": "/assets/images/products/DAF/sazón completo 75 cup.jpg",
-    "price": 75,
+    "price": 70,
     "stockStatus": "disponible"
   },
   {
@@ -12909,7 +12909,7 @@
     "image": "🟤",
     "photo": "/assets/images/products/DAF/canela en polvo 660 cup.jpg",
     "price": 660,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-120",
@@ -13053,6 +13053,39 @@
     "image": "🥤",
     "price": 280,
     "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-133",
+    "name": "Picadillo MDM",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Cárnicos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🥩",
+    "price": 580,
+    "stockStatus": "agotado"
+  },
+  {
+    "id": "daf-134",
+    "name": "Detergente Friegasuelos",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "image": "🧴",
+    "price": 0,
+    "stockStatus": "agotado"
+  },
+  {
+    "id": "daf-135",
+    "name": "Paquete de Ligas",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Paquete.",
+    "image": "🔗",
+    "price": 0,
+    "stockStatus": "agotado"
   },
   {
     "id": "em-001",
