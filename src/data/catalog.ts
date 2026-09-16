@@ -16,9 +16,9 @@ export const categoryEmoji: Record<Category, string> = {
 export const businessCategories: BusinessCategory[] = [
   'Destacados',
   'Restaurantes',
-  'Cárnicos',
   'Mercado',
   'Pizzas',
+  'Cárnicos',
   'Bebidas',
   'Helados',
   'Panes',
