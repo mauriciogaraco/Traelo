@@ -37,6 +37,7 @@ const BUSINESS_FILES = [
   'iron-bross',
   'los-reales',
   'la-lomita',
+  'la-pino',
 ];
 
 function read(file) {

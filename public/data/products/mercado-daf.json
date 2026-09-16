@@ -9,8 +9,8 @@
     "longDescription": "Aceite de cocina, botella de 900 ml.",
     "image": "🛢️",
     "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
-    "price": 3600,
-    "stockStatus": "agotado"
+    "price": 3000,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-002",
@@ -48,7 +48,7 @@
     "longDescription": "Chanceler Golden Label, se vende por unidad.",
     "image": "🥃",
     "photo": "/assets/images/products/DAF/Chanceler Golden Label 3700.jpg",
-    "price": 3700,
+    "price": 3400,
     "stockStatus": "disponible"
   },
   {
@@ -152,7 +152,7 @@
     "longDescription": "Mermelada de mango, se vende por unidad.",
     "image": "🍯",
     "photo": "/assets/images/products/DAF/Mermeladada de Mango 3850.jpg",
-    "price": 3850,
+    "price": 3600,
     "stockStatus": "disponible"
   },
   {
@@ -347,7 +347,7 @@
     "longDescription": "Gomitas, se venden por unidad.",
     "image": "🍬",
     "photo": "/assets/images/products/DAF/gomitas - 360.jpg",
-    "price": 360,
+    "price": 300,
     "stockStatus": "agotado"
   },
   {
@@ -438,7 +438,7 @@
     "longDescription": "Azúcar, precio por libra.",
     "image": "🍬",
     "photo": "/assets/images/products/DAF/Azúcar por libra -- 480.jpg",
-    "price": 480,
+    "price": 360,
     "stockStatus": "disponible"
   },
   {
@@ -446,7 +446,7 @@
     "name": "Bandeja de Bistec de Cerdo Empanados",
     "businessId": "mercado-daf",
     "businessName": "Mercado DAF",
-    "category": "Alimentos",
+    "category": "Cárnicos",
     "shortDescription": "Precio por bandeja.",
     "longDescription": "Bandeja de bistec de cerdo empanados.",
     "image": "🍖",
@@ -594,7 +594,7 @@
     "longDescription": "Jabón de baño, se vende por unidad.",
     "image": "🧼",
     "photo": "/assets/images/products/DAF/Jabón de Baño --300.jpg",
-    "price": 300,
+    "price": 290,
     "stockStatus": "disponible"
   },
   {
@@ -711,7 +711,7 @@
     "longDescription": "Zumo de naranja agria, se vende por unidad.",
     "image": "🍊",
     "photo": "/assets/images/products/DAF/Naranja Agria (Zumo ) - 290.jpg",
-    "price": 330,
+    "price": 290,
     "stockStatus": "disponible"
   },
   {
@@ -724,15 +724,15 @@
     "longDescription": "Pasta dental Dentix, se vende por unidad.",
     "image": "🪥",
     "photo": "/assets/images/products/DAF/Pasta dental dentix --460.jpg",
-    "price": 460,
-    "stockStatus": "agotado"
+    "price": 420,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-057",
     "name": "Tubo de Picadillo El Cocinerito",
     "businessId": "mercado-daf",
     "businessName": "Mercado DAF",
-    "category": "Alimentos",
+    "category": "Cárnicos",
     "shortDescription": "Precio por unidad.",
     "longDescription": "Tubo de picadillo El Cocinerito, se vende por unidad.",
     "image": "🥩",
@@ -758,7 +758,7 @@
     "name": "Rollos de Jamón y Queso (4 unidades)",
     "businessId": "mercado-daf",
     "businessName": "Mercado DAF",
-    "category": "Alimentos",
+    "category": "Cárnicos",
     "shortDescription": "Paquete de 4 unidades.",
     "longDescription": "Rollos de jamón y queso, paquete de 4 unidades.",
     "image": "🧀",
@@ -776,8 +776,8 @@
     "longDescription": "Sal marina, precio por libra.",
     "image": "🧂",
     "photo": "/assets/images/products/DAF/Sal Marina ( por libra) --190.jpg",
-    "price": 190,
-    "stockStatus": "agotado"
+    "price": 150,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-061",
@@ -815,7 +815,7 @@
     "longDescription": "Vinagre claro, se vende por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre claro 290.jpg",
-    "price": 330,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -828,7 +828,7 @@
     "longDescription": "Vinagre de vino tinto, se vende por unidad.",
     "image": "🍶",
     "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
-    "price": 330,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -880,7 +880,7 @@
     "longDescription": "Zumo de limón, se vende por unidad.",
     "image": "🍋",
     "photo": "/assets/images/products/DAF/Zumo de Limón 290.jpg",
-    "price": 330,
+    "price": 290,
     "stockStatus": "disponible"
   },
   {
@@ -945,7 +945,7 @@
     "longDescription": "Gel de baño, se vende por unidad.",
     "image": "🧴",
     "photo": "/assets/images/products/DAF/gel de baño -- 850.jpg",
-    "price": 850,
+    "price": 730,
     "stockStatus": "disponible"
   },
   {
@@ -966,12 +966,12 @@
     "name": "Jaba de Pollo (3 lbs)",
     "businessId": "mercado-daf",
     "businessName": "Mercado DAF",
-    "category": "Alimentos",
+    "category": "Cárnicos",
     "shortDescription": "Jaba de 3 libras.",
     "longDescription": "Jaba de pollo, 3 libras.",
     "image": "🍗",
     "photo": "/assets/images/products/DAF/jabas de pollo 3 lbs --2600.jpg",
-    "price": 2600,
+    "price": 2300,
     "stockStatus": "disponible"
   },
   {
@@ -1036,7 +1036,7 @@
     "longDescription": "Protectores, paquete de 30 unidades.",
     "image": "🧴",
     "photo": "/assets/images/products/DAF/protectores , paquete de 30 unidades --420.jpg",
-    "price": 420,
+    "price": 380,
     "stockStatus": "disponible"
   },
   {
@@ -1083,7 +1083,7 @@
     "name": "Chorizo",
     "businessId": "mercado-daf",
     "businessName": "Mercado DAF",
-    "category": "Alimentos",
+    "category": "Cárnicos",
     "shortDescription": "Precio por unidad.",
     "longDescription": "Chorizo, se vende por unidad.",
     "image": "🌭",
@@ -1111,8 +1111,8 @@
     "shortDescription": "Precio por cartón.",
     "longDescription": "Cartón de huevo, se vende por cartón.",
     "image": "🥚",
-    "price": 4550,
-    "stockStatus": "agotado"
+    "price": 4250,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-087",
@@ -1123,7 +1123,7 @@
     "shortDescription": "Precio por unidad.",
     "longDescription": "Leche evaporada, se vende por unidad.",
     "image": "🥛",
-    "price": 820,
+    "price": 760,
     "stockStatus": "disponible"
   },
   {
@@ -1147,7 +1147,7 @@
     "shortDescription": "Precio por unidad.",
     "longDescription": "Pasta de tomate, se vende por unidad.",
     "image": "🍅",
-    "price": 675,
+    "price": 600,
     "stockStatus": "disponible"
   },
   {
@@ -1267,7 +1267,7 @@
     "shortDescription": "Pomo de 500 ml.",
     "longDescription": "Agua, pomo de 500 ml.",
     "image": "💧",
-    "price": 170,
+    "price": 160,
     "stockStatus": "disponible"
   },
   {
@@ -1293,7 +1293,7 @@
     "longDescription": "Arroz El Rey del Arroz, paquete de 1 kg.",
     "image": "🍚",
     "photo": "/assets/images/products/DAF/bolsa de arroz 1 kg 800.jpg",
-    "price": 800,
+    "price": 740,
     "stockStatus": "disponible"
   },
   {
@@ -1363,7 +1363,7 @@
     "longDescription": "Mayonesa Doña Mirta, pote de 400 g.",
     "image": "🥫",
     "photo": "/assets/images/products/DAF/mayonesa 400 gramos1860.jpg",
-    "price": 1860,
+    "price": 1630,
     "stockStatus": "disponible"
   },
   {
@@ -1376,7 +1376,7 @@
     "longDescription": "Melocotón en almíbar Marwa, lata.",
     "image": "🍑",
     "photo": "/assets/images/products/DAF/melocotón en conserva 810.jpg",
-    "price": 810,
+    "price": 730,
     "stockStatus": "disponible"
   },
   {
@@ -1384,12 +1384,12 @@
     "name": "Mortadella Mulata Bonita",
     "businessId": "mercado-daf",
     "businessName": "Mercado DAF",
-    "category": "Alimentos",
+    "category": "Cárnicos",
     "shortDescription": "Precio por unidad.",
     "longDescription": "Mortadella Mulata Bonita, se vende por unidad.",
     "image": "🥓",
     "photo": "/assets/images/products/DAF/mortadella mulata bonita 900 cup.jpg",
-    "price": 900,
+    "price": 1200,
     "stockStatus": "disponible"
   },
   {
@@ -1426,7 +1426,7 @@
     "shortDescription": "Precio por unidad.",
     "longDescription": "Vinagre de Frutas, se vende por unidad.",
     "image": "🧴",
-    "price": 330,
+    "price": 300,
     "stockStatus": "disponible"
   },
   {
@@ -1478,7 +1478,7 @@
     "longDescription": "Detergente en polvo, paquete de 500 g.",
     "image": "🧼",
     "photo": "/assets/images/products/DAF/detergente en polvo 500 gramos 780 cup.jpg",
-    "price": 780,
+    "price": 740,
     "stockStatus": "disponible"
   },
   {
@@ -1544,6 +1544,162 @@
     "image": "🟤",
     "photo": "/assets/images/products/DAF/canela en polvo 660 cup.jpg",
     "price": 660,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-120",
+    "name": "Galletas Todeshini",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Galletas Todeshini, se vende por unidad.",
+    "image": "🍪",
+    "price": 930,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-121",
+    "name": "Pudín de Caramelo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Pudín de Caramelo, se vende por unidad.",
+    "image": "🍮",
+    "price": 205,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-122",
+    "name": "Flan de Chocolate",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Flan de Chocolate, se vende por unidad.",
+    "image": "🍮",
+    "price": 440,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-123",
+    "name": "Cepillo de Dientes",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Aseo",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Cepillo de Dientes, se vende por unidad.",
+    "image": "🪥",
+    "price": 105,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-124",
+    "name": "Gelatina Boom",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Gelatina Boom, se vende por unidad.",
+    "image": "🍬",
+    "price": 350,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-125",
+    "name": "Coditos (500 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Paquete de 500 g.",
+    "longDescription": "Coditos, paquete de 500 g.",
+    "image": "🍝",
+    "price": 510,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-126",
+    "name": "Hígado de Pollo (1 kg)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "1 kg.",
+    "longDescription": "Hígado de pollo, se vende por kilogramo.",
+    "image": "🍗",
+    "price": 1750,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-127",
+    "name": "Lomo Ahumado",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Cárnicos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Lomo Ahumado, se vende por unidad.",
+    "image": "🥓",
+    "price": 1850,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-128",
+    "name": "Lomo (por libra)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Cárnicos",
+    "shortDescription": "Precio por libra.",
+    "longDescription": "Lomo de cerdo, precio por libra.",
+    "image": "🥩",
+    "price": 1800,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-129",
+    "name": "Gelatina Apti",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Confituras",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Gelatina Apti, se vende por unidad.",
+    "image": "🍮",
+    "price": 300,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-130",
+    "name": "Mermelada de Guayaba Conchita",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Precio por unidad.",
+    "longDescription": "Mermelada de Guayaba Conchita, se vende por unidad.",
+    "image": "🍯",
+    "price": 3500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-131",
+    "name": "Mermelada de Guayaba Tropical (330 g)",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Alimentos",
+    "shortDescription": "Pomo de 330 g.",
+    "longDescription": "Mermelada de guayaba Tropical, pomo de 330 g.",
+    "image": "🍯",
+    "price": 3500,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "daf-132",
+    "name": "Refresco Fresh Mix",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Bebidas",
+    "shortDescription": "Refresco con gas.",
+    "longDescription": "Refresco Fresh Mix, con gas.",
+    "image": "🥤",
+    "price": 280,
     "stockStatus": "disponible"
   }
 ]
