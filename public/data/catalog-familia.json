@@ -17730,7 +17730,7 @@
       "image": "🌭",
       "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/Chorizo especial 2500 la libra.jpg",
       "price": 5,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "lpin-002",
@@ -17756,7 +17756,7 @@
       "image": "🥓",
       "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/Jamón Escaldado 1800 la libra.jpg",
       "price": 3.6,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "lpin-004",
@@ -17808,7 +17808,7 @@
       "image": "🥓",
       "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/jamón embuchado en bicora - 1800cup.jpg",
       "price": 3.6,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "lpin-008",
@@ -17847,6 +17847,18 @@
       "image": "🌭",
       "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/mini chorizo por cantidad 550 por unidad 800.jpg",
       "price": 1.6,
+      "stockStatus": "agotado"
+    },
+    {
+      "id": "lpin-011",
+      "name": "Carne de Res",
+      "businessId": "la-pino",
+      "businessName": "La Pino - Tienda de Alimentos",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Carne de res, precio por libra.",
+      "image": "🥩",
+      "price": 3.6,
       "stockStatus": "disponible"
     }
   ]
