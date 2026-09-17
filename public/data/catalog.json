@@ -4614,7 +4614,7 @@
       "image": "🌭",
       "photo": "/assets/images/products/mercado/perritos_mana.jpg",
       "price": 1200,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "ma-004",
@@ -13511,7 +13511,7 @@
       "image": "🚬",
       "photo": "/assets/images/products/DAF/popular rojo 850 por unidad.jpg",
       "price": 850,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-031",
@@ -17273,6 +17273,47 @@
       "image": "☀️",
       "photo": "/assets/images/products/Los Reales Electrodomésticos/paneles  solares bifaciales 600 w - 200usd.jpg",
       "price": 200,
+      "currency": "USD",
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lr-017",
+      "name": "Lámpara con Tubo LED",
+      "businessId": "los-reales",
+      "businessName": "Los Reales Tiendas de Electrodomésticos",
+      "category": "Electrónica",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Lámpara con tubo LED incluido, bajo consumo de energía.",
+      "image": "💡",
+      "photo": "/assets/images/products/Los Reales Electrodomésticos/Lámpara de Tubo Led 2700 cup.jpg",
+      "price": 2700,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lr-018",
+      "name": "Split Milexus 1 Tonelada",
+      "businessId": "los-reales",
+      "businessName": "Los Reales Tiendas de Electrodomésticos",
+      "category": "Electrónica",
+      "shortDescription": "Precio en USD.",
+      "longDescription": "Split Milexus 1 tonelada, tipo pared. Equivalente: 208,000 CUP si prefieres pagar en esa moneda.",
+      "image": "❄️",
+      "photo": "/assets/images/products/Los Reales Electrodomésticos/Split 1 Tonelada 260 usd o 208000 cup.jpg",
+      "price": 260,
+      "currency": "USD",
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lr-019",
+      "name": "Ventilador de Pared Pulox",
+      "businessId": "los-reales",
+      "businessName": "Los Reales Tiendas de Electrodomésticos",
+      "category": "Electrónica",
+      "shortDescription": "Precio en USD.",
+      "longDescription": "Ventilador de pared Pulox, 75W. Equivalente: 24,000 CUP si prefieres pagar en esa moneda.",
+      "image": "🌀",
+      "photo": "/assets/images/products/Los Reales Electrodomésticos/Ventilador de Pared Pulox 30 usd o 24 000 cup.jpg",
+      "price": 30,
       "currency": "USD",
       "stockStatus": "disponible"
     },

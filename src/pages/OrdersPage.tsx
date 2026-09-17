@@ -23,7 +23,7 @@ const statusConfig = {
 export function OrdersPage() {
   const navigate = useNavigate()
   const location = useLocation()
-  const { orders, markCompleted } = useOrders()
+  const { orders, markCompleted, updateOrder } = useOrders()
   const justOrdered = (location.state as { justOrdered?: string } | null)?.justOrdered
 
   if (orders.length === 0) {
@@ -62,14 +62,27 @@ export function OrdersPage() {
 
       <div className="px-4 space-y-4">
         {orders.map((order) => (
-          <OrderCard key={order.id} order={order} onComplete={() => markCompleted(order.id)} />
+          <OrderCard
+            key={order.id}
+            order={order}
+            onComplete={() => markCompleted(order.id)}
+            onUpdate={(patch) => updateOrder(order.id, patch)}
+          />
         ))}
       </div>
     </div>
   )
 }
 
-function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void }) {
+function OrderCard({
+  order,
+  onComplete,
+  onUpdate,
+}: {
+  order: Order
+  onComplete: () => void
+  onUpdate: (patch: Partial<Order>) => void
+}) {
   const { showToast } = useToast()
   const [resending, setResending] = useState(false)
   // Igual que en CheckoutPage: guarda síncrona para que un doble tap no cuele
@@ -110,12 +123,18 @@ function OrderCard({ order, onComplete }: { order: Order; onComplete: () => void
 
     setResending(true)
     markSendAttempt()
-    const ok = await sendOrderToTelegram(order)
+    const result = await sendOrderToTelegram(order)
     resendingRef.current = false
     setResending(false)
+    // Pedido de antes de que existiera el sorteo: se le asignó número recién
+    // ahora — se graba para que un reenvío futuro reutilice el mismo, en vez
+    // de generar uno nuevo cada vez.
+    if (result.ok && result.raffleNumber !== undefined && order.raffleNumber === undefined) {
+      onUpdate({ raffleNumber: result.raffleNumber })
+    }
     showToast(
-      ok ? 'Pedido reenviado correctamente.' : 'No se pudo reenviar. Inténtalo de nuevo.',
-      ok ? 'success' : 'error'
+      result.ok ? 'Pedido reenviado correctamente.' : 'No se pudo reenviar. Inténtalo de nuevo.',
+      result.ok ? 'success' : 'error'
     )
   }
 

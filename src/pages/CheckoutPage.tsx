@@ -133,9 +133,10 @@ export function CheckoutPage() {
     markSendAttempt()
 
     const order = makeOrder(items, address!, { label: deliveryLabel, when })
-    const ok = await sendOrderToTelegram(order)
+    const result = await sendOrderToTelegram(order)
 
-    if (ok) {
+    if (result.ok) {
+      if (result.raffleNumber !== undefined) order.raffleNumber = result.raffleNumber
       saveOrder(order)
       clearCart()
       showToast('¡Pedido enviado! Te contactaremos pronto.', 'success')
