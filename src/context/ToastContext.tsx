@@ -9,14 +9,20 @@ import {
 
 export type ToastType = 'success' | 'error' | 'info'
 
+interface ToastAction {
+  label: string
+  onClick: () => void
+}
+
 interface Toast {
   id: number
   message: string
   type: ToastType
+  action?: ToastAction
 }
 
 interface ToastContextValue {
-  showToast: (message: string, type?: ToastType) => void
+  showToast: (message: string, type?: ToastType, action?: ToastAction) => void
 }
 
 const ToastContext = createContext<ToastContextValue | null>(null)
@@ -30,9 +36,9 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   }, [])
 
   const showToast = useCallback(
-    (message: string, type: ToastType = 'info') => {
+    (message: string, type: ToastType = 'info', action?: ToastAction) => {
       const id = ++idRef.current
-      setToasts((prev) => [...prev, { id, message, type }])
+      setToasts((prev) => [...prev, { id, message, type, action }])
       window.setTimeout(() => remove(id), 3800)
     },
     [remove]
@@ -84,14 +90,26 @@ function ToastViewport({ toasts, onClose }: { toasts: Toast[]; onClose: (id: num
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[440px] z-[100] px-4 pt-4 pointer-events-none space-y-2">
       {toasts.map((t) => (
-        <button
+        <div
           key={t.id}
-          onClick={() => onClose(t.id)}
-          className={`pointer-events-auto w-full flex items-center gap-3 bg-surface border ${styles[t.type].ring} rounded-2xl shadow-card px-3.5 py-3 text-left animate-slide-down`}
+          className={`pointer-events-auto w-full flex items-center gap-3 bg-surface border ${styles[t.type].ring} rounded-2xl shadow-card px-3.5 py-3 animate-slide-down`}
         >
-          {styles[t.type].icon}
-          <span className="text-sm font-semibold text-text-primary flex-1">{t.message}</span>
-        </button>
+          <button onClick={() => onClose(t.id)} className="flex items-center gap-3 flex-1 min-w-0 text-left">
+            {styles[t.type].icon}
+            <span className="text-sm font-semibold text-text-primary flex-1">{t.message}</span>
+          </button>
+          {t.action && (
+            <button
+              onClick={() => {
+                onClose(t.id)
+                t.action!.onClick()
+              }}
+              className="flex-shrink-0 text-sm font-bold text-primary px-2 py-1 -mr-1 rounded-lg hover:bg-primary/10"
+            >
+              {t.action.label}
+            </button>
+          )}
+        </div>
       ))}
     </div>
   )

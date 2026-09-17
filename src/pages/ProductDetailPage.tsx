@@ -5,6 +5,7 @@ import { StockBadge } from "../components/ui/StockBadge";
 import { ProductImage } from "../components/ui/ProductImage";
 import { Button } from "../components/ui/Button";
 import { useCart } from "../context/CartContext";
+import { useToast } from "../context/ToastContext";
 import { formatAmount, formatPrice } from "../lib/format";
 import {
   hasAddons,
@@ -16,6 +17,7 @@ import {
 import { isOpenNow } from "../lib/hours";
 import { businessById } from "../data/catalog";
 import { PaymentNote } from "../components/ui/PaymentNote";
+import { flyToCart } from "../lib/flyToCart";
 import type { Addon, Packaging } from "../types";
 
 export function ProductDetailPage() {
@@ -23,11 +25,13 @@ export function ProductDetailPage() {
   const navigate = useNavigate()
   const { products, loading, loadBusinessProducts, getFullProduct, isBusinessLoaded } = useCatalog()
   const { addItem } = useCart()
+  const { showToast } = useToast()
   const [qty, setQty] = useState(1)
   const [option, setOption] = useState<string | null>(null)
   const [addon, setAddon] = useState<Addon | null>(null)
   const [packaging, setPackaging] = useState<Packaging | null>(null)
   const [descExpanded, setDescExpanded] = useState(false)
+  const [justAdded, setJustAdded] = useState(false)
 
   // Stub del índice (sin longDescription) — disponible de inmediato.
   const stub = products.find((p) => p.id === id)
@@ -438,12 +442,27 @@ export function ProductDetailPage() {
             <Button
               variant="soft"
               size="lg"
-              onClick={() => {
+              onClick={(e) => {
                 add();
-                navigate("/carrito");
+                flyToCart(e.currentTarget);
+                setJustAdded(true);
+                window.setTimeout(() => setJustAdded(false), 900);
+                showToast(`Añadiste ${product.name} al carrito`, "success", {
+                  label: "Ir al carrito",
+                  onClick: () => navigate("/carrito"),
+                });
               }}
             >
-              Añadir
+              {justAdded ? (
+                <span key="added" className="inline-flex items-center gap-1.5 animate-scale-in">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Añadido
+                </span>
+              ) : (
+                "Añadir"
+              )}
             </Button>
             <Button
               size="lg"
