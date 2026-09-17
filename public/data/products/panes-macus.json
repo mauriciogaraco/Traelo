@@ -1196,7 +1196,7 @@
     "longDescription": "Se vende por unidad.",
     "image": "🍺",
     "price": 550,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "pm-dr-jugo-cajita",

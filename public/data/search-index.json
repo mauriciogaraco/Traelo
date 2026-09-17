@@ -3400,7 +3400,7 @@
     "shortDescription": "",
     "image": "🍺",
     "price": 550,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "pm-dr-jugo-cajita",
@@ -4364,7 +4364,7 @@
     "shortDescription": "",
     "image": "🍺",
     "price": 550,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "lm-dr-jugo-cajita",
