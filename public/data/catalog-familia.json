@@ -13563,7 +13563,7 @@
       "image": "🍬",
       "photo": "/assets/images/products/DAF/Azúcar por libra -- 480.jpg",
       "price": 0.72,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-035",
@@ -14236,7 +14236,7 @@
       "longDescription": "Cartón de huevo, se vende por cartón.",
       "image": "🥚",
       "price": 8.5,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-087",
@@ -14752,7 +14752,7 @@
       "longDescription": "Hígado de pollo, se vende por kilogramo.",
       "image": "🍗",
       "price": 3.5,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-127",
@@ -14764,7 +14764,7 @@
       "longDescription": "Lomo Ahumado, se vende por unidad.",
       "image": "🥓",
       "price": 3.7,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-128",
@@ -14776,7 +14776,7 @@
       "longDescription": "Lomo de cerdo, precio por libra.",
       "image": "🥩",
       "price": 3.6,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-129",
@@ -14824,7 +14824,7 @@
       "longDescription": "Refresco Fresh Mix, con gas.",
       "image": "🥤",
       "price": 0.56,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-133",
@@ -14861,6 +14861,18 @@
       "image": "🔗",
       "price": 0,
       "stockStatus": "agotado"
+    },
+    {
+      "id": "daf-136",
+      "name": "Chorizo",
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Chorizo, se vende por unidad.",
+      "image": "🌭",
+      "price": 0.48,
+      "stockStatus": "disponible"
     },
     {
       "id": "em-001",

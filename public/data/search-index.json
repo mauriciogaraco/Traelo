@@ -11925,7 +11925,7 @@
     "image": "🍬",
     "photo": "/assets/images/products/DAF/Azúcar por libra -- 480.jpg",
     "price": 360,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-035",
@@ -12546,7 +12546,7 @@
     "shortDescription": "Precio por cartón.",
     "image": "🥚",
     "price": 4250,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-087",
@@ -13022,7 +13022,7 @@
     "shortDescription": "1 kg.",
     "image": "🍗",
     "price": 1750,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-127",
@@ -13033,7 +13033,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🥓",
     "price": 1850,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-128",
@@ -13044,7 +13044,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🥩",
     "price": 1800,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-129",
@@ -13088,7 +13088,7 @@
     "shortDescription": "Refresco con gas.",
     "image": "🥤",
     "price": 280,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-133",
@@ -13122,6 +13122,17 @@
     "image": "🔗",
     "price": 0,
     "stockStatus": "agotado"
+  },
+  {
+    "id": "daf-136",
+    "name": "Chorizo",
+    "businessId": "mercado-daf",
+    "businessName": "Mercado DAF",
+    "category": "Cárnicos",
+    "shortDescription": "Precio por unidad.",
+    "image": "🌭",
+    "price": 240,
+    "stockStatus": "disponible"
   },
   {
     "id": "em-001",
