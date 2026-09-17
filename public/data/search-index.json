@@ -15467,7 +15467,13 @@
     "shortDescription": "",
     "image": "🍗",
     "price": 2600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-002",
@@ -15478,7 +15484,13 @@
     "shortDescription": "",
     "image": "🍗",
     "price": 2800,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-003",
@@ -15489,7 +15501,13 @@
     "shortDescription": "",
     "image": "🍗",
     "price": 3200,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-004",
@@ -15500,7 +15518,13 @@
     "shortDescription": "",
     "image": "🍗",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-005",
@@ -15511,7 +15535,13 @@
     "shortDescription": "",
     "image": "🍗",
     "price": 4200,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-006",
@@ -15522,7 +15552,13 @@
     "shortDescription": "",
     "image": "🍗",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-007",
@@ -15533,7 +15569,13 @@
     "shortDescription": "",
     "image": "🥩",
     "price": 2400,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-008",
@@ -15544,7 +15586,13 @@
     "shortDescription": "",
     "image": "🥩",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-009",
@@ -15555,7 +15603,13 @@
     "shortDescription": "",
     "image": "🥩",
     "price": 2700,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-010",
@@ -15566,7 +15620,13 @@
     "shortDescription": "",
     "image": "🥩",
     "price": 3000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-011",
@@ -15578,7 +15638,13 @@
     "image": "🥩",
     "photo": "/assets/images/products/La Lomita/bistec uruguayo.jpg",
     "price": 3600,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-012",
@@ -15589,7 +15655,13 @@
     "shortDescription": "",
     "image": "🥩",
     "price": 2800,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-013",
@@ -15600,7 +15672,13 @@
     "shortDescription": "",
     "image": "🥩",
     "price": 2900,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-014",
@@ -15611,7 +15689,13 @@
     "shortDescription": "",
     "image": "🥩",
     "price": 2400,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-015",
@@ -15623,7 +15707,13 @@
     "image": "🍝",
     "photo": "/assets/images/products/La Lomita/spaguettis de queso.jpg",
     "price": 2000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-016",
@@ -15635,7 +15725,13 @@
     "image": "🍝",
     "photo": "/assets/images/products/La Lomita/spaguettis de jamón y queso.jpg",
     "price": 2500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-017",
@@ -15646,7 +15742,13 @@
     "shortDescription": "Entrante.",
     "image": "🍟",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-018",
@@ -15657,7 +15759,13 @@
     "shortDescription": "Entrante.",
     "image": "🍽️",
     "price": 1500,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-019",
@@ -15668,7 +15776,13 @@
     "shortDescription": "Entrante.",
     "image": "🍽️",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-020",
@@ -15679,7 +15793,13 @@
     "shortDescription": "Entrante.",
     "image": "🍽️",
     "price": 800,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-021",
@@ -15690,7 +15810,13 @@
     "shortDescription": "Entrante.",
     "image": "🍽️",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-022",
@@ -15702,7 +15828,13 @@
     "image": "🧆",
     "photo": "/assets/images/products/La Lomita/ración de croquetas.jpg",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-023",
@@ -15713,7 +15845,13 @@
     "shortDescription": "Para compartir.",
     "image": "🍽️",
     "price": 4000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-024",
@@ -15724,7 +15862,13 @@
     "shortDescription": "Guarnición.",
     "image": "🍚",
     "price": 350,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-025",
@@ -15736,7 +15880,13 @@
     "image": "🍚",
     "photo": "/assets/images/products/La Lomita/arroz moro.jpg",
     "price": 700,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-026",
@@ -15748,7 +15898,13 @@
     "image": "🍚",
     "photo": "/assets/images/products/La Lomita/arroz frito.jpg",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-027",
@@ -15759,7 +15915,13 @@
     "shortDescription": "Guarnición.",
     "image": "🥗",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-028",
@@ -15770,7 +15932,13 @@
     "shortDescription": "Postre.",
     "image": "🍮",
     "price": 900,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-029",
@@ -15781,7 +15949,13 @@
     "shortDescription": "Postre.",
     "image": "🍰",
     "price": 1000,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-030",
@@ -15792,7 +15966,13 @@
     "shortDescription": "Especial de la casa.",
     "image": "🍲",
     "price": 3200,
-    "stockStatus": "disponible"
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Termopack",
+        "price": 150
+      }
+    ]
   },
   {
     "id": "ll-031",
