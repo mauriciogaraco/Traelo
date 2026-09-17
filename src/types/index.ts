@@ -172,4 +172,6 @@ export interface Order {
   delivery?: string
   status: OrderStatus
   address: Address
+  /** Número de sorteo asignado al confirmar (ver lib/telegram.ts). Ausente en pedidos previos a esta función. */
+  raffleNumber?: number
 }
