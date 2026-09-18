@@ -3567,7 +3567,7 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra.",
     "image": "🥩",
-    "price": 1700,
+    "price": 1750,
     "stockStatus": "disponible"
   },
   {
@@ -3578,7 +3578,7 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra, en bistec.",
     "image": "🥩",
-    "price": 1750,
+    "price": 1800,
     "stockStatus": "disponible"
   },
   {
@@ -3602,7 +3602,7 @@
     "shortDescription": "",
     "image": "🫘",
     "photo": "/assets/images/products/mercado/pontarollo.jpg",
-    "price": 850,
+    "price": 900,
     "stockStatus": "disponible"
   },
   {
@@ -3766,7 +3766,7 @@
     "category": "Cárnicos",
     "shortDescription": "Precio por libra.",
     "image": "🍖",
-    "price": 550,
+    "price": 600,
     "stockStatus": "disponible"
   },
   {
@@ -3817,7 +3817,7 @@
     "category": "Alimentos",
     "shortDescription": "Paquete de 500 g.",
     "image": "🍝",
-    "price": 400,
+    "price": 450,
     "stockStatus": "disponible"
   },
   {
@@ -3963,7 +3963,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por paquete.",
     "image": "🍪",
-    "price": 300,
+    "price": 150,
     "stockStatus": "disponible"
   },
   {
@@ -3986,7 +3986,7 @@
     "category": "Embutidos",
     "shortDescription": "Se vende por unidad.",
     "image": "🥩",
-    "price": 850,
+    "price": 1100,
     "stockStatus": "agotado"
   },
   {

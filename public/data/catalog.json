@@ -4639,7 +4639,7 @@
       "shortDescription": "Una libra.",
       "longDescription": "Lomo de cerdo, se entrega por libra.",
       "image": "🥩",
-      "price": 1700,
+      "price": 1750,
       "stockStatus": "disponible"
     },
     {
@@ -4651,7 +4651,7 @@
       "shortDescription": "Una libra, en bistec.",
       "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
       "image": "🥩",
-      "price": 1750,
+      "price": 1800,
       "stockStatus": "disponible"
     },
     {
@@ -4677,7 +4677,7 @@
       "longDescription": "Frijoles de 1kg.",
       "image": "🫘",
       "photo": "/assets/images/products/mercado/pontarollo.jpg",
-      "price": 850,
+      "price": 900,
       "stockStatus": "disponible"
     },
     {
@@ -4855,7 +4855,7 @@
       "shortDescription": "Precio por libra.",
       "longDescription": "Picadillo de pollo MDM, se vende por libra.",
       "image": "🍖",
-      "price": 550,
+      "price": 600,
       "stockStatus": "disponible"
     },
     {
@@ -4910,7 +4910,7 @@
       "shortDescription": "Paquete de 500 g.",
       "longDescription": "Coditos, paquete de 500 g.",
       "image": "🍝",
-      "price": 400,
+      "price": 450,
       "stockStatus": "disponible"
     },
     {
@@ -5069,7 +5069,7 @@
       "shortDescription": "Se vende por paquete.",
       "longDescription": "Galletas María, se venden por paquete.",
       "image": "🍪",
-      "price": 300,
+      "price": 150,
       "stockStatus": "disponible"
     },
     {
@@ -5094,7 +5094,7 @@
       "shortDescription": "Se vende por unidad.",
       "longDescription": "Jamonada.",
       "image": "🥩",
-      "price": 850,
+      "price": 1100,
       "stockStatus": "agotado"
     },
     {
