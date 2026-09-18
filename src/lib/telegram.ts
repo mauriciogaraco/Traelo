@@ -110,13 +110,13 @@ export function buildOrderMessage(order: Order): string {
     lines.push(`🧾 <b>Servicio Tráelo:</b> ${formatPrice(serviceFee)} <i>(siempre en CUP)</i>`)
 
   if (hasUsd) {
-    if (usdTotal > 0)
-      lines.push(`💲 <b>Productos USD: ${formatPrice(usdTotal, 'USD')}</b>`)
+    // Mensajería y servicio ya se listaron arriba; aquí solo los totales por moneda
+    // (sin volver a repetirlos), para que quede claro cuánto cobrar en cada una.
     if (cupTotal > 0)
       lines.push(`💵 <b>Productos CUP: ${formatPrice(cupTotal)}</b>`)
-    lines.push(`💵 <b>Mensajería a cobrar: ${formatPrice(fee)}</b>`)
-    if (serviceFee > 0)
-      lines.push(`💵 <b>Servicio Tráelo a cobrar: ${formatPrice(serviceFee)}</b>`)
+    if (usdTotal > 0)
+      lines.push(`💲 <b>Total USD a cobrar: ${formatPrice(usdTotal, 'USD')}</b>`)
+    lines.push(`💵 <b>Total CUP a cobrar: ${formatPrice(cupTotal + fee + serviceFee)}</b>`)
     if (hasEmePolicy)
       lines.push(`<i>⚠️ La mensajería se cobra en CUP aunque no se retenga la prenda.</i>`)
   } else {
