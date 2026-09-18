@@ -3619,14 +3619,33 @@
   },
   {
     "id": "ma-0012",
-    "name": "Yogurt Vaso",
+    "name": "Yogurt Fru Fru",
     "businessId": "mercadito-ahorro",
     "businessName": "El Mercadito",
     "category": "Alimentos",
-    "shortDescription": "",
+    "shortDescription": "Elige el sabor al confirmar.",
     "image": "🥛",
-    "photo": "/assets/images/products/mercado/yogurt_vaso.webp",
     "price": 350,
+    "options": [
+      "Mango",
+      "Durazno"
+    ],
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-056",
+    "name": "Yogurt Naya",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Alimentos",
+    "shortDescription": "Elige el sabor al confirmar.",
+    "image": "🥛",
+    "price": 400,
+    "options": [
+      "Fresa",
+      "Natural",
+      "Macedonia"
+    ],
     "stockStatus": "disponible"
   },
   {
