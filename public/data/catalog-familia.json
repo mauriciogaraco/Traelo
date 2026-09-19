@@ -17443,7 +17443,7 @@
       "image": "🥩",
       "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/Lomo Ahumado 1800 la libra.jpg",
       "price": 3.6,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "lpin-005",
@@ -17534,6 +17534,18 @@
       "image": "🥩",
       "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/carne de res -1800 lalibra.jpg",
       "price": 3.6,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "lpin-012",
+      "name": "Pollo Ahumado",
+      "businessId": "la-pino",
+      "businessName": "La Pino - Tienda de Alimentos",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por libra.",
+      "longDescription": "Pollo ahumado, precio por libra.",
+      "image": "🍗",
+      "price": 3,
       "stockStatus": "disponible"
     },
     {
