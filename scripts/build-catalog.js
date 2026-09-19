@@ -38,6 +38,8 @@ const BUSINESS_FILES = [
   'los-reales',
   'la-lomita',
   'la-pino',
+  'rincon-izquierdo',
+  'los-barca',
 ];
 
 function read(file) {
