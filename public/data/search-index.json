@@ -10670,7 +10670,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🍫",
     "photo": "/assets/images/products/La Nevada/Brownie de frutos secos 600.jpg",
-    "price": 600,
+    "price": 630,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -10693,7 +10693,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🎂",
     "photo": "/assets/images/products/La Nevada/Cake especial de cremas blanca de galleta 6000.jpg",
-    "price": 7000,
+    "price": 6500,
     "stockStatus": "disponible"
   },
   {
@@ -10705,7 +10705,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🎂",
     "photo": "/assets/images/products/La Nevada/cakes de leche condensada 4600.jpg",
-    "price": 7000,
+    "price": 7500,
     "stockStatus": "disponible"
   },
   {
@@ -10732,7 +10732,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🥐",
     "photo": "/assets/images/products/La Nevada/cuñas sencillas 550.jpg",
-    "price": 580,
+    "price": 600,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -10778,7 +10778,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🍰",
     "photo": "/assets/images/products/La Nevada/eclear -350.jpg",
-    "price": 350,
+    "price": 400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -10913,7 +10913,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🍰",
     "photo": "/assets/images/products/La Nevada/Señorita-600.jpg",
-    "price": 600,
+    "price": 650,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -10936,7 +10936,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🥧",
     "photo": "/assets/images/products/La Nevada/tarta nata -370.jpg",
-    "price": 370,
+    "price": 400,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -10974,7 +10974,7 @@
     "shortDescription": "Precio en CUP.",
     "image": "🍮",
     "photo": "/assets/images/products/La Nevada/tocinillo del clielo - 500.jpg",
-    "price": 500,
+    "price": 570,
     "stockStatus": "disponible",
     "packaging": [
       {
@@ -10987,6 +10987,83 @@
         "price": 0
       }
     ]
+  },
+  {
+    "id": "ln-021",
+    "name": "Rollitos",
+    "businessId": "la-nevada",
+    "businessName": "La Nevada",
+    "category": "Dulcería",
+    "shortDescription": "Precio en CUP.",
+    "image": "🥐",
+    "price": 400,
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50,
+        "capacity": 4
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "ln-022",
+    "name": "Tartaletas",
+    "businessId": "la-nevada",
+    "businessName": "La Nevada",
+    "category": "Dulcería",
+    "shortDescription": "Precio en CUP.",
+    "image": "🥧",
+    "price": 300,
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50,
+        "capacity": 4
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "ln-023",
+    "name": "Cuñas Lindas",
+    "businessId": "la-nevada",
+    "businessName": "La Nevada",
+    "category": "Dulcería",
+    "shortDescription": "Precio en CUP.",
+    "image": "🥐",
+    "price": 650,
+    "stockStatus": "disponible",
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 50,
+        "capacity": 4
+      },
+      {
+        "name": "Jaba",
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "ln-024",
+    "name": "Cake Personalizado con Termos",
+    "businessId": "la-nevada",
+    "businessName": "La Nevada",
+    "category": "Cakes",
+    "shortDescription": "Precio en CUP.",
+    "image": "🎂",
+    "price": 8500,
+    "stockStatus": "disponible"
   },
   {
     "id": "daf-001",
