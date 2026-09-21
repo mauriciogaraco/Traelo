@@ -12271,7 +12271,7 @@
       "longDescription": "Brownie de frutos secos artesanal de La Nevada.",
       "image": "🍫",
       "photo": "/assets/images/products/La Nevada/Brownie de frutos secos 600.jpg",
-      "price": 1.2,
+      "price": 1.26,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -12295,7 +12295,7 @@
       "longDescription": "Cake especial de crema blanca de galleta, artesanal de La Nevada.",
       "image": "🎂",
       "photo": "/assets/images/products/La Nevada/Cake especial de cremas blanca de galleta 6000.jpg",
-      "price": 14,
+      "price": 13,
       "stockStatus": "disponible"
     },
     {
@@ -12308,7 +12308,7 @@
       "longDescription": "Cake de leche condensada artesanal de La Nevada.",
       "image": "🎂",
       "photo": "/assets/images/products/La Nevada/cakes de leche condensada 4600.jpg",
-      "price": 14,
+      "price": 15,
       "stockStatus": "disponible"
     },
     {
@@ -12337,7 +12337,7 @@
       "longDescription": "Cuñas sencillas artesanales de La Nevada.",
       "image": "🥐",
       "photo": "/assets/images/products/La Nevada/cuñas sencillas 550.jpg",
-      "price": 1.16,
+      "price": 1.2,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -12385,7 +12385,7 @@
       "longDescription": "Eclair artesanal de La Nevada.",
       "image": "🍰",
       "photo": "/assets/images/products/La Nevada/eclear -350.jpg",
-      "price": 0.7,
+      "price": 0.8,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -12527,7 +12527,7 @@
       "longDescription": "Señorita artesanal de La Nevada.",
       "image": "🍰",
       "photo": "/assets/images/products/La Nevada/Señorita-600.jpg",
-      "price": 1.2,
+      "price": 1.3,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -12551,7 +12551,7 @@
       "longDescription": "Tarta nata artesanal de La Nevada.",
       "image": "🥧",
       "photo": "/assets/images/products/La Nevada/tarta nata -370.jpg",
-      "price": 0.74,
+      "price": 0.8,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -12591,7 +12591,7 @@
       "longDescription": "Tocinillo del cielo artesanal de La Nevada.",
       "image": "🍮",
       "photo": "/assets/images/products/La Nevada/tocinillo del clielo - 500.jpg",
-      "price": 1,
+      "price": 1.14,
       "stockStatus": "disponible",
       "packaging": [
         {
@@ -12604,6 +12604,87 @@
           "price": 0
         }
       ]
+    },
+    {
+      "id": "ln-021",
+      "name": "Rollitos",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Rollitos artesanales de La Nevada.",
+      "image": "🥐",
+      "price": 0.8,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Caja",
+          "price": 0.1,
+          "capacity": 4
+        },
+        {
+          "name": "Jaba",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "id": "ln-022",
+      "name": "Tartaletas",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Tartaletas artesanales de La Nevada.",
+      "image": "🥧",
+      "price": 0.6,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Caja",
+          "price": 0.1,
+          "capacity": 4
+        },
+        {
+          "name": "Jaba",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "id": "ln-023",
+      "name": "Cuñas Lindas",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Dulcería",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Cuñas lindas artesanales de La Nevada.",
+      "image": "🥐",
+      "price": 1.3,
+      "stockStatus": "disponible",
+      "packaging": [
+        {
+          "name": "Caja",
+          "price": 0.1,
+          "capacity": 4
+        },
+        {
+          "name": "Jaba",
+          "price": 0
+        }
+      ]
+    },
+    {
+      "id": "ln-024",
+      "name": "Cake Personalizado con Termos",
+      "businessId": "la-nevada",
+      "businessName": "La Nevada",
+      "category": "Cakes",
+      "shortDescription": "Precio en CUP.",
+      "longDescription": "Cake personalizado con termos, artesanal de La Nevada.",
+      "image": "🎂",
+      "price": 17,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-001",
