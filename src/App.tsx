@@ -18,6 +18,9 @@ import { ProductDetailPage } from "./pages/ProductDetailPage";
 import { CartPage } from "./pages/CartPage";
 import { CheckoutPage } from "./pages/CheckoutPage";
 import { OrdersPage } from "./pages/OrdersPage";
+import { PrivacyPage } from "./pages/PrivacyPage";
+import { HelpPage } from "./pages/HelpPage";
+import { DeleteAccountPage } from "./pages/DeleteAccountPage";
 //import { ComingSoonModal } from "./pages/CommingSoonModal";
 
 function Providers({ children }: { children: ReactNode }) {
@@ -72,6 +75,9 @@ export default function App() {
             <Route path="/carrito" element={<CartPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/pedidos" element={<OrdersPage />} />
+            <Route path="/privacidad" element={<PrivacyPage />} />
+            <Route path="/ayuda" element={<HelpPage />} />
+            <Route path="/borrarusuario" element={<DeleteAccountPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppShell>
