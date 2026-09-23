@@ -34,6 +34,8 @@ export default defineConfig({
         // La versión nueva toma el control de inmediato (sin esperar a cerrar pestañas).
         skipWaiting: true,
         clientsClaim: true,
+        // Fuerza la recarga de pestañas con una versión vieja de la app (ver public/sw-force-reload.js).
+        importScripts: ['sw-force-reload.js'],
         // Las rutas /api/* (función serverless) nunca deben caer en el index.html del app shell.
         navigateFallbackDenylist: [/^\/api\//],
         // Precache solo el app shell (JS/CSS/HTML). Las imágenes se cachean on-demand.
