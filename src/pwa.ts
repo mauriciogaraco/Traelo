@@ -37,6 +37,15 @@ function reloadWhenIdle(): void {
 }
 
 export function initPWA(): void {
+  // Confirma al service worker que esta versión sabe recargarse sola; las
+  // pestañas que no confirman se consideran viejas y el SW las recarga (ver public/sw-force-reload.js).
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      if (event.data?.type === 'traelo-sw-activated') {
+        ;(event.source as ServiceWorker | null)?.postMessage({ type: 'traelo-ack' })
+      }
+    })
+  }
   registerSW({
     immediate: true,
     onNeedReload: reloadWhenIdle,
