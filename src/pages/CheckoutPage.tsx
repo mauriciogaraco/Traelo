@@ -17,7 +17,9 @@ import { makeOrder, groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
 import { computeFee, computeServiceFee } from '../lib/fees'
 import { isOpenNow, ordersClosedForToday } from '../lib/hours'
-import { markSendAttempt, msUntilNextSend } from '../lib/rateLimit'
+import { cooldownMessage, markOrderSent, orderCooldownRemaining, SEND_FAILED_MESSAGE } from '../lib/rateLimit'
+import { setOrderInFlight } from '../pwa'
+import { HelpBanner } from '../components/ui/HelpBanner'
 import { sendOrderToTelegram } from '../lib/telegram'
 import { businessById } from '../data/catalog'
 
@@ -122,29 +124,38 @@ export function CheckoutPage() {
     .join(' · ')
 
   const ordersClosed = ordersClosedForToday(now)
-  const cooldownMs = msUntilNextSend(nowTick)
+  const cooldownMs = orderCooldownRemaining(nowTick)
   const onCooldown = cooldownMs > 0
   const canConfirm = !!address && !sending && !hasClosed && !scheduledMissing && !ordersClosed && !onCooldown
 
   async function confirm() {
     if (!canConfirm || sendingRef.current) return
+    // Se vuelve a comprobar en el momento del clic (no solo en el render).
+    const wait = orderCooldownRemaining()
+    if (wait > 0) {
+      showToast(cooldownMessage(wait), 'error')
+      return
+    }
     sendingRef.current = true
     setSending(true)
-    markSendAttempt()
+    setOrderInFlight(true)
 
     const order = makeOrder(items, address!, { label: deliveryLabel, when })
     const result = await sendOrderToTelegram(order)
 
     if (result.ok) {
+      markOrderSent()
       if (result.raffleNumber !== undefined) order.raffleNumber = result.raffleNumber
       saveOrder(order)
       clearCart()
       showToast('¡Pedido enviado! Te contactaremos pronto.', 'success')
+      setOrderInFlight(false)
       navigate('/pedidos', { replace: true, state: { justOrdered: order.id } })
     } else {
       sendingRef.current = false
       setSending(false)
-      showToast('No se pudo enviar el pedido. Inténtalo de nuevo.', 'error')
+      setOrderInFlight(false)
+      showToast(result.cooldown ? cooldownMessage(orderCooldownRemaining()) : SEND_FAILED_MESSAGE, 'error')
     }
   }
 
@@ -385,7 +396,7 @@ export function CheckoutPage() {
           <div className="flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-2xl p-3">
             <span className="text-lg flex-shrink-0">⏳</span>
             <p className="text-xs text-amber-900 leading-relaxed">
-              Espera {Math.ceil(cooldownMs / 1000)}s antes de enviar otro pedido.
+              {cooldownMessage(cooldownMs)}
             </p>
           </div>
         )}
@@ -399,6 +410,8 @@ export function CheckoutPage() {
           </p>
         </div>
 
+        <HelpBanner />
+
         <Button size="lg" fullWidth disabled={!canConfirm} onClick={confirm}>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M21.7 3.3 2.5 11.1c-.9.4-.9 1.6 0 1.9l4.8 1.6 1.8 5.8c.2.7 1.1.9 1.6.3l2.7-2.9 4.7 3.4c.6.4 1.5.1 1.7-.6l3.4-15.6c.2-1-.8-1.9-1.5-1.7Z" />
@@ -408,7 +421,7 @@ export function CheckoutPage() {
             : ordersClosed
               ? 'Pedidos cerrados por hoy'
               : onCooldown
-                ? `Espera ${Math.ceil(cooldownMs / 1000)}s`
+                ? cooldownMessage(cooldownMs).replace(' antes de enviar otro pedido.', '')
                 : 'Confirmar pedido'}
         </Button>
       </div>

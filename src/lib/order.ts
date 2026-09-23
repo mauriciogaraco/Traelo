@@ -51,6 +51,7 @@ export function makeOrder(items: CartItem[], address: Address, delivery: Deliver
     serviceFee,
     total: subtotal + fee + serviceFee,
     delivery: delivery.label,
+    deliveryTime: `${String(delivery.when.getHours()).padStart(2, '0')}:${String(delivery.when.getMinutes()).padStart(2, '0')}`,
     status: 'pendiente',
     address,
   }

@@ -12,6 +12,8 @@ import { ShareSection } from "../components/home/ShareSection";
 import { ClosedTodayBanner } from "../components/home/ClosedTodayBanner";
 import { FeaturedSection } from "../components/home/FeaturedSection";
 import { ordersClosedForToday } from "../lib/hours";
+import { SUPPORT_WHATSAPP } from "../lib/config";
+import { HelpBanner } from "../components/ui/HelpBanner";
 import type { Category } from "../types";
 
 const PAGE_SIZE = 20;
@@ -213,6 +215,8 @@ export function HomePage() {
 
         {ordersClosed && <ClosedTodayBanner />}
 
+        <HelpBanner className="mt-3" />
+
         {searchActive ? (
           /* Modo búsqueda: solo resultados + limpiar */
           <section className="pt-5">
@@ -349,7 +353,7 @@ function SupportSection() {
         </p>
 
         <a
-          href="https://wa.me/5358365388"
+          href={`https://wa.me/${SUPPORT_WHATSAPP}`}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-primary px-5 py-3 font-bold text-white shadow-soft transition-transform hover:scale-[1.02]"
