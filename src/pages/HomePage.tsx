@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useCatalog } from "../context/CatalogContext";
 import { AddressBar } from "../components/address/AddressBar";
 import { BusinessRail } from "../components/home/BusinessRail";
@@ -281,6 +281,14 @@ export function HomePage() {
       <div className="px-4 pt-6">
         <ShareSection />
         <SupportSection />
+        <div className="pb-6 text-center">
+          <Link
+            to="/ayuda"
+            className="text-xs font-semibold text-text-secondary underline"
+          >
+            Ayuda
+          </Link>
+        </div>
       </div>
     </div>
   );
