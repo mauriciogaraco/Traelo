@@ -10,7 +10,8 @@ import { formatDate, formatPrice } from '../lib/format'
 import { groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, unitsOf } from '../lib/cart'
 import { isOpenNow, ordersClosedForToday } from '../lib/hours'
-import { markSendAttempt, msUntilNextSend } from '../lib/rateLimit'
+import { cooldownMessage, markOrderSent, orderCooldownRemaining, SEND_FAILED_MESSAGE } from '../lib/rateLimit'
+import { setOrderInFlight } from '../pwa'
 import { sendOrderToTelegram } from '../lib/telegram'
 import { businessById } from '../data/catalog'
 import type { Order } from '../types'
@@ -114,18 +115,20 @@ function OrderCard({
       showToast('Ya no se toman pedidos por hoy. Vuelve mañana a partir de las 9:00 am.', 'error')
       return
     }
-    const cooldown = msUntilNextSend()
+    const cooldown = orderCooldownRemaining()
     if (cooldown > 0) {
       resendingRef.current = false
-      showToast(`Espera ${Math.ceil(cooldown / 1000)}s antes de enviar otro pedido.`, 'error')
+      showToast(cooldownMessage(cooldown), 'error')
       return
     }
 
     setResending(true)
-    markSendAttempt()
+    setOrderInFlight(true)
     const result = await sendOrderToTelegram(order)
     resendingRef.current = false
     setResending(false)
+    setOrderInFlight(false)
+    if (result.ok) markOrderSent()
     // Pedido de antes de que existiera el sorteo: se le asignó número recién
     // ahora — se graba para que un reenvío futuro reutilice el mismo, en vez
     // de generar uno nuevo cada vez.
@@ -133,7 +136,11 @@ function OrderCard({
       onUpdate({ raffleNumber: result.raffleNumber })
     }
     showToast(
-      result.ok ? 'Pedido reenviado correctamente.' : 'No se pudo reenviar. Inténtalo de nuevo.',
+      result.ok
+        ? 'Pedido reenviado correctamente.'
+        : result.cooldown
+          ? cooldownMessage(orderCooldownRemaining())
+          : SEND_FAILED_MESSAGE,
       result.ok ? 'success' : 'error'
     )
   }

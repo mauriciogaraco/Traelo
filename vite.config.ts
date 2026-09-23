@@ -31,6 +31,11 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // La versión nueva toma el control de inmediato (sin esperar a cerrar pestañas).
+        skipWaiting: true,
+        clientsClaim: true,
+        // Las rutas /api/* (función serverless) nunca deben caer en el index.html del app shell.
+        navigateFallbackDenylist: [/^\/api\//],
         // Precache solo el app shell (JS/CSS/HTML). Las imágenes se cachean on-demand.
         globPatterns: ['**/*.{js,css,html}'],
         runtimeCaching: [

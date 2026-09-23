@@ -1,22 +1,56 @@
 import { registerSW } from 'virtual:pwa-register'
 
+const CHECK_EVERY_MS = 60 * 60 * 1000
+const DEFER_POLL_MS = 2000
+
+/** true mientras se está enviando un pedido (checkout o reenvío). */
+let orderInFlight = false
+export function setOrderInFlight(value: boolean): void {
+  orderInFlight = value
+}
+
+/** No se recarga si el usuario está armando o enviando un pedido. */
+function isBusy(): boolean {
+  return orderInFlight || window.location.pathname.startsWith('/checkout')
+}
+
+let reloadScheduled = false
+
 /**
- * Registro manual del service worker. Con registerType: 'autoUpdate', esto
- * detecta cuando hay una versión nueva desplegada y recarga la página sola
- * en cuanto el nuevo SW toma control — así las pestañas que quedan abiertas
- * mucho tiempo (ej. tomando pedidos) no se quedan con código viejo.
+ * Se llama cuando el service worker nuevo ya tomó el control (con
+ * registerType: 'autoUpdate' el plugin llama a onNeedReload en vez de recargar
+ * él mismo; en ese modo onNeedRefresh nunca se dispara). Recarga UNA sola vez,
+ * y si el usuario está en el checkout espera a que termine.
  */
-export function initPWA() {
-  const updateSW = registerSW({
+function reloadWhenIdle(): void {
+  if (reloadScheduled) return
+  reloadScheduled = true
+  const tryReload = () => {
+    if (isBusy()) return false
+    window.location.reload()
+    return true
+  }
+  if (tryReload()) return
+  const id = window.setInterval(() => {
+    if (tryReload()) window.clearInterval(id)
+  }, DEFER_POLL_MS)
+}
+
+export function initPWA(): void {
+  registerSW({
     immediate: true,
+    onNeedReload: reloadWhenIdle,
     onRegisteredSW(_url, registration) {
-      // Revisa si hay una versión nueva cada hora, por si la pestaña queda
-      // abierta mucho tiempo sin recargar por sí misma.
       if (!registration) return
-      setInterval(() => {
+      const check = () => {
         registration.update().catch(() => {})
-      }, 60 * 60 * 1000)
+      }
+      // Al abrir, cada 60 minutos y cada vez que la pestaña vuelve a estar visible.
+      check()
+      window.setInterval(check, CHECK_EVERY_MS)
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') check()
+      })
     },
   })
-  return updateSW
 }

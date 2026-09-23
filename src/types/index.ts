@@ -170,8 +170,10 @@ export interface Order {
   total: number
   /** Momento de entrega elegido, ej: "Lo antes posible" o "Hoy 7:30 pm". */
   delivery?: string
+  /** Hora ("HH:mm") con la que se calculó la tarifa; el servidor la reutiliza al armar el vale. */
+  deliveryTime?: string
   status: OrderStatus
   address: Address
-  /** Número de sorteo asignado al confirmar (ver lib/telegram.ts). Ausente en pedidos previos a esta función. */
+  /** Número de sorteo asignado por el servidor al confirmar (api/order). Ausente en pedidos previos a esta función. */
   raffleNumber?: number
 }
