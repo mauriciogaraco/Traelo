@@ -4111,7 +4111,7 @@
     "image": "🥗",
     "price": 450,
     "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "los-4-hermanos-002",
@@ -4136,7 +4136,7 @@
     "image": "🍮",
     "price": 350,
     "photo": "/assets/images/products/Los 4 Hermanos/Arroz con Leche -350 cup.jpg",
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "lm-001",
@@ -11615,7 +11615,7 @@
     "image": "🧼",
     "photo": "/assets/images/products/DAF/Jabón de Baño --300.jpg",
     "price": 290,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-047",
@@ -11915,7 +11915,7 @@
     "image": "🥗",
     "photo": "/assets/images/products/DAF/ensala fría 8 onzas --650.jpg",
     "price": 650,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "daf-072",

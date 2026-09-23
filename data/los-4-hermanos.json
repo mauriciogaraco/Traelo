@@ -10,7 +10,7 @@
     "image": "🥗",
     "price": 450,
     "photo": "/assets/images/products/Los 4 Hermanos/Ensalada fria.jpg",
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "los-4-hermanos-002",
@@ -37,6 +37,6 @@
     "image": "🍮",
     "price": 350,
     "photo": "/assets/images/products/Los 4 Hermanos/Arroz con Leche -350 cup.jpg",
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   }
 ]
