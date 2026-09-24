@@ -1,15 +1,18 @@
 import { useState } from 'react'
 import { useAddress } from '../../context/AddressContext'
 import { AddressSheet } from './AddressSheet'
+import { Icon } from '../ui/Icon'
 
-type Variant = 'home' | 'card' | 'pill'
+type Variant = 'home' | 'card' | 'pill' | 'header'
 
 export function AddressBar({ variant = 'home' }: { variant?: Variant }) {
   const { address, saveAddress } = useAddress()
   const [open, setOpen] = useState(false)
 
   const trigger =
-    variant === 'pill' ? (
+    variant === 'header' ? (
+      <HeaderTrigger address={address} onClick={() => setOpen(true)} />
+    ) : variant === 'pill' ? (
       <PillTrigger address={address} onClick={() => setOpen(true)} />
     ) : (
       <FullTrigger address={address} isCard={variant === 'card'} onClick={() => setOpen(true)} />
@@ -40,7 +43,30 @@ function PinIcon({ className = '' }: { className?: string }) {
   )
 }
 
-/** Pill compacto para la cabecera (al lado del logo). */
+/** Pill de la cabecera compartida — igual que `TopHeader` de la app móvil. */
+function HeaderTrigger({
+  address,
+  onClick,
+}: {
+  address: ReturnType<typeof useAddress>['address']
+  onClick: () => void
+}) {
+  const label = address ? address.direccion : 'Agregar dirección'
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={`Dirección de entrega: ${label}`}
+      className="w-full min-w-0 flex items-center justify-center gap-1 rounded-full bg-background px-3 py-2 hover:bg-surface-muted transition-colors"
+    >
+      <Icon name="location" size={16} filled className="text-primary shrink-0" />
+      <span className="text-caption font-semibold text-text-primary truncate">{label}</span>
+      <Icon name="chevron-down" size={14} className="text-text-tertiary shrink-0" />
+    </button>
+  )
+}
+
+/** Pill compacto (al lado del logo). */
 function PillTrigger({
   address,
   onClick,

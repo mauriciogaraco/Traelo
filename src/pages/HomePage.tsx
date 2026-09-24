@@ -1,12 +1,10 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { useCatalog } from "../context/CatalogContext";
-import { AddressBar } from "../components/address/AddressBar";
 import { BusinessRail } from "../components/home/BusinessRail";
 import { CategoryRail } from "../components/home/CategoryRail";
 import { ProductCard } from "../components/product/ProductCard";
 import { Pagination } from "../components/ui/Pagination";
-import { Logo } from "../components/ui/Logo";
 import { PaymentNote } from "../components/ui/PaymentNote";
 import { ShareSection } from "../components/home/ShareSection";
 import { ClosedTodayBanner } from "../components/home/ClosedTodayBanner";
@@ -18,7 +16,11 @@ import type { Category } from "../types";
 
 const PAGE_SIZE = 20;
 
-export function HomePage() {
+/**
+ * `focusSearch`: la pestaña "Buscar" (/buscar) reutiliza por ahora este buscador con el foco puesto;
+ * en la fase 3 pasa a ser su propia pantalla con orden y filtros, como `SearchScreen` de mobile.
+ */
+export function HomePage({ focusSearch = false }: { focusSearch?: boolean }) {
   const { businesses: allBusinesses, products: allProducts, loading, syncing, loadBusinessProducts } = useCatalog();
   const businesses = allBusinesses.filter((b) => !b.hidden);
   const products = allProducts.filter((p) => !allBusinesses.find((b) => b.id === p.businessId)?.hidden);
@@ -47,6 +49,10 @@ export function HomePage() {
   function clearAll() {
     setSearchParams({}, { replace: true });
   }
+
+  useEffect(() => {
+    if (focusSearch && !loading) inputRef.current?.focus();
+  }, [focusSearch, loading]);
 
   const ordersClosed = ordersClosedForToday();
 
@@ -96,11 +102,6 @@ export function HomePage() {
   if (loading) {
     return (
       <div className="animate-fade-in">
-        <header className="bg-gradient-warm px-4 pt-4 pb-4 rounded-b-[1.75rem] border-b border-border/70">
-          <div className="flex items-center gap-2">
-            <Logo />
-          </div>
-        </header>
         <div className="flex flex-col items-center gap-3 py-16">
           <div className="w-7 h-7 border-[2.5px] border-primary border-t-transparent rounded-full animate-spin" />
           <p className="text-sm font-semibold text-text-secondary">Cargando catálogo...</p>
@@ -161,18 +162,8 @@ export function HomePage() {
 
   return (
     <div className="animate-fade-in">
-      {/* Navbar: solo logo + dirección */}
-      <header className="bg-gradient-warm px-4 pt-4 pb-4 rounded-b-[1.75rem] border-b border-border/70">
-        <div className="flex items-center gap-2">
-          <Logo />
-          <div className="ml-auto min-w-0">
-            <AddressBar variant="pill" />
-          </div>
-        </div>
-      </header>
-
       {syncing && (
-        <div className="flex items-center gap-2 px-4 py-1.5 text-[11px] font-medium text-text-secondary bg-stone-100/80 border-b border-border/30">
+        <div className="flex items-center gap-2 px-4 py-1.5 text-[11px] font-medium text-text-secondary bg-surface-muted/80 border-b border-border/30">
           <div className="w-2.5 h-2.5 border border-primary border-t-transparent rounded-full animate-spin shrink-0" />
           Actualizando catálogo...
         </div>

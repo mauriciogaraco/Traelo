@@ -12,13 +12,13 @@ export default defineConfig({
       // nueva. Registrar a mano con `virtual:pwa-register` sí recarga la
       // página sola en cuanto el SW nuevo toma control.
       injectRegister: false,
-      includeAssets: ['logo.webp', 'traelo_192x192.png', 'traelo_512x512.png'],
+      includeAssets: ['favicon.png', 'logo.webp', 'traelo_192x192.png', 'traelo_512x512.png'],
       manifest: {
         name: 'Tráelo',
         short_name: 'Tráelo',
         description: 'Compra en negocios locales y recíbelo en casa',
         theme_color: '#F97316',
-        background_color: '#FAF8F5',
+        background_color: '#F8F6F2',
         display: 'standalone',
         orientation: 'portrait',
         start_url: '/',

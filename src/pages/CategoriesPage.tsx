@@ -1,12 +1,10 @@
 import { useEffect, useMemo, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useCatalog } from "../context/CatalogContext";
-import { AddressBar } from "../components/address/AddressBar";
 import { BusinessRail } from "../components/home/BusinessRail";
 import { BusinessCategoryGrid } from "../components/categories/BusinessCategoryGrid";
 import { ProductCard } from "../components/product/ProductCard";
 import { Pagination } from "../components/ui/Pagination";
-import { Logo } from "../components/ui/Logo";
 import { PaymentNote } from "../components/ui/PaymentNote";
 import { businessCategories, productCategoryHints } from "../data/catalog";
 import type { BusinessCategory } from "../types";
@@ -86,7 +84,6 @@ export function CategoriesPage() {
   if (loading) {
     return (
       <div className="animate-fade-in">
-        <Header />
         <div className="flex flex-col items-center gap-3 py-16">
           <div className="w-7 h-7 border-[2.5px] border-primary border-t-transparent rounded-full animate-spin" />
           <p className="text-sm font-semibold text-text-secondary">Cargando catálogo...</p>
@@ -101,7 +98,6 @@ export function CategoriesPage() {
 
   return (
     <div className="animate-fade-in">
-      <Header />
 
       <div className="px-4 pt-4">
         {!cat ? (
@@ -182,19 +178,6 @@ export function CategoriesPage() {
         )}
       </div>
     </div>
-  );
-}
-
-function Header() {
-  return (
-    <header className="bg-gradient-warm px-4 pt-4 pb-4 rounded-b-[1.75rem] border-b border-border/70">
-      <div className="flex items-center gap-2">
-        <Logo />
-        <div className="ml-auto min-w-0">
-          <AddressBar variant="pill" />
-        </div>
-      </div>
-    </header>
   );
 }
 

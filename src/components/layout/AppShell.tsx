@@ -1,22 +1,28 @@
 import type { ReactNode } from 'react'
 import { useLocation } from 'react-router-dom'
-import { BottomNav } from './BottomNav'
-
-/** Rutas "enfocadas" que ocultan la barra inferior (tienen su propia barra de acción). */
-const FULLSCREEN_PREFIXES = ['/producto/']
+import { FloatingTabBar } from './FloatingTabBar'
+import { TopHeader } from './TopHeader'
+import { OfflineBanner } from '../ui/OfflineBanner'
+import { isFlowRoute } from './navigation'
 
 /**
- * Contenedor tipo "app móvil": ancho de teléfono centrado en pantallas grandes,
- * fondo cálido y barra de navegación inferior fija. Mobile-first.
+ * Estructura de la app, igual que mobile: header compartido arriba + barra flotante abajo.
+ *
+ * - Teléfono/tablet: ancho completo, barra flotante; las pantallas de flujo (producto, checkout)
+ *   ocultan header y barra porque tienen su propio "Volver" y barra de acción.
+ * - Escritorio (lg+): header con la navegación; el contenido se centra en una columna
+ *   (`--content-max`) que las pantallas pueden ensanchar con grids a medida que se migran.
  */
 export function AppShell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
-  const hideNav = FULLSCREEN_PREFIXES.some((p) => pathname.startsWith(p))
+  const flow = isFlowRoute(pathname)
 
   return (
-    <div className="mx-auto w-full max-w-[440px] min-h-screen bg-background relative shadow-[0_0_60px_-15px_rgba(0,0,0,0.15)]">
-      <main className={hideNav ? '' : 'pb-24'}>{children}</main>
-      {!hideNav && <BottomNav />}
+    <div className="min-h-screen bg-background">
+      <TopHeader hideOnMobile={flow} />
+      <OfflineBanner />
+      <main className={`mx-auto w-full max-w-content ${flow ? 'pb-6' : 'pb-28 lg:pb-12'}`}>{children}</main>
+      {!flow && <FloatingTabBar />}
     </div>
   )
 }

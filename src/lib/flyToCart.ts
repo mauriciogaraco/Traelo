@@ -1,18 +1,26 @@
 /**
  * Animación "añadir al carrito" sin librerías: una pequeña explosión de
  * partículas sale del botón "+" y converge en el icono de carrito de la barra
- * inferior (`#cart-fly-target`), que rebota al recibirlas.
+ * de navegación visible (`[data-cart-target]`: la barra flotante en móvil o el header en
+ * escritorio), que rebota al recibirlas.
  *
  * Cada partícula traza un arco: el contenedor anima el eje X y el punto el
  * eje Y, cada uno con su propia curva de easing.
  */
 
-const TARGET_ID = 'cart-fly-target'
+/** Hay un destino por navegación (barra flotante / header); se usa el que esté visible. */
+function findTarget(): HTMLElement | null {
+  const targets = document.querySelectorAll<HTMLElement>('[data-cart-target]')
+  for (const el of targets) {
+    if (el.getClientRects().length > 0) return el
+  }
+  return null
+}
 const PARTICLE_COUNT = 8
 const PARTICLE_COLORS = ['#F97316', '#FB923C', '#EA580C', '#FDBA74']
 
 export function bumpCart(): void {
-  const target = document.getElementById(TARGET_ID)
+  const target = findTarget()
   if (!target) return
   target.classList.remove('cart-bump')
   void target.offsetWidth // reinicia la animación si se dispara seguido
@@ -23,7 +31,7 @@ export function bumpCart(): void {
 export function flyToCart(originEl: HTMLElement | null): void {
   if (typeof document === 'undefined') return
 
-  const target = document.getElementById(TARGET_ID)
+  const target = findTarget()
   if (!originEl || !target) {
     bumpCart()
     return

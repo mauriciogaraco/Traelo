@@ -420,7 +420,7 @@ export function ProductDetailPage() {
       <div className="h-28" aria-hidden="true" />
 
       {/* Barra de acción fija */}
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[440px] z-40 bg-surface/95 backdrop-blur-md border-t border-border px-4 pt-3 pb-4 pb-safe">
+      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-content z-40 bg-surface/95 backdrop-blur-md border-t border-border px-4 pt-3 pb-4 pb-safe">
         {isOut ? (
           <Button size="lg" fullWidth disabled>
             Producto agotado

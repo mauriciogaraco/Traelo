@@ -74,7 +74,7 @@ export function AddressSheet({ open, initial, onClose, onSave }: AddressSheetPro
         className="absolute inset-0 bg-black/40 animate-fade-in"
       />
       {/* Sheet */}
-      <div className="relative w-full max-w-[440px] bg-surface rounded-t-4xl shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto scrollbar-none">
+      <div className="relative w-full max-w-content bg-surface rounded-t-4xl shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto scrollbar-none">
         <div className="sticky top-0 bg-surface px-5 pt-4 pb-3 border-b border-border">
           <div className="w-10 h-1.5 bg-border rounded-full mx-auto mb-4" />
           <div className="flex items-center justify-between">

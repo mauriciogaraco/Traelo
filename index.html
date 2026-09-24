@@ -1,8 +1,8 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="/logo.webp" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/traelo_512x512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#F97316" />
@@ -12,7 +12,15 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="mobile-web-app-capable" content="yes" />
     <title>Tráelo — Compra local, recibe en casa</title>
-    <!-- Tipografías self-hosted (ver @font-face en src/index.css). Sin CDN externo. -->
+    <!-- Tema antes del primer pintado (misma lógica que src/lib/theme.ts). -->
+    <script>
+      (function () {
+        var pref = 'light';
+        try { pref = localStorage.getItem('traelo.themePreference') || pref; } catch (e) {}
+        var dark = pref === 'dark' || (pref === 'system' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      })();
+    </script>
     <!-- Empieza el catálogo en paralelo con el bundle JS, no después de que React monte. -->
     <link rel="preload" as="fetch" href="/data/catalog.json" crossorigin>
   </head>
