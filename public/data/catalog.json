@@ -1136,7 +1136,7 @@
       "image": "🍑",
       "photo": "/assets/images/products/Cronos/Mamey.jpg",
       "price": 900,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "bc-002",
@@ -14468,7 +14468,7 @@
       "longDescription": "Bistec con arroz moro, yuca con mojo, ensalada y chicharritas.",
       "image": "🥩",
       "photo": "/assets/images/products/El Monito/completa de bistec.jpg",
-      "price": 2300,
+      "price": 2500,
       "packaging": [
         {
           "name": "Termopack",
@@ -17616,7 +17616,7 @@
       "longDescription": "Carne de res, precio por libra.",
       "image": "🥩",
       "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/carne de res -1800 lalibra.jpg",
-      "price": 1800,
+      "price": 2000,
       "stockStatus": "disponible"
     },
     {

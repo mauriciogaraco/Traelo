@@ -27,7 +27,7 @@ export const LIMITS = {
 }
 
 export const CATALOG_TTL_MS = 5 * 60 * 1000
-const FALLBACK_SITE_URL = 'https://traelo-sigma.vercel.app'
+const FALLBACK_SITE_URL = 'https://www.traelo-market.com'
 const TELEGRAM_TIMEOUT_MS = 8000
 const CATALOG_TIMEOUT_MS = 5000
 // Telegram admite 4096 caracteres por mensaje; se deja margen para el pie
