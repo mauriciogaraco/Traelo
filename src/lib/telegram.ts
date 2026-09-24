@@ -1,12 +1,9 @@
 import type { Order } from '../types'
-import { syncCooldownWithServer } from './rateLimit'
 
 export interface SendOrderResult {
   ok: boolean
   /** Número de sorteo asignado por el servidor (nuevo o el que el pedido ya traía). */
   raffleNumber?: number
-  /** true si el servidor rechazó el envío por el límite de 1 pedido cada 3 minutos. */
-  cooldown?: boolean
   /** Causa del fallo para mostrarla/diagnosticar: mensaje del servidor + código, o el problema de red. */
   reason?: string
 }
@@ -55,11 +52,6 @@ export async function sendOrderToTelegram(order: Order): Promise<SendOrderResult
     })
     const data = await res.json().catch(() => null)
 
-    if (res.status === 429) {
-      const retryAfter = Number(data?.retryAfter)
-      syncCooldownWithServer(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter : 180)
-      return { ok: false, cooldown: true }
-    }
     if (res.ok && data?.ok === true) {
       return { ok: true, raffleNumber: typeof data.raffleNumber === 'number' ? data.raffleNumber : undefined }
     }

@@ -155,7 +155,7 @@ export function CheckoutPage() {
       sendingRef.current = false
       setSending(false)
       setOrderInFlight(false)
-      showToast(result.cooldown ? cooldownMessage(orderCooldownRemaining()) : sendFailedMessage(result.reason), 'error')
+      showToast(sendFailedMessage(result.reason), 'error')
     }
   }
 

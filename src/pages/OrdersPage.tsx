@@ -138,9 +138,7 @@ function OrderCard({
     showToast(
       result.ok
         ? 'Pedido reenviado correctamente.'
-        : result.cooldown
-          ? cooldownMessage(orderCooldownRemaining())
-          : sendFailedMessage(result.reason),
+        : sendFailedMessage(result.reason),
       result.ok ? 'success' : 'error'
     )
   }

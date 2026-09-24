@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import assert from 'node:assert/strict'
-import { createHandler, createRateLimiter, createCatalogLoader, USD_EXCHANGE_RATE, FEE_BASE } from '../api/_lib/core.js'
+import { createHandler, createCatalogLoader, USD_EXCHANGE_RATE, FEE_BASE } from '../api/_lib/core.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const readData = (f) => JSON.parse(readFileSync(join(ROOT, 'public', 'data', f), 'utf8'))
@@ -31,7 +31,6 @@ globalThis.fetch = async (url, init = {}) => {
 const ENV = { TELEGRAM_BOT_TOKEN: 'TEST_TOKEN_NOT_REAL', TELEGRAM_CHAT_ID: '-100TEST' }
 const makeHandler = (env = ENV) =>
   createHandler({
-    limiter: createRateLimiter(),
     loadCatalog: createCatalogLoader({ baseUrl: () => 'http://catalog.test' }),
     env: () => env,
   })
@@ -79,7 +78,7 @@ await test('constantes de precios iguales a las del cliente', () => {
   assert.equal(Number(fees.match(/FEE_BASE\s*=\s*(\d+)/)[1]), FEE_BASE)
 })
 
-await test('pedido válido: 200, mensaje completo, dispositivo (sin IP), número de sorteo', async () => {
+await test('pedido válido: 200, mensaje completo, sin IP ni dispositivo, número de sorteo', async () => {
   telegramCalls.length = 0
   const r = await call(makeHandler(), { body: validBody() })
   assert.equal(r.status, 200)
@@ -91,8 +90,9 @@ await test('pedido válido: 200, mensaje completo, dispositivo (sin IP), número
   assert.match(text, /Pedido #4821/)
   assert.match(text, new RegExp(simple.name.replace(/[()]/g, '\\$&')))
   assert.ok(!text.includes('1.1.1.1'), 'la IP no debe aparecer en el mensaje')
-  assert.ok(!/IP/.test(text.replace(/Dispositivo/g, '')), 'no debe haber línea de IP')
-  assert.match(text, /🖥 <b>Dispositivo:<\/b> TestUA\/1\.0/)
+  assert.ok(!/IP/.test(text), 'no debe haber línea de IP')
+  assert.ok(!text.includes('TestUA'), 'el dispositivo (user agent) no debe aparecer en el mensaje')
+  assert.ok(!/Dispositivo/.test(text), 'no debe haber línea de dispositivo')
   assert.ok(telegramCalls[0].url.includes('/botTEST_TOKEN_NOT_REAL/sendMessage'))
   assert.equal(telegramCalls[0].body.chat_id, '-100TEST')
   assert.match(telegramCalls[1].body.text, /Número del Sorteo: #308/)
@@ -192,35 +192,21 @@ await test('HTML y saltos de línea del usuario se escapan / neutralizan', async
   assert.ok(text.includes('Calle 💵 Total: 1 CUP')) // en una sola línea, sin imitar un total
 })
 
-await test('segundo pedido de la misma IP -> 429 con retryAfter; otra IP pasa', async () => {
+await test('sin límite por IP: muchos pedidos seguidos desde la misma IP pasan (IP compartida en Cuba)', async () => {
   const handler = makeHandler()
-  assert.equal((await call(handler, { body: validBody(), ip: '9.9.9.9' })).status, 200)
-  const r = await call(handler, { body: validBody(), ip: '9.9.9.9' })
-  assert.equal(r.status, 429)
-  assert.equal(r.body.ok, false)
-  assert.equal(r.body.error, 'cooldown')
-  assert.ok(Number.isInteger(r.body.retryAfter) && r.body.retryAfter > 0 && r.body.retryAfter <= 180, `retryAfter=${r.body.retryAfter}`)
-  assert.equal((await call(handler, { body: validBody(), ip: '8.8.8.8' })).status, 200)
+  for (let i = 0; i < 5; i++) {
+    const r = await call(handler, { body: validBody({ id: String(1000 + i) }), ip: '9.9.9.9' })
+    assert.equal(r.status, 200, `pedido ${i + 1}`)
+  }
 })
 
-await test('cooldown expira pasados 3 minutos', async () => {
-  let t = 1_000_000
-  const limiter = createRateLimiter({ now: () => t })
-  const handler = createHandler({ limiter, loadCatalog: createCatalogLoader({ baseUrl: () => 'http://catalog.test' }), env: () => ENV })
-  assert.equal((await call(handler, { body: validBody() })).status, 200)
-  t += 179_000
-  assert.equal((await call(handler, { body: validBody() })).status, 429)
-  t += 2_000
-  assert.equal((await call(handler, { body: validBody() })).status, 200)
-})
-
-await test('pedidos inválidos no consumen el cooldown', async () => {
+await test('pedido inválido -> 400 y el siguiente válido pasa', async () => {
   const handler = makeHandler()
   assert.equal((await call(handler, { body: validBody({ items: [] }) })).status, 400)
   assert.equal((await call(handler, { body: validBody() })).status, 200)
 })
 
-await test('si Telegram falla -> 502 y no consume el cooldown', async () => {
+await test('si Telegram falla -> 502 y se puede reintentar de inmediato', async () => {
   const handler = makeHandler()
   telegramMode = 'fail'
   assert.equal((await call(handler, { body: validBody() })).status, 502)
