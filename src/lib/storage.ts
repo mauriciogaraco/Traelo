@@ -22,4 +22,5 @@ export const STORAGE_KEYS = {
   orders: 'traelo_orders',
   address: 'traelo_address',
   lastSendAt: 'traelo_last_send_at',
+  refreshAck: 'traelo_refresh_ack',
 } as const

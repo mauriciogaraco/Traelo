@@ -17,7 +17,7 @@ import { makeOrder, groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
 import { computeFee, computeServiceFee } from '../lib/fees'
 import { isOpenNow, ordersClosedForToday } from '../lib/hours'
-import { cooldownMessage, markOrderSent, orderCooldownRemaining, SEND_FAILED_MESSAGE } from '../lib/rateLimit'
+import { cooldownMessage, markOrderSent, orderCooldownRemaining, sendFailedMessage } from '../lib/rateLimit'
 import { setOrderInFlight } from '../pwa'
 import { HelpBanner } from '../components/ui/HelpBanner'
 import { sendOrderToTelegram } from '../lib/telegram'
@@ -155,7 +155,7 @@ export function CheckoutPage() {
       sendingRef.current = false
       setSending(false)
       setOrderInFlight(false)
-      showToast(result.cooldown ? cooldownMessage(orderCooldownRemaining()) : SEND_FAILED_MESSAGE, 'error')
+      showToast(sendFailedMessage(result.reason), 'error')
     }
   }
 

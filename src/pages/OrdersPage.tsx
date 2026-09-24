@@ -10,7 +10,7 @@ import { formatDate, formatPrice } from '../lib/format'
 import { groupByBusiness } from '../lib/order'
 import { hasFormato, itemLineId, lineTotal, unitsOf } from '../lib/cart'
 import { isOpenNow, ordersClosedForToday } from '../lib/hours'
-import { cooldownMessage, markOrderSent, orderCooldownRemaining, SEND_FAILED_MESSAGE } from '../lib/rateLimit'
+import { cooldownMessage, markOrderSent, orderCooldownRemaining, sendFailedMessage } from '../lib/rateLimit'
 import { setOrderInFlight } from '../pwa'
 import { sendOrderToTelegram } from '../lib/telegram'
 import { businessById } from '../data/catalog'
@@ -138,9 +138,7 @@ function OrderCard({
     showToast(
       result.ok
         ? 'Pedido reenviado correctamente.'
-        : result.cooldown
-          ? cooldownMessage(orderCooldownRemaining())
-          : SEND_FAILED_MESSAGE,
+        : sendFailedMessage(result.reason),
       result.ok ? 'success' : 'error'
     )
   }

@@ -21,6 +21,7 @@ import { OrdersPage } from "./pages/OrdersPage";
 import { PrivacyPage } from "./pages/PrivacyPage";
 import { HelpPage } from "./pages/HelpPage";
 import { DeleteAccountPage } from "./pages/DeleteAccountPage";
+import { RefreshModal } from "./components/ui/RefreshModal";
 //import { ComingSoonModal } from "./pages/CommingSoonModal";
 
 function Providers({ children }: { children: ReactNode }) {
@@ -67,6 +68,7 @@ export default function App() {
     <BrowserRouter>
       <Providers>
         <ScrollToTop />
+        <RefreshModal />
         <AppShell>
           <Routes>
             <Route path="/" element={<HomePage />} />

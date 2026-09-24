@@ -24,16 +24,14 @@ export const LIMITS = {
   telefono: 30,
   direccion: 300,
   referencia: 500,
-  userAgent: 200,
 }
 
-export const COOLDOWN_MS = 3 * 60 * 1000
 export const CATALOG_TTL_MS = 5 * 60 * 1000
 const FALLBACK_SITE_URL = 'https://traelo-sigma.vercel.app'
 const TELEGRAM_TIMEOUT_MS = 8000
 const CATALOG_TIMEOUT_MS = 5000
 // Telegram admite 4096 caracteres por mensaje; se deja margen para el pie
-// del sorteo y los datos de IP/dispositivo que se añaden al último trozo.
+// del sorteo que se añade al último trozo.
 const CHUNK_LIMIT = 3400
 
 // Número de sorteo: se usa el message_id que Telegram asigna al mensaje
@@ -137,33 +135,6 @@ export function computeServiceFee(items, businessesById) {
     raw += (((usd.get(id) ?? 0) * pct) / 100) * USD_EXCHANGE_RATE
   }
   return Math.ceil(raw / 10) * 10
-}
-
-// ── Límite por IP (en memoria) ────────────────────────────────────────────────
-// Limitación conocida: en serverless cada instancia tiene su propio Map, así que
-// es un freno "de mejor esfuerzo". Para un límite estricto haría falta un
-// almacén compartido (Upstash/Vercel KV).
-export function createRateLimiter({ windowMs = COOLDOWN_MS, now = () => Date.now() } = {}) {
-  const until = new Map()
-  const purge = () => {
-    const t = now()
-    for (const [key, expiry] of until) if (expiry <= t) until.delete(key)
-  }
-  return {
-    /** Devuelve 0 si se reservó el turno, o los segundos que faltan si aún está en cooldown. */
-    tryAcquire(key) {
-      if (until.size > 200) purge()
-      const t = now()
-      const expiry = until.get(key)
-      if (expiry !== undefined && expiry > t) return Math.max(1, Math.ceil((expiry - t) / 1000))
-      until.set(key, t + windowMs)
-      return 0
-    },
-    release(key) {
-      until.delete(key)
-    },
-    size: () => until.size,
-  }
 }
 
 // ── Catálogo (se descarga del propio sitio y se cachea 5 min) ─────────────────
@@ -383,12 +354,6 @@ export function raffleFooter(ticketNumber) {
   ].join('\n')
 }
 
-// La IP NO se incluye en el vale (decisión del dueño): solo se usa en el
-// servidor para el límite por IP.
-export function metaFooter({ userAgent }) {
-  return ['', `🖥 <b>Dispositivo:</b> ${esc(String(userAgent ?? '').slice(0, LIMITS.userAgent))}`].join('\n')
-}
-
 /** Parte el vale en trozos de ≤ CHUNK_LIMIT caracteres cortando siempre entre líneas. */
 export function chunkLines(lines, limit = CHUNK_LIMIT) {
   const chunks = []
@@ -433,7 +398,6 @@ async function callTelegram(token, method, body) {
 export async function deliverOrder({ token, chatId, chunks, raffleNumber }) {
   const send = (text) => callTelegram(token, 'sendMessage', { chat_id: chatId, text, parse_mode: 'HTML', disable_web_page_preview: true })
 
-  // `chunks` ya trae los datos de IP/dispositivo en el último trozo.
   if (raffleNumber !== undefined) {
     // Reenvío: se reutiliza el número que ya tenía el pedido; sin ediciones.
     const last = chunks.length - 1
@@ -465,12 +429,6 @@ export async function deliverOrder({ token, chatId, chunks, raffleNumber }) {
 }
 
 // ── Handler ───────────────────────────────────────────────────────────────────
-function clientIp(req) {
-  const forwarded = req.headers?.['x-forwarded-for']
-  const first = (Array.isArray(forwarded) ? forwarded[0] : forwarded)?.split(',')[0]?.trim()
-  return first || req.socket?.remoteAddress || 'desconocida'
-}
-
 function parseBody(req) {
   let body = req.body
   if (Buffer.isBuffer(body)) body = body.toString('utf8')
@@ -484,7 +442,7 @@ function parseBody(req) {
   return body
 }
 
-export function createHandler({ limiter = createRateLimiter(), loadCatalog = createCatalogLoader(), env = () => process.env } = {}) {
+export function createHandler({ loadCatalog = createCatalogLoader(), env = () => process.env } = {}) {
   return async function handler(req, res) {
     res.setHeader('Cache-Control', 'no-store')
     const reply = (status, payload) => res.status(status).json(payload)
@@ -497,31 +455,20 @@ export function createHandler({ limiter = createRateLimiter(), loadCatalog = cre
     const { TELEGRAM_BOT_TOKEN: token, TELEGRAM_CHAT_ID: chatId } = env()
     if (!token || !chatId) return reply(500, { ok: false, error: 'server_misconfigured' })
 
-    const ip = clientIp(req)
-    const wait = limiter.tryAcquire(ip)
-    if (wait > 0) {
-      res.setHeader('Retry-After', String(wait))
-      return reply(429, { ok: false, error: 'cooldown', retryAfter: wait })
-    }
-
     try {
       const body = parseBody(req)
       const catalog = await loadCatalog()
       const order = validateOrder(body, catalog)
 
       const { lines } = buildOrderLines(order, catalog)
-      const meta = metaFooter({ userAgent: req.headers?.['user-agent'] })
       const chunks = chunkLines(lines)
-      chunks[chunks.length - 1] += meta
 
       const result = await deliverOrder({ token, chatId, chunks, raffleNumber: order.raffleNumber })
       if (!result.ok) {
-        limiter.release(ip)
         return reply(502, { ok: false, error: 'telegram_failed' })
       }
       return reply(200, { ok: true, raffleNumber: result.raffleNumber })
     } catch (err) {
-      limiter.release(ip)
       if (err instanceof HttpError) return reply(err.status, { ok: false, error: err.code, message: err.message })
       console.error('order handler error:', err?.name ?? 'error')
       return reply(500, { ok: false, error: 'internal_error' })
