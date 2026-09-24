@@ -31,3 +31,8 @@ export function cooldownMessage(ms: number): string {
 /** Aviso cuando el envío falla por otra causa (red, servidor, Telegram). */
 export const SEND_FAILED_MESSAGE =
   'No se pudo enviar el pedido. Inténtalo de nuevo o escríbenos por WhatsApp.'
+
+/** Mensaje de fallo con la causa concreta (para que el cliente la pueda mandar por WhatsApp). */
+export function sendFailedMessage(reason?: string): string {
+  return reason ? `${SEND_FAILED_MESSAGE} Detalle: ${reason}` : SEND_FAILED_MESSAGE
+}

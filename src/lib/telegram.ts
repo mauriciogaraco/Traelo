@@ -7,6 +7,8 @@ export interface SendOrderResult {
   raffleNumber?: number
   /** true si el servidor rechazó el envío por el límite de 1 pedido cada 3 minutos. */
   cooldown?: boolean
+  /** Causa del fallo para mostrarla/diagnosticar: mensaje del servidor + código, o el problema de red. */
+  reason?: string
 }
 
 const REQUEST_TIMEOUT_MS = 20_000
@@ -61,9 +63,12 @@ export async function sendOrderToTelegram(order: Order): Promise<SendOrderResult
     if (res.ok && data?.ok === true) {
       return { ok: true, raffleNumber: typeof data.raffleNumber === 'number' ? data.raffleNumber : undefined }
     }
-    return { ok: false }
-  } catch {
-    return { ok: false }
+    const code = typeof data?.error === 'string' ? data.error : `http_${res.status}`
+    const message = typeof data?.message === 'string' ? `${data.message} ` : ''
+    return { ok: false, reason: `${message}[${code}]` }
+  } catch (err) {
+    const aborted = err instanceof DOMException && err.name === 'AbortError'
+    return { ok: false, reason: aborted ? '[timeout] El servidor tardó demasiado.' : '[red] No hay conexión con el servidor.' }
   } finally {
     clearTimeout(timer)
   }
