@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import assert from 'node:assert/strict'
-import { createHandler, createCatalogLoader, USD_EXCHANGE_RATE, FEE_BASE } from '../api/_lib/core.js'
+import { createHandler, createCatalogLoader, computeServiceFee, USD_EXCHANGE_RATE, FEE_BASE } from '../api/_lib/core.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const readData = (f) => JSON.parse(readFileSync(join(ROOT, 'public', 'data', f), 'utf8'))
@@ -240,6 +240,44 @@ await test('cuerpo inválido -> 400', async () => {
   assert.equal((await call(handler, { body: 'esto no es json' })).status, 400)
   assert.equal((await call(handler, { body: null })).status, 400)
   assert.equal((await call(handler, { body: [] })).status, 400)
+})
+
+// ── Tope del Servicio Tráelo (serviceFeeCap, por negocio, en CUP) ─────────────
+await test('el tope (1500 CUP) solo está definido en Mercado Alpha y Los Reales', () => {
+  const capped = businesses.filter((b) => b.serviceFeeCap !== undefined).map((b) => `${b.id}:${b.serviceFeeCap}`).sort()
+  assert.deepEqual(capped, ['bodega-central:1500', 'los-reales:1500'])
+})
+
+await test('servicio con tope: cada negocio aporta como máximo su tope; los demás no cambian', () => {
+  const biz = new Map([
+    ['alpha', { id: 'alpha', clientCommission: 2, serviceFeeCap: 1500 }],
+    ['reales', { id: 'reales', clientCommission: 1, currency: 'USD', serviceFeeCap: 1500 }],
+    ['otro', { id: 'otro', clientCommission: 5 }],
+  ])
+  const it = (businessId, price, quantity = 1) => ({ product: { businessId, price }, quantity })
+  // Alpha: 2 % de 100 000 = 2000 -> 1500
+  assert.equal(computeServiceFee([it('alpha', 100000)], biz), 1500)
+  // Justo en el tope (2 % de 75 000 = 1500) y por debajo (2 % de 50 000 = 1000)
+  assert.equal(computeServiceFee([it('alpha', 75000)], biz), 1500)
+  assert.equal(computeServiceFee([it('alpha', 50000)], biz), 1000)
+  // Los Reales en USD: 1 % de 300 USD x 700 = 2100 -> 1500 (el tope es en CUP, ya convertido)
+  assert.equal(computeServiceFee([it('reales', 300)], biz), 1500)
+  assert.equal(computeServiceFee([it('reales', 200)], biz), 1400) // 1400 < 1500: sin tope
+  // El tope es por negocio: Alpha topado (1500) + otro sin tope (5 % de 10 000 = 500)
+  assert.equal(computeServiceFee([it('alpha', 100000), it('otro', 10000)], biz), 2000)
+  // Un negocio sin tope no se limita nunca (5 % de 100 000 = 5000)
+  assert.equal(computeServiceFee([it('otro', 100000)], biz), 5000)
+  // Redondeo hacia arriba al múltiplo de 10 sobre la suma ya topada
+  assert.equal(computeServiceFee([it('alpha', 100000), it('otro', 101)], biz), 1510)
+})
+
+await test('pedido en USD grande de Los Reales: el vale cobra máximo 1500 de servicio', async () => {
+  telegramCalls.length = 0
+  const r = await call(makeHandler(), { body: validBody({ items: [{ product: { id: usd.id }, quantity: 2 }] }) })
+  assert.equal(r.status, 200)
+  const text = telegramCalls[0].body.text
+  assert.match(text, /Servicio Tráelo:<\/b> 1,500 CUP/)
+  assert.match(text, /Total CUP a cobrar: 1,850 CUP/) // mensajería 350 + servicio 1500
 })
 
 console.log(`\n${passed} pruebas pasaron${process.exitCode ? ' — HAY FALLOS' : ''}`)

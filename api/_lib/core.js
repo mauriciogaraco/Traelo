@@ -131,8 +131,10 @@ export function computeServiceFee(items, businessesById) {
   for (const id of new Set([...cup.keys(), ...usd.keys()])) {
     const biz = businessesById.get(id)
     const pct = (biz?.businessCommission ?? 0) + (biz?.clientCommission ?? 0)
-    raw += ((cup.get(id) ?? 0) * pct) / 100
-    raw += (((usd.get(id) ?? 0) * pct) / 100) * USD_EXCHANGE_RATE
+    let businessRaw = ((cup.get(id) ?? 0) * pct) / 100 + (((usd.get(id) ?? 0) * pct) / 100) * USD_EXCHANGE_RATE
+    // Tope por negocio (CUP): ver serviceFeeCap en data/businesses.json.
+    if (biz?.serviceFeeCap !== undefined) businessRaw = Math.min(businessRaw, biz.serviceFeeCap)
+    raw += businessRaw
   }
   return Math.ceil(raw / 10) * 10
 }

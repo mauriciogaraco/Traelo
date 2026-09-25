@@ -58,6 +58,8 @@ export interface Business {
   businessCommission?: number
   /** Comisión (%) que asume el cliente. */
   clientCommission?: number
+  /** Tope (CUP) del Servicio Tráelo que este negocio puede aportar a un pedido. Sin valor = sin tope. */
+  serviceFeeCap?: number
   /** Moneda en que se muestran los precios. Por defecto CUP. */
   currency?: 'USD'
   /** Cierre manual que anula el horario. 'cerrado' = bloqueado sin importar schedule. */

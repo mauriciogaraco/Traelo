@@ -63,6 +63,10 @@ export function subtotalOf(items: CartItem[]): number {
  * sobre el subtotal en USD (productos en esa moneda, ej: Los Reales, Eme
  * Boutique) se aplica igual el % pero convertido a CUP con USD_EXCHANGE_RATE,
  * ya que el servicio nunca se cobra en USD.
+ *
+ * Tope: si el negocio define `serviceFeeCap` (CUP), su aporte al servicio
+ * (ya convertido a CUP) nunca pasa de ese valor. El tope es por negocio, no
+ * por carrito.
  */
 export function computeServiceFee(items: CartItem[]): number {
   const cupSubtotalByBusiness = new Map<string, number>()
@@ -80,8 +84,9 @@ export function computeServiceFee(items: CartItem[]): number {
     const pct = (biz?.businessCommission ?? 0) + (biz?.clientCommission ?? 0)
     const cupSubtotal = cupSubtotalByBusiness.get(businessId) ?? 0
     const usdSubtotal = usdSubtotalByBusiness.get(businessId) ?? 0
-    raw += (cupSubtotal * pct) / 100
-    raw += ((usdSubtotal * pct) / 100) * USD_EXCHANGE_RATE
+    let businessRaw = (cupSubtotal * pct) / 100 + ((usdSubtotal * pct) / 100) * USD_EXCHANGE_RATE
+    if (biz?.serviceFeeCap !== undefined) businessRaw = Math.min(businessRaw, biz.serviceFeeCap)
+    raw += businessRaw
   }
   return Math.ceil(raw / 10) * 10
 }

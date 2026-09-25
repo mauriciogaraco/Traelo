@@ -9,6 +9,7 @@
       "paymentNote": "Solo se aceptan billetes de 50 CUP en adelante. · El costo de mensajería indicado es referencial. Debido a la naturaleza del pedido, la tarifa final puede ajustarse en función del peso y volumen total de los productos. El mensajero le comunicará el monto definitivo al momento de coordinar la entrega.",
       "businessCommission": 0,
       "clientCommission": 2,
+      "serviceFeeCap": 1500,
       "schedule": {
         "days": [
           1,
@@ -792,6 +793,7 @@
       "deliveryFee": 350,
       "businessCommission": 0,
       "clientCommission": 1,
+      "serviceFeeCap": 1500,
       "schedule": {
         "days": [
           1,
