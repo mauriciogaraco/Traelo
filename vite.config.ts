@@ -38,23 +38,25 @@ export default defineConfig({
         importScripts: ['sw-force-reload.js'],
         // Las rutas /api/* (función serverless) nunca deben caer en el index.html del app shell.
         navigateFallbackDenylist: [/^\/api\//],
-        // Precache solo el app shell (JS/CSS/HTML). Las imágenes se cachean on-demand.
-        globPatterns: ['**/*.{js,css,html}'],
+        // Precache solo el app shell (JS/CSS/HTML + la fuente). Las imágenes se cachean on-demand.
+        globPatterns: ['**/*.{js,css,html,woff2}'],
         runtimeCaching: [
+          // El catálogo (API del backend) NO pasa por el service worker: la web lo guarda en
+          // localStorage y lo sincroniza por versión (services/catalogSync.ts), como la app móvil.
           {
-            // catalog.json: NetworkFirst con timeout corto. La app muestra localStorage
-            // mientras tanto; el SW entrega datos frescos en cuanto llegan.
-            urlPattern: /\/data\/catalog\.json$/,
-            handler: 'NetworkFirst',
+            // Fotos del catálogo en Cloudinary (ya redimensionadas, ver lib/images.ts): CacheFirst,
+            // cambian de URL (?v=) cuando cambia la foto.
+            urlPattern: /^https:\/\/res\.cloudinary\.com\//,
+            handler: 'CacheFirst',
             options: {
-              cacheName: 'catalog-data',
-              networkTimeoutSeconds: 3,
-              expiration: { maxEntries: 1, maxAgeSeconds: 24 * 60 * 60 },
+              cacheName: 'catalog-images',
+              expiration: { maxEntries: 400, maxAgeSeconds: 14 * 24 * 60 * 60 },
+              cacheableResponse: { statuses: [0, 200] },
             },
           },
           {
-            // Imágenes: CacheFirst — se sirven rápido tras la primera visita.
-            urlPattern: /\/assets\/images\//,
+            // Imágenes propias (categorías, hero, fotos viejas): CacheFirst tras la primera visita.
+            urlPattern: /\/assets\//,
             handler: 'CacheFirst',
             options: {
               cacheName: 'product-images',

@@ -5,7 +5,7 @@ import {
   useLocation,
   Link,
 } from "react-router-dom";
-import { useEffect, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, type ReactNode } from "react";
 import { AddressProvider } from "./context/AddressContext";
 import { CartProvider, CartPriceSyncer } from "./context/CartContext";
 import { OrdersProvider } from "./context/OrdersContext";
@@ -13,16 +13,42 @@ import { ToastProvider } from "./context/ToastContext";
 import { CatalogProvider } from "./context/CatalogContext";
 import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
-import { CategoriesPage } from "./pages/CategoriesPage";
-import { ProductDetailPage } from "./pages/ProductDetailPage";
-import { CartPage } from "./pages/CartPage";
-import { CheckoutPage } from "./pages/CheckoutPage";
-import { OrdersPage } from "./pages/OrdersPage";
-import { PrivacyPage } from "./pages/PrivacyPage";
-import { HelpPage } from "./pages/HelpPage";
-import { DeleteAccountPage } from "./pages/DeleteAccountPage";
 import { RefreshModal } from "./components/ui/RefreshModal";
-//import { ComingSoonModal } from "./pages/CommingSoonModal";
+import { useCatalogBootstrap } from "./hooks/useCatalogBootstrap";
+import { ProductRoute } from "./pages/ProductRoute";
+
+// Home carga con el bundle inicial; el resto de pantallas se baja al abrirlas (conexión limitada).
+const CategoriesPage = lazy(() => import("./pages/CategoriesPage").then((m) => ({ default: m.CategoriesPage })));
+const SearchPage = lazy(() => import("./pages/SearchPage").then((m) => ({ default: m.SearchPage })));
+const BusinessPage = lazy(() => import("./pages/BusinessPage").then((m) => ({ default: m.BusinessPage })));
+const CartPage = lazy(() => import("./pages/CartPage").then((m) => ({ default: m.CartPage })));
+const CheckoutPage = lazy(() => import("./pages/CheckoutPage").then((m) => ({ default: m.CheckoutPage })));
+const OrdersPage = lazy(() => import("./pages/OrdersPage").then((m) => ({ default: m.OrdersPage })));
+const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })));
+const HelpPage = lazy(() => import("./pages/HelpPage").then((m) => ({ default: m.HelpPage })));
+const DeleteAccountPage = lazy(() => import("./pages/DeleteAccountPage").then((m) => ({ default: m.DeleteAccountPage })));
+
+/** Arranque del catálogo (caché local + sincronización con el backend), una sola vez. */
+function CatalogBootstrap() {
+  useCatalogBootstrap();
+  return null;
+}
+
+/**
+ * Pantallas todavía con el diseño de columna de teléfono (se migran en las fases 4–5): en
+ * escritorio se centran en esa columna en vez de estirarse a todo el ancho.
+ */
+function Narrow({ children }: { children: ReactNode }) {
+  return <div className="mx-auto w-full max-w-content">{children}</div>;
+}
+
+function PageFallback() {
+  return (
+    <div role="status" aria-label="Cargando" className="flex justify-center py-16">
+      <span className="w-7 h-7 rounded-full border-[2.5px] border-primary border-t-transparent motion-safe:animate-spin" />
+    </div>
+  );
+}
 
 function Providers({ children }: { children: ReactNode }) {
   return (
@@ -32,6 +58,7 @@ function Providers({ children }: { children: ReactNode }) {
           <OrdersProvider>
             <CartProvider>
               <CartPriceSyncer />
+              <CatalogBootstrap />
               {children}
             </CartProvider>
           </OrdersProvider>
@@ -70,19 +97,22 @@ export default function App() {
         <ScrollToTop />
         <RefreshModal />
         <AppShell>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/categorias" element={<CategoriesPage />} />
-            <Route path="/buscar" element={<HomePage focusSearch />} />
-            <Route path="/producto/:id" element={<ProductDetailPage />} />
-            <Route path="/carrito" element={<CartPage />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
-            <Route path="/pedidos" element={<OrdersPage />} />
-            <Route path="/privacidad" element={<PrivacyPage />} />
-            <Route path="/ayuda" element={<HelpPage />} />
-            <Route path="/borrarusuario" element={<DeleteAccountPage />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <Suspense fallback={<PageFallback />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/categorias" element={<CategoriesPage />} />
+              <Route path="/buscar" element={<SearchPage />} />
+              <Route path="/negocio/:id" element={<BusinessPage />} />
+              <Route path="/producto/:id" element={<Narrow><ProductRoute /></Narrow>} />
+              <Route path="/carrito" element={<Narrow><CartPage /></Narrow>} />
+              <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
+              <Route path="/pedidos" element={<Narrow><OrdersPage /></Narrow>} />
+              <Route path="/privacidad" element={<Narrow><PrivacyPage /></Narrow>} />
+              <Route path="/ayuda" element={<Narrow><HelpPage /></Narrow>} />
+              <Route path="/borrarusuario" element={<Narrow><DeleteAccountPage /></Narrow>} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
         </AppShell>
       </Providers>
     </BrowserRouter>

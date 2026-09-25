@@ -21,8 +21,6 @@
         document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
       })();
     </script>
-    <!-- Empieza el catálogo en paralelo con el bundle JS, no después de que React monte. -->
-    <link rel="preload" as="fetch" href="/data/catalog.json" crossorigin>
   </head>
   <body>
     <div id="root"></div>

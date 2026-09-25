@@ -1,98 +1,101 @@
-import { createContext, useContext, useEffect, useState, useCallback, type ReactNode } from 'react'
+import { createContext, useContext, useMemo, type ReactNode } from 'react'
 import type { Business, Product } from '../types'
-import { initCatalog, ensureBusinessProducts, getBusinessProductsSync, isBusinessLoaded } from '../services/catalog'
+import type { CatalogBusiness, CatalogProduct } from '../types/backend/catalog'
 import { _setBusinessCache } from '../data/catalog'
+import { useCatalogStore } from '../store/catalogStore'
 
+/**
+ * TEMPORAL (hasta la fase 4): el catálogo ya sale del backend (`store/catalogStore`, igual que la
+ * app móvil), pero la ficha de producto, el carrito, el checkout y "Mis pedidos" todavía usan los
+ * tipos de la web anterior. Este contexto traduce el catálogo del backend a esos tipos para que
+ * sigan funcionando mientras se reemplazan; las pantallas nuevas leen el store directamente.
+ */
 interface CatalogState {
   businesses: Business[]
-  /** Search-index: todos los productos sin longDescription. Usar para búsqueda, listados y destacados. */
   products: Product[]
   loading: boolean
   syncing: boolean
-  /** Carga los productos completos de un negocio en segundo plano. */
   loadBusinessProducts: (businessId: string) => Promise<void>
-  /** Devuelve el producto completo (con longDescription) si su negocio ya cargó; si no, devuelve el stub del índice. */
   getFullProduct: (productId: string) => Product | undefined
-  /** Indica si los productos completos de un negocio ya están listos. */
   isBusinessLoaded: (businessId: string) => boolean
 }
 
-const CatalogContext = createContext<CatalogState>({
-  businesses: [],
-  products: [],
-  loading: true,
-  syncing: false,
-  loadBusinessProducts: async () => {},
-  getFullProduct: () => undefined,
-  isBusinessLoaded: () => false,
-})
+const CatalogContext = createContext<CatalogState | null>(null)
 
-export function CatalogProvider({ children }: { children: ReactNode }) {
-  const [businesses, setBusinesses] = useState<Business[]>([])
-  const [products, setProducts]     = useState<Product[]>([])
-  const [loading, setLoading]       = useState(true)
-  const [syncing, setSyncing]       = useState(false)
-  // Se incrementa cada vez que un archivo de negocio termina de cargar,
-  // forzando un re-render para que getFullProduct devuelva datos frescos.
-  const [loadTick, setLoadTick] = useState(0)
+const DAY_NAMES = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb']
 
-  useEffect(() => {
-    const { businesses: cachedBiz, searchIndex: cachedIdx, synced } = initCatalog()
-
-    if (cachedBiz.length > 0) {
-      setBusinesses(cachedBiz)
-      setProducts(cachedIdx)
-      _setBusinessCache(cachedBiz)
-      setLoading(false)
-      setSyncing(true)
-    }
-
-    synced.then((fresh) => {
-      if (fresh) {
-        setBusinesses(fresh.businesses)
-        setProducts(fresh.searchIndex)
-        _setBusinessCache(fresh.businesses)
-      }
-      setLoading(false)
-      setSyncing(false)
-    })
-  }, [])
-
-  const loadBusinessProducts = useCallback(async (businessId: string) => {
-    if (isBusinessLoaded(businessId)) return
-    await ensureBusinessProducts(businessId)
-    setLoadTick((t) => t + 1)
-  }, [])
-
-  // getFullProduct y isBusinessLoaded se recalculan en cada render (incluyendo
-  // cuando loadTick sube), así que no necesitan useCallback con loadTick en deps.
-  const getFullProduct = (productId: string): Product | undefined => {
-    const stub = products.find((p) => p.id === productId)
-    if (!stub) return undefined
-    const loaded = getBusinessProductsSync(stub.businessId)
-    return loaded?.find((p) => p.id === productId) ?? stub
-  }
-
-  const checkIsBusinessLoaded = (businessId: string): boolean => {
-    void loadTick // Hace que la función sea reactiva al tick
-    return isBusinessLoaded(businessId)
-  }
-
-  return (
-    <CatalogContext.Provider value={{
-      businesses,
-      products,
-      loading,
-      syncing,
-      loadBusinessProducts,
-      getFullProduct,
-      isBusinessLoaded: checkIsBusinessLoaded,
-    }}>
-      {children}
-    </CatalogContext.Provider>
-  )
+function hoursLabel(business: CatalogBusiness): string {
+  const open = business.hours.filter((h) => !h.closed)
+  if (open.length === 0) return 'Sin horario'
+  const first = open[0]!
+  const sameHours = open.every((h) => h.openTime === first.openTime && h.closeTime === first.closeTime)
+  const days = open.map((h) => DAY_NAMES[h.dayOfWeek]).join(', ')
+  return sameHours ? `${days} · ${first.openTime} – ${first.closeTime}` : days
 }
 
-export function useCatalog() {
-  return useContext(CatalogContext)
+/** "Abierto/cerrado" lo decide el backend (`isOpenNow`), nunca el horario en el navegador. */
+export function toLegacyBusiness(business: CatalogBusiness): Business {
+  const open = business.acceptingOrders && business.isOpenNow
+  return {
+    id: business.id,
+    name: business.name,
+    description: business.address,
+    image: business.logoUrl ?? '',
+    color: 'from-orange-100 to-amber-50',
+    schedule: { days: [0, 1, 2, 3, 4, 5, 6], open: '00:00', close: '24:00', label: hoursLabel(business) },
+    ...(open ? {} : { status: 'cerrado' as const }),
+  }
+}
+
+/** El precio del backend ya es el de la caja: el carrito viejo lo usa tal cual (sin volver a multiplicar). */
+export function toLegacyProduct(product: CatalogProduct, businessName: string): Product {
+  return {
+    id: product.id,
+    name: product.name,
+    businessId: product.businessId,
+    businessName,
+    category: (product.categoryName ?? product.category ?? 'Alimentos') as Product['category'],
+    shortDescription: product.description ?? '',
+    longDescription: product.description ?? undefined,
+    image: '🛍️',
+    photo: product.imageUrl ?? undefined,
+    price: product.effectivePrice ?? product.price ?? 0,
+    options: product.options ?? undefined,
+    addons: product.addons ?? undefined,
+    packaging: product.packaging ?? undefined,
+    stockStatus: product.lowStock ? 'pocas' : 'disponible',
+    featured: product.featured,
+  }
+}
+
+export function CatalogProvider({ children }: { children: ReactNode }) {
+  const catalogBusinesses = useCatalogStore((state) => state.businesses)
+  const catalogProducts = useCatalogStore((state) => state.products)
+  const hydrated = useCatalogStore((state) => state.hydrated)
+  const isSyncing = useCatalogStore((state) => state.isSyncing)
+
+  const value = useMemo<CatalogState>(() => {
+    const businesses = catalogBusinesses.map(toLegacyBusiness)
+    _setBusinessCache(businesses)
+    const nameById = new Map(catalogBusinesses.map((b) => [b.id, b.name]))
+    const products = catalogProducts.map((p) => toLegacyProduct(p, nameById.get(p.businessId) ?? ''))
+    return {
+      businesses,
+      products,
+      loading: !hydrated || (catalogBusinesses.length === 0 && isSyncing),
+      syncing: isSyncing,
+      // El bootstrap ya trae todos los productos completos: no hay carga por negocio.
+      loadBusinessProducts: async () => {},
+      getFullProduct: (productId) => products.find((p) => p.id === productId),
+      isBusinessLoaded: () => true,
+    }
+  }, [catalogBusinesses, catalogProducts, hydrated, isSyncing])
+
+  return <CatalogContext.Provider value={value}>{children}</CatalogContext.Provider>
+}
+
+export function useCatalog(): CatalogState {
+  const ctx = useContext(CatalogContext)
+  if (!ctx) throw new Error('useCatalog debe usarse dentro de CatalogProvider')
+  return ctx
 }

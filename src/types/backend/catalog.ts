@@ -73,6 +73,22 @@ export type CatalogProduct = {
   packaging?: CatalogPackagingOption[] | null;
   /** "Ofertas destacadas" del Home — lo marca un OWNER/ADMIN a mano. Opcional: catálogos cacheados de antes de este campo no lo traen (equivale a false). */
   featured?: boolean;
+  /**
+   * Variantes del catálogo web (backend PR #6). Opcionales: un backend anterior no las manda.
+   * formato = unidades por caja (`price` ya es el de la caja); options = tipos/sabores;
+   * addons = agregos con precio por unidad.
+   */
+  formato?: number | null;
+  options?: string[] | null;
+  addons?: CatalogAddonOption[] | null;
+  /** Id del producto en el catálogo web anterior (ej. "cr-014"), para los enlaces viejos. */
+  externalId?: string | null;
+};
+
+/** Agrego opcional de un producto (Product.addons), precio por unidad. */
+export type CatalogAddonOption = {
+  name: string;
+  price: number;
 };
 
 export type CatalogBootstrap = {

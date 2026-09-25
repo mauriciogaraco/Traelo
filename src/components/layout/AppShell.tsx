@@ -11,7 +11,7 @@ import { isFlowRoute } from './navigation'
  * - Teléfono/tablet: ancho completo, barra flotante; las pantallas de flujo (producto, checkout)
  *   ocultan header y barra porque tienen su propio "Volver" y barra de acción.
  * - Escritorio (lg+): header con la navegación; el contenido se centra en una columna
- *   (`--content-max`) que las pantallas pueden ensanchar con grids a medida que se migran.
+ *   de hasta 6xl; las pantallas migradas usan grids y las que no, una columna (`Narrow` en App).
  */
 export function AppShell({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
@@ -21,7 +21,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-background">
       <TopHeader hideOnMobile={flow} />
       <OfflineBanner />
-      <main className={`mx-auto w-full max-w-content ${flow ? 'pb-6' : 'pb-28 lg:pb-12'}`}>{children}</main>
+      <main className={`mx-auto w-full max-w-6xl ${flow ? 'pb-6' : 'pb-28 lg:pb-12'}`}>{children}</main>
       {!flow && <FloatingTabBar />}
     </div>
   )
