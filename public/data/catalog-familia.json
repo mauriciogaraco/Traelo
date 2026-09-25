@@ -1109,7 +1109,7 @@
       "image": "🍇",
       "photo": "/assets/images/products/Cronos/Frutos Del Bosque.jpg",
       "price": 2.2,
-      "stockStatus": "agotado",
+      "stockStatus": "disponible",
       "featured": true
     },
     {
@@ -4817,7 +4817,7 @@
       "shortDescription": "Se vende por pote.",
       "longDescription": "Mantequilla, se vende por pote.",
       "image": "🧈",
-      "price": 1.3,
+      "price": 1.4,
       "stockStatus": "disponible"
     },
     {
