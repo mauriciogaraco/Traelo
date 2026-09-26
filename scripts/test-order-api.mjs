@@ -78,14 +78,14 @@ await test('constantes de precios iguales a las del cliente', () => {
   assert.equal(Number(fees.match(/FEE_BASE\s*=\s*(\d+)/)[1]), FEE_BASE)
 })
 
-await test('pedido válido: 200, mensaje completo, sin IP ni dispositivo, número de sorteo', async () => {
+await test('pedido válido: 200, mensaje completo, sin IP ni dispositivo, sin sorteo', async () => {
   telegramCalls.length = 0
   const r = await call(makeHandler(), { body: validBody() })
   assert.equal(r.status, 200)
   assert.equal(r.body.ok, true)
-  assert.equal(r.body.raffleNumber, 6000 - 5692)
+  assert.equal(r.body.raffleNumber, undefined)
   assert.equal(r.headers['Cache-Control'], 'no-store')
-  assert.equal(telegramCalls.length, 2) // sendMessage + editMessageText
+  assert.equal(telegramCalls.length, 1) // un solo mensaje: ya no se edita para añadir nada
   const text = telegramCalls[0].body.text
   assert.match(text, /Pedido #4821/)
   assert.match(text, new RegExp(simple.name.replace(/[()]/g, '\\$&')))
@@ -95,7 +95,8 @@ await test('pedido válido: 200, mensaje completo, sin IP ni dispositivo, númer
   assert.ok(!/Dispositivo/.test(text), 'no debe haber línea de dispositivo')
   assert.ok(telegramCalls[0].url.includes('/botTEST_TOKEN_NOT_REAL/sendMessage'))
   assert.equal(telegramCalls[0].body.chat_id, '-100TEST')
-  assert.match(telegramCalls[1].body.text, /Número del Sorteo: #308/)
+  assert.ok(!/sorteo/i.test(text), 'el vale no debe mencionar el sorteo')
+  assert.ok(!text.includes('facebook.com'), 'el vale no debe llevar el enlace del video')
 })
 
 await test('los precios enviados por el cliente se ignoran', async () => {
@@ -214,13 +215,15 @@ await test('si Telegram falla -> 502 y se puede reintentar de inmediato', async 
   assert.equal((await call(handler, { body: validBody() })).status, 200)
 })
 
-await test('reenvío con número de sorteo: un solo mensaje, sin edición, mismo número', async () => {
+await test('un cliente viejo que aun manda raffleNumber: 200, se ignora y el vale no lleva sorteo', async () => {
   telegramCalls.length = 0
   const r = await call(makeHandler(), { body: validBody({ raffleNumber: 123 }) })
   assert.equal(r.status, 200)
-  assert.equal(r.body.raffleNumber, 123)
+  assert.equal(r.body.raffleNumber, undefined)
   assert.equal(telegramCalls.length, 1)
-  assert.match(telegramCalls[0].body.text, /Número del Sorteo: #123/)
+  assert.ok(!/sorteo/i.test(telegramCalls[0].body.text))
+  // incluso con un valor invalido, ya no se rechaza el pedido por eso
+  assert.equal((await call(makeHandler(), { body: validBody({ raffleNumber: -5 }) })).status, 200)
 })
 
 await test('sin variables de entorno -> 500 (sin filtrar detalles)', async () => {

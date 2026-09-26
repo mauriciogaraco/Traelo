@@ -7,8 +7,6 @@ interface OrdersContextValue {
   /** Persiste un pedido ya construido (ver makeOrder en lib/order). */
   saveOrder: (order: Order) => void
   markCompleted: (orderId: string) => void
-  /** Aplica cambios parciales a un pedido ya guardado (ej: raffleNumber asignado en un reenvío). */
-  updateOrder: (orderId: string, patch: Partial<Order>) => void
 }
 
 const OrdersContext = createContext<OrdersContextValue | null>(null)
@@ -32,12 +30,8 @@ export function OrdersProvider({ children }: { children: ReactNode }) {
     )
   }
 
-  function updateOrder(orderId: string, patch: Partial<Order>) {
-    setOrders((prev) => prev.map((o) => (o.id === orderId ? { ...o, ...patch } : o)))
-  }
-
   return (
-    <OrdersContext.Provider value={{ orders, saveOrder, markCompleted, updateOrder }}>
+    <OrdersContext.Provider value={{ orders, saveOrder, markCompleted }}>
       {children}
     </OrdersContext.Provider>
   )

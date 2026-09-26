@@ -30,16 +30,8 @@ export const CATALOG_TTL_MS = 5 * 60 * 1000
 const FALLBACK_SITE_URL = 'https://www.traelo-market.com'
 const TELEGRAM_TIMEOUT_MS = 8000
 const CATALOG_TIMEOUT_MS = 5000
-// Telegram admite 4096 caracteres por mensaje; se deja margen para el pie
-// del sorteo que se añade al último trozo.
+// Telegram admite 4096 caracteres por mensaje; se deja margen.
 const CHUNK_LIMIT = 3400
-
-// Número de sorteo: se usa el message_id que Telegram asigna al mensaje
-// (único y creciente) menos un offset de calibración. Ver historial de git.
-const RAFFLE_OFFSET = 5692
-const RAFFLE_PRIZE_LABEL = '15 mil CUP'
-const RAFFLE_DEADLINE_LABEL = 'lunes 26 de septiembre'
-const RAFFLE_VIDEO_URL = 'https://www.facebook.com/share/r/19TzbgCpV9/'
 
 // ── Utilidades ────────────────────────────────────────────────────────────────
 class HttpError extends Error {
@@ -250,17 +242,9 @@ export function validateOrder(body, catalog) {
     if (scheduled && !time) throw new HttpError(400, 'invalid_delivery', 'Falta la hora de entrega')
   }
 
-  let raffleNumber
-  if (body.raffleNumber !== undefined && body.raffleNumber !== null) {
-    if (!Number.isInteger(body.raffleNumber) || body.raffleNumber < 1 || body.raffleNumber > 999_999) {
-      throw new HttpError(400, 'invalid_raffle', 'Número de sorteo inválido')
-    }
-    raffleNumber = body.raffleNumber
-  }
-
   const id = typeof body.id === 'string' && /^[0-9]{1,8}$/.test(body.id) ? body.id : String(Math.floor(1000 + Math.random() * 9000))
 
-  return { id, address, items, scheduled, time, raffleNumber }
+  return { id, address, items, scheduled, time }
 }
 
 // ── Mensaje ───────────────────────────────────────────────────────────────────
@@ -343,17 +327,6 @@ export function buildOrderLines(order, catalog, now = new Date()) {
   return { lines, fee, serviceFee, cupTotal, usdTotal }
 }
 
-export function raffleFooter(ticketNumber) {
-  return [
-    '',
-    `🎟️ <b>Número del Sorteo: #${ticketNumber}</b>`,
-    '',
-    `🎉 Recuerda que el sorteo por los ${RAFFLE_PRIZE_LABEL} en premio ya está activo hasta el ${RAFFLE_DEADLINE_LABEL}. Guarda este vale como prueba de que estás participando.`,
-    '',
-    `Más información en este video: ${RAFFLE_VIDEO_URL}`,
-  ].join('\n')
-}
-
 /** Parte el vale en trozos de ≤ CHUNK_LIMIT caracteres cortando siempre entre líneas. */
 export function chunkLines(lines, limit = CHUNK_LIMIT) {
   const chunks = []
@@ -394,38 +367,13 @@ async function callTelegram(token, method, body) {
   }
 }
 
-/** Envía el vale (en uno o varios mensajes) y devuelve el número de sorteo. */
-export async function deliverOrder({ token, chatId, chunks, raffleNumber }) {
-  const send = (text) => callTelegram(token, 'sendMessage', { chat_id: chatId, text, parse_mode: 'HTML', disable_web_page_preview: true })
-
-  if (raffleNumber !== undefined) {
-    // Reenvío: se reutiliza el número que ya tenía el pedido; sin ediciones.
-    const last = chunks.length - 1
-    for (let i = 0; i < chunks.length; i++) {
-      const text = i === last ? chunks[i] + raffleFooter(raffleNumber) : chunks[i]
-      if (!(await send(text)).ok) return { ok: false }
-    }
-    return { ok: true, raffleNumber }
-  }
-
-  let lastMessageId
+/** Envia el vale (en uno o varios mensajes). */
+export async function deliverOrder({ token, chatId, chunks }) {
   for (const text of chunks) {
-    const sent = await send(text)
+    const sent = await callTelegram(token, 'sendMessage', { chat_id: chatId, text, parse_mode: 'HTML', disable_web_page_preview: true })
     if (!sent.ok) return { ok: false }
-    lastMessageId = sent.data?.result?.message_id
   }
-  if (lastMessageId === undefined) return { ok: true }
-
-  const ticket = lastMessageId - RAFFLE_OFFSET
-  await callTelegram(token, 'editMessageText', {
-    chat_id: chatId,
-    message_id: lastMessageId,
-    text: chunks[chunks.length - 1] + raffleFooter(ticket),
-    parse_mode: 'HTML',
-    disable_web_page_preview: true,
-  })
-  // El pedido ya llegó; si la edición falla solo faltaría el número en el mensaje.
-  return { ok: true, raffleNumber: ticket }
+  return { ok: true }
 }
 
 // ── Handler ───────────────────────────────────────────────────────────────────
@@ -463,11 +411,11 @@ export function createHandler({ loadCatalog = createCatalogLoader(), env = () =>
       const { lines } = buildOrderLines(order, catalog)
       const chunks = chunkLines(lines)
 
-      const result = await deliverOrder({ token, chatId, chunks, raffleNumber: order.raffleNumber })
+      const result = await deliverOrder({ token, chatId, chunks })
       if (!result.ok) {
         return reply(502, { ok: false, error: 'telegram_failed' })
       }
-      return reply(200, { ok: true, raffleNumber: result.raffleNumber })
+      return reply(200, { ok: true })
     } catch (err) {
       if (err instanceof HttpError) return reply(err.status, { ok: false, error: err.code, message: err.message })
       console.error('order handler error:', err?.name ?? 'error')
