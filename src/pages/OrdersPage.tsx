@@ -63,9 +63,6 @@ export function OrdersPage() {
                   <span className="flex-1 min-w-0">
                     <span className="block text-[15px] font-semibold text-text-primary">Pedido #{order.orderNumber}</span>
                     <span className="block text-caption text-text-secondary">{formatDate(order.createdAt)}</span>
-                    {order.raffleNumber != null && (
-                      <span className="block text-caption text-gold-text">🎟️ Sorteo #{order.raffleNumber}</span>
-                    )}
                   </span>
                   <Icon name="chevron-right" size={18} className="text-text-tertiary" />
                 </Link>

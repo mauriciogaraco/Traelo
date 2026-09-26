@@ -73,13 +73,16 @@ function setup({ order = makeOrder(), backendStatus = 200 } = {}) {
 }
 
 describe('/api/order-notify', () => {
-  it('lee el pedido real del backend, lo envía a Telegram y devuelve el número del sorteo', async () => {
+  it('lee el pedido real del backend, lo envía a Telegram y no menciona el sorteo', async () => {
     const { call, telegram } = setup()
     const res = await call({ orderId: 'cmorder000000000000000001', guestToken: 'token-valido-1234567890' })
     expect(res.statusCode).toBe(200)
     expect(res.body.ok).toBe(true)
-    expect(typeof res.body.raffleNumber).toBe('number')
+    expect(res.body.raffleNumber).toBeUndefined()
+    expect(telegram.filter((t) => t.method === 'sendMessage').length).toBe(1)
+    expect(telegram.some((t) => t.method === 'editMessageText')).toBe(false)
     const sent = telegram.find((t) => t.method === 'sendMessage').body.text
+    expect(sent.toLowerCase()).not.toContain('sorteo')
     expect(sent).toContain('Pedido #1234')
     expect(sent).toContain('ENTREGA: HOY 7:30 PM')
     expect(sent).toContain('Batido (Fresa) + Crema [Vaso] × 2 — 1,200 CUP'.replace('1,200', (1200).toLocaleString('es-CU')))
@@ -90,10 +93,10 @@ describe('/api/order-notify', () => {
   it('un reintento del mismo pedido no manda otro vale', async () => {
     const { call, telegram } = setup()
     const body = { orderId: 'cmorder000000000000000001', guestToken: 'token-valido-1234567890' }
-    const first = await call(body)
+    await call(body)
     const count = telegram.length
     const second = await call(body)
-    expect(second.body.raffleNumber).toBe(first.body.raffleNumber)
+    expect(second.statusCode).toBe(200)
     expect(telegram.length).toBe(count)
   })
 

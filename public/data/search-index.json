@@ -168,7 +168,7 @@
     "image": "🍇",
     "photo": "/assets/images/products/Cronos/Frutos Del Bosque.jpg",
     "price": 1100,
-    "stockStatus": "agotado",
+    "stockStatus": "disponible",
     "featured": true
   },
   {
@@ -3679,7 +3679,7 @@
     "category": "Alimentos",
     "shortDescription": "Se vende por pote.",
     "image": "🧈",
-    "price": 650,
+    "price": 700,
     "stockStatus": "disponible"
   },
   {

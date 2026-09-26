@@ -94,9 +94,9 @@ function parseBody(req) {
 
 /**
  * Handler de /api/order-notify. `sent` recuerda (por instancia) los pedidos ya avisados para que un
- * reintento del navegador devuelva el mismo número de sorteo en vez de mandar otro vale.
+ * reintento del navegador no mande otro vale.
  */
-export function createNotifyHandler({ env = () => process.env, now = () => Date.now(), sent = new Map() } = {}) {
+export function createNotifyHandler({ env = () => process.env, now = () => Date.now(), sent = new Set() } = {}) {
   return async function handler(req, res) {
     res.setHeader('Cache-Control', 'no-store')
     const reply = (status, payload) => res.status(status).json(payload)
@@ -116,7 +116,7 @@ export function createNotifyHandler({ env = () => process.env, now = () => Date.
     const guestToken = typeof body?.guestToken === 'string' && body.guestToken.length >= 16 && body.guestToken.length <= 200 ? body.guestToken : null
     if (!orderId || !guestToken) return reply(400, { ok: false, error: 'invalid_request' })
 
-    if (sent.has(orderId)) return reply(200, { ok: true, raffleNumber: sent.get(orderId) })
+    if (sent.has(orderId)) return reply(200, { ok: true })
 
     const order = await fetchGuestOrder(backend, orderId, guestToken)
     if (!order) return reply(404, { ok: false, error: 'order_not_found' })
@@ -128,7 +128,7 @@ export function createNotifyHandler({ env = () => process.env, now = () => Date.
 
     const result = await deliverOrder({ token, chatId, chunks: chunkLines(buildBackendOrderLines(order)) })
     if (!result.ok) return reply(502, { ok: false, error: 'telegram_failed' })
-    sent.set(orderId, result.raffleNumber ?? null)
-    return reply(200, { ok: true, raffleNumber: result.raffleNumber ?? null })
+    sent.add(orderId)
+    return reply(200, { ok: true })
   }
 }

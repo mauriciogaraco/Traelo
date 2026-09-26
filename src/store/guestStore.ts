@@ -44,8 +44,6 @@ export type GuestOrderRef = {
   orderNumber: number
   token: string
   createdAt: string
-  /** Solo web: número del sorteo que asignó el aviso a Telegram (si hubo). */
-  raffleNumber?: number | null
 }
 
 /** Cuántos pedidos de invitado se recuerdan. */

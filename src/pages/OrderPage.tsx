@@ -75,7 +75,7 @@ export function OrderPage() {
   }
 
   const created = order.id === justCreated?.id
-  const raffleNumber = guestRef?.raffleNumber ?? order.raffleNumber
+  const raffleNumber = order.raffleNumber
 
   return (
     <div className="px-4 lg:px-0 pt-4 lg:pt-6 pb-10 space-y-4">
