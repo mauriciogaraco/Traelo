@@ -6,7 +6,7 @@ import { AddressSheet } from './AddressSheet'
 /**
  * Pill de dirección del header — `TopHeader` de mobile: muestra la dirección predeterminada de la
  * libreta de este navegador ("Agregar dirección" si no hay) y abre la hoja para agregarla/editarla.
- * La libreta completa (varias direcciones, predeterminada, borrar) llega en la fase 5 ("Direcciones").
+ * La libreta completa (varias direcciones, predeterminada, borrar) está en `/direcciones`.
  */
 export function AddressBar() {
   const defaultAddress = useAddressStore((state) => state.addresses.find((a) => a.isDefault) ?? state.addresses[0] ?? null)

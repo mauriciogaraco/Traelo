@@ -5,17 +5,22 @@ import { CatalogImage } from '../components/catalog/CatalogImage'
 import { ProductCard } from '../components/catalog/ProductCard'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
+import { FavoriteButton } from '../components/catalog/FavoriteButton'
 import { Icon } from '../components/ui/Icon'
 import { ProductGridSkeleton, Skeleton } from '../components/ui/Skeleton'
 import { findBusinessByLegacyId, isBackendId } from '../features/catalog'
+import { useToast } from '../context/ToastContext'
+import { useFavorites } from '../hooks/useFavorites'
 import { useIncrementalList } from '../hooks/useIncrementalList'
 import { useQuickAdd } from '../hooks/useQuickAdd'
+import { favoriteToast } from '../lib/favoriteToast'
+import { toggleFavoriteBusiness } from '../services/favoritesService'
 import { useCatalogStore } from '../store/catalogStore'
 
 /**
  * Negocio — `BusinessScreen` de mobile: foto, nombre, dirección, teléfono, estado y sus productos.
  * En escritorio el encabezado queda a la izquierda (fijo) y los productos en grilla a la derecha.
- * Pendiente (fase 5): favorito, que en mobile solo aparece con sesión.
+ * El corazón de favoritos solo aparece con sesión, como en mobile.
  */
 export function BusinessPage() {
   const { id = '' } = useParams()
@@ -23,6 +28,8 @@ export function BusinessPage() {
   const allProducts = useCatalogStore((state) => state.products)
   const waiting = useCatalogStore((state) => !state.hydrated || (state.businesses.length === 0 && state.isSyncing))
   const quickAdd = useQuickAdd()
+  const { showToast } = useToast()
+  const { isAuthenticated, businesses: favoriteBusinesses } = useFavorites()
 
   const business = useMemo(() => businesses.find((b) => b.id === id), [businesses, id])
   const products = useMemo(() => allProducts.filter((p) => p.businessId === id), [allProducts, id])
@@ -73,7 +80,18 @@ export function BusinessPage() {
           eager
           className="w-full h-40 lg:h-56 rounded-r-lg mb-2"
         />
-        <h1 className="text-h1 text-text-primary">{business.name}</h1>
+        <div className="flex items-start justify-between gap-3">
+          <h1 className="text-h1 text-text-primary">{business.name}</h1>
+          {isAuthenticated && (
+            <FavoriteButton
+              isFavorite={favoriteBusinesses.some((b) => b.businessId === business.id)}
+              onToggle={async () => {
+                const { message, type } = favoriteToast(await toggleFavoriteBusiness(business), business.name)
+                showToast(message, type)
+              }}
+            />
+          )}
+        </div>
         <p className="flex items-start gap-1 text-body text-text-secondary">
           <Icon name="location" size={16} className="mt-[3px] shrink-0 text-text-tertiary" />
           {business.address}

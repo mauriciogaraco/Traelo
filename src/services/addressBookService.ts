@@ -1,3 +1,4 @@
+import { listCustomerAddresses } from '../api/customerAddresses'
 import { useAddressStore } from '../store/addressStore'
 import type { DeliveryLocation } from '../types/backend/location'
 
@@ -35,4 +36,29 @@ export function rememberDeliveryAddress(input: {
     reference,
     location: input.location ?? null,
   })
+}
+
+/**
+ * Las direcciones que una cuenta ya tenía en el servidor (de antes de que vivieran en el navegador)
+ * se copian UNA vez a la libreta local, sin duplicar. Es de mejor esfuerzo: si falla (sin red), se
+ * reintenta en la próxima sesión y nada se pierde ni bloquea.
+ */
+export async function importAccountAddresses(): Promise<void> {
+  if (useAddressStore.getState().importedFromAccount) return
+  try {
+    const remote = await listCustomerAddresses()
+    for (const item of remote) {
+      if (findDuplicate(item.address, item.reference)) continue
+      const created = useAddressStore.getState().add({
+        label: item.label,
+        address: item.address,
+        reference: item.reference,
+        location: item.location,
+      })
+      if (item.isDefault) useAddressStore.getState().setDefault(created.id)
+    }
+    useAddressStore.getState().markImported()
+  } catch {
+    // Se reintenta la próxima vez.
+  }
 }

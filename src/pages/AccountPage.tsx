@@ -13,10 +13,13 @@ import { logout } from '../services/authService'
 import { useGuestOrdersStore } from '../store/guestStore'
 import type { Order } from '../types/backend/order'
 
-type MenuItem = { to: string; label: string; icon: IconName; tint: string }
+type MenuItem = { to: string; label: string; icon: IconName; tint: string; accountOnly?: boolean }
 
 const MENU: MenuItem[] = [
   { to: '/pedidos', label: 'Mis pedidos', icon: 'receipt', tint: 'bg-primary-soft text-primary' },
+  // Las direcciones viven en este navegador: las ve cualquiera, con o sin cuenta.
+  { to: '/direcciones', label: 'Direcciones', icon: 'location', tint: 'bg-primary-soft text-primary' },
+  { to: '/favoritos', label: 'Favoritos', icon: 'heart', tint: 'bg-danger/10 text-danger', accountOnly: true },
   { to: '/ayuda', label: 'Ayuda', icon: 'help', tint: 'bg-info/10 text-info' },
 ]
 
@@ -86,7 +89,7 @@ export function AccountPage() {
           </section>
         )}
 
-        <Menu />
+        <Menu authenticated={false} />
       </div>
     )
   }
@@ -109,7 +112,7 @@ export function AccountPage() {
         </div>
       </div>
 
-      <Menu />
+      <Menu authenticated />
 
       {loading && orders.length === 0 && <RowsSkeleton rows={3} />}
       {error && (
@@ -136,10 +139,11 @@ export function AccountPage() {
   )
 }
 
-function Menu() {
+function Menu({ authenticated }: { authenticated: boolean }) {
+  const items = MENU.filter((item) => authenticated || !item.accountOnly)
   return (
     <nav aria-label="Atajos de la cuenta" className="rounded-r-lg bg-surface border border-border/60 shadow-card divide-y divide-border">
-      {MENU.map((item) => (
+      {items.map((item) => (
         <Link key={item.to} to={item.to} className="flex items-center gap-3 p-3 hover:bg-surface-muted transition">
           <span className={`w-11 h-11 shrink-0 rounded-full flex items-center justify-center ${item.tint}`}>
             <Icon name={item.icon} size={22} />

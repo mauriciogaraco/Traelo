@@ -8,10 +8,14 @@ import { EmptyState } from '../components/ui/EmptyState'
 import { Icon } from '../components/ui/Icon'
 import { QuantitySelector } from '../components/ui/QuantitySelector'
 import { StatusBadge } from '../components/ui/StatusBadge'
+import { FavoriteButton } from '../components/catalog/FavoriteButton'
 import { useToast } from '../context/ToastContext'
 import { cheapestPackaging, estimateLine, findAddon, findPackaging, packSizeOf, requiresOption } from '../features/cart'
 import { getBusinessStatus, isSoldOut, visualForProduct } from '../features/catalog'
+import { useFavorites } from '../hooks/useFavorites'
+import { favoriteToast } from '../lib/favoriteToast'
 import { flyToCart } from '../lib/flyToCart'
+import { toggleFavoriteProduct } from '../services/favoritesService'
 import { optimizedImageUrl } from '../lib/images'
 import { MAX_LINE_QUANTITY, useCartStore } from '../store/cartStore'
 import { useCatalogStore } from '../store/catalogStore'
@@ -20,7 +24,7 @@ import { useCatalogStore } from '../store/catalogStore'
  * Ficha de producto — `ProductScreen` de mobile. Reglas del carrito: el tipo/sabor es OBLIGATORIO si
  * el producto tiene; el agrego es opcional (uno); el envase viene preseleccionado (el más barato) y se
  * puede cambiar. El total mostrado es un estimado: el real lo calcula el servidor al confirmar.
- * Pendiente (fase 5): favorito y aviso de recompensa, que en mobile dependen de la sesión.
+ * El corazón de favoritos solo aparece con sesión (como en mobile). Pendiente: aviso de recompensa.
  */
 export function ProductDetailPage() {
   const { id = '' } = useParams()
@@ -30,6 +34,7 @@ export function ProductDetailPage() {
   const businesses = useCatalogStore((state) => state.businesses)
   const categories = useCatalogStore((state) => state.categories)
   const addItem = useCartStore((state) => state.addItem)
+  const { isAuthenticated, products: favoriteProducts } = useFavorites()
 
   const [quantity, setQuantity] = useState(1)
   const [optionName, setOptionName] = useState<string | null>(null)
@@ -92,12 +97,22 @@ export function ProductDetailPage() {
   }
 
   const visual = visualForProduct(product, categories)
+  const isFavorite = favoriteProducts.some((p) => p.productId === product.id)
+  const handleToggleFavorite = async () => {
+    const { message, type } = favoriteToast(await toggleFavoriteProduct(product), product.name)
+    showToast(message, type)
+  }
 
   return (
     <div className="pb-28 lg:pb-10 lg:px-6 lg:pt-6">
       <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:items-start">
         <div className="relative lg:sticky lg:top-24">
           <BackButton onClick={goBack} />
+          {isAuthenticated && (
+            <div className="absolute top-[max(12px,env(safe-area-inset-top))] right-3 z-10">
+              <FavoriteButton isFavorite={isFavorite} onToggle={() => void handleToggleFavorite()} />
+            </div>
+          )}
           {product.imageUrl ? (
             <button
               type="button"

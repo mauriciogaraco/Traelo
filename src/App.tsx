@@ -25,6 +25,8 @@ const OrdersPage = lazy(() => import("./pages/OrdersPage").then((m) => ({ defaul
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })));
 const HelpPage = lazy(() => import("./pages/HelpPage").then((m) => ({ default: m.HelpPage })));
 const AccountPage = lazy(() => import("./pages/AccountPage").then((m) => ({ default: m.AccountPage })));
+const AddressesPage = lazy(() => import("./pages/AddressesPage").then((m) => ({ default: m.AddressesPage })));
+const FavoritesPage = lazy(() => import("./pages/FavoritesPage").then((m) => ({ default: m.FavoritesPage })));
 const LoginPage = lazy(() => import("./pages/LoginPage").then((m) => ({ default: m.LoginPage })));
 const RegisterPage = lazy(() => import("./pages/RegisterPage").then((m) => ({ default: m.RegisterPage })));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage").then((m) => ({ default: m.ForgotPasswordPage })));
@@ -107,6 +109,8 @@ export default function App() {
               <Route path="/carrito" element={<CartPage />} />
               <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
               <Route path="/cuenta" element={<AccountPage />} />
+              <Route path="/direcciones" element={<AddressesPage />} />
+              <Route path="/favoritos" element={<FavoritesPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/registro" element={<RegisterPage />} />
               <Route path="/recuperar" element={<ForgotPasswordPage />} />
