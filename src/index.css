@@ -162,3 +162,25 @@
 .animate-slide-down {
   animation: slide-down 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* Recorrido del pedido: latido del paso actual y confeti al entregarse. Se apagan con "reducir movimiento". */
+@keyframes tracker-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+.tracker-pulse {
+  animation: tracker-pulse 1.4s ease-in-out infinite;
+}
+@keyframes confetti-burst {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(var(--spin)); }
+}
+.confetti-piece {
+  animation: confetti-burst 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tracker-pulse,
+  .confetti-piece {
+    animation: none;
+  }
+}
