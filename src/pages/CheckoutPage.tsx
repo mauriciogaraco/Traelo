@@ -145,7 +145,6 @@ export function CheckoutPage() {
 
     if (result.ok) {
       markOrderSent()
-      if (result.raffleNumber !== undefined) order.raffleNumber = result.raffleNumber
       saveOrder(order)
       clearCart()
       showToast('¡Pedido enviado! Te contactaremos pronto.', 'success')

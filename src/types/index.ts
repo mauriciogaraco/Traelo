@@ -174,6 +174,4 @@ export interface Order {
   deliveryTime?: string
   status: OrderStatus
   address: Address
-  /** Número de sorteo asignado por el servidor al confirmar (api/order). Ausente en pedidos previos a esta función. */
-  raffleNumber?: number
 }

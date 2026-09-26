@@ -24,7 +24,7 @@ const statusConfig = {
 export function OrdersPage() {
   const navigate = useNavigate()
   const location = useLocation()
-  const { orders, markCompleted, updateOrder } = useOrders()
+  const { orders, markCompleted } = useOrders()
   const justOrdered = (location.state as { justOrdered?: string } | null)?.justOrdered
 
   if (orders.length === 0) {
@@ -67,7 +67,6 @@ export function OrdersPage() {
             key={order.id}
             order={order}
             onComplete={() => markCompleted(order.id)}
-            onUpdate={(patch) => updateOrder(order.id, patch)}
           />
         ))}
       </div>
@@ -78,11 +77,9 @@ export function OrdersPage() {
 function OrderCard({
   order,
   onComplete,
-  onUpdate,
 }: {
   order: Order
   onComplete: () => void
-  onUpdate: (patch: Partial<Order>) => void
 }) {
   const { showToast } = useToast()
   const [resending, setResending] = useState(false)
@@ -129,12 +126,6 @@ function OrderCard({
     setResending(false)
     setOrderInFlight(false)
     if (result.ok) markOrderSent()
-    // Pedido de antes de que existiera el sorteo: se le asignó número recién
-    // ahora — se graba para que un reenvío futuro reutilice el mismo, en vez
-    // de generar uno nuevo cada vez.
-    if (result.ok && result.raffleNumber !== undefined && order.raffleNumber === undefined) {
-      onUpdate({ raffleNumber: result.raffleNumber })
-    }
     showToast(
       result.ok
         ? 'Pedido reenviado correctamente.'

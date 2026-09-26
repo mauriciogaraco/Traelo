@@ -2,8 +2,6 @@ import type { Order } from '../types'
 
 export interface SendOrderResult {
   ok: boolean
-  /** Número de sorteo asignado por el servidor (nuevo o el que el pedido ya traía). */
-  raffleNumber?: number
   /** Causa del fallo para mostrarla/diagnosticar: mensaje del servidor + código, o el problema de red. */
   reason?: string
 }
@@ -38,7 +36,6 @@ export async function sendOrderToTelegram(order: Order): Promise<SendOrderResult
       addon: item.addon ? { name: item.addon.name } : undefined,
       packaging: item.packaging ? { name: item.packaging.name } : undefined,
     })),
-    raffleNumber: order.raffleNumber,
   }
 
   const controller = new AbortController()
@@ -53,7 +50,7 @@ export async function sendOrderToTelegram(order: Order): Promise<SendOrderResult
     const data = await res.json().catch(() => null)
 
     if (res.ok && data?.ok === true) {
-      return { ok: true, raffleNumber: typeof data.raffleNumber === 'number' ? data.raffleNumber : undefined }
+      return { ok: true }
     }
     const code = typeof data?.error === 'string' ? data.error : `http_${res.status}`
     const message = typeof data?.message === 'string' ? `${data.message} ` : ''
