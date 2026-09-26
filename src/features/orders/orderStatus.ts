@@ -1,4 +1,5 @@
 import type { OrderStatus } from '../../types/backend/order';
+import type { StatusTone } from '../../components/ui/StatusBadge';
 
 /**
  * Traduce los estados reales del backend a las etapas simples del checklist §29.
@@ -39,3 +40,11 @@ export function getOrderStatusLabel(status: OrderStatus): string {
 export function isOrderActive(status: OrderStatus): boolean {
   return status === 'PENDING' || status === 'ASSIGNED';
 }
+
+/** Color del badge de estado (la etiqueta siempre acompaña: el color nunca es la única señal). */
+export const ORDER_STATUS_TONE: Record<OrderStatus, StatusTone> = {
+  PENDING: 'primary',
+  ASSIGNED: 'info',
+  COMPLETED: 'success',
+  CANCELLED: 'danger',
+};

@@ -1,6 +1,7 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { getCartItemCount } from '../../features/cart'
 import { useCartStore } from '../../store/cartStore'
+import { useAuth } from '../../hooks/useAuth'
 import { AddressBar } from '../address/AddressBar'
 import { Icon } from '../ui/Icon'
 import { Logo } from '../ui/Logo'
@@ -11,12 +12,13 @@ import { NAV_TABS, cartBadge, isTabActive } from './navigation'
  * En escritorio (lg+) suma la navegación principal y el carrito, que en teléfono van en la barra
  * flotante.
  *
- * Pendiente (fase 5): campana de notificaciones y "Mi cuenta" real; hasta entonces el botón de
- * cuenta lleva a "Mis pedidos", que es lo que hoy existe de la cuenta en la web.
+ * "Mi cuenta" lleva a `/cuenta`: con sesión muestra la inicial del nombre; sin sesión, el ícono.
+ * Pendiente: campana de notificaciones.
  */
 export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) {
   const { pathname } = useLocation()
   const itemCount = useCartStore((state) => getCartItemCount(state.items))
+  const { isAuthenticated, customer } = useAuth()
   // En escritorio el orden es el habitual de la web (Inicio primero); en la barra flotante Home va al centro.
   const desktopTabs = [...NAV_TABS.filter((tab) => tab.to === '/'), ...NAV_TABS.filter((tab) => tab.to !== '/' && !tab.cart)]
   const cartTab = NAV_TABS.find((tab) => tab.cart)!
@@ -74,11 +76,15 @@ export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) 
         </Link>
 
         <Link
-          to="/pedidos"
-          aria-label="Mi cuenta: mis pedidos"
-          className="w-10 h-10 shrink-0 rounded-full bg-gradient-primary text-white flex items-center justify-center hover:brightness-105 transition"
+          to="/cuenta"
+          aria-label={isAuthenticated ? `Mi cuenta: ${customer?.name ?? ''}` : 'Mi cuenta: iniciar sesión'}
+          className="w-10 h-10 shrink-0 rounded-full bg-gradient-primary text-white flex items-center justify-center font-bold hover:brightness-105 transition"
         >
-          <Icon name="person" size={20} filled />
+          {isAuthenticated && customer?.name ? (
+            <span aria-hidden="true">{customer.name.trim().charAt(0).toUpperCase()}</span>
+          ) : (
+            <Icon name="person" size={20} filled />
+          )}
         </Link>
       </div>
     </header>

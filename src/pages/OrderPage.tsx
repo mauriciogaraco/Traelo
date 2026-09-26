@@ -1,22 +1,16 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getOrderDetail } from '../api/orderAccess'
+import { getOrderDetail, type OrderAccess } from '../api/orderAccess'
 import { formatCup } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { ErrorState } from '../components/ui/ErrorState'
 import { RowsSkeleton } from '../components/ui/Skeleton'
-import { StatusBadge, type StatusTone } from '../components/ui/StatusBadge'
-import { getOrderStatusLabel } from '../features/orders/orderStatus'
+import { StatusBadge } from '../components/ui/StatusBadge'
+import { getOrderStatusLabel, ORDER_STATUS_TONE } from '../features/orders/orderStatus'
+import { useAuth } from '../hooks/useAuth'
 import { useGuestOrdersStore, useOrderStore } from '../store/guestStore'
-import type { Order, OrderStatus } from '../types/backend/order'
-
-const STATUS_TONE: Record<OrderStatus, StatusTone> = {
-  PENDING: 'primary',
-  ASSIGNED: 'info',
-  COMPLETED: 'success',
-  CANCELLED: 'danger',
-}
+import type { Order } from '../types/backend/order'
 
 /**
  * Pedido — confirmación y detalle con los datos del backend (estado real, productos, desglose y
@@ -26,34 +20,46 @@ const STATUS_TONE: Record<OrderStatus, StatusTone> = {
 export function OrderPage() {
   const { id = '' } = useParams()
   const guestRef = useGuestOrdersStore((state) => state.orders.find((o) => o.orderId === id))
+  const { isAuthenticated, isLoading: authLoading } = useAuth()
+  // Un pedido de invitado se abre con su token; el resto, con la cuenta (Bearer).
+  const access: OrderAccess | null = guestRef ? { kind: 'guest', token: guestRef.token } : isAuthenticated ? { kind: 'customer' } : null
   const justCreated = useOrderStore((state) => (state.lastCreatedOrder?.id === id ? state.lastCreatedOrder : null))
   const [order, setOrder] = useState<Order | null>(justCreated)
   const [loading, setLoading] = useState(!justCreated)
   const [error, setError] = useState<string | null>(null)
 
   const load = useCallback(async () => {
-    if (!guestRef) return
+    if (!access) return
     setLoading(true)
     setError(null)
     try {
-      setOrder(await getOrderDetail(id, { kind: 'guest', token: guestRef.token }))
+      setOrder(await getOrderDetail(id, access))
     } catch (err) {
       setError(err instanceof Error ? err.message : 'No pudimos cargar el pedido.')
     } finally {
       setLoading(false)
     }
-  }, [id, guestRef])
+    // `access` se recrea en cada render: se depende de sus partes estables.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [id, guestRef, isAuthenticated])
 
   useEffect(() => {
     if (!justCreated) void load()
   }, [justCreated, load])
 
-  if (!guestRef && !order) {
+  if (!access && !order) {
+    if (authLoading) {
+      return (
+        <div className="px-4 pt-6">
+          <RowsSkeleton rows={4} />
+        </div>
+      )
+    }
     return (
       <EmptyState
         icon="receipt"
         title="No encontramos este pedido"
-        description="Solo puedes ver aquí los pedidos hechos desde este navegador."
+        description="Solo puedes ver aquí los pedidos hechos desde este navegador o con tu cuenta."
         action={
           <Link to="/pedidos" className="inline-flex min-h-12 items-center rounded-r-md border border-primary px-4 font-semibold text-primary-text">
             Ver mis pedidos
@@ -83,7 +89,7 @@ export function OrderPage() {
         {created && <p className="text-h2 text-text-primary">¡Pedido recibido! 🎉</p>}
         <div className="flex flex-wrap items-center gap-2">
           <h1 className="text-h1 text-text-primary">Pedido #{order.orderNumber}</h1>
-          <StatusBadge label={getOrderStatusLabel(order.status)} tone={STATUS_TONE[order.status] ?? 'neutral'} />
+          <StatusBadge label={getOrderStatusLabel(order.status)} tone={ORDER_STATUS_TONE[order.status] ?? 'neutral'} />
         </div>
         <p className="text-caption text-text-secondary">
           {new Date(order.orderDate ?? order.createdAt).toLocaleString('es', { dateStyle: 'medium', timeStyle: 'short' })}

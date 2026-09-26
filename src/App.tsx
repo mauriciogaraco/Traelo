@@ -11,6 +11,7 @@ import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
 import { RefreshModal } from "./components/ui/RefreshModal";
 import { useCatalogBootstrap } from "./hooks/useCatalogBootstrap";
+import { useSessionBootstrap } from "./hooks/useSessionBootstrap";
 import { ProductRoute } from "./pages/ProductRoute";
 
 // Home carga con el bundle inicial; el resto de pantallas se baja al abrirlas (conexión limitada).
@@ -23,6 +24,10 @@ const OrderPage = lazy(() => import("./pages/OrderPage").then((m) => ({ default:
 const OrdersPage = lazy(() => import("./pages/OrdersPage").then((m) => ({ default: m.OrdersPage })));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })));
 const HelpPage = lazy(() => import("./pages/HelpPage").then((m) => ({ default: m.HelpPage })));
+const AccountPage = lazy(() => import("./pages/AccountPage").then((m) => ({ default: m.AccountPage })));
+const LoginPage = lazy(() => import("./pages/LoginPage").then((m) => ({ default: m.LoginPage })));
+const RegisterPage = lazy(() => import("./pages/RegisterPage").then((m) => ({ default: m.RegisterPage })));
+const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage").then((m) => ({ default: m.ForgotPasswordPage })));
 const DeleteAccountPage = lazy(() => import("./pages/DeleteAccountPage").then((m) => ({ default: m.DeleteAccountPage })));
 
 /** Arranque del catálogo (caché local + sincronización con el backend), una sola vez. */
@@ -47,10 +52,17 @@ function PageFallback() {
   );
 }
 
+/** Lee la sesión guardada al abrir (sin pedir login jamás: sin sesión la web queda como invitado). */
+function SessionBootstrap() {
+  useSessionBootstrap();
+  return null;
+}
+
 function Providers({ children }: { children: ReactNode }) {
   return (
     <ToastProvider>
       <CatalogBootstrap />
+      <SessionBootstrap />
       {children}
     </ToastProvider>
   );
@@ -94,6 +106,10 @@ export default function App() {
               <Route path="/producto/:id" element={<ProductRoute />} />
               <Route path="/carrito" element={<CartPage />} />
               <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
+              <Route path="/cuenta" element={<AccountPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/registro" element={<RegisterPage />} />
+              <Route path="/recuperar" element={<ForgotPasswordPage />} />
               <Route path="/pedidos" element={<Narrow><OrdersPage /></Narrow>} />
               <Route path="/pedido/:id" element={<Narrow><OrderPage /></Narrow>} />
               <Route path="/privacidad" element={<Narrow><PrivacyPage /></Narrow>} />

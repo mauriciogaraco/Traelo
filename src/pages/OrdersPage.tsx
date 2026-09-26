@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom'
 import { formatCup } from '../components/catalog/Price'
 import { EmptyState } from '../components/ui/EmptyState'
 import { Icon } from '../components/ui/Icon'
+import { getOrderStatusLabel, ORDER_STATUS_TONE } from '../features/orders/orderStatus'
+import { StatusBadge } from '../components/ui/StatusBadge'
+import { OrderRow } from '../components/orders/OrderRow'
+import { useAuth } from '../hooks/useAuth'
+import { useCustomerOrders } from '../hooks/useCustomerOrders'
 import { useGuestOrdersStore } from '../store/guestStore'
 
 /** Pedido de la web anterior (catálogo en JSON, enviado por Telegram): solo se muestra. */
@@ -21,13 +26,15 @@ const formatDate = (iso: string) => new Date(iso).toLocaleString('es', { dateSty
 
 /**
  * Mis pedidos — los hechos desde este navegador sin cuenta (como los "pedidos de invitado" de la app
- * móvil: el token de cada uno vive solo aquí). Con cuenta, el historial completo llega en la fase 5.
+ * móvil: el token de cada uno vive solo aquí). Con cuenta, el historial de la cuenta aparece arriba.
  */
 export function OrdersPage() {
   const orders = useGuestOrdersStore((state) => state.orders)
   const legacy = readLegacyOrders()
+  const { isAuthenticated } = useAuth()
+  const account = useCustomerOrders(isAuthenticated)
 
-  if (orders.length === 0 && legacy.length === 0) {
+  if (orders.length === 0 && legacy.length === 0 && account.orders.length === 0) {
     return (
       <>
         <Header />
@@ -49,6 +56,29 @@ export function OrdersPage() {
     <div className="pb-10">
       <Header />
       <div className="px-4 lg:px-0 space-y-6">
+        {account.orders.length > 0 && (
+          <section className="space-y-2">
+            <h2 className="text-h3 text-text-primary">Mi cuenta</h2>
+            <ul className="space-y-2">
+              {account.orders.map((order) => (
+                <li key={order.id}>
+                  <OrderRow
+                    to={`/pedido/${order.id}`}
+                    orderNumber={order.orderNumber}
+                    date={order.orderDate}
+                    trailing={<StatusBadge label={getOrderStatusLabel(order.status)} tone={ORDER_STATUS_TONE[order.status] ?? 'neutral'} />}
+                  />
+                </li>
+              ))}
+            </ul>
+            {account.hasMore && (
+              <button onClick={() => void account.loadMore()} className="w-full min-h-12 rounded-r-md border border-primary font-semibold text-primary-text">
+                Cargar más
+              </button>
+            )}
+          </section>
+        )}
+
         {orders.length > 0 && (
           <ul className="space-y-2">
             {orders.map((order) => (
