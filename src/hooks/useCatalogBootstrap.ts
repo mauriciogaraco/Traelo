@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { migrateLegacyAddress, migrateLegacyCart } from '../lib/legacyMigration'
 import { hydrateCatalogFromStorage, syncCatalog } from '../services/catalogSync'
 import { useCatalogStore } from '../store/catalogStore'
 
@@ -14,7 +15,17 @@ const RESYNC_ON_RETURN_MS = 5 * 60 * 1000
 export function useCatalogBootstrap(): void {
   useEffect(() => {
     hydrateCatalogFromStorage()
+    migrateLegacyAddress()
     void syncCatalog()
+
+    // El carrito de la web anterior se migra con el catálogo ya sincronizado (hace falta externalId).
+    let cartMigrated = false
+    const tryMigrateCart = () => {
+      const { products, isSyncing, lastSyncedAt } = useCatalogStore.getState()
+      if (!cartMigrated && !isSyncing && lastSyncedAt) cartMigrated = migrateLegacyCart(products)
+    }
+    const unsubscribeCatalog = useCatalogStore.subscribe(tryMigrateCart)
+    tryMigrateCart()
 
     const onOnline = () => void syncCatalog()
     const onVisible = () => {
@@ -25,6 +36,7 @@ export function useCatalogBootstrap(): void {
     window.addEventListener('online', onOnline)
     document.addEventListener('visibilitychange', onVisible)
     return () => {
+      unsubscribeCatalog()
       window.removeEventListener('online', onOnline)
       document.removeEventListener('visibilitychange', onVisible)
     }

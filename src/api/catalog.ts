@@ -15,7 +15,8 @@ import type {
 const COLD_START_TIMEOUT_MS = 45_000;
 
 export function getCatalogBootstrap() {
-  return apiGet<CatalogBootstrap>('/catalog/bootstrap', undefined, { timeoutMs: COLD_START_TIMEOUT_MS });
+  // includeUnavailable: también los AGOTADOS, para mostrarlos con su etiqueta (no se pueden agregar).
+  return apiGet<CatalogBootstrap>('/catalog/bootstrap', { includeUnavailable: true }, { timeoutMs: COLD_START_TIMEOUT_MS });
 }
 
 export function getCatalogVersion() {
@@ -38,7 +39,7 @@ export function getCatalogBusinessProducts(
   businessId: string,
   params?: { categoryId?: string; search?: string },
 ) {
-  return apiGet<CatalogProduct[]>(`/catalog/businesses/${businessId}/products`, params);
+  return apiGet<CatalogProduct[]>(`/catalog/businesses/${businessId}/products`, { includeUnavailable: true, ...params });
 }
 
 /** Popularidad reciente y calificación de negocios, para ordenar la búsqueda. */

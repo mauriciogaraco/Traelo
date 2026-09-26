@@ -1,242 +1,105 @@
-import { useRef, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { useOrders } from '../context/OrdersContext'
-import { useToast } from '../context/ToastContext'
-import { Button } from '../components/ui/Button'
+import { Link } from 'react-router-dom'
+import { formatCup } from '../components/catalog/Price'
 import { EmptyState } from '../components/ui/EmptyState'
-import { MessagingFeeRow } from '../components/ui/MessagingFeeRow'
-import { ServiceFeeRow } from '../components/ui/ServiceFeeRow'
-import { formatDate, formatPrice } from '../lib/format'
-import { groupByBusiness } from '../lib/order'
-import { hasFormato, itemLineId, lineTotal, unitsOf } from '../lib/cart'
-import { isOpenNow, ordersClosedForToday } from '../lib/hours'
-import { cooldownMessage, markOrderSent, orderCooldownRemaining, sendFailedMessage } from '../lib/rateLimit'
-import { setOrderInFlight } from '../pwa'
-import { sendOrderToTelegram } from '../lib/telegram'
-import { businessById } from '../data/catalog'
-import type { Order } from '../types'
+import { Icon } from '../components/ui/Icon'
+import { useGuestOrdersStore } from '../store/guestStore'
 
-const statusConfig = {
-  pendiente: { label: 'Pendiente', className: 'bg-amber-50 text-warning' },
-  completado: { label: 'Completado', className: 'bg-green-50 text-success' },
+/** Pedido de la web anterior (catálogo en JSON, enviado por Telegram): solo se muestra. */
+type LegacyOrder = { id: string; date: string; total: number }
+
+function readLegacyOrders(): LegacyOrder[] {
+  try {
+    const raw = localStorage.getItem('traelo_orders')
+    const parsed = raw ? (JSON.parse(raw) as LegacyOrder[]) : []
+    return Array.isArray(parsed) ? parsed.filter((o) => o && o.id && o.date) : []
+  } catch {
+    return []
+  }
 }
 
-export function OrdersPage() {
-  const navigate = useNavigate()
-  const location = useLocation()
-  const { orders, markCompleted, updateOrder } = useOrders()
-  const justOrdered = (location.state as { justOrdered?: string } | null)?.justOrdered
+const formatDate = (iso: string) => new Date(iso).toLocaleString('es', { dateStyle: 'medium', timeStyle: 'short' })
 
-  if (orders.length === 0) {
+/**
+ * Mis pedidos — los hechos desde este navegador sin cuenta (como los "pedidos de invitado" de la app
+ * móvil: el token de cada uno vive solo aquí). Con cuenta, el historial completo llega en la fase 5.
+ */
+export function OrdersPage() {
+  const orders = useGuestOrdersStore((state) => state.orders)
+  const legacy = readLegacyOrders()
+
+  if (orders.length === 0 && legacy.length === 0) {
     return (
-      <div className="animate-fade-in">
-        <header className="px-4 pt-6 pb-4">
-          <h1 className="text-2xl font-bold text-text-primary">Mis pedidos</h1>
-        </header>
+      <>
+        <Header />
         <EmptyState
-          icon="📦"
+          icon="receipt"
           title="Aún no tienes pedidos"
           description="Cuando hagas tu primer pedido aparecerá aquí para que le hagas seguimiento."
-          action={<Button size="lg" onClick={() => navigate('/')}>Empezar a comprar</Button>}
+          action={
+            <Link to="/" className="inline-flex min-h-12 items-center rounded-r-md bg-gradient-primary px-5 font-semibold text-white">
+              Empezar a comprar
+            </Link>
+          }
         />
-      </div>
+      </>
     )
   }
 
   return (
-    <div className="animate-fade-in">
-      <header className="px-4 pt-6 pb-4">
-        <h1 className="text-2xl font-bold text-text-primary">Mis pedidos</h1>
-        <p className="text-sm text-text-secondary mt-0.5">
-          {orders.length} {orders.length === 1 ? 'pedido' : 'pedidos'}
-        </p>
-      </header>
+    <div className="pb-10">
+      <Header />
+      <div className="px-4 lg:px-0 space-y-6">
+        {orders.length > 0 && (
+          <ul className="space-y-2">
+            {orders.map((order) => (
+              <li key={order.orderId}>
+                <Link
+                  to={`/pedido/${order.orderId}`}
+                  className="flex items-center gap-3 rounded-r-lg bg-surface border border-border/60 shadow-card p-3 hover:shadow-card-hover transition"
+                >
+                  <span className="w-11 h-11 shrink-0 rounded-full bg-primary-soft text-primary flex items-center justify-center">
+                    <Icon name="receipt" size={22} />
+                  </span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-[15px] font-semibold text-text-primary">Pedido #{order.orderNumber}</span>
+                    <span className="block text-caption text-text-secondary">{formatDate(order.createdAt)}</span>
+                    {order.raffleNumber != null && (
+                      <span className="block text-caption text-gold-text">🎟️ Sorteo #{order.raffleNumber}</span>
+                    )}
+                  </span>
+                  <Icon name="chevron-right" size={18} className="text-text-tertiary" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
 
-      {justOrdered && (
-        <div className="mx-4 mb-4 flex items-center gap-2.5 bg-green-50 border border-green-200 rounded-2xl p-3 animate-scale-in">
-          <span className="text-lg">✅</span>
-          <p className="text-sm font-semibold text-green-800">
-            ¡Pedido #{justOrdered} enviado! Te contactaremos para coordinar la entrega.
-          </p>
-        </div>
-      )}
-
-      <div className="px-4 space-y-4">
-        {orders.map((order) => (
-          <OrderCard
-            key={order.id}
-            order={order}
-            onComplete={() => markCompleted(order.id)}
-            onUpdate={(patch) => updateOrder(order.id, patch)}
-          />
-        ))}
+        {legacy.length > 0 && (
+          <section className="space-y-2">
+            <h2 className="text-h3 text-text-primary">Pedidos anteriores</h2>
+            <p className="text-caption text-text-secondary">Hechos con la versión anterior de la web. Para cualquier duda, escríbenos por WhatsApp.</p>
+            <ul className="divide-y divide-border rounded-r-lg bg-surface border border-border/60">
+              {legacy.map((order) => (
+                <li key={`${order.id}-${order.date}`} className="flex justify-between gap-3 p-3 text-body">
+                  <span>
+                    <span className="block font-semibold text-text-primary">Pedido #{order.id}</span>
+                    <span className="block text-caption text-text-secondary">{formatDate(order.date)}</span>
+                  </span>
+                  <span className="shrink-0 tabular-nums text-text-primary">{formatCup(order.total)}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
     </div>
   )
 }
 
-function OrderCard({
-  order,
-  onComplete,
-  onUpdate,
-}: {
-  order: Order
-  onComplete: () => void
-  onUpdate: (patch: Partial<Order>) => void
-}) {
-  const { showToast } = useToast()
-  const [resending, setResending] = useState(false)
-  // Igual que en CheckoutPage: guarda síncrona para que un doble tap no cuele
-  // dos reenvíos antes de que `resending` (estado de React) se actualice.
-  const resendingRef = useRef(false)
-  const status = statusConfig[order.status]
-  const groups = groupByBusiness(order.items)
-
-  async function resend() {
-    if (resending || resendingRef.current) return
-    resendingRef.current = true
-
-    // Revalida en el momento del click (no en el render): mismas reglas que
-    // el checkout, para que "Reenviar" no sea una puerta trasera fuera de horario.
-    const closedGroups = groups.filter((g) => {
-      const b = businessById(g.businessId)
-      return b ? !isOpenNow(b) : false
-    })
-    if (closedGroups.length > 0) {
-      resendingRef.current = false
-      showToast(
-        `${closedGroups.map((g) => g.businessName).join(', ')} está cerrado ahora. No puedes reenviar este pedido.`,
-        'error'
-      )
-      return
-    }
-    if (ordersClosedForToday()) {
-      resendingRef.current = false
-      showToast('Ya no se toman pedidos por hoy. Vuelve mañana a partir de las 9:00 am.', 'error')
-      return
-    }
-    const cooldown = orderCooldownRemaining()
-    if (cooldown > 0) {
-      resendingRef.current = false
-      showToast(cooldownMessage(cooldown), 'error')
-      return
-    }
-
-    setResending(true)
-    setOrderInFlight(true)
-    const result = await sendOrderToTelegram(order)
-    resendingRef.current = false
-    setResending(false)
-    setOrderInFlight(false)
-    if (result.ok) markOrderSent()
-    // Pedido de antes de que existiera el sorteo: se le asignó número recién
-    // ahora — se graba para que un reenvío futuro reutilice el mismo, en vez
-    // de generar uno nuevo cada vez.
-    if (result.ok && result.raffleNumber !== undefined && order.raffleNumber === undefined) {
-      onUpdate({ raffleNumber: result.raffleNumber })
-    }
-    showToast(
-      result.ok
-        ? 'Pedido reenviado correctamente.'
-        : sendFailedMessage(result.reason),
-      result.ok ? 'success' : 'error'
-    )
-  }
-
+function Header() {
   return (
-    <div className="bg-surface border border-border rounded-3xl overflow-hidden">
-      <div className="flex items-start justify-between gap-3 px-4 pt-4 pb-3 border-b border-border">
-        <div>
-          <p className="text-[11px] font-semibold text-text-secondary">Pedido</p>
-          <p className="text-lg font-bold text-text-primary">#{order.id}</p>
-          <p className="text-xs text-text-secondary mt-0.5">{formatDate(order.date)}</p>
-          {order.delivery && (
-            <p className="text-xs text-primary font-semibold mt-0.5 flex items-center gap-1">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                <circle cx="12" cy="12" r="9" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 7v5l3 2" />
-              </svg>
-              {order.delivery}
-            </p>
-          )}
-        </div>
-        <span className={`px-3 py-1 rounded-full text-xs font-bold flex-shrink-0 ${status.className}`}>
-          {status.label}
-        </span>
-      </div>
-
-      {/* Items agrupados por negocio */}
-      <div className="px-4 py-3 space-y-3">
-        {groups.map((group) => (
-          <div key={group.businessId}>
-            <p className="flex items-center gap-1.5 text-xs font-bold text-text-primary mb-1.5">
-              <span className="text-primary" aria-hidden="true">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18" />
-                </svg>
-              </span>
-              {group.businessName}
-            </p>
-            <div className="space-y-1 pl-1">
-              {group.items.map((item) => (
-                <div key={itemLineId(item)} className="flex items-center justify-between gap-2 text-sm">
-                  <span className="text-text-secondary line-clamp-1 flex-1">
-                    {item.product.name}
-                    {item.option && <span className="text-primary font-semibold"> · {item.option}</span>}
-                    {item.addon && <span className="text-success font-semibold"> · + {item.addon.name}</span>}
-                    {item.packaging && <span className="text-sky-700 font-semibold"> · 📦 {item.packaging.name}</span>}{' '}
-                    <span className="text-text-secondary/70">
-                      × {hasFormato(item.product) ? `${unitsOf(item)} u` : item.quantity}
-                    </span>
-                  </span>
-                  <span className="font-semibold text-text-primary flex-shrink-0">
-                    {formatPrice(lineTotal(item))}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Desglose: subtotal, mensajería y servicio Tráelo */}
-      <div className="px-4 pb-3 pt-1 border-t border-border space-y-1.5">
-        {order.subtotal !== undefined && (
-          <div className="flex justify-between text-sm">
-            <span className="text-text-secondary">Subtotal</span>
-            <span className="font-semibold text-text-primary">{formatPrice(order.subtotal)}</span>
-          </div>
-        )}
-        {order.fee !== undefined && <MessagingFeeRow fee={order.fee} />}
-        {order.serviceFee !== undefined && <ServiceFeeRow fee={order.serviceFee} />}
-      </div>
-
-      <div className="px-4 pb-4 pt-1 border-t border-border flex items-center justify-between gap-3">
-        <div>
-          <p className="text-[11px] text-text-secondary">Total</p>
-          <p className="text-lg font-bold text-primary">{formatPrice(order.total)}</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={resend}
-            disabled={resending}
-            className="h-9 px-3 inline-flex items-center gap-1.5 rounded-xl bg-sky-50 text-sky-700 text-xs font-bold hover:bg-sky-100 disabled:opacity-60 transition-colors"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21.7 3.3 2.5 11.1c-.9.4-.9 1.6 0 1.9l4.8 1.6 1.8 5.8c.2.7 1.1.9 1.6.3l2.7-2.9 4.7 3.4c.6.4 1.5.1 1.7-.6l3.4-15.6c.2-1-.8-1.9-1.5-1.7Z" />
-            </svg>
-            {resending ? 'Enviando…' : 'Reenviar'}
-          </button>
-          {order.status === 'pendiente' && (
-            <button
-              onClick={onComplete}
-              className="h-9 px-3 rounded-xl border border-border text-xs font-bold text-text-primary hover:border-primary/40 transition-colors"
-            >
-              Recibido
-            </button>
-          )}
-        </div>
-      </div>
-    </div>
+    <header className="px-4 lg:px-0 pt-4 lg:pt-6 pb-4">
+      <h1 className="text-h1 text-text-primary">Mis pedidos</h1>
+    </header>
   )
 }

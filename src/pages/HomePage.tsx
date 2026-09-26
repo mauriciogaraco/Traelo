@@ -13,6 +13,7 @@ import { ErrorState } from '../components/ui/ErrorState'
 import {
   businessOrdersWeek,
   findBusinessByLegacyId,
+  isSoldOut,
   productUnitsWeek,
   sortBusinessesByWeeklyOrders,
   sortProductsByWeeklyUnits,
@@ -62,7 +63,7 @@ export function HomePage() {
   const topProducts = useMemo(
     () =>
       sortProductsByWeeklyUnits(products, stats)
-        .filter((product) => productUnitsWeek(product, stats) > 0)
+        .filter((product) => productUnitsWeek(product, stats) > 0 && !isSoldOut(product))
         .slice(0, TOP_PRODUCTS_LIMIT),
     [products, stats],
   )

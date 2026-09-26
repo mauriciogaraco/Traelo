@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
-import { visualForProduct } from '../../features/catalog'
+import { isSoldOut, visualForProduct } from '../../features/catalog'
 import { useCatalogStore } from '../../store/catalogStore'
 import type { CatalogProduct } from '../../types/backend/catalog'
 import { StatusBadge } from '../ui/StatusBadge'
@@ -25,6 +25,7 @@ interface ProductCardProps {
  */
 export const ProductCard = memo(function ProductCard({ product, onAdd, subtitle, badge, layout = 'grid' }: ProductCardProps) {
   const categories = useCatalogStore((state) => state.categories)
+  const soldOut = isSoldOut(product)
 
   return (
     <article
@@ -38,22 +39,29 @@ export const ProductCard = memo(function ProductCard({ product, onAdd, subtitle,
             {badge}
           </span>
         )}
-        <CatalogImageBox product={product} categories={categories} />
+        {/* Agotado: la foto se atenúa para que se note de un vistazo (como en mobile). */}
+        <div className={soldOut ? 'opacity-50' : undefined}>
+          <CatalogImageBox product={product} categories={categories} />
+        </div>
         <div className="flex flex-col gap-1 pt-2">
           <h3 className="text-[15px] leading-[18px] font-semibold text-text-primary line-clamp-2 min-h-9">{product.name}</h3>
           {subtitle && <p className="text-caption text-text-secondary truncate">{subtitle}</p>}
-          {product.lowStock && (
+          {soldOut ? (
+            <span>
+              <StatusBadge label="AGOTADO" tone="danger" />
+            </span>
+          ) : product.lowStock ? (
             <span>
               <StatusBadge label="POCAS UNIDADES" tone="warning" />
             </span>
-          )}
+          ) : null}
         </div>
       </Link>
       <div className="flex items-center justify-between gap-1 pt-1 mt-auto">
         <div className="flex-1 min-w-0">
           <Price price={product.price} effectivePrice={product.effectivePrice} compact />
         </div>
-        {onAdd && (
+        {onAdd && !soldOut && (
           <button
             type="button"
             onClick={(e) => onAdd(product, e.currentTarget)}

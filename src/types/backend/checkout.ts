@@ -14,6 +14,9 @@ export type CartItemInput = {
   expectedPrice?: number;
   /** Nombre de la opción de empaque elegida. El costo lo resuelve siempre el backend. */
   packagingName?: string;
+  /** Tipo/sabor elegido y agrego elegido (solo el nombre; el precio lo resuelve el backend). */
+  optionName?: string;
+  addonName?: string;
 };
 
 export type CartBusinessInput = {
@@ -26,6 +29,10 @@ export type CartBusinessInput = {
  * el cliente HTTP adjunta si hay sesión. Sin sesión (invitado) hacen falta nombre, teléfono y dirección.
  */
 export type CheckoutOrderInput = {
+  /** "Lo antes posible" u "Hoy 7:30 pm": informativo para el equipo; no cambia la tarifa ni la validación. */
+  scheduledFor?: string;
+  /** Solo web: canal del pedido (el backend lo guarda como source WEB). Ausente = APP. */
+  channel?: 'APP' | 'WEB';
   customerName?: string;
   customerPhone?: string;
   addressId?: string;

@@ -54,6 +54,12 @@ export type CatalogPackagingOption = {
   capacity?: number;
 };
 
+/** Agrego opcional de un producto (precio POR UNIDAD; como mucho uno por línea). */
+export type CatalogAddonOption = {
+  name: string;
+  price: number;
+};
+
 export type CatalogProduct = {
   id: string;
   businessId: string;
@@ -68,27 +74,21 @@ export type CatalogProduct = {
   imageUrl: string | null;
   /** Placeholder borroso mientras carga imageUrl. Opcional: ver CatalogBusiness.logoBlurhash. */
   imageBlurhash?: string | null;
+  /** false = AGOTADO (se ve con la etiqueta "Agotado" y no se puede agregar). Opcional: catálogos de antes de este campo no lo traen (equivale a true). */
+  available?: boolean;
   lowStock: boolean;
   /** Opciones de empaque disponibles. Opcional/vacío: sin empaque para este producto. El costo/capacity siempre se confirman en el servidor al pedir. */
   packaging?: CatalogPackagingOption[] | null;
   /** "Ofertas destacadas" del Home — lo marca un OWNER/ADMIN a mano. Opcional: catálogos cacheados de antes de este campo no lo traen (equivale a false). */
   featured?: boolean;
-  /**
-   * Variantes del catálogo web (backend PR #6). Opcionales: un backend anterior no las manda.
-   * formato = unidades por caja (`price` ya es el de la caja); options = tipos/sabores;
-   * addons = agregos con precio por unidad.
-   */
+  /** Unidades por caja (>1 = se vende por caja: `price` es el de la caja y la cantidad cuenta cajas). */
   formato?: number | null;
+  /** Tipos/sabores a elegir (obligatorio elegir uno si hay). No cambian el precio. */
   options?: string[] | null;
+  /** Agregos opcionales (máximo uno por línea), con precio por unidad. */
   addons?: CatalogAddonOption[] | null;
-  /** Id del producto en el catálogo web anterior (ej. "cr-014"), para los enlaces viejos. */
+  /** Solo web: id del producto en el catálogo web anterior (ej. "cr-014"), para los enlaces viejos. */
   externalId?: string | null;
-};
-
-/** Agrego opcional de un producto (Product.addons), precio por unidad. */
-export type CatalogAddonOption = {
-  name: string;
-  price: number;
 };
 
 export type CatalogBootstrap = {

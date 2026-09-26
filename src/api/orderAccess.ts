@@ -1,4 +1,5 @@
 import { apiGet, apiPost } from './client';
+import { normalizeOrderStatus } from '../features/orders/orderStatus';
 import type { Order, OrderStatusPoll } from '../types/backend/order';
 import type { BusinessRatingInput, OrderReviewState, PendingReview } from '../types/backend/review';
 import type { OrderTracking } from '../types/backend/tracking';
@@ -17,13 +18,13 @@ function route(orderId: string, access: OrderAccess): { base: string; options: {
 
 export function getOrderDetail(orderId: string, access: OrderAccess) {
   const { base, options } = route(orderId, access);
-  return apiGet<Order>(base, undefined, options);
+  return apiGet<Order>(base, undefined, options).then(normalizeOrderStatus);
 }
 
 /** Polling ligero mientras el pedido esté activo — detener en COMPLETED/CANCELLED (checklist §30). */
 export function getOrderStatus(orderId: string, access: OrderAccess) {
   const { base, options } = route(orderId, access);
-  return apiGet<OrderStatusPoll>(`${base}/status`, undefined, options);
+  return apiGet<OrderStatusPoll>(`${base}/status`, undefined, options).then(normalizeOrderStatus);
 }
 
 /**
@@ -32,7 +33,7 @@ export function getOrderStatus(orderId: string, access: OrderAccess) {
  */
 export function getOrderTracking(orderId: string, access: OrderAccess, signal?: AbortSignal) {
   const { base, options } = route(orderId, access);
-  return apiGet<OrderTracking>(`${base}/tracking`, undefined, { ...options, signal });
+  return apiGet<OrderTracking>(`${base}/tracking`, undefined, { ...options, signal }).then(normalizeOrderStatus);
 }
 
 export function getOrderReviews(orderId: string, access: OrderAccess) {

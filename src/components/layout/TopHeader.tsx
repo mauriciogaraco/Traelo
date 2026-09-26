@@ -1,5 +1,6 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { useCart } from '../../context/CartContext'
+import { getCartItemCount } from '../../features/cart'
+import { useCartStore } from '../../store/cartStore'
 import { AddressBar } from '../address/AddressBar'
 import { Icon } from '../ui/Icon'
 import { Logo } from '../ui/Logo'
@@ -15,7 +16,7 @@ import { NAV_TABS, cartBadge, isTabActive } from './navigation'
  */
 export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) {
   const { pathname } = useLocation()
-  const { itemCount } = useCart()
+  const itemCount = useCartStore((state) => getCartItemCount(state.items))
   // En escritorio el orden es el habitual de la web (Inicio primero); en la barra flotante Home va al centro.
   const desktopTabs = [...NAV_TABS.filter((tab) => tab.to === '/'), ...NAV_TABS.filter((tab) => tab.to !== '/' && !tab.cart)]
   const cartTab = NAV_TABS.find((tab) => tab.cart)!
@@ -54,7 +55,7 @@ export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) 
         </nav>
 
         <div className="flex-1 min-w-0 lg:max-w-xs lg:ml-auto">
-          <AddressBar variant="header" />
+          <AddressBar />
         </div>
 
         <Link

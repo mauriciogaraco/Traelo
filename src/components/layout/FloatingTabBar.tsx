@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
-import { useCart } from '../../context/CartContext'
+import { getCartItemCount } from '../../features/cart'
+import { useCartStore } from '../../store/cartStore'
 import { Icon } from '../ui/Icon'
 import { NAV_TABS, cartBadge, isTabActive } from './navigation'
 
@@ -10,7 +11,7 @@ import { NAV_TABS, cartBadge, isTabActive } from './navigation'
  */
 export function FloatingTabBar() {
   const { pathname } = useLocation()
-  const { itemCount } = useCart()
+  const itemCount = useCartStore((state) => getCartItemCount(state.items))
 
   return (
     <nav

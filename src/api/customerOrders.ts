@@ -1,11 +1,15 @@
 import { apiGetPaginated, apiPost } from './client';
+import { normalizeOrderStatus } from '../features/orders/orderStatus';
 import type { ApiPaginated } from '../types/backend/api';
 import type { RepeatOrderResult, Order } from '../types/backend/order';
 
 const AUTH = { auth: true } as const;
 
 export function listCustomerOrders(page = 1, pageSize = 20): Promise<ApiPaginated<Order>> {
-  return apiGetPaginated<Order>('/customers/me/orders', { page, pageSize }, AUTH);
+  return apiGetPaginated<Order>('/customers/me/orders', { page, pageSize }, AUTH).then((page) => ({
+    ...page,
+    data: page.data.map(normalizeOrderStatus),
+  }));
 }
 
 /** No crea nada: reconstruye el carrito contra el catálogo actual y devuelve el diff. */

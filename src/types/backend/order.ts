@@ -3,6 +3,13 @@
 import type { OrderRedemption } from './rewards';
 
 export type OrderStatus = 'PENDING' | 'ASSIGNED' | 'COMPLETED' | 'CANCELLED';
+
+/**
+ * Sub-fases que el mensajero avanza desde su app mientras el pedido está en curso. La app las ve como
+ * ASSIGNED (ver normalizeOrderStatus) y guarda aquí la sub-fase real: con ella se muestra "Marchando"
+ * (HEADING_OUT: el pedido ya se está preparando y el mensajero va camino al negocio), que no tiene marca de tiempo propia.
+ */
+export type CourierSubstatus = 'CONFIRMED' | 'HEADING_OUT' | 'PICKING_UP' | 'ON_THE_WAY';
 export type OrderSource = 'APP' | 'WEB' | 'MANUAL' | 'TELEGRAM';
 
 export type OrderItem = {
@@ -19,6 +26,12 @@ export type OrderItem = {
   /** Empaque elegido (ya sumado en `subtotal` del negocio). Ausente en respuestas antiguas. */
   packagingName?: string | null;
   packagingFee?: number;
+  /** Tipo/sabor y agrego elegidos (null = ninguno); addonPrice es por unidad. Ausentes en backends anteriores. */
+  optionName?: string | null;
+  addonName?: string | null;
+  addonPrice?: number;
+  /** Unidades por caja: > 1 = `quantity` cuenta cajas y `unitPrice` es el de la caja. */
+  unitsPerPack?: number;
 };
 
 export type OrderBusiness = {
@@ -41,6 +54,8 @@ export type Order = {
   customerPhone: string;
   deliveryFee: number;
   status: OrderStatus;
+  /** Sub-fase del mensajero, si el pedido la tiene (solo la pone normalizeOrderStatus). */
+  substatus?: CourierSubstatus | null;
   orderDate: string;
   assignedAt: string | null;
   pickingUpAt?: string | null;
@@ -55,6 +70,8 @@ export type Order = {
   customerId: string | null;
   source: OrderSource;
   raffleNumber: number | null;
+  /** Momento de entrega elegido ("Lo antes posible", "Hoy 7:30 pm"). Ausente en backends anteriores. */
+  scheduledFor?: string | null;
   productsTotal: number;
   platformFee: number;
   /** Cuánto de productsTotal es empaque (ya sumado adentro). Ausente en respuestas antiguas. */
@@ -75,6 +92,8 @@ export type Order = {
 export type OrderStatusPoll = {
   orderNumber: number;
   status: OrderStatus;
+  /** Sub-fase del mensajero (ver CourierSubstatus); solo la pone normalizeOrderStatus. */
+  substatus?: CourierSubstatus | null;
   updatedAt: string;
   /** Marcas de tiempo de cada transición real del backend (null si todavía no ocurrió). */
   assignedAt: string | null;

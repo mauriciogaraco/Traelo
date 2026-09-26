@@ -1,447 +1,398 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useCart } from '../context/CartContext'
-import { useOrders } from '../context/OrdersContext'
-import { useAddress } from '../context/AddressContext'
-import { useToast } from '../context/ToastContext'
-import { AddressBar } from '../components/address/AddressBar'
-import { ProductImage } from '../components/ui/ProductImage'
+import { formatCup } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
+import { ChipRow } from '../components/ui/ChipRow'
 import { EmptyState } from '../components/ui/EmptyState'
-import { MessagingFeeRow } from '../components/ui/MessagingFeeRow'
-import { ServiceFeeRow } from '../components/ui/ServiceFeeRow'
-import { PaymentNote } from '../components/ui/PaymentNote'
-import { TimeWheel } from '../components/ui/TimeWheel'
-import { formatAmount, formatPrice, formatTime12h } from '../lib/format'
-import { makeOrder, groupByBusiness } from '../lib/order'
-import { hasFormato, itemLineId, lineTotal, packSize, unitsOf } from '../lib/cart'
-import { computeFee, computeServiceFee } from '../lib/fees'
-import { isOpenNow, ordersClosedForToday } from '../lib/hours'
-import { cooldownMessage, markOrderSent, orderCooldownRemaining, sendFailedMessage } from '../lib/rateLimit'
+import { Icon } from '../components/ui/Icon'
+import { PhoneField } from '../components/ui/PhoneField'
+import { TextField } from '../components/ui/TextField'
+import { useToast } from '../context/ToastContext'
+import { getCartItemCount, getCartSubtotalEstimate } from '../features/cart'
+import { describeMissing, getMissingDeliveryDetails } from '../features/checkout/deliveryDetails'
+import { ASAP_LABEL, deliveryTimeOptions, scheduledForValue } from '../features/checkout/deliveryTime'
+import { useIsOnline } from '../hooks/useIsOnline'
 import { setOrderInFlight } from '../pwa'
-import { HelpBanner } from '../components/ui/HelpBanner'
-import { sendOrderToTelegram } from '../lib/telegram'
-import { businessById } from '../data/catalog'
+import { generateLocalId } from '../lib/id'
+import { sanitizeCubanPhone, toCubanE164 } from '../lib/phone'
+import { rememberDeliveryAddress } from '../services/addressBookService'
+import { requestCheckoutQuote, submitCheckout } from '../services/checkoutService'
+import { useAddressStore } from '../store/addressStore'
+import { useCartStore } from '../store/cartStore'
+import { useCheckoutDraftStore } from '../store/checkoutDraftStore'
+import { useGuestProfileStore } from '../store/guestStore'
+import type { OrderQuote } from '../types/backend/rewards'
 
-type DeliveryMode = 'asap' | 'scheduled'
+/** Cuánto esperar tras el último cambio del carrito antes de pedir la cotización. */
+const QUOTE_DEBOUNCE_MS = 400
 
-function todayAt(hhmm: string): Date {
-  const [h, m] = hhmm.split(':').map(Number)
-  const d = new Date()
-  d.setHours(h, m || 0, 0, 0)
-  return d
-}
+type Step = 'where' | 'review'
+type DeliveryForm = { name: string; phone: string; address: string; reference: string }
 
 /**
- * Genera franjas de entrega de HOY, solo desde la hora actual en adelante
- * (en pasos de 15 min). value = "HH:mm" (24h, para el cálculo), label = "7:30 pm".
+ * Confirmar pedido — `CheckoutScreen` de mobile, en dos pasos cortos: 1) ¿Dónde entregamos? y
+ * 2) Revisa y confirma, con la cotización del servidor. NO exige cuenta. Las direcciones viven en
+ * este navegador (libreta local): se elige una guardada o se escribe una nueva, que queda guardada
+ * sola al pedir. La hora de entrega elegida viaja como `scheduledFor` (informativa para el equipo).
+ *
+ * Diferencias con mobile: todavía sin cuenta (fase 5: siempre como invitado) y sin el pin opcional en
+ * el mapa (la dirección escrita es lo obligatorio; el pin nunca bloquea el pedido).
  */
-function buildTimeSlots(now: Date, stepMin = 15): { value: string; label: string }[] {
-  // Primera franja: redondea hacia adelante (nunca una hora ya pasada).
-  const start = new Date(now)
-  start.setSeconds(0, 0)
-  const rem = now.getMinutes() % stepMin
-  start.setMinutes(now.getMinutes() + (rem === 0 ? stepMin : stepMin - rem))
-
-  const endOfDay = new Date(now)
-  endOfDay.setHours(23, 45, 0, 0)
-
-  const slots: { value: string; label: string }[] = []
-  for (let t = new Date(start); t <= endOfDay; t.setMinutes(t.getMinutes() + stepMin)) {
-    const hh = String(t.getHours()).padStart(2, '0')
-    const mm = String(t.getMinutes()).padStart(2, '0')
-    slots.push({ value: `${hh}:${mm}`, label: formatTime12h(`${hh}:${mm}`) })
-  }
-  return slots
-}
-
 export function CheckoutPage() {
   const navigate = useNavigate()
-  const { items, subtotal, clearCart } = useCart()
-  const { saveOrder } = useOrders()
-  const { address } = useAddress()
   const { showToast } = useToast()
-  const [sending, setSending] = useState(false)
-  // Guarda síncrona (a diferencia de `sending`, que es estado de React y por
-  // tanto puede quedar "stale" entre dos clics disparados en el mismo tick):
-  // sin esto, un doble tap muy rápido puede colar dos envíos del mismo
-  // pedido antes de que el primer setSending(true) llegue a re-renderizar.
-  const sendingRef = useRef(false)
-  const [deliveryMode, setDeliveryMode] = useState<DeliveryMode>('asap')
-  const [deliveryTime, setDeliveryTime] = useState('')
-  // Franjas de hoy desde la hora actual (se calculan una vez al abrir).
-  const timeSlots = useMemo(() => buildTimeSlots(new Date()), [])
-  // Reloj en vivo: sin esto, el cierre por horario (9pm) y el cooldown de envío
-  // quedarían "congelados" con el valor del último render mientras el usuario
-  // se queda parado en esta pantalla, permitiendo confirmar fuera de horario.
-  const [nowTick, setNowTick] = useState(() => Date.now())
-  useEffect(() => {
-    const id = setInterval(() => setNowTick(Date.now()), 1000)
-    return () => clearInterval(id)
-  }, [])
+  const online = useIsOnline()
+  const items = useCartStore((state) => state.items)
+  const savedAddresses = useAddressStore((state) => state.addresses)
+  const guestProfile = useGuestProfileStore()
 
-  if (items.length === 0) {
+  // Borrador: si hubo que volver al carrito (un agotado, un local cerrado…), lo escrito sigue ahí.
+  const restored = useRef(useCheckoutDraftStore.getState().draft).current
+  const [step, setStep] = useState<Step>(restored?.step ?? 'where')
+  const [form, setForm] = useState<DeliveryForm>(() => ({
+    name: restored?.name ?? guestProfile.name,
+    phone: restored?.phone ?? sanitizeCubanPhone(guestProfile.phone),
+    address: restored?.address ?? (savedAddresses.length === 0 ? guestProfile.address : ''),
+    reference: restored?.reference ?? (savedAddresses.length === 0 ? guestProfile.addressReference : ''),
+  }))
+  const [selectedAddressId, setSelectedAddressId] = useState<string | null>(
+    restored?.selectedAddressId ?? (savedAddresses.find((a) => a.isDefault) ?? savedAddresses[0])?.id ?? null,
+  )
+  const [useNewAddress, setUseNewAddress] = useState(restored?.useNewAddress ?? savedAddresses.length === 0)
+  // Hora de entrega: null = lo antes posible; si no, una hora de hoy (hora de Cuba, cada 15 min).
+  const [deliveryTime, setDeliveryTime] = useState<string | null>(restored?.deliveryTime ?? null)
+  const [submitting, setSubmitting] = useState(false)
+  const [quote, setQuote] = useState<OrderQuote | null>(null)
+  const [quoteLoading, setQuoteLoading] = useState(false)
+  const clientRequestId = useRef(generateLocalId('checkout'))
+  const orderCreated = useRef(false)
+
+  useEffect(() => {
+    if (orderCreated.current) return
+    useCheckoutDraftStore.getState().save({
+      ...form,
+      selectedAddressId,
+      useNewAddress,
+      pinOverride: undefined,
+      step,
+      deliveryTime,
+    })
+  }, [form, selectedAddressId, useNewAddress, step, deliveryTime])
+
+  const patchForm = useCallback((patch: Partial<DeliveryForm>) => setForm((current) => ({ ...current, ...patch })), [])
+
+  // Cotización autoritativa del servidor al llegar a "Revisa y confirma" (con debounce). No bloquea:
+  // si falla se muestra el estimado; el backend valida el total real al crear el pedido.
+  const cartFingerprint = items
+    .map((i) => `${i.productId}:${i.quantity}:${i.optionName ?? ''}:${i.addonName ?? ''}:${i.packagingName ?? ''}`)
+    .join('|')
+  useEffect(() => {
+    if (step !== 'review') {
+      setQuote(null)
+      setQuoteLoading(false)
+      return
+    }
+    let cancelled = false
+    setQuoteLoading(true)
+    const timer = window.setTimeout(async () => {
+      const result = await requestCheckoutQuote(useCartStore.getState().items)
+      if (cancelled) return
+      setQuoteLoading(false)
+      setQuote(result.ok ? result.quote : null)
+    }, QUOTE_DEBOUNCE_MS)
+    return () => {
+      cancelled = true
+      window.clearTimeout(timer)
+    }
+  }, [step, cartFingerprint])
+
+  // Las horas se calculan en hora de Cuba y se refrescan al cambiar de paso (no cada segundo).
+  const deliveryTimes = useMemo(() => deliveryTimeOptions(new Date()), [step])
+
+  if (items.length === 0 && !orderCreated.current) {
     return (
-      <div className="animate-fade-in">
-        <Header onBack={() => navigate('/')} />
-        <EmptyState
-          icon="🧾"
-          title="No hay nada que confirmar"
-          description="Tu carrito está vacío. Añade productos para hacer un pedido."
-          action={<Button size="lg" onClick={() => navigate('/')}>Ir al inicio</Button>}
-        />
-      </div>
+      <>
+        <FlowHeader title="Confirmar pedido" onBack={() => navigate('/carrito')} />
+        <EmptyState icon="cart" title="Tu carrito está vacío" description="Agrega productos antes de continuar." />
+      </>
     )
   }
 
-  const now = new Date(nowTick)
-  const groups = groupByBusiness(items)
-  const closedGroups = groups.filter((g) => {
-    const b = businessById(g.businessId)
-    return b ? !isOpenNow(b, now) : false
+  const showFreeForm = useNewAddress || savedAddresses.length === 0
+  const selectedSaved = showFreeForm ? null : (savedAddresses.find((a) => a.id === selectedAddressId) ?? null)
+  const missing = getMissingDeliveryDetails({
+    isGuest: true,
+    name: form.name,
+    phone: form.phone,
+    usingSavedAddress: !showFreeForm,
+    address: form.address,
+    reference: form.reference,
   })
-  const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD')
-  const hasAnyUsd = hasUsdGroups || groups.some(g => g.items.some(i => i.product.currency === 'USD'))
-  const hasClosed = closedGroups.length > 0
+  const canContinue = missing.length === 0 && (showFreeForm || selectedSaved !== null)
+  const missingText = describeMissing(missing)
+  const deliveryLabel = scheduledForValue(deliveryTime)
+  const reviewAddress = showFreeForm ? form.address.trim() : (selectedSaved?.address ?? '')
+  const reviewReference = showFreeForm ? form.reference.trim() : (selectedSaved?.reference ?? '')
 
-  // Entrega elegida → momento para calcular la tarifa
-  const scheduledMissing = deliveryMode === 'scheduled' && !deliveryTime
-  const when = deliveryMode === 'scheduled' && deliveryTime ? todayAt(deliveryTime) : now
-  const deliveryLabel =
-    deliveryMode === 'scheduled' && deliveryTime
-      ? `Hoy a las ${formatTime12h(deliveryTime)}`
-      : 'Lo antes posible'
-
-  const feeInfo = computeFee(items, when)
-  const serviceFee = computeServiceFee(items)
-  const total = subtotal + feeInfo.fee + serviceFee
-  const feeNote = [
-    feeInfo.isLate ? 'después de las 7 pm' : null,
-    feeInfo.multiBusiness ? '+100 por varios negocios' : null,
-    feeInfo.isBulk ? '+100 por pedido mayor de 10 000 CUP' : null,
-  ]
-    .filter(Boolean)
-    .join(' · ')
-
-  const ordersClosed = ordersClosedForToday(now)
-  const cooldownMs = orderCooldownRemaining(nowTick)
-  const onCooldown = cooldownMs > 0
-  const canConfirm = !!address && !sending && !hasClosed && !scheduledMissing && !ordersClosed && !onCooldown
-
-  async function confirm() {
-    if (!canConfirm || sendingRef.current) return
-    // Se vuelve a comprobar en el momento del clic (no solo en el render).
-    const wait = orderCooldownRemaining()
-    if (wait > 0) {
-      showToast(cooldownMessage(wait), 'error')
+  const handleConfirm = async () => {
+    if (!online) {
+      showToast('Sin conexión: no podemos confirmar tu pedido ahora. Conéctate a Internet para continuar.', 'error')
       return
     }
-    sendingRef.current = true
-    setSending(true)
+    if (submitting || !canContinue) return
+    setSubmitting(true)
+    // Mientras se envía, una versión nueva de la web no recarga la página (ver pwa.ts).
     setOrderInFlight(true)
-
-    const order = makeOrder(items, address!, { label: deliveryLabel, when })
-    const result = await sendOrderToTelegram(order)
-
+    const result = await submitCheckout({
+      items,
+      clientRequestId: clientRequestId.current,
+      scheduledFor: deliveryLabel,
+      // La dirección viaja SIEMPRE como texto dentro del pedido (la libreta es de este navegador).
+      address: reviewAddress,
+      addressReference: reviewReference || undefined,
+      customerName: form.name.trim(),
+      customerPhone: toCubanE164(form.phone),
+    })
+    setOrderInFlight(false)
+    setSubmitting(false)
     if (result.ok) {
-      markOrderSent()
-      if (result.raffleNumber !== undefined) order.raffleNumber = result.raffleNumber
-      saveOrder(order)
-      clearCart()
-      showToast('¡Pedido enviado! Te contactaremos pronto.', 'success')
-      setOrderInFlight(false)
-      navigate('/pedidos', { replace: true, state: { justOrdered: order.id } })
-    } else {
-      sendingRef.current = false
-      setSending(false)
-      setOrderInFlight(false)
-      showToast(sendFailedMessage(result.reason), 'error')
+      orderCreated.current = true
+      useCheckoutDraftStore.getState().clear()
+      if (showFreeForm) rememberDeliveryAddress({ address: form.address, reference: form.reference })
+      showToast(`Pedido #${result.order.orderNumber} recibido`, 'success')
+      navigate(`/pedido/${result.order.id}`, { replace: true })
+      return
     }
+    if (result.code === 'CART_CHANGED') {
+      const issues = useCartStore.getState().checkoutIssues
+      const detail =
+        issues.length === 1 ? issues[0]!.message : issues.length > 1 ? `${issues.length} productos o negocios cambiaron.` : 'Revisa los productos afectados.'
+      showToast(`Tu carrito cambió: ${detail}`, 'error')
+      navigate('/carrito')
+      return
+    }
+    showToast(`No pudimos confirmar tu pedido. ${result.message}`, 'error')
   }
 
   return (
-    <div className="animate-fade-in">
-      <Header onBack={() => navigate(-1)} />
+    <>
+      <FlowHeader
+        title={step === 'where' ? '¿Dónde entregamos?' : 'Revisa y confirma'}
+        stepLabel={`Paso ${step === 'where' ? 1 : 2} de 2`}
+        onBack={() => (step === 'review' ? setStep('where') : navigate('/carrito'))}
+      />
 
-      <div className="px-4 space-y-5">
-        {/* Dirección */}
-        <section>
-          <h2 className="text-sm font-bold text-text-primary mb-2">Dirección de entrega</h2>
-          {address ? (
-            <div className="bg-surface border border-border rounded-3xl p-4">
-              <div className="min-w-0">
-                <p className="font-bold text-text-primary">
-                  {address.nombre} {address.apellidos}
-                </p>
-                <p className="text-sm text-text-secondary mt-0.5">{address.direccion}</p>
-                {address.referencia && (
-                  <p className="text-sm text-text-secondary mt-0.5">🧭 {address.referencia}</p>
-                )}
-                <p className="text-sm text-text-secondary mt-0.5">📞 {address.telefono}</p>
-              </div>
-              <div className="mt-3 pt-3 border-t border-border">
-                <AddressBar />
-              </div>
-            </div>
-          ) : (
-            <>
-              <AddressBar variant="card" />
-              <p className="text-xs text-warning font-semibold mt-2">
-                Agrega una dirección para poder confirmar tu pedido.
-              </p>
-            </>
-          )}
-        </section>
+      <div className="px-4 lg:px-0 pb-10 space-y-5">
+        {step === 'where' ? (
+          <>
+            <section className="space-y-3">
+              <h2 className="text-h3 text-text-primary">Tus datos</h2>
+              <TextField label="Nombre completo" autoComplete="name" value={form.name} onChange={(e) => patchForm({ name: e.target.value })} />
+              <PhoneField value={form.phone} onChange={(phone) => patchForm({ phone })} />
+            </section>
 
-        {/* ¿Cuándo lo quieres? */}
-        <section>
-          <h2 className="text-sm font-bold text-text-primary mb-2">¿Cuándo lo quieres?</h2>
-          <div className="bg-surface border border-border rounded-3xl p-3 space-y-2">
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                onClick={() => setDeliveryMode('asap')}
-                className={`h-11 rounded-2xl text-sm font-bold border transition-all ${
-                  deliveryMode === 'asap'
-                    ? 'bg-gradient-primary text-white border-transparent shadow-btn-primary'
-                    : 'bg-background text-text-primary border-border'
-                }`}
-              >
-                Lo antes posible
-              </button>
-              <button
-                onClick={() => {
-                  setDeliveryMode('scheduled')
-                  if (!deliveryTime && timeSlots[0]) setDeliveryTime(timeSlots[0].value)
-                }}
-                className={`h-11 rounded-2xl text-sm font-bold border transition-all ${
-                  deliveryMode === 'scheduled'
-                    ? 'bg-gradient-primary text-white border-transparent shadow-btn-primary'
-                    : 'bg-background text-text-primary border-border'
-                }`}
-              >
-                Elegir hora
-              </button>
-            </div>
-
-            {deliveryMode === 'scheduled' &&
-              (timeSlots.length === 0 ? (
-                <p className="text-xs text-warning font-semibold px-1">
-                  Ya no quedan horarios disponibles hoy. Elige “Lo antes posible”.
-                </p>
-              ) : (
-                <div className="bg-surface border border-border rounded-2xl overflow-hidden">
-                  <p className="text-xs font-bold text-text-secondary text-center pt-2">
-                    Hora de entrega (hoy)
-                  </p>
-                  <TimeWheel slots={timeSlots} value={deliveryTime} onChange={setDeliveryTime} />
-                </div>
-              ))}
-            {feeInfo.isLate && (
-              <p className="text-[11px] text-warning font-semibold">
-                A partir de las 7:00 pm la mensajería cuesta {formatPrice(350)}.
-              </p>
-            )}
-          </div>
-        </section>
-
-        {/* Resumen agrupado por negocio */}
-        <section>
-          <h2 className="text-sm font-bold text-text-primary mb-2">Resumen del pedido</h2>
-          <div className="space-y-3">
-            {groups.map((group) => {
-              const groupCurrency = businessById(group.businessId)?.currency
-              const grpUsd = group.items.filter(i => i.product.currency === 'USD' || groupCurrency === 'USD').reduce((s, i) => s + lineTotal(i), 0)
-              const grpCup = group.items.filter(i => i.product.currency !== 'USD' && groupCurrency !== 'USD').reduce((s, i) => s + lineTotal(i), 0)
-              const grpLabel = grpUsd > 0 && grpCup > 0
-                ? `${formatPrice(grpCup)} + ${formatPrice(grpUsd, 'USD')}`
-                : grpUsd > 0 ? formatPrice(grpUsd, 'USD') : formatPrice(grpCup)
-              return (
-                <div key={group.businessId} className="bg-surface border border-border rounded-3xl overflow-hidden">
-                  <div className="flex items-center gap-2 px-4 py-2.5 bg-primary/5 border-b border-border">
-                    <span className="text-primary">
-                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18" />
-                      </svg>
-                    </span>
-                    <p className="text-sm font-bold text-text-primary flex-1 truncate">{group.businessName}</p>
-                    <span className="text-xs font-semibold text-text-secondary">{grpLabel}</span>
-                  </div>
-                  {businessById(group.businessId)?.paymentNote && (
-                    <PaymentNote note={businessById(group.businessId)!.paymentNote!} />
-                  )}
-                  <div className="p-3 space-y-3">
-                    {group.items.map((item) => {
-                      const itemCurrency = item.product.currency ?? groupCurrency
+            <section className="space-y-3">
+              <h2 className="text-h3 text-text-primary">Dirección de entrega</h2>
+              {!showFreeForm ? (
+                <>
+                  <div role="radiogroup" aria-label="Direcciones guardadas" className="space-y-2">
+                    {savedAddresses.map((saved) => {
+                      const selected = selectedAddressId === saved.id
                       return (
-                        <div key={itemLineId(item)} className="flex items-center gap-3">
-                          <ProductImage emoji={item.product.image} photo={item.product.photo} category={item.product.category} alt={item.product.name} size="sm" className="w-11 h-11 rounded-xl flex-shrink-0" />
-                          <div className="flex-1 min-w-0">
-                            <p className="text-sm font-bold text-text-primary line-clamp-1">
-                              {item.product.name}
-                              {item.option && <span className="text-primary"> · {item.option}</span>}
-                              {item.addon && <span className="text-success"> · + {item.addon.name}</span>}
-                              {item.packaging && <span className="text-sky-700"> · 📦 {item.packaging.name}</span>}
-                            </p>
-                            <p className="text-xs text-text-secondary">
-                              {hasFormato(item.product)
-                                ? `${unitsOf(item)} u · ${item.quantity} caja${item.quantity > 1 ? 's' : ''} × ${packSize(item.product)}`
-                                : `× ${item.quantity}`}
-                            </p>
-                          </div>
-                          <p className="text-sm font-bold text-text-primary flex-shrink-0">
-                            {itemCurrency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{itemCurrency === 'USD' ? ' USD' : ''}
-                          </p>
-                        </div>
+                        <button
+                          key={saved.id}
+                          type="button"
+                          role="radio"
+                          aria-checked={selected}
+                          onClick={() => setSelectedAddressId(saved.id)}
+                          className={`w-full text-left rounded-r-md bg-surface p-3 transition ${
+                            selected ? 'border-2 border-primary' : 'border border-border hover:border-primary/40'
+                          }`}
+                        >
+                          <span className="block text-[15px] font-semibold text-text-primary">{saved.label}</span>
+                          <span className="block text-caption text-text-secondary">{saved.address}</span>
+                          {saved.reference && <span className="block text-caption text-text-secondary">{saved.reference}</span>}
+                        </button>
                       )
                     })}
                   </div>
-                </div>
-              )
-            })}
-          </div>
-        </section>
-
-        {/* Totales */}
-        <section className="bg-surface border border-border rounded-3xl p-4 space-y-3">
-          {hasAnyUsd ? (
-            <>
-              {groups.map((group) => {
-                const gc = businessById(group.businessId)?.currency
-                const gUsd = group.items.filter(i => i.product.currency === 'USD' || gc === 'USD').reduce((s, i) => s + lineTotal(i), 0)
-                const gCup = group.items.filter(i => i.product.currency !== 'USD' && gc !== 'USD').reduce((s, i) => s + lineTotal(i), 0)
-                const gLabel = gUsd > 0 && gCup > 0
-                  ? `${formatPrice(gCup)} + ${formatPrice(gUsd, 'USD')}`
-                  : gUsd > 0 ? formatPrice(gUsd, 'USD') : formatPrice(gCup)
-                return (
-                  <div key={group.businessId} className="flex justify-between text-sm">
-                    <span className="text-text-secondary">{group.businessName}</span>
-                    <span className="font-semibold text-text-primary">{gLabel}</span>
-                  </div>
-                )
-              })}
-              <div className="flex justify-between text-sm">
-                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning' : 'text-text-secondary'}>
-                  {deliveryMode === 'scheduled' ? '⚠️ ENTREGA' : 'Entrega'}
-                </span>
-                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning uppercase' : 'font-semibold text-text-primary'}>
-                  {deliveryLabel}
-                </span>
-              </div>
-              <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
-              <ServiceFeeRow fee={serviceFee} />
-              {hasUsdGroups && (
-                <div className="border-t border-border pt-3">
-                  <p className="text-[11px] text-warning font-semibold">
-                    La mensajería se abona en CUP aunque no se retenga la prenda.
-                  </p>
-                </div>
+                  <button type="button" onClick={() => setUseNewAddress(true)} className="text-caption font-semibold text-primary-text hover:underline">
+                    Usar otra dirección
+                  </button>
+                </>
+              ) : (
+                <>
+                  <TextField
+                    label="Dirección (calle, número, entre calles...)"
+                    autoComplete="street-address"
+                    value={form.address}
+                    onChange={(e) => patchForm({ address: e.target.value })}
+                  />
+                  <TextField
+                    label="Referencia (opcional, ej.: casa azul frente al parque)"
+                    value={form.reference}
+                    onChange={(e) => patchForm({ reference: e.target.value })}
+                  />
+                  {savedAddresses.length > 0 && (
+                    <button type="button" onClick={() => setUseNewAddress(false)} className="text-caption font-semibold text-primary-text hover:underline">
+                      Usar una dirección guardada
+                    </button>
+                  )}
+                </>
               )}
-            </>
-          ) : (
-            <>
-              <div className="flex justify-between text-sm">
-                <span className="text-text-secondary">Subtotal</span>
-                <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning' : 'text-text-secondary'}>
-                  {deliveryMode === 'scheduled' ? '⚠️ ENTREGA' : 'Entrega'}
-                </span>
-                <span className={deliveryMode === 'scheduled' ? 'font-bold text-warning uppercase' : 'font-semibold text-text-primary'}>
-                  {deliveryLabel}
-                </span>
-              </div>
-              <MessagingFeeRow fee={feeInfo.fee} note={feeNote || undefined} />
-              <ServiceFeeRow fee={serviceFee} />
-              <div className="border-t border-border pt-3 flex justify-between items-baseline">
-                <span className="font-bold text-text-primary">Total a pagar</span>
-                <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>
-              </div>
-            </>
-          )}
-        </section>
+            </section>
 
-        {/* Negocio cerrado: no se puede pedir */}
-        {hasClosed && (
-          <div className="flex items-start gap-2.5 bg-red-50 border border-red-200 rounded-2xl p-3">
-            <span className="text-lg flex-shrink-0">🕒</span>
-            <p className="text-xs text-red-800 leading-relaxed">
-              <span className="font-bold">
-                {closedGroups.map((g) => g.businessName).join(', ')}
-              </span>{' '}
-              está cerrado ahora. No puedes confirmar pedidos fuera del horario de atención. Vuelve
-              dentro del horario o quita esos productos.
-            </p>
-          </div>
+            <section className="space-y-2">
+              <h2 className="text-h3 text-text-primary">¿Cuándo lo entregamos?</h2>
+              <ChipRow
+                label="Hora de entrega"
+                items={[
+                  { key: 'asap', label: ASAP_LABEL, selected: deliveryTime === null },
+                  ...(deliveryTimes.length > 0 ? [{ key: 'later', label: 'Programar para hoy', selected: deliveryTime !== null }] : []),
+                ]}
+                onPress={(key) => setDeliveryTime(key === 'asap' ? null : (deliveryTime ?? deliveryTimes[0] ?? null))}
+              />
+              {deliveryTime !== null && (
+                <label className="block">
+                  <span className="block mb-1 text-label text-text-secondary">Hora (hoy, hora de Cuba)</span>
+                  <select
+                    value={deliveryTime}
+                    onChange={(e) => setDeliveryTime(e.target.value)}
+                    className="w-full h-12 rounded-r-md border border-border bg-surface px-3 text-body text-text-primary focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                  >
+                    {deliveryTimes.map((time) => (
+                      <option key={time} value={time}>
+                        {time}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
+            </section>
+
+            {missingText && <p className="text-caption text-text-secondary">{missingText}</p>}
+            <Button fullWidth disabled={!canContinue} onClick={() => canContinue && setStep('review')}>
+              Continuar
+            </Button>
+          </>
+        ) : (
+          <ReviewStep
+            name={form.name.trim()}
+            phone={toCubanE164(form.phone)}
+            address={reviewAddress}
+            reference={reviewReference}
+            deliveryLabel={deliveryLabel}
+            itemCount={getCartItemCount(items)}
+            subtotalEstimate={getCartSubtotalEstimate(items)}
+            quote={quote}
+            quoteLoading={quoteLoading}
+            online={online}
+            submitting={submitting}
+            onBack={() => setStep('where')}
+            onConfirm={handleConfirm}
+          />
         )}
-
-        {scheduledMissing && (
-          <p className="text-xs text-warning font-semibold -mt-2">
-            Elige la hora de entrega para continuar.
-          </p>
-        )}
-
-        {/* Pedidos cerrados por hoy (después de las 9 pm) */}
-        {ordersClosed && (
-          <div className="flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-2xl p-3">
-            <span className="text-lg flex-shrink-0">🌙</span>
-            <p className="text-xs text-amber-900 leading-relaxed">
-              Ya terminamos de tomar encargos por hoy. Las mensajerías pendientes se entregarán.
-              Vuelve mañana a partir de las 9:00 am para confirmar tu pedido.
-            </p>
-          </div>
-        )}
-
-        {onCooldown && !ordersClosed && !hasClosed && (
-          <div className="flex items-start gap-2.5 bg-amber-50 border border-amber-200 rounded-2xl p-3">
-            <span className="text-lg flex-shrink-0">⏳</span>
-            <p className="text-xs text-amber-900 leading-relaxed">
-              {cooldownMessage(cooldownMs)}
-            </p>
-          </div>
-        )}
-
-        {/* Aviso */}
-        <div className="flex items-start gap-2.5 bg-sky-50 border border-sky-200 rounded-2xl p-3">
-          <span className="text-lg flex-shrink-0">📨</span>
-          <p className="text-xs text-sky-900 leading-relaxed">
-            Al confirmar, tu pedido se envía directo a Tráelo. Te contactaremos por teléfono para
-            coordinar la entrega. El pago se realiza al recibir.
-          </p>
-        </div>
-
-        <HelpBanner />
-
-        <Button size="lg" fullWidth disabled={!canConfirm} onClick={confirm}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21.7 3.3 2.5 11.1c-.9.4-.9 1.6 0 1.9l4.8 1.6 1.8 5.8c.2.7 1.1.9 1.6.3l2.7-2.9 4.7 3.4c.6.4 1.5.1 1.7-.6l3.4-15.6c.2-1-.8-1.9-1.5-1.7Z" />
-          </svg>
-          {sending
-            ? 'Enviando pedido...'
-            : ordersClosed
-              ? 'Pedidos cerrados por hoy'
-              : onCooldown
-                ? cooldownMessage(cooldownMs).replace(' antes de enviar otro pedido.', '')
-                : 'Confirmar pedido'}
-        </Button>
       </div>
+    </>
+  )
+}
+
+function FlowHeader({ title, stepLabel, onBack }: { title: string; stepLabel?: string; onBack: () => void }) {
+  return (
+    <header className="flex items-start gap-3 px-4 lg:px-0 pt-[max(16px,env(safe-area-inset-top))] lg:pt-6 pb-4">
+      <button
+        type="button"
+        onClick={onBack}
+        aria-label="Volver"
+        className="w-10 h-10 shrink-0 rounded-full bg-surface border border-border flex items-center justify-center text-text-primary hover:bg-surface-muted"
+      >
+        <Icon name="chevron-left" size={20} />
+      </button>
+      <div>
+        {stepLabel && <p className="text-caption text-text-secondary">{stepLabel}</p>}
+        <h1 className="text-h1 text-text-primary">{title}</h1>
+      </div>
+    </header>
+  )
+}
+
+function QuoteRow({ label, value, strong }: { label: string; value: string; strong?: boolean }) {
+  return (
+    <div className={`flex justify-between gap-3 ${strong ? 'font-bold text-text-primary text-base pt-1' : 'text-body text-text-primary'}`}>
+      <span>{label}</span>
+      <span className="tabular-nums">{value}</span>
     </div>
   )
 }
 
-function Header({ onBack }: { onBack: () => void }) {
+/** Paso 2 — `ReviewStep` de mobile: la entrega, el desglose que calcula el servidor y confirmar. */
+function ReviewStep(props: {
+  name: string
+  phone: string
+  address: string
+  reference: string
+  deliveryLabel: string
+  itemCount: number
+  subtotalEstimate: number
+  quote: OrderQuote | null
+  quoteLoading: boolean
+  online: boolean
+  submitting: boolean
+  onBack: () => void
+  onConfirm: () => void
+}) {
+  const { quote } = props
   return (
-    <header className="px-4 pt-6 pb-4 flex items-center gap-3">
-      <button
-        onClick={onBack}
-        className="w-9 h-9 rounded-full bg-surface border border-border flex items-center justify-center text-text-primary"
-        aria-label="Volver"
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-      <h1 className="text-2xl font-bold text-text-primary">Confirmar pedido</h1>
-    </header>
+    <>
+      <section className="rounded-r-md bg-surface border border-border p-3 space-y-1">
+        <h2 className="text-h3 text-text-primary">Entrega</h2>
+        <p className="text-body text-text-primary">
+          {props.name} · {props.phone}
+        </p>
+        <p className="text-body text-text-primary">{props.address}</p>
+        <p className={`text-caption ${props.deliveryLabel === ASAP_LABEL ? 'text-text-secondary' : 'font-semibold text-warning-text'}`}>
+          {props.deliveryLabel}
+        </p>
+        {props.reference && <p className="text-caption text-text-secondary">{props.reference}</p>}
+      </section>
+
+      {quote ? (
+        <section aria-label="Total del pedido" className="rounded-r-md bg-surface border border-border p-3 space-y-1">
+          <QuoteRow label="Productos" value={formatCup(quote.productsTotal - quote.packagingTotal)} />
+          {quote.packagingTotal > 0 && <QuoteRow label="Empaque" value={formatCup(quote.packagingTotal)} />}
+          <QuoteRow label="Mensajería" value={formatCup(quote.deliveryFee)} />
+          <QuoteRow label="Servicio Tráelo" value={formatCup(quote.platformFee)} />
+          <QuoteRow label="Total a pagar" value={formatCup(quote.total)} strong />
+          <p className="text-caption text-text-secondary">Calculado por Tráelo — el servidor lo vuelve a confirmar al crear el pedido.</p>
+        </section>
+      ) : (
+        <>
+          <section className="flex justify-between rounded-r-md bg-surface border border-border p-3">
+            <span className="text-body text-text-primary">
+              {props.itemCount} {props.itemCount === 1 ? 'producto' : 'productos'}
+            </span>
+            <span className="font-semibold text-text-primary">{formatCup(props.subtotalEstimate)}</span>
+          </section>
+          <p className="text-caption text-text-secondary" aria-live="polite">
+            {props.quoteLoading ? 'Calculando el total exacto…' : 'El delivery, el servicio Tráelo y el total final los calcula el backend al confirmar.'}
+          </p>
+        </>
+      )}
+
+      {!props.online && (
+        <p className="text-caption font-semibold text-danger-text">
+          Sin conexión — no podemos confirmar tu pedido ahora. Conéctate a Internet para continuar.
+        </p>
+      )}
+
+      <div className="space-y-2">
+        <Button fullWidth loading={props.submitting} disabled={!props.online} onClick={props.onConfirm}>
+          Confirmar pedido
+        </Button>
+        <Button fullWidth variant="outline" disabled={props.submitting} onClick={props.onBack}>
+          Cambiar datos de entrega
+        </Button>
+      </div>
+    </>
   )
 }

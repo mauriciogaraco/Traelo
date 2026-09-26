@@ -6,11 +6,7 @@ import {
   Link,
 } from "react-router-dom";
 import { lazy, Suspense, useEffect, type ReactNode } from "react";
-import { AddressProvider } from "./context/AddressContext";
-import { CartProvider, CartPriceSyncer } from "./context/CartContext";
-import { OrdersProvider } from "./context/OrdersContext";
 import { ToastProvider } from "./context/ToastContext";
-import { CatalogProvider } from "./context/CatalogContext";
 import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
 import { RefreshModal } from "./components/ui/RefreshModal";
@@ -23,6 +19,7 @@ const SearchPage = lazy(() => import("./pages/SearchPage").then((m) => ({ defaul
 const BusinessPage = lazy(() => import("./pages/BusinessPage").then((m) => ({ default: m.BusinessPage })));
 const CartPage = lazy(() => import("./pages/CartPage").then((m) => ({ default: m.CartPage })));
 const CheckoutPage = lazy(() => import("./pages/CheckoutPage").then((m) => ({ default: m.CheckoutPage })));
+const OrderPage = lazy(() => import("./pages/OrderPage").then((m) => ({ default: m.OrderPage })));
 const OrdersPage = lazy(() => import("./pages/OrdersPage").then((m) => ({ default: m.OrdersPage })));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })));
 const HelpPage = lazy(() => import("./pages/HelpPage").then((m) => ({ default: m.HelpPage })));
@@ -35,8 +32,8 @@ function CatalogBootstrap() {
 }
 
 /**
- * Pantallas todavía con el diseño de columna de teléfono (se migran en las fases 4–5): en
- * escritorio se centran en esa columna en vez de estirarse a todo el ancho.
+ * Pantallas de una sola columna (formularios, pedidos, textos): en escritorio se centran en una
+ * columna cómoda de leer en vez de estirarse a todo el ancho.
  */
 function Narrow({ children }: { children: ReactNode }) {
   return <div className="mx-auto w-full max-w-content">{children}</div>;
@@ -52,19 +49,10 @@ function PageFallback() {
 
 function Providers({ children }: { children: ReactNode }) {
   return (
-    <CatalogProvider>
-      <ToastProvider>
-        <AddressProvider>
-          <OrdersProvider>
-            <CartProvider>
-              <CartPriceSyncer />
-              <CatalogBootstrap />
-              {children}
-            </CartProvider>
-          </OrdersProvider>
-        </AddressProvider>
-      </ToastProvider>
-    </CatalogProvider>
+    <ToastProvider>
+      <CatalogBootstrap />
+      {children}
+    </ToastProvider>
   );
 }
 
@@ -103,10 +91,11 @@ export default function App() {
               <Route path="/categorias" element={<CategoriesPage />} />
               <Route path="/buscar" element={<SearchPage />} />
               <Route path="/negocio/:id" element={<BusinessPage />} />
-              <Route path="/producto/:id" element={<Narrow><ProductRoute /></Narrow>} />
-              <Route path="/carrito" element={<Narrow><CartPage /></Narrow>} />
+              <Route path="/producto/:id" element={<ProductRoute />} />
+              <Route path="/carrito" element={<CartPage />} />
               <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
               <Route path="/pedidos" element={<Narrow><OrdersPage /></Narrow>} />
+              <Route path="/pedido/:id" element={<Narrow><OrderPage /></Narrow>} />
               <Route path="/privacidad" element={<Narrow><PrivacyPage /></Narrow>} />
               <Route path="/ayuda" element={<Narrow><HelpPage /></Narrow>} />
               <Route path="/borrarusuario" element={<Narrow><DeleteAccountPage /></Narrow>} />
