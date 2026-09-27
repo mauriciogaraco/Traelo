@@ -40,7 +40,18 @@ export default defineConfig({
         navigateFallbackDenylist: [/^\/api\//],
         // Precache solo el app shell (JS/CSS/HTML + la fuente). Las imágenes se cachean on-demand.
         globPatterns: ['**/*.{js,css,html,woff2}'],
+        // El mapa (MapLibre, ~290 KB comprimido) se baja SOLO al abrir el seguimiento en vivo: fuera del
+        // precache para no gastar datos de quien nunca lo usa (conexión limitada); se guarda al usarlo.
+        globIgnores: ['**/maplibre-gl-*.{js,css}'],
         runtimeCaching: [
+          {
+            urlPattern: /\/assets\/maplibre-gl-[^/]+\.(js|css)$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'map-library',
+              expiration: { maxEntries: 4, maxAgeSeconds: 30 * 24 * 60 * 60 },
+            },
+          },
           // El catálogo (API del backend) NO pasa por el service worker: la web lo guarda en
           // localStorage y lo sincroniza por versión (services/catalogSync.ts), como la app móvil.
           {

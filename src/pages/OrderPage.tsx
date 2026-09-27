@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import type { OrderAccess } from '../api/orderAccess'
 import { formatCup } from '../components/catalog/Price'
 import { CourierCard } from '../components/orders/CourierCard'
+import { CourierTrackingPanel } from '../components/orders/CourierTrackingPanel'
 import { OrderTracker } from '../components/orders/OrderTracker'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
@@ -18,8 +19,8 @@ import { useGuestOrdersStore, useOrderStore } from '../store/guestStore'
 /**
  * Pedido — confirmación, seguimiento y detalle con los datos del backend (`OrderScreen` de mobile).
  * Mientras el pedido está activo se consulta su estado cada 15 s (`useOrderTracking`) y el recorrido
- * (Aceptado → Entregado) avanza solo. Un fallo de red no borra lo último que se sabía. El mapa del
- * mensajero, las valoraciones y "repetir pedido" todavía no están en la web.
+ * (Aceptado → Entregado) avanza solo y, desde "Recogiendo", aparece el mapa con el mensajero. Un fallo de
+ * red no borra lo último que se sabía.
  */
 export function OrderPage() {
   const { id = '' } = useParams()
@@ -120,6 +121,7 @@ export function OrderPage() {
             cancelled: status?.cancelledAt ?? order.cancelledAt,
           }}
         />
+        <CourierTrackingPanel orderId={id} access={access} orderStatus={currentStatus} stages={stages} onOrderEnded={() => void refresh()} />
         <div className="border-t border-border pt-3">
           <CourierCard
             status={currentStatus}

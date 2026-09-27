@@ -1,5 +1,6 @@
 import type { CatalogBusiness, CatalogCategory, CatalogProduct } from '../types/backend/catalog';
 import type { Order } from '../types/backend/order';
+import type { OrderTracking } from '../types/backend/tracking';
 
 export function makeBusiness(overrides: Partial<CatalogBusiness> = {}): CatalogBusiness {
   return {
@@ -76,6 +77,22 @@ export function makeOrder(overrides: Partial<Order> = {}): Order {
     businesses: [],
     createdAt: '2026-09-18T10:00:00.000Z',
     updatedAt: '2026-09-18T10:00:00.000Z',
+    ...overrides,
+  };
+}
+
+/** Tracking de un pedido ASSIGNED sin ubicación todavía (el caso base); pisar lo que haga falta. */
+export function makeTracking(overrides: Partial<OrderTracking> = {}): OrderTracking {
+  return {
+    orderId: 'o1',
+    orderNumber: 1234,
+    status: 'ASSIGNED',
+    trackingActive: true,
+    serverTime: '2026-09-19T12:00:00.000Z',
+    deliverer: { name: 'Saúl' },
+    location: null,
+    route: null,
+    destination: { address: 'Calle 23 entre 10 y 12', reference: null, latitude: null, longitude: null },
     ...overrides,
   };
 }
