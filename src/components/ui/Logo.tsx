@@ -9,14 +9,14 @@ interface LogoProps {
 }
 
 const badgeSize = {
-  sm: 'w-9 h-9',
-  md: 'w-11 h-11',
-  lg: 'w-16 h-16',
+  sm: 'w-[33px] h-[33px]',
+  md: 'w-[41px] h-[41px]',
+  lg: 'w-[60px] h-[60px]',
 }
 const markSize = {
-  sm: 30,
-  md: 38,
-  lg: 54,
+  sm: 31,
+  md: 39,
+  lg: 56,
 }
 
 /**
@@ -27,7 +27,10 @@ export function Logo({ size = 'md', showWordmark = false, className = '' }: Logo
   return (
     <span className={`inline-flex items-center gap-2.5 select-none ${className}`}>
       <span
-        className={`${badgeSize[size]} rounded-r-lg bg-gradient-hero flex items-center justify-center shadow-[0_4px_8px_0_rgb(var(--c-primary)/0.3)] shrink-0`}
+        // `rounded-[16px]` a propósito, no `rounded-r-lg`: ese nombre choca con la utilidad nativa
+        // de Tailwind "redondear solo el lado derecho" y dejaba las esquinas izquierda/derecha con
+        // radios distintos (16px vs 8px) — por eso se veía chueco.
+        className={`${badgeSize[size]} rounded-[16px] bg-gradient-hero flex items-center justify-center shadow-[0_4px_8px_0_rgb(var(--c-primary)/0.3)] shrink-0`}
       >
         <img
           src={logomarkWhite}
