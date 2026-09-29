@@ -17,6 +17,20 @@ import { useAuth } from '../hooks/useAuth'
 import { useOrderReviews } from '../hooks/useOrderReviews'
 import { useOrderTracking } from '../hooks/useOrderTracking'
 import { useGuestOrdersStore, useOrderStore } from '../store/guestStore'
+import type { OrderItemChange } from '../types/backend/order'
+
+function describeItemChange(change: OrderItemChange): string {
+  switch (change.kind) {
+    case 'added':
+      return `Se agregó ${change.quantity}× ${change.productName}`
+    case 'removed':
+      return `Se quitó ${change.quantity}× ${change.productName}`
+    case 'quantity':
+      return `${change.productName}: antes ${change.from}×, ahora ${change.to}×`
+    case 'price':
+      return `Cambió el precio de ${change.productName}`
+  }
+}
 
 /**
  * Pedido — confirmación, seguimiento y detalle con los datos del backend (`OrderScreen` de mobile).
@@ -111,6 +125,24 @@ export function OrderPage() {
           <p className="rounded-r-md bg-gold-soft px-3 py-2 text-[15px] font-semibold text-gold-text">🎟️ Número del sorteo: #{raffleNumber}</p>
         )}
       </header>
+
+      {order.lastEditSummary && order.lastEditSummary.length > 0 && (
+        <section aria-label="Cambios en el pedido" className="rounded-r-lg bg-warning/10 border border-warning/30 p-4 space-y-2">
+          <p className="text-h3 text-warning-text">✏️ Tu pedido fue editado</p>
+          {order.lastEditedAt && (
+            <p className="text-caption text-text-secondary">
+              {new Date(order.lastEditedAt).toLocaleString('es', { dateStyle: 'medium', timeStyle: 'short' })}
+            </p>
+          )}
+          <ul className="space-y-1">
+            {order.lastEditSummary.map((change, index) => (
+              <li key={index} className="text-body text-text-primary">
+                {describeItemChange(change)}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section aria-label="Seguimiento del pedido" className="rounded-r-lg bg-surface border border-border p-4 space-y-4">
         <p className="text-h3 text-text-primary" aria-live="polite">

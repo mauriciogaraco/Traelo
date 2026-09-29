@@ -47,6 +47,8 @@ export function useOrderTracking(orderId: string, access: OrderAccess | null, op
   const accessKey = access === null ? 'none' : access.kind === 'guest' ? `guest:${access.token}` : 'customer';
   const accessRef = useRef(access);
   accessRef.current = access;
+  const orderRef = useRef(order);
+  orderRef.current = order;
 
   const fetchOnce = useCallback(async () => {
     const currentAccess = accessRef.current;
@@ -56,6 +58,17 @@ export function useOrderTracking(orderId: string, access: OrderAccess | null, op
       if (!mountedRef.current) return;
       setStatus(fresh);
       setError(null);
+      // El pedido se editó (staff o mensajero) desde la última vez que se supo: el estado
+      // liviano solo trae la marca de tiempo a propósito, así que se vuelve a pedir el detalle
+      // completo para tener las líneas nuevas y qué cambió (lastEditSummary).
+      if (fresh.lastEditedAt && fresh.lastEditedAt !== orderRef.current?.lastEditedAt) {
+        try {
+          const detail = await getOrderDetail(orderId, currentAccess);
+          if (mountedRef.current) setOrder(detail);
+        } catch {
+          // No bloquea el polling del estado: se reintenta en el próximo tick.
+        }
+      }
     } catch (err) {
       if (!mountedRef.current) return;
       setError(err instanceof ApiError && (err.isNetworkError() || err.isTimeout()) ? 'offline' : 'error');

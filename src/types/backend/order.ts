@@ -12,6 +12,13 @@ export type OrderStatus = 'PENDING' | 'ASSIGNED' | 'COMPLETED' | 'CANCELLED';
 export type CourierSubstatus = 'CONFIRMED' | 'HEADING_OUT' | 'PICKING_UP' | 'ON_THE_WAY';
 export type OrderSource = 'APP' | 'WEB' | 'MANUAL' | 'TELEGRAM';
 
+/** Un cambio de una línea del pedido al editarlo (staff o mensajero) — ver Order.lastEditSummary. */
+export type OrderItemChange =
+  | { kind: 'added'; productName: string; quantity: number; optionName: string | null; addonName: string | null }
+  | { kind: 'removed'; productName: string; quantity: number; optionName: string | null; addonName: string | null }
+  | { kind: 'quantity'; productName: string; from: number; to: number; optionName: string | null; addonName: string | null }
+  | { kind: 'price'; productName: string; from: number; to: number; optionName: string | null; addonName: string | null }
+
 export type OrderItem = {
   id: string;
   productId: string | null;
@@ -84,6 +91,9 @@ export type Order = {
   traeloDeliveryShare: number;
   delivererEarning: number;
   businesses: OrderBusiness[];
+  /** Última edición de productos que de verdad cambió algo (staff o mensajero). Ausente en backends anteriores. */
+  lastEditedAt?: string | null;
+  lastEditSummary?: OrderItemChange[] | null;
   createdAt: string;
   updatedAt: string;
 };
@@ -110,6 +120,8 @@ export type OrderStatusPoll = {
   delivererName: string | null;
   /** Foto de perfil del mensajero (URL). null si no tiene; ausente en un backend anterior. */
   delivererPhotoUrl?: string | null;
+  /** Si avanzó desde la última vez, hay una edición nueva que ver (useOrderTracking vuelve a pedir el detalle). Ausente en backends anteriores. */
+  lastEditedAt?: string | null;
 };
 
 /**

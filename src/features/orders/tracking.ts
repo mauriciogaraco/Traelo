@@ -221,5 +221,6 @@ export function orderToStatusPoll(order: Order): OrderStatusPoll {
     cancelledAt: order.cancelledAt,
     delivererName: order.delivererName,
     delivererPhotoUrl: order.delivererPhotoUrl,
+    lastEditedAt: order.lastEditedAt,
   };
 }

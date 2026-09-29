@@ -31,10 +31,14 @@ self.addEventListener('push', (event) => {
   )
 })
 
-// A qué pedido lleva un push (mismo criterio que orderIdFromNotificationData de mobile): valida
-// todo, `data` viaja desde fuera de la app.
+// A qué pedido lleva un push: todo tipo de aviso de pedido ('order' = cambió de etapa,
+// 'order_vale_updated' = se editó) trae orderId y lleva al mismo sitio — validado, `data` viaja
+// desde fuera de la app.
+const ORDER_NOTIFICATION_TYPES = ['order', 'order_vale_updated']
 function orderIdFromData(data) {
-  if (!data || typeof data !== 'object' || data.type !== 'order' || typeof data.orderId !== 'string') return null
+  if (!data || typeof data !== 'object' || !ORDER_NOTIFICATION_TYPES.includes(data.type) || typeof data.orderId !== 'string') {
+    return null
+  }
   const id = data.orderId.trim()
   return /^[A-Za-z0-9_-]{1,64}$/.test(id) ? id : null
 }
