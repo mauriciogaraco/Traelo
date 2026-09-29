@@ -181,7 +181,7 @@
     "image": "🌰",
     "photo": "/assets/images/products/Cronos/Cronos de Almendra.jpg",
     "price": 1100,
-    "stockStatus": "disponible"
+    "stockStatus": "agotado"
   },
   {
     "id": "cr-018",
@@ -3579,7 +3579,18 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra, en bistec.",
     "image": "🥩",
-    "price": 1800,
+    "price": 1900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-131",
+    "name": "Lomo Ahumado (1 lb)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Cárnicos",
+    "shortDescription": "Una libra.",
+    "image": "🥓",
+    "price": 1900,
     "stockStatus": "disponible"
   },
   {
@@ -12690,7 +12701,7 @@
     "shortDescription": "Arroz moro, ensalada, yuca con mojo y chicharritas.",
     "image": "🍖",
     "photo": "/assets/images/products/El Monito/Completa de masa frita.jpg",
-    "price": 2500,
+    "price": 3000,
     "packaging": [
       {
         "name": "Termopack",
@@ -12708,7 +12719,7 @@
     "shortDescription": "Arroz moro, yuca con mojo, ensalada y chicharritas.",
     "image": "🥩",
     "photo": "/assets/images/products/El Monito/completa de bistec.jpg",
-    "price": 2500,
+    "price": 3000,
     "packaging": [
       {
         "name": "Termopack",
