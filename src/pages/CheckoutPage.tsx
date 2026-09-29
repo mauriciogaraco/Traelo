@@ -33,12 +33,14 @@ type DeliveryForm = { name: string; phone: string; address: string; reference: s
 
 /**
  * Confirmar pedido — `CheckoutScreen` de mobile, en dos pasos cortos: 1) ¿Dónde entregamos? y
- * 2) Revisa y confirma, con la cotización del servidor. NO exige cuenta. Las direcciones viven en
- * este navegador (libreta local): se elige una guardada o se escribe una nueva, que queda guardada
- * sola al pedir. La hora de entrega elegida viaja como `scheduledFor` (informativa para el equipo).
+ * 2) Revisa y confirma, con la cotización del servidor. NO exige cuenta: con sesión el pedido
+ * queda vinculado a la cuenta igual (createCheckoutOrder adjunta el Bearer si existe), sin
+ * cambiar el formulario. Las direcciones viven en este navegador (libreta local): se elige una
+ * guardada o se escribe una nueva, que queda guardada sola al pedir. La hora de entrega elegida
+ * viaja como `scheduledFor` (informativa para el equipo).
  *
- * Diferencias con mobile: todavía sin cuenta (fase 5: siempre como invitado) y sin el pin opcional en
- * el mapa (la dirección escrita es lo obligatorio; el pin nunca bloquea el pedido).
+ * Diferencia con mobile: sin el pin opcional en el mapa (la dirección escrita es lo obligatorio;
+ * el pin nunca bloquea el pedido).
  */
 export function CheckoutPage() {
   const navigate = useNavigate()
