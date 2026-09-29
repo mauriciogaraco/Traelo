@@ -3579,7 +3579,18 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra, en bistec.",
     "image": "🥩",
-    "price": 1800,
+    "price": 1900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "ma-131",
+    "name": "Lomo Ahumado (1 lb)",
+    "businessId": "mercadito-ahorro",
+    "businessName": "El Mercadito",
+    "category": "Cárnicos",
+    "shortDescription": "Una libra.",
+    "image": "🥓",
+    "price": 1900,
     "stockStatus": "disponible"
   },
   {

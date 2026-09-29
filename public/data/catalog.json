@@ -4709,7 +4709,19 @@
       "shortDescription": "Una libra, en bistec.",
       "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
       "image": "🥩",
-      "price": 1800,
+      "price": 1900,
+      "stockStatus": "disponible"
+    },
+    {
+      "id": "ma-131",
+      "name": "Lomo Ahumado (1 lb)",
+      "businessId": "mercadito-ahorro",
+      "businessName": "El Mercadito",
+      "category": "Cárnicos",
+      "shortDescription": "Una libra.",
+      "longDescription": "Lomo ahumado, se entrega por libra.",
+      "image": "🥓",
+      "price": 1900,
       "stockStatus": "disponible"
     },
     {
