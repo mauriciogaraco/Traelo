@@ -26,6 +26,10 @@ export type IconName =
   | 'sun'
   | 'moon'
   | 'contrast'
+  | 'phone'
+  | 'whatsapp'
+  | 'gift'
+  | 'storefront'
 
 type Props = Omit<SVGProps<SVGSVGElement>, 'name'> & {
   name: IconName
@@ -140,6 +144,37 @@ function paths(name: IconName, filled: boolean) {
         <>
           <circle cx="12" cy="12" r="9" />
           <path fill="currentColor" stroke="none" d="M12 3a9 9 0 0 1 0 18Z" />
+        </>
+      )
+    case 'phone':
+      return (
+        <path d="M8.1 4.5h-2A1.6 1.6 0 0 0 4.5 6c.4 6.7 5.8 12.1 12.5 12.5a1.6 1.6 0 0 0 1.5-1.6v-2a1 1 0 0 0-.8-1l-2.7-.6a1 1 0 0 0-1 .3l-.9 1a12 12 0 0 1-5.2-5.2l1-.9a1 1 0 0 0 .3-1L8.6 5a1 1 0 0 0-.5-.5Z" />
+      )
+    case 'whatsapp':
+      return (
+        <>
+          <path d="M12 3.5a8.5 8.5 0 0 0-7.4 12.7L3.5 20.5l4.5-1.1A8.5 8.5 0 1 0 12 3.5Z" />
+          <path
+            fill="currentColor"
+            stroke="none"
+            d="M8.9 9.9c.3 2.6 2.4 4.7 5 5 .5.1.9-.2 1.1-.6l.2-.6a.6.6 0 0 0-.3-.8l-1.3-.5a.6.6 0 0 0-.7.1l-.3.4a4.3 4.3 0 0 1-2.1-2.1l.4-.3a.6.6 0 0 0 .1-.7l-.5-1.3a.6.6 0 0 0-.8-.3l-.6.2c-.4.2-.7.6-.6 1.1Z"
+          />
+        </>
+      )
+    case 'gift':
+      return (
+        <>
+          <rect x="4" y="9.5" width="16" height="10" rx="1.2" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M4 9.5h16M12 9.5V20" stroke={filled ? 'rgb(var(--c-surface))' : 'currentColor'} />
+          <path d="M12 9.5c-1.7 0-3-1.2-3-2.7S10.3 4 12 5.3C13.7 4 15 5.3 15 6.8S13.7 9.5 12 9.5Z" />
+        </>
+      )
+    case 'storefront':
+      return (
+        <>
+          <path d="M4.5 9.3 5.3 4h13.4l.8 5.3" />
+          <path d="M4.3 9.3a1.9 1.9 0 0 0 3.8.2 1.9 1.9 0 0 0 3.8 0 1.9 1.9 0 0 0 3.8 0 1.9 1.9 0 0 0 3.8-.2" />
+          <path d="M6 11v9h12v-9M10 20v-5h4v5" />
         </>
       )
   }

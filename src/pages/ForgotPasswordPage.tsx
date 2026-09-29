@@ -7,10 +7,8 @@ import { PhoneField } from '../components/ui/PhoneField'
 import { TextField } from '../components/ui/TextField'
 import { useToast } from '../context/ToastContext'
 import { authErrorMessage, validatePassword, validatePasswordConfirmation, validatePhone } from '../features/auth/validation'
-import { SUPPORT_WHATSAPP } from '../lib/config'
+import { SUPPORT_WHATSAPP_URL } from '../lib/config'
 import { toCubanE164 } from '../lib/phone'
-
-const SUPPORT_WHATSAPP_URL = `https://wa.me/${SUPPORT_WHATSAPP}`
 
 /**
  * Recuperar contraseña. Hoy el backend NO tiene un canal (SMS/email) para entregar un código, y
