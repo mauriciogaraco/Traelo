@@ -1,8 +1,11 @@
+import { Icon, type IconName } from './Icon'
+
 export interface SegmentedOption<K extends string> {
   key: K
   label: string
   /** Cantidad de resultados de esa pestaña (se muestra como insignia). */
   count?: number
+  icon?: IconName
 }
 
 interface SegmentedTabsProps<K extends string> {
@@ -38,6 +41,7 @@ export function SegmentedTabs<K extends string>({ options, value, onChange, labe
               selected ? 'text-text-primary' : 'text-text-secondary hover:text-text-primary'
             }`}
           >
+            {option.icon && <Icon name={option.icon} size={16} filled={selected} />}
             {option.label}
             {option.count !== undefined && (
               <span

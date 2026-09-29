@@ -23,6 +23,9 @@ export type IconName =
   | 'heart'
   | 'star'
   | 'receipt'
+  | 'sun'
+  | 'moon'
+  | 'contrast'
 
 type Props = Omit<SVGProps<SVGSVGElement>, 'name'> & {
   name: IconName
@@ -123,6 +126,22 @@ function paths(name: IconName, filled: boolean) {
       return <path fill={filled ? 'currentColor' : 'none'} d="m12 3.8 2.5 5.1 5.6.8-4 3.9 1 5.6-5.1-2.7-5 2.7.9-5.6-4-3.9 5.6-.8Z" />
     case 'receipt':
       return <path fill={filled ? 'currentColor' : 'none'} d="M6 3.5h12v17l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3ZM9 8h6M9 11.5h6M9 15h4" />
+    case 'sun':
+      return (
+        <>
+          <circle cx="12" cy="12" r="4.2" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M12 2.8v2.4M12 18.8v2.4M21.2 12h-2.4M5.2 12H2.8M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7M18.2 18.2l-1.7-1.7M7.5 7.5 5.8 5.8" />
+        </>
+      )
+    case 'moon':
+      return <path fill={filled ? 'currentColor' : 'none'} d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a7 7 0 0 0 10.7 10.7Z" />
+    case 'contrast':
+      return (
+        <>
+          <circle cx="12" cy="12" r="9" />
+          <path fill="currentColor" stroke="none" d="M12 3a9 9 0 0 1 0 18Z" />
+        </>
+      )
   }
 }
 
