@@ -46,6 +46,7 @@ const BUSINESS_SORT_LABELS: Record<BusinessSort, string> = {
   popular: '🔥 Populares',
   rating: '⭐ Mejor valorados',
   recent: '🕒 Recientes',
+  alphabetical: '🔤 Alfabético',
 }
 
 /** Cuánta información real hay detrás del orden elegido: si no hay, el encabezado no debe presumir de "más pedido". */
@@ -68,6 +69,8 @@ function summaryText(params: { hasQuery: boolean; query: string; count: number; 
       return 'De mayor a menor precio'
     case 'recent':
       return basis === 'none' ? plain : 'Los negocios más nuevos'
+    case 'alphabetical':
+      return 'Negocios de la A a la Z'
     case 'recentOffers':
       return basis === 'none' ? plain : 'Ofertas recientes'
     default:

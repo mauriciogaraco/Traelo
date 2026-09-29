@@ -96,7 +96,7 @@ export function overallRatingMean(stats: CatalogStats | null): number {
 // ── Ordenamiento ────────────────────────────────────────────────────────────
 
 export type ProductSort = 'relevance' | 'popular' | 'priceAsc' | 'priceDesc' | 'recentOffers';
-export type BusinessSort = 'relevance' | 'popular' | 'rating' | 'recent';
+export type BusinessSort = 'relevance' | 'popular' | 'rating' | 'recent' | 'alphabetical';
 
 /** Sin criterio elegido: con búsqueda manda la relevancia; sin ella, lo más popular. */
 export function effectiveSort<T extends string>(
@@ -231,6 +231,8 @@ export function sortBusinesses(
         return jb - ja || byName(a, b);
       });
     }
+    case 'alphabetical':
+      return list.sort(byName);
   }
 }
 
