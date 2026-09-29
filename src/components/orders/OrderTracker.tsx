@@ -217,7 +217,10 @@ export function OrderTracker({ status, times, stages, animated = true }: Props) 
               >
                 <Marker state={step.state} animated={motion} />
                 <span
-                  className={`mt-1 px-0.5 text-[11px] leading-tight sm:text-caption break-words ${
+                  // w-full: el <li> es flex con items-center (para centrar la etiqueta), pero eso
+                  // deja a sus hijos sin ancho propio — sin esto, un texto largo ("Confirmado",
+                  // "Recogiendo") no se parte en dos líneas: se desborda sobre la columna vecina.
+                  className={`mt-1 w-full px-0.5 text-[11px] leading-tight sm:text-caption break-words ${
                     step.state === 'current'
                       ? 'font-bold text-text-primary'
                       : muted
