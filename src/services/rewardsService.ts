@@ -7,29 +7,37 @@ import type { OrderQuote, Reward } from '../types/backend/rewards'
 import { refreshPoints } from './pointsService'
 import { requestCheckoutQuote, type CheckoutQuoteResult } from './checkoutService'
 
+let inFlightCustomerId: string | null = null
+let inFlightToken = 0
 let inFlight: Promise<boolean> | null = null
 
 /**
  * Baja las recompensas (y, con sesión, el saldo y qué alcanza/cuánto falta: lo decide el servidor).
- * Un solo vuelo a la vez. NUNCA lanza: las recompensas son un extra; sin red se conserva lo último visto.
+ * Un solo vuelo a la vez POR CLIENTE — si la sesión cambia (p. ej. termina de hidratarse justo
+ * después de arrancar como invitado) esto es una llamada nueva, no la de antes: reutilizar la
+ * promesa vieja descartaría su respuesta al ver que "el cliente cambió" y las recompensas se
+ * quedarían sin cargar hasta el próximo disparador. NUNCA lanza: las recompensas son un extra; sin
+ * red se conserva lo último visto.
  */
 export function refreshRewards(): Promise<boolean> {
-  if (inFlight) return inFlight
+  const customerId = useSessionStore.getState().customer?.id ?? null
+  if (inFlight && inFlightCustomerId === customerId) return inFlight
 
-  const customerAtStart = useSessionStore.getState().customer?.id ?? null
+  const token = ++inFlightToken
+  inFlightCustomerId = customerId
   inFlight = (async () => {
     try {
       const snapshot = await getRewards()
       // La sesión cambió mientras esperaba (otra cuenta / cerró sesión): esta respuesta ya no aplica.
-      if ((useSessionStore.getState().customer?.id ?? null) !== customerAtStart) return false
+      if ((useSessionStore.getState().customer?.id ?? null) !== customerId) return false
       useRewardsStore.getState().setSnapshot(snapshot)
       return true
     } catch {
       return false
+    } finally {
+      if (inFlightToken === token) inFlight = null
     }
-  })().finally(() => {
-    inFlight = null
-  })
+  })()
   return inFlight
 }
 
