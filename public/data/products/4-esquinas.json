@@ -24,6 +24,42 @@
     "stockStatus": "disponible"
   },
   {
+    "id": "4e-015",
+    "name": "Pizza de Queso Gouda",
+    "businessId": "4-esquinas",
+    "businessName": "4 Esquinas",
+    "category": "Comida",
+    "shortDescription": "",
+    "longDescription": "Pizza de queso gouda.",
+    "image": "🍕",
+    "price": 600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "4e-016",
+    "name": "Pizza de Queso Doble Gouda",
+    "businessId": "4-esquinas",
+    "businessName": "4 Esquinas",
+    "category": "Comida",
+    "shortDescription": "",
+    "longDescription": "Pizza de queso doble gouda.",
+    "image": "🍕",
+    "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "4e-017",
+    "name": "Pizza de Atún",
+    "businessId": "4-esquinas",
+    "businessName": "4 Esquinas",
+    "category": "Comida",
+    "shortDescription": "",
+    "longDescription": "Pizza de atún.",
+    "image": "🍕",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "4e-003",
     "name": "Pizza de Jamón",
     "businessId": "4-esquinas",
@@ -32,7 +68,7 @@
     "shortDescription": "",
     "longDescription": "Pizza de jamón.",
     "image": "🍕",
-    "price": 500,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -68,7 +104,7 @@
     "shortDescription": "",
     "longDescription": "Pizza de cebolla.",
     "image": "🍕",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -80,7 +116,7 @@
     "shortDescription": "",
     "longDescription": "Pizza de perro caliente.",
     "image": "🍕",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
