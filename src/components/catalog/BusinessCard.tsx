@@ -28,7 +28,10 @@ export const BusinessCard = memo(function BusinessCard({ business, stats, badge,
     <Link
       to={`/negocio/${business.id}`}
       className={`group flex items-center gap-3 sm:flex-col sm:items-stretch sm:gap-0 rounded-r-lg sm:rounded-lg bg-surface p-3 sm:p-0 shadow-card border border-border/60 overflow-hidden transition hover:shadow-card-hover hover:border-primary/30 sm:hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
-        layout === 'rail' ? 'w-[280px] shrink-0 sm:w-auto' : 'w-full'
+        // El carrusel (Rail) sigue siendo una fila con scroll horizontal hasta `lg` (recién ahí
+        // pasa a grilla): un ancho fijo hasta ese punto, para que las tarjetas no queden cada una
+        // con un ancho distinto según el largo del nombre.
+        layout === 'rail' ? 'w-[280px] shrink-0 lg:w-auto' : 'w-full'
       }`}
     >
       <div className="relative shrink-0 sm:shrink sm:w-full">
@@ -48,12 +51,12 @@ export const BusinessCard = memo(function BusinessCard({ business, stats, badge,
 
       <div className="flex-1 min-w-0 flex flex-col items-start gap-1 sm:gap-1.5 sm:p-3.5">
         {badge && <span className="sm:hidden rounded-full bg-gold-soft px-2 py-0.5 text-label text-gold-text">{badge}</span>}
-        <h3 className="w-full text-[15px] sm:text-base leading-5 font-semibold text-text-primary truncate sm:whitespace-normal sm:line-clamp-1">
+        <h3 className="w-full text-[15px] sm:text-base leading-5 font-semibold text-text-primary truncate">
           {business.name}
         </h3>
         <p className="w-full flex items-center gap-0.5 text-caption text-text-secondary">
           <Icon name="location" size={13} className="shrink-0 text-text-tertiary" />
-          <span className="truncate">{business.address}</span>
+          <span className="min-w-0 truncate">{business.address}</span>
         </p>
         {stats !== undefined &&
           (rating ? (
