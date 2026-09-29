@@ -13742,6 +13742,39 @@
     "stockStatus": "disponible"
   },
   {
+    "id": "4e-015",
+    "name": "Pizza de Queso Gouda",
+    "businessId": "4-esquinas",
+    "businessName": "4 Esquinas",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍕",
+    "price": 600,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "4e-016",
+    "name": "Pizza de Queso Doble Gouda",
+    "businessId": "4-esquinas",
+    "businessName": "4 Esquinas",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍕",
+    "price": 900,
+    "stockStatus": "disponible"
+  },
+  {
+    "id": "4e-017",
+    "name": "Pizza de Atún",
+    "businessId": "4-esquinas",
+    "businessName": "4 Esquinas",
+    "category": "Comida",
+    "shortDescription": "",
+    "image": "🍕",
+    "price": 800,
+    "stockStatus": "disponible"
+  },
+  {
     "id": "4e-003",
     "name": "Pizza de Jamón",
     "businessId": "4-esquinas",
@@ -13749,7 +13782,7 @@
     "category": "Comida",
     "shortDescription": "",
     "image": "🍕",
-    "price": 500,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -13782,7 +13815,7 @@
     "category": "Comida",
     "shortDescription": "",
     "image": "🍕",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -13793,7 +13826,7 @@
     "category": "Comida",
     "shortDescription": "",
     "image": "🍕",
-    "price": 450,
+    "price": 500,
     "stockStatus": "disponible"
   },
   {
@@ -15659,7 +15692,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🧈",
     "photo": "/assets/images/products/La Pino  - Tienda de Alimentos/manteca en rama 1600 la libra.jpg",
-    "price": 1600,
+    "price": 1700,
     "stockStatus": "disponible"
   },
   {
