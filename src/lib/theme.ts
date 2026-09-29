@@ -4,17 +4,13 @@ import { useSyncExternalStore } from 'react'
  * Tema claro/oscuro — mismo modelo que `themeStore` de la app móvil (Claro / Oscuro / Automático).
  * Se aplica con `data-theme` en <html>; los colores salen de las variables de src/index.css.
  * index.html repite la lectura inicial en un script inline para no pintar un frame con el tema
- * equivocado.
- *
- * TEMPORAL: por defecto 'light' (en mobile es 'system') hasta que todas las pantallas usen tokens
- * en vez de colores fijos de Tailwind (fases 3–5); entonces pasa a 'system' y se muestra el selector
- * en la cuenta.
+ * equivocado. El selector (Claro/Oscuro/Automático) vive en "Mi cuenta".
  */
 export type ThemePreference = 'light' | 'dark' | 'system'
 export type ResolvedTheme = 'light' | 'dark'
 
 const STORAGE_KEY = 'traelo.themePreference'
-export const DEFAULT_THEME_PREFERENCE: ThemePreference = 'light'
+export const DEFAULT_THEME_PREFERENCE: ThemePreference = 'system'
 
 const listeners = new Set<() => void>()
 const darkQuery =

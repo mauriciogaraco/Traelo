@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { OrderRow } from '../components/orders/OrderRow'
 import { PointsCard } from '../components/rewards/PointsCard'
+import { ThemeSelector } from '../components/settings/ThemeSelector'
 import { Button } from '../components/ui/Button'
 import { Icon, type IconName } from '../components/ui/Icon'
 import { RowsSkeleton } from '../components/ui/Skeleton'
@@ -95,6 +96,8 @@ export function AccountPage() {
         )}
 
         <Menu authenticated={false} />
+
+        <ThemeSelector />
       </div>
     )
   }
@@ -120,6 +123,8 @@ export function AccountPage() {
       <PointsCard />
 
       <Menu authenticated />
+
+      <ThemeSelector />
 
       {loading && orders.length === 0 && <RowsSkeleton rows={3} />}
       {error && (
