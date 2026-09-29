@@ -11,6 +11,7 @@ import { useToast } from '../context/ToastContext'
 import { getCartItemCount, getCartSubtotalEstimate } from '../features/cart'
 import { describeMissing, getMissingDeliveryDetails } from '../features/checkout/deliveryDetails'
 import { ASAP_LABEL, deliveryTimeOptions, scheduledForValue } from '../features/checkout/deliveryTime'
+import { formatPoints, validApplied } from '../features/rewards'
 import { useIsOnline } from '../hooks/useIsOnline'
 import { setOrderInFlight } from '../pwa'
 import { generateLocalId } from '../lib/id'
@@ -21,7 +22,8 @@ import { useAddressStore } from '../store/addressStore'
 import { useCartStore } from '../store/cartStore'
 import { useCheckoutDraftStore } from '../store/checkoutDraftStore'
 import { useGuestProfileStore } from '../store/guestStore'
-import type { OrderQuote } from '../types/backend/rewards'
+import { useRewardsStore } from '../store/rewardsStore'
+import type { OrderQuote, RedemptionRequest } from '../types/backend/rewards'
 
 /** Cuánto esperar tras el último cambio del carrito antes de pedir la cotización. */
 const QUOTE_DEBOUNCE_MS = 400
@@ -45,6 +47,11 @@ export function CheckoutPage() {
   const items = useCartStore((state) => state.items)
   const savedAddresses = useAddressStore((state) => state.addresses)
   const guestProfile = useGuestProfileStore()
+  const appliedRedemption = useRewardsStore((state) => state.applied)
+  const applied = useMemo(() => validApplied(appliedRedemption, items), [appliedRedemption, items])
+  const redemption: RedemptionRequest | undefined = applied
+    ? { rewardId: applied.reward.id, expectedBalance: applied.expectedBalance }
+    : undefined
 
   // Borrador: si hubo que volver al carrito (un agotado, un local cerrado…), lo escrito sigue ahí.
   const restored = useRef(useCheckoutDraftStore.getState().draft).current
@@ -95,7 +102,7 @@ export function CheckoutPage() {
     let cancelled = false
     setQuoteLoading(true)
     const timer = window.setTimeout(async () => {
-      const result = await requestCheckoutQuote(useCartStore.getState().items)
+      const result = await requestCheckoutQuote(useCartStore.getState().items, redemption)
       if (cancelled) return
       setQuoteLoading(false)
       setQuote(result.ok ? result.quote : null)
@@ -104,7 +111,9 @@ export function CheckoutPage() {
       cancelled = true
       window.clearTimeout(timer)
     }
-  }, [step, cartFingerprint])
+    // redemption resume a `applied` por contenido (id + saldo esperado): comparar el objeto entero recrearía la petición en cada render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step, cartFingerprint, applied?.reward.id])
 
   // Las horas se calculan en hora de Cuba y se refrescan al cambiar de paso (no cada segundo).
   const deliveryTimes = useMemo(() => deliveryTimeOptions(new Date()), [step])
@@ -152,6 +161,7 @@ export function CheckoutPage() {
       addressReference: reviewReference || undefined,
       customerName: form.name.trim(),
       customerPhone: toCubanE164(form.phone),
+      redemption,
     })
     setOrderInFlight(false)
     setSubmitting(false)
@@ -360,6 +370,9 @@ function ReviewStep(props: {
         <section aria-label="Total del pedido" className="rounded-r-md bg-surface border border-border p-3 space-y-1">
           <QuoteRow label="Productos" value={formatCup(quote.productsTotal - quote.packagingTotal)} />
           {quote.packagingTotal > 0 && <QuoteRow label="Empaque" value={formatCup(quote.packagingTotal)} />}
+          {quote.redemption && (
+            <QuoteRow label={`🎁 ${quote.redemption.rewardName} (${formatPoints(quote.redemption.pointsCost)})`} value={`−${formatCup(quote.pointsDiscount)}`} />
+          )}
           <QuoteRow label="Mensajería" value={formatCup(quote.deliveryFee)} />
           <QuoteRow label="Servicio Tráelo" value={formatCup(quote.platformFee)} />
           <QuoteRow label="Total a pagar" value={formatCup(quote.total)} strong />

@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { BusinessStatusBadge } from '../components/catalog/BusinessStatusBadge'
 import { CatalogImage } from '../components/catalog/CatalogImage'
 import { formatCup } from '../components/catalog/Price'
+import { RedemptionSection } from '../components/rewards/RedemptionSection'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { Icon } from '../components/ui/Icon'
@@ -10,9 +11,11 @@ import { QuantitySelector } from '../components/ui/QuantitySelector'
 import { useToast } from '../context/ToastContext'
 import { estimateCartLine, getCartSubtotalEstimate, groupCartByBusiness, lineIdOf, packSizeOf } from '../features/cart'
 import { visualForProduct } from '../features/catalog'
+import { validApplied } from '../features/rewards'
 import { isRemovableIssue, precheckCart, removeUnavailableFromCart } from '../services/checkoutService'
 import { MAX_LINE_QUANTITY, useCartStore } from '../store/cartStore'
 import { useCatalogStore } from '../store/catalogStore'
+import { useRewardsStore } from '../store/rewardsStore'
 import type { CartChangeDetail } from '../types/backend/order'
 
 function findProductIssue(issues: CartChangeDetail[], productId: string) {
@@ -26,8 +29,7 @@ function findBusinessIssue(issues: CartChangeDetail[], businessId: string) {
 /**
  * Carrito — `CartScreen` de mobile: agrupado por negocio, lo elegido en cada línea (tipo, agrego,
  * envase), estimados (el total real lo calcula el servidor) y, antes del formulario de entrega, una
- * revisión con el servidor para marcar aquí lo agotado o cerrado.
- * Pendiente (fase 5): canje de puntos, que en mobile requiere sesión.
+ * revisión con el servidor para marcar aquí lo agotado o cerrado, y el canje de puntos (con cuenta).
  */
 export function CartPage() {
   const navigate = useNavigate()
@@ -44,11 +46,16 @@ export function CartPage() {
   const groups = useMemo(() => groupCartByBusiness(items, businesses), [items, businesses])
   const subtotalEstimate = useMemo(() => getCartSubtotalEstimate(items), [items])
   const [checking, setChecking] = useState(false)
+  const appliedRedemption = useRewardsStore((state) => state.applied)
+  const applied = useMemo(() => validApplied(appliedRedemption, items), [appliedRedemption, items])
 
   const handleContinue = async () => {
     if (checking) return
     setChecking(true)
-    const result = await precheckCart(items)
+    const result = await precheckCart(
+      items,
+      applied ? { rewardId: applied.reward.id, expectedBalance: applied.expectedBalance } : undefined,
+    )
     setChecking(false)
     if (result.ok) {
       navigate('/checkout')
@@ -189,6 +196,8 @@ export function CartPage() {
               </section>
             )
           })}
+
+          <RedemptionSection items={items} />
         </div>
 
         {/* Resumen: fijo abajo en teléfono (como mobile), columna lateral en escritorio. */}

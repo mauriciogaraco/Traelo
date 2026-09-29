@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { OrderRow } from '../components/orders/OrderRow'
+import { PointsCard } from '../components/rewards/PointsCard'
 import { Button } from '../components/ui/Button'
 import { Icon, type IconName } from '../components/ui/Icon'
 import { RowsSkeleton } from '../components/ui/Skeleton'
@@ -20,6 +21,8 @@ const MENU: MenuItem[] = [
   // Las direcciones viven en este navegador: las ve cualquiera, con o sin cuenta.
   { to: '/direcciones', label: 'Direcciones', icon: 'location', tint: 'bg-primary-soft text-primary' },
   { to: '/favoritos', label: 'Favoritos', icon: 'heart', tint: 'bg-danger/10 text-danger', accountOnly: true },
+  { to: '/valoraciones', label: 'Valoraciones', icon: 'star', tint: 'bg-gold-soft text-gold-text', accountOnly: true },
+  { to: '/notificaciones', label: 'Notificaciones', icon: 'bell', tint: 'bg-gold-soft text-gold-text' },
   { to: '/ayuda', label: 'Ayuda', icon: 'help', tint: 'bg-info/10 text-info' },
 ]
 
@@ -81,6 +84,8 @@ export function AccountPage() {
           </Link>
         </div>
 
+        <PointsCard />
+
         {guestSection ?? (
           <section className="space-y-1" data-testid="guest-no-orders">
             <h2 className="text-h3 text-text-primary">Pedidos</h2>
@@ -111,6 +116,8 @@ export function AccountPage() {
           <p className="text-body opacity-95">{customer?.phone}</p>
         </div>
       </div>
+
+      <PointsCard />
 
       <Menu authenticated />
 

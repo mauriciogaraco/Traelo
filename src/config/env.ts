@@ -17,7 +17,12 @@ if (!apiKey && import.meta.env.DEV) {
   console.warn('[Tráelo] Falta VITE_API_KEY: el backend responderá 403. Ver .env.example.')
 }
 
+// Clave pública VAPID (Web Push) — no es secreta, viaja en el bundle igual que apiKey. Sin ella,
+// simplemente no se ofrece activar notificaciones (ver services/pushService.ts).
+const vapidPublicKey = (import.meta.env.VITE_VAPID_PUBLIC_KEY as string | undefined)?.trim() ?? ''
+
 export const env = {
   apiBaseUrl: `${apiUrl.replace(/\/+$/, '')}/api/v1`,
   apiKey,
+  vapidPublicKey,
 } as const

@@ -1,18 +1,20 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import type { OrderAccess } from '../api/orderAccess'
 import { formatCup } from '../components/catalog/Price'
 import { CourierCard } from '../components/orders/CourierCard'
 import { CourierTrackingPanel } from '../components/orders/CourierTrackingPanel'
 import { OrderTracker } from '../components/orders/OrderTracker'
+import { ReviewSheet } from '../components/orders/ReviewSheet'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { ErrorState } from '../components/ui/ErrorState'
 import { RowsSkeleton } from '../components/ui/Skeleton'
 import { StatusBadge } from '../components/ui/StatusBadge'
 import { getOrderStatusLabel, ORDER_STATUS_TONE } from '../features/orders/orderStatus'
-import { mapOrderStatusToTrackingStep, stagesOf } from '../features/orders/tracking'
+import { isTrackingActive, mapOrderStatusToTrackingStep, stagesOf } from '../features/orders/tracking'
 import { useAuth } from '../hooks/useAuth'
+import { useOrderReviews } from '../hooks/useOrderReviews'
 import { useOrderTracking } from '../hooks/useOrderTracking'
 import { useGuestOrdersStore, useOrderStore } from '../store/guestStore'
 
@@ -34,6 +36,19 @@ export function OrderPage() {
   )
   const justCreated = useOrderStore((state) => (state.lastCreatedOrder?.id === id ? state.lastCreatedOrder : null))
   const { order, status, loading, refreshing, error, refresh } = useOrderTracking(id, access, { initialOrder: justCreated })
+
+  // Valorar exige CUENTA (una reseña tiene que pertenecer a alguien): un pedido de invitado no consulta ni ofrece valoraciones.
+  const isGuestAccess = access?.kind === 'guest'
+  const earlyStatus = status?.status ?? order?.status
+  const reviews = useOrderReviews(id, access, earlyStatus === 'COMPLETED' && !isGuestAccess)
+
+  const [reviewSheetOpen, setReviewSheetOpen] = useState(false)
+  // Si el pedido pasa a ENTREGADO mientras se está mirando, se invita a valorar (una sola vez, sin bloquear nada).
+  const previousStatus = useRef<string | undefined>(undefined)
+  useEffect(() => {
+    if (isTrackingActive(previousStatus.current) && earlyStatus === 'COMPLETED') setReviewSheetOpen(true)
+    previousStatus.current = earlyStatus
+  }, [earlyStatus])
 
   if (!access && !order) {
     if (authLoading) {
@@ -182,6 +197,11 @@ export function OrderPage() {
       </section>
 
       <div className="space-y-2">
+        {currentStatus === 'COMPLETED' && !isGuestAccess && (
+          <Button fullWidth onClick={() => setReviewSheetOpen(true)}>
+            Valorar pedido
+          </Button>
+        )}
         {access && (
           <Button fullWidth variant="outline" loading={refreshing} onClick={() => void refresh()}>
             Actualizar estado
@@ -191,6 +211,17 @@ export function OrderPage() {
           Seguir comprando
         </Link>
       </div>
+
+      <ReviewSheet
+        open={reviewSheetOpen}
+        onClose={() => setReviewSheetOpen(false)}
+        state={reviews.state}
+        loading={reviews.loading}
+        loadError={reviews.error}
+        submitting={reviews.submitting}
+        onReload={reviews.reload}
+        onSubmit={reviews.submit}
+      />
     </div>
   )
 }

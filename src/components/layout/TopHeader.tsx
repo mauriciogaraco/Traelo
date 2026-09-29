@@ -2,22 +2,23 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { getCartItemCount } from '../../features/cart'
 import { useCartStore } from '../../store/cartStore'
 import { useAuth } from '../../hooks/useAuth'
+import { selectUnreadCount, useNotificationsStore } from '../../store/notificationsStore'
 import { AddressBar } from '../address/AddressBar'
 import { Icon } from '../ui/Icon'
 import { Logo } from '../ui/Logo'
 import { NAV_TABS, cartBadge, isTabActive } from './navigation'
 
 /**
- * Header compartido — `TopHeader` de la app móvil: logo, dirección de entrega y "Mi cuenta".
- * En escritorio (lg+) suma la navegación principal y el carrito, que en teléfono van en la barra
- * flotante.
+ * Header compartido — `TopHeader` de la app móvil: logo, dirección de entrega, campana de
+ * notificaciones y "Mi cuenta". En escritorio (lg+) suma la navegación principal y el carrito,
+ * que en teléfono van en la barra flotante.
  *
  * "Mi cuenta" lleva a `/cuenta`: con sesión muestra la inicial del nombre; sin sesión, el ícono.
- * Pendiente: campana de notificaciones.
  */
 export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) {
   const { pathname } = useLocation()
   const itemCount = useCartStore((state) => getCartItemCount(state.items))
+  const unreadCount = useNotificationsStore(selectUnreadCount)
   const { isAuthenticated, customer } = useAuth()
   // En escritorio el orden es el habitual de la web (Inicio primero); en la barra flotante Home va al centro.
   const desktopTabs = [...NAV_TABS.filter((tab) => tab.to === '/'), ...NAV_TABS.filter((tab) => tab.to !== '/' && !tab.cart)]
@@ -71,6 +72,19 @@ export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) 
           {itemCount > 0 && (
             <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-info text-white text-[10px] font-bold flex items-center justify-center">
               {cartBadge(itemCount)}
+            </span>
+          )}
+        </Link>
+
+        <Link
+          to="/notificaciones"
+          aria-label={unreadCount > 0 ? `Notificaciones, ${unreadCount} sin leer` : 'Notificaciones'}
+          className="relative w-10 h-10 shrink-0 rounded-full bg-primary-soft text-primary flex items-center justify-center hover:brightness-95 transition"
+        >
+          <Icon name="bell" size={20} filled={unreadCount > 0} />
+          {unreadCount > 0 && (
+            <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-info text-white text-[10px] font-bold flex items-center justify-center">
+              {cartBadge(unreadCount)}
             </span>
           )}
         </Link>

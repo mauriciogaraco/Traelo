@@ -2,16 +2,19 @@ import { createCheckoutOrder } from '../api/checkout'
 import { ApiError } from '../api/ApiError'
 import { quoteCheckout } from '../api/rewards'
 import { buildBusinessesInput, buildCheckoutInput, type BuildCheckoutInputParams } from '../features/checkout/buildCheckoutInput'
+import { isRedemptionError, redemptionErrorMessage } from '../features/rewards'
 import { useCartStore, type CartItem } from '../store/cartStore'
 import { useGuestOrdersStore, useGuestProfileStore, useOrderStore } from '../store/guestStore'
 import type { CartChangeDetail, CartChangedErrorDetails, Order } from '../types/backend/order'
-import type { OrderQuote } from '../types/backend/rewards'
+import type { OrderQuote, RedemptionRequest } from '../types/backend/rewards'
 import { notifyOrderToTelegram } from './orderNotifyService'
+import { refreshPoints } from './pointsService'
+import { clearRedemption, refreshRewards } from './rewardsService'
 
 /*
- * Checkout contra el backend — `checkoutService`, `rewardsService.requestCheckoutQuote` y
- * `cartCheckService` de la app móvil. El servidor es la autoridad del dinero: aquí solo se arma el
- * pedido (sin precios) y se traducen los errores. Canje de puntos y cuenta llegan en la fase 5.
+ * Checkout contra el backend — `checkoutService`, `rewardsService` y `cartCheckService` de la app
+ * móvil. El servidor es la autoridad del dinero: aquí solo se arma el pedido (sin precios) y se
+ * traducen los errores.
  */
 
 // ── Cotización ────────────────────────────────────────────────────────────────
@@ -20,10 +23,14 @@ export type CheckoutQuoteResult =
   | { ok: true; quote: OrderQuote }
   | { ok: false; code: string; message: string; details?: unknown }
 
-/** Cotización de solo lectura del carrito (productos, empaque, mensajería, servicio y total). No crea nada. */
-export async function requestCheckoutQuote(items: CartItem[]): Promise<CheckoutQuoteResult> {
+/**
+ * Cotización de solo lectura del carrito (productos, empaque, mensajería, servicio, canje y
+ * total) — la usa cualquier checkout, con o sin canje, para mostrar el total autoritativo antes
+ * de confirmar. No crea ni descuenta nada.
+ */
+export async function requestCheckoutQuote(items: CartItem[], redemption?: RedemptionRequest): Promise<CheckoutQuoteResult> {
   try {
-    return { ok: true, quote: await quoteCheckout({ businesses: buildBusinessesInput(items) }) }
+    return { ok: true, quote: await quoteCheckout({ businesses: buildBusinessesInput(items), redemption }) }
   } catch (error) {
     if (error instanceof ApiError) return { ok: false, code: error.code, message: error.message, details: error.details }
     return { ok: false, code: 'UNKNOWN_ERROR', message: 'No pudimos calcular el total. Revisa tu conexión.' }
@@ -54,8 +61,8 @@ export const isRemovableIssue = (issue: CartChangeDetail) => REMOVABLE_REASONS.h
  * que crear el pedido): un agotado o un local cerrado se ven en el carrito, donde se arreglan. Nunca
  * bloquea por otra causa: sin red o con error del servidor se sigue (el backend valida al confirmar).
  */
-export async function precheckCart(items: CartItem[]): Promise<CartPrecheck> {
-  const result = await requestCheckoutQuote(items)
+export async function precheckCart(items: CartItem[], redemption?: RedemptionRequest): Promise<CartPrecheck> {
+  const result = await requestCheckoutQuote(items, redemption)
   if (result.ok) {
     useCartStore.getState().setCheckoutIssues([])
     return { ok: true }
@@ -115,12 +122,25 @@ export async function submitCheckout(params: BuildCheckoutInputParams): Promise<
     }
     useCartStore.getState().clearCart()
     useOrderStore.getState().setLastCreatedOrder(order)
+    if (params.redemption) {
+      // Los puntos ya se descontaron en el servidor junto con el pedido: se actualiza el saldo y las recompensas.
+      clearRedemption()
+      void refreshPoints()
+      void refreshRewards()
+    }
     return { ok: true, order, isGuest }
   } catch (err) {
     if (err instanceof ApiError) {
       if (err.code === 'CART_CHANGED') {
         const details = err.details as CartChangedErrorDetails | undefined
         useCartStore.getState().setCheckoutIssues(details?.changes ?? [])
+      }
+      if (isRedemptionError(err.code)) {
+        // El canje ya no vale (saldo distinto, recompensa inactiva…): se quita, se actualiza y se explica.
+        clearRedemption()
+        void refreshPoints()
+        void refreshRewards()
+        return { ok: false, code: err.code, message: redemptionErrorMessage(err.code, err.message) }
       }
       return { ok: false, code: err.code, message: err.message }
     }

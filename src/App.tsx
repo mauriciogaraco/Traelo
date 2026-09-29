@@ -11,6 +11,8 @@ import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
 import { RefreshModal } from "./components/ui/RefreshModal";
 import { useCatalogBootstrap } from "./hooks/useCatalogBootstrap";
+import { useNotificationsBootstrap } from "./hooks/useNotificationsBootstrap";
+import { usePointsBootstrap } from "./hooks/usePointsBootstrap";
 import { useSessionBootstrap } from "./hooks/useSessionBootstrap";
 import { ProductRoute } from "./pages/ProductRoute";
 
@@ -31,6 +33,9 @@ const LoginPage = lazy(() => import("./pages/LoginPage").then((m) => ({ default:
 const RegisterPage = lazy(() => import("./pages/RegisterPage").then((m) => ({ default: m.RegisterPage })));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage").then((m) => ({ default: m.ForgotPasswordPage })));
 const DeleteAccountPage = lazy(() => import("./pages/DeleteAccountPage").then((m) => ({ default: m.DeleteAccountPage })));
+const ReviewsPage = lazy(() => import("./pages/ReviewsPage").then((m) => ({ default: m.ReviewsPage })));
+const PointsPage = lazy(() => import("./pages/PointsPage").then((m) => ({ default: m.PointsPage })));
+const NotificationsPage = lazy(() => import("./pages/NotificationsPage").then((m) => ({ default: m.NotificationsPage })));
 
 /** Arranque del catálogo (caché local + sincronización con el backend), una sola vez. */
 function CatalogBootstrap() {
@@ -60,11 +65,25 @@ function SessionBootstrap() {
   return null;
 }
 
+/** Mantiene al día el saldo de puntos y las recompensas (ver `usePointsBootstrap`). */
+function PointsBootstrap() {
+  usePointsBootstrap();
+  return null;
+}
+
+/** Alimenta el buzón local con los Web Push que recibe este navegador (ver `useNotificationsBootstrap`). */
+function NotificationsBootstrap() {
+  useNotificationsBootstrap();
+  return null;
+}
+
 function Providers({ children }: { children: ReactNode }) {
   return (
     <ToastProvider>
       <CatalogBootstrap />
       <SessionBootstrap />
+      <PointsBootstrap />
+      <NotificationsBootstrap />
       {children}
     </ToastProvider>
   );
@@ -111,6 +130,9 @@ export default function App() {
               <Route path="/cuenta" element={<AccountPage />} />
               <Route path="/direcciones" element={<AddressesPage />} />
               <Route path="/favoritos" element={<FavoritesPage />} />
+              <Route path="/valoraciones" element={<Narrow><ReviewsPage /></Narrow>} />
+              <Route path="/puntos" element={<Narrow><PointsPage /></Narrow>} />
+              <Route path="/notificaciones" element={<Narrow><NotificationsPage /></Narrow>} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/registro" element={<RegisterPage />} />
               <Route path="/recuperar" element={<ForgotPasswordPage />} />
