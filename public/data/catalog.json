@@ -12711,7 +12711,7 @@
       "image": "🛢️",
       "photo": "/assets/images/products/DAF/Aceite 900 ml , 3700.jpg",
       "price": 3000,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-002",
@@ -12815,7 +12815,7 @@
       "image": "🍾",
       "photo": "/assets/images/products/DAF/MIni Vodka 200 ml --920.jpg",
       "price": 920,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-010",
@@ -12918,7 +12918,7 @@
       "longDescription": "Refresco de lata.",
       "image": "🥤",
       "photo": "/assets/images/products/DAF/Refresco de la ta 415.jpg",
-      "price": 480,
+      "price": 490,
       "stockStatus": "disponible"
     },
     {
@@ -12957,7 +12957,7 @@
       "longDescription": "Vakik Vodka Energy. Precio de 490 CUP por unidad; comprando por caja, 480 CUP por unidad.",
       "image": "🥤",
       "photo": "/assets/images/products/DAF/Vakik Vodka Energy -490 por unidad , 480 por caja.jpg",
-      "price": 490,
+      "price": 760,
       "stockStatus": "disponible"
     },
     {
@@ -13010,7 +13010,7 @@
       "image": "🍩",
       "photo": "/assets/images/products/DAF/donut 180.jpg",
       "price": 210,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-025",
@@ -13074,7 +13074,7 @@
       "longDescription": "Nutella Marwa, se vende por unidad.",
       "image": "🍫",
       "photo": "/assets/images/products/DAF/nutella Marwa 1100.jpg",
-      "price": 1230,
+      "price": 1150,
       "stockStatus": "disponible"
     },
     {
@@ -13096,11 +13096,11 @@
       "businessId": "mercado-daf",
       "businessName": "Mercado DAF",
       "category": "Alimentos",
-      "shortDescription": "350 por unidad, 340 por caja.",
-      "longDescription": "Espaguetis. Precio de 350 CUP por unidad; comprando por caja, 340 CUP por unidad.",
+      "shortDescription": "Paquete de 500 gramos.",
+      "longDescription": "Espaguetis, paquete de 500 gramos.",
       "image": "🍝",
       "photo": "/assets/images/products/DAF/spaguettis 350 por unidad , 340 por caja.jpg",
-      "price": 350,
+      "price": 550,
       "stockStatus": "agotado"
     },
     {
@@ -13139,7 +13139,7 @@
       "longDescription": "Azúcar, precio por libra.",
       "image": "🍬",
       "photo": "/assets/images/products/DAF/Azúcar por libra -- 480.jpg",
-      "price": 360,
+      "price": 470,
       "stockStatus": "agotado"
     },
     {
@@ -13256,7 +13256,7 @@
       "longDescription": "Frijoles negros, precio por libra.",
       "image": "🫘",
       "photo": "/assets/images/products/DAF/Frijoles negros (por libra) --430.jpg",
-      "price": 430,
+      "price": 970,
       "stockStatus": "disponible"
     },
     {
@@ -13282,8 +13282,8 @@
       "longDescription": "Harina, precio por libra.",
       "image": "🌾",
       "photo": "/assets/images/products/DAF/Harina por libras --400.jpg",
-      "price": 400,
-      "stockStatus": "agotado"
+      "price": 370,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-046",
@@ -13308,7 +13308,7 @@
       "longDescription": "Jabón de lavar Ríos, se vende por unidad.",
       "image": "🧼",
       "photo": "/assets/images/products/DAF/Jabón de Lavar Rios -420.jpg",
-      "price": 420,
+      "price": 490,
       "stockStatus": "agotado"
     },
     {
@@ -13347,8 +13347,8 @@
       "longDescription": "Juego de shampoo y acondicionador.",
       "image": "🧴",
       "photo": "/assets/images/products/DAF/Juego de Shampoo y Acondicionador -- 2000.jpg",
-      "price": 2000,
-      "stockStatus": "disponible"
+      "price": 1300,
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-051",
@@ -13412,7 +13412,7 @@
       "longDescription": "Zumo de naranja agria, se vende por unidad.",
       "image": "🍊",
       "photo": "/assets/images/products/DAF/Naranja Agria (Zumo ) - 290.jpg",
-      "price": 290,
+      "price": 320,
       "stockStatus": "disponible"
     },
     {
@@ -13425,7 +13425,7 @@
       "longDescription": "Pasta dental Dentix, se vende por unidad.",
       "image": "🪥",
       "photo": "/assets/images/products/DAF/Pasta dental dentix --460.jpg",
-      "price": 420,
+      "price": 510,
       "stockStatus": "disponible"
     },
     {
@@ -13438,8 +13438,8 @@
       "longDescription": "Tubo de picadillo El Cocinerito, se vende por unidad.",
       "image": "🥩",
       "photo": "/assets/images/products/DAF/Picadillo de tubo -- 800.jpg",
-      "price": 670,
-      "stockStatus": "disponible"
+      "price": 700,
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-058",
@@ -13516,7 +13516,7 @@
       "longDescription": "Vinagre claro, se vende por unidad.",
       "image": "🍶",
       "photo": "/assets/images/products/DAF/Vinagre claro 290.jpg",
-      "price": 300,
+      "price": 310,
       "stockStatus": "disponible"
     },
     {
@@ -13529,7 +13529,7 @@
       "longDescription": "Vinagre de vino tinto, se vende por unidad.",
       "image": "🍶",
       "photo": "/assets/images/products/DAF/Vinagre de vino tinto - 290.jpg",
-      "price": 300,
+      "price": 310,
       "stockStatus": "disponible"
     },
     {
@@ -13542,7 +13542,7 @@
       "longDescription": "Vino seco, se vende por unidad.",
       "image": "🍷",
       "photo": "/assets/images/products/DAF/Vino seco 270.jpg",
-      "price": 330,
+      "price": 310,
       "stockStatus": "disponible"
     },
     {
@@ -13555,8 +13555,8 @@
       "longDescription": "Yogurt probiótico, envase de 4 litros.",
       "image": "🥛",
       "photo": "/assets/images/products/DAF/Yogurt Probiótico 4 Litros , 3500 cup.jpg",
-      "price": 8500,
-      "stockStatus": "agotado"
+      "price": 8800,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-067",
@@ -13581,7 +13581,7 @@
       "longDescription": "Zumo de limón, se vende por unidad.",
       "image": "🍋",
       "photo": "/assets/images/products/DAF/Zumo de Limón 290.jpg",
-      "price": 290,
+      "price": 320,
       "stockStatus": "disponible"
     },
     {
@@ -13646,7 +13646,7 @@
       "longDescription": "Gel de baño, se vende por unidad.",
       "image": "🧴",
       "photo": "/assets/images/products/DAF/gel de baño -- 850.jpg",
-      "price": 730,
+      "price": 700,
       "stockStatus": "disponible"
     },
     {
@@ -13673,7 +13673,7 @@
       "image": "🍗",
       "photo": "/assets/images/products/DAF/jabas de pollo 3 lbs --2600.jpg",
       "price": 2300,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-076",
@@ -13737,7 +13737,7 @@
       "longDescription": "Protectores, paquete de 30 unidades.",
       "image": "🧴",
       "photo": "/assets/images/products/DAF/protectores , paquete de 30 unidades --420.jpg",
-      "price": 380,
+      "price": 360,
       "stockStatus": "disponible"
     },
     {
@@ -13763,7 +13763,7 @@
       "longDescription": "Detergente líquido para lavar, se vende por unidad.",
       "image": "🧴",
       "photo": "/assets/images/products/DAF/detergente líquido para lavar --900.jpg",
-      "price": 900,
+      "price": 640,
       "stockStatus": "disponible"
     },
     {
@@ -13777,7 +13777,7 @@
       "image": "🥛",
       "photo": "/assets/images/products/DAF/leche condensada -- 900.jpg",
       "price": 900,
-      "stockStatus": "agotado"
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-084",
@@ -13789,7 +13789,7 @@
       "longDescription": "Chorizo, se vende por unidad.",
       "image": "🌭",
       "price": 250,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-085",
@@ -13812,8 +13812,8 @@
       "shortDescription": "Precio por cartón.",
       "longDescription": "Cartón de huevo, se vende por cartón.",
       "image": "🥚",
-      "price": 4250,
-      "stockStatus": "agotado"
+      "price": 4100,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-087",
@@ -13824,7 +13824,7 @@
       "shortDescription": "Precio por unidad.",
       "longDescription": "Leche evaporada, se vende por unidad.",
       "image": "🥛",
-      "price": 760,
+      "price": 800,
       "stockStatus": "disponible"
     },
     {
@@ -13848,7 +13848,7 @@
       "shortDescription": "Precio por unidad.",
       "longDescription": "Pasta de tomate, se vende por unidad.",
       "image": "🍅",
-      "price": 600,
+      "price": 765,
       "stockStatus": "disponible"
     },
     {
@@ -13887,7 +13887,7 @@
       "longDescription": "Ron 5 Shot, botella de 750 ml.",
       "image": "🥃",
       "photo": "/assets/images/products/DAF/Ron 5 shots.jpg",
-      "price": 3950,
+      "price": 3400,
       "stockStatus": "disponible"
     },
     {
@@ -13994,7 +13994,7 @@
       "longDescription": "Arroz El Rey del Arroz, paquete de 1 kg.",
       "image": "🍚",
       "photo": "/assets/images/products/DAF/bolsa de arroz 1 kg 800.jpg",
-      "price": 740,
+      "price": 850,
       "stockStatus": "disponible"
     },
     {
@@ -14065,7 +14065,7 @@
       "image": "🥫",
       "photo": "/assets/images/products/DAF/mayonesa 400 gramos1860.jpg",
       "price": 1630,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-106",
@@ -14077,7 +14077,7 @@
       "longDescription": "Melocotón en almíbar Marwa, lata.",
       "image": "🍑",
       "photo": "/assets/images/products/DAF/melocotón en conserva 810.jpg",
-      "price": 730,
+      "price": 830,
       "stockStatus": "disponible"
     },
     {
@@ -14103,8 +14103,8 @@
       "longDescription": "Paleticas de helado Cid, sabor chocolate.",
       "image": "🍦",
       "photo": "/assets/images/products/DAF/paleticas Cid 580.jpg",
-      "price": 580,
-      "stockStatus": "agotado"
+      "price": 620,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-109",
@@ -14127,7 +14127,7 @@
       "shortDescription": "Precio por unidad.",
       "longDescription": "Vinagre de Frutas, se vende por unidad.",
       "image": "🧴",
-      "price": 300,
+      "price": 310,
       "stockStatus": "disponible"
     },
     {
@@ -14154,7 +14154,7 @@
       "image": "🌶️",
       "photo": "/assets/images/products/DAF/picantón habanero 180 cup.jpg",
       "price": 180,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
     },
     {
       "id": "daf-113",
@@ -14316,7 +14316,7 @@
       "shortDescription": "Paquete de 500 g.",
       "longDescription": "Coditos, paquete de 500 g.",
       "image": "🍝",
-      "price": 510,
+      "price": 550,
       "stockStatus": "disponible"
     },
     {
@@ -14412,8 +14412,8 @@
       "shortDescription": "Precio por unidad.",
       "longDescription": "Picadillo MDM, se vende por unidad.",
       "image": "🥩",
-      "price": 580,
-      "stockStatus": "agotado"
+      "price": 620,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-134",
@@ -14424,8 +14424,8 @@
       "shortDescription": "Precio por unidad.",
       "longDescription": "Detergente friegasuelos, se vende por unidad.",
       "image": "🧴",
-      "price": 0,
-      "stockStatus": "agotado"
+      "price": 490,
+      "stockStatus": "disponible"
     },
     {
       "id": "daf-135",
@@ -14449,7 +14449,247 @@
       "longDescription": "Chorizo, se vende por unidad.",
       "image": "🌭",
       "price": 240,
-      "stockStatus": "disponible"
+      "stockStatus": "agotado"
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-137",
+      "name": "Ketchup",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Ketchup, se vende por unidad.",
+      "image": "🥫",
+      "price": 670
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-138",
+      "name": "Bandeja de Alitas de Pollo",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por bandeja.",
+      "longDescription": "Bandeja de alitas de pollo.",
+      "image": "🍗",
+      "price": 1600
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-139",
+      "name": "Mostaza",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Mostaza, se vende por unidad.",
+      "image": "🥫",
+      "price": 970
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-140",
+      "name": "Toallas Íntimas",
+      "category": "Aseo",
+      "shortDescription": "Precio por paquete.",
+      "longDescription": "Toallas íntimas, se venden por paquete.",
+      "image": "🧻",
+      "price": 850
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-141",
+      "name": "Malta Morena",
+      "category": "Bebidas",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Malta morena, se vende por unidad.",
+      "image": "🥤",
+      "price": 470
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-142",
+      "name": "Cerveza Sple Birra",
+      "category": "Bebidas",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Cerveza Sple Birra, se vende por unidad.",
+      "image": "🍺",
+      "price": 480
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-143",
+      "name": "Desengrasante",
+      "category": "Aseo",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Desengrasante, se vende por unidad.",
+      "image": "🧴",
+      "price": 490
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-144",
+      "name": "Desincrustante de Baño",
+      "category": "Aseo",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Desincrustante de baño, se vende por unidad.",
+      "image": "🧴",
+      "price": 520
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-145",
+      "name": "Huevo (por unidad)",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Huevo, se vende por unidad.",
+      "image": "🥚",
+      "price": 140
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-146",
+      "name": "Atún Lucy (170 g)",
+      "category": "Alimentos",
+      "shortDescription": "Lata de 170 g.",
+      "longDescription": "Atún Lucy, lata de 170 g.",
+      "image": "🐟",
+      "price": 900
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-147",
+      "name": "Fanguito",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Fanguito, se vende por unidad.",
+      "image": "🍫",
+      "price": 1020
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-148",
+      "name": "Mortadella de Pollo (enlatada)",
+      "category": "Cárnicos",
+      "shortDescription": "Enlatada.",
+      "longDescription": "Mortadella de pollo enlatada.",
+      "image": "🥓",
+      "price": 880
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-149",
+      "name": "Bolsa Piñatera",
+      "category": "Confituras",
+      "shortDescription": "Precio por bolsa.",
+      "longDescription": "Bolsa piñatera, surtido de confituras.",
+      "image": "🍬",
+      "price": 400
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "agotado",
+      "id": "daf-150",
+      "name": "Jamón Vicky",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Jamón Vicky, se vende por unidad.",
+      "image": "🥓",
+      "price": 970
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-151",
+      "name": "Chorizo Criollo (paquete de 3)",
+      "category": "Cárnicos",
+      "shortDescription": "Paquete de 3 unidades.",
+      "longDescription": "Chorizo criollo, paquete de 3 unidades.",
+      "image": "🌭",
+      "price": 1810
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "agotado",
+      "id": "daf-152",
+      "name": "Mortadella Delicias",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Mortadella Delicias, se vende por unidad.",
+      "image": "🥓",
+      "price": 1720
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "agotado",
+      "id": "daf-153",
+      "name": "Salame Línea Económica",
+      "category": "Cárnicos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Salame línea económica, se vende por unidad.",
+      "image": "🥓",
+      "price": 970
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-154",
+      "name": "Café Islagrande",
+      "category": "Alimentos",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Café Islagrande, se vende por unidad.",
+      "image": "☕",
+      "price": 3100
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "disponible",
+      "id": "daf-155",
+      "name": "Papel Higiénico Bingo",
+      "category": "Aseo",
+      "shortDescription": "Precio por unidad.",
+      "longDescription": "Papel higiénico Bingo, se vende por unidad.",
+      "image": "🧻",
+      "price": 850
+    },
+    {
+      "businessId": "mercado-daf",
+      "businessName": "Mercado DAF",
+      "stockStatus": "agotado",
+      "id": "daf-156",
+      "name": "Juego de Shampoo y Acondicionador (1 litro)",
+      "category": "Aseo",
+      "shortDescription": "Envase de 1 litro.",
+      "longDescription": "Juego de shampoo y acondicionador, envase de 1 litro.",
+      "image": "🧴",
+      "price": 2700
     },
     {
       "id": "em-001",
