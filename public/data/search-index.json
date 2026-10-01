@@ -12993,7 +12993,7 @@
     "shortDescription": "Queso gouda, tocino, salsa de la casa y papas fritas.",
     "image": "🍔",
     "photo": "/assets/images/products/Ella y Yo/Hamburguesa de cerdo.jpg",
-    "price": 1300,
+    "price": 1400,
     "packaging": [
       {
         "name": "Termopack",
@@ -13017,7 +13017,7 @@
     "shortDescription": "Doble queso gouda, tocino, salsa de la casa y papas fritas.",
     "image": "🍔",
     "photo": "/assets/images/products/Ella y Yo/Hamburguesa Doble.jpg",
-    "price": 1800,
+    "price": 1900,
     "packaging": [
       {
         "name": "Termopack",
@@ -13040,7 +13040,13 @@
     "category": "Pizzas",
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1000,
+    "price": 1100,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13073,7 +13079,13 @@
     "category": "Pizzas",
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1200,
+    "price": 1300,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13107,7 +13119,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
-    "price": 1350,
+    "price": 1450,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13141,7 +13159,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
-    "price": 1400,
+    "price": 1500,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13175,7 +13199,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
-    "price": 1500,
+    "price": 1600,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13209,7 +13239,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
-    "price": 1700,
+    "price": 1800,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13242,7 +13278,13 @@
     "category": "Pizzas",
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1100,
+    "price": 1200,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13275,7 +13317,13 @@
     "category": "Pizzas",
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1350,
+    "price": 1450,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13308,7 +13356,13 @@
     "category": "Pizzas",
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1550,
+    "price": 1650,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13342,7 +13396,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
-    "price": 1600,
+    "price": 1700,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13376,7 +13436,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
-    "price": 1750,
+    "price": 1850,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13410,7 +13476,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
-    "price": 1800,
+    "price": 1900,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13444,7 +13516,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
-    "price": 2000,
+    "price": 2100,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -13478,7 +13556,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Jimagua.jpg",
-    "price": 550,
+    "price": 600,
     "packaging": [
       {
         "name": "Termopack",
@@ -13518,7 +13596,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/3 Gracias.jpg",
-    "price": 700,
+    "price": 750,
     "packaging": [
       {
         "name": "Termopack",
@@ -13558,7 +13636,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Ice Cream-Helado.jpg",
-    "price": 800,
+    "price": 850,
     "packaging": [
       {
         "name": "Termopack",
@@ -13598,7 +13676,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍰",
     "photo": "/assets/images/products/Ella y Yo/cake a la moda-Helado.jpg",
-    "price": 900,
+    "price": 950,
     "packaging": [
       {
         "name": "Termopack",
@@ -13638,7 +13716,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Copa Lolita -Helado.jpg",
-    "price": 950,
+    "price": 1000,
     "packaging": [
       {
         "name": "Termopack",
@@ -13678,7 +13756,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/cake supreme -helado.jpg",
-    "price": 800,
+    "price": 850,
     "packaging": [
       {
         "name": "Termopack",
@@ -13718,7 +13796,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Super Supreme -Helado.jpg",
-    "price": 900,
+    "price": 950,
     "packaging": [
       {
         "name": "Termopack",
@@ -13757,7 +13835,7 @@
     "category": "Helados",
     "shortDescription": "Helado CID.",
     "image": "🍨",
-    "price": 1300,
+    "price": 1350,
     "packaging": [
       {
         "name": "Termopack",
@@ -13797,7 +13875,7 @@
     "shortDescription": "Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Super especial-Helado.jpg",
-    "price": 1800,
+    "price": 1850,
     "packaging": [
       {
         "name": "Termopack",
@@ -13836,10 +13914,14 @@
     "category": "Helados",
     "shortDescription": "Helado CID.",
     "image": "🥤",
-    "price": 1000,
+    "price": 1050,
     "packaging": [
       {
         "name": "Termopack",
+        "price": 200
+      },
+      {
+        "name": "Vaso",
         "price": 200
       }
     ],
@@ -13875,10 +13957,14 @@
     "category": "Helados",
     "shortDescription": "Helado CID.",
     "image": "🥤",
-    "price": 1250,
+    "price": 1300,
     "packaging": [
       {
         "name": "Termopack",
+        "price": 200
+      },
+      {
+        "name": "Vaso",
         "price": 200
       }
     ],

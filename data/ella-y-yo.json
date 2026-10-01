@@ -9,7 +9,7 @@
     "longDescription": "Pan con hamburguesa de cerdo, queso gouda, tocino, salsa de la casa y papas fritas.",
     "image": "🍔",
     "photo": "/assets/images/products/Ella y Yo/Hamburguesa de cerdo.jpg",
-    "price": 1300,
+    "price": 1400,
     "packaging": [
       {
         "name": "Termopack",
@@ -34,7 +34,7 @@
     "longDescription": "Pan con doble hamburguesa de cerdo, doble queso gouda, tocino, salsa de la casa y papas fritas.",
     "image": "🍔",
     "photo": "/assets/images/products/Ella y Yo/Hamburguesa Doble.jpg",
-    "price": 1800,
+    "price": 1900,
     "packaging": [
       {
         "name": "Termopack",
@@ -58,7 +58,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "longDescription": "Pizza Queso Criollo — Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1000,
+    "price": 1100,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -92,7 +98,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "longDescription": "Pizza Queso Doble Criollo — Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1200,
+    "price": 1300,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -127,7 +139,13 @@
     "longDescription": "Pizza de Jamón Bravo (Criollo) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
-    "price": 1350,
+    "price": 1450,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -162,7 +180,13 @@
     "longDescription": "Pizza de Peperoni (Criollo) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
-    "price": 1400,
+    "price": 1500,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -197,7 +221,13 @@
     "longDescription": "Pizza de Chorizo Bela (Criollo) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
-    "price": 1500,
+    "price": 1600,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -232,7 +262,13 @@
     "longDescription": "Pizza de Atún (Criollo) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
-    "price": 1700,
+    "price": 1800,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -266,7 +302,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "longDescription": "Pizza de Perrito (Criollo) — Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1100,
+    "price": 1200,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -300,7 +342,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "longDescription": "Pizza Queso Gouda — Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1350,
+    "price": 1450,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -334,7 +382,13 @@
     "shortDescription": "Pizza de 33 cm.",
     "longDescription": "Pizza Doble Queso Gouda — Pizza de 33 cm.",
     "image": "🍕",
-    "price": 1550,
+    "price": 1650,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -369,7 +423,13 @@
     "longDescription": "Pizza de Jamón Bravo (Gouda) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de Jamón.jpg",
-    "price": 1600,
+    "price": 1700,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -404,7 +464,13 @@
     "longDescription": "Pizza de Peperoni (Gouda) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de peperoni.jpg",
-    "price": 1750,
+    "price": 1850,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -439,7 +505,13 @@
     "longDescription": "Pizza de Chorizo Bela (Gouda) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de chorizo.jpg",
-    "price": 1800,
+    "price": 1900,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -474,7 +546,13 @@
     "longDescription": "Pizza de Atún (Gouda) — Pizza de 33 cm.",
     "image": "🍕",
     "photo": "/assets/images/products/Ella y Yo/pizza de atún.jpg",
-    "price": 2000,
+    "price": 2100,
+    "packaging": [
+      {
+        "name": "Caja",
+        "price": 250
+      }
+    ],
     "addons": [
       {
         "name": "Jamón",
@@ -509,7 +587,7 @@
     "longDescription": "Jimagua — Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Jimagua.jpg",
-    "price": 550,
+    "price": 600,
     "packaging": [
       {
         "name": "Termopack",
@@ -550,7 +628,7 @@
     "longDescription": "Tres Gracias — Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/3 Gracias.jpg",
-    "price": 700,
+    "price": 750,
     "packaging": [
       {
         "name": "Termopack",
@@ -591,7 +669,7 @@
     "longDescription": "Ice Cream — Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Ice Cream-Helado.jpg",
-    "price": 800,
+    "price": 850,
     "packaging": [
       {
         "name": "Termopack",
@@ -632,7 +710,7 @@
     "longDescription": "Cake a la Moda — Helado CID.",
     "image": "🍰",
     "photo": "/assets/images/products/Ella y Yo/cake a la moda-Helado.jpg",
-    "price": 900,
+    "price": 950,
     "packaging": [
       {
         "name": "Termopack",
@@ -673,7 +751,7 @@
     "longDescription": "Copa Lolita — Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Copa Lolita -Helado.jpg",
-    "price": 950,
+    "price": 1000,
     "packaging": [
       {
         "name": "Termopack",
@@ -714,7 +792,7 @@
     "longDescription": "Supreme — Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/cake supreme -helado.jpg",
-    "price": 800,
+    "price": 850,
     "packaging": [
       {
         "name": "Termopack",
@@ -755,7 +833,7 @@
     "longDescription": "Super Supreme — Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Super Supreme -Helado.jpg",
-    "price": 900,
+    "price": 950,
     "packaging": [
       {
         "name": "Termopack",
@@ -795,7 +873,7 @@
     "shortDescription": "Helado CID.",
     "longDescription": "Especial — Helado CID.",
     "image": "🍨",
-    "price": 1300,
+    "price": 1350,
     "packaging": [
       {
         "name": "Termopack",
@@ -836,7 +914,7 @@
     "longDescription": "Super Especial — Helado CID.",
     "image": "🍨",
     "photo": "/assets/images/products/Ella y Yo/Super especial-Helado.jpg",
-    "price": 1800,
+    "price": 1850,
     "packaging": [
       {
         "name": "Termopack",
@@ -876,10 +954,14 @@
     "shortDescription": "Helado CID.",
     "longDescription": "Batido de Helado — Helado CID.",
     "image": "🥤",
-    "price": 1000,
+    "price": 1050,
     "packaging": [
       {
         "name": "Termopack",
+        "price": 200
+      },
+      {
+        "name": "Vaso",
         "price": 200
       }
     ],
@@ -916,10 +998,14 @@
     "shortDescription": "Helado CID.",
     "longDescription": "Batido de Helado Especial — Helado CID.",
     "image": "🥤",
-    "price": 1250,
+    "price": 1300,
     "packaging": [
       {
         "name": "Termopack",
+        "price": 200
+      },
+      {
+        "name": "Vaso",
         "price": 200
       }
     ],
