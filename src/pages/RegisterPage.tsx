@@ -14,6 +14,7 @@ import {
   validatePhone,
 } from '../features/auth/validation'
 import { sanitizeCubanPhone, toCubanE164 } from '../lib/phone'
+import { clearPendingReferralCode, getPendingReferralCode } from '../lib/referralAttribution'
 import { registerAccount } from '../services/authService'
 import { useGuestProfileStore } from '../store/guestStore'
 
@@ -59,7 +60,10 @@ export function RegisterPage() {
         phone: toCubanE164(phone),
         password,
         email: email.trim() || undefined,
+        referralCode: getPendingReferralCode() ?? undefined,
       })
+      // Se gastó (atribuido o no, lo decide el backend): no debe reintentarse en un registro futuro.
+      clearPendingReferralCode()
       showToast(`¡Cuenta creada! Bienvenido, ${customer.name}`, 'success')
       leave()
     } catch (err) {

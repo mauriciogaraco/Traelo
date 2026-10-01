@@ -8,4 +8,5 @@ export * from './customerFavorites';
 export * from './customerOrders';
 export * from './orderAccess';
 export * from './points';
+export * from './referrals';
 export * from './rewards';

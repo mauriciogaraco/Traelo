@@ -30,6 +30,9 @@ export type IconName =
   | 'whatsapp'
   | 'gift'
   | 'storefront'
+  | 'share'
+  | 'copy'
+  | 'trophy'
 
 type Props = Omit<SVGProps<SVGSVGElement>, 'name'> & {
   name: IconName
@@ -175,6 +178,30 @@ function paths(name: IconName, filled: boolean) {
           <path d="M4.5 9.3 5.3 4h13.4l.8 5.3" />
           <path d="M4.3 9.3a1.9 1.9 0 0 0 3.8.2 1.9 1.9 0 0 0 3.8 0 1.9 1.9 0 0 0 3.8 0 1.9 1.9 0 0 0 3.8-.2" />
           <path d="M6 11v9h12v-9M10 20v-5h4v5" />
+        </>
+      )
+    case 'share':
+      return (
+        <>
+          <circle cx="18" cy="5.5" r="2.3" fill={filled ? 'currentColor' : 'none'} />
+          <circle cx="6" cy="12" r="2.3" fill={filled ? 'currentColor' : 'none'} />
+          <circle cx="18" cy="18.5" r="2.3" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M8.1 10.7 15.9 6.7M8.1 13.3l7.8 4" />
+        </>
+      )
+    case 'copy':
+      return (
+        <>
+          <rect x="9" y="9" width="11" height="11" rx="1.6" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M15 9V5.6A1.6 1.6 0 0 0 13.4 4H5.6A1.6 1.6 0 0 0 4 5.6v7.8A1.6 1.6 0 0 0 5.6 15H9" />
+        </>
+      )
+    case 'trophy':
+      return (
+        <>
+          <path fill={filled ? 'currentColor' : 'none'} d="M7 4h10v5a5 5 0 0 1-10 0V4Z" />
+          <path d="M7 5.5H4a2 2 0 0 0 2 4.3M17 5.5h3a2 2 0 0 1-2 4.3" />
+          <path d="M12 14v2.8M9.5 17.3h5l.5 3.2h-6l.5-3.2Z" />
         </>
       )
   }

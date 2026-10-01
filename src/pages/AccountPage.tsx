@@ -23,6 +23,7 @@ const MENU: MenuItem[] = [
   { to: '/direcciones', label: 'Direcciones', icon: 'location', tint: 'bg-primary-soft text-primary' },
   { to: '/favoritos', label: 'Favoritos', icon: 'heart', tint: 'bg-danger/10 text-danger', accountOnly: true },
   { to: '/valoraciones', label: 'Valoraciones', icon: 'star', tint: 'bg-gold-soft text-gold-text', accountOnly: true },
+  { to: '/referidos', label: 'Invita y gana', icon: 'gift', tint: 'bg-success/10 text-success', accountOnly: true },
   { to: '/notificaciones', label: 'Notificaciones', icon: 'bell', tint: 'bg-gold-soft text-gold-text' },
   { to: '/ayuda', label: 'Ayuda', icon: 'help', tint: 'bg-info/10 text-info' },
 ]

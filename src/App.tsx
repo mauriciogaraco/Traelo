@@ -35,6 +35,8 @@ const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage").then(
 const DeleteAccountPage = lazy(() => import("./pages/DeleteAccountPage").then((m) => ({ default: m.DeleteAccountPage })));
 const ReviewsPage = lazy(() => import("./pages/ReviewsPage").then((m) => ({ default: m.ReviewsPage })));
 const PointsPage = lazy(() => import("./pages/PointsPage").then((m) => ({ default: m.PointsPage })));
+const ReferralsPage = lazy(() => import("./pages/ReferralsPage").then((m) => ({ default: m.ReferralsPage })));
+const ReferralLandingPage = lazy(() => import("./pages/ReferralLandingPage").then((m) => ({ default: m.ReferralLandingPage })));
 const NotificationsPage = lazy(() => import("./pages/NotificationsPage").then((m) => ({ default: m.NotificationsPage })));
 
 /** Arranque del catálogo (caché local + sincronización con el backend), una sola vez. */
@@ -132,6 +134,8 @@ export default function App() {
               <Route path="/favoritos" element={<FavoritesPage />} />
               <Route path="/valoraciones" element={<Narrow><ReviewsPage /></Narrow>} />
               <Route path="/puntos" element={<Narrow><PointsPage /></Narrow>} />
+              <Route path="/referidos" element={<Narrow><ReferralsPage /></Narrow>} />
+              <Route path="/r/:code" element={<ReferralLandingPage />} />
               <Route path="/notificaciones" element={<Narrow><NotificationsPage /></Narrow>} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/registro" element={<RegisterPage />} />

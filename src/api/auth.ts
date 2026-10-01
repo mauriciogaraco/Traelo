@@ -9,6 +9,9 @@ export type RegisterInput = {
   phone: string;
   password: string;
   email?: string;
+  // Código de referidos (/r/<código>) con el que entró, si lo hay — ver lib/referralAttribution.
+  // Un código inválido o ya usado nunca bloquea el registro (lo decide el backend en silencio).
+  referralCode?: string;
 };
 
 export function registerCustomer(input: RegisterInput) {

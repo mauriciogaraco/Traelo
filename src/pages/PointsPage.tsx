@@ -17,7 +17,7 @@ function formatDate(iso: string): string {
 function TransactionRow({ item }: { item: PointsTransaction }) {
   const positive = item.points > 0
   const sign = positive ? '+' : '−'
-  const gift = item.type === 'FIRST_ORDER_BONUS' || item.type === 'REDEMPTION'
+  const gift = item.type === 'FIRST_ORDER_BONUS' || item.type === 'REDEMPTION' || item.type === 'REFERRAL_REWARD'
   return (
     <li
       data-testid={`points-row-${item.id}`}

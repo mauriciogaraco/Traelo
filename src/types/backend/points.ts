@@ -7,7 +7,9 @@ export type PointsTransactionType =
   /** Canje de una recompensa (negativo). */
   | 'REDEMPTION'
   /** Devolución de un canje cuando el pedido se cancela (positivo). */
-  | 'REDEMPTION_REFUND';
+  | 'REDEMPTION_REFUND'
+  /** Recompensa del sistema de referidos (referente o referido) — ver types/backend/referral.ts. */
+  | 'REFERRAL_REWARD';
 
 export type PointsTransaction = {
   id: string;
