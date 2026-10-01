@@ -1,5 +1,6 @@
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { GeoJSONSource, Map as MapLibreMap, Marker } from 'maplibre-gl'
+import courierIconUrl from '../../assets/traelo-logomark-white.png'
 import { useReduceMotion } from '../../hooks/useReduceMotion'
 import {
   DEFAULT_MAP_CENTER,
@@ -53,8 +54,13 @@ function courierElement(): HTMLDivElement {
   el.setAttribute('aria-label', 'Ubicación del mensajero')
   el.style.cssText =
     'width:34px;height:34px;border-radius:9999px;display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.35);transition:background .3s'
-  el.innerHTML =
-    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l3-7h5l4 7M9 10l-1-3h3M14 10l1-3h2"/></svg>'
+  // Isotipo de Tráelo (el mismo que mobile — ver Tráelo-App/src/components/CourierMap.tsx): el
+  // marcador del mensajero es la marca, no un ícono genérico de scooter.
+  const img = document.createElement('img')
+  img.src = courierIconUrl
+  img.alt = ''
+  img.style.cssText = 'width:18px;height:18px;object-fit:contain'
+  el.appendChild(img)
   return el
 }
 
