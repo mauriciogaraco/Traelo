@@ -11787,7 +11787,7 @@
       "longDescription": "Papa fresca, precio por libra. Indica la cantidad de libras al confirmar.",
       "image": "🥔",
       "photo": "/assets/images/products/Los Prietos/papa.jpg",
-      "price": 1,
+      "price": 1.1,
       "stockStatus": "disponible"
     },
     {
@@ -11878,7 +11878,7 @@
       "longDescription": "Piña fresca, se vende por unidad.",
       "image": "🍍",
       "photo": "/assets/images/products/Los Prietos/piña.webp",
-      "price": 0.9,
+      "price": 1.1,
       "stockStatus": "disponible"
     },
     {
@@ -11904,7 +11904,7 @@
       "longDescription": "Melón fresco, precio por libra. Indica la cantidad de libras al confirmar.",
       "image": "🍈",
       "photo": "/assets/images/products/Los Prietos/melón.jpg",
-      "price": 0.32,
+      "price": 0.44,
       "stockStatus": "disponible"
     },
     {

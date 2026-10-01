@@ -10222,7 +10222,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🥔",
     "photo": "/assets/images/products/Los Prietos/papa.jpg",
-    "price": 500,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -10306,7 +10306,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍍",
     "photo": "/assets/images/products/Los Prietos/piña.webp",
-    "price": 450,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -10330,7 +10330,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍈",
     "photo": "/assets/images/products/Los Prietos/melón.jpg",
-    "price": 160,
+    "price": 220,
     "stockStatus": "disponible"
   },
   {
