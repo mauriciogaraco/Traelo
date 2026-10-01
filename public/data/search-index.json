@@ -14331,10 +14331,10 @@
     "businessId": "atrevete",
     "businessName": "Atrévete",
     "category": "Alimentos",
-    "shortDescription": "Se vende la pieza completa.",
+    "shortDescription": "Precio por libra. Se vende la pieza completa.",
     "image": "🥩",
     "photo": "/assets/images/products/Atrévete/lomo de cerdo -1600 cup (se vende la pieza completa).jpg",
-    "price": 1725,
+    "price": 1800,
     "stockStatus": "disponible"
   },
   {
