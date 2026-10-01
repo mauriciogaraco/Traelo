@@ -3568,7 +3568,7 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra.",
     "image": "🥩",
-    "price": 1750,
+    "price": 1950,
     "stockStatus": "disponible"
   },
   {
@@ -3579,7 +3579,7 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra, en bistec.",
     "image": "🥩",
-    "price": 1900,
+    "price": 2000,
     "stockStatus": "disponible"
   },
   {

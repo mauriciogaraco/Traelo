@@ -4697,7 +4697,7 @@
       "shortDescription": "Una libra.",
       "longDescription": "Lomo de cerdo, se entrega por libra.",
       "image": "🥩",
-      "price": 3.5,
+      "price": 3.9,
       "stockStatus": "disponible"
     },
     {
@@ -4709,7 +4709,7 @@
       "shortDescription": "Una libra, en bistec.",
       "longDescription": "Lomo de cerdo cortado en bistec, se entrega por libra.",
       "image": "🥩",
-      "price": 3.8,
+      "price": 4,
       "stockStatus": "disponible"
     },
     {
