@@ -3568,7 +3568,7 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra.",
     "image": "🥩",
-    "price": 1750,
+    "price": 1950,
     "stockStatus": "disponible"
   },
   {
@@ -3579,7 +3579,7 @@
     "category": "Cárnicos",
     "shortDescription": "Una libra, en bistec.",
     "image": "🥩",
-    "price": 1900,
+    "price": 2000,
     "stockStatus": "disponible"
   },
   {
@@ -10222,7 +10222,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🥔",
     "photo": "/assets/images/products/Los Prietos/papa.jpg",
-    "price": 500,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -10306,7 +10306,7 @@
     "shortDescription": "Precio por unidad.",
     "image": "🍍",
     "photo": "/assets/images/products/Los Prietos/piña.webp",
-    "price": 450,
+    "price": 550,
     "stockStatus": "disponible"
   },
   {
@@ -10330,7 +10330,7 @@
     "shortDescription": "Precio por libra.",
     "image": "🍈",
     "photo": "/assets/images/products/Los Prietos/melón.jpg",
-    "price": 160,
+    "price": 220,
     "stockStatus": "disponible"
   },
   {
@@ -14331,10 +14331,10 @@
     "businessId": "atrevete",
     "businessName": "Atrévete",
     "category": "Alimentos",
-    "shortDescription": "Se vende la pieza completa.",
+    "shortDescription": "Precio por libra. Se vende la pieza completa.",
     "image": "🥩",
     "photo": "/assets/images/products/Atrévete/lomo de cerdo -1600 cup (se vende la pieza completa).jpg",
-    "price": 1725,
+    "price": 1800,
     "stockStatus": "disponible"
   },
   {
