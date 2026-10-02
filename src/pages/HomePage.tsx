@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { lazy, Suspense, useEffect, useMemo } from 'react'
 import { Navigate, useSearchParams } from 'react-router-dom'
 import { BusinessCard } from '../components/catalog/BusinessCard'
 import { HomeSkeleton } from '../components/catalog/CatalogSkeletons'
@@ -8,6 +8,10 @@ import { ProductCard } from '../components/catalog/ProductCard'
 import { SearchLink } from '../components/catalog/SearchBar'
 import { Rail, Section } from '../components/catalog/Section'
 import { ShareSection } from '../components/home/ShareSection'
+
+// El flyer de la app se baja aparte: no suma peso a la carga inicial del Home.
+const AppDownloadFlyer = lazy(() => import('../components/home/AppDownloadFlyer').then((m) => ({ default: m.AppDownloadFlyer })))
+const AppDownloadBanner = lazy(() => import('../components/home/AppDownloadFlyer').then((m) => ({ default: m.AppDownloadBanner })))
 import { EmptyState } from '../components/ui/EmptyState'
 import { ErrorState } from '../components/ui/ErrorState'
 import {
@@ -119,6 +123,11 @@ export function HomePage() {
         </Section>
       )}
 
+      {/* Acceso rápido a la app (debajo de "Ofertas destacadas"): lleva al flyer completo del final. */}
+      <Suspense fallback={<div className="h-[68px] rounded-r-lg bg-primary/10" aria-hidden="true" />}>
+        <AppDownloadBanner />
+      </Suspense>
+
       {topBusinesses.length > 0 && (
         <Section title="Top Negocios">
           <Rail desktopColumns={3}>
@@ -155,6 +164,11 @@ export function HomePage() {
       <div className="lg:max-w-md">
         <ShareSection />
       </div>
+
+      {/* Descarga de la app de Android: al final del Home (el banner de arriba trae hasta aquí). */}
+      <Suspense fallback={<div className="h-[420px] rounded-[28px] bg-primary/10" aria-hidden="true" />}>
+        <AppDownloadFlyer />
+      </Suspense>
     </div>
   )
 }
