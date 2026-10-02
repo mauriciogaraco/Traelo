@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { attributeReferral } from '../api/referrals'
-import { Button } from '../components/ui/Button'
 import { capturePendingReferralCode } from '../lib/referralAttribution'
 import { useAuth } from '../hooks/useAuth'
 
@@ -41,17 +40,19 @@ export function ReferralLandingPage() {
           Compra en los negocios de tu comunidad y recibe tu pedido donde estés.
         </p>
       </div>
-      <div className="w-full max-w-xs space-y-2">
+      {/* Columna con separación real: los enlaces son inline y `space-y` no los separaba. */}
+      <div className="flex w-full max-w-xs flex-col gap-3">
         <Link
           to="/registro"
-          className="flex min-h-12 w-full items-center justify-center rounded-r-md bg-gradient-primary font-semibold text-white"
+          className="flex min-h-12 w-full items-center justify-center rounded-r-md bg-gradient-primary font-semibold text-white shadow-[0_4px_8px_0_rgb(var(--c-primary)/0.25)] hover:brightness-105"
         >
           Crear mi cuenta
         </Link>
-        <Link to="/">
-          <Button variant="outline" fullWidth>
-            Explorar Tráelo
-          </Button>
+        <Link
+          to="/"
+          className="flex min-h-12 w-full items-center justify-center rounded-r-md border border-primary font-semibold text-primary-text hover:bg-primary/5"
+        >
+          Explorar Tráelo
         </Link>
       </div>
     </div>
