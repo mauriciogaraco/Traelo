@@ -68,7 +68,9 @@ export default defineConfig({
           },
           {
             // Imágenes propias (categorías, hero, fotos viejas): CacheFirst tras la primera visita.
-            urlPattern: /\/assets\//,
+            // El APK de la app (~30 MB) queda FUERA: no debe ocupar el almacenamiento del teléfono ni
+            // pasar por la caché (la descarga muestra su progreso leyendo la red directamente).
+            urlPattern: /\/assets\/(?!.*\.apk$)/,
             handler: 'CacheFirst',
             options: {
               cacheName: 'product-images',
