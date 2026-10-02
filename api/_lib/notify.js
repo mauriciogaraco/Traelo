@@ -4,7 +4,9 @@
 // arma el vale con esos datos. Así nadie puede colar un vale falso ni cambiar precios.
 import { chunkLines, deliverOrder, esc, formatPrice } from './core.js'
 
-const DEFAULT_API_URL = 'https://backend-fi7x.onrender.com'
+const DEFAULT_API_URL = 'https://api.traelo-market.com'
+// La misma clave pública que usa la web y la app (ver src/config/env.ts).
+const DEFAULT_API_KEY = 'dev-local-traelo-app-api-key-2026'
 const BACKEND_TIMEOUT_MS = 20000
 /** Solo se avisa de pedidos recientes: evita reenviar vales viejos con un token guardado. */
 const MAX_ORDER_AGE_MS = 15 * 60 * 1000
@@ -13,7 +15,7 @@ const ASAP_LABEL = 'Lo antes posible'
 /** Backend y API key: las mismas variables que usa la web (VITE_*) o unas propias del servidor. */
 export function backendConfig(env = process.env) {
   const url = (env.TRAELO_API_URL || env.VITE_API_URL || DEFAULT_API_URL).trim().replace(/\/+$/, '')
-  const apiKey = (env.TRAELO_API_KEY || env.VITE_API_KEY || '').trim()
+  const apiKey = (env.TRAELO_API_KEY || env.VITE_API_KEY || DEFAULT_API_KEY).trim()
   return { baseUrl: `${url}/api/v1`, apiKey }
 }
 
