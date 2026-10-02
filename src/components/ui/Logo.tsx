@@ -1,88 +1,49 @@
-import logoUrl from '../../assets/logo.webp'
+import logomarkWhite from '../../assets/traelo-logomark-white.png'
 
 interface LogoProps {
-  /** Tamaño de la marca (icono). */
+  /** Tamaño del isotipo: sm 36 · md 44 (el del header de la app) · lg 64. */
   size?: 'sm' | 'md' | 'lg'
-  /** Mostrar el texto "Tráelo" junto a la marca. */
+  /** Mostrar el texto "Tráelo" junto al isotipo (header de escritorio). */
   showWordmark?: boolean
-  /** Mostrar el avión de papel "volando" alrededor de la "o". */
-  plane?: boolean
   className?: string
 }
 
-const markSize = {
-  sm: 'w-8 h-8 rounded-xl',
-  md: 'w-10 h-10 rounded-[14px]',
-  lg: 'w-16 h-16 rounded-3xl',
+const badgeSize = {
+  sm: 'w-[33px] h-[33px]',
+  md: 'w-[41px] h-[41px]',
+  lg: 'w-[60px] h-[60px]',
 }
-const wordSize = {
-  sm: 'text-2xl',
-  md: 'text-[1.7rem]',
-  lg: 'text-5xl',
+const markSize = {
+  sm: 31,
+  md: 39,
+  lg: 56,
 }
 
 /**
- * Avión de papel (outline) con una pequeña estela de puntos, posicionado arriba
- * a la derecha de la "o" para que parezca que vuela a su alrededor.
+ * Marca de Tráelo como en el `TopHeader` de la app móvil: isotipo blanco sobre el degradado
+ * `hero` en un cuadrado redondeado con sombra naranja.
  */
-function PlaneAroundO() {
+export function Logo({ size = 'md', showWordmark = false, className = '' }: LogoProps) {
   return (
-    <span
-      className="absolute left-1/2 -top-[0.62em] flex items-center gap-[0.05em] text-primary"
-      style={{ transform: 'translateX(-6%) rotate(-18deg)' }}
-      aria-hidden="true"
-    >
-      {/* estela / puntos suspensivos */}
-      <span className="w-[0.07em] h-[0.07em] rounded-full bg-current opacity-40" />
-      <span className="w-[0.1em] h-[0.1em] rounded-full bg-current opacity-70" />
-      {/* avión de papel outline */}
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="w-[0.52em] h-[0.52em] ml-[0.04em]"
+    <span className={`inline-flex items-center gap-2.5 select-none ${className}`}>
+      <span
+        // `rounded-[16px]` a propósito, no `rounded-r-lg`: ese nombre choca con la utilidad nativa
+        // de Tailwind "redondear solo el lado derecho" y dejaba las esquinas izquierda/derecha con
+        // radios distintos (16px vs 8px) — por eso se veía chueco.
+        className={`${badgeSize[size]} rounded-[16px] bg-gradient-hero flex items-center justify-center shadow-[0_4px_8px_0_rgb(var(--c-primary)/0.3)] shrink-0`}
       >
-        <path d="m22 2-7 20-4-9-9-4Z" />
-        <path d="M22 2 11 13" />
-      </svg>
-    </span>
-  )
-}
-
-export function Logo({
-  size = 'md',
-  showWordmark = true,
-  plane = true,
-  className = '',
-}: LogoProps) {
-  return (
-    <span className={`inline-flex items-center gap-2 select-none ${className}`}>
-      <img
-        src={logoUrl}
-        alt="Tráelo"
-        width={40}
-        height={40}
-        className={`${markSize[size]} object-cover shadow-btn-primary`}
-        loading="eager"
-        decoding="async"
-      />
+        <img
+          src={logomarkWhite}
+          alt="Tráelo"
+          width={markSize[size]}
+          height={markSize[size]}
+          className="object-contain"
+          loading="eager"
+          decoding="async"
+        />
+      </span>
       {showWordmark && (
-        <span className={`font-brand text-primary leading-none pb-1 ${wordSize[size]}`}>
-          {plane ? (
-            <>
-              Tráel
-              <span className="relative inline-block">
-                o
-                <PlaneAroundO />
-              </span>
-            </>
-          ) : (
-            'Tráelo'
-          )}
-        </span>
+        <span className="text-h2 font-extrabold text-text-primary tracking-tight">Tráelo</span>
       )}
     </span>
   )

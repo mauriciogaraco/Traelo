@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import assert from 'node:assert/strict'
-import { createHandler, createCatalogLoader, USD_EXCHANGE_RATE, FEE_BASE } from '../api/_lib/core.js'
+import { createHandler, createCatalogLoader } from '../api/_lib/core.js'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const readData = (f) => JSON.parse(readFileSync(join(ROOT, 'public', 'data', f), 'utf8'))
@@ -71,12 +71,8 @@ const test = async (name, fn) => {
 
 console.log('Pruebas de /api/order (Telegram simulado)')
 
-await test('constantes de precios iguales a las del cliente', () => {
-  const config = readFileSync(join(ROOT, 'src/lib/config.ts'), 'utf8')
-  const fees = readFileSync(join(ROOT, 'src/lib/fees.ts'), 'utf8')
-  assert.equal(Number(config.match(/USD_EXCHANGE_RATE\s*=\s*(\d+)/)[1]), USD_EXCHANGE_RATE)
-  assert.equal(Number(fees.match(/FEE_BASE\s*=\s*(\d+)/)[1]), FEE_BASE)
-})
+// (La comparación de constantes con src/lib/fees.ts ya no aplica: la web dejó de calcular precios;
+// ahora los calcula el backend. /api/order sigue vivo solo para clientes con la versión anterior en caché.)
 
 await test('pedido válido: 200, mensaje completo, sin IP ni dispositivo, sin sorteo', async () => {
   telegramCalls.length = 0

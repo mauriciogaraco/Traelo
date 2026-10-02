@@ -12,13 +12,13 @@ export default defineConfig({
       // nueva. Registrar a mano con `virtual:pwa-register` sí recarga la
       // página sola en cuanto el SW nuevo toma control.
       injectRegister: false,
-      includeAssets: ['logo.webp', 'traelo_192x192.png', 'traelo_512x512.png'],
+      includeAssets: ['favicon.png', 'logo.webp', 'traelo_192x192.png', 'traelo_512x512.png'],
       manifest: {
         name: 'Tráelo',
         short_name: 'Tráelo',
         description: 'Compra en negocios locales y recíbelo en casa',
         theme_color: '#F97316',
-        background_color: '#FAF8F5',
+        background_color: '#F8F6F2',
         display: 'standalone',
         orientation: 'portrait',
         start_url: '/',
@@ -34,27 +34,41 @@ export default defineConfig({
         // La versión nueva toma el control de inmediato (sin esperar a cerrar pestañas).
         skipWaiting: true,
         clientsClaim: true,
-        // Fuerza la recarga de pestañas con una versión vieja de la app (ver public/sw-force-reload.js).
-        importScripts: ['sw-force-reload.js'],
+        // Fuerza la recarga de pestañas con una versión vieja de la app (ver public/sw-force-reload.js)
+        // y maneja los avisos de Web Push (ver public/sw-push.js).
+        importScripts: ['sw-force-reload.js', 'sw-push.js'],
         // Las rutas /api/* (función serverless) nunca deben caer en el index.html del app shell.
         navigateFallbackDenylist: [/^\/api\//],
-        // Precache solo el app shell (JS/CSS/HTML). Las imágenes se cachean on-demand.
-        globPatterns: ['**/*.{js,css,html}'],
+        // Precache solo el app shell (JS/CSS/HTML + la fuente). Las imágenes se cachean on-demand.
+        globPatterns: ['**/*.{js,css,html,woff2}'],
+        // El mapa (MapLibre, ~290 KB comprimido) se baja SOLO al abrir el seguimiento en vivo: fuera del
+        // precache para no gastar datos de quien nunca lo usa (conexión limitada); se guarda al usarlo.
+        globIgnores: ['**/maplibre-gl-*.{js,css}'],
         runtimeCaching: [
           {
-            // catalog.json: NetworkFirst con timeout corto. La app muestra localStorage
-            // mientras tanto; el SW entrega datos frescos en cuanto llegan.
-            urlPattern: /\/data\/catalog\.json$/,
-            handler: 'NetworkFirst',
+            urlPattern: /\/assets\/maplibre-gl-[^/]+\.(js|css)$/,
+            handler: 'CacheFirst',
             options: {
-              cacheName: 'catalog-data',
-              networkTimeoutSeconds: 3,
-              expiration: { maxEntries: 1, maxAgeSeconds: 24 * 60 * 60 },
+              cacheName: 'map-library',
+              expiration: { maxEntries: 4, maxAgeSeconds: 30 * 24 * 60 * 60 },
+            },
+          },
+          // El catálogo (API del backend) NO pasa por el service worker: la web lo guarda en
+          // localStorage y lo sincroniza por versión (services/catalogSync.ts), como la app móvil.
+          {
+            // Fotos del catálogo en Cloudinary (ya redimensionadas, ver lib/images.ts): CacheFirst,
+            // cambian de URL (?v=) cuando cambia la foto.
+            urlPattern: /^https:\/\/res\.cloudinary\.com\//,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'catalog-images',
+              expiration: { maxEntries: 400, maxAgeSeconds: 14 * 24 * 60 * 60 },
+              cacheableResponse: { statuses: [0, 200] },
             },
           },
           {
-            // Imágenes: CacheFirst — se sirven rápido tras la primera visita.
-            urlPattern: /\/assets\/images\//,
+            // Imágenes propias (categorías, hero, fotos viejas): CacheFirst tras la primera visita.
+            urlPattern: /\/assets\//,
             handler: 'CacheFirst',
             options: {
               cacheName: 'product-images',

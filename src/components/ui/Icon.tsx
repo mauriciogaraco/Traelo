@@ -1,0 +1,228 @@
+import type { SVGProps } from 'react'
+
+/**
+ * Íconos de la interfaz: equivalentes web (SVG inline, sin librería) de los Ionicons que usa la app
+ * móvil. Cada uno tiene versión de contorno y, cuando mobile la usa para el estado activo, rellena.
+ */
+export type IconName =
+  | 'home'
+  | 'grid'
+  | 'search'
+  | 'help'
+  | 'cart'
+  | 'person'
+  | 'bell'
+  | 'location'
+  | 'chevron-down'
+  | 'chevron-right'
+  | 'chevron-left'
+  | 'close'
+  | 'wifi-off'
+  | 'alert'
+  | 'refresh'
+  | 'heart'
+  | 'star'
+  | 'receipt'
+  | 'sun'
+  | 'moon'
+  | 'contrast'
+  | 'phone'
+  | 'whatsapp'
+  | 'gift'
+  | 'storefront'
+  | 'share'
+  | 'copy'
+  | 'trophy'
+
+type Props = Omit<SVGProps<SVGSVGElement>, 'name'> & {
+  name: IconName
+  size?: number
+  /** Versión rellena (estado activo en la barra de navegación). */
+  filled?: boolean
+}
+
+function paths(name: IconName, filled: boolean) {
+  switch (name) {
+    case 'home':
+      return filled ? (
+        <path fill="currentColor" stroke="none" d="M11.3 3.3a1 1 0 0 1 1.4 0l8 7.4a1 1 0 0 1-.7 1.7H19V20a1 1 0 0 1-1 1h-3.5v-5.5a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1V21H6a1 1 0 0 1-1-1v-7.6H4a1 1 0 0 1-.7-1.7l8-7.4Z" />
+      ) : (
+        <path d="M3.5 11.5 12 4l8.5 7.5M5.5 10v10h4.5v-5.5h4V20h4.5V10" />
+      )
+    case 'grid':
+      return (
+        <g fill={filled ? 'currentColor' : 'none'}>
+          <rect x="3.5" y="3.5" width="7" height="7" rx="1.8" />
+          <rect x="13.5" y="3.5" width="7" height="7" rx="1.8" />
+          <rect x="3.5" y="13.5" width="7" height="7" rx="1.8" />
+          <rect x="13.5" y="13.5" width="7" height="7" rx="1.8" />
+        </g>
+      )
+    case 'search':
+      return (
+        <>
+          <circle cx="10.5" cy="10.5" r="6.5" strokeWidth={filled ? 2.6 : undefined} />
+          <path d="m15.5 15.5 5 5" strokeWidth={filled ? 2.6 : undefined} />
+        </>
+      )
+    case 'help':
+      return (
+        <>
+          <circle cx="12" cy="12" r="9" fill={filled ? 'currentColor' : 'none'} />
+          <path stroke={filled ? 'rgb(var(--c-surface))' : 'currentColor'} d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.1-2.4 3.6" />
+          <circle cx="12" cy="17" r="0.6" fill={filled ? 'rgb(var(--c-surface))' : 'currentColor'} stroke="none" />
+        </>
+      )
+    case 'cart':
+      return (
+        <>
+          <path fill={filled ? 'currentColor' : 'none'} d="M3.5 4.5h2.2l2 11h10.1l2-8H6.7" />
+          <circle cx="9" cy="19.5" r="1.4" fill="currentColor" />
+          <circle cx="16.8" cy="19.5" r="1.4" fill="currentColor" />
+        </>
+      )
+    case 'person':
+      return (
+        <>
+          <circle cx="12" cy="8" r="4" fill={filled ? 'currentColor' : 'none'} />
+          <path fill={filled ? 'currentColor' : 'none'} d="M4.5 20.5c.8-3.8 3.8-6 7.5-6s6.7 2.2 7.5 6Z" />
+        </>
+      )
+    case 'bell':
+      return (
+        <>
+          <path fill={filled ? 'currentColor' : 'none'} d="M6 16.5V11a6 6 0 1 1 12 0v5.5l1.5 1.5h-15Z" />
+          <path d="M10 20.5a2 2 0 0 0 4 0" />
+        </>
+      )
+    case 'location':
+      return (
+        <>
+          <path fill={filled ? 'currentColor' : 'none'} d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" />
+          <circle cx="12" cy="10" r="2.3" fill={filled ? 'rgb(var(--c-surface))' : 'none'} stroke={filled ? 'none' : 'currentColor'} />
+        </>
+      )
+    case 'chevron-down':
+      return <path d="m6 9 6 6 6-6" />
+    case 'chevron-right':
+      return <path d="m9 6 6 6-6 6" />
+    case 'chevron-left':
+      return <path d="m15 6-6 6 6 6" />
+    case 'close':
+      return <path d="M6 6l12 12M18 6 6 18" />
+    case 'wifi-off':
+      return (
+        <>
+          <path d="M3 3l18 18M8.5 16.2a5 5 0 0 1 7 0M5 12.7a10 10 0 0 1 4-2.3M19 12.7a10 10 0 0 0-3.4-2.1M2 9.3a15 15 0 0 1 4.3-2.6M22 9.3a15 15 0 0 0-10-3.8c-.8 0-1.6.1-2.4.2" />
+          <circle cx="12" cy="19.5" r="0.8" fill="currentColor" />
+        </>
+      )
+    case 'alert':
+      return (
+        <>
+          <circle cx="12" cy="12" r="9" />
+          <path d="M12 7.5v5.5" />
+          <circle cx="12" cy="16.5" r="0.6" fill="currentColor" />
+        </>
+      )
+    case 'refresh':
+      return <path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3M19.5 4.5v4h-4" />
+    case 'heart':
+      return <path fill={filled ? 'currentColor' : 'none'} d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10Z" />
+    case 'star':
+      return <path fill={filled ? 'currentColor' : 'none'} d="m12 3.8 2.5 5.1 5.6.8-4 3.9 1 5.6-5.1-2.7-5 2.7.9-5.6-4-3.9 5.6-.8Z" />
+    case 'receipt':
+      return <path fill={filled ? 'currentColor' : 'none'} d="M6 3.5h12v17l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3-2 1.3ZM9 8h6M9 11.5h6M9 15h4" />
+    case 'sun':
+      return (
+        <>
+          <circle cx="12" cy="12" r="4.2" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M12 2.8v2.4M12 18.8v2.4M21.2 12h-2.4M5.2 12H2.8M18.2 5.8l-1.7 1.7M7.5 16.5l-1.7 1.7M18.2 18.2l-1.7-1.7M7.5 7.5 5.8 5.8" />
+        </>
+      )
+    case 'moon':
+      return <path fill={filled ? 'currentColor' : 'none'} d="M20.5 14.2A8.5 8.5 0 1 1 9.8 3.5a7 7 0 0 0 10.7 10.7Z" />
+    case 'contrast':
+      return (
+        <>
+          <circle cx="12" cy="12" r="9" />
+          <path fill="currentColor" stroke="none" d="M12 3a9 9 0 0 1 0 18Z" />
+        </>
+      )
+    case 'phone':
+      return (
+        <path d="M8.1 4.5h-2A1.6 1.6 0 0 0 4.5 6c.4 6.7 5.8 12.1 12.5 12.5a1.6 1.6 0 0 0 1.5-1.6v-2a1 1 0 0 0-.8-1l-2.7-.6a1 1 0 0 0-1 .3l-.9 1a12 12 0 0 1-5.2-5.2l1-.9a1 1 0 0 0 .3-1L8.6 5a1 1 0 0 0-.5-.5Z" />
+      )
+    case 'whatsapp':
+      return (
+        <>
+          <path d="M12 3.5a8.5 8.5 0 0 0-7.4 12.7L3.5 20.5l4.5-1.1A8.5 8.5 0 1 0 12 3.5Z" />
+          <path
+            fill="currentColor"
+            stroke="none"
+            d="M8.9 9.9c.3 2.6 2.4 4.7 5 5 .5.1.9-.2 1.1-.6l.2-.6a.6.6 0 0 0-.3-.8l-1.3-.5a.6.6 0 0 0-.7.1l-.3.4a4.3 4.3 0 0 1-2.1-2.1l.4-.3a.6.6 0 0 0 .1-.7l-.5-1.3a.6.6 0 0 0-.8-.3l-.6.2c-.4.2-.7.6-.6 1.1Z"
+          />
+        </>
+      )
+    case 'gift':
+      return (
+        <>
+          <rect x="4" y="9.5" width="16" height="10" rx="1.2" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M4 9.5h16M12 9.5V20" stroke={filled ? 'rgb(var(--c-surface))' : 'currentColor'} />
+          <path d="M12 9.5c-1.7 0-3-1.2-3-2.7S10.3 4 12 5.3C13.7 4 15 5.3 15 6.8S13.7 9.5 12 9.5Z" />
+        </>
+      )
+    case 'storefront':
+      return (
+        <>
+          <path d="M4.5 9.3 5.3 4h13.4l.8 5.3" />
+          <path d="M4.3 9.3a1.9 1.9 0 0 0 3.8.2 1.9 1.9 0 0 0 3.8 0 1.9 1.9 0 0 0 3.8 0 1.9 1.9 0 0 0 3.8-.2" />
+          <path d="M6 11v9h12v-9M10 20v-5h4v5" />
+        </>
+      )
+    case 'share':
+      return (
+        <>
+          <circle cx="18" cy="5.5" r="2.3" fill={filled ? 'currentColor' : 'none'} />
+          <circle cx="6" cy="12" r="2.3" fill={filled ? 'currentColor' : 'none'} />
+          <circle cx="18" cy="18.5" r="2.3" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M8.1 10.7 15.9 6.7M8.1 13.3l7.8 4" />
+        </>
+      )
+    case 'copy':
+      return (
+        <>
+          <rect x="9" y="9" width="11" height="11" rx="1.6" fill={filled ? 'currentColor' : 'none'} />
+          <path d="M15 9V5.6A1.6 1.6 0 0 0 13.4 4H5.6A1.6 1.6 0 0 0 4 5.6v7.8A1.6 1.6 0 0 0 5.6 15H9" />
+        </>
+      )
+    case 'trophy':
+      return (
+        <>
+          <path fill={filled ? 'currentColor' : 'none'} d="M7 4h10v5a5 5 0 0 1-10 0V4Z" />
+          <path d="M7 5.5H4a2 2 0 0 0 2 4.3M17 5.5h3a2 2 0 0 1-2 4.3" />
+          <path d="M12 14v2.8M9.5 17.3h5l.5 3.2h-6l.5-3.2Z" />
+        </>
+      )
+  }
+}
+
+export function Icon({ name, size = 22, filled = false, ...props }: Props) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+      {...props}
+    >
+      {paths(name, filled)}
+    </svg>
+  )
+}

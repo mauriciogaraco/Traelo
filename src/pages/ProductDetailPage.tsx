@@ -1,481 +1,288 @@
-import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { useCatalog } from "../context/CatalogContext";
-import { StockBadge } from "../components/ui/StockBadge";
-import { ProductImage } from "../components/ui/ProductImage";
-import { Button } from "../components/ui/Button";
-import { useCart } from "../context/CartContext";
-import { useToast } from "../context/ToastContext";
-import { formatAmount, formatPrice } from "../lib/format";
-import {
-  hasAddons,
-  hasFormato,
-  hasOptions,
-  hasPackaging,
-  packSize,
-} from "../lib/cart";
-import { isOpenNow } from "../lib/hours";
-import { businessById } from "../data/catalog";
-import { PaymentNote } from "../components/ui/PaymentNote";
-import { flyToCart } from "../lib/flyToCart";
-import type { Addon, Packaging } from "../types";
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { CatalogImage } from '../components/catalog/CatalogImage'
+import { formatCup, Price } from '../components/catalog/Price'
+import { Button } from '../components/ui/Button'
+import { ChipRow } from '../components/ui/ChipRow'
+import { EmptyState } from '../components/ui/EmptyState'
+import { Icon } from '../components/ui/Icon'
+import { QuantitySelector } from '../components/ui/QuantitySelector'
+import { StatusBadge } from '../components/ui/StatusBadge'
+import { FavoriteButton } from '../components/catalog/FavoriteButton'
+import { useToast } from '../context/ToastContext'
+import { cheapestPackaging, estimateLine, findAddon, findPackaging, packSizeOf, requiresOption } from '../features/cart'
+import { getBusinessStatus, isSoldOut, visualForProduct } from '../features/catalog'
+import { useFavorites } from '../hooks/useFavorites'
+import { favoriteToast } from '../lib/favoriteToast'
+import { flyToCart } from '../lib/flyToCart'
+import { toggleFavoriteProduct } from '../services/favoritesService'
+import { optimizedImageUrl } from '../lib/images'
+import { MAX_LINE_QUANTITY, useCartStore } from '../store/cartStore'
+import { useCatalogStore } from '../store/catalogStore'
 
+/**
+ * Ficha de producto — `ProductScreen` de mobile. Reglas del carrito: el tipo/sabor es OBLIGATORIO si
+ * el producto tiene; el agrego es opcional (uno); el envase viene preseleccionado (el más barato) y se
+ * puede cambiar. El total mostrado es un estimado: el real lo calcula el servidor al confirmar.
+ * El corazón de favoritos solo aparece con sesión (como en mobile). Pendiente: aviso de recompensa.
+ */
 export function ProductDetailPage() {
-  const { id } = useParams<{ id: string }>()
+  const { id = '' } = useParams()
   const navigate = useNavigate()
-  const { products, loading, loadBusinessProducts, getFullProduct, isBusinessLoaded } = useCatalog()
-  const { addItem } = useCart()
   const { showToast } = useToast()
-  const [qty, setQty] = useState(1)
-  const [option, setOption] = useState<string | null>(null)
-  const [addon, setAddon] = useState<Addon | null>(null)
-  const [packaging, setPackaging] = useState<Packaging | null>(null)
-  const [descExpanded, setDescExpanded] = useState(false)
-  const [justAdded, setJustAdded] = useState(false)
+  const product = useCatalogStore((state) => state.products.find((p) => p.id === id))
+  const businesses = useCatalogStore((state) => state.businesses)
+  const categories = useCatalogStore((state) => state.categories)
+  const addItem = useCartStore((state) => state.addItem)
+  const { isAuthenticated, products: favoriteProducts } = useFavorites()
 
-  // Stub del índice (sin longDescription) — disponible de inmediato.
-  const stub = products.find((p) => p.id === id)
-  // Producto completo (con longDescription) — disponible tras cargar el negocio.
-  const product = stub ? getFullProduct(id!) : undefined
+  const [quantity, setQuantity] = useState(1)
+  const [optionName, setOptionName] = useState<string | null>(null)
+  const [addonName, setAddonName] = useState<string | null>(null)
+  const [packagingChoice, setPackagingChoice] = useState<string | null>(null)
+  const [imageOpen, setImageOpen] = useState(false)
 
-  // Carga en segundo plano el archivo del negocio para obtener longDescription.
+  // Otro producto (p. ej. al navegar entre fichas): se empieza de cero.
   useEffect(() => {
-    if (stub?.businessId) loadBusinessProducts(stub.businessId)
-  }, [stub?.businessId]) // eslint-disable-line react-hooks/exhaustive-deps
+    setQuantity(1)
+    setOptionName(null)
+    setAddonName(null)
+    setPackagingChoice(null)
+  }, [id])
 
-  // El envase es obligatorio, pero no se le pide elegir al cliente: se
-  // preselecciona el más barato (ej. "Jaba" sin costo) y puede cambiarlo.
-  useEffect(() => {
-    if (!product?.packaging?.length) return;
-    const cheapest = [...product.packaging].sort((a, b) => a.price - b.price)[0];
-    setPackaging(cheapest);
-  }, [product]);
+  const business = useMemo(() => businesses.find((b) => b.id === product?.businessId), [businesses, product])
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center py-24">
-        <div className="w-7 h-7 border-[2.5px] border-primary border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
-  }
+  const goBack = () => (window.history.length > 1 ? navigate(-1) : navigate('/'))
 
   if (!product) {
     return (
-      <div className="flex flex-col items-center justify-center py-24 px-6 text-center">
-        <span className="text-6xl mb-4">😕</span>
-        <h2 className="text-lg font-bold text-text-primary mb-2">
-          Producto no encontrado
-        </h2>
-        <Button onClick={() => navigate("/")}>Volver al inicio</Button>
-      </div>
-    );
+      <>
+        <BackButton onClick={goBack} />
+        <EmptyState icon="search" title="Producto no encontrado" description="Puede que ya no esté disponible." />
+      </>
+    )
   }
 
-  const isOut = product.stockStatus === 'agotado'
-  const needsOption = hasOptions(product)
-  const canAddon = hasAddons(product)
-  const needsPackaging = hasPackaging(product)
-  const multiPackaging = (product.packaging?.length ?? 0) > 1
-  const biz = businessById(product.businessId)
-  const closed = !biz || !isOpenNow(biz)
-  const currency = product.currency ?? biz?.currency
-  const descLoaded = isBusinessLoaded(product.businessId)
-  const isLongDesc = (product.longDescription?.length ?? 0) > 200
-  const canAdd =
-    !isOut &&
-    !closed &&
-    (!needsOption || option !== null) &&
-    (!needsPackaging || packaging !== null);
-  const unitPrice =
-    product.price + (addon?.price ?? 0) + (packaging?.price ?? 0);
+  const soldOut = isSoldOut(product)
+  const businessStatus = business ? getBusinessStatus(business) : null
+  const packagingOptions = product.packaging ?? []
+  const addonOptions = product.addons ?? []
+  const optionList = product.options ?? []
+  const needsOption = requiresOption(product)
+  const packagingName = packagingChoice ?? cheapestPackaging(product)?.name ?? null
+  const packSize = packSizeOf(product.formato)
+  const canAdd = !needsOption || optionName !== null
+  const packaging = findPackaging(product, packagingName)
+  const estimate = estimateLine({
+    price: product.effectivePrice ?? product.price,
+    quantity,
+    formato: product.formato,
+    addonPrice: findAddon(product, addonName)?.price,
+    packagingPrice: packaging?.price,
+    packagingCapacity: packaging?.capacity,
+  })
 
-  function add() {
-    if (!canAdd) return;
-    addItem(
-      product!,
-      qty,
-      option ?? undefined,
-      addon ?? undefined,
-      packaging ?? undefined,
-    );
+  const handleAdd = (origin: HTMLElement) => {
+    if (!canAdd) {
+      showToast('Elige el tipo: este producto tiene varios tipos o sabores.', 'info')
+      return
+    }
+    addItem(product, quantity, { optionName, addonName, packagingName })
+    flyToCart(origin)
+    showToast(`Agregado al carrito: ${quantity} × ${product.name}`, 'success')
+    setQuantity(1)
+    setOptionName(null)
+    setAddonName(null)
+    setPackagingChoice(null)
   }
 
-  // Volver: usa el historial si existe, si no (entrada directa/recarga) va al inicio.
-  function goBack() {
-    const idx = (window.history.state?.idx as number | undefined) ?? 0;
-    if (idx > 0) navigate(-1);
-    else navigate("/");
+  const visual = visualForProduct(product, categories)
+  const isFavorite = favoriteProducts.some((p) => p.productId === product.id)
+  const handleToggleFavorite = async () => {
+    const { message, type } = favoriteToast(await toggleFavoriteProduct(product), product.name)
+    showToast(message, type)
   }
-  console.log(product);
-  console.log(product?.photo);
+
   return (
-    <div className="animate-fade-in">
-      {/* Imagen grande con botón volver */}
-      <div className="relative">
-        <ProductImage
-          emoji={product.image}
-          photo={product.photo}
-          category={product.category}
-          alt={product.name}
-          size="lg"
-          eager
-          className="w-full aspect-square rounded-b-4xl"
-        />
-        <button
-          onClick={goBack}
-          className="absolute top-4 left-4 z-10 h-10 pl-2.5 pr-3.5 rounded-full bg-surface/95 backdrop-blur border border-border shadow-card flex items-center gap-1.5 text-text-primary font-bold text-sm active:scale-95 transition-transform"
-          aria-label="Volver"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2.5}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
-          Volver
-        </button>
-        <div className="absolute top-4 right-4">
-          <StockBadge status={product.stockStatus} size="md" />
-        </div>
-      </div>
-
-      {/* Info */}
-      <div className="px-4 pt-5">
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold">
-            {product.category}
-          </span>
-          <span className="text-xs font-semibold text-text-secondary">
-            {product.businessName}
-          </span>
-        </div>
-
-        <h1 className="text-2xl font-bold text-text-primary leading-tight mt-2">
-          {product.name}
-        </h1>
-
-        {biz && (
-          <p className="flex items-center gap-1.5 mt-1.5 text-xs font-semibold">
-            <span
-              className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full ${
-                closed
-                  ? "bg-stone-100 text-text-secondary"
-                  : "bg-green-50 text-success"
-              }`}
-            >
-              <span
-                className={`w-1.5 h-1.5 rounded-full ${closed ? "bg-stone-400" : "bg-success"}`}
-              />
-              {closed ? "Cerrado" : "Abierto"}
-            </span>
-            <span className="text-text-secondary">{biz.schedule.label}</span>
-          </p>
-        )}
-
-        <div className="flex items-baseline gap-1.5 mt-3">
-          <span className="text-3xl font-bold text-primary">
-            {currency === "USD" ? "$ " : ""}
-            {formatAmount(product.price)}
-          </span>
-          <span className="text-sm font-semibold text-text-secondary">
-            {currency === "USD"
-              ? "USD"
-              : `CUP${hasFormato(product) ? " / unidad" : ""}`}
-          </span>
-        </div>
-        {hasFormato(product) && (
-          <p className="flex items-center gap-2 mt-2">
-            <span className="px-2 py-0.5 rounded-md bg-primary/10 text-primary text-xs font-bold">
-              Caja × {packSize(product)}
-            </span>
-            <span className="text-sm font-semibold text-text-secondary">
-              Se vende por caja completa
-            </span>
-          </p>
-        )}
-
-        {businessById(product.businessId)?.paymentNote && (
-          <div className="mt-4 rounded-2xl overflow-hidden border border-amber-100">
-            <PaymentNote
-              note={businessById(product.businessId)!.paymentNote!}
-            />
-          </div>
-        )}
-
-        <div className="mt-5">
-          <h2 className="text-sm font-bold text-text-primary mb-1.5">Descripción</h2>
-          {!descLoaded ? (
-            <div className="space-y-2">
-              <div className="h-3.5 rounded-full bg-surface animate-pulse w-full" />
-              <div className="h-3.5 rounded-full bg-surface animate-pulse w-4/5" />
-              <div className="h-3.5 rounded-full bg-surface animate-pulse w-3/5" />
+    <div className="pb-28 lg:pb-10 lg:px-6 lg:pt-6">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:items-start">
+        <div className="relative lg:sticky lg:top-24">
+          <BackButton onClick={goBack} />
+          {isAuthenticated && (
+            <div className="absolute top-[max(12px,env(safe-area-inset-top))] right-3 z-10">
+              <FavoriteButton isFavorite={isFavorite} onToggle={() => void handleToggleFavorite()} />
             </div>
+          )}
+          {product.imageUrl ? (
+            <button
+              type="button"
+              onClick={() => setImageOpen(true)}
+              aria-label={`Ver imagen de ${product.name} en grande`}
+              className="block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+            >
+              <CatalogImage uri={product.imageUrl} width={640} visual={visual} alt={product.name} eager className="w-full aspect-square lg:rounded-r-lg" />
+            </button>
           ) : (
-            <>
-              <p className={`text-[15px] text-text-secondary leading-relaxed whitespace-pre-line ${isLongDesc && !descExpanded ? 'line-clamp-4' : ''}`}>
-                {product.longDescription}
-              </p>
-              {isLongDesc && (
-                <button
-                  onClick={() => setDescExpanded(v => !v)}
-                  className="mt-2 text-sm font-bold text-primary"
-                >
-                  {descExpanded ? 'Ver menos' : 'Ver más'}
-                </button>
-              )}
-            </>
+            <CatalogImage uri={null} width={640} visual={visual} className="w-full aspect-[4/3] lg:aspect-square lg:rounded-r-lg" />
           )}
         </div>
 
-        {/* Selector de tipo */}
-        {needsOption && !isOut && (
-          <div className="mt-5">
-            <div className="flex items-center gap-2 mb-2">
-              <h2 className="text-sm font-bold text-text-primary">
-                {product.category === "Ropa"
-                  ? "Elige la talla"
-                  : "Elige el tipo"}
-              </h2>
-              {option === null && (
-                <span className="text-[11px] font-bold text-warning">
-                  Requerido
-                </span>
-              )}
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {product.options!.map((opt) => {
-                const active = option === opt;
-                return (
-                  <button
-                    key={opt}
-                    onClick={() => setOption(opt)}
-                    aria-pressed={active}
-                    className={`px-3.5 py-2 rounded-xl text-sm font-bold border transition-all active:scale-95 ${
-                      active
-                        ? "bg-gradient-primary text-white border-transparent shadow-btn-primary"
-                        : "bg-surface text-text-primary border-border hover:border-primary/40"
-                    }`}
-                  >
-                    {opt}
-                  </button>
-                );
-              })}
-            </div>
+        <div className="px-4 lg:px-0 pt-4 lg:pt-0 space-y-3">
+          <div className="space-y-1">
+            <h1 className="text-h1 text-text-primary">{product.name}</h1>
+            {business && (
+              <Link to={`/negocio/${business.id}`} className="inline-block text-[15px] font-semibold text-primary-text hover:underline">
+                {business.name}
+              </Link>
+            )}
           </div>
-        )}
-
-        {/* Agregos (opcional, máximo uno) */}
-        {canAddon && !isOut && (
-          <div className="mt-5">
-            <div className="flex items-center gap-2 mb-2">
-              <h2 className="text-sm font-bold text-text-primary">
-                Agrega un extra
-              </h2>
-              <span className="text-[11px] font-bold text-text-secondary">
-                Opcional · máx. 1
-              </span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {product.addons!.map((ag) => {
-                const active = addon?.name === ag.name;
-                return (
-                  <button
-                    key={ag.name}
-                    onClick={() => setAddon(active ? null : ag)}
-                    aria-pressed={active}
-                    className={`px-3.5 py-2 rounded-xl text-sm font-bold border transition-all active:scale-95 ${
-                      active
-                        ? "bg-gradient-primary text-white border-transparent shadow-btn-primary"
-                        : "bg-surface text-text-primary border-border hover:border-primary/40"
-                    }`}
-                  >
-                    {ag.name}{" "}
-                    <span
-                      className={
-                        active ? "text-white/80" : "text-text-secondary"
-                      }
-                    >
-                      +{formatAmount(ag.price)}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* Envase para llevar (obligatorio) */}
-        {needsPackaging && !isOut && (
-          <div className="mt-5">
-            <div className="flex items-center gap-2 mb-2">
-              <h2 className="text-sm font-bold text-text-primary">
-                Envase para llevar
-              </h2>
-              <span className="text-[11px] font-bold text-text-secondary">
-                Obligatorio
-              </span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {product.packaging!.map((pk) => {
-                const active = packaging?.name === pk.name;
-                return (
-                  <button
-                    key={pk.name}
-                    onClick={() => multiPackaging && setPackaging(pk)}
-                    aria-pressed={active}
-                    className={`px-3.5 py-2 rounded-xl text-sm font-bold border transition-all ${
-                      multiPackaging ? "active:scale-95" : "cursor-default"
-                    } ${
-                      active
-                        ? "bg-gradient-primary text-white border-transparent shadow-btn-primary"
-                        : "bg-surface text-text-primary border-border hover:border-primary/40"
-                    }`}
-                  >
-                    {pk.name}{" "}
-                    <span
-                      className={
-                        active ? "text-white/80" : "text-text-secondary"
-                      }
-                    >
-                      +{formatAmount(pk.price)}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* Precio por unidad con extras (agrego/envase) */}
-        {!isOut && (addon || packaging) && (
-          <p className="text-sm text-text-secondary mt-4">
-            Precio por unidad:{" "}
-            <span className="font-bold text-primary">
-              {formatPrice(unitPrice, currency)}
-            </span>
-          </p>
-        )}
-
-        {/* Cantidad */}
-        {!isOut && (
-          <div className="flex items-center justify-between mt-6 bg-surface border border-border rounded-2xl p-3">
+          <Price price={product.price} effectivePrice={product.effectivePrice} className="text-lg" />
+          {soldOut ? (
             <div>
-              <span className="text-sm font-bold text-text-primary">
-                {hasFormato(product) ? "Cajas" : "Cantidad"}
-              </span>
-              {hasFormato(product) && (
-                <span className="block text-[11px] font-semibold text-text-secondary">
-                  = {qty * packSize(product)} unidades
-                </span>
+              <StatusBadge label="Agotado" tone="danger" />
+            </div>
+          ) : product.lowStock ? (
+            <div>
+              <StatusBadge label="Pocas unidades" tone="warning" />
+            </div>
+          ) : null}
+          {product.description && <p className="text-body text-text-secondary whitespace-pre-line">{product.description}</p>}
+          {packSize > 1 && (
+            <p className="text-caption text-text-secondary">Se vende por caja de {packSize} unidades — la cantidad cuenta cajas.</p>
+          )}
+
+          {!soldOut && optionList.length > 0 && (
+            <section className="space-y-1.5">
+              <h2 className="text-[15px] font-semibold text-text-primary">Tipo / sabor (obligatorio)</h2>
+              <ChipRow
+                label="Tipo o sabor"
+                items={optionList.map((name) => ({ key: name, label: name, selected: optionName === name }))}
+                onPress={(key) => setOptionName(key)}
+              />
+            </section>
+          )}
+
+          {!soldOut && addonOptions.length > 0 && (
+            <section className="space-y-1.5">
+              <h2 className="text-[15px] font-semibold text-text-primary">Agrego (opcional)</h2>
+              <ChipRow
+                label="Agrego"
+                items={[
+                  { key: '__none__', label: 'Sin agrego', selected: addonName === null },
+                  ...addonOptions.map((addon) => ({
+                    key: addon.name,
+                    label: `${addon.name} (+${formatCup(addon.price)}${packSize > 1 ? ' c/u' : ''})`,
+                    selected: addonName === addon.name,
+                  })),
+                ]}
+                onPress={(key) => setAddonName(key === '__none__' ? null : key)}
+              />
+            </section>
+          )}
+
+          {!soldOut && packagingOptions.length > 1 && (
+            <section className="space-y-1.5">
+              <h2 className="text-[15px] font-semibold text-text-primary">Envase</h2>
+              <ChipRow
+                label="Envase"
+                items={packagingOptions.map((option) => ({
+                  key: option.name,
+                  label: `${option.name} (+${formatCup(option.price)})`,
+                  selected: packagingName === option.name,
+                }))}
+                onPress={(key) => setPackagingChoice(key)}
+              />
+            </section>
+          )}
+          {!soldOut && packagingOptions.length === 1 && (
+            <p className="text-caption text-text-secondary">
+              Envase: {packagingOptions[0]!.name} (+{formatCup(packagingOptions[0]!.price)})
+            </p>
+          )}
+
+          {!soldOut && (
+            <div className="flex items-center justify-between rounded-r-md bg-surface border border-border px-3 py-2.5">
+              <span className="text-body text-text-primary">Total estimado</span>
+              <span className="text-h3 text-text-primary">{formatCup(estimate)}</span>
+            </div>
+          )}
+
+          {businessStatus && businessStatus.label !== 'ABIERTO' && (
+            <p className="text-caption text-warning-text">
+              {business?.name} está {businessStatus.label.toLowerCase()} ahora mismo — igual puedes agregarlo, el pedido se
+              valida al confirmar.
+            </p>
+          )}
+
+          {/* Barra de acción: fija abajo en teléfono (como mobile), en línea en escritorio. */}
+          <div className="fixed lg:static inset-x-0 bottom-0 z-40 bg-surface/95 lg:bg-transparent backdrop-blur-md lg:backdrop-blur-none border-t lg:border-0 border-border px-4 lg:px-0 pt-3 pb-[max(12px,env(safe-area-inset-bottom))] lg:pt-2">
+            <div className="mx-auto max-w-content lg:max-w-none flex items-center gap-3">
+              {!soldOut && (
+                <QuantitySelector
+                  quantity={quantity}
+                  max={MAX_LINE_QUANTITY}
+                  onIncrement={() => setQuantity((q) => Math.min(MAX_LINE_QUANTITY, q + 1))}
+                  onDecrement={() => setQuantity((q) => Math.max(1, q - 1))}
+                />
               )}
-            </div>
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setQty((q) => Math.max(1, q - 1))}
-                className="w-9 h-9 rounded-xl border border-border flex items-center justify-center text-text-primary active:scale-90 transition-transform"
-                aria-label="Disminuir"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path strokeLinecap="round" d="M5 12h14" />
-                </svg>
-              </button>
-              <span className="w-6 text-center text-base font-bold">{qty}</span>
-              <button
-                onClick={() => setQty((q) => q + 1)}
-                className="w-9 h-9 rounded-xl bg-gradient-primary text-white flex items-center justify-center active:scale-90 transition-transform shadow-btn-primary"
-                aria-label="Aumentar"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path strokeLinecap="round" d="M12 5v14M5 12h14" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* Espaciador para que el contenido no quede tras la barra de acción fija */}
-      <div className="h-28" aria-hidden="true" />
-
-      {/* Barra de acción fija */}
-      <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[440px] z-40 bg-surface/95 backdrop-blur-md border-t border-border px-4 pt-3 pb-4 pb-safe">
-        {isOut ? (
-          <Button size="lg" fullWidth disabled>
-            Producto agotado
-          </Button>
-        ) : closed ? (
-          <Button size="lg" fullWidth disabled>
-            Cerrado ahora · {biz?.schedule.label}
-          </Button>
-        ) : needsOption && option === null ? (
-          <Button size="lg" fullWidth disabled>
-            Elige un tipo para continuar
-          </Button>
-        ) : needsPackaging && packaging === null ? (
-          <Button size="lg" fullWidth disabled>
-            Elige el envase para continuar
-          </Button>
-        ) : (
-          <div className="grid grid-cols-2 gap-3">
-            <Button
-              variant="soft"
-              size="lg"
-              onClick={(e) => {
-                add();
-                flyToCart(e.currentTarget);
-                setJustAdded(true);
-                window.setTimeout(() => setJustAdded(false), 900);
-                showToast(`Añadiste ${product.name} al carrito`, "success", {
-                  label: "Ir al carrito",
-                  onClick: () => navigate("/carrito"),
-                });
-              }}
-            >
-              {justAdded ? (
-                <span key="added" className="inline-flex items-center gap-1.5 animate-scale-in">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.6}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  Añadido
-                </span>
+              {soldOut ? (
+                <Button fullWidth disabled>
+                  Agotado
+                </Button>
               ) : (
-                "Añadir"
+                <Button fullWidth disabled={!canAdd} onClick={(e) => handleAdd(e.currentTarget)}>
+                  {canAdd ? 'Agregar al carrito' : 'Elige el tipo'}
+                </Button>
               )}
-            </Button>
-            <Button
-              size="lg"
-              onClick={() => {
-                add();
-                navigate("/checkout");
-              }}
-            >
-              Comprar ahora
-            </Button>
+            </div>
           </div>
-        )}
+        </div>
       </div>
+
+      {imageOpen && product.imageUrl && (
+        <ImageViewer src={optimizedImageUrl(product.imageUrl, 1200) ?? product.imageUrl} title={product.name} onClose={() => setImageOpen(false)} />
+      )}
     </div>
-  );
+  )
+}
+
+function BackButton({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="absolute lg:hidden top-[max(12px,env(safe-area-inset-top))] left-3 z-10 inline-flex items-center gap-1 rounded-full bg-surface/90 backdrop-blur px-3 py-2 text-sm font-semibold text-text-primary shadow-soft"
+    >
+      <Icon name="chevron-left" size={18} />
+      Volver
+    </button>
+  )
+}
+
+/** Foto en grande — `ImageViewer` de mobile. Cierra con la X, Escape o tocando el fondo. */
+function ImageViewer({ src, title, onClose }: { src: string; title: string; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
+    document.addEventListener('keydown', onKey)
+    const overflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = overflow
+    }
+  }, [onClose])
+
+  return (
+    <div role="dialog" aria-modal="true" aria-label={title} className="fixed inset-0 z-[90] bg-black/90 flex items-center justify-center p-4" onClick={onClose}>
+      <img src={src} alt={title} className="max-w-full max-h-full object-contain rounded-r-md" />
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Cerrar"
+        className="absolute top-[max(12px,env(safe-area-inset-top))] right-3 w-10 h-10 rounded-full bg-white/15 text-white flex items-center justify-center"
+      >
+        <Icon name="close" size={22} />
+      </button>
+    </div>
+  )
 }

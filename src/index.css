@@ -2,22 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Manrope (self-hosted, variable) — cubre todos los pesos en un solo archivo.
-   Evita depender del CDN de Google Fonts (mejor en conexiones lentas). */
+/* Plus Jakarta Sans (la tipografía de la app móvil), self-hosted: variable 200–800 en un solo
+   woff2 recortado a latín (~32 KB). Sin CDN externo: mejor en conexiones lentas. */
 @font-face {
-  font-family: 'Manrope';
-  src: url('./assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Plus Jakarta Sans';
+  src: url('./assets/fonts/PlusJakartaSans-latin.woff2') format('woff2');
   font-weight: 200 800;
   font-style: normal;
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Kaushan Script';
-  src: url('./assets/fonts/KaushanScript-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+/*
+ * Tokens de color — espejo de `src/constants/theme.ts` de la app móvil (lightColors/darkColors),
+ * que es la fuente de verdad. Canales RGB sueltos para que Tailwind pueda aplicar opacidad
+ * (`bg-primary/10`). Tema: `data-theme="light|dark"` en <html> (ver src/lib/theme.ts).
+ */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --c-background: 248 246 242;      /* #F8F6F2 */
+  --c-surface: 255 252 248;         /* #FFFCF8 */
+  --c-surface-muted: 241 237 230;   /* #F1EDE6 */
+  --c-border: 232 226 219;          /* #E8E2DB */
+  --c-text: 37 33 31;               /* #25211F */
+  --c-text-secondary: 102 95 90;    /* #665F5A */
+  --c-text-tertiary: 120 111 105;   /* #786F69 */
+  --c-text-disabled: 173 165 158;   /* #ADA59E */
+  --c-primary: 249 115 22;          /* #F97316 */
+  --c-primary-pressed: 234 88 12;   /* #EA580C */
+  --c-primary-text: 194 65 12;      /* #C2410C */
+  --c-primary-soft: 255 237 213;    /* #FFEDD5 */
+  --c-on-primary: 255 249 243;      /* #FFF9F3 */
+  --c-success: 22 163 74;
+  --c-success-text: 21 128 61;
+  --c-warning: 217 119 6;
+  --c-warning-text: 180 83 9;
+  --c-danger: 220 38 38;
+  --c-danger-text: 185 28 28;
+  --c-danger-soft: 254 226 226;
+  --c-info: 37 99 235;
+  --c-info-soft: 219 234 254;
+  --c-gold: 245 158 11;
+  --c-gold-light: 251 191 36;
+  --c-gold-soft: 254 243 199;
+  --c-gold-text: 146 64 14;
+  --shadow-color: 28 25 23;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --c-background: 24 19 16;         /* #181310 */
+  --c-surface: 34 27 23;            /* #221B17 */
+  --c-surface-muted: 44 35 29;      /* #2C231D */
+  --c-border: 60 50 43;             /* #3C322B */
+  --c-text: 245 238 231;            /* #F5EEE7 */
+  --c-text-secondary: 201 187 174;  /* #C9BBAE */
+  --c-text-tertiary: 156 140 126;   /* #9C8C7E */
+  --c-text-disabled: 102 90 80;     /* #665A50 */
+  --c-primary: 249 115 22;
+  --c-primary-pressed: 251 146 60;  /* #FB923C */
+  --c-primary-text: 253 186 116;    /* #FDBA74 */
+  --c-primary-soft: 58 36 21;       /* #3A2415 */
+  --c-on-primary: 255 249 243;
+  --c-success: 34 197 94;
+  --c-success-text: 74 222 128;
+  --c-warning: 245 158 11;
+  --c-warning-text: 251 191 36;
+  --c-danger: 239 68 68;
+  --c-danger-text: 252 165 165;
+  --c-danger-soft: 58 27 27;
+  --c-info: 96 165 250;
+  --c-info-soft: 23 38 61;
+  --c-gold: 251 191 36;
+  --c-gold-light: 253 230 138;
+  --c-gold-soft: 58 46 12;
+  --c-gold-text: 253 230 138;
+  --shadow-color: 0 0 0;
 }
 
 @layer base {
@@ -30,7 +90,7 @@
   }
 
   body {
-    @apply bg-stone-200 text-text-primary font-sans;
+    @apply bg-background text-text-primary font-sans;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior-y: none;
@@ -45,7 +105,7 @@
   }
 
   ::selection {
-    background-color: rgba(249, 115, 22, 0.18);
+    background-color: rgb(var(--c-primary) / 0.18);
   }
 }
 
@@ -101,4 +161,26 @@
 }
 .animate-slide-down {
   animation: slide-down 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Recorrido del pedido: latido del paso actual y confeti al entregarse. Se apagan con "reducir movimiento". */
+@keyframes tracker-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+}
+.tracker-pulse {
+  animation: tracker-pulse 1.4s ease-in-out infinite;
+}
+@keyframes confetti-burst {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) rotate(var(--spin)); }
+}
+.confetti-piece {
+  animation: confetti-burst 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+@media (prefers-reduced-motion: reduce) {
+  .tracker-pulse,
+  .confetti-piece {
+    animation: none;
+  }
 }

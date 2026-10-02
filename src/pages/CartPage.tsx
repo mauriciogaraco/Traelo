@@ -1,355 +1,217 @@
-import { useNavigate } from "react-router-dom";
-import { useCart } from "../context/CartContext";
-import { ProductImage } from "../components/ui/ProductImage";
-import { Button } from "../components/ui/Button";
-import { EmptyState } from "../components/ui/EmptyState";
-import { MessagingFeeRow } from "../components/ui/MessagingFeeRow";
-import { ServiceFeeRow } from "../components/ui/ServiceFeeRow";
-import { PaymentNote } from "../components/ui/PaymentNote";
-import { formatAmount, formatPrice } from "../lib/format";
-import { groupByBusiness } from "../lib/order";
-import {
-  hasFormato,
-  itemLineId,
-  lineTotal,
-  packSize,
-  unitsOf,
-} from "../lib/cart";
-import { computeFee, computeServiceFee } from "../lib/fees";
-import { businessById } from "../data/catalog";
-import type { CartItem } from "../types";
+import { useMemo, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { BusinessStatusBadge } from '../components/catalog/BusinessStatusBadge'
+import { CatalogImage } from '../components/catalog/CatalogImage'
+import { formatCup } from '../components/catalog/Price'
+import { RedemptionSection } from '../components/rewards/RedemptionSection'
+import { Button } from '../components/ui/Button'
+import { EmptyState } from '../components/ui/EmptyState'
+import { Icon } from '../components/ui/Icon'
+import { QuantitySelector } from '../components/ui/QuantitySelector'
+import { useToast } from '../context/ToastContext'
+import { estimateCartLine, getCartSubtotalEstimate, groupCartByBusiness, lineIdOf, packSizeOf } from '../features/cart'
+import { visualForProduct } from '../features/catalog'
+import { validApplied } from '../features/rewards'
+import { isRemovableIssue, precheckCart, removeUnavailableFromCart } from '../services/checkoutService'
+import { MAX_LINE_QUANTITY, useCartStore } from '../store/cartStore'
+import { useCatalogStore } from '../store/catalogStore'
+import { useRewardsStore } from '../store/rewardsStore'
+import type { CartChangeDetail } from '../types/backend/order'
 
+function findProductIssue(issues: CartChangeDetail[], productId: string) {
+  return issues.find((issue) => issue.type === 'product' && issue.productId === productId)
+}
+
+function findBusinessIssue(issues: CartChangeDetail[], businessId: string) {
+  return issues.find((issue) => issue.type === 'business' && issue.businessId === businessId)
+}
+
+/**
+ * Carrito — `CartScreen` de mobile: agrupado por negocio, lo elegido en cada línea (tipo, agrego,
+ * envase), estimados (el total real lo calcula el servidor) y, antes del formulario de entrega, una
+ * revisión con el servidor para marcar aquí lo agotado o cerrado, y el canje de puntos (con cuenta).
+ */
 export function CartPage() {
-  const navigate = useNavigate();
-  const { items, setQuantity, removeItem, subtotal, total } = useCart();
-  const serviceFee = computeServiceFee(items);
+  const navigate = useNavigate()
+  const { showToast } = useToast()
+  const items = useCartStore((state) => state.items)
+  const checkoutIssues = useCartStore((state) => state.checkoutIssues)
+  const incrementItem = useCartStore((state) => state.incrementItem)
+  const decrementItem = useCartStore((state) => state.decrementItem)
+  const removeBusinessItems = useCartStore((state) => state.removeBusinessItems)
+  const businesses = useCatalogStore((state) => state.businesses)
+  const catalogProducts = useCatalogStore((state) => state.products)
+  const categories = useCatalogStore((state) => state.categories)
+  const productById = useMemo(() => new Map(catalogProducts.map((p) => [p.id, p])), [catalogProducts])
+  const groups = useMemo(() => groupCartByBusiness(items, businesses), [items, businesses])
+  const subtotalEstimate = useMemo(() => getCartSubtotalEstimate(items), [items])
+  const [checking, setChecking] = useState(false)
+  const appliedRedemption = useRewardsStore((state) => state.applied)
+  const applied = useMemo(() => validApplied(appliedRedemption, items), [appliedRedemption, items])
+
+  const handleContinue = async () => {
+    if (checking) return
+    setChecking(true)
+    const result = await precheckCart(
+      items,
+      applied ? { rewardId: applied.reward.id, expectedBalance: applied.expectedBalance } : undefined,
+    )
+    setChecking(false)
+    if (result.ok) {
+      navigate('/checkout')
+      return
+    }
+    if (result.message) {
+      showToast(`Ya no tomamos pedidos hoy. ${result.message}`, 'error')
+      return
+    }
+    showToast(
+      result.issues.length === 1
+        ? `Tu carrito cambió: ${result.issues[0]!.message}`
+        : 'Tu carrito cambió: hay productos o locales que ya no se pueden pedir. Los marcamos abajo.',
+      'error',
+    )
+  }
+
+  const handleRemoveUnavailable = () => {
+    const removed = removeUnavailableFromCart(checkoutIssues)
+    showToast(`${removed === 1 ? 'Quitamos 1 producto' : `Quitamos ${removed} productos`}. Ya puedes continuar con lo demás.`, 'info')
+  }
 
   if (items.length === 0) {
     return (
-      <div className="animate-fade-in">
-        <PageHeader title="Tu carrito" />
-        <EmptyState
-          icon="🛒"
-          title="Tu carrito está vacío"
-          description="Busca productos y añádelos para empezar tu pedido."
-          action={
-            <Button size="lg" onClick={() => navigate("/")}>
-              Explorar productos
-            </Button>
-          }
-        />
-      </div>
-    );
+      <EmptyState
+        icon="cart"
+        title="Tu carrito está vacío"
+        description="Agrega productos desde el catálogo para empezar."
+        action={
+          <Link to="/" className="inline-flex min-h-12 items-center rounded-r-md bg-gradient-primary px-5 font-semibold text-white">
+            Ver el catálogo
+          </Link>
+        }
+      />
+    )
   }
 
-  const groups = groupByBusiness(items);
-  const hasUsdGroups = groups.some(g => businessById(g.businessId)?.currency === 'USD');
-  const cupSubtotal = items
-    .filter(i => (i.product.currency ?? businessById(i.product.businessId)?.currency) !== 'USD')
-    .reduce((sum, i) => sum + lineTotal(i), 0)
-  const usdSubtotal = items
-    .filter(i => (i.product.currency ?? businessById(i.product.businessId)?.currency) === 'USD')
-    .reduce((sum, i) => sum + lineTotal(i), 0)
-  const hasAnyUsd = usdSubtotal > 0 || hasUsdGroups
-  const feeInfo = computeFee(items);
-  const feeNote = [
-    feeInfo.multiBusiness ? '+100 por varios negocios' : null,
-    feeInfo.isBulk ? '+100 por pedido mayor de 10 000 CUP' : null,
-  ].filter(Boolean).join(' · ') || undefined;
-
   return (
-    <div className="animate-fade-in">
-      <PageHeader
-        title="Tu carrito"
-        subtitle={`${items.length} ${items.length === 1 ? "producto" : "productos"} · ${groups.length} ${groups.length === 1 ? "negocio" : "negocios"}`}
-      />
+    <div className="px-4 lg:px-6 pt-3 lg:pt-6 pb-44 lg:pb-10">
+      <h1 className="text-h1 text-text-primary mb-4">Tu carrito</h1>
 
-      <div className="px-4 space-y-4">
-        {groups.map((group) => {
-          const groupCurrency = businessById(group.businessId)?.currency
-          const grpUsd = group.items.filter(i => i.product.currency === 'USD' || groupCurrency === 'USD').reduce((s, i) => s + lineTotal(i), 0)
-          const grpCup = group.items.filter(i => i.product.currency !== 'USD' && groupCurrency !== 'USD').reduce((s, i) => s + lineTotal(i), 0)
-          const grpSubtotalLabel = grpUsd > 0 && grpCup > 0
-            ? `${formatPrice(grpCup)} + ${formatPrice(grpUsd, 'USD')}`
-            : grpUsd > 0 ? formatPrice(grpUsd, 'USD') : formatPrice(grpCup)
-          return (
-          <div
-            key={group.businessId}
-            className="bg-surface border border-border rounded-3xl overflow-hidden"
-          >
-            {/* Cabecera del negocio */}
-            <div className="flex items-center gap-2 px-4 py-2.5 bg-primary/5 border-b border-border">
-              <span className="text-primary">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 9l1-5h16l1 5M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9M3 9h18"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm font-bold text-text-primary flex-1 truncate">
-                {group.businessName}
+      <div className="lg:grid lg:grid-cols-[1fr_340px] lg:gap-8 lg:items-start">
+        <div className="space-y-4">
+          {checkoutIssues.length > 0 && (
+            <div role="alert" className="rounded-r-md bg-warning/10 p-3 space-y-2">
+              <p className="flex items-center gap-2 font-semibold text-warning-text">
+                <Icon name="alert" size={20} />
+                Tu carrito cambió
               </p>
-              <span className="text-xs font-semibold text-text-secondary">
-                {grpSubtotalLabel}
-              </span>
+              <p className="text-caption text-text-secondary">
+                Marcamos abajo qué producto o negocio cambió — quítalo o ajústalo para poder continuar.
+              </p>
+              {checkoutIssues.some(isRemovableIssue) && (
+                <Button variant="outline" size="sm" onClick={handleRemoveUnavailable}>
+                  Quitar lo que no está disponible
+                </Button>
+              )}
             </div>
+          )}
 
-            {businessById(group.businessId)?.paymentNote && (
-              <PaymentNote
-                note={businessById(group.businessId)!.paymentNote!}
-              />
-            )}
+          {groups.map((group) => {
+            const businessIssue = findBusinessIssue(checkoutIssues, group.businessId)
+            const name = group.business?.name ?? 'Negocio'
+            return (
+              <section key={group.businessId} className="rounded-r-lg bg-surface border border-border/60 shadow-card">
+                <header className="flex items-center gap-3 p-3 border-b border-border">
+                  <CatalogImage uri={group.business?.logoUrl} width={40} label={name} className="w-10 h-10 shrink-0 rounded-[10px]" />
+                  <h2 className="flex-1 min-w-0 text-h3 text-text-primary truncate">{name}</h2>
+                  {group.business && <BusinessStatusBadge business={group.business} />}
+                </header>
 
-            <div className="p-3 space-y-3">
-              {group.items.map((item) => {
-                const key = itemLineId(item);
-                return (
-                  <CartRow
-                    key={key}
-                    item={item}
-                    currency={groupCurrency}
-                    onDec={() => setQuantity(key, item.quantity - 1)}
-                    onInc={() => setQuantity(key, item.quantity + 1)}
-                    onRemove={() => removeItem(key)}
-                    onOpen={() => navigate(`/producto/${item.product.id}`)}
-                  />
-                );
-              })}
-            </div>
+                {businessIssue && (
+                  <div className="m-3 rounded-r-md bg-danger-soft p-3 space-y-2">
+                    <p className="flex items-start gap-1.5 text-caption text-danger-text">
+                      <Icon name="alert" size={16} className="mt-px shrink-0" />
+                      {businessIssue.message}
+                    </p>
+                    <Button variant="outline" size="sm" onClick={() => removeBusinessItems(group.businessId)}>
+                      Quitar estos productos
+                    </Button>
+                  </div>
+                )}
+
+                <ul className="divide-y divide-border">
+                  {group.items.map((item) => {
+                    const issue = findProductIssue(checkoutIssues, item.productId)
+                    const lineId = lineIdOf(item)
+                    const packSize = packSizeOf(item.formatoSnapshot)
+                    return (
+                      <li key={lineId} className="flex gap-3 p-3">
+                        <Link to={`/producto/${item.productId}`} className="shrink-0">
+                          <CatalogImage
+                            uri={item.imageUrlSnapshot}
+                            width={64}
+                            visual={visualForProduct(productById.get(item.productId) ?? { categoryId: null }, categories)}
+                            className="w-16 h-16 rounded-r-md"
+                          />
+                        </Link>
+                        <div className="flex-1 min-w-0 space-y-0.5">
+                          <p className="text-[15px] font-semibold text-text-primary line-clamp-2">{item.nameSnapshot}</p>
+                          <p className="text-caption text-text-secondary">
+                            {item.priceSnapshot != null
+                              ? `${formatCup(item.priceSnapshot)}${packSize > 1 ? ` por caja de ${packSize}` : ''}`
+                              : 'Precio no disponible'}
+                          </p>
+                          {item.optionName && <p className="text-caption text-text-secondary">Tipo: {item.optionName}</p>}
+                          {item.addonName && (
+                            <p className="text-caption text-text-secondary">
+                              Agrego: {item.addonName}
+                              {item.addonPriceSnapshot ? ` (+${formatCup(item.addonPriceSnapshot)}${packSize > 1 ? ' c/u' : ''})` : ''}
+                            </p>
+                          )}
+                          {item.packagingName && (
+                            <p className="text-caption text-text-secondary">
+                              Envase: {item.packagingName}
+                              {item.packagingPriceSnapshot ? ` (+${formatCup(item.packagingPriceSnapshot)})` : ''}
+                            </p>
+                          )}
+                          {item.priceSnapshot != null && (
+                            <p className="text-caption font-semibold text-text-primary">Total línea: {formatCup(estimateCartLine(item))}</p>
+                          )}
+                          {issue && <p className="text-caption font-semibold text-danger-text">{issue.message}</p>}
+                        </div>
+                        <div className="self-center">
+                          <QuantitySelector
+                            quantity={item.quantity}
+                            max={MAX_LINE_QUANTITY}
+                            removeAtOne
+                            label={`Cantidad de ${item.nameSnapshot}`}
+                            onIncrement={() => incrementItem(lineId)}
+                            onDecrement={() => decrementItem(lineId)}
+                          />
+                        </div>
+                      </li>
+                    )
+                  })}
+                </ul>
+              </section>
+            )
+          })}
+
+          <RedemptionSection items={items} />
+        </div>
+
+        {/* Resumen: fijo abajo en teléfono (como mobile), columna lateral en escritorio. */}
+        <aside className="fixed lg:sticky inset-x-0 bottom-[calc(env(safe-area-inset-bottom,0px)+84px)] lg:bottom-auto lg:top-24 z-30 mx-2 lg:mx-0 rounded-r-lg bg-surface border border-border shadow-float lg:shadow-card p-3 space-y-2">
+          <div className="flex items-center justify-between">
+            <span className="text-body text-text-primary">Subtotal estimado</span>
+            <span className="text-h3 text-text-primary">{formatCup(subtotalEstimate)}</span>
           </div>
-          )
-        })}
-      </div>
-
-      {/* Resumen */}
-      <div className="px-4 mt-5 space-y-3">
-        <div className="bg-surface border border-border rounded-3xl p-4 space-y-3">
-          {hasAnyUsd ? (
-            <>
-              {cupSubtotal > 0 && (
-                <div className="flex justify-between text-sm">
-                  <span className="text-text-secondary">Subtotal CUP</span>
-                  <span className="font-semibold text-text-primary">{formatPrice(cupSubtotal)}</span>
-                </div>
-              )}
-              {usdSubtotal > 0 && (
-                <div className="flex justify-between text-sm">
-                  <span className="text-text-secondary">Subtotal USD</span>
-                  <span className="font-semibold text-text-primary">{formatPrice(usdSubtotal, 'USD')}</span>
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="flex justify-between text-sm">
-              <span className="text-text-secondary">Subtotal</span>
-              <span className="font-semibold text-text-primary">{formatPrice(subtotal)}</span>
-            </div>
-          )}
-          <MessagingFeeRow fee={feeInfo.fee} note={feeNote} />
-          <ServiceFeeRow fee={serviceFee} />
-          {hasAnyUsd ? (
-            <div className="border-t border-border pt-3 space-y-1">
-              {(cupSubtotal > 0 || feeInfo.fee > 0 || serviceFee > 0) && (
-                <div className="flex justify-between items-baseline">
-                  <span className="font-bold text-text-primary">Total CUP</span>
-                  <span className="text-xl font-bold text-primary">{formatPrice(cupSubtotal + feeInfo.fee + serviceFee)}</span>
-                </div>
-              )}
-              {usdSubtotal > 0 && (
-                <div className="flex justify-between items-baseline">
-                  <span className="font-bold text-text-primary">Total USD</span>
-                  <span className="text-xl font-bold text-primary">{formatPrice(usdSubtotal, 'USD')}</span>
-                </div>
-              )}
-            </div>
-          ) : (
-            <div className="border-t border-border pt-3 flex justify-between items-baseline">
-              <span className="font-bold text-text-primary">Total</span>
-              <span className="text-xl font-bold text-primary">{formatPrice(total)}</span>
-            </div>
-          )}
-          {hasUsdGroups && (
-            <p className="text-[11px] text-warning font-semibold">
-              La mensajería se abona en CUP aunque no se retenga la prenda.
-            </p>
-          )}
-          <p className="text-[11px] text-text-secondary text-right">
-            La tarifa puede variar según la hora de entrega.
-          </p>
-        </div>
-
-        <div className="mt-4">
-          <Button size="lg" fullWidth onClick={() => navigate("/checkout")}>
-            Continuar al pedido
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 12h14M13 6l6 6-6 6"
-              />
-            </svg>
+          <p className="text-caption text-text-secondary">El delivery y el total final se calculan al confirmar.</p>
+          <Button fullWidth loading={checking} onClick={handleContinue}>
+            Continuar
           </Button>
-        </div>
+        </aside>
       </div>
     </div>
-  );
-}
-
-function CartRow({
-  item,
-  currency,
-  onDec,
-  onInc,
-  onRemove,
-  onOpen,
-}: {
-  item: CartItem;
-  currency?: 'USD';
-  onDec: () => void;
-  onInc: () => void;
-  onRemove: () => void;
-  onOpen: () => void;
-}) {
-  const { product } = item;
-  const itemCurrency = product.currency ?? currency;
-  return (
-    <div className="flex gap-3">
-      <button onClick={onOpen} className="flex-shrink-0">
-        <ProductImage
-          emoji={product.image}
-          photo={product.photo}
-          category={product.category}
-          alt={product.name}
-          size="sm"
-          className="w-20 h-20 rounded-2xl"
-        />
-      </button>
-
-      <div className="flex-1 min-w-0 flex flex-col">
-        <button
-          onClick={onOpen}
-          className="text-sm font-bold text-text-primary leading-snug line-clamp-2 text-left"
-        >
-          {product.name}
-        </button>
-        <div className="flex flex-wrap gap-1 mt-0.5">
-          {item.option && (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-md bg-primary/10 text-primary text-[10px] font-bold">
-              {item.option}
-            </span>
-          )}
-          {item.addon && (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-md bg-success/10 text-success text-[10px] font-bold">
-              + {item.addon.name}
-            </span>
-          )}
-          {item.packaging && (
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-md bg-sky-50 text-sky-700 text-[10px] font-bold">
-              📦 {item.packaging.name}
-            </span>
-          )}
-        </div>
-        {hasFormato(product) && (
-          <p className="text-[11px] font-semibold text-text-secondary mt-0.5">
-            {unitsOf(item)} u · caja × {packSize(product)} ·{" "}
-            {formatAmount(product.price)}/u
-          </p>
-        )}
-        <p className="text-base font-bold text-primary mt-auto">
-          {itemCurrency === 'USD' ? '$ ' : ''}{formatAmount(lineTotal(item))}{" "}
-          <span className="text-[11px] font-semibold text-text-secondary">
-            {itemCurrency === 'USD' ? 'USD' : 'CUP'}
-          </span>
-        </p>
-      </div>
-
-      <div className="flex flex-col items-end justify-between flex-shrink-0">
-        <button
-          onClick={onRemove}
-          className="w-8 h-8 rounded-lg text-text-secondary hover:text-danger hover:bg-red-50 flex items-center justify-center transition-colors"
-          aria-label="Eliminar"
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M5 7h14M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m1 0-.7 12a1 1 0 0 1-1 .94H8.7a1 1 0 0 1-1-.94L7 7"
-            />
-          </svg>
-        </button>
-
-        <div className="flex items-center bg-background border border-border rounded-xl">
-          <button
-            onClick={onDec}
-            className="w-8 h-8 flex items-center justify-center text-text-primary"
-            aria-label="Disminuir"
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path strokeLinecap="round" d="M5 12h14" />
-            </svg>
-          </button>
-          <span className="min-w-9 px-1 text-center text-sm font-bold">
-            {unitsOf(item)}
-          </span>
-          <button
-            onClick={onInc}
-            className="w-8 h-8 flex items-center justify-center text-primary"
-            aria-label={hasFormato(product) ? "Añadir una caja" : "Aumentar"}
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path strokeLinecap="round" d="M12 5v14M5 12h14" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function PageHeader({ title, subtitle }: { title: string; subtitle?: string }) {
-  return (
-    <header className="px-4 pt-6 pb-4">
-      <h1 className="text-2xl font-bold text-text-primary">{title}</h1>
-      {subtitle && (
-        <p className="text-sm text-text-secondary mt-0.5">{subtitle}</p>
-      )}
-    </header>
-  );
+  )
 }
