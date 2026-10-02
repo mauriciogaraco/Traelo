@@ -33,9 +33,14 @@ export function useCatalogBootstrap(): void {
       const { lastSyncedAt } = useCatalogStore.getState()
       if (!lastSyncedAt || Date.now() - Date.parse(lastSyncedAt) > RESYNC_ON_RETURN_MS) void syncCatalog()
     }
+    // Pestaña abierta durante horas: el estado abierto/cerrado de los negocios cambia con la hora.
+    const interval = window.setInterval(() => {
+      if (document.visibilityState === 'visible') void syncCatalog()
+    }, RESYNC_ON_RETURN_MS)
     window.addEventListener('online', onOnline)
     document.addEventListener('visibilitychange', onVisible)
     return () => {
+      window.clearInterval(interval)
       unsubscribeCatalog()
       window.removeEventListener('online', onOnline)
       document.removeEventListener('visibilitychange', onVisible)
