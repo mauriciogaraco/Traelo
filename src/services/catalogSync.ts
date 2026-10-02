@@ -68,6 +68,17 @@ async function refreshProductsForBusinesses(
   return [...untouched, ...refreshedLists.flat()]
 }
 
+/**
+ * `isOpenNow` depende de la hora, no de la versión del catálogo: aunque no haya cambios hay que
+ * volver a pedir los negocios, o la caché queda con el estado de cuando se bajó (p. ej. "CERRADO"
+ * de la madrugada mostrándose todo el día).
+ */
+async function refreshBusinessesOnly() {
+  const businesses = await getCatalogBusinesses()
+  const current = useCatalogStore.getState()
+  persist({ version: current.version, categories: current.categories, businesses, products: current.products })
+}
+
 async function runFullBootstrap() {
   const bootstrap = await getCatalogBootstrap()
   persist({
@@ -95,6 +106,8 @@ async function applyChanges(changes: CatalogChange[], latestVersion: number) {
   let { categories, businesses } = store
   if (needsCategoriesOrBusinesses) {
     ;({ categories, businesses } = await refreshCategoriesAndBusinesses())
+  } else {
+    businesses = await getCatalogBusinesses()
   }
 
   let products = store.products
@@ -138,7 +151,10 @@ async function runSync(): Promise<void> {
     }
 
     const { version: remoteVersion } = await getCatalogVersion()
-    if (remoteVersion === store.version) return
+    if (remoteVersion === store.version) {
+      await refreshBusinessesOnly()
+      return
+    }
     // Versión remota MENOR que la guardada: la base se reinició (p.ej. el backend de pruebas).
     // Los cambios "desde" una versión que ya no existe no sirven: se baja todo de nuevo.
     if (remoteVersion < store.version) {
@@ -147,7 +163,10 @@ async function runSync(): Promise<void> {
     }
 
     const { changes, latestVersion } = await getCatalogChanges(store.version)
-    if (changes.length === 0) return
+    if (changes.length === 0) {
+      await refreshBusinessesOnly()
+      return
+    }
     await applyChanges(changes, latestVersion)
   } catch (err) {
     if (err instanceof ApiError && (err.isNetworkError() || err.isTimeout())) {
