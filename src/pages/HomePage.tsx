@@ -7,6 +7,7 @@ import { HeroBusinessCarousel } from '../components/catalog/HeroBusinessCarousel
 import { ProductCard } from '../components/catalog/ProductCard'
 import { SearchLink } from '../components/catalog/SearchBar'
 import { Rail, Section } from '../components/catalog/Section'
+import { RegisterPointsBanner } from '../components/home/RegisterPointsBanner'
 import { ShareSection } from '../components/home/ShareSection'
 
 // El flyer de la app se baja aparte: no suma peso a la carga inicial del Home.
@@ -143,6 +144,9 @@ export function HomePage() {
           </Rail>
         </Section>
       )}
+
+      {/* Invitación a registrarse para ganar puntos (solo invitados), debajo de "Top Negocios". */}
+      <RegisterPointsBanner />
 
       {topProducts.length > 0 && (
         <Section title="Productos top">
