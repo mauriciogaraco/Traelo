@@ -1,6 +1,7 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
-import { ratingLabel } from '../../features/catalog'
+import { businessPath, ratingLabel } from '../../features/catalog'
+import { useCatalogStore } from '../../store/catalogStore'
 import type { CatalogBusiness, CatalogBusinessStats } from '../../types/backend/catalog'
 import { Icon } from '../ui/Icon'
 import { BusinessStatusBadge } from './BusinessStatusBadge'
@@ -24,9 +25,10 @@ interface BusinessCardProps {
  */
 export const BusinessCard = memo(function BusinessCard({ business, stats, badge, layout = 'list' }: BusinessCardProps) {
   const rating = ratingLabel(stats)
+  const businesses = useCatalogStore((state) => state.businesses)
   return (
     <Link
-      to={`/negocio/${business.id}`}
+      to={businessPath(business.id, businesses)}
       className={`group flex items-center gap-3 sm:flex-col sm:items-stretch sm:gap-0 rounded-r-lg sm:rounded-lg bg-surface p-3 sm:p-0 shadow-card border border-border/60 overflow-hidden transition hover:shadow-card-hover hover:border-primary/30 sm:hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 ${
         // El carrusel (Rail) sigue siendo una fila con scroll horizontal hasta `lg` (recién ahí
         // pasa a grilla): un ancho fijo hasta ese punto, para que las tarjetas no queden cada una

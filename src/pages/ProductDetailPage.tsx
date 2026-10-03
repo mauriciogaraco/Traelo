@@ -11,7 +11,7 @@ import { StatusBadge } from '../components/ui/StatusBadge'
 import { FavoriteButton } from '../components/catalog/FavoriteButton'
 import { useToast } from '../context/ToastContext'
 import { cheapestPackaging, estimateLine, findAddon, findPackaging, packSizeOf, requiresOption } from '../features/cart'
-import { getBusinessStatus, isSoldOut, visualForProduct } from '../features/catalog'
+import { businessPath, getBusinessStatus, isSoldOut, visualForProduct } from '../features/catalog'
 import { useFavorites } from '../hooks/useFavorites'
 import { favoriteToast } from '../lib/favoriteToast'
 import { flyToCart } from '../lib/flyToCart'
@@ -131,7 +131,7 @@ export function ProductDetailPage() {
           <div className="space-y-1">
             <h1 className="text-h1 text-text-primary">{product.name}</h1>
             {business && (
-              <Link to={`/negocio/${business.id}`} className="inline-block text-[15px] font-semibold text-primary-text hover:underline">
+              <Link to={businessPath(business.id, businesses)} className="inline-block text-[15px] font-semibold text-primary-text hover:underline">
                 {business.name}
               </Link>
             )}

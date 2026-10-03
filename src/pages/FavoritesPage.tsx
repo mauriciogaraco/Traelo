@@ -3,7 +3,9 @@ import { AuthPrompt } from '../components/auth/AuthPrompt'
 import { formatCup } from '../components/catalog/Price'
 import { EmptyState } from '../components/ui/EmptyState'
 import { RowsSkeleton } from '../components/ui/Skeleton'
+import { businessPath } from '../features/catalog'
 import { useFavorites } from '../hooks/useFavorites'
+import { useCatalogStore } from '../store/catalogStore'
 
 const ROW =
   'block rounded-r-lg bg-surface border border-border/60 shadow-card p-3 hover:shadow-card-hover transition'
@@ -11,6 +13,7 @@ const ROW =
 /** Favoritos de la cuenta (`FavoritesScreen` de mobile): negocios y productos guardados. */
 export function FavoritesPage() {
   const { isAuthenticated, businesses, products, loaded } = useFavorites()
+  const catalogBusinesses = useCatalogStore((state) => state.businesses)
 
   if (!isAuthenticated) {
     return (
@@ -49,7 +52,7 @@ export function FavoritesPage() {
           <ul className="space-y-2">
             {businesses.map((item) => (
               <li key={item.businessId}>
-                <Link to={`/negocio/${item.businessId}`} className={ROW}>
+                <Link to={businessPath(item.businessId, catalogBusinesses)} className={ROW}>
                   <span className="block font-semibold text-text-primary">{item.name}</span>
                   <span className="block text-caption text-text-secondary">{item.address}</span>
                 </Link>
