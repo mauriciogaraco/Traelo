@@ -88,7 +88,8 @@ const styles: Record<ToastType, { icon: ReactNode; ring: string }> = {
 function ToastViewport({ toasts, onClose }: { toasts: Toast[]; onClose: (id: number) => void }) {
   if (toasts.length === 0) return null
   return (
-    <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-content z-[100] px-4 pt-4 pointer-events-none space-y-2">
+    // Debajo del header (y del botón "Volver" de las pantallas de flujo, que ocupa los primeros ~50 px).
+    <div className="fixed top-[calc(env(safe-area-inset-top,0px)+60px)] lg:top-[76px] left-1/2 -translate-x-1/2 w-full max-w-content z-[100] px-4 pointer-events-none space-y-2">
       {toasts.map((t) => (
         <div
           key={t.id}
