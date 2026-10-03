@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { useLocation } from 'react-router-dom'
+import { FloatingStatusBars } from './FloatingStatusBars'
 import { FloatingTabBar } from './FloatingTabBar'
 import { TopHeader } from './TopHeader'
 import { OfflineBanner } from '../ui/OfflineBanner'
@@ -23,6 +24,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <OfflineBanner />
       <main className={`mx-auto w-full max-w-6xl ${flow ? 'pb-6' : 'pb-28 lg:pb-12'}`}>{children}</main>
       {!flow && <FloatingTabBar />}
+      <FloatingStatusBars />
     </div>
   )
 }
