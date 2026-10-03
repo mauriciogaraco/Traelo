@@ -17,6 +17,7 @@ import { EmptyState } from '../components/ui/EmptyState'
 import { ErrorState } from '../components/ui/ErrorState'
 import {
   businessOrdersWeek,
+  businessPath,
   findBusinessByLegacyId,
   isSoldOut,
   productUnitsWeek,
@@ -190,7 +191,7 @@ function useLegacyHomeRedirect() {
 
   if (legacyBusiness) {
     const business = findBusinessByLegacyId(legacyBusiness, businesses)
-    if (business) return <Navigate replace to={`/negocio/${business.id}`} />
+    if (business) return <Navigate replace to={businessPath(business.id, businesses)} />
     // Todavía sin catálogo: se espera; si ya cargó y no existe, se queda en el Home.
     if (waiting) return <HomeSkeleton />
   }

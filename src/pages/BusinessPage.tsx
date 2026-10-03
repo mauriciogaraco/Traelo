@@ -8,7 +8,7 @@ import { EmptyState } from '../components/ui/EmptyState'
 import { FavoriteButton } from '../components/catalog/FavoriteButton'
 import { Icon } from '../components/ui/Icon'
 import { ProductGridSkeleton, Skeleton } from '../components/ui/Skeleton'
-import { findBusinessByLegacyId, isBackendId } from '../features/catalog'
+import { businessPath, businessSlugs, findBusinessByLegacyId, findBusinessByParam, isBackendId } from '../features/catalog'
 import { useToast } from '../context/ToastContext'
 import { useFavorites } from '../hooks/useFavorites'
 import { useIncrementalList } from '../hooks/useIncrementalList'
@@ -23,7 +23,7 @@ import { useCatalogStore } from '../store/catalogStore'
  * El corazón de favoritos solo aparece con sesión, como en mobile.
  */
 export function BusinessPage() {
-  const { id = '' } = useParams()
+  const { id: param = '' } = useParams()
   const businesses = useCatalogStore((state) => state.businesses)
   const allProducts = useCatalogStore((state) => state.products)
   const waiting = useCatalogStore((state) => !state.hydrated || (state.businesses.length === 0 && state.isSyncing))
@@ -31,15 +31,16 @@ export function BusinessPage() {
   const { showToast } = useToast()
   const { isAuthenticated, businesses: favoriteBusinesses } = useFavorites()
 
-  const business = useMemo(() => businesses.find((b) => b.id === id), [businesses, id])
+  const business = useMemo(() => findBusinessByParam(param, businesses), [businesses, param])
+  const id = business?.id ?? param
   const products = useMemo(() => allProducts.filter((p) => p.businessId === id), [allProducts, id])
   const productList = useIncrementalList(products, id)
 
   if (!business) {
     // Enlace viejo de la web (/negocio/cronos): se traduce al negocio del backend.
-    if (!isBackendId(id)) {
-      const legacy = findBusinessByLegacyId(id, businesses)
-      if (legacy) return <Navigate replace to={`/negocio/${legacy.id}`} />
+    if (!isBackendId(param)) {
+      const legacy = findBusinessByLegacyId(param, businesses)
+      if (legacy) return <Navigate replace to={businessPath(legacy.id, businesses)} />
     }
     if (waiting) {
       return (
@@ -66,6 +67,10 @@ export function BusinessPage() {
       />
     )
   }
+
+  // Enlace con el id largo (o con otras mayúsculas): se pasa al enlace corto del negocio.
+  const slug = businessSlugs(businesses).get(business.id)
+  if (slug && param !== slug) return <Navigate replace to={`/negocio/${slug}`} />
 
   const phoneHref = `tel:${business.phone.replace(/[^\d+]/g, '')}`
 
