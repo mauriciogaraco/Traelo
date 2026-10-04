@@ -87,6 +87,8 @@ function summaryText(params: { hasQuery: boolean; query: string; count: number; 
 export function SearchPage() {
   const [params, setParams] = useSearchParams()
   const query = params.get('q') ?? ''
+  // `?tab=negocios|productos`: "Ver todos los negocios" (Home) y las categorías eligen la pestaña con la que se abre.
+  const urlTab: Tab | null = params.get('tab') === 'productos' ? 'products' : params.get('tab') === 'negocios' ? 'businesses' : null
   const setQuery = (q: string) =>
     setParams((prev) => {
       const next = new URLSearchParams(prev)
@@ -104,7 +106,7 @@ export function SearchPage() {
 
   // Los resultados se calculan con una copia "diferida" de la búsqueda: escribir no traba la pantalla.
   const deferredQuery = useDeferredValue(query)
-  const [tab, setTab] = useState<Tab>('products')
+  const [tabChoice, setTabChoice] = useState<Tab | null>(null)
   const [productSort, setProductSort] = useState<'auto' | ProductSort>('auto')
   const [businessSort, setBusinessSort] = useState<'auto' | BusinessSort>('auto')
   const [onlyOffers, setOnlyOffers] = useState(false)
@@ -116,7 +118,8 @@ export function SearchPage() {
 
   const hasQuery = deferredQuery.trim().length > 0
   const productSortNow = effectiveSort<ProductSort>(productSort, hasQuery) as ProductSort
-  const businessSortNow = effectiveSort<BusinessSort>(businessSort, hasQuery) as BusinessSort
+  // Sin búsqueda ni orden elegido, los negocios van de la A a la Z: así cada quien encuentra el suyo en la lista.
+  const businessSortNow = (businessSort === 'auto' && !hasQuery ? 'alphabetical' : effectiveSort<BusinessSort>(businessSort, hasQuery)) as BusinessSort
 
   const matchedProducts = useMemo(() => searchProducts(deferredQuery, products), [deferredQuery, products])
   const matchedBusinesses = useMemo(() => searchBusinesses(deferredQuery, businesses), [deferredQuery, businesses])
@@ -128,6 +131,11 @@ export function SearchPage() {
     () => sortBusinesses(filterBusinesses(matchedBusinesses, { onlyOpen }), businessSortNow, stats),
     [matchedBusinesses, onlyOpen, businessSortNow, stats],
   )
+  // Los negocios van primero. Solo si lo escrito no coincide con ningún negocio pero sí con productos,
+  // se abre en Productos; en cuanto la persona elige una pestaña, se respeta su elección.
+  const autoTab: Tab = hasQuery && matchedBusinesses.length === 0 && matchedProducts.length > 0 ? 'products' : 'businesses'
+  const tab: Tab = tabChoice ?? urlTab ?? autoTab
+  const setTab = setTabChoice
   const businessNameById = useMemo(() => new Map(businesses.map((b) => [b.id, b.name])), [businesses])
 
   // Insignias solo cuando el orden las justifica y hay datos reales detrás.
@@ -224,7 +232,7 @@ export function SearchPage() {
     <div className="px-4 lg:px-6 pt-3 lg:pt-6 space-y-3">
       <div className="space-y-3 lg:flex lg:items-center lg:gap-4 lg:space-y-0">
         <div className="lg:flex-1">
-          <SearchInput value={query} onChange={setQuery} autoFocus={!query} />
+          <SearchInput value={query} onChange={setQuery} autoFocus={!query && !urlTab} />
         </div>
         <div className="lg:w-80">
           <SegmentedTabs
@@ -232,8 +240,8 @@ export function SearchPage() {
             value={tab}
             onChange={setTab}
             options={[
-              { key: 'products', label: 'Productos', count: matchedProducts.length },
               { key: 'businesses', label: 'Negocios', count: matchedBusinesses.length },
+              { key: 'products', label: 'Productos', count: matchedProducts.length },
             ]}
           />
         </div>

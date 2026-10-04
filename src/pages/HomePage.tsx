@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo } from 'react'
-import { Navigate, useSearchParams } from 'react-router-dom'
+import { Link, Navigate, useSearchParams } from 'react-router-dom'
 import { BusinessCard } from '../components/catalog/BusinessCard'
 import { HomeSkeleton } from '../components/catalog/CatalogSkeletons'
 import { CategoryCard } from '../components/catalog/CategoryCard'
@@ -7,12 +7,12 @@ import { HeroBusinessCarousel } from '../components/catalog/HeroBusinessCarousel
 import { ProductCard } from '../components/catalog/ProductCard'
 import { SearchLink } from '../components/catalog/SearchBar'
 import { Rail, Section } from '../components/catalog/Section'
+import { AllBusinessesLink, ALL_BUSINESSES_HREF } from '../components/home/AllBusinessesLink'
 import { RegisterPointsBanner } from '../components/home/RegisterPointsBanner'
 import { ShareSection } from '../components/home/ShareSection'
 
 // El flyer de la app se baja aparte: no suma peso a la carga inicial del Home.
 const AppDownloadFlyer = lazy(() => import('../components/home/AppDownloadFlyer').then((m) => ({ default: m.AppDownloadFlyer })))
-const AppDownloadBanner = lazy(() => import('../components/home/AppDownloadFlyer').then((m) => ({ default: m.AppDownloadBanner })))
 import { EmptyState } from '../components/ui/EmptyState'
 import { ErrorState } from '../components/ui/ErrorState'
 import {
@@ -125,13 +125,18 @@ export function HomePage() {
         </Section>
       )}
 
-      {/* Acceso rápido a la app (debajo de "Ofertas destacadas"): lleva al flyer completo del final. */}
-      <Suspense fallback={<div className="h-[68px] rounded-r-lg bg-primary/10" aria-hidden="true" />}>
-        <AppDownloadBanner />
-      </Suspense>
+      {/* Acceso a la lista completa de negocios (debajo de "Ofertas destacadas"): donde cada quien encuentra el suyo. */}
+      <AllBusinessesLink businesses={businesses} />
 
       {topBusinesses.length > 0 && (
-        <Section title="Top Negocios">
+        <Section
+          title="Top Negocios"
+          action={
+            <Link to={ALL_BUSINESSES_HREF} className="text-body-sm font-semibold text-primary-text hover:underline">
+              Ver todos
+            </Link>
+          }
+        >
           <Rail desktopColumns={3}>
             {topBusinesses.map((business) => (
               <BusinessCard
