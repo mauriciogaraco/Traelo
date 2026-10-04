@@ -13,7 +13,6 @@ import { ShareSection } from '../components/home/ShareSection'
 
 // El flyer de la app se baja aparte: no suma peso a la carga inicial del Home.
 const AppDownloadFlyer = lazy(() => import('../components/home/AppDownloadFlyer').then((m) => ({ default: m.AppDownloadFlyer })))
-const AppDownloadBanner = lazy(() => import('../components/home/AppDownloadFlyer').then((m) => ({ default: m.AppDownloadBanner })))
 import { EmptyState } from '../components/ui/EmptyState'
 import { ErrorState } from '../components/ui/ErrorState'
 import {
@@ -126,21 +125,18 @@ export function HomePage() {
         </Section>
       )}
 
-      {/* Acceso rápido a la app (debajo de "Ofertas destacadas"): lleva al flyer completo del final. */}
-      <Suspense fallback={<div className="h-[68px] rounded-r-lg bg-primary/10" aria-hidden="true" />}>
-        <AppDownloadBanner />
-      </Suspense>
+      {/* Acceso a la lista completa de negocios (debajo de "Ofertas destacadas"): donde cada quien encuentra el suyo. */}
+      <AllBusinessesLink businesses={businesses} />
 
-      {/* Top Negocios (solo los que vendieron esta semana) + acceso siempre visible a la lista completa. */}
-      <Section
-        title={topBusinesses.length > 0 ? 'Top Negocios' : 'Negocios'}
-        action={
-          <Link to={ALL_BUSINESSES_HREF} className="text-body-sm font-semibold text-primary-text hover:underline">
-            Ver todos
-          </Link>
-        }
-      >
-        {topBusinesses.length > 0 && (
+      {topBusinesses.length > 0 && (
+        <Section
+          title="Top Negocios"
+          action={
+            <Link to={ALL_BUSINESSES_HREF} className="text-body-sm font-semibold text-primary-text hover:underline">
+              Ver todos
+            </Link>
+          }
+        >
           <Rail desktopColumns={3}>
             {topBusinesses.map((business) => (
               <BusinessCard
@@ -152,11 +148,8 @@ export function HomePage() {
               />
             ))}
           </Rail>
-        )}
-        <div className="lg:max-w-md">
-          <AllBusinessesLink count={businesses.length} />
-        </div>
-      </Section>
+        </Section>
+      )}
 
       {/* Invitación a registrarse para ganar puntos (solo invitados), debajo de "Top Negocios". */}
       <RegisterPointsBanner />

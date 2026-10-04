@@ -489,37 +489,3 @@ function AndroidIcon({ className = '' }: { className?: string }) {
     </svg>
   )
 }
-
-// ── Banner compacto (acceso rápido desde el medio del Home) ───────────────────
-
-/**
- * Versión chica del flyer para el medio del Home: "Descarga la app". Al tocarla lleva al flyer
- * completo, que está al final del Home (con el botón, el progreso y los pasos para instalar).
- */
-export function AppDownloadBanner() {
-  return (
-    <a
-      href={`#${APP_FLYER_ID}`}
-      onClick={(event) => {
-        event.preventDefault()
-        scrollToAppFlyer()
-      }}
-      className="group relative flex items-center gap-3 overflow-hidden rounded-r-lg bg-gradient-hero p-3 pr-4 text-white shadow-[0_10px_24px_-14px_rgb(var(--c-primary)/0.8)] transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40"
-    >
-      <span aria-hidden="true" className="pointer-events-none absolute -right-6 -top-10 h-28 w-28 rounded-full bg-white/10" />
-      <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] bg-white/20">
-        <img src={logomarkWhite} alt="" className="h-7 w-7" />
-      </span>
-      <span className="relative min-w-0 flex-1">
-        <span className="block text-[16px] font-bold leading-5">Descarga la app</span>
-        <span className="flex items-center gap-1 text-caption text-white/85">
-          <AndroidIcon className="h-3.5 w-3.5" />
-          Para Android · Gratis
-        </span>
-      </span>
-      <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-[#C2410C] transition group-hover:translate-y-0.5">
-        <DownloadIcon className="h-4 w-4" />
-      </span>
-    </a>
-  )
-}
