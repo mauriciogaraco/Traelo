@@ -19,7 +19,7 @@ export function categoryImageUrl(category: CatalogCategory): string | null {
 
 /** Mobile (igual que la pestaña Categorías) abre Buscar con el nombre de la categoría. */
 export function categorySearchHref(category: CatalogCategory): string {
-  return `/buscar?q=${encodeURIComponent(category.name)}`
+  return `/buscar?q=${encodeURIComponent(category.name)}&tab=productos`
 }
 
 /** Avatar circular del carrusel de categorías del Home — `CategoryCard` de mobile. */

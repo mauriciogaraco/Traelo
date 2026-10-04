@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useMemo } from 'react'
-import { Navigate, useSearchParams } from 'react-router-dom'
+import { Link, Navigate, useSearchParams } from 'react-router-dom'
 import { BusinessCard } from '../components/catalog/BusinessCard'
 import { HomeSkeleton } from '../components/catalog/CatalogSkeletons'
 import { CategoryCard } from '../components/catalog/CategoryCard'
@@ -7,6 +7,7 @@ import { HeroBusinessCarousel } from '../components/catalog/HeroBusinessCarousel
 import { ProductCard } from '../components/catalog/ProductCard'
 import { SearchLink } from '../components/catalog/SearchBar'
 import { Rail, Section } from '../components/catalog/Section'
+import { AllBusinessesLink, ALL_BUSINESSES_HREF } from '../components/home/AllBusinessesLink'
 import { RegisterPointsBanner } from '../components/home/RegisterPointsBanner'
 import { ShareSection } from '../components/home/ShareSection'
 
@@ -130,8 +131,16 @@ export function HomePage() {
         <AppDownloadBanner />
       </Suspense>
 
-      {topBusinesses.length > 0 && (
-        <Section title="Top Negocios">
+      {/* Top Negocios (solo los que vendieron esta semana) + acceso siempre visible a la lista completa. */}
+      <Section
+        title={topBusinesses.length > 0 ? 'Top Negocios' : 'Negocios'}
+        action={
+          <Link to={ALL_BUSINESSES_HREF} className="text-body-sm font-semibold text-primary-text hover:underline">
+            Ver todos
+          </Link>
+        }
+      >
+        {topBusinesses.length > 0 && (
           <Rail desktopColumns={3}>
             {topBusinesses.map((business) => (
               <BusinessCard
@@ -143,8 +152,11 @@ export function HomePage() {
               />
             ))}
           </Rail>
-        </Section>
-      )}
+        )}
+        <div className="lg:max-w-md">
+          <AllBusinessesLink count={businesses.length} />
+        </div>
+      </Section>
 
       {/* Invitación a registrarse para ganar puntos (solo invitados), debajo de "Top Negocios". */}
       <RegisterPointsBanner />
