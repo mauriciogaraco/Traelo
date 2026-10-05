@@ -54,7 +54,6 @@ export function FavoritesPage() {
               <li key={item.businessId}>
                 <Link to={businessPath(item.businessId, catalogBusinesses)} className={ROW}>
                   <span className="block font-semibold text-text-primary">{item.name}</span>
-                  <span className="block text-caption text-text-secondary">{item.address}</span>
                 </Link>
               </li>
             ))}

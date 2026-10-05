@@ -56,10 +56,6 @@ export const BusinessCard = memo(function BusinessCard({ business, stats, badge,
         <h3 className="w-full text-[15px] sm:text-base leading-5 font-semibold text-text-primary truncate">
           {business.name}
         </h3>
-        <p className="w-full flex items-center gap-0.5 text-caption text-text-secondary">
-          <Icon name="location" size={13} className="shrink-0 text-text-tertiary" />
-          <span className="min-w-0 truncate">{business.address}</span>
-        </p>
         {stats !== undefined &&
           (rating ? (
             <p className="flex items-center gap-1 text-caption font-bold text-text-primary">

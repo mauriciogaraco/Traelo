@@ -68,9 +68,7 @@ export function searchCatalog(
 
   return {
     categories: source.categories.filter((c) => fuzzyIncludes(c.name, trimmed)),
-    businesses: source.businesses.filter(
-      (b) => fuzzyIncludes(b.name, trimmed) || fuzzyIncludes(b.address, trimmed),
-    ),
+    businesses: source.businesses.filter((b) => fuzzyIncludes(b.name, trimmed)),
     products: source.products.filter(
       (p) => fuzzyIncludes(p.name, trimmed) || (p.categoryName ? fuzzyIncludes(p.categoryName, trimmed) : false),
     ),

@@ -71,12 +71,12 @@ describe('searchProducts / searchBusinesses', () => {
     expect(names(searchProducts('pizza', products))).toEqual(['Pizza B', 'Pizza A']);
   });
 
-  it('los negocios también se ordenan por relevancia y aceptan la dirección', () => {
+  it('los negocios se buscan por nombre y la dirección ya no cuenta (no se muestra)', () => {
     const businesses = [
       makeBusiness({ id: '1', name: 'Dulcería Central', address: 'Calle Pizza 5' }),
       makeBusiness({ id: '2', name: 'Pizzería M&M', address: 'Calle 1' }),
     ];
-    expect(names(searchBusinesses('pizz', businesses))).toEqual(['Pizzería M&M', 'Dulcería Central']);
+    expect(names(searchBusinesses('pizz', businesses))).toEqual(['Pizzería M&M']);
   });
 });
 
