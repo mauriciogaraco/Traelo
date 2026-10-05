@@ -49,7 +49,7 @@ export function searchBusinesses(query: string, businesses: CatalogBusiness[]): 
     .map((business, index) => ({
       business,
       index,
-      score: Math.max(relevanceScore(business.name, query), relevanceScore(business.address, query) - 1),
+      score: relevanceScore(business.name, query),
     }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.index - b.index)

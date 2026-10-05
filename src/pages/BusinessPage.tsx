@@ -6,7 +6,6 @@ import { ProductCard } from '../components/catalog/ProductCard'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { FavoriteButton } from '../components/catalog/FavoriteButton'
-import { Icon } from '../components/ui/Icon'
 import { ProductGridSkeleton, Skeleton } from '../components/ui/Skeleton'
 import { businessPath, businessSlugs, findBusinessByLegacyId, findBusinessByParam, isBackendId } from '../features/catalog'
 import { useToast } from '../context/ToastContext'
@@ -72,8 +71,6 @@ export function BusinessPage() {
   const slug = businessSlugs(businesses).get(business.id)
   if (slug && param !== slug) return <Navigate replace to={`/negocio/${slug}`} />
 
-  const phoneHref = `tel:${business.phone.replace(/[^\d+]/g, '')}`
-
   return (
     <div className="px-4 lg:px-6 pt-3 lg:pt-6 lg:grid lg:grid-cols-[320px_1fr] lg:gap-8 lg:items-start">
       <header className="space-y-1.5 pb-4 lg:sticky lg:top-24">
@@ -97,13 +94,6 @@ export function BusinessPage() {
             />
           )}
         </div>
-        <p className="flex items-start gap-1 text-body text-text-secondary">
-          <Icon name="location" size={16} className="mt-[3px] shrink-0 text-text-tertiary" />
-          {business.address}
-        </p>
-        <a href={phoneHref} className="inline-block text-caption font-semibold text-primary-text hover:underline">
-          {business.phone}
-        </a>
         <div>
           <BusinessStatusBadge business={business} />
         </div>
