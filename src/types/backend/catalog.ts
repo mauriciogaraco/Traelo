@@ -121,6 +121,12 @@ export type CatalogChange = {
 export type CatalogChangesResult = {
   changes: CatalogChange[];
   latestVersion: number;
+  /**
+   * true = la página se cortó en el tope y quedan más cambios; `latestVersion` es entonces la del
+   * último cambio entregado. Opcional: un backend anterior no lo manda (y en ese caso `latestVersion`
+   * es la global aunque la página se haya cortado — ver changesPageProgress).
+   */
+  hasMore?: boolean;
 };
 
 /** Estadísticas públicas para ordenar la búsqueda y el Home — ver docs/BACKEND_API.md §2 (GET /catalog/stats). */
