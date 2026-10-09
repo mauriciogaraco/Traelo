@@ -5,7 +5,8 @@ import {
   useLocation,
   Link,
 } from "react-router-dom";
-import { lazy, Suspense, useEffect, type ReactNode } from "react";
+import { lazy, Suspense, useEffect, useLayoutEffect, type ReactNode } from "react";
+import { recordRoute, startAnalytics } from "./analytics";
 import { ToastProvider } from "./context/ToastContext";
 import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
@@ -61,6 +62,20 @@ function PageFallback() {
   );
 }
 
+/**
+ * Analítica de comportamiento (ver src/analytics): arranca el envío de eventos y sigue la ruta para
+ * saber de dónde viene cada visita. recordRoute va en useLayoutEffect para correr antes que los
+ * efectos de las pantallas (que leen "de dónde vine").
+ */
+function AnalyticsBootstrap() {
+  const { pathname } = useLocation();
+  useLayoutEffect(() => {
+    recordRoute(pathname);
+  }, [pathname]);
+  useEffect(() => startAnalytics(), []);
+  return null;
+}
+
 /** Lee la sesión guardada al abrir (sin pedir login jamás: sin sesión la web queda como invitado). */
 function SessionBootstrap() {
   useSessionBootstrap();
@@ -83,6 +98,7 @@ function Providers({ children }: { children: ReactNode }) {
   return (
     <ToastProvider>
       <CatalogBootstrap />
+      <AnalyticsBootstrap />
       <SessionBootstrap />
       <PointsBootstrap />
       <NotificationsBootstrap />

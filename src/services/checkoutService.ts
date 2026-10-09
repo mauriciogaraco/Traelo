@@ -1,3 +1,4 @@
+import { withoutCartEvents } from '../analytics'
 import { createCheckoutOrder } from '../api/checkout'
 import { ApiError } from '../api/ApiError'
 import { quoteCheckout } from '../api/rewards'
@@ -120,7 +121,8 @@ export async function submitCheckout(params: BuildCheckoutInputParams): Promise<
       })
       void notifyOrderToTelegram(order.id, guestAccessToken)
     }
-    useCartStore.getState().clearCart()
+    // Vaciar el carrito porque el pedido se envió no es "quitar productos": no se cuenta como abandono.
+    withoutCartEvents(() => useCartStore.getState().clearCart())
     useOrderStore.getState().setLastCreatedOrder(order)
     if (params.redemption) {
       // Los puntos ya se descontaron en el servidor junto con el pedido: se actualiza el saldo y las recompensas.

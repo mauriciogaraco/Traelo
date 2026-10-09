@@ -5,6 +5,7 @@ import {
   registerCustomer,
   type RegisterInput,
 } from '../api/auth'
+import { track } from '../analytics'
 import { ApiError } from '../api/ApiError'
 import { setAuthHandler } from '../api/client'
 import { getMyProfile } from '../api/customers'
@@ -175,11 +176,16 @@ export async function hydrateAuth(): Promise<void> {
 }
 
 export async function loginWithPassword(input: { phone: string; password: string }): Promise<Customer> {
-  return startSession(await loginCustomer(input))
+  const customer = await startSession(await loginCustomer(input))
+  // flush: une el historial anónimo de este navegador a la cuenta de inmediato.
+  track('login_completed', undefined, { flush: true })
+  return customer
 }
 
 export async function registerAccount(input: RegisterInput): Promise<Customer> {
-  return startSession(await registerCustomer(input))
+  const customer = await startSession(await registerCustomer(input))
+  track('signup_completed', undefined, { flush: true })
+  return customer
 }
 
 /** Máximo que se espera al servidor al cerrar sesión: con mala conexión no se deja a la persona esperando. */

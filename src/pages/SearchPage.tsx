@@ -1,5 +1,6 @@
-import { useDeferredValue, useEffect, useMemo, useState } from 'react'
+import { useDeferredValue, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { track } from '../analytics'
 import { BusinessCard } from '../components/catalog/BusinessCard'
 import { BusinessListSkeleton } from '../components/catalog/CatalogSkeletons'
 import { ProductCard } from '../components/catalog/ProductCard'
@@ -14,6 +15,7 @@ import {
   businessOrders,
   effectiveSort,
   filterBusinesses,
+  findBusinessByParam,
   filterProducts,
   productPopularitySource,
   productUnits,
@@ -202,6 +204,41 @@ export function SearchPage() {
 
   const loading = !hydrated || catalogLoading
 
+  // Intención de búsqueda: se registra cuando la persona deja de escribir (no cada tecla), una vez por
+  // texto, con cuántos resultados hubo (0 = lo que quiso y no encontró).
+  const lastTrackedQuery = useRef('')
+  useEffect(() => {
+    const text = deferredQuery.trim()
+    if (loading || text.length < 2 || text === lastTrackedQuery.current) return
+    const timer = window.setTimeout(() => {
+      lastTrackedQuery.current = text
+      track('search', {
+        properties: {
+          query: text.slice(0, 100),
+          tab,
+          resultCount: count,
+          businessCount: matchedBusinesses.length,
+          productCount: matchedProducts.length,
+        },
+      })
+    }, 1200)
+    return () => window.clearTimeout(timer)
+  }, [deferredQuery, loading, tab, count, matchedBusinesses.length, matchedProducts.length])
+
+  // Qué resultado abrió tras buscar (delegado: sirve para tarjetas de negocios y de productos).
+  const handleResultClick = (event: MouseEvent<HTMLElement>) => {
+    if (!hasQuery) return
+    const href = (event.target as HTMLElement).closest('a[href]')?.getAttribute('href')
+    if (!href) return
+    const text = deferredQuery.trim().slice(0, 100)
+    if (href.startsWith('/producto/')) {
+      track('search_result_click', { productId: href.slice('/producto/'.length), properties: { query: text, target: 'product' } })
+    } else if (href.startsWith('/negocio/')) {
+      const business = findBusinessByParam(decodeURIComponent(href.slice('/negocio/'.length)), businesses)
+      if (business) track('search_result_click', { businessId: business.id, properties: { query: text, target: 'business' } })
+    }
+  }
+
   const empty = filtersActive ? (
     <EmptyState
       icon="search"
@@ -229,7 +266,7 @@ export function SearchPage() {
   )
 
   return (
-    <div className="px-4 lg:px-6 pt-3 lg:pt-6 space-y-3">
+    <div className="px-4 lg:px-6 pt-3 lg:pt-6 space-y-3" onClick={handleResultClick}>
       <div className="space-y-3 lg:flex lg:items-center lg:gap-4 lg:space-y-0">
         <div className="lg:flex-1">
           <SearchInput value={query} onChange={setQuery} autoFocus={!query && !urlTab} />

@@ -62,7 +62,7 @@ export function PrivacyPage() {
 
       <div className="px-4 pb-10">
         <p className="text-xs font-semibold text-text-secondary">
-          Última actualización: 23 de septiembre de 2026
+          Última actualización: 9 de octubre de 2026
         </p>
 
         <p className="mt-4 text-sm text-text-secondary leading-relaxed">
@@ -217,6 +217,34 @@ export function PrivacyPage() {
             Esta información se utiliza principalmente para mantener la
             estabilidad, seguridad y funcionamiento correcto de Tráelo.
           </p>
+
+          <h3 className="font-bold text-text-primary pt-2">2.7. Información de uso</h3>
+          <p>
+            Para entender qué buscan nuestros usuarios y mejorar el servicio,
+            registramos cómo se utiliza Tráelo, por ejemplo:
+          </p>
+          <List
+            items={[
+              "Negocios y productos que consultas.",
+              "Búsquedas que realizas y si encontraste resultados.",
+              "Productos que agregas o quitas del carrito.",
+              "Si empiezas un pedido y no lo completas.",
+              "Pedidos realizados.",
+              "Favoritos, inicio de sesión y registro de cuenta.",
+            ]}
+          />
+          <p>
+            Estos registros se asocian a un identificador aleatorio guardado en tu
+            navegador o dispositivo, aunque no tengas cuenta. Si inicias sesión,
+            se asocian también a tu cuenta, incluido lo que hiciste antes de
+            iniciarla en ese mismo navegador.
+          </p>
+          <p>
+            No registramos tu dirección IP ni el contenido de tu dispositivo, y no
+            vendemos esta información. Puedes evitar este registro activando la
+            opción «No rastrear» de tu navegador. Si eliminas tu cuenta, también
+            eliminamos los registros de uso asociados a ella.
+          </p>
         </Section>
 
         <Section title="3. Cómo utilizamos la información">
@@ -234,6 +262,7 @@ export function PrivacyPage() {
               "Enviar promociones, ofertas y novedades cuando corresponda.",
               "Detectar, prevenir y solucionar errores, abusos, fraude o problemas de seguridad.",
               "Mejorar el funcionamiento y la experiencia de usuario de Tráelo.",
+              "Entender qué buscan y compran los usuarios para mejorar el catálogo y personalizar tu experiencia.",
               "Cumplir obligaciones legales aplicables.",
               "Proteger los derechos, seguridad y propiedad de Tráelo, sus usuarios, negocios y mensajeros.",
             ]}
@@ -487,7 +516,7 @@ export function PrivacyPage() {
             </a>
           </p>
           <p className="text-xs font-semibold text-text-secondary pt-2">
-            Última actualización: 23 de septiembre de 2026
+            Última actualización: 9 de octubre de 2026
           </p>
         </Section>
       </div>
