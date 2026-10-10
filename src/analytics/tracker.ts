@@ -17,10 +17,12 @@ export type EventType =
   | 'product_view'
   | 'search'
   | 'search_result_click'
+  | 'category_view'
   | 'add_to_cart'
   | 'remove_from_cart'
   | 'cart_view'
   | 'checkout_started'
+  | 'checkout_step_completed'
   | 'favorite_added'
   | 'favorite_removed'
   | 'signup_completed'
@@ -35,6 +37,8 @@ export type TrackData = {
 }
 
 export type QueuedEvent = {
+  /** UUID único por evento: un reintento lo reenvía igual y el backend ignora el repetido. */
+  eventId: string
   type: EventType
   occurredAt: string
   businessId?: string
@@ -54,6 +58,7 @@ export type TrackerDeps = {
   getItem: (key: string) => string | null
   setItem: (key: string, value: string) => void
   now: () => Date
+  newId: () => string
   visitorId: () => string
   sessionId: () => string
   isEnabled: () => boolean
@@ -64,6 +69,8 @@ export type TrackerDeps = {
 export const QUEUE_KEY = 'traelo_analytics_queue'
 export const MAX_QUEUE = 200
 export const MAX_BATCH = 50
+/** Un evento que no pudo enviarse en este tiempo se descarta: no se acumula sin fin en localStorage. */
+export const MAX_EVENT_AGE_MS = 24 * 60 * 60 * 1000
 export const FLUSH_DELAY_MS = 8_000
 export const RETRY_START_MS = 15_000
 export const RETRY_MAX_MS = 5 * 60_000
@@ -75,7 +82,7 @@ const MAX_STRING = 300
  * las visitas. Los de carrito NO se deduplican: dos clics en "+" son dos añadidos reales.
  */
 export const DEDUPE_WINDOW_MS = 2_000
-const DEDUPED_TYPES = new Set<EventType>(['business_view', 'product_view', 'cart_view', 'checkout_started'])
+const DEDUPED_TYPES = new Set<EventType>(['business_view', 'product_view', 'category_view', 'cart_view', 'checkout_started'])
 
 /** ¿Reintentar no lo arregla? (4xx salvo timeout y límite de envíos.) */
 export function isPermanentFailure(error: unknown): boolean {
@@ -101,6 +108,13 @@ export function createTracker(deps: TrackerDeps) {
   let restored = false
   const lastSeen = new Map<string, number>()
 
+  /** Con forma válida y no demasiado viejo (una cola guardada puede venir de otra versión o de hace días). */
+  function isFresh(event: QueuedEvent): boolean {
+    if (!event || typeof event.type !== 'string' || typeof event.occurredAt !== 'string') return false
+    const age = deps.now().getTime() - Date.parse(event.occurredAt)
+    return Number.isFinite(age) && age <= MAX_EVENT_AGE_MS
+  }
+
   function persist() {
     try {
       deps.setItem(QUEUE_KEY, JSON.stringify(queue))
@@ -124,7 +138,7 @@ export function createTracker(deps: TrackerDeps) {
     try {
       const raw = deps.getItem(QUEUE_KEY)
       const saved = raw ? (JSON.parse(raw) as unknown) : []
-      if (Array.isArray(saved)) queue = [...(saved as QueuedEvent[]), ...queue].slice(-MAX_QUEUE)
+      if (Array.isArray(saved)) queue = [...(saved as QueuedEvent[]), ...queue].filter(isFresh).slice(-MAX_QUEUE)
     } catch {
       // Cola dañada: se empieza de cero.
     }
@@ -140,7 +154,7 @@ export function createTracker(deps: TrackerDeps) {
       if (previous !== undefined && at - previous < DEDUPE_WINDOW_MS) return
       lastSeen.set(key, at)
     }
-    const event: QueuedEvent = { type, occurredAt: deps.now().toISOString() }
+    const event: QueuedEvent = { eventId: deps.newId(), type, occurredAt: deps.now().toISOString() }
     if (data.businessId) event.businessId = data.businessId
     if (data.productId) event.productId = data.productId
     const properties = cleanProperties(data.properties)
@@ -167,6 +181,14 @@ export function createTracker(deps: TrackerDeps) {
     if (timer !== null) {
       deps.clearTimer(timer)
       timer = null
+    }
+
+    // Los que pasaron la caducidad mientras esperaban (red caída mucho rato) se descartan.
+    queue = queue.filter(isFresh)
+    if (queue.length === 0) {
+      flushing = false
+      persist()
+      return
     }
 
     const batch = queue.slice(0, MAX_BATCH)
@@ -198,7 +220,17 @@ export function createTracker(deps: TrackerDeps) {
     }
   }
 
-  return { track, flush, restore, pending: () => queue.length }
+  /** Descarta todo lo pendiente (p. ej. la persona desactivó el registro de uso). */
+  function clear() {
+    queue = []
+    if (timer !== null) {
+      deps.clearTimer(timer)
+      timer = null
+    }
+    persist()
+  }
+
+  return { track, flush, restore, clear, pending: () => queue.length }
 }
 
 export type Tracker = ReturnType<typeof createTracker>

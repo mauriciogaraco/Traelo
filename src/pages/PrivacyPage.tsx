@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { AnalyticsOptOut } from "../components/settings/AnalyticsOptOut";
 
 const CONTACT_EMAIL = "traeloofficial@gmail.com";
 
@@ -245,6 +246,7 @@ export function PrivacyPage() {
             opción «No rastrear» de tu navegador. Si eliminas tu cuenta, también
             eliminamos los registros de uso asociados a ella.
           </p>
+          <AnalyticsOptOut />
         </Section>
 
         <Section title="3. Cómo utilizamos la información">

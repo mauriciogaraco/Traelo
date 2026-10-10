@@ -2,15 +2,17 @@ import { apiPost } from '../api/client'
 import { env } from '../config/env'
 import { useCartStore } from '../store/cartStore'
 import { diffCartItems } from './cartDiff'
-import { getSessionId, getVisitorId } from './ids'
+import { isOptedOut, writeOptOut } from './consent'
+import { getSessionId, getVisitorId, randomUuid, resetIdentity } from './ids'
 import { createTracker, type EventType, type TrackData } from './tracker'
 
 export { recordRoute, sourceOfCurrentRoute } from './routeKind'
 export type { EventType } from './tracker'
 
-/** Respeta la señal "No rastrear" del navegador además del interruptor de entorno. */
+/** Activa solo si el entorno lo permite y la persona no lo desactivó ni envía «No rastrear». */
 function isEnabled(): boolean {
   if (!env.analyticsEnabled) return false
+  if (isOptedOut()) return false
   if (typeof navigator !== 'undefined' && navigator.doNotTrack === '1') return false
   return true
 }
@@ -22,6 +24,7 @@ const tracker = createTracker({
   getItem: (key) => localStorage.getItem(key),
   setItem: (key, value) => localStorage.setItem(key, value),
   now: () => new Date(),
+  newId: randomUuid,
   visitorId: getVisitorId,
   sessionId: getSessionId,
   isEnabled,
@@ -40,6 +43,40 @@ export function track(type: EventType, data?: TrackData, options?: { flush?: boo
   } catch {
     // Telemetría: un fallo aquí jamás debe verse.
   }
+}
+
+export { isOptedOut as isAnalyticsOptedOut } from './consent'
+
+/**
+ * Activa o desactiva el registro de uso en este navegador. Al desactivar se descarta lo pendiente y
+ * se olvida el identificador anónimo.
+ */
+export function setAnalyticsOptOut(optOut: boolean): void {
+  writeOptOut(optOut)
+  if (optOut) {
+    tracker.clear()
+    resetIdentity()
+  }
+}
+
+/**
+ * Antes de cerrar sesión: envía lo pendiente (todavía con la cuenta) esperando como mucho
+ * `timeoutMs`. Nunca falla ni retrasa el cierre más de ese tiempo.
+ */
+export async function settleAnalytics(timeoutMs = 2000): Promise<void> {
+  try {
+    await Promise.race([tracker.flush(), new Promise<void>((resolve) => window.setTimeout(resolve, timeoutMs))])
+  } catch {
+    // Telemetría: nada que reportar.
+  }
+}
+
+/**
+ * Tras cerrar sesión: identidad anónima nueva. Quien use después este dispositivo no hereda el
+ * historial anónimo de la persona anterior, y el de ella sigue ligado solo a su cuenta.
+ */
+export function resetAnalyticsIdentity(): void {
+  resetIdentity()
 }
 
 /**

@@ -5,7 +5,7 @@ import {
   registerCustomer,
   type RegisterInput,
 } from '../api/auth'
-import { track } from '../analytics'
+import { resetAnalyticsIdentity, settleAnalytics, track } from '../analytics'
 import { ApiError } from '../api/ApiError'
 import { setAuthHandler } from '../api/client'
 import { getMyProfile } from '../api/customers'
@@ -196,6 +196,8 @@ const LOGOUT_SERVER_TIMEOUT_MS = 4000
  * El cierre local NUNCA depende del servidor: si no responde en unos segundos, se cierra igual.
  */
 export async function logout(): Promise<void> {
+  // Lo pendiente se envía antes de perder la cuenta (con un tope: nunca retrasa el cierre).
+  await settleAnalytics()
   const refreshToken = tokens?.refreshToken
 
   let timer: ReturnType<typeof setTimeout> | undefined
@@ -207,6 +209,8 @@ export async function logout(): Promise<void> {
   if (timer) clearTimeout(timer)
 
   await endSession()
+  // La siguiente persona que use este dispositivo no hereda la identidad anónima de la anterior.
+  resetAnalyticsIdentity()
 }
 
 /** Solo para tests. */

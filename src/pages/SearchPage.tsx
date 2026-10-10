@@ -1,6 +1,7 @@
 import { useDeferredValue, useEffect, useMemo, useRef, useState, type MouseEvent } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { track } from '../analytics'
+import { searchQueryProperties } from '../analytics/privacy'
 import { BusinessCard } from '../components/catalog/BusinessCard'
 import { BusinessListSkeleton } from '../components/catalog/CatalogSkeletons'
 import { ProductCard } from '../components/catalog/ProductCard'
@@ -214,7 +215,7 @@ export function SearchPage() {
       lastTrackedQuery.current = text
       track('search', {
         properties: {
-          query: text.slice(0, 100),
+          ...searchQueryProperties(text),
           tab,
           resultCount: count,
           businessCount: matchedBusinesses.length,
@@ -230,12 +231,12 @@ export function SearchPage() {
     if (!hasQuery) return
     const href = (event.target as HTMLElement).closest('a[href]')?.getAttribute('href')
     if (!href) return
-    const text = deferredQuery.trim().slice(0, 100)
+    const text = searchQueryProperties(deferredQuery)
     if (href.startsWith('/producto/')) {
-      track('search_result_click', { productId: href.slice('/producto/'.length), properties: { query: text, target: 'product' } })
+      track('search_result_click', { productId: href.slice('/producto/'.length), properties: { ...text, target: 'product' } })
     } else if (href.startsWith('/negocio/')) {
       const business = findBusinessByParam(decodeURIComponent(href.slice('/negocio/'.length)), businesses)
-      if (business) track('search_result_click', { businessId: business.id, properties: { query: text, target: 'business' } })
+      if (business) track('search_result_click', { businessId: business.id, properties: { ...text, target: 'business' } })
     }
   }
 

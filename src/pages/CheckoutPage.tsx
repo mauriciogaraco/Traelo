@@ -292,7 +292,11 @@ export function CheckoutPage() {
             </section>
 
             {missingText && <p className="text-caption text-text-secondary">{missingText}</p>}
-            <Button fullWidth disabled={!canContinue} onClick={() => canContinue && setStep('review')}>
+            <Button fullWidth disabled={!canContinue} onClick={() => {
+                if (!canContinue) return
+                track('checkout_step_completed', { properties: { step: 'where' } })
+                setStep('review')
+              }}>
               Continuar
             </Button>
           </>

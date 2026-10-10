@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { track } from '../../analytics'
 import { visualForCategory } from '../../features/catalog'
 import type { CatalogCategory } from '../../types/backend/catalog'
 import { CatalogImage } from './CatalogImage'
@@ -22,11 +23,17 @@ export function categorySearchHref(category: CatalogCategory): string {
   return `/buscar?q=${encodeURIComponent(category.name)}&tab=productos`
 }
 
+/** El usuario abrió una categoría (desde el Home o la pantalla de Categorías). */
+export function trackCategoryView(category: CatalogCategory, source: 'home' | 'categorias'): void {
+  track('category_view', { properties: { categoryId: category.id, category: category.name, source } })
+}
+
 /** Avatar circular del carrusel de categorías del Home — `CategoryCard` de mobile. */
 export function CategoryCard({ category }: { category: CatalogCategory }) {
   return (
     <Link
       to={categorySearchHref(category)}
+      onClick={() => trackCategoryView(category, 'home')}
       className="w-[72px] shrink-0 flex flex-col items-center gap-1 rounded-r-md hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
     >
       <CatalogImage

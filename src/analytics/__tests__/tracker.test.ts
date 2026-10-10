@@ -1,5 +1,6 @@
 import {
   DEDUPE_WINDOW_MS,
+  MAX_EVENT_AGE_MS,
   FLUSH_DELAY_MS,
   MAX_BATCH,
   MAX_QUEUE,
@@ -20,12 +21,14 @@ function setup(overrides: { enabled?: boolean; send?: (batch: TrackBatch, o: { k
   const send = vi.fn(overrides.send ?? (async () => undefined))
   let enabled = overrides.enabled ?? true
   let clock = NOW.getTime()
+  let idCounter = 0
 
   const tracker = createTracker({
     send,
     getItem: (key) => store.get(key) ?? null,
     setItem: (key, value) => void store.set(key, value),
     now: () => new Date(clock),
+    newId: () => `event-${++idCounter}`,
     visitorId: () => 'visitor-1',
     sessionId: () => 'session-1',
     isEnabled: () => enabled,
@@ -64,7 +67,7 @@ describe('track', () => {
     t.tracker.track('business_view', { businessId: 'b1', properties: { source: 'home' } })
     expect(t.tracker.pending()).toBe(1)
     expect(t.saved()).toEqual([
-      { type: 'business_view', occurredAt: NOW.toISOString(), businessId: 'b1', properties: { source: 'home' } },
+      { eventId: 'event-1', type: 'business_view', occurredAt: NOW.toISOString(), businessId: 'b1', properties: { source: 'home' } },
     ])
     expect(t.timers).toHaveLength(1)
     expect(t.timers[0]!.ms).toBe(FLUSH_DELAY_MS)
@@ -218,12 +221,13 @@ describe('flush', () => {
 describe('restore', () => {
   it('recupera lo que no llegó a enviarse en una visita anterior y lo envía', async () => {
     const t = setup()
-    t.store.set(QUEUE_KEY, JSON.stringify([{ type: 'cart_view', occurredAt: '2026-10-08T10:00:00.000Z' }]))
+    t.store.set(QUEUE_KEY, JSON.stringify([{ eventId: 'guardado-1', type: 'cart_view', occurredAt: '2026-10-09T10:00:00.000Z' }]))
     t.tracker.restore()
     expect(t.tracker.pending()).toBe(1)
     await t.fire()
     expect(t.send).toHaveBeenCalledTimes(1)
-    expect(t.send.mock.calls[0]![0].events[0]!.occurredAt).toBe('2026-10-08T10:00:00.000Z')
+    expect(t.send.mock.calls[0]![0].events[0]!.occurredAt).toBe('2026-10-09T10:00:00.000Z')
+    expect(t.send.mock.calls[0]![0].events[0]!.eventId).toBe('guardado-1')
   })
 
   it('restaurar dos veces (React StrictMode) no duplica eventos', () => {
@@ -253,3 +257,81 @@ describe('isPermanentFailure', () => {
     expect(isPermanentFailure(null)).toBe(false)
   })
 })
+
+describe('eventId: reintentos sin duplicados', () => {
+  it('cada evento lleva un eventId distinto', () => {
+    const t = setup()
+    t.tracker.track('search', { properties: { n: 1 } })
+    t.tracker.track('search', { properties: { n: 2 } })
+    const ids = (t.saved() as { eventId: string }[]).map((e) => e.eventId)
+    expect(new Set(ids).size).toBe(2)
+  })
+
+  it('al reintentar se reenvía el MISMO eventId (el backend ignora el repetido)', async () => {
+    let attempt = 0
+    const t = setup({
+      send: async () => {
+        attempt++
+        if (attempt === 1) throw Object.assign(new Error('red'), { code: 'NETWORK_ERROR' })
+      },
+    })
+    t.tracker.track('add_to_cart', { productId: 'p1', properties: { quantity: 1 } })
+    await t.tracker.flush()
+    await t.fire()
+    expect(t.send).toHaveBeenCalledTimes(2)
+    const first = t.send.mock.calls[0]![0].events[0]!.eventId
+    const second = t.send.mock.calls[1]![0].events[0]!.eventId
+    expect(second).toBe(first)
+  })
+
+  it('un evento nuevo tras un fallo NO reutiliza el eventId del anterior', async () => {
+    const t = setup({ send: async () => Promise.reject(Object.assign(new Error('x'), { status: 500 })) })
+    t.tracker.track('search', { properties: { n: 1 } })
+    await t.tracker.flush()
+    t.tracker.track('search', { properties: { n: 2 } })
+    const ids = (t.saved() as { eventId: string }[]).map((e) => e.eventId)
+    expect(new Set(ids).size).toBe(2)
+  })
+})
+
+describe('caducidad de la cola', () => {
+  it('al recuperar la cola guardada descarta lo que pasó de las 24 h y lo que no tiene forma válida', () => {
+    const t = setup()
+    const fresh = new Date(NOW.getTime() - 60_000).toISOString()
+    const stale = new Date(NOW.getTime() - MAX_EVENT_AGE_MS - 60_000).toISOString()
+    t.store.set(
+      QUEUE_KEY,
+      JSON.stringify([
+        { eventId: 'a', type: 'cart_view', occurredAt: stale },
+        { eventId: 'b', type: 'cart_view', occurredAt: fresh },
+        { eventId: 'c', type: 'cart_view' },
+        null,
+      ]),
+    )
+    t.tracker.restore()
+    expect(t.tracker.pending()).toBe(1)
+  })
+
+  it('un evento que caduca mientras espera (red caída mucho rato) se descarta en vez de enviarse', async () => {
+    const t = setup()
+    t.tracker.track('cart_view')
+    t.advance(MAX_EVENT_AGE_MS + 1_000)
+    await t.tracker.flush()
+    expect(t.send).not.toHaveBeenCalled()
+    expect(t.tracker.pending()).toBe(0)
+  })
+})
+
+describe('clear', () => {
+  it('descarta lo pendiente, lo borra del almacenamiento y cancela el envío programado', async () => {
+    const t = setup()
+    t.tracker.track('cart_view')
+    t.tracker.clear()
+    expect(t.tracker.pending()).toBe(0)
+    expect(t.saved()).toEqual([])
+    expect(t.timers).toHaveLength(0)
+    await t.tracker.flush()
+    expect(t.send).not.toHaveBeenCalled()
+  })
+})
+
