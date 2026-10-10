@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { sourceOfCurrentRoute, track } from '../analytics'
 import { CatalogImage } from '../components/catalog/CatalogImage'
 import { formatCup, Price } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
@@ -51,6 +52,13 @@ export function ProductDetailPage() {
   }, [id])
 
   const business = useMemo(() => businesses.find((b) => b.id === product?.businessId), [businesses, product])
+
+  // Vista del producto (una vez por producto abierto).
+  useEffect(() => {
+    if (product) {
+      track('product_view', { productId: product.id, businessId: product.businessId, properties: { source: sourceOfCurrentRoute() } })
+    }
+  }, [product?.id]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const goBack = () => (window.history.length > 1 ? navigate(-1) : navigate('/'))
 

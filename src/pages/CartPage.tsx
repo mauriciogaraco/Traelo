@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { track } from '../analytics'
 import { BusinessStatusBadge } from '../components/catalog/BusinessStatusBadge'
 import { CatalogImage } from '../components/catalog/CatalogImage'
 import { formatCup } from '../components/catalog/Price'
@@ -9,7 +10,7 @@ import { EmptyState } from '../components/ui/EmptyState'
 import { Icon } from '../components/ui/Icon'
 import { QuantitySelector } from '../components/ui/QuantitySelector'
 import { useToast } from '../context/ToastContext'
-import { estimateCartLine, getCartSubtotalEstimate, groupCartByBusiness, lineIdOf, packSizeOf } from '../features/cart'
+import { estimateCartLine, getCartItemCount, getCartSubtotalEstimate, groupCartByBusiness, lineIdOf, packSizeOf } from '../features/cart'
 import { visualForProduct } from '../features/catalog'
 import { validApplied } from '../features/rewards'
 import { isRemovableIssue, precheckCart, removeUnavailableFromCart } from '../services/checkoutService'
@@ -46,6 +47,11 @@ export function CartPage() {
   const groups = useMemo(() => groupCartByBusiness(items, businesses), [items, businesses])
   const subtotalEstimate = useMemo(() => getCartSubtotalEstimate(items), [items])
   const [checking, setChecking] = useState(false)
+
+  // Se abrió el carrito (una vez por visita a la pantalla).
+  useEffect(() => {
+    track('cart_view', { properties: { itemCount: getCartItemCount(useCartStore.getState().items) } })
+  }, [])
   const appliedRedemption = useRewardsStore((state) => state.applied)
   const applied = useMemo(() => validApplied(appliedRedemption, items), [appliedRedemption, items])
 

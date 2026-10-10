@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { track } from '../analytics'
 import { useNavigate } from 'react-router-dom'
 import { formatCup } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
@@ -47,6 +48,14 @@ export function CheckoutPage() {
   const { showToast } = useToast()
   const online = useIsOnline()
   const items = useCartStore((state) => state.items)
+
+  // Llegó a empezar el pedido (una vez por visita a la pantalla): si no lo envía, es una compra abandonada.
+  useEffect(() => {
+    const current = useCartStore.getState().items
+    track('checkout_started', {
+      properties: { itemCount: getCartItemCount(current), businessCount: new Set(current.map((item) => item.businessId)).size },
+    })
+  }, [])
   const savedAddresses = useAddressStore((state) => state.addresses)
   const guestProfile = useGuestProfileStore()
   const appliedRedemption = useRewardsStore((state) => state.applied)
@@ -283,7 +292,11 @@ export function CheckoutPage() {
             </section>
 
             {missingText && <p className="text-caption text-text-secondary">{missingText}</p>}
-            <Button fullWidth disabled={!canContinue} onClick={() => canContinue && setStep('review')}>
+            <Button fullWidth disabled={!canContinue} onClick={() => {
+                if (!canContinue) return
+                track('checkout_step_completed', { properties: { step: 'where' } })
+                setStep('review')
+              }}>
               Continuar
             </Button>
           </>

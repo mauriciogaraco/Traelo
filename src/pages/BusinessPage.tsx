@@ -1,5 +1,6 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
+import { sourceOfCurrentRoute, track } from '../analytics'
 import { BusinessStatusBadge } from '../components/catalog/BusinessStatusBadge'
 import { CatalogImage } from '../components/catalog/CatalogImage'
 import { ProductCard } from '../components/catalog/ProductCard'
@@ -34,6 +35,11 @@ export function BusinessPage() {
   const id = business?.id ?? param
   const products = useMemo(() => allProducts.filter((p) => p.businessId === id), [allProducts, id])
   const productList = useIncrementalList(products, id)
+
+  // Visita al negocio (una vez por negocio abierto, con la pantalla de la que se llegó).
+  useEffect(() => {
+    if (business) track('business_view', { businessId: business.id, properties: { source: sourceOfCurrentRoute() } })
+  }, [business?.id]) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!business) {
     // Enlace viejo de la web (/negocio/cronos): se traduce al negocio del backend.
