@@ -25,6 +25,9 @@ const PROFILE_KEY = 'traelo.auth.profile'
 /** Se renueva un poco ANTES de que venza, para no gastar un 401 en cada petición. */
 const REFRESH_MARGIN_MS = 30_000
 
+/** Candado entre pestañas: solo una renueva a la vez (ver `withCrossTabLock`). */
+const REFRESH_LOCK = 'traelo-auth-refresh'
+
 type StoredTokens = {
   accessToken: string
   accessTokenExpiresAt: number
@@ -76,13 +79,73 @@ async function startSession(session: AuthSession): Promise<Customer> {
   // Los favoritos de OTRA sesión no deben sobrevivir. Las direcciones NO: viven en el navegador.
   useFavoritesStore.getState().clear()
   useSessionStore.getState().setAuthenticated(session.customer)
+  // Pide al navegador que no borre el almacenamiento de la sesión por falta de espacio o de uso
+  // (mejor esfuerzo; algunos navegadores lo ignoran).
+  void navigator.storage?.persist?.().catch(() => undefined)
   return session.customer
+}
+
+/**
+ * Los tokens guardados en el navegador: la fuente de verdad COMPARTIDA entre pestañas. El refresh
+ * token rota en cada renovación, así que la copia en memoria de una pestaña puede estar vieja si
+ * otra pestaña ya renovó.
+ */
+async function readStoredTokens(): Promise<StoredTokens | null> {
+  try {
+    const raw = await authStorage.getItem(TOKENS_KEY)
+    const parsed: unknown = raw ? JSON.parse(raw) : null
+    return isStoredTokens(parsed) ? parsed : null
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Serializa la renovación entre TODAS las pestañas/ventanas del sitio (Web Locks). Sin soporte, se
+ * sigue sin candado: igual se re-lee el almacenamiento antes de renovar.
+ */
+async function withCrossTabLock(task: () => Promise<string | null>): Promise<string | null> {
+  const locks = typeof navigator === 'undefined' ? undefined : navigator.locks
+  if (!locks || typeof locks.request !== 'function') return task()
+  return await locks.request(REFRESH_LOCK, task)
+}
+
+async function renewTokens(failedAccessToken?: string): Promise<string | null> {
+  // Otra pestaña pudo renovar mientras esta esperaba (o estuvo oculta mucho rato): se adoptan sus
+  // tokens. Renovar con el refresh token VIEJO daría 401 pasados 2 min y cerraría la sesión de todas.
+  const stored = await readStoredTokens()
+  if (stored && (!tokens || stored.refreshToken !== tokens.refreshToken)) tokens = stored
+  if (!tokens) return null
+  if (tokens.accessToken !== failedAccessToken && tokens.accessTokenExpiresAt - Date.now() > REFRESH_MARGIN_MS) {
+    return tokens.accessToken
+  }
+
+  const used = tokens
+  try {
+    const fresh = await refreshCustomerSession(used.refreshToken)
+    await persistTokens(fresh)
+    return fresh.accessToken
+  } catch (error) {
+    if (error instanceof ApiError && error.status === 401) {
+      // ¿El 401 es porque otra pestaña rotó el token mientras tanto? Entonces la sesión sigue viva:
+      // se adopta lo que guardó y NO se cierra. Solo si el token rechazado es el que está guardado
+      // (nadie lo renovó) la sesión de verdad venció.
+      const latest = await readStoredTokens()
+      if (latest && latest.refreshToken !== used.refreshToken) {
+        tokens = latest
+        return latest.accessToken
+      }
+      await endSession()
+      return null
+    }
+    throw error
+  }
 }
 
 /**
  * Renueva el access token. UN solo vuelo: si varias peticiones reciben 401 a la vez, todas
  * esperan la misma renovación (el refresh token rota; renovar dos veces en paralelo sería
- * pisar la sesión).
+ * pisar la sesión). Entre pestañas la serializa un candado y se re-lee el almacenamiento.
  *  - Devuelve el token nuevo, o null si la sesión ya no es recuperable (y la cierra).
  *  - Si falla por red/timeout/5xx LANZA: la sesión sigue siendo válida, no se cierra.
  */
@@ -94,24 +157,11 @@ export function refreshAccessToken(failedAccessToken?: string): Promise<string |
     return Promise.resolve(tokens.accessToken)
   }
 
-  const current = tokens
-  if (!current) return Promise.resolve(null)
+  if (!tokens) return Promise.resolve(null)
 
-  refreshInFlight = (async () => {
-    try {
-      const fresh = await refreshCustomerSession(current.refreshToken)
-      await persistTokens(fresh)
-      return fresh.accessToken
-    } catch (error) {
-      if (error instanceof ApiError && error.status === 401) {
-        await endSession()
-        return null
-      }
-      throw error
-    } finally {
-      refreshInFlight = null
-    }
-  })()
+  refreshInFlight = withCrossTabLock(() => renewTokens(failedAccessToken)).finally(() => {
+    refreshInFlight = null
+  })
 
   return refreshInFlight
 }
@@ -120,6 +170,10 @@ export function refreshAccessToken(failedAccessToken?: string): Promise<string |
 export async function getAccessToken(): Promise<string | null> {
   if (!tokens) return null
   if (tokens.accessTokenExpiresAt - Date.now() > REFRESH_MARGIN_MS) return tokens.accessToken
+  // Con la pestaña oculta NO se renueva por adelantado: el navegador puede congelarla o cerrarla en
+  // pleno vuelo, el servidor rotaría el token y la respuesta se perdería. Se renueva al volver (o
+  // cuando el servidor responda 401 a una petición real).
+  if (typeof document !== 'undefined' && document.visibilityState === 'hidden') return tokens.accessToken
 
   try {
     return await refreshAccessToken()
@@ -131,6 +185,38 @@ export async function getAccessToken(): Promise<string | null> {
 }
 
 setAuthHandler({ getAccessToken, refresh: refreshAccessToken })
+
+/**
+ * Otra pestaña cambió los tokens guardados (renovó, inició o cerró sesión): esta pestaña se
+ * sincroniza SIN tocar el almacenamiento (ya lo dejó la otra). `newValue` es el nuevo contenido de
+ * la clave de tokens, o null si la borraron (cerraron sesión).
+ */
+export function applyStoredTokensChange(newValue: string | null): void {
+  if (newValue === null) {
+    if (tokens) {
+      tokens = null
+      useFavoritesStore.getState().clear()
+      useSessionStore.getState().setGuest()
+    }
+    return
+  }
+  try {
+    const parsed: unknown = JSON.parse(newValue)
+    if (!isStoredTokens(parsed)) return
+    const wasGuest = tokens === null
+    tokens = parsed
+    // Inició sesión en otra pestaña: esta aún es invitado; se carga su perfil.
+    if (wasGuest) void hydrateAuth()
+  } catch {
+    // Valor ilegible: se ignora.
+  }
+}
+
+if (typeof window !== 'undefined') {
+  window.addEventListener('storage', (event) => {
+    if (event.key === TOKENS_KEY) applyStoredTokensChange(event.newValue)
+  })
+}
 
 /**
  * Lee la sesión guardada al abrir la web. NUNCA pide login: sin sesión → GUEST. Con sesión, la

@@ -1,5 +1,6 @@
 import {
   __resetAuthForTests,
+  applyStoredTokensChange,
   __setTokensForTests,
   getAccessToken,
   hydrateAuth,
@@ -225,3 +226,122 @@ describe('logout', () => {
     expect(await getAccessToken()).toBeNull();
   });
 });
+
+describe('varias pestañas: la sesión NO se pierde porque otra pestaña renovó', () => {
+  const TOKENS_KEY = 'traelo.auth.tokens';
+  const stored = (accessToken: string, refreshToken: string, expiresInMs = 15 * 60_000) =>
+    JSON.stringify({ accessToken, accessTokenExpiresAt: Date.now() + expiresInMs, refreshToken });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
+  it('otra pestaña ya renovó: se adoptan sus tokens y NO se llama al servidor con el refresh token viejo', async () => {
+    // Esta pestaña quedó con el token viejo (casi vencido); la otra ya guardó uno nuevo.
+    __setTokensForTests({ accessToken: 'viejo', accessTokenExpiresIn: 10, refreshToken: 'refresh-viejo' });
+    await authStorage.setItem(TOKENS_KEY, stored('access-nuevo', 'refresh-nuevo'));
+
+    await expect(getAccessToken()).resolves.toBe('access-nuevo');
+    expect(refreshMock).not.toHaveBeenCalled();
+  });
+
+  it('una petición que falló con el token viejo usa el que guardó la otra pestaña, sin renovar', async () => {
+    __setTokensForTests({ accessToken: 'access-1', accessTokenExpiresIn: 900, refreshToken: 'refresh-1' });
+    await authStorage.setItem(TOKENS_KEY, stored('access-2', 'refresh-2'));
+
+    await expect(refreshAccessToken('access-1')).resolves.toBe('access-2');
+    expect(refreshMock).not.toHaveBeenCalled();
+  });
+
+  it('si el refresh token guardado también está por vencer, renueva con el MÁS NUEVO (el guardado), no el de memoria', async () => {
+    __setTokensForTests({ accessToken: 'viejo', accessTokenExpiresIn: 10, refreshToken: 'refresh-viejo' });
+    await authStorage.setItem(TOKENS_KEY, stored('casi', 'refresh-guardado', 5_000));
+    refreshMock.mockResolvedValueOnce({ accessToken: 'access-3', accessTokenExpiresIn: 900, refreshToken: 'refresh-3' });
+
+    await expect(refreshAccessToken('viejo')).resolves.toBe('access-3');
+    expect(refreshMock).toHaveBeenCalledWith('refresh-guardado');
+  });
+
+  it('el servidor rechaza el refresh token (401) pero otra pestaña acababa de guardar uno nuevo: NO cierra la sesión', async () => {
+    useSessionStore.setState({ status: 'AUTHENTICATED', customer });
+    __setTokensForTests({ accessToken: 'access-1', accessTokenExpiresIn: 10, refreshToken: 'refresh-1' });
+    await authStorage.setItem(TOKENS_KEY, stored('access-1', 'refresh-1', 10_000));
+    // Mientras esta pestaña espera la respuesta, la otra rota y guarda los suyos.
+    refreshMock.mockImplementationOnce(async () => {
+      await authStorage.setItem(TOKENS_KEY, stored('access-otra', 'refresh-otra'));
+      throw new ApiError('INVALID_REFRESH_TOKEN', 'Sesión expirada', undefined, 401);
+    });
+
+    await expect(refreshAccessToken('access-1')).resolves.toBe('access-otra');
+
+    expect(status()).toBe('AUTHENTICATED');
+    expect(await authStorage.getItem(TOKENS_KEY)).toContain('refresh-otra');
+  });
+
+  it('401 y NADIE renovó (el token guardado es el mismo): la sesión de verdad venció y se cierra', async () => {
+    useSessionStore.setState({ status: 'AUTHENTICATED', customer });
+    __setTokensForTests({ accessToken: 'access-1', accessTokenExpiresIn: 10, refreshToken: 'refresh-1' });
+    await authStorage.setItem(TOKENS_KEY, stored('access-1', 'refresh-1', 10_000));
+    refreshMock.mockRejectedValueOnce(new ApiError('INVALID_REFRESH_TOKEN', 'Sesión expirada', undefined, 401));
+
+    await expect(refreshAccessToken('access-1')).resolves.toBeNull();
+    expect(status()).toBe('GUEST');
+    expect(await authStorage.getItem(TOKENS_KEY)).toBeNull();
+  });
+
+  it('la renovación pasa por el candado entre pestañas (Web Locks)', async () => {
+    const request = vi.fn(async (_name: string, callback: () => Promise<unknown>) => callback());
+    vi.stubGlobal('navigator', { locks: { request } });
+    __setTokensForTests({ accessToken: 'access-1', accessTokenExpiresIn: 900, refreshToken: 'refresh-1' });
+    refreshMock.mockResolvedValueOnce({ accessToken: 'access-2', accessTokenExpiresIn: 900, refreshToken: 'refresh-2' });
+
+    await expect(refreshAccessToken('access-1')).resolves.toBe('access-2');
+    expect(request).toHaveBeenCalledTimes(1);
+    expect(request.mock.calls[0]![0]).toBe('traelo-auth-refresh');
+  });
+
+  it('con la pestaña oculta NO renueva por adelantado (podría perderse la respuesta si el navegador la congela)', async () => {
+    vi.stubGlobal('document', { visibilityState: 'hidden' });
+    __setTokensForTests({ accessToken: 'casi-vencido', accessTokenExpiresIn: 10, refreshToken: 'refresh-1' });
+
+    await expect(getAccessToken()).resolves.toBe('casi-vencido');
+    expect(refreshMock).not.toHaveBeenCalled();
+  });
+
+  it('con la pestaña visible sí renueva por adelantado', async () => {
+    vi.stubGlobal('document', { visibilityState: 'visible' });
+    __setTokensForTests({ accessToken: 'casi-vencido', accessTokenExpiresIn: 10, refreshToken: 'refresh-1' });
+    refreshMock.mockResolvedValueOnce({ accessToken: 'access-2', accessTokenExpiresIn: 900, refreshToken: 'refresh-2' });
+
+    await expect(getAccessToken()).resolves.toBe('access-2');
+  });
+});
+
+describe('sincronización por el evento storage', () => {
+  it('otra pestaña cerró la sesión: esta vuelve a invitado sin tocar el almacenamiento', () => {
+    __setTokensForTests({ accessToken: 'a', accessTokenExpiresIn: 900, refreshToken: 'r' });
+    useSessionStore.setState({ status: 'AUTHENTICATED', customer });
+
+    applyStoredTokensChange(null);
+
+    expect(status()).toBe('GUEST');
+  });
+
+  it('otra pestaña renovó: esta adopta los tokens nuevos y sigue autenticada', async () => {
+    __setTokensForTests({ accessToken: 'viejo', accessTokenExpiresIn: 900, refreshToken: 'refresh-viejo' });
+    useSessionStore.setState({ status: 'AUTHENTICATED', customer });
+
+    applyStoredTokensChange(JSON.stringify({ accessToken: 'nuevo', accessTokenExpiresAt: Date.now() + 900_000, refreshToken: 'refresh-nuevo' }));
+
+    expect(status()).toBe('AUTHENTICATED');
+    await expect(getAccessToken()).resolves.toBe('nuevo');
+  });
+
+  it('un valor ilegible o con otra forma se ignora', async () => {
+    __setTokensForTests({ accessToken: 'a', accessTokenExpiresIn: 900, refreshToken: 'r' });
+    applyStoredTokensChange('no-es-json');
+    applyStoredTokensChange(JSON.stringify({ foo: 1 }));
+    await expect(getAccessToken()).resolves.toBe('a');
+  });
+});
+
