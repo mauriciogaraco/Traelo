@@ -8,6 +8,7 @@ import { ProductCard } from '../components/catalog/ProductCard'
 import { SearchLink } from '../components/catalog/SearchBar'
 import { Rail, Section } from '../components/catalog/Section'
 import { AllBusinessesLink, ALL_BUSINESSES_HREF } from '../components/home/AllBusinessesLink'
+import { MandadoBanner } from '../components/home/MandadoBanner'
 import { RegisterPointsBanner } from '../components/home/RegisterPointsBanner'
 import { ShareSection } from '../components/home/ShareSection'
 
@@ -104,6 +105,8 @@ export function HomePage() {
           <SearchLink />
         </div>
       </section>
+
+      <MandadoBanner />
 
       {categories.length > 0 && (
         <Section title="Categorías">
