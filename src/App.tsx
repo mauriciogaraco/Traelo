@@ -22,6 +22,7 @@ const SearchPage = lazy(() => import("./pages/SearchPage").then((m) => ({ defaul
 const BusinessPage = lazy(() => import("./pages/BusinessPage").then((m) => ({ default: m.BusinessPage })));
 const CartPage = lazy(() => import("./pages/CartPage").then((m) => ({ default: m.CartPage })));
 const CheckoutPage = lazy(() => import("./pages/CheckoutPage").then((m) => ({ default: m.CheckoutPage })));
+const MandadoPage = lazy(() => import("./pages/MandadoPage").then((m) => ({ default: m.MandadoPage })));
 const OrderPage = lazy(() => import("./pages/OrderPage").then((m) => ({ default: m.OrderPage })));
 const OrdersPage = lazy(() => import("./pages/OrdersPage").then((m) => ({ default: m.OrdersPage })));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })));
@@ -129,6 +130,7 @@ export default function App() {
               <Route path="/producto/:id" element={<ProductRoute />} />
               <Route path="/carrito" element={<CartPage />} />
               <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
+              <Route path="/mandado" element={<Narrow><MandadoPage /></Narrow>} />
               <Route path="/cuenta" element={<AccountPage />} />
               <Route path="/direcciones" element={<AddressesPage />} />
               <Route path="/favoritos" element={<FavoritesPage />} />

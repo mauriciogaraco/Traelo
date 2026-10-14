@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { MandadoBanner } from '../components/home/MandadoBanner'
 import { Icon } from '../components/ui/Icon'
 import { SUPPORT_PHONE_LABEL, SUPPORT_WHATSAPP, SUPPORT_WHATSAPP_URL } from '../lib/config'
 import { usePointsStore } from '../store/pointsStore'
@@ -179,6 +180,8 @@ export function HelpPage() {
           </div>
           <p className="text-caption opacity-90 pt-1">{SUPPORT_PHONE_LABEL}</p>
         </div>
+
+        <MandadoBanner />
 
         <div className="rounded-2xl bg-gold-soft p-5 space-y-3" data-testid="help-points-summary">
           <h2 className="text-h3 text-text-primary">⭐ Así funcionan tus puntos</h2>

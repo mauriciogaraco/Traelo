@@ -29,7 +29,7 @@ export function isTabActive(tab: NavTab, pathname: string): boolean {
  * botón de volver): en teléfono/tablet ocultan la barra flotante y el header. En escritorio el
  * header siempre se ve.
  */
-const FLOW_PREFIXES = ['/producto/', '/checkout']
+const FLOW_PREFIXES = ['/producto/', '/checkout', '/mandado']
 
 export function isFlowRoute(pathname: string): boolean {
   return FLOW_PREFIXES.some((prefix) => pathname.startsWith(prefix))
