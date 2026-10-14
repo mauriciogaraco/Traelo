@@ -9,7 +9,7 @@
 
 // ── Constantes ────────────────────────────────────────────────────────────────
 export const FEE_BASE = 250
-export const LATE_HOUR = 19
+export const LATE_HOUR = 21
 export const FEE_LATE_SURCHARGE = 100
 export const MULTI_BUSINESS_SURCHARGE = 100
 export const FEE_BULK_THRESHOLD = 10_000
