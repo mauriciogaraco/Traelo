@@ -11,6 +11,7 @@ import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
 import { RefreshModal } from "./components/ui/RefreshModal";
 import { useCatalogBootstrap } from "./hooks/useCatalogBootstrap";
+import { useCityBootstrap } from "./hooks/useCityBootstrap";
 import { useNotificationsBootstrap } from "./hooks/useNotificationsBootstrap";
 import { usePointsBootstrap } from "./hooks/usePointsBootstrap";
 import { useSessionBootstrap } from "./hooks/useSessionBootstrap";
@@ -74,6 +75,12 @@ function PointsBootstrap() {
   return null;
 }
 
+/** Resuelve la ciudad activa (sin ningún selector visible todavía: ver `useCityBootstrap`). */
+function CityBootstrap() {
+  useCityBootstrap();
+  return null;
+}
+
 /** Alimenta el buzón local con los Web Push que recibe este navegador (ver `useNotificationsBootstrap`). */
 function NotificationsBootstrap() {
   useNotificationsBootstrap();
@@ -87,6 +94,7 @@ function Providers({ children }: { children: ReactNode }) {
       <SessionBootstrap />
       <PointsBootstrap />
       <NotificationsBootstrap />
+      <CityBootstrap />
       {children}
     </ToastProvider>
   );
