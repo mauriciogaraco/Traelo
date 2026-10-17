@@ -40,8 +40,16 @@ function currentScope(): Scope {
   return { cityCode, params: cityQueryParams(findCity(cityCode, getCities())) }
 }
 
+/** ¿El catálogo en memoria se bajó con filtro de servidor? null = no hay catálogo cargado. */
+let appliedScoped: boolean | null = null
+
+function isScoped(scope: Scope): boolean {
+  return scope.params.cityId !== undefined
+}
+
 function isCurrent(scope: Scope): boolean {
-  return useCatalogStore.getState().cityCode === scope.cityCode
+  // Misma ciudad Y mismo filtro: una respuesta sin filtro que llega cuando ya se filtra (o al revés) se descarta.
+  return useCatalogStore.getState().cityCode === scope.cityCode && isScoped(scope) === isScoped(currentScope())
 }
 
 /**
@@ -70,7 +78,9 @@ export function businessIdsWithoutProducts(businesses: CatalogBusiness[], produc
 /** Carga la caché local de la ciudad activa al store — debe llamarse primero, antes de intentar sincronizar. */
 export function hydrateCatalogFromStorage(): void {
   const store = useCatalogStore.getState()
-  const stored = loadStoredCatalog(store.cityCode)
+  const wantScoped = currentScope().params.cityId !== undefined
+  const stored = loadStoredCatalog(store.cityCode, wantScoped)
+  appliedScoped = stored ? wantScoped : null
   if (stored) store.setCatalog(stored)
   store.setHydrated()
 }
@@ -88,7 +98,8 @@ function persist(
   if (!isCurrent(scope)) return false
   const lastSyncedAt = new Date().toISOString()
   useCatalogStore.getState().setCatalog({ ...catalog, lastSyncedAt })
-  saveStoredCatalog({ ...catalog, lastSyncedAt }, scope.cityCode)
+  appliedScoped = isScoped(scope)
+  saveStoredCatalog({ ...catalog, lastSyncedAt, scoped: isScoped(scope) }, scope.cityCode)
   return true
 }
 
@@ -256,19 +267,20 @@ async function syncToLatest(scope: Scope, localVersion: number): Promise<void> {
   }
 }
 
-let inFlight: { promise: Promise<void>; cityCode: string } | null = null
+let inFlight: { promise: Promise<void>; key: string } | null = null
 
 /** Sincroniza contra el backend. Silencioso si no hay conexión: la caché local sigue sirviendo. */
 export function syncCatalog(): Promise<void> {
-  const { cityCode } = useCatalogStore.getState()
-  // Un solo sync a la vez por ciudad (arranque + volver a la pestaña + "reintentar" no se pisan).
-  if (inFlight && inFlight.cityCode === cityCode) return inFlight.promise
+  const scope = currentScope()
+  const key = `${scope.cityCode}|${isScoped(scope)}`
+  // Un solo sync a la vez por ciudad y filtro (arranque + volver a la pestaña + "reintentar" no se pisan).
+  if (inFlight && inFlight.key === key) return inFlight.promise
   // Uno en vuelo de OTRA ciudad (el cliente cambió) NO se espera: la nueva arranca ya y lo que llegue de
   // la anterior se descarta (ver Scope), así cambiar de ciudad nunca queda detrás de una red lenta.
   const promise: Promise<void> = runSync().finally(() => {
     if (inFlight?.promise === promise) inFlight = null
   })
-  inFlight = { promise, cityCode }
+  inFlight = { promise, key }
   return promise
 }
 
@@ -278,6 +290,20 @@ export function syncCatalog(): Promise<void> {
  */
 export function switchCatalogCity(cityCode: string): void {
   if (useCatalogStore.getState().cityCode === cityCode) return
+  useCatalogStore.getState().setCityScope(cityCode)
+  hydrateCatalogFromStorage()
+  void syncCatalog()
+}
+
+/**
+ * Llegó la lista de localidades y puede cambiar el filtro de la activa (p. ej. Güira pasa a pedirse
+ * con `cityId`): un catálogo en pantalla bajado SIN filtro trae negocios de otras localidades, así
+ * que se vacía y se baja de nuevo ya filtrado. Si el filtro no cambió, no hace nada.
+ */
+export function reconcileCatalogFilter(): void {
+  const { cityCode } = useCatalogStore.getState()
+  const wantScoped = isScoped(currentScope())
+  if (appliedScoped === null || appliedScoped === wantScoped) return
   useCatalogStore.getState().setCityScope(cityCode)
   hydrateCatalogFromStorage()
   void syncCatalog()

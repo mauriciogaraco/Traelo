@@ -1,4 +1,5 @@
 import { findCity, getCities, needsCityChoice, resolveActiveCityCode, shouldShowCitySelector } from '../features/city'
+import { useCitiesStore } from '../store/citiesStore'
 import { useCityStore } from '../store/cityStore'
 
 /**
@@ -10,6 +11,7 @@ export function useActiveCity() {
   const hasHydrated = useCityStore((state) => state.hasHydrated)
   const confirmedThisVisit = useCityStore((state) => state.confirmedThisVisit)
   const chooseCity = useCityStore((state) => state.confirmCity)
+  useCitiesStore((state) => state.cities) // re-renderiza cuando llega la lista del servidor
   const cities = getCities()
   const cityCode = resolveActiveCityCode(selected, cities)
   return {

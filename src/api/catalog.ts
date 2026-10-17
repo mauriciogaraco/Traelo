@@ -14,6 +14,13 @@ import type {
 // espera más; el resto de llamadas conserva su límite (la app ya muestra el catálogo guardado mientras).
 const COLD_START_TIMEOUT_MS = 45_000;
 
+/** Localidad pública (`GET /catalog/cities`): `id` es el que se manda como `?cityId=`. */
+export type CatalogCityDTO = { id: string; code: string; name: string; acceptingOrders: boolean };
+
+export function getCatalogCities() {
+  return apiGet<CatalogCityDTO[]>('/catalog/cities');
+}
+
 /** Filtro de ciudad en el servidor (solo /catalog/bootstrap y /catalog/businesses lo aceptan; ver INFORME §I). */
 export type CatalogCityParams = { cityId?: string };
 
