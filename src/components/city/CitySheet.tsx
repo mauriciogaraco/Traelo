@@ -12,8 +12,7 @@ export function CitySheet({ open, onClose }: { open: boolean; onClose: () => voi
   return (
     <Sheet open={open} onClose={onClose} title="¿Desde dónde quieres pedir?">
       <p className="text-caption text-text-secondary mb-3">
-        Cada localidad tiene sus propios negocios, productos y condiciones. Elige dónde quieres comprar: no
-        importa dónde estés tú, puedes pedir para tu familia en Cuba.
+        Cada localidad tiene sus propios negocios, productos y condiciones. Elige dónde quieres comprar.
       </p>
       <ul className="space-y-2" role="radiogroup" aria-label="Localidad">
         {cities.map((city) => {
