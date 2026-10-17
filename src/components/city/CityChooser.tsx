@@ -23,8 +23,7 @@ export function CityChooser() {
           ¿Desde dónde quieres hacer tu pedido?
         </h1>
         <p className="mt-2 text-body text-text-secondary text-center">
-          Cada localidad tiene sus propios negocios, productos y condiciones de entrega. Puedes cambiar cuando
-          quieras, y no importa dónde estés tú: puedes pedir para tu familia en Cuba.
+          Cada localidad tiene sus propios negocios, productos y condiciones de entrega. Puedes cambiar cuando quieras.
         </p>
         <ul className="mt-6 space-y-3">
           {cities.map((city) => {
