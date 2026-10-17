@@ -13,10 +13,13 @@ export function useActiveCity() {
   useCitiesStore((state) => state.cities) // re-renderiza cuando llega la lista del servidor
   const cities = getCities()
   const cityCode = resolveActiveCityCode(selected, cities)
+  const city = findCity(cityCode, cities)
   return {
     cities,
     cityCode,
-    city: findCity(cityCode, cities),
+    city,
+    /** El hero del Home usa las fotos de Güira solo donde corresponden; en otra localidad, los logos de sus negocios. */
+    hasHeroPhotos: !shouldShowCitySelector(cities) || Boolean(city?.heroPhotos),
     /** Hay algo que elegir: se muestra el selector del header y el nombre de la ciudad en carrito/checkout. */
     showSelector: shouldShowCitySelector(cities),
     /** Con 2+ ciudades se pregunta solo si no hay una elección válida guardada. */
