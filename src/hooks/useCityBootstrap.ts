@@ -1,35 +1,43 @@
 import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { defaultCityCode, resolveCityFromQuery } from '../features/city'
+import { getCities, resolveActiveCityCode, resolveCityFromQuery } from '../features/city'
+import { switchCatalogCity } from '../services/catalogSync'
+import { useCartStore } from '../store/cartStore'
 import { useCityStore } from '../store/cityStore'
 
 /**
- * Resuelve la ciudad activa al cargar — orden de prioridad (ver §E.3 del informe):
- * 1. `?ciudad=<code>` de la URL (enlace promocional): gana siempre, incluso sobre lo persistido —
- *    es la forma en que un enlace a un negocio de otra ciudad puede "aterrizar correcto" (§E.5).
- * 2. Lo persistido de una visita anterior (`zustand/persist` ya lo hidrata solo).
- * 3. La única ciudad activa, si al terminar de hidratar no hay ninguna señal.
+ * Resuelve la ciudad activa y se la aplica al catálogo y al carrito — orden de prioridad (§E.3):
+ * 1. `?ciudad=<code>` de la URL (enlace promocional): gana siempre, incluso sobre lo persistido.
+ *    Solo ciudades conocidas; que el enlace la diga no prueba que el negocio sea de ella (eso lo
+ *    decide el catálogo de esa ciudad).
+ * 2. Lo persistido de una visita anterior, solo si sigue siendo una ciudad conocida.
+ * 3. La única ciudad que exista (con 2+ y sin señal, no se adivina: se pregunta, ver `CityChooser`).
  *
- * Puramente estado: no renderiza nada, no depende de red ni cambia ninguna pantalla (F.2 del
- * informe) — sin selector visible todavía (decisión G.1), esto solo deja el dato listo.
+ * Cada cambio de ciudad vacía el catálogo anterior al instante, pinta la caché de la nueva y guarda
+ * (sin perder nada) el carrito de la que se deja. Con una sola ciudad nada de esto llega a ocurrir.
  */
 export function useCityBootstrap(): void {
   const [params] = useSearchParams()
+  const selected = useCityStore((state) => state.selectedCityCode)
+  const hasHydrated = useCityStore((state) => state.hasHydrated)
 
   useEffect(() => {
-    const fromQuery = resolveCityFromQuery(params)
-    if (fromQuery) useCityStore.getState().setCity(fromQuery)
+    const fromQuery = resolveCityFromQuery(params, getCities())
+    // Un enlace que ya dice la localidad cuenta como elección de esta visita (no se interrumpe con la pregunta).
+    if (fromQuery) useCityStore.getState().confirmCity(fromQuery)
   }, [params])
 
+  const activeCode = hasHydrated ? resolveActiveCityCode(selected, getCities()) : null
+
+  // Una elección guardada que ya no vale (ciudad dada de baja, valor manipulado) se corrige solo
+  // cuando hay una única salida posible; con 2+ queda sin resolver y se pregunta.
   useEffect(() => {
-    const applyDefaultIfNeeded = () => {
-      const { selectedCityCode, hasHydrated, setCity } = useCityStore.getState()
-      if (!hasHydrated || selectedCityCode) return
-      const fallback = defaultCityCode()
-      if (fallback) setCity(fallback)
-    }
-    const unsubscribe = useCityStore.subscribe(applyDefaultIfNeeded)
-    applyDefaultIfNeeded()
-    return unsubscribe
-  }, [])
+    if (activeCode && activeCode !== selected) useCityStore.getState().setCity(activeCode)
+  }, [activeCode, selected])
+
+  useEffect(() => {
+    if (!activeCode) return
+    useCartStore.getState().switchCity(activeCode)
+    switchCatalogCity(activeCode)
+  }, [activeCode])
 }

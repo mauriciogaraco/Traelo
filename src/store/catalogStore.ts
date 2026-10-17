@@ -1,7 +1,10 @@
 import { create } from 'zustand'
+import { DEFAULT_CITY_CODE } from '../features/city/cities'
 import type { CatalogBusiness, CatalogCategory, CatalogProduct } from '../types/backend/catalog'
 
 type CatalogState = {
+  /** Ciudad a la que pertenece lo que hay aquí: el catálogo siempre es de UNA ciudad (ver setCityScope). */
+  cityCode: string
   version: number
   categories: CatalogCategory[]
   businesses: CatalogBusiness[]
@@ -19,6 +22,11 @@ type CatalogState = {
     products: CatalogProduct[]
     lastSyncedAt: string
   }) => void
+  /**
+   * Cambia de ciudad: vacía todo AL INSTANTE (nada de la ciudad anterior puede quedar a la vista ni
+   * contestarse como actual mientras llega el de la nueva). Quien llama hidrata la caché de esa ciudad.
+   */
+  setCityScope: (cityCode: string) => void
   setHydrated: () => void
   setSyncing: (syncing: boolean) => void
   setOffline: (offline: boolean) => void
@@ -30,6 +38,7 @@ type CatalogState = {
  * escribe aquí; las pantallas solo leen con selectores.
  */
 export const useCatalogStore = create<CatalogState>((set) => ({
+  cityCode: DEFAULT_CITY_CODE,
   version: 0,
   categories: [],
   businesses: [],
@@ -46,6 +55,17 @@ export const useCatalogStore = create<CatalogState>((set) => ({
       businesses: catalog.businesses,
       products: catalog.products,
       lastSyncedAt: catalog.lastSyncedAt,
+      syncError: null,
+    }),
+  setCityScope: (cityCode) =>
+    set({
+      cityCode,
+      version: 0,
+      categories: [],
+      businesses: [],
+      products: [],
+      lastSyncedAt: null,
+      hydrated: false,
       syncError: null,
     }),
   setHydrated: () => set({ hydrated: true }),

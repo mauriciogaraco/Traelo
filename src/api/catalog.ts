@@ -14,9 +14,12 @@ import type {
 // espera más; el resto de llamadas conserva su límite (la app ya muestra el catálogo guardado mientras).
 const COLD_START_TIMEOUT_MS = 45_000;
 
-export function getCatalogBootstrap() {
+/** Filtro de ciudad en el servidor (solo /catalog/bootstrap y /catalog/businesses lo aceptan; ver INFORME §I). */
+export type CatalogCityParams = { cityId?: string };
+
+export function getCatalogBootstrap(city: CatalogCityParams = {}) {
   // includeUnavailable: también los AGOTADOS, para mostrarlos con su etiqueta (no se pueden agregar).
-  return apiGet<CatalogBootstrap>('/catalog/bootstrap', { includeUnavailable: true }, { timeoutMs: COLD_START_TIMEOUT_MS });
+  return apiGet<CatalogBootstrap>('/catalog/bootstrap', { includeUnavailable: true, ...city }, { timeoutMs: COLD_START_TIMEOUT_MS });
 }
 
 export function getCatalogVersion() {
@@ -31,8 +34,8 @@ export function getCatalogCategories() {
   return apiGet<CatalogCategory[]>('/catalog/categories');
 }
 
-export function getCatalogBusinesses(search?: string) {
-  return apiGet<CatalogBusiness[]>('/catalog/businesses', { search });
+export function getCatalogBusinesses(search?: string, city: CatalogCityParams = {}) {
+  return apiGet<CatalogBusiness[]>('/catalog/businesses', { search, ...city });
 }
 
 export function getCatalogBusinessProducts(

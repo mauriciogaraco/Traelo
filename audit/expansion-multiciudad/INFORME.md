@@ -201,3 +201,63 @@ Siguen siendo texto libre + pin opcional, desacopladas de la ciudad — es exact
 **No iniciar ninguna UI de selección de ciudad real todavía.** El backend, en su propio informe (misma rama, mismo día), es explícito: implementó solo las migraciones de base (1-6) y backfilleó todo a Güira, pero **no tocó ningún endpoint** — construir el Escalón 2 (ya decidido en G.6) hoy sería construir contra una API que no existe. Lo único de bajo riesgo y reutilizable que se puede avanzar ya es F.2 (estado + resolución de `?ciudad=`, sin tocar ninguna pantalla real ni depender de red). El siguiente paso de peso (F.3) debe esperar a que quien lleve el backend fije el contrato exacto de `cityId` en catálogo/checkout — coordinarlo explícitamente contra `Traelo-Dashboard-backend/audit/expansion-multiciudad/INFORME.md` antes de escribir una sola línea de `catalogSync.ts`, para no diseñar dos lados de una misma API por separado.
 
 No se ha modificado ningún componente, store, tipo ni archivo de configuración de este repositorio en esta sesión. Este informe queda a la espera de aprobación explícita antes de empezar a implementar cualquier parte de la Fase 1.
+
+---
+
+## I. Continuación 2026-10-17 — contrato real del backend, qué se construyó y qué sigue bloqueado
+
+> Rama `expansion-sanAntonio` del backend revisada en solo lectura (commits "catálogo público por ciudad",
+> "CityConfig en el checkout", "contrato NOT NULL de Business.cityId"). Esto reemplaza lo que §B.9/§F.1 decían
+> sobre "ningún endpoint tocado": el backend ya filtra por ciudad en parte del catálogo y valida el checkout.
+
+### I.1 Contrato público que existe hoy (verificado en el código del backend)
+
+| Pieza | Estado |
+|---|---|
+| `GET /catalog/bootstrap?cityId=` y `GET /catalog/businesses?cityId=` | **Existe**, `cityId` opcional (sin él, catálogo global como antes). |
+| `GET /catalog/version`, `/changes`, `/stats`, `/featured-products`, `/categories` | **Globales**: no aceptan `cityId`. |
+| Checkout / cotización | Valida en el servidor `MIXED_CITY_BUSINESSES` (400) si los negocios son de ciudades distintas; usa `CityConfig` de la ciudad del carrito para "acepta pedidos". |
+| `GET /cities` | **Solo staff** (`authenticate` + OWNER/ADMIN/EMPLOYEE). **No hay endpoint público de ciudades.** |
+| DTO público de negocio/producto | **No incluye `cityId`** ni nombre de ciudad. |
+
+### I.2 Bloqueos del backend (la web NO los puede resolver; no se modificó el backend)
+
+1. **Bug de contrato: el id de Güira no pasa la validación.** La migración `20261015010000_add_city` siembra Güira con
+   `id = 'cty_guira_de_melena'`, pero los DTOs validan `cityId` con `z.cuid()` (`catalog.dto.ts`, `businesses.dto.ts`,
+   `deliverers.dto.ts`, `users.dto.ts`, `mandado.dto.ts`, `notifications.dto.ts`). Comprobado: `z.cuid()` rechaza
+   `cty_guira_de_melena` → `GET /catalog/businesses?cityId=cty_guira_de_melena` respondería **400**. Una ciudad creada
+   por `POST /cities` (id cuid generado) sí pasa. Consecuencia: hoy no se puede filtrar el catálogo **por Güira**. La web
+   por eso **no manda `cityId` para Güira** (`CityOption.apiId` ausente) y el día que se siembre San Antonio los clientes de
+   Güira verían también sus negocios. **Hay que corregir la validación (aceptar el id sembrado) antes de sembrar San Antonio.**
+2. **Falta un endpoint público de ciudades** (id, `code`, nombre, `acceptingOrders`). Sin él la web no puede obtener el `id`
+   de San Antonio ni sus datos reales; por eso **San Antonio NO está en `KNOWN_CITIES`** (mostrarla sería inventar una oferta).
+3. **El DTO público de negocio no trae `cityId`**: un enlace directo a un negocio de otra ciudad no se puede resolver a su
+   localidad. La web lo trata con honestidad (ver I.3) en vez de adivinar.
+4. `featured-products` y `stats` (y el registro de `changes`) son globales: la web filtra destacados contra el catálogo activo; un
+   cambio de otra ciudad puede provocar un bootstrap de más (correcto, solo menos eficiente).
+
+### I.3 Construido (todo inactivo con una sola ciudad: la web de Güira se comporta como antes)
+
+- **Ciudades**: `getCities()` único punto de lectura; `CityOption.apiId` opcional; resolución validada (una elección guardada que
+  ya no existe o un valor manipulado no cuenta). `?ciudad=` solo acepta ciudades conocidas.
+- **Pregunta de entrada** (decisión del propietario 2026-10-17): con 2+ ciudades, "¿Desde dónde quieres hacer tu pedido?" sale
+  **en cada visita nueva** (sessionStorage), aunque haya una elección guardada (queda marcada como "Tu última localidad"); no se repite
+  al navegar ni al recargar dentro de la misma visita; un enlace con `?ciudad=` cuenta como elección. No usa GPS ni exige sesión.
+- **Selector permanente**: `CityPill` separado de `AddressBar` (G.5): en línea en escritorio, fila propia con nombre completo en teléfono.
+  `CityNote` en carrito (con "Cambiar") y checkout (solo texto): la localidad ≠ la dirección de entrega.
+- **Catálogo por ciudad**: caché por ciudad (Güira conserva `traelo.catalog.v1`), cambio de ciudad vacía lo anterior al instante, pinta la
+  caché de la nueva, no espera a una red lenta y **descarta** cualquier respuesta de la ciudad anterior que llegue tarde. Pasa `cityId`
+  a `/bootstrap` y `/businesses` solo si la ciudad tiene `apiId`. Destacados filtrados contra el catálogo activo (solo con 2+).
+- **Carrito por ciudad**: `items` sigue siendo el de la ciudad activa (los 10 consumidores no cambian); los de otras ciudades se guardan
+  aparte y se restauran al volver. Carritos anteriores (solo `items`) pasan a ser de Güira sin migración. Vaciar tras un pedido solo vacía el activo.
+- **Validación antes del pedido**: con 2+ ciudades, un negocio del carrito fuera del catálogo activo se marca y se puede quitar (sin red);
+  `MIXED_CITY_BUSINESSES` del servidor detiene el paso con un mensaje claro. El servidor sigue siendo la autoridad.
+- **Enlaces**: "no encontrado" ofrece "Ver en <otra localidad>" sin salir de la URL (al cambiar se carga ese catálogo y el mismo enlace se
+  resuelve solo). La ficha de producto ya no dice "no encontrado" mientras el catálogo todavía llega.
+- **Corrección colateral**: `Sheet` pasa a un portal en `<body>`: abierta desde el header (con `backdrop-blur`) se centraba respecto al header,
+  no a la pantalla (afectaba también a `AddressSheet`).
+
+### I.4 Pendiente / no activar todavía
+
+Activar San Antonio (agregarla a la lista con su `apiId`) requiere: (1) corregir I.2-1, (2) endpoint público de ciudades, (3) idealmente `cityId` en el
+DTO público de negocio, (4) sembrar San Antonio con `acceptingOrders` real. Hasta entonces el flujo multiciudad no debe activarse en producción.

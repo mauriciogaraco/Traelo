@@ -3,6 +3,7 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import type { CartChangeDetail } from '../types/backend/order';
 import type { CatalogProduct } from '../types/backend/catalog';
 import { findAddon, findPackaging, lineIdOf, type LineSelection } from '../features/cart/lines';
+import { DEFAULT_CITY_CODE } from '../features/city/cities';
 
 /** Cantidad máxima por línea (regla del carrito; el servidor también la exige). */
 export const MAX_LINE_QUANTITY = 99;
@@ -33,7 +34,12 @@ export type CartItem = {
 };
 
 type CartState = {
+  /** Las líneas del carrito de la ciudad ACTIVA (todas las pantallas leen esto; ver switchCity). */
   items: CartItem[];
+  /** Ciudad a la que pertenece `items`. Los carritos anteriores a la expansión son de Güira. */
+  activeCityCode: string;
+  /** Los carritos de las OTRAS ciudades, guardados tal cual hasta que el cliente vuelva a ellas. */
+  carts: Record<string, CartItem[]>;
   hasHydrated: boolean;
   /** Último resultado de un 409 CART_CHANGED, para avisar en el carrito qué cambió (checklist §26). */
   checkoutIssues: CartChangeDetail[];
@@ -53,6 +59,11 @@ type CartState = {
   /** Quita de una sola vez todos los productos de un negocio (p.ej. al cerrarse o dejar de aceptar pedidos). */
   removeBusinessItems: (businessId: string) => void;
   clearCart: () => void;
+  /**
+   * El cliente cambió de ciudad: el carrito de la anterior se guarda (no se pierde ni se mezcla) y `items`
+   * pasa a ser el de la nueva. Un pedido nunca combina ciudades porque cada carrito es de una sola.
+   */
+  switchCity: (cityCode: string) => void;
   setCheckoutIssues: (issues: CartChangeDetail[]) => void;
   setHasHydrated: (hydrated: boolean) => void;
 };
@@ -66,6 +77,8 @@ export const useCartStore = create<CartState>()(
   persist(
     (set) => ({
       items: [],
+      activeCityCode: DEFAULT_CITY_CODE,
+      carts: {},
       hasHydrated: false,
       checkoutIssues: [],
 
@@ -149,13 +162,28 @@ export const useCartStore = create<CartState>()(
         })),
 
       clearCart: () => set({ items: [], checkoutIssues: [] }),
+
+      switchCity: (cityCode) =>
+        set((state) => {
+          if (cityCode === state.activeCityCode) return state;
+          const { [cityCode]: target = [], ...rest } = state.carts;
+          return {
+            activeCityCode: cityCode,
+            // Guarda el de la ciudad que se deja (vacío no ocupa lugar) y trae el de la nueva.
+            carts: state.items.length > 0 ? { ...rest, [state.activeCityCode]: state.items } : rest,
+            items: target,
+            checkoutIssues: [],
+          };
+        }),
       setCheckoutIssues: (checkoutIssues) => set({ checkoutIssues }),
       setHasHydrated: (hasHydrated) => set({ hasHydrated }),
     }),
     {
       name: 'traelo.cart.v1',
       storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({ items: state.items }),
+      // `activeCityCode`/`carts` ausentes en un carrito guardado antes de la expansión: toma los valores por
+      // defecto (sus `items` son de Güira) sin migración ni pérdida.
+      partialize: (state) => ({ items: state.items, activeCityCode: state.activeCityCode, carts: state.carts }),
       onRehydrateStorage: () => (state) => {
         state?.setHasHydrated(true);
       },
