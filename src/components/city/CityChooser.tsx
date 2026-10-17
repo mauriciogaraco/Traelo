@@ -3,14 +3,14 @@ import { Icon } from '../ui/Icon'
 import { Logo } from '../ui/Logo'
 
 /**
- * "¿Desde dónde quieres hacer tu pedido?" — sale CADA VEZ que se entra a la web (con 2+ localidades):
- * una sola interacción y entra al catálogo de esa localidad. La última que usó la persona queda marcada
- * para que sea un toque, pero se pregunta igual: puede estar pidiendo para otra familia. No se puede
- * cerrar sin elegir (sin localidad no hay catálogo que mostrar). Una vez elegida no se repite al
- * navegar. Los datos salen de la lista de localidades; aquí no se afirma nada que el servidor no diga.
+ * "¿Desde dónde quieres hacer tu pedido?" — sale con 2+ localidades cuando no hay una elección válida
+ * guardada (primera visita, o la guardada ya no existe): una sola interacción y entra al catálogo de esa
+ * localidad. Con una elección guardada no se repite al cerrar o refrescar; se cambia desde el selector
+ * del header. No se puede cerrar sin elegir (sin localidad no hay catálogo que mostrar). Los datos salen
+ * de la lista de localidades; aquí no se afirma nada que el servidor no diga.
  */
 export function CityChooser() {
-  const { cities, cityCode, needsChoice, chooseCity } = useActiveCity()
+  const { cities, needsChoice, chooseCity } = useActiveCity()
   if (!needsChoice) return null
 
   return (
@@ -27,20 +27,16 @@ export function CityChooser() {
         </p>
         <ul className="mt-6 space-y-3">
           {cities.map((city) => {
-            const last = city.code === cityCode
             return (
               <li key={city.code}>
                 <button
                   type="button"
                   onClick={() => chooseCity(city.code)}
-                  className={`w-full flex items-center gap-3 rounded-lg border px-5 py-4 text-left transition-colors hover:border-primary hover:bg-primary-soft ${
-                    last ? 'border-primary bg-primary-soft' : 'border-border bg-surface'
-                  }`}
+                  className={`w-full flex items-center gap-3 rounded-lg border px-5 py-4 text-left transition-colors hover:border-primary hover:bg-primary-soft border-border bg-surface`}
                 >
                   <Icon name="location" size={22} filled className="text-primary shrink-0" />
                   <span className="flex-1 min-w-0">
                     <span className="block text-h3 text-text-primary">{city.name}</span>
-                    {last && <span className="block text-caption text-primary-text">Tu última localidad</span>}
                     {city.acceptingOrders === false && (
                       <span className="block text-caption text-text-secondary">Por ahora no recibe pedidos</span>
                     )}

@@ -9,7 +9,6 @@ import { useCityStore } from '../store/cityStore'
 export function useActiveCity() {
   const selected = useCityStore((state) => state.selectedCityCode)
   const hasHydrated = useCityStore((state) => state.hasHydrated)
-  const confirmedThisVisit = useCityStore((state) => state.confirmedThisVisit)
   const chooseCity = useCityStore((state) => state.confirmCity)
   useCitiesStore((state) => state.cities) // re-renderiza cuando llega la lista del servidor
   const cities = getCities()
@@ -20,9 +19,9 @@ export function useActiveCity() {
     city: findCity(cityCode, cities),
     /** Hay algo que elegir: se muestra el selector del header y el nombre de la ciudad en carrito/checkout. */
     showSelector: shouldShowCitySelector(cities),
-    /** Con 2+ ciudades se pregunta en CADA visita nueva (y siempre que no haya una elección válida). */
-    needsChoice: hasHydrated && needsCityChoice(selected, cities, confirmedThisVisit),
-    /** La persona elige: se guarda y se da por confirmada para esta visita. */
+    /** Con 2+ ciudades se pregunta solo si no hay una elección válida guardada. */
+    needsChoice: hasHydrated && needsCityChoice(selected, cities),
+    /** La persona elige: se guarda y no se vuelve a preguntar. */
     chooseCity,
   }
 }

@@ -85,18 +85,14 @@ export function shouldShowCitySelector(cities: readonly CityOption[] = KNOWN_CIT
 }
 
 /**
- * Con 2+ ciudades se pregunta "¿desde dónde quieres pedir?" CADA VEZ que se entra a la web (decisión del
- * propietario, 2026-10-17): una visita nueva siempre pasa por la pregunta, aunque haya una elección
- * guardada (que solo sirve para dejarla preseleccionada). Una vez confirmada en esta visita no se
- * repite al navegar. Con una sola ciudad no hay nada que elegir y nunca se pregunta.
+ * Con 2+ ciudades se pregunta "¿desde dónde quieres pedir?" solo cuando NO hay una elección válida
+ * guardada (primera visita, o la guardada ya no existe). Con una elección válida no se vuelve a
+ * preguntar al cerrar, refrescar o volver: se cambia desde el selector del header. Con una sola
+ * ciudad no hay nada que elegir y nunca se pregunta.
  */
-export function needsCityChoice(
-  selected: string | null,
-  cities: readonly CityOption[] = KNOWN_CITIES,
-  confirmedThisVisit = false,
-): boolean {
+export function needsCityChoice(selected: string | null, cities: readonly CityOption[] = KNOWN_CITIES): boolean {
   if (!shouldShowCitySelector(cities)) return false
-  return !confirmedThisVisit || resolveActiveCityCode(selected, cities) === null
+  return resolveActiveCityCode(selected, cities) === null
 }
 
 /** Parámetros de catálogo que dependen de la ciudad: solo si la ciudad conoce su id de servidor. */

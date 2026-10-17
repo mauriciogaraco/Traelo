@@ -55,7 +55,7 @@ describe('con una sola ciudad la web se comporta como siempre', () => {
   it('sin selector y sin pregunta', () => {
     expect(shouldShowCitySelector([GUIRA])).toBe(false)
     expect(needsCityChoice(null, [GUIRA])).toBe(false)
-    expect(needsCityChoice('guira-de-melena', [GUIRA], false)).toBe(false) // con una sola no hay qué elegir
+    expect(needsCityChoice('guira-de-melena', [GUIRA])).toBe(false) // con una sola no hay qué elegir
     expect(resolveActiveCityCode(null, [GUIRA])).toBe(DEFAULT_CITY_CODE)
   })
 })
@@ -70,19 +70,10 @@ describe('con dos ciudades', () => {
     expect(needsCityChoice(null, TWO)).toBe(true)
   })
 
-  it('una visita nueva SIEMPRE pregunta, aunque haya una elección guardada (queda como preselección)', () => {
+  it('con una elección válida guardada NO se vuelve a preguntar (refrescar o volver)', () => {
     expect(resolveActiveCityCode('san-antonio-de-los-banos', TWO)).toBe('san-antonio-de-los-banos')
-    expect(needsCityChoice('san-antonio-de-los-banos', TWO, false)).toBe(true)
-    expect(needsCityChoice('san-antonio-de-los-banos', TWO)).toBe(true)
-  })
-
-  it('una vez elegida en ESTA visita no se repite al navegar', () => {
-    expect(needsCityChoice('san-antonio-de-los-banos', TWO, true)).toBe(false)
-  })
-
-  it('aunque se dé por confirmada, sin una ciudad válida hay que preguntar', () => {
-    expect(needsCityChoice(null, TWO, true)).toBe(true)
-    expect(needsCityChoice('pinar-del-rio', TWO, true)).toBe(true)
+    expect(needsCityChoice('san-antonio-de-los-banos', TWO)).toBe(false)
+    expect(needsCityChoice('guira-de-melena', TWO)).toBe(false)
   })
 
   it('una ciudad guardada que ya no existe (o un valor manipulado) obliga a elegir de nuevo', () => {
