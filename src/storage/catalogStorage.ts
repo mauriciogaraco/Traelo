@@ -21,6 +21,8 @@ export type StoredCatalog = {
   apiBaseUrl?: string
   /** Ciudad del catálogo. Ausente = caché anterior a la expansión, que es de Güira. */
   cityCode?: string
+  /** Se bajó con el filtro de ciudad del servidor. Ausente = catálogo global (anterior al filtro). */
+  scoped?: boolean
   version: number
   categories: CatalogCategory[]
   businesses: CatalogBusiness[]
@@ -28,14 +30,19 @@ export type StoredCatalog = {
   lastSyncedAt: string
 }
 
-export function loadStoredCatalog(cityCode: string = DEFAULT_CITY_CODE): StoredCatalog | null {
+/**
+ * `scoped`: ¿esta ciudad se pide hoy con filtro de servidor? Una caché global (de antes del filtro) trae
+ * negocios de otras localidades: si ahora se filtra, no sirve y se baja de nuevo.
+ */
+export function loadStoredCatalog(cityCode: string = DEFAULT_CITY_CODE, scoped = false): StoredCatalog | null {
   try {
     const raw = localStorage.getItem(catalogStorageKey(cityCode))
     if (!raw) return null
     const stored = JSON.parse(raw) as StoredCatalog
     if (stored.apiBaseUrl !== env.apiBaseUrl) return null
     // Defensa: una caché de otra ciudad bajo esta clave no se usa.
-    return (stored.cityCode ?? DEFAULT_CITY_CODE) === cityCode ? stored : null
+    if ((stored.cityCode ?? DEFAULT_CITY_CODE) !== cityCode) return null
+    return scoped && !stored.scoped ? null : stored
   } catch {
     return null
   }

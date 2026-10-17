@@ -1,3 +1,5 @@
+import { useCitiesStore } from '../../store/citiesStore'
+
 export type CityOption = {
   /** Slug estable (`City.code` del backend). Es lo que viaja en `?ciudad=` y lo que se guarda. */
   code: string
@@ -9,6 +11,10 @@ export type CityOption = {
    * públicos de catálogo y respondería 400 (ver audit/expansion-multiciudad/INFORME.md §I).
    */
   apiId?: string
+  /** El servidor dice si la localidad recibe pedidos ahora. Ausente = no se sabe. */
+  acceptingOrders?: boolean
+  /** Tiene fotos propias para el hero del Home (las de hoy son de negocios de Güira: no se muestran en otra localidad). */
+  heroPhotos?: boolean
 }
 
 /** Güira de Melena: la ciudad de siempre. Los carritos y cachés anteriores a la expansión son suyos. */
@@ -28,7 +34,22 @@ export const KNOWN_CITIES: readonly CityOption[] = [{ code: DEFAULT_CITY_CODE, n
  * backend exponga un endpoint público de ciudades, solo cambia esto (y los tests la sustituyen aquí).
  */
 export function getCities(): readonly CityOption[] {
-  return KNOWN_CITIES
+  const fromServer = useCitiesStore.getState().cities
+  return fromServer.length > 0 ? fromServer : KNOWN_CITIES
+}
+
+/** Una localidad del servidor → la que usa la web. Descarta lo que no sea una localidad válida. */
+export function cityFromApi(raw: unknown): CityOption | null {
+  if (!raw || typeof raw !== 'object') return null
+  const { id, code, name, acceptingOrders } = raw as Record<string, unknown>
+  if (typeof id !== 'string' || !id || typeof code !== 'string' || !code || typeof name !== 'string' || !name) return null
+  return {
+    code,
+    name,
+    apiId: id,
+    acceptingOrders: typeof acceptingOrders === 'boolean' ? acceptingOrders : undefined,
+    heroPhotos: code === DEFAULT_CITY_CODE,
+  }
 }
 
 export function isKnownCityCode(code: string, cities: readonly CityOption[] = KNOWN_CITIES): boolean {

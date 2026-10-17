@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { getCities, resolveActiveCityCode, resolveCityFromQuery } from '../features/city'
+import { useCitiesStore } from '../store/citiesStore'
 import { switchCatalogCity } from '../services/catalogSync'
 import { useCartStore } from '../store/cartStore'
 import { useCityStore } from '../store/cityStore'
@@ -20,6 +21,8 @@ export function useCityBootstrap(): void {
   const [params] = useSearchParams()
   const selected = useCityStore((state) => state.selectedCityCode)
   const hasHydrated = useCityStore((state) => state.hasHydrated)
+  // La lista llega del servidor: al cambiar, se vuelve a resolver la ciudad activa.
+  useCitiesStore((state) => state.cities)
 
   useEffect(() => {
     const fromQuery = resolveCityFromQuery(params, getCities())

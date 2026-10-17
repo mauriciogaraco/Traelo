@@ -42,6 +42,9 @@ export function CityChooser() {
                   <span className="flex-1 min-w-0">
                     <span className="block text-h3 text-text-primary">{city.name}</span>
                     {last && <span className="block text-caption text-primary-text">Tu última localidad</span>}
+                    {city.acceptingOrders === false && (
+                      <span className="block text-caption text-text-secondary">Por ahora no recibe pedidos</span>
+                    )}
                   </span>
                   <Icon name="chevron-right" size={18} className="text-text-tertiary" />
                 </button>

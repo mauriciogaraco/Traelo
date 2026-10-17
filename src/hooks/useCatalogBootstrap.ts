@@ -2,8 +2,12 @@ import { useEffect } from 'react'
 import { DEFAULT_CITY_CODE, getCities, resolveActiveCityCode } from '../features/city'
 import { migrateLegacyAddress, migrateLegacyCart } from '../lib/legacyMigration'
 import { hydrateCatalogFromStorage, syncCatalog } from '../services/catalogSync'
+import { refreshCities } from '../services/citiesService'
 import { useCatalogStore } from '../store/catalogStore'
 import { useCityStore } from '../store/cityStore'
+
+/** Espera máxima por la lista de localidades antes de sincronizar el catálogo (después se rehace solo si hace falta). */
+const CITIES_WAIT_MS = 3000
 
 /** Al volver a la pestaña, se revisa la versión del catálogo si pasó al menos esto desde el último sync. */
 const RESYNC_ON_RETURN_MS = 5 * 60 * 1000
@@ -22,7 +26,9 @@ export function useCatalogBootstrap(): void {
     if (startCity && startCity !== useCatalogStore.getState().cityCode) useCatalogStore.getState().setCityScope(startCity)
     hydrateCatalogFromStorage()
     migrateLegacyAddress()
-    void syncCatalog()
+    // Primero las localidades (traen el id con el que se filtra el catálogo), con un tope de espera: así
+    // el primer catálogo ya baja filtrado. Si tardan, `refreshCities` lo rehace cuando lleguen.
+    void Promise.race([refreshCities(), new Promise((resolve) => window.setTimeout(resolve, CITIES_WAIT_MS))]).then(() => syncCatalog())
 
     // El carrito de la web anterior se migra con el catálogo ya sincronizado (hace falta externalId).
     let cartMigrated = false

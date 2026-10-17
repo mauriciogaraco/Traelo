@@ -33,7 +33,12 @@ export function CitySheet({ open, onClose }: { open: boolean; onClose: () => voi
                 }`}
               >
                 <Icon name="location" size={20} filled={active} className={active ? 'text-primary' : 'text-text-tertiary'} />
-                <span className="flex-1 font-semibold text-text-primary">{city.name}</span>
+                <span className="flex-1 min-w-0">
+                  <span className="block font-semibold text-text-primary">{city.name}</span>
+                  {city.acceptingOrders === false && (
+                    <span className="block text-caption text-text-secondary">Por ahora no recibe pedidos</span>
+                  )}
+                </span>
                 {active && <span className="text-caption font-semibold text-primary-text">Actual</span>}
               </button>
             </li>
