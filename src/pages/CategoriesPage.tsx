@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { CatalogImage } from '../components/catalog/CatalogImage'
-import { categoryImageUrl, categorySearchHref } from '../components/catalog/CategoryCard'
+import { categoryImageUrl, categorySearchHref, trackCategoryView } from '../components/catalog/CategoryCard'
 import { EmptyState } from '../components/ui/EmptyState'
 import { Skeleton } from '../components/ui/Skeleton'
 import { visualForCategory } from '../features/catalog'
@@ -31,6 +31,7 @@ export function CategoriesPage() {
             <li key={category.id}>
               <Link
                 to={categorySearchHref(category)}
+                onClick={() => trackCategoryView(category, 'categorias')}
                 className="group relative block h-28 lg:h-36 overflow-hidden rounded-r-lg shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
               >
                 <CatalogImage

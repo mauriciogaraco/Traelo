@@ -20,8 +20,14 @@ const apiKey = (import.meta.env.VITE_API_KEY as string | undefined)?.trim() || D
 // simplemente no se ofrece activar notificaciones (ver services/pushService.ts).
 const vapidPublicKey = (import.meta.env.VITE_VAPID_PUBLIC_KEY as string | undefined)?.trim() ?? ''
 
+// Analítica de comportamiento: activa por defecto solo en producción. Un servidor de desarrollo
+// suele apuntar al backend real y no debe ensuciar los datos; VITE_ANALYTICS=true/false lo fuerza.
+const analyticsFlag = (import.meta.env.VITE_ANALYTICS as string | undefined)?.trim()
+const analyticsEnabled = analyticsFlag ? analyticsFlag === 'true' : import.meta.env.PROD
+
 export const env = {
   apiBaseUrl: `${apiUrl.replace(/\/+$/, '')}/api/v1`,
   apiKey,
   vapidPublicKey,
+  analyticsEnabled,
 } as const

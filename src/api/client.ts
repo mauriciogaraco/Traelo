@@ -23,6 +23,8 @@ type RequestOptions = {
   headers?: Record<string, string>;
   /** Permite cancelar la petición desde fuera (p.ej. el polling al salir de la pantalla). */
   signal?: AbortSignal;
+  /** Deja que la petición termine aunque se cierre la pestaña (último envío de analítica). */
+  keepalive?: boolean;
 };
 
 /**
@@ -71,7 +73,7 @@ async function performFetch(
   options: RequestOptions,
   accessToken: string | null,
 ): Promise<{ response: Response; json: unknown }> {
-  const { method = 'GET', body, query, timeoutMs = DEFAULT_TIMEOUT_MS, headers, signal } = options;
+  const { method = 'GET', body, query, timeoutMs = DEFAULT_TIMEOUT_MS, headers, signal, keepalive } = options;
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
   const abortFromCaller = () => controller.abort();
@@ -90,6 +92,7 @@ async function performFetch(
       },
       body: body !== undefined ? JSON.stringify(body) : undefined,
       signal: controller.signal,
+      keepalive,
     });
   } catch {
     // Cancelada por quien llamó: no es un fallo de red ni un timeout.
@@ -149,7 +152,7 @@ async function request<TBody>(path: string, options: RequestOptions = {}): Promi
   return json as TBody;
 }
 
-type CallOptions = Pick<RequestOptions, 'auth' | 'headers' | 'timeoutMs' | 'signal'>;
+type CallOptions = Pick<RequestOptions, 'auth' | 'headers' | 'timeoutMs' | 'signal' | 'keepalive'>;
 
 export async function apiGet<T>(path: string, query?: Query, options?: CallOptions): Promise<T> {
   const json = await request<ApiOk<T>>(path, { ...options, method: 'GET', query });
