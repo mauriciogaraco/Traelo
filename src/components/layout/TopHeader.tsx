@@ -4,6 +4,7 @@ import { useCartStore } from '../../store/cartStore'
 import { useAuth } from '../../hooks/useAuth'
 import { selectUnreadCount, useNotificationsStore } from '../../store/notificationsStore'
 import { AddressBar } from '../address/AddressBar'
+import { CityPill } from '../city/CityPill'
 import { Icon } from '../ui/Icon'
 import { Logo } from '../ui/Logo'
 import { NAV_TABS, cartBadge, isTabActive } from './navigation'
@@ -57,8 +58,12 @@ export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) 
           })}
         </nav>
 
-        <div className="flex-1 min-w-0 lg:max-w-xs lg:ml-auto">
-          <AddressBar />
+        <div className="flex-1 min-w-0 flex items-center gap-2 lg:max-w-xl lg:ml-auto">
+          {/* Localidad (dónde se compra) y dirección (dónde se entrega): dos controles distintos. */}
+          <CityPill className="hidden lg:flex shrink-0 max-w-[11rem]" />
+          <div className="flex-1 min-w-0">
+            <AddressBar />
+          </div>
         </div>
 
         <Link
@@ -100,6 +105,10 @@ export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) 
             <Icon name="person" size={20} filled />
           )}
         </Link>
+      </div>
+      {/* Teléfono: la localidad en su propia fila, con el nombre completo (no cabe junto a la dirección). */}
+      <div className="lg:hidden px-4 pb-2 empty:hidden">
+        <CityPill className="flex w-full" />
       </div>
     </header>
   )

@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
+import { DEFAULT_CITY_CODE, getCities, resolveActiveCityCode } from '../features/city'
 import { migrateLegacyAddress, migrateLegacyCart } from '../lib/legacyMigration'
 import { hydrateCatalogFromStorage, syncCatalog } from '../services/catalogSync'
 import { useCatalogStore } from '../store/catalogStore'
+import { useCityStore } from '../store/cityStore'
 
 /** Al volver a la pestaña, se revisa la versión del catálogo si pasó al menos esto desde el último sync. */
 const RESYNC_ON_RETURN_MS = 5 * 60 * 1000
@@ -14,6 +16,10 @@ const RESYNC_ON_RETURN_MS = 5 * 60 * 1000
  */
 export function useCatalogBootstrap(): void {
   useEffect(() => {
+    // Arranca ya con la ciudad guardada (si la hay y sigue siendo válida): así no se descarga primero el
+    // catálogo de otra para tirarlo enseguida. `useCityBootstrap` aplica el resto (carrito, cambios).
+    const startCity = resolveActiveCityCode(useCityStore.getState().selectedCityCode, getCities())
+    if (startCity && startCity !== useCatalogStore.getState().cityCode) useCatalogStore.getState().setCityScope(startCity)
     hydrateCatalogFromStorage()
     migrateLegacyAddress()
     void syncCatalog()
@@ -21,8 +27,10 @@ export function useCatalogBootstrap(): void {
     // El carrito de la web anterior se migra con el catálogo ya sincronizado (hace falta externalId).
     let cartMigrated = false
     const tryMigrateCart = () => {
-      const { products, isSyncing, lastSyncedAt } = useCatalogStore.getState()
-      if (!cartMigrated && !isSyncing && lastSyncedAt) cartMigrated = migrateLegacyCart(products)
+      const { products, isSyncing, lastSyncedAt, cityCode } = useCatalogStore.getState()
+      // El carrito de la web anterior es de Güira: solo se migra contra el catálogo de Güira (con otra
+      // localidad activa no encontraría sus productos y lo daría por perdido).
+      if (!cartMigrated && !isSyncing && lastSyncedAt && cityCode === DEFAULT_CITY_CODE) cartMigrated = migrateLegacyCart(products)
     }
     const unsubscribeCatalog = useCatalogStore.subscribe(tryMigrateCart)
     tryMigrateCart()

@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { OtherCityHint } from '../components/city/OtherCityHint'
+import { ProductGridSkeleton } from '../components/ui/Skeleton'
 import { CatalogImage } from '../components/catalog/CatalogImage'
 import { formatCup, Price } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
@@ -33,6 +35,8 @@ export function ProductDetailPage() {
   const product = useCatalogStore((state) => state.products.find((p) => p.id === id))
   const businesses = useCatalogStore((state) => state.businesses)
   const categories = useCatalogStore((state) => state.categories)
+  // Catálogo todavía llegando (p. ej. tras cambiar de localidad): no se dice "no encontrado" antes de tiempo.
+  const waiting = useCatalogStore((state) => !state.hydrated || (state.products.length === 0 && state.isSyncing))
   const addItem = useCartStore((state) => state.addItem)
   const { isAuthenticated, products: favoriteProducts } = useFavorites()
 
@@ -58,7 +62,18 @@ export function ProductDetailPage() {
     return (
       <>
         <BackButton onClick={goBack} />
-        <EmptyState icon="search" title="Producto no encontrado" description="Puede que ya no esté disponible." />
+        {waiting ? (
+          <div className="px-4 pt-4">
+            <ProductGridSkeleton count={2} />
+          </div>
+        ) : (
+          <>
+            <EmptyState icon="search" title="Producto no encontrado" description="Puede que ya no esté disponible." />
+            <div className="px-4">
+              <OtherCityHint />
+            </div>
+          </>
+        )}
       </>
     )
   }

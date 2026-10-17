@@ -2,8 +2,18 @@ import { createCheckoutOrder } from '../api/checkout'
 import { ApiError } from '../api/ApiError'
 import { quoteCheckout } from '../api/rewards'
 import { buildBusinessesInput, buildCheckoutInput, type BuildCheckoutInputParams } from '../features/checkout/buildCheckoutInput'
+import {
+  businessIdsOutsideCatalog,
+  findCity,
+  getCities,
+  MIXED_CITY_CODE,
+  mixedCityMessage,
+  outsideCityIssues,
+  shouldShowCitySelector,
+} from '../features/city'
 import { isRedemptionError, redemptionErrorMessage } from '../features/rewards'
 import { useCartStore, type CartItem } from '../store/cartStore'
+import { useCatalogStore } from '../store/catalogStore'
 import { useGuestOrdersStore, useGuestProfileStore, useOrderStore } from '../store/guestStore'
 import type { CartChangeDetail, CartChangedErrorDetails, Order } from '../types/backend/order'
 import type { OrderQuote, RedemptionRequest } from '../types/backend/rewards'
@@ -41,7 +51,14 @@ export async function requestCheckoutQuote(items: CartItem[], redemption?: Redem
 
 export type CartPrecheck =
   | { ok: true }
-  | { ok: false; issues: CartChangeDetail[]; /** Motivo general (p. ej. pasó el corte del día). */ message?: string }
+  | {
+      ok: false
+      issues: CartChangeDetail[]
+      /** Motivo general (p. ej. pasó el corte del día, o el carrito no es de esta localidad). */
+      message?: string
+      /** Qué tipo de motivo general es, para que la pantalla lo explique bien. */
+      code?: 'ORDERS_CLOSED_FOR_TODAY' | typeof MIXED_CITY_CODE
+    }
 
 /** Motivos que se arreglan quitando el producto o el local del carrito (un cambio de precio, no). */
 const REMOVABLE_REASONS = new Set<CartChangeDetail['reason']>([
@@ -62,6 +79,11 @@ export const isRemovableIssue = (issue: CartChangeDetail) => REMOVABLE_REASONS.h
  * bloquea por otra causa: sin red o con error del servidor se sigue (el backend valida al confirmar).
  */
 export async function precheckCart(items: CartItem[], redemption?: RedemptionRequest): Promise<CartPrecheck> {
+  const outside = cartOutsideActiveCity(items)
+  if (outside) {
+    useCartStore.getState().setCheckoutIssues(outside.issues)
+    return { ok: false, issues: outside.issues, message: mixedCityMessage(outside.cityName), code: MIXED_CITY_CODE }
+  }
   const result = await requestCheckoutQuote(items, redemption)
   if (result.ok) {
     useCartStore.getState().setCheckoutIssues([])
@@ -72,8 +94,29 @@ export async function precheckCart(items: CartItem[], redemption?: RedemptionReq
     useCartStore.getState().setCheckoutIssues(changes)
     return { ok: false, issues: changes }
   }
-  if (result.code === 'ORDERS_CLOSED_FOR_TODAY') return { ok: false, issues: [], message: result.message }
+  if (result.code === 'ORDERS_CLOSED_FOR_TODAY') return { ok: false, issues: [], message: result.message, code: 'ORDERS_CLOSED_FOR_TODAY' }
+  // El servidor es la autoridad: si dice que el carrito mezcla localidades, NO se sigue al formulario.
+  if (result.code === MIXED_CITY_CODE) return { ok: false, issues: [], message: mixedCityMessage(activeCityName()), code: MIXED_CITY_CODE }
   return { ok: true }
+}
+
+function activeCityName(): string | undefined {
+  return findCity(useCatalogStore.getState().cityCode, getCities())?.name
+}
+
+/**
+ * Con 2+ localidades: los negocios del carrito que no están en el catálogo de la activa (ya filtrado por
+ * el servidor). Con una sola localidad, o con el catálogo todavía sin cargar, no se opina (nunca se
+ * bloquea por no saber): lo valida el servidor como siempre.
+ */
+function cartOutsideActiveCity(items: CartItem[]): { issues: CartChangeDetail[]; cityName: string } | null {
+  if (!shouldShowCitySelector(getCities())) return null
+  const { businesses, lastSyncedAt, cityCode } = useCatalogStore.getState()
+  if (!lastSyncedAt || businesses.length === 0) return null
+  const outside = businessIdsOutsideCatalog(items, businesses)
+  if (outside.length === 0) return null
+  const cityName = findCity(cityCode, getCities())?.name ?? 'esta localidad'
+  return { issues: outsideCityIssues(outside, cityName), cityName }
 }
 
 /** Quita del carrito, de una vez, todo lo que el servidor dijo que ya no se puede pedir. */
@@ -142,6 +185,7 @@ export async function submitCheckout(params: BuildCheckoutInputParams): Promise<
         void refreshRewards()
         return { ok: false, code: err.code, message: redemptionErrorMessage(err.code, err.message) }
       }
+      if (err.code === MIXED_CITY_CODE) return { ok: false, code: err.code, message: mixedCityMessage(activeCityName()) }
       return { ok: false, code: err.code, message: err.message }
     }
     return { ok: false, code: 'UNKNOWN_ERROR', message: 'Ocurrió un error inesperado.' }

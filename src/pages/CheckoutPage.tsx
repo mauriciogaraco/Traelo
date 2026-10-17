@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { CityNote } from '../components/city/CityNote'
 import { formatCup } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
 import { ChipRow } from '../components/ui/ChipRow'
@@ -195,6 +196,7 @@ export function CheckoutPage() {
       />
 
       <div className="px-4 lg:px-0 pb-10 space-y-5">
+        <CityNote />
         {step === 'where' ? (
           <>
             <section className="space-y-3">

@@ -4,6 +4,7 @@ import { BusinessStatusBadge } from '../components/catalog/BusinessStatusBadge'
 import { CatalogImage } from '../components/catalog/CatalogImage'
 import { ProductCard } from '../components/catalog/ProductCard'
 import { Button } from '../components/ui/Button'
+import { OtherCityHint } from '../components/city/OtherCityHint'
 import { EmptyState } from '../components/ui/EmptyState'
 import { FavoriteButton } from '../components/catalog/FavoriteButton'
 import { ProductGridSkeleton, Skeleton } from '../components/ui/Skeleton'
@@ -51,19 +52,24 @@ export function BusinessPage() {
       )
     }
     return (
-      <EmptyState
-        icon="home"
-        title="Negocio no encontrado"
-        description="Puede que ya no esté disponible."
-        action={
-          <Link
-            to="/buscar"
-            className="inline-flex min-h-12 items-center rounded-r-md border border-primary px-4 font-semibold text-primary-text hover:bg-primary/5"
-          >
-            Ver otros negocios
-          </Link>
-        }
-      />
+      <>
+        <EmptyState
+          icon="home"
+          title="Negocio no encontrado"
+          description="Puede que ya no esté disponible."
+          action={
+            <Link
+              to="/buscar"
+              className="inline-flex min-h-12 items-center rounded-r-md border border-primary px-4 font-semibold text-primary-text hover:bg-primary/5"
+            >
+              Ver otros negocios
+            </Link>
+          }
+        />
+        <div className="px-4">
+          <OtherCityHint />
+        </div>
+      </>
     )
   }
 
