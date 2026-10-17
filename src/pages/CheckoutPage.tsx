@@ -83,6 +83,8 @@ export function CheckoutPage() {
   const [submitting, setSubmitting] = useState(false)
   const [quote, setQuote] = useState<OrderQuote | null>(null)
   const [quoteLoading, setQuoteLoading] = useState(false)
+  // La promoción no aplicó (el servidor la rechazó): se cotizó sin ella y aquí se explica por qué.
+  const [promoNotice, setPromoNotice] = useState<string | null>(null)
   const clientRequestId = useRef(generateLocalId('checkout'))
   const orderCreated = useRef(false)
 
@@ -118,6 +120,7 @@ export function CheckoutPage() {
       if (cancelled) return
       setQuoteLoading(false)
       setQuote(result.ok ? result.quote : null)
+      setPromoNotice(result.ok ? (result.promoNotice ?? null) : null)
     }, QUOTE_DEBOUNCE_MS)
     return () => {
       cancelled = true
@@ -312,6 +315,7 @@ export function CheckoutPage() {
             itemCount={getCartItemCount(items)}
             subtotalEstimate={getCartSubtotalEstimate(items)}
             quote={quote}
+            promoNotice={promoNotice}
             quoteLoading={quoteLoading}
             online={online}
             submitting={submitting}
@@ -362,6 +366,7 @@ function ReviewStep(props: {
   itemCount: number
   subtotalEstimate: number
   quote: OrderQuote | null
+  promoNotice: string | null
   quoteLoading: boolean
   online: boolean
   submitting: boolean
@@ -383,6 +388,12 @@ function ReviewStep(props: {
         {props.reference && <p className="text-caption text-text-secondary">{props.reference}</p>}
       </section>
 
+      {props.promoNotice && (
+        <p role="status" className="rounded-r-md bg-surface border border-border p-3 text-caption font-semibold text-warning-text">
+          {props.promoNotice}. Tu pedido sigue con la mensajería normal.
+        </p>
+      )}
+
       {quote ? (
         <section aria-label="Total del pedido" className="rounded-r-md bg-surface border border-border p-3 space-y-1">
           <QuoteRow label="Productos" value={formatCup(quote.productsTotal - quote.packagingTotal)} />
@@ -390,7 +401,11 @@ function ReviewStep(props: {
           {quote.redemption && (
             <QuoteRow label={`🎁 ${quote.redemption.rewardName} (${formatPoints(quote.redemption.pointsCost)})`} value={`−${formatCup(quote.pointsDiscount)}`} />
           )}
-          <QuoteRow label="Mensajería" value={formatCup(quote.deliveryFee)} />
+          {(quote.deliveryFeeDiscount ?? 0) > 0 ? (
+            <QuoteRow label={`🎁 Mensajería gratis (${formatCup(quote.deliveryFee)})`} value="Gratis" />
+          ) : (
+            <QuoteRow label="Mensajería" value={formatCup(quote.deliveryFee)} />
+          )}
           <QuoteRow label="Servicio Tráelo" value={formatCup(quote.platformFee)} />
           <QuoteRow label="Total a pagar" value={formatCup(quote.total)} strong />
           <p className="text-caption text-text-secondary">Calculado por Tráelo — el servidor lo vuelve a confirmar al crear el pedido.</p>

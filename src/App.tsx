@@ -13,6 +13,8 @@ import { HomePage } from "./pages/HomePage";
 import { RefreshModal } from "./components/ui/RefreshModal";
 import { useCatalogBootstrap } from "./hooks/useCatalogBootstrap";
 import { useCityBootstrap } from "./hooks/useCityBootstrap";
+import { usePromoBootstrap } from "./hooks/usePromoBootstrap";
+import { PROMO_PATH } from "./features/promo/promo";
 import { useNotificationsBootstrap } from "./hooks/useNotificationsBootstrap";
 import { usePointsBootstrap } from "./hooks/usePointsBootstrap";
 import { useSessionBootstrap } from "./hooks/useSessionBootstrap";
@@ -24,6 +26,7 @@ const SearchPage = lazy(() => import("./pages/SearchPage").then((m) => ({ defaul
 const BusinessPage = lazy(() => import("./pages/BusinessPage").then((m) => ({ default: m.BusinessPage })));
 const CartPage = lazy(() => import("./pages/CartPage").then((m) => ({ default: m.CartPage })));
 const CheckoutPage = lazy(() => import("./pages/CheckoutPage").then((m) => ({ default: m.CheckoutPage })));
+const PromoPage = lazy(() => import("./pages/PromoPage").then((m) => ({ default: m.PromoPage })));
 const MandadoPage = lazy(() => import("./pages/MandadoPage").then((m) => ({ default: m.MandadoPage })));
 const OrderPage = lazy(() => import("./pages/OrderPage").then((m) => ({ default: m.OrderPage })));
 const OrdersPage = lazy(() => import("./pages/OrdersPage").then((m) => ({ default: m.OrdersPage })));
@@ -96,6 +99,12 @@ function CityBootstrap() {
   return null;
 }
 
+/** Guarda el código de promoción del enlace (`?promo=`) para el checkout (ver `usePromoBootstrap`). */
+function PromoBootstrap() {
+  usePromoBootstrap();
+  return null;
+}
+
 /** Alimenta el buzón local con los Web Push que recibe este navegador (ver `useNotificationsBootstrap`). */
 function NotificationsBootstrap() {
   useNotificationsBootstrap();
@@ -111,6 +120,7 @@ function Providers({ children }: { children: ReactNode }) {
       <PointsBootstrap />
       <NotificationsBootstrap />
       <CityBootstrap />
+      <PromoBootstrap />
       {children}
     </ToastProvider>
   );
@@ -155,6 +165,7 @@ export default function App() {
               <Route path="/carrito" element={<CartPage />} />
               <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
               <Route path="/mandado" element={<Narrow><MandadoPage /></Narrow>} />
+              <Route path={PROMO_PATH} element={<PromoPage />} />
               <Route path="/cuenta" element={<AccountPage />} />
               <Route path="/direcciones" element={<AddressesPage />} />
               <Route path="/favoritos" element={<FavoritesPage />} />

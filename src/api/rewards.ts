@@ -11,6 +11,6 @@ export function getRewards() {
  * Cotización de solo lectura: el servidor calcula productos, mensajería, Servicio Tráelo, canje y
  * total con las mismas reglas que el pedido. No crea ni descuenta nada.
  */
-export function quoteCheckout(input: { businesses: CartBusinessInput[]; redemption?: RedemptionRequest }) {
+export function quoteCheckout(input: { businesses: CartBusinessInput[]; redemption?: RedemptionRequest; promoCode?: string }) {
   return apiPost<OrderQuote>('/checkout/quote', input, { auth: true });
 }

@@ -42,6 +42,10 @@ export type OrderQuote = {
   /** Productos que paga en dinero: productsTotal − pointsDiscount. */
   productsToPay: number;
   deliveryFee: number;
+  /** Mensajería que regala Tráelo con una promoción (0 o ausente sin promo). `deliveryFee` es la tarifa real. */
+  deliveryFeeDiscount?: number;
+  /** Promoción aplicada a esta cotización (null/ausente sin código). */
+  promo?: { code: string; discount: number } | null;
   platformFee: number;
   total: number;
   redemption: {

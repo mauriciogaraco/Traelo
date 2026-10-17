@@ -61,3 +61,21 @@ export function getCatalogStats() {
 export function getFeaturedProducts() {
   return apiGet<CatalogProduct[]>('/catalog/featured-products');
 }
+
+/**
+ * Promoción "primera mensajería gratis" (`GET /catalog/promotions/free-delivery`): contador público
+ * (5 + pedidos completados de San Antonio, hasta 15), mensajerías gratis que quedan y el código del enlace.
+ */
+export type FreeDeliveryPromo = {
+  active: boolean;
+  exhausted: boolean;
+  /** Solo viene con la promoción activa. */
+  code: string | null;
+  cityCode: string;
+  counter: { current: number; max: number };
+  remaining: number;
+};
+
+export function getFreeDeliveryPromo() {
+  return apiGet<FreeDeliveryPromo>('/catalog/promotions/free-delivery');
+}

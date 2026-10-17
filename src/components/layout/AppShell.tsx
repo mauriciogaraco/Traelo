@@ -6,6 +6,7 @@ import { TopHeader } from './TopHeader'
 import { CityChooser } from '../city/CityChooser'
 import { OfflineBanner } from '../ui/OfflineBanner'
 import { isFlowRoute } from './navigation'
+import { PROMO_PATH } from '../../features/promo/promo'
 
 /**
  * Estructura de la app, igual que mobile: header compartido arriba + barra flotante abajo.
@@ -26,7 +27,8 @@ export function AppShell({ children }: { children: ReactNode }) {
       <main className={`mx-auto w-full max-w-6xl ${flow ? 'pb-6' : 'pb-28 lg:pb-12'}`}>{children}</main>
       {!flow && <FloatingTabBar />}
       <FloatingStatusBars />
-      <CityChooser />
+      {/* La pantalla de la promoción no se tapa con la pregunta de localidad: "Pide ahora" ya la fija. */}
+      {pathname !== PROMO_PATH && <CityChooser />}
     </div>
   )
 }

@@ -28,6 +28,8 @@ export type BuildCheckoutInputParams = {
    * detectar datos viejos): nunca costo, descuento ni totales — el servidor los resuelve.
    */
   redemption?: RedemptionRequest;
+  /** Código de la promoción "primera mensajería gratis" (solo el código; el servidor valida y calcula). */
+  promoCode?: string;
 };
 
 /** Agrupa los productos del carrito por negocio, con el formato del backend (sin precios definitivos). */
@@ -72,5 +74,6 @@ export function buildCheckoutInput(params: BuildCheckoutInputParams): CheckoutOr
     businesses: buildBusinessesInput(params.items),
     // Solo el id de la recompensa (y el saldo visto): el servidor resuelve costo, descuento y total.
     redemption: params.redemption,
+    promoCode: params.promoCode,
   };
 }

@@ -60,6 +60,8 @@ export type Order = {
   addressReference: string | null;
   customerPhone: string;
   deliveryFee: number;
+  /** Mensajería que regaló Tráelo en este pedido (promoción). Ausente o 0 sin promo. */
+  deliveryFeeDiscount?: number;
   status: OrderStatus;
   /** Sub-fase del mensajero, si el pedido la tiene (solo la pone normalizeOrderStatus). */
   substatus?: CourierSubstatus | null;
