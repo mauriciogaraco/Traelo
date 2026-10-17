@@ -7,3 +7,4 @@ export * from './businessSlug'
 
 /** ¿Agotado? (`available: false`). Sin el campo —catálogo de antes o servidor viejo— se considera disponible. */
 export const isSoldOut = (product: { available?: boolean }): boolean => product.available === false
+export * from './categoriesInUse'

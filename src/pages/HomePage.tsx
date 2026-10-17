@@ -18,6 +18,7 @@ import { EmptyState } from '../components/ui/EmptyState'
 import { ErrorState } from '../components/ui/ErrorState'
 import {
   businessOrdersWeek,
+  categoriesInUse,
   businessPath,
   findBusinessByLegacyId,
   isSoldOut,
@@ -44,7 +45,7 @@ const TOP_BUSINESSES_LIMIT = 10
  * productos top de la semana. Todo sale del catálogo guardado + estadísticas del backend.
  */
 export function HomePage() {
-  const categories = useCatalogStore((state) => state.categories)
+  const allCategories = useCatalogStore((state) => state.categories)
   const businesses = useCatalogStore((state) => state.businesses)
   const products = useCatalogStore((state) => state.products)
   const hydrated = useCatalogStore((state) => state.hydrated)
@@ -59,6 +60,8 @@ export function HomePage() {
     () => (showSelector ? onlyProductsOfBusinesses(allFeaturedProducts, businesses) : allFeaturedProducts),
     [showSelector, allFeaturedProducts, businesses],
   )
+  // Solo las categorías que tienen productos en la localidad activa.
+  const categories = useMemo(() => categoriesInUse(allCategories, products), [allCategories, products])
   const quickAdd = useQuickAdd()
   const legacyRedirect = useLegacyHomeRedirect()
 

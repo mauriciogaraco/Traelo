@@ -3,7 +3,8 @@ import { CatalogImage } from '../components/catalog/CatalogImage'
 import { categoryImageUrl, categorySearchHref } from '../components/catalog/CategoryCard'
 import { EmptyState } from '../components/ui/EmptyState'
 import { Skeleton } from '../components/ui/Skeleton'
-import { visualForCategory } from '../features/catalog'
+import { useMemo } from 'react'
+import { categoriesInUse, visualForCategory } from '../features/catalog'
 import { useCatalogStore } from '../store/catalogStore'
 
 /**
@@ -11,7 +12,9 @@ import { useCatalogStore } from '../store/catalogStore'
  * 2 columnas en teléfono, más en pantallas grandes.
  */
 export function CategoriesPage() {
-  const categories = useCatalogStore((state) => state.categories)
+  const allCategories = useCatalogStore((state) => state.categories)
+  const products = useCatalogStore((state) => state.products)
+  const categories = useMemo(() => categoriesInUse(allCategories, products), [allCategories, products])
   const waiting = useCatalogStore((state) => !state.hydrated || (state.categories.length === 0 && state.isSyncing))
 
   return (
