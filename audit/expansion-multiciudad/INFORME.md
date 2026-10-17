@@ -261,3 +261,14 @@ No se ha modificado ningún componente, store, tipo ni archivo de configuración
 
 Activar San Antonio (agregarla a la lista con su `apiId`) requiere: (1) corregir I.2-1, (2) endpoint público de ciudades, (3) idealmente `cityId` en el
 DTO público de negocio, (4) sembrar San Antonio con `acceptingOrders` real. Hasta entonces el flujo multiciudad no debe activarse en producción.
+
+### I.5 Actualización 2026-10-17 (revisión del backend, solo lectura)
+
+- **I.2-1 resuelto en el backend**: rama `fix/id-ciudad-guira` (PR #50) agrega `cityIdSchema`; `cty_guira_de_melena` ya pasa en
+  `/catalog/bootstrap`, `/catalog/businesses` y `/catalog/featured-products`. Falta confirmar que esté **desplegado**; hasta entonces la web
+  sigue sin mandar `cityId` para Güira (si el servidor en producción aún tiene `z.cuid()`, respondería 400). Al activar San Antonio,
+  Güira DEBE llevar `apiId: 'cty_guira_de_melena'` a la vez, o sus clientes verán también los negocios de San Antonio.
+- **Destacados**: `/catalog/featured-products?cityId=` ya existe. La web sigue filtrando en el cliente contra el catálogo activo
+  (correcto). Migrarlo al servidor requiere clave de caché por ciudad en `featuredProductsStore`; es una optimización, no un bloqueo.
+- **Siguen bloqueados**: endpoint público de ciudades (I.2-2), `cityId` en el DTO público de negocio (I.2-3) y sembrar San Antonio (I.2-4).
+  San Antonio NO se agrega a `KNOWN_CITIES`.
