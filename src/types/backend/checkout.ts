@@ -47,6 +47,8 @@ export type CheckoutOrderInput = {
   businesses: CartBusinessInput[];
   /** Canje de una recompensa (solo con cuenta): solo el id; el servidor resuelve costo, precio y saldo. */
   redemption?: RedemptionRequest;
+  /** Código de la promoción "primera mensajería gratis". Solo el código: el servidor valida y calcula el descuento. */
+  promoCode?: string;
 };
 
 export type CreateAppOrderInput = {

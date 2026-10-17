@@ -12,10 +12,12 @@ import {
   outsideCityIssues,
   shouldShowCitySelector,
 } from '../features/city'
+import { isPromoErrorCode, promoCodeToSend } from '../features/promo/promo'
 import { isRedemptionError, redemptionErrorMessage } from '../features/rewards'
 import { useCartStore, type CartItem } from '../store/cartStore'
 import { useCatalogStore } from '../store/catalogStore'
 import { useGuestOrdersStore, useGuestProfileStore, useOrderStore } from '../store/guestStore'
+import { usePromoStore } from '../store/promoStore'
 import type { CartChangeDetail, CartChangedErrorDetails, Order } from '../types/backend/order'
 import type { OrderQuote, RedemptionRequest } from '../types/backend/rewards'
 import { notifyOrderToTelegram } from './orderNotifyService'
@@ -31,7 +33,12 @@ import { clearRedemption, refreshRewards } from './rewardsService'
 // ── Cotización ────────────────────────────────────────────────────────────────
 
 export type CheckoutQuoteResult =
-  | { ok: true; quote: OrderQuote }
+  | {
+      ok: true
+      quote: OrderQuote
+      /** La promoción no aplicó (el servidor la rechazó): se cotizó sin ella y se explica por qué. */
+      promoNotice?: string
+    }
   | { ok: false; code: string; message: string; details?: unknown }
 
 /**
@@ -40,12 +47,39 @@ export type CheckoutQuoteResult =
  * de confirmar. No crea ni descuenta nada.
  */
 export async function requestCheckoutQuote(items: CartItem[], redemption?: RedemptionRequest): Promise<CheckoutQuoteResult> {
+  const promoCode = currentPromoCode()
   try {
-    return { ok: true, quote: await quoteCheckout({ businesses: buildBusinessesInput(items), redemption }) }
+    return { ok: true, quote: await quoteCheckout({ businesses: buildBusinessesInput(items), redemption, promoCode }) }
   } catch (error) {
-    if (error instanceof ApiError) return { ok: false, code: error.code, message: error.message, details: error.details }
-    return { ok: false, code: 'UNKNOWN_ERROR', message: 'No pudimos calcular el total. Revisa tu conexión.' }
+    if (error instanceof ApiError && promoCode && isPromoErrorCode(error.code)) {
+      // El servidor dice que la promoción no aplica (agotada, ya pidió antes, otra localidad…): se cotiza
+      // SIN ella y se explica, en vez de dejar al cliente sin total. Solo se olvida el código si ya no sirve.
+      forgetPromoUnlessWrongCity(error.code)
+      try {
+        const quote = await quoteCheckout({ businesses: buildBusinessesInput(items), redemption })
+        return { ok: true, quote, promoNotice: error.message }
+      } catch (retryError) {
+        return failedQuote(retryError)
+      }
+    }
+    return failedQuote(error)
   }
+}
+
+function failedQuote(error: unknown): CheckoutQuoteResult {
+  if (error instanceof ApiError) return { ok: false, code: error.code, message: error.message, details: error.details }
+  return { ok: false, code: 'UNKNOWN_ERROR', message: 'No pudimos calcular el total. Revisa tu conexión.' }
+}
+
+/** Código de promoción a mandar ahora: el guardado, solo si se compra en la localidad del enlace. */
+function currentPromoCode(): string | undefined {
+  const { code, cityCode } = usePromoStore.getState()
+  return promoCodeToSend({ code, cityCode }, useCatalogStore.getState().cityCode)
+}
+
+/** Un código rechazado se olvida, salvo por "otra localidad": ese puede servir si la persona cambia de localidad. */
+function forgetPromoUnlessWrongCity(errorCode: string): void {
+  if (errorCode !== 'PROMO_WRONG_CITY') usePromoStore.getState().clear()
 }
 
 // ── Revisión del carrito antes del formulario ─────────────────────────────────
@@ -146,7 +180,9 @@ export type CheckoutResult =
  */
 export async function submitCheckout(params: BuildCheckoutInputParams): Promise<CheckoutResult> {
   try {
-    const { guestAccessToken, ...order } = await createCheckoutOrder(buildCheckoutInput(params))
+    const { guestAccessToken, ...order } = await createCheckoutOrder(
+      buildCheckoutInput({ ...params, promoCode: currentPromoCode() }),
+    )
     const isGuest = guestAccessToken !== undefined
     if (guestAccessToken) {
       useGuestOrdersStore.getState().add({
@@ -166,6 +202,8 @@ export async function submitCheckout(params: BuildCheckoutInputParams): Promise<
     }
     // Vaciar el carrito porque el pedido se envió no es "quitar productos": no se cuenta como abandono.
     withoutCartEvents(() => useCartStore.getState().clearCart())
+    // La promoción es de un solo uso por persona: ya se usó (o ya no aplicaba), se olvida el código.
+    usePromoStore.getState().clear()
     useOrderStore.getState().setLastCreatedOrder(order)
     if (params.redemption) {
       // Los puntos ya se descontaron en el servidor junto con el pedido: se actualiza el saldo y las recompensas.
@@ -188,6 +226,11 @@ export async function submitCheckout(params: BuildCheckoutInputParams): Promise<
         return { ok: false, code: err.code, message: redemptionErrorMessage(err.code, err.message) }
       }
       if (err.code === MIXED_CITY_CODE) return { ok: false, code: err.code, message: mixedCityMessage(activeCityName()) }
+      if (isPromoErrorCode(err.code)) {
+        // La promoción ya no aplica: no se crea nada. El mensaje explica por qué y al reintentar se pide sin ella.
+        forgetPromoUnlessWrongCity(err.code)
+        return { ok: false, code: err.code, message: `${err.message}. Confirma de nuevo tu pedido para continuar sin la promoción.` }
+      }
       return { ok: false, code: err.code, message: err.message }
     }
     return { ok: false, code: 'UNKNOWN_ERROR', message: 'Ocurrió un error inesperado.' }
