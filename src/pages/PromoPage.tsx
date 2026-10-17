@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { getFreeDeliveryPromo, type FreeDeliveryPromo } from '../api/catalog'
 import { Button } from '../components/ui/Button'
 import { Skeleton } from '../components/ui/Skeleton'
+import { countdownParts, msUntil, startLabel } from '../features/promo/countdown'
 import { promoHomeHref } from '../features/promo/promo'
 
 type PromoState = { kind: 'loading' } | { kind: 'error' } | { kind: 'ready'; promo: FreeDeliveryPromo }
@@ -59,7 +60,11 @@ export function PromoPage() {
           </div>
         )}
 
-        {state.kind === 'ready' && <PromoStatus promo={state.promo} onOrder={(code) => navigate(promoHomeHref({ cityCode: state.promo.cityCode, code }))} />}
+        {state.kind === 'ready' && state.promo.upcoming && <PromoCountdown promo={state.promo} onStart={load} />}
+
+        {state.kind === 'ready' && !state.promo.upcoming && (
+          <PromoStatus promo={state.promo} onOrder={(code) => navigate(promoHomeHref({ cityCode: state.promo.cityCode, code }))} />
+        )}
 
         <p className="text-caption text-text-secondary">
           Válido para tu primer pedido en Tráelo, en negocios de San Antonio de los Baños, hasta agotar las
@@ -120,5 +125,56 @@ function PromoStatus({ promo, onOrder }: { promo: FreeDeliveryPromo; onOrder: (c
         Pide ahora
       </Button>
     </>
+  )
+}
+
+/** Pausa antes de volver a pedir el estado al llegar a 0: da margen a que el servidor ya marque la promo como activa. */
+const REFETCH_AFTER_ZERO_MS = 1500
+
+/**
+ * Cuenta regresiva hasta que arranca la promoción. Cuenta contra la hora del SERVIDOR (no la del teléfono) y,
+ * al llegar a 0, vuelve a pedir el estado: la pantalla pasa sola al contador y al botón "Pide ahora".
+ */
+function PromoCountdown({ promo, onStart }: { promo: FreeDeliveryPromo; onStart: () => void }) {
+  // Diferencia entre el reloj del servidor y el del teléfono, medida al recibir el estado.
+  const offsetMs = useMemo(() => Date.parse(promo.serverTime) - Date.now(), [promo.serverTime])
+  const [nowMs, setNowMs] = useState(() => Date.now())
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setNowMs(Date.now()), 1000)
+    return () => window.clearInterval(timer)
+  }, [])
+
+  const parts = countdownParts(msUntil(promo.startsAt, nowMs, offsetMs))
+
+  useEffect(() => {
+    if (!parts.done) return
+    const timer = window.setTimeout(onStart, REFETCH_AFTER_ZERO_MS)
+    return () => window.clearTimeout(timer)
+  }, [parts.done, onStart, promo.serverTime])
+
+  const label = startLabel(new Date(promo.startsAt), new Date(promo.serverTime))
+  const boxes: { value: number; unit: string }[] = [
+    ...(parts.days > 0 ? [{ value: parts.days, unit: parts.days === 1 ? 'día' : 'días' }] : []),
+    { value: parts.hours, unit: 'horas' },
+    { value: parts.minutes, unit: 'min' },
+    { value: parts.seconds, unit: 'seg' },
+  ]
+
+  return (
+    <section aria-label="Cuenta regresiva de la promoción" className="rounded-r-lg bg-surface border border-border p-4 space-y-3 text-center">
+      <p className="text-h3 text-text-primary">{parts.done ? '¡Ya empieza!' : `La promoción empieza ${label}`}</p>
+      <div role="timer" aria-live="off" className="flex justify-center gap-2">
+        {boxes.map((box) => (
+          <div key={box.unit} className="min-w-[64px] rounded-r-md bg-primary-soft px-2 py-2">
+            <p className="text-display font-extrabold text-primary-text tabular-nums leading-none">{String(box.value).padStart(2, '0')}</p>
+            <p className="mt-1 text-caption text-text-secondary">{box.unit}</p>
+          </div>
+        ))}
+      </div>
+      <p className="text-caption text-text-secondary">
+        {parts.done ? 'Un momento, estamos abriendo la promoción…' : 'Vuelve a esta pantalla cuando llegue la hora: el botón aparecerá solo.'}
+      </p>
+    </section>
   )
 }

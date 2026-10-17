@@ -68,6 +68,11 @@ export function getFeaturedProducts() {
  */
 export type FreeDeliveryPromo = {
   active: boolean;
+  /** Encendida pero todavía no es la hora de arranque: se muestra la cuenta regresiva. */
+  upcoming: boolean;
+  /** Cuándo arranca (ISO) y la hora del servidor (ISO): la cuenta regresiva no se fía del reloj del teléfono. */
+  startsAt: string;
+  serverTime: string;
   exhausted: boolean;
   /** Solo viene con la promoción activa. */
   code: string | null;
