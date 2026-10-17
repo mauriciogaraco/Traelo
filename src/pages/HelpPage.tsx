@@ -2,7 +2,8 @@ import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { MandadoBanner } from '../components/home/MandadoBanner'
 import { Icon } from '../components/ui/Icon'
-import { SUPPORT_PHONE_LABEL, SUPPORT_WHATSAPP, SUPPORT_WHATSAPP_URL } from '../lib/config'
+import { useActiveCity } from '../hooks/useActiveCity'
+import { supportContactFor } from '../lib/config'
 import { usePointsStore } from '../store/pointsStore'
 
 function BackButton() {
@@ -145,6 +146,9 @@ function FaqAccordion({ faq }: { faq: Faq }) {
 /** "Ayuda" — `HelpScreen` de mobile: contacto (WhatsApp/llamar), cómo funcionan los puntos y preguntas frecuentes por tema. */
 export function HelpPage() {
   const navigate = useNavigate()
+  // El contacto depende de la localidad desde la que se compra (San Antonio tiene su propio número).
+  const { cityCode } = useActiveCity()
+  const support = supportContactFor(cityCode)
   const divisor = usePointsStore((state) => state.divisor)
   const bonus = usePointsStore((state) => state.firstOrderBonus)
   const groups = useMemo(() => buildGroups(divisor, bonus.points), [divisor, bonus.points])
@@ -162,7 +166,7 @@ export function HelpPage() {
           <p className="text-body opacity-95">Escríbenos o llámanos, estamos para ayudarte con tu pedido.</p>
           <div className="flex gap-3 pt-3">
             <a
-              href={SUPPORT_WHATSAPP_URL}
+              href={support.whatsappUrl}
               target="_blank"
               rel="noreferrer"
               className="flex-1 min-h-12 inline-flex items-center justify-center gap-2 rounded-r-md bg-white px-4 font-semibold text-[#1F1A16]"
@@ -171,14 +175,14 @@ export function HelpPage() {
               WhatsApp
             </a>
             <a
-              href={`tel:+${SUPPORT_WHATSAPP}`}
+              href={`tel:+${support.whatsapp}`}
               className="flex-1 min-h-12 inline-flex items-center justify-center gap-2 rounded-r-md bg-white px-4 font-semibold text-[#1F1A16]"
             >
               <Icon name="phone" size={18} className="text-primary-text" />
               Llamar
             </a>
           </div>
-          <p className="text-caption opacity-90 pt-1">{SUPPORT_PHONE_LABEL}</p>
+          <p className="text-caption opacity-90 pt-1">{support.phoneLabel}</p>
         </div>
 
         <MandadoBanner />

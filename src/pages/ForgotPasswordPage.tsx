@@ -7,7 +7,8 @@ import { PhoneField } from '../components/ui/PhoneField'
 import { TextField } from '../components/ui/TextField'
 import { useToast } from '../context/ToastContext'
 import { authErrorMessage, validatePassword, validatePasswordConfirmation, validatePhone } from '../features/auth/validation'
-import { SUPPORT_WHATSAPP_URL } from '../lib/config'
+import { useActiveCity } from '../hooks/useActiveCity'
+import { supportContactFor } from '../lib/config'
 import { toCubanE164 } from '../lib/phone'
 
 /**
@@ -18,6 +19,7 @@ import { toCubanE164 } from '../lib/phone'
 export function ForgotPasswordPage() {
   const navigate = useNavigate()
   const { showToast } = useToast()
+  const support = supportContactFor(useActiveCity().cityCode)
   const [phone, setPhone] = useState('')
   const [step, setStep] = useState<'phone' | 'noChannel' | 'code'>('phone')
   const [token, setToken] = useState('')
@@ -83,7 +85,7 @@ export function ForgotPasswordPage() {
           ayudamos a recuperar tu cuenta.
         </div>
         <a
-          href={SUPPORT_WHATSAPP_URL}
+          href={support.whatsappUrl}
           target="_blank"
           rel="noreferrer"
           className="inline-flex w-full min-h-12 items-center justify-center rounded-r-md bg-gradient-primary px-4 font-semibold text-white"
