@@ -8,6 +8,7 @@ import { ProductCard } from '../components/catalog/ProductCard'
 import { SearchLink } from '../components/catalog/SearchBar'
 import { Rail, Section } from '../components/catalog/Section'
 import { AllBusinessesLink, ALL_BUSINESSES_HREF } from '../components/home/AllBusinessesLink'
+import { MandadoBanner } from '../components/home/MandadoBanner'
 import { RegisterPointsBanner } from '../components/home/RegisterPointsBanner'
 import { ShareSection } from '../components/home/ShareSection'
 
@@ -25,6 +26,8 @@ import {
   sortProductsByWeeklyUnits,
   topIds,
 } from '../features/catalog'
+import { useActiveCity } from '../hooks/useActiveCity'
+import { onlyProductsOfBusinesses } from '../features/city'
 import { useQuickAdd } from '../hooks/useQuickAdd'
 import { refreshFeaturedProducts } from '../services/featuredProductsService'
 import { refreshCatalogStats } from '../services/statsService'
@@ -49,7 +52,13 @@ export function HomePage() {
   const isOffline = useCatalogStore((state) => state.isOffline)
   const syncError = useCatalogStore((state) => state.syncError)
   const stats = useStatsStore((state) => state.stats)
-  const featuredProducts = useFeaturedProductsStore((state) => state.products)
+  const allFeaturedProducts = useFeaturedProductsStore((state) => state.products)
+  const { showSelector } = useActiveCity()
+  // Los destacados vienen de toda la plataforma: con 2+ localidades solo se ofrecen los de la activa.
+  const featuredProducts = useMemo(
+    () => (showSelector ? onlyProductsOfBusinesses(allFeaturedProducts, businesses) : allFeaturedProducts),
+    [showSelector, allFeaturedProducts, businesses],
+  )
   const quickAdd = useQuickAdd()
   const legacyRedirect = useLegacyHomeRedirect()
 
@@ -104,6 +113,8 @@ export function HomePage() {
           <SearchLink />
         </div>
       </section>
+
+      <MandadoBanner />
 
       {categories.length > 0 && (
         <Section title="Categorías">

@@ -12,6 +12,7 @@ import { AppShell } from "./components/layout/AppShell";
 import { HomePage } from "./pages/HomePage";
 import { RefreshModal } from "./components/ui/RefreshModal";
 import { useCatalogBootstrap } from "./hooks/useCatalogBootstrap";
+import { useCityBootstrap } from "./hooks/useCityBootstrap";
 import { useNotificationsBootstrap } from "./hooks/useNotificationsBootstrap";
 import { usePointsBootstrap } from "./hooks/usePointsBootstrap";
 import { useSessionBootstrap } from "./hooks/useSessionBootstrap";
@@ -23,6 +24,7 @@ const SearchPage = lazy(() => import("./pages/SearchPage").then((m) => ({ defaul
 const BusinessPage = lazy(() => import("./pages/BusinessPage").then((m) => ({ default: m.BusinessPage })));
 const CartPage = lazy(() => import("./pages/CartPage").then((m) => ({ default: m.CartPage })));
 const CheckoutPage = lazy(() => import("./pages/CheckoutPage").then((m) => ({ default: m.CheckoutPage })));
+const MandadoPage = lazy(() => import("./pages/MandadoPage").then((m) => ({ default: m.MandadoPage })));
 const OrderPage = lazy(() => import("./pages/OrderPage").then((m) => ({ default: m.OrderPage })));
 const OrdersPage = lazy(() => import("./pages/OrdersPage").then((m) => ({ default: m.OrdersPage })));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage").then((m) => ({ default: m.PrivacyPage })));
@@ -88,6 +90,12 @@ function PointsBootstrap() {
   return null;
 }
 
+/** Resuelve la ciudad activa (sin ningún selector visible todavía: ver `useCityBootstrap`). */
+function CityBootstrap() {
+  useCityBootstrap();
+  return null;
+}
+
 /** Alimenta el buzón local con los Web Push que recibe este navegador (ver `useNotificationsBootstrap`). */
 function NotificationsBootstrap() {
   useNotificationsBootstrap();
@@ -102,6 +110,7 @@ function Providers({ children }: { children: ReactNode }) {
       <SessionBootstrap />
       <PointsBootstrap />
       <NotificationsBootstrap />
+      <CityBootstrap />
       {children}
     </ToastProvider>
   );
@@ -145,6 +154,7 @@ export default function App() {
               <Route path="/producto/:id" element={<ProductRoute />} />
               <Route path="/carrito" element={<CartPage />} />
               <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
+              <Route path="/mandado" element={<Narrow><MandadoPage /></Narrow>} />
               <Route path="/cuenta" element={<AccountPage />} />
               <Route path="/direcciones" element={<AddressesPage />} />
               <Route path="/favoritos" element={<FavoritesPage />} />

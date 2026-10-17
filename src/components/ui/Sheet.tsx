@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 import { Icon } from './Icon'
 
 interface SheetProps {
@@ -39,7 +40,9 @@ export function Sheet({ open, onClose, title, children, footer }: SheetProps) {
 
   if (!open) return null
 
-  return (
+  // En un portal al <body>: si la hoja se abre desde el header (que tiene backdrop-blur), un
+  // `position: fixed` dentro de él se centraría respecto al header y no respecto a la pantalla.
+  return createPortal(
     <div className="fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6">
       <div className="absolute inset-0 bg-black/40 animate-fade-in" onClick={onClose} aria-hidden="true" />
       <div
@@ -67,6 +70,7 @@ export function Sheet({ open, onClose, title, children, footer }: SheetProps) {
         <div className="flex-1 overflow-y-auto px-5 pb-5">{children}</div>
         {footer && <div className="border-t border-border px-5 py-3 pb-[max(12px,env(safe-area-inset-bottom))]">{footer}</div>}
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }

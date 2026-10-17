@@ -13,6 +13,7 @@ import { useToast } from '../context/ToastContext'
 import { estimateCartLine, getCartItemCount, getCartSubtotalEstimate, groupCartByBusiness, lineIdOf, packSizeOf } from '../features/cart'
 import { visualForProduct } from '../features/catalog'
 import { validApplied } from '../features/rewards'
+import { CityNote } from '../components/city/CityNote'
 import { isRemovableIssue, precheckCart, removeUnavailableFromCart } from '../services/checkoutService'
 import { MAX_LINE_QUANTITY, useCartStore } from '../store/cartStore'
 import { useCatalogStore } from '../store/catalogStore'
@@ -67,6 +68,10 @@ export function CartPage() {
       navigate('/checkout')
       return
     }
+    if (result.code === 'MIXED_CITY_BUSINESSES') {
+      showToast(result.message ?? 'Tu carrito mezcla localidades.', 'error')
+      return
+    }
     if (result.message) {
       showToast(`Ya no tomamos pedidos hoy. ${result.message}`, 'error')
       return
@@ -102,6 +107,9 @@ export function CartPage() {
   return (
     <div className="px-4 lg:px-6 pt-3 lg:pt-6 pb-44 lg:pb-10">
       <h1 className="text-h1 text-text-primary mb-4">Tu carrito</h1>
+      <div className="mb-4">
+        <CityNote changeable />
+      </div>
 
       <div className="lg:grid lg:grid-cols-[1fr_340px] lg:gap-8 lg:items-start">
         <div className="space-y-4">

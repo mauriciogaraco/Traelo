@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import { FloatingStatusBars } from './FloatingStatusBars'
 import { FloatingTabBar } from './FloatingTabBar'
 import { TopHeader } from './TopHeader'
+import { CityChooser } from '../city/CityChooser'
 import { OfflineBanner } from '../ui/OfflineBanner'
 import { isFlowRoute } from './navigation'
 
@@ -25,6 +26,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <main className={`mx-auto w-full max-w-6xl ${flow ? 'pb-6' : 'pb-28 lg:pb-12'}`}>{children}</main>
       {!flow && <FloatingTabBar />}
       <FloatingStatusBars />
+      <CityChooser />
     </div>
   )
 }
