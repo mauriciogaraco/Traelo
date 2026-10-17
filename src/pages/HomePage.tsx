@@ -8,6 +8,7 @@ import { ProductCard } from '../components/catalog/ProductCard'
 import { SearchLink } from '../components/catalog/SearchBar'
 import { Rail, Section } from '../components/catalog/Section'
 import { AllBusinessesLink, ALL_BUSINESSES_HREF } from '../components/home/AllBusinessesLink'
+import { HeroLogoStrip } from '../components/home/HeroLogoStrip'
 import { MandadoBanner } from '../components/home/MandadoBanner'
 import { RegisterPointsBanner } from '../components/home/RegisterPointsBanner'
 import { ShareSection } from '../components/home/ShareSection'
@@ -54,7 +55,7 @@ export function HomePage() {
   const syncError = useCatalogStore((state) => state.syncError)
   const stats = useStatsStore((state) => state.stats)
   const allFeaturedProducts = useFeaturedProductsStore((state) => state.products)
-  const { showSelector } = useActiveCity()
+  const { showSelector, hasHeroPhotos } = useActiveCity()
   // Los destacados vienen de toda la plataforma: con 2+ localidades solo se ofrecen los de la activa.
   const featuredProducts = useMemo(
     () => (showSelector ? onlyProductsOfBusinesses(allFeaturedProducts, businesses) : allFeaturedProducts),
@@ -109,6 +110,7 @@ export function HomePage() {
       <section className="relative overflow-hidden rounded-[24px] lg:min-h-[280px] lg:flex lg:items-end">
         <HeroBusinessCarousel />
         <div className="relative p-4 lg:p-8 space-y-1 lg:max-w-xl">
+          {!hasHeroPhotos && <HeroLogoStrip />}
           <h1 className="text-h1 lg:text-display text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">¿Qué te traemos hoy?</h1>
           <p className="text-body text-white/95 pb-2 [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">
             Pide en tus negocios de siempre y te lo llevamos a la puerta.

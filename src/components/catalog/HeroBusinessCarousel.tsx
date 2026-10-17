@@ -27,9 +27,8 @@ function staticHero(): boolean {
  * "ahorro de datos" queda fija en la primera.
  */
 export function HeroBusinessCarousel() {
-  const { city, showSelector } = useActiveCity()
   // Las fotos son de negocios de Güira: con 2+ localidades solo se muestran en una que las tenga.
-  const showPhotos = !showSelector || Boolean(city?.heroPhotos)
+  const { hasHeroPhotos: showPhotos } = useActiveCity()
   const [index, setIndex] = useState(0)
   const [ready, setReady] = useState<ReadonlySet<number>>(() => new Set([0]))
   const indexRef = useRef(0)
