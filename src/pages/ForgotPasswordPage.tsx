@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { requestPasswordReset, resetPassword } from '../api/auth'
 import { AuthShell, FieldError, PasswordField } from '../components/auth/AuthShell'
 import { Button } from '../components/ui/Button'
@@ -12,21 +12,29 @@ import { supportContactFor } from '../lib/config'
 import { toCubanE164 } from '../lib/phone'
 
 /**
- * Recuperar contraseña. Hoy el backend NO tiene un canal (SMS/email) para entregar un código, y
- * no se simula uno: la respuesta trae channelAvailable=false y se remite al soporte por WhatsApp.
- * El segundo paso (código + contraseña nueva) queda listo para cuando exista el canal.
+ * Recuperar contraseña. Hoy el backend NO tiene un canal automático (SMS/email) para entregar un código, y
+ * no se simula uno: la respuesta trae channelAvailable=false y se remite al soporte por WhatsApp. El equipo
+ * genera un código corto desde el dashboard y se lo manda a la persona, que lo canjea en el paso "código +
+ * contraseña nueva" (con "Ya tengo un código" o con el enlace `/recuperar?codigo=1`).
  */
 export function ForgotPasswordPage() {
   const navigate = useNavigate()
   const { showToast } = useToast()
   const support = supportContactFor(useActiveCity().cityCode)
   const [phone, setPhone] = useState('')
-  const [step, setStep] = useState<'phone' | 'noChannel' | 'code'>('phone')
+  const [searchParams] = useSearchParams()
+  // Con el enlace que manda el equipo (`?codigo=1`) se abre directo en el paso del código.
+  const [step, setStep] = useState<'phone' | 'noChannel' | 'code'>(searchParams.has('codigo') ? 'code' : 'phone')
   const [token, setToken] = useState('')
   const [password, setPassword] = useState('')
   const [confirmation, setConfirmation] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  function goToCode() {
+    setError(null)
+    setStep('code')
+  }
 
   async function handleRequest(event: React.FormEvent) {
     event.preventDefault()
@@ -81,8 +89,8 @@ export function ForgotPasswordPage() {
     return (
       <AuthShell title="Recuperar contraseña">
         <div className="rounded-r-lg bg-surface-muted p-4 text-body text-text-primary" data-testid="forgot-no-channel">
-          Por ahora no podemos enviarte un código de recuperación automáticamente. Contáctanos por WhatsApp y te
-          ayudamos a recuperar tu cuenta.
+          Por ahora no podemos enviarte un código de recuperación automáticamente. Escríbenos por WhatsApp desde el
+          teléfono de tu cuenta y te enviaremos un código para elegir una contraseña nueva.
         </div>
         <a
           href={support.whatsappUrl}
@@ -92,7 +100,10 @@ export function ForgotPasswordPage() {
         >
           Escribir por WhatsApp
         </a>
-        <Button variant="outline" fullWidth onClick={() => navigate(-1)}>
+        <Button variant="outline" fullWidth onClick={() => goToCode()}>
+          Ya tengo un código
+        </Button>
+        <Button variant="ghost" fullWidth onClick={() => navigate(-1)}>
           Volver
         </Button>
       </AuthShell>
@@ -101,13 +112,14 @@ export function ForgotPasswordPage() {
 
   if (step === 'code') {
     return (
-      <AuthShell title="Nueva contraseña" subtitle="Escribe el código que te enviamos y elige tu contraseña nueva.">
+      <AuthShell title="Nueva contraseña" subtitle="Escribe el código que te dieron y elige tu contraseña nueva.">
         <form onSubmit={handleReset} className="space-y-4" noValidate>
           <TextField
             label="Código"
+            placeholder="ABCD-EFGH"
             value={token}
             onChange={(e) => setToken(e.target.value)}
-            autoCapitalize="none"
+            autoCapitalize="characters"
             autoCorrect="off"
             spellCheck={false}
           />
@@ -122,6 +134,14 @@ export function ForgotPasswordPage() {
           <Button type="submit" fullWidth loading={submitting}>
             Cambiar contraseña
           </Button>
+          <a
+            href={support.whatsappUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="block text-center text-body-sm font-semibold text-primary-text hover:underline"
+          >
+            ¿No tienes código? Escríbenos por WhatsApp
+          </a>
         </form>
       </AuthShell>
     )
@@ -134,6 +154,9 @@ export function ForgotPasswordPage() {
         <FieldError message={error} />
         <Button type="submit" fullWidth loading={submitting}>
           Continuar
+        </Button>
+        <Button type="button" variant="ghost" fullWidth onClick={() => goToCode()}>
+          Ya tengo un código
         </Button>
       </form>
     </AuthShell>
