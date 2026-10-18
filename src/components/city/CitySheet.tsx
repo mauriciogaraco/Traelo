@@ -1,4 +1,7 @@
+import { useToast } from '../../context/ToastContext'
+import { cityShareUrl } from '../../features/city'
 import { useActiveCity } from '../../hooks/useActiveCity'
+import { SITE_URL } from '../../lib/config'
 import { Icon } from '../ui/Icon'
 import { Sheet } from '../ui/Sheet'
 
@@ -8,6 +11,20 @@ import { Sheet } from '../ui/Sheet'
  */
 export function CitySheet({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { cities, cityCode, chooseCity } = useActiveCity()
+  const { showToast } = useToast()
+  const activeCity = cities.find((city) => city.code === cityCode)
+
+  async function copyCityLink() {
+    if (!activeCity) return
+    const url = cityShareUrl(SITE_URL, activeCity.code)
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('sin portapapeles')
+      await navigator.clipboard.writeText(url)
+      showToast(`Enlace de ${activeCity.name} copiado`, 'success')
+    } catch {
+      showToast('No se pudo copiar. Mantén pulsado el enlace para copiarlo.', 'error')
+    }
+  }
 
   return (
     <Sheet open={open} onClose={onClose} title="¿Desde dónde quieres pedir?">
@@ -47,6 +64,18 @@ export function CitySheet({ open, onClose }: { open: boolean; onClose: () => voi
       <p className="mt-3 text-caption text-text-tertiary">
         Si ya agregaste productos, cada localidad guarda su propio carrito: lo encuentras al volver a ella.
       </p>
+      {activeCity && (
+        <button
+          type="button"
+          onClick={copyCityLink}
+          className="mt-3 w-full rounded-lg border border-border px-4 py-3 text-left text-body-sm font-semibold text-primary-text hover:bg-surface-muted"
+        >
+          Copiar enlace de {activeCity.name}
+          <span className="block text-caption font-normal text-text-secondary">
+            Quien lo abra verá solo los negocios de esa localidad.
+          </span>
+        </button>
+      )}
     </Sheet>
   )
 }
