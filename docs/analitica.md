@@ -48,6 +48,16 @@ Un token vencido **no** da 401 aquí: se registra como anónimo. Límite: 120 en
 | `checkout_step_completed` | `CheckoutPage` (de «dónde» a «revisar») | `step` |
 | `favorite_added` / `favorite_removed` | `favoritesService` | negocio/producto |
 | `login_completed` / `signup_completed` | `authService` (envío inmediato) | — |
+| `promo_view` | `PromoPage` (una vez por estado cargado) | `cityCode` de la promo, `state`: `upcoming` / `active` / `exhausted` / `inactive` |
+| `promo_click` | `PromoPage`, botón «Pide ahora» | `cityCode` de la promo |
+| `promo_landing` | `usePromoBootstrap`, al llegar con `?promo=` (una vez por visita) | `cityCode` del enlace. **Nunca se manda el código** |
+
+#### Localidad en cada evento
+
+`analytics/index.ts → track` añade `properties.cityCode` (la localidad activa) a **todos** los eventos
+(`analytics/city.ts`); si el evento ya trae el suyo (los de la promo llevan el de San Antonio aunque se esté
+comprando en Güira), ese manda. El backend atribuye así las búsquedas y la promo a una ciudad; los negocios y
+productos se atribuyen por la ciudad de su negocio (dato del servidor).
 
 El carrito se registra **comparando estados del store** (no en cada componente): captura tarjeta, ficha,
 página del carrito, quitar y vaciar sin tocar cada sitio. Cambiar la cantidad es un `add`/`remove` por la
