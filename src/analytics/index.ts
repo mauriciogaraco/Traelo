@@ -1,6 +1,8 @@
 import { apiPost } from '../api/client'
 import { env } from '../config/env'
 import { useCartStore } from '../store/cartStore'
+import { useCatalogStore } from '../store/catalogStore'
+import { withCity } from './city'
 import { diffCartItems } from './cartDiff'
 import { isOptedOut, writeOptOut } from './consent'
 import { getSessionId, getVisitorId, randomUuid, resetIdentity } from './ids'
@@ -39,7 +41,7 @@ const tracker = createTracker({
  */
 export function track(type: EventType, data?: TrackData, options?: { flush?: boolean }): void {
   try {
-    tracker.track(type, data, options)
+    tracker.track(type, withCity(data, useCatalogStore.getState().cityCode), options)
   } catch {
     // Telemetría: un fallo aquí jamás debe verse.
   }

@@ -1,4 +1,4 @@
-import { isPromoErrorCode, parsePromoParam, promoCodeToSend, promoHomeHref } from '../promo'
+import { isFirstPromoLanding, isPromoErrorCode, parsePromoParam, promoCodeToSend, promoHomeHref, promoViewState } from '../promo'
 
 describe('parsePromoParam', () => {
   it('lee ?promo= y lo pasa a mayúsculas', () => {
@@ -37,3 +37,38 @@ describe('isPromoErrorCode', () => {
     expect(isPromoErrorCode('MIXED_CITY_BUSINESSES')).toBe(false)
   })
 })
+
+describe('promoViewState', () => {
+  it('distingue en qué estado vio la persona la pantalla', () => {
+    expect(promoViewState({ upcoming: true, active: false, exhausted: false })).toBe('upcoming')
+    expect(promoViewState({ upcoming: false, active: true, exhausted: false })).toBe('active')
+    expect(promoViewState({ upcoming: false, active: false, exhausted: true })).toBe('exhausted')
+    expect(promoViewState({ upcoming: false, active: false, exhausted: false })).toBe('inactive')
+  })
+})
+
+describe('isFirstPromoLanding', () => {
+  const memoryStorage = () => {
+    const map = new Map<string, string>()
+    return { getItem: (k: string) => map.get(k) ?? null, setItem: (k: string, v: string) => void map.set(k, v) }
+  }
+
+  it('cuenta la primera llegada con un código y no las siguientes de la misma visita', () => {
+    const storage = memoryStorage()
+    expect(isFirstPromoLanding('ABC-1', storage)).toBe(true)
+    expect(isFirstPromoLanding('ABC-1', storage)).toBe(false)
+    expect(isFirstPromoLanding('ABC-1', storage)).toBe(false)
+  })
+
+  it('un código distinto sí cuenta como llegada nueva', () => {
+    const storage = memoryStorage()
+    expect(isFirstPromoLanding('ABC-1', storage)).toBe(true)
+    expect(isFirstPromoLanding('XYZ-2', storage)).toBe(true)
+  })
+
+  it('si el almacenamiento falla, cuenta (nunca rompe la pantalla)', () => {
+    const broken = { getItem: () => { throw new Error('bloqueado') }, setItem: () => { throw new Error('bloqueado') } }
+    expect(isFirstPromoLanding('ABC-1', broken)).toBe(true)
+  })
+})
+

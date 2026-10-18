@@ -4,7 +4,8 @@ import { getFreeDeliveryPromo, type FreeDeliveryPromo } from '../api/catalog'
 import { Button } from '../components/ui/Button'
 import { Skeleton } from '../components/ui/Skeleton'
 import { countdownParts, msUntil, startLabel } from '../features/promo/countdown'
-import { promoHomeHref } from '../features/promo/promo'
+import { track } from '../analytics'
+import { promoHomeHref, promoViewState } from '../features/promo/promo'
 
 type PromoState = { kind: 'loading' } | { kind: 'error' } | { kind: 'ready'; promo: FreeDeliveryPromo }
 
@@ -29,6 +30,13 @@ export function PromoPage() {
   useEffect(() => {
     load()
   }, [load])
+
+  // Visita a la pantalla de la promo (una vez por estado cargado, no en cada tic de la cuenta regresiva).
+  // Lleva SU localidad (San Antonio) aunque la persona esté comprando en otra.
+  useEffect(() => {
+    if (state.kind !== 'ready') return
+    track('promo_view', { properties: { cityCode: state.promo.cityCode, state: promoViewState(state.promo) } })
+  }, [state])
 
   return (
     <div className="px-4 lg:px-6 pt-3 lg:pt-6 max-w-xl mx-auto animate-fade-in">
@@ -63,7 +71,11 @@ export function PromoPage() {
         {state.kind === 'ready' && state.promo.upcoming && <PromoCountdown promo={state.promo} onStart={load} />}
 
         {state.kind === 'ready' && !state.promo.upcoming && (
-          <PromoStatus promo={state.promo} onOrder={(code) => navigate(promoHomeHref({ cityCode: state.promo.cityCode, code }))} />
+          <PromoStatus promo={state.promo} onOrder={(code) => {
+              track('promo_click', { properties: { cityCode: state.promo.cityCode } })
+              navigate(promoHomeHref({ cityCode: state.promo.cityCode, code }))
+            }}
+          />
         )}
 
         <p className="text-caption text-text-secondary">

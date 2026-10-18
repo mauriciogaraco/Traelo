@@ -27,6 +27,10 @@ export type EventType =
   | 'favorite_removed'
   | 'signup_completed'
   | 'login_completed'
+  // Promoción "primera mensajería gratis": abrió la pantalla, pulsó "Pide ahora", llegó al Home con el código.
+  | 'promo_view'
+  | 'promo_click'
+  | 'promo_landing'
 
 export type EventProperties = Record<string, string | number | boolean | null | undefined>
 

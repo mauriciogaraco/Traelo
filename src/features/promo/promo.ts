@@ -32,3 +32,26 @@ export function isPromoErrorCode(code: string): boolean {
 export function promoHomeHref(promo: { cityCode: string; code: string }): string {
   return `/?ciudad=${encodeURIComponent(promo.cityCode)}&promo=${encodeURIComponent(promo.code)}`
 }
+
+/** En qué estado vio la persona la pantalla de la promo (para el evento `promo_view`). */
+export function promoViewState(promo: { upcoming: boolean; active: boolean; exhausted: boolean }): 'upcoming' | 'active' | 'exhausted' | 'inactive' {
+  if (promo.upcoming) return 'upcoming'
+  if (promo.active) return 'active'
+  return promo.exhausted ? 'exhausted' : 'inactive'
+}
+
+const LANDING_KEY = 'traelo.promo.landing'
+
+/**
+ * ¿Es la primera llegada con este código en esta visita (pestaña)? Evita contar de nuevo el mismo enlace al
+ * navegar o recargar. `storage` es sessionStorage (se inyecta para poder probarlo).
+ */
+export function isFirstPromoLanding(code: string, storage: Pick<Storage, 'getItem' | 'setItem'>): boolean {
+  try {
+    if (storage.getItem(LANDING_KEY) === code) return false
+    storage.setItem(LANDING_KEY, code)
+  } catch {
+    // Sin sessionStorage: se cuenta una vez por carga de la app (peor caso: una vez más).
+  }
+  return true
+}
