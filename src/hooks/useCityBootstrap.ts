@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { getCities, resolveActiveCityCode, resolveCityFromQuery } from '../features/city'
+import { cityFromQueryToApply, getCities, resolveActiveCityCode } from '../features/city'
 import { useCitiesStore } from '../store/citiesStore'
 import { switchCatalogCity } from '../services/catalogSync'
 import { useCartStore } from '../store/cartStore'
@@ -22,13 +22,18 @@ export function useCityBootstrap(): void {
   const selected = useCityStore((state) => state.selectedCityCode)
   const hasHydrated = useCityStore((state) => state.hasHydrated)
   // La lista llega del servidor: al cambiar, se vuelve a resolver la ciudad activa.
-  useCitiesStore((state) => state.cities)
+  const knownCities = useCitiesStore((state) => state.cities)
+  const appliedFromQuery = useRef<string | null>(null)
 
+  // `knownCities` entra en las dependencias a propósito: un cliente nuevo abre `?ciudad=` ANTES de tener la lista
+  // del servidor, y el código del enlace solo se reconoce cuando esta llega.
   useEffect(() => {
-    const fromQuery = resolveCityFromQuery(params, getCities())
+    const next = cityFromQueryToApply(params, getCities(), appliedFromQuery.current)
+    if (!next) return
+    appliedFromQuery.current = next.key
     // Un enlace que ya dice la localidad cuenta como elección de esta visita (no se interrumpe con la pregunta).
-    if (fromQuery) useCityStore.getState().confirmCity(fromQuery)
-  }, [params])
+    useCityStore.getState().confirmCity(next.code)
+  }, [params, knownCities])
 
   const activeCode = hasHydrated ? resolveActiveCityCode(selected, getCities()) : null
 
