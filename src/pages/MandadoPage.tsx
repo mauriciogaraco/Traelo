@@ -18,6 +18,8 @@ import { useAddressStore } from '../store/addressStore'
 import { useGuestProfileStore } from '../store/guestStore'
 import { useSessionStore } from '../store/sessionStore'
 import type { PickupClarity } from '../types/backend/mandado'
+import { effectiveSavedAddressId, SWITCH_ADDRESS_MODE_CLASS } from '../features/address/selection'
+import { describeDeliveryMissing, describePickupMissing } from '../features/mandado/missing'
 import type { MandadoQuote } from '../types/backend/mandado'
 
 const QUOTE_DEBOUNCE_MS = 400
@@ -101,12 +103,15 @@ export function MandadoPage() {
   const effectiveRecipientPhone = isForMe ? customerPhone : recipientPhone
 
   const showFreeForm = useNewAddress || savedAddresses.length === 0
-  const selectedSaved = showFreeForm ? null : (savedAddresses.find((a) => a.id === selectedAddressId) ?? null)
+  // El id elegido puede haber dejado de existir (se borró o cambió la libreta): se cae a la predeterminada.
+  const effectiveAddressId = effectiveSavedAddressId(savedAddresses, selectedAddressId)
+  const selectedSaved = showFreeForm ? null : (savedAddresses.find((a) => a.id === effectiveAddressId) ?? null)
   const reviewAddress = showFreeForm ? address.trim() : (selectedSaved?.address ?? '')
   const reviewReference = showFreeForm ? addressReference.trim() : (selectedSaved?.reference ?? '')
 
   const showPickupFreeForm = useNewPickupPlace || savedAddresses.length === 0
-  const selectedPickupSaved = showPickupFreeForm ? null : (savedAddresses.find((a) => a.id === pickupAddressId) ?? null)
+  const effectivePickupId = effectiveSavedAddressId(savedAddresses, pickupAddressId)
+  const selectedPickupSaved = showPickupFreeForm ? null : (savedAddresses.find((a) => a.id === effectivePickupId) ?? null)
   const reviewPickupPlace = showPickupFreeForm
     ? pickupPlace.trim()
     : selectedPickupSaved
@@ -119,6 +124,28 @@ export function MandadoPage() {
   const addressValid = showFreeForm ? reviewAddress.length >= 3 : selectedSaved !== null
   const collectValid = !collectEnabled || (Number(collectAmount) > 0 && (collectAt === 'DELIVERY' || collectPlace.trim().length >= 3))
   const deliveryValid = requesterValid && recipientValid && addressValid && collectValid
+
+  // Por qué está apagado "Continuar" (mismas reglas que arriba): nunca queda un botón apagado sin explicación.
+  const pickupMissingText = describePickupMissing({
+    description: pickupDescription,
+    usingSavedPlace: !showPickupFreeForm,
+    savedPlaceChosen: selectedPickupSaved !== null,
+    place: pickupPlace,
+  })
+  const deliveryMissingText = describeDeliveryMissing({
+    requesterName: customerName,
+    requesterPhone: customerPhone,
+    isForMe,
+    recipientName,
+    recipientPhone,
+    usingSavedAddress: !showFreeForm,
+    savedAddressChosen: selectedSaved !== null,
+    address,
+    collectEnabled,
+    collectAmount,
+    collectAt,
+    collectPlace,
+  })
 
   // Cotización autoritativa del servidor al llegar a "Revisar" (con debounce). No bloquea: si
   // falla se confirma igual — el backend recalcula el precio real al crear el mandado.
@@ -217,7 +244,7 @@ export function MandadoPage() {
                 <>
                   <div role="radiogroup" aria-label="Direcciones guardadas para la recogida" className="space-y-2">
                     {savedAddresses.map((saved) => {
-                      const selected = pickupAddressId === saved.id
+                      const selected = effectivePickupId === saved.id
                       return (
                         <button
                           key={saved.id}
@@ -235,8 +262,8 @@ export function MandadoPage() {
                       )
                     })}
                   </div>
-                  <button type="button" onClick={() => setUseNewPickupPlace(true)} className="text-caption font-semibold text-primary-text hover:underline">
-                    Es otro lugar
+                  <button type="button" onClick={() => setUseNewPickupPlace(true)} className={SWITCH_ADDRESS_MODE_CLASS}>
+                    Es otro lugar: escribir la dirección
                   </button>
                 </>
               ) : (
@@ -248,7 +275,7 @@ export function MandadoPage() {
                     onChange={(e) => setPickupPlace(e.target.value)}
                   />
                   {savedAddresses.length > 0 && (
-                    <button type="button" onClick={() => setUseNewPickupPlace(false)} className="text-caption font-semibold text-primary-text hover:underline">
+                    <button type="button" onClick={() => setUseNewPickupPlace(false)} className={SWITCH_ADDRESS_MODE_CLASS}>
                       Elegir una dirección guardada
                     </button>
                   )}
@@ -278,6 +305,7 @@ export function MandadoPage() {
               </div>
             </section>
 
+            {pickupMissingText && <p className="text-caption text-text-secondary">{pickupMissingText}</p>}
             <Button fullWidth disabled={!pickupValid} onClick={() => pickupValid && setStep('delivery')}>
               Continuar
             </Button>
@@ -321,7 +349,7 @@ export function MandadoPage() {
                 <>
                   <div role="radiogroup" aria-label="Direcciones guardadas" className="space-y-2">
                     {savedAddresses.map((saved) => {
-                      const selected = selectedAddressId === saved.id
+                      const selected = effectiveAddressId === saved.id
                       return (
                         <button
                           key={saved.id}
@@ -339,8 +367,8 @@ export function MandadoPage() {
                       )
                     })}
                   </div>
-                  <button type="button" onClick={() => setUseNewAddress(true)} className="text-caption font-semibold text-primary-text hover:underline">
-                    Usar otra dirección
+                  <button type="button" onClick={() => setUseNewAddress(true)} className={SWITCH_ADDRESS_MODE_CLASS}>
+                    Usar otra dirección: escribirla
                   </button>
                 </>
               ) : (
@@ -348,7 +376,7 @@ export function MandadoPage() {
                   <TextField label="Dirección (calle, número, entre calles...)" autoComplete="street-address" value={address} onChange={(e) => setAddress(e.target.value)} />
                   <TextField label="Referencia (opcional)" value={addressReference} onChange={(e) => setAddressReference(e.target.value)} />
                   {savedAddresses.length > 0 && (
-                    <button type="button" onClick={() => setUseNewAddress(false)} className="text-caption font-semibold text-primary-text hover:underline">
+                    <button type="button" onClick={() => setUseNewAddress(false)} className={SWITCH_ADDRESS_MODE_CLASS}>
                       Usar una dirección guardada
                     </button>
                   )}
@@ -408,6 +436,7 @@ export function MandadoPage() {
               )}
             </section>
 
+            {deliveryMissingText && <p className="text-caption text-text-secondary">{deliveryMissingText}</p>}
             <Button fullWidth disabled={!deliveryValid} onClick={() => deliveryValid && setStep('review')}>
               Continuar
             </Button>

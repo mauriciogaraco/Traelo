@@ -26,6 +26,7 @@ import { useCheckoutDraftStore } from '../store/checkoutDraftStore'
 import { useGuestProfileStore } from '../store/guestStore'
 import { useRewardsStore } from '../store/rewardsStore'
 import type { OrderQuote, RedemptionRequest } from '../types/backend/rewards'
+import { effectiveSavedAddressId, SWITCH_ADDRESS_MODE_CLASS } from '../features/address/selection'
 
 /** Cuánto esperar tras el último cambio del carrito antes de pedir la cotización. */
 const QUOTE_DEBOUNCE_MS = 400
@@ -143,7 +144,10 @@ export function CheckoutPage() {
   }
 
   const showFreeForm = useNewAddress || savedAddresses.length === 0
-  const selectedSaved = showFreeForm ? null : (savedAddresses.find((a) => a.id === selectedAddressId) ?? null)
+  // El id elegido puede venir de un borrador viejo o haber dejado de existir: se cae a la predeterminada, en vez de
+  // dejar "Continuar" apagado sin explicación.
+  const effectiveAddressId = effectiveSavedAddressId(savedAddresses, selectedAddressId)
+  const selectedSaved = showFreeForm ? null : (savedAddresses.find((a) => a.id === effectiveAddressId) ?? null)
   const missing = getMissingDeliveryDetails({
     isGuest: true,
     name: form.name,
@@ -223,7 +227,7 @@ export function CheckoutPage() {
                 <>
                   <div role="radiogroup" aria-label="Direcciones guardadas" className="space-y-2">
                     {savedAddresses.map((saved) => {
-                      const selected = selectedAddressId === saved.id
+                      const selected = effectiveAddressId === saved.id
                       return (
                         <button
                           key={saved.id}
@@ -242,8 +246,8 @@ export function CheckoutPage() {
                       )
                     })}
                   </div>
-                  <button type="button" onClick={() => setUseNewAddress(true)} className="text-caption font-semibold text-primary-text hover:underline">
-                    Usar otra dirección
+                  <button type="button" onClick={() => setUseNewAddress(true)} className={SWITCH_ADDRESS_MODE_CLASS}>
+                    Usar otra dirección: escribirla
                   </button>
                 </>
               ) : (
@@ -260,7 +264,7 @@ export function CheckoutPage() {
                     onChange={(e) => patchForm({ reference: e.target.value })}
                   />
                   {savedAddresses.length > 0 && (
-                    <button type="button" onClick={() => setUseNewAddress(false)} className="text-caption font-semibold text-primary-text hover:underline">
+                    <button type="button" onClick={() => setUseNewAddress(false)} className={SWITCH_ADDRESS_MODE_CLASS}>
                       Usar una dirección guardada
                     </button>
                   )}
