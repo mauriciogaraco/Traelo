@@ -39,6 +39,7 @@ const LoginPage = lazy(() => import("./pages/LoginPage").then((m) => ({ default:
 const RegisterPage = lazy(() => import("./pages/RegisterPage").then((m) => ({ default: m.RegisterPage })));
 const ForgotPasswordPage = lazy(() => import("./pages/ForgotPasswordPage").then((m) => ({ default: m.ForgotPasswordPage })));
 const DeleteAccountPage = lazy(() => import("./pages/DeleteAccountPage").then((m) => ({ default: m.DeleteAccountPage })));
+const ReviewLinkPage = lazy(() => import("./pages/ReviewLinkPage").then((m) => ({ default: m.ReviewLinkPage })));
 const ReviewsPage = lazy(() => import("./pages/ReviewsPage").then((m) => ({ default: m.ReviewsPage })));
 const PointsPage = lazy(() => import("./pages/PointsPage").then((m) => ({ default: m.PointsPage })));
 const ReferralsPage = lazy(() => import("./pages/ReferralsPage").then((m) => ({ default: m.ReferralsPage })));
@@ -170,6 +171,7 @@ export default function App() {
               <Route path="/direcciones" element={<AddressesPage />} />
               <Route path="/favoritos" element={<FavoritesPage />} />
               <Route path="/valoraciones" element={<Narrow><ReviewsPage /></Narrow>} />
+              <Route path="/valorar/:id" element={<Narrow><ReviewLinkPage /></Narrow>} />
               <Route path="/puntos" element={<Narrow><PointsPage /></Narrow>} />
               <Route path="/referidos" element={<Narrow><ReferralsPage /></Narrow>} />
               <Route path="/r/:code" element={<ReferralLandingPage />} />
