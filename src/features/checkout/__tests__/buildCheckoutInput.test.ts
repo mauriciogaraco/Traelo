@@ -113,3 +113,32 @@ describe('buildCheckoutInput', () => {
     });
   });
 });
+
+describe('buildCheckoutInput — localidad de entrega', () => {
+  it('manda deliveryCityId cuando se entrega en otra localidad (el servidor decide la mensajería)', () => {
+    const input = buildCheckoutInput({ items: [item({})], clientRequestId: 'req-12345678', address: 'Calle 1', deliveryCityId: 'cmsa01' });
+    expect(input.deliveryCityId).toBe('cmsa01');
+    expect(JSON.stringify(input)).not.toMatch(/deliveryFee|fee/i); // nunca un precio
+  });
+
+  it('sin localidad de entrega no manda nada (todo como siempre)', () => {
+    const input = buildCheckoutInput({ items: [item({})], clientRequestId: 'req-12345678', address: 'Calle 1' });
+    expect('deliveryCityId' in JSON.parse(JSON.stringify(input))).toBe(false);
+  });
+});
+
+describe('buildCheckoutInput — otra ubicación (mensajería por km)', () => {
+  const gps = { latitude: 22.84, longitude: -82.5, accuracy: 12, source: 'DEVICE_LOCATION' as const };
+
+  it('manda deliveryElsewhere junto con la ubicación del cliente (el servidor mide los km)', () => {
+    const input = buildCheckoutInput({ items: [item({})], clientRequestId: 'req-12345678', address: 'Finca', location: gps, deliveryElsewhere: true });
+    expect(input.deliveryElsewhere).toBe(true);
+    expect(input.location).toEqual(gps);
+    expect(JSON.stringify(input)).not.toMatch(/deliveryFee|"fee"|km/i); // nunca un precio ni una distancia
+  });
+
+  it('sin la opción no manda nada de eso', () => {
+    const input = buildCheckoutInput({ items: [item({})], clientRequestId: 'req-12345678', address: 'Calle 1' });
+    expect('deliveryElsewhere' in JSON.parse(JSON.stringify(input))).toBe(false);
+  });
+});

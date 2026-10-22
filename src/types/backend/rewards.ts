@@ -42,6 +42,10 @@ export type OrderQuote = {
   /** Productos que paga en dinero: productsTotal − pointsDiscount. */
   productsToPay: number;
   deliveryFee: number;
+  /** true = la mensajería es la tarifa FIJA entre localidades (se entrega en otra localidad que la de los negocios). */
+  crossCityDelivery?: boolean;
+  /** Entrega en "otra ubicación": km medidos desde el centro del pueblo y CUP por km (null/ausente si no aplica). */
+  elsewhereDelivery?: { distanceKm: number; ratePerKm: number } | null;
   /** Mensajería que regala Tráelo con una promoción (0 o ausente sin promo). `deliveryFee` es la tarifa real. */
   deliveryFeeDiscount?: number;
   /** Promoción aplicada a esta cotización (null/ausente sin código). */

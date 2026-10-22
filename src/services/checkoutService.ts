@@ -18,6 +18,7 @@ import { useCartStore, type CartItem } from '../store/cartStore'
 import { useCatalogStore } from '../store/catalogStore'
 import { useGuestOrdersStore, useGuestProfileStore, useOrderStore } from '../store/guestStore'
 import { usePromoStore } from '../store/promoStore'
+import type { DeliveryLocation } from '../types/backend/location'
 import type { CartChangeDetail, CartChangedErrorDetails, Order } from '../types/backend/order'
 import type { OrderQuote, RedemptionRequest } from '../types/backend/rewards'
 import { notifyOrderToTelegram } from './orderNotifyService'
@@ -46,17 +47,31 @@ export type CheckoutQuoteResult =
  * total) — la usa cualquier checkout, con o sin canje, para mostrar el total autoritativo antes
  * de confirmar. No crea ni descuenta nada.
  */
-export async function requestCheckoutQuote(items: CartItem[], redemption?: RedemptionRequest): Promise<CheckoutQuoteResult> {
+/** Cómo se entrega respecto a la localidad de los negocios: otra localidad (tarifa fija) u "otra ubicación" (por km). */
+export type QuoteDelivery = { cityId?: string; elsewhere?: DeliveryLocation }
+
+function deliveryParams(delivery?: QuoteDelivery) {
+  return {
+    ...(delivery?.cityId ? { deliveryCityId: delivery.cityId } : {}),
+    ...(delivery?.elsewhere ? { deliveryElsewhere: true as const, location: delivery.elsewhere } : {}),
+  }
+}
+
+export async function requestCheckoutQuote(
+  items: CartItem[],
+  redemption?: RedemptionRequest,
+  delivery?: QuoteDelivery,
+): Promise<CheckoutQuoteResult> {
   const promoCode = currentPromoCode()
   try {
-    return { ok: true, quote: await quoteCheckout({ businesses: buildBusinessesInput(items), redemption, promoCode }) }
+    return { ok: true, quote: await quoteCheckout({ businesses: buildBusinessesInput(items), redemption, promoCode, ...deliveryParams(delivery) }) }
   } catch (error) {
     if (error instanceof ApiError && promoCode && isPromoErrorCode(error.code)) {
       // El servidor dice que la promoción no aplica (agotada, ya pidió antes, otra localidad…): se cotiza
       // SIN ella y se explica, en vez de dejar al cliente sin total. Solo se olvida el código si ya no sirve.
       forgetPromoUnlessWrongCity(error.code)
       try {
-        const quote = await quoteCheckout({ businesses: buildBusinessesInput(items), redemption })
+        const quote = await quoteCheckout({ businesses: buildBusinessesInput(items), redemption, ...deliveryParams(delivery) })
         return { ok: true, quote, promoNotice: error.message }
       } catch (retryError) {
         return failedQuote(retryError)

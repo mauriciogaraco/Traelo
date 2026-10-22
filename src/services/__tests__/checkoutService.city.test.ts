@@ -99,3 +99,63 @@ describe('crear el pedido', () => {
     expect(useCartStore.getState().items).toHaveLength(1)
   })
 })
+
+describe('entrega entre localidades (mensajería fija del servidor)', () => {
+  it('la cotización lleva la localidad de entrega y devuelve lo que cobra el servidor', async () => {
+    cities = TWO
+    vi.mocked(quoteCheckout).mockResolvedValue({ deliveryFee: 1500, crossCityDelivery: true } as never)
+    const { requestCheckoutQuote } = await import('../checkoutService')
+    const result = await requestCheckoutQuote([item('b-guira')] as never, undefined, { cityId: 'cmsa01' })
+    expect(quoteCheckout).toHaveBeenCalledWith(expect.objectContaining({ deliveryCityId: 'cmsa01' }))
+    expect(result.ok && result.quote.deliveryFee).toBe(1500)
+  })
+
+  it('sin tarifa para ese sentido, la cotización falla con DELIVERY_ROUTE_UNAVAILABLE y mensaje claro', async () => {
+    cities = TWO
+    vi.mocked(quoteCheckout).mockRejectedValue(new ApiError('DELIVERY_ROUTE_UNAVAILABLE', 'Por ahora no hacemos entregas desde esa localidad', undefined, 400))
+    const { requestCheckoutQuote } = await import('../checkoutService')
+    const result = await requestCheckoutQuote([item('b-guira')] as never, undefined, { cityId: 'cmsa01' })
+    expect(result.ok).toBe(false)
+    if (!result.ok) {
+      expect(result.code).toBe('DELIVERY_ROUTE_UNAVAILABLE')
+      expect(result.message).toContain('entregas')
+    }
+  })
+
+  it('crear el pedido manda deliveryCityId', async () => {
+    cities = TWO
+    vi.mocked(createCheckoutOrder).mockResolvedValue({ id: 'o1', orderNumber: 7, createdAt: '', customerName: 'Ana', customerPhone: '+5355551234', customerAddress: 'Calle 1', addressReference: null, guestAccessToken: 't' } as never)
+    await submitCheckout({ items: [item('b-guira')], clientRequestId: 'req-12345678', address: 'Calle 1', customerName: 'Ana', customerPhone: '+5355551234', deliveryCityId: 'cmsa01' } as never)
+    expect(createCheckoutOrder).toHaveBeenCalledWith(expect.objectContaining({ deliveryCityId: 'cmsa01' }))
+  })
+})
+
+describe('otra ubicación (mensajería por km)', () => {
+  const gps = { latitude: 22.84, longitude: -82.5, accuracy: 10, source: 'DEVICE_LOCATION' as const }
+
+  it('la cotización manda la ubicación y deliveryElsewhere, y devuelve los km que midió el servidor', async () => {
+    cities = TWO
+    vi.mocked(quoteCheckout).mockResolvedValue({ deliveryFee: 620, elsewhereDelivery: { distanceKm: 4.9, ratePerKm: 125 } } as never)
+    const { requestCheckoutQuote } = await import('../checkoutService')
+    const result = await requestCheckoutQuote([item('b-guira')] as never, undefined, { elsewhere: gps })
+    expect(quoteCheckout).toHaveBeenCalledWith(expect.objectContaining({ deliveryElsewhere: true, location: gps }))
+    expect(quoteCheckout).toHaveBeenCalledWith(expect.not.objectContaining({ deliveryCityId: expect.anything() }))
+    expect(result.ok && result.quote.elsewhereDelivery).toEqual({ distanceKm: 4.9, ratePerKm: 125 })
+  })
+
+  it('si el pueblo no tiene coordenadas, el error es claro (CITY_COORDINATES_MISSING)', async () => {
+    cities = TWO
+    vi.mocked(quoteCheckout).mockRejectedValue(new ApiError('CITY_COORDINATES_MISSING', 'Esa localidad todavía no admite entregas en otra ubicación', undefined, 400))
+    const { requestCheckoutQuote } = await import('../checkoutService')
+    const result = await requestCheckoutQuote([item('b-guira')] as never, undefined, { elsewhere: gps })
+    expect(result.ok).toBe(false)
+    if (!result.ok) expect(result.code).toBe('CITY_COORDINATES_MISSING')
+  })
+
+  it('crear el pedido manda deliveryElsewhere y la ubicación', async () => {
+    cities = TWO
+    vi.mocked(createCheckoutOrder).mockResolvedValue({ id: 'o2', orderNumber: 8, createdAt: '', customerName: 'Ana', customerPhone: '+5355551234', customerAddress: 'Finca', addressReference: null, guestAccessToken: 't' } as never)
+    await submitCheckout({ items: [item('b-guira')], clientRequestId: 'req-12345678', address: 'Finca', customerName: 'Ana', customerPhone: '+5355551234', location: gps, deliveryElsewhere: true } as never)
+    expect(createCheckoutOrder).toHaveBeenCalledWith(expect.objectContaining({ deliveryElsewhere: true, location: gps }))
+  })
+})

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { DeliveryCityPicker, type DeliveryPreview } from '../components/city/DeliveryCityPicker'
 import { formatCup } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
 import { ChipRow } from '../components/ui/ChipRow'
@@ -7,7 +8,17 @@ import { Icon } from '../components/ui/Icon'
 import { PhoneField } from '../components/ui/PhoneField'
 import { TextField } from '../components/ui/TextField'
 import { useToast } from '../context/ToastContext'
+import { useActiveCity } from '../hooks/useActiveCity'
 import { useDeviceLocation } from '../hooks/useDeviceLocation'
+import {
+  CITY_COORDINATES_MISSING_CODE,
+  DELIVERY_ROUTE_UNAVAILABLE_CODE,
+  ELSEWHERE_CODE,
+  deliveryCityIdFor,
+  findCity,
+  isCrossCityDelivery,
+  resolveDeliveryCityCode,
+} from '../features/city'
 import { useIsOnline } from '../hooks/useIsOnline'
 import { generateLocalId } from '../lib/id'
 import { sanitizeCubanPhone, toCubanE164 } from '../lib/phone'
@@ -47,11 +58,16 @@ export function MandadoPage() {
   const guestProfile = useGuestProfileStore()
   const account = useSessionStore((state) => state.customer)
   const deviceLocation = useDeviceLocation()
+  const { cities, cityCode: activeCityCode, city: activeCity, showSelector } = useActiveCity()
 
   const [step, setStep] = useState<Step>('pickup')
   const [submitting, setSubmitting] = useState(false)
   const [quote, setQuote] = useState<MandadoQuote | null>(null)
   const [quoteLoading, setQuoteLoading] = useState(false)
+  // ¿En qué localidad se entrega? Por defecto la misma desde la que se pide (ver DeliveryCityPicker).
+  const IDLE_PREVIEW: DeliveryPreview = { state: 'idle', fee: null, message: null, distanceKm: null, ratePerKm: null }
+  const [deliveryCityOverride, setDeliveryCityOverride] = useState<string | null>(null)
+  const [crossCity, setCrossCity] = useState<DeliveryPreview>(IDLE_PREVIEW)
   const clientRequestId = useRef(generateLocalId('mandado'))
   const orderCreated = useRef(false)
 
@@ -123,7 +139,28 @@ export function MandadoPage() {
   const recipientValid = effectiveRecipientName.trim().length >= 2 && effectiveRecipientPhone.length >= 8
   const addressValid = showFreeForm ? reviewAddress.length >= 3 : selectedSaved !== null
   const collectValid = !collectEnabled || (Number(collectAmount) > 0 && (collectAt === 'DELIVERY' || collectPlace.trim().length >= 3))
-  const deliveryValid = requesterValid && recipientValid && addressValid && collectValid
+  // Localidad de entrega: la guardada con la dirección elegida > la de la persona > la de origen (como en el checkout).
+  const savedForCity = showFreeForm ? null : selectedSaved
+  const elsewhere = showSelector && deliveryCityOverride === ELSEWHERE_CODE
+  const deliveryCityCode = showSelector
+    ? resolveDeliveryCityCode({
+        override: elsewhere ? null : deliveryCityOverride,
+        savedAddressCityCode: elsewhere ? null : savedForCity?.cityCode,
+        activeCityCode,
+        cities,
+      })
+    : null
+  const crossCityDelivery = showSelector && !elsewhere && isCrossCityDelivery(deliveryCityCode, activeCityCode, cities)
+  // Solo con 2+ localidades se manda la de origen y la de entrega; con una sola todo es como siempre.
+  const originCityId = showSelector ? activeCity?.apiId : undefined
+  const deliveryCityId = crossCityDelivery ? deliveryCityIdFor(deliveryCityCode, cities) : undefined
+  const elsewhereLocation = elsewhere ? deviceLocation.location : null
+  const deliveryKey = elsewhereLocation
+    ? `km:${elsewhereLocation.latitude.toFixed(4)},${elsewhereLocation.longitude.toFixed(4)}`
+    : (deliveryCityId ?? '')
+  // "Otra ubicación" necesita la ubicación del cliente (sin ella no se puede medir la mensajería).
+  const deliveryChoiceValid = crossCity.state !== 'unavailable' && (!elsewhere || elsewhereLocation !== null)
+  const deliveryValid = requesterValid && recipientValid && addressValid && collectValid && deliveryChoiceValid
 
   // Por qué está apagado "Continuar" (mismas reglas que arriba): nunca queda un botón apagado sin explicación.
   const pickupMissingText = describePickupMissing({
@@ -148,30 +185,46 @@ export function MandadoPage() {
   })
 
   // Cotización autoritativa del servidor al llegar a "Revisar" (con debounce). No bloquea: si
-  // falla se confirma igual — el backend recalcula el precio real al crear el mandado.
+  // falla se confirma igual — el backend recalcula el precio real al crear el mandado. Con otra
+  // localidad / "otra ubicación" también se pide en el paso de entrega, para mostrar el precio al elegirla.
+  const hasDeliveryChoice = deliveryCityId !== undefined || elsewhereLocation !== null
   useEffect(() => {
-    if (step !== 'review') {
+    if (step === 'pickup' || (step === 'delivery' && !hasDeliveryChoice)) {
       setQuote(null)
       setQuoteLoading(false)
+      setCrossCity(IDLE_PREVIEW)
       return
     }
     let cancelled = false
     setQuoteLoading(true)
+    if (hasDeliveryChoice) setCrossCity((current) => ({ ...current, state: 'loading' }))
     const timer = window.setTimeout(async () => {
       const result = await requestMandadoQuote({
         pickupClarity,
         destination: deviceLocation.location,
+        ...(originCityId ? { cityId: originCityId } : {}),
+        ...(deliveryCityId ? { deliveryCityId } : {}),
+        ...(elsewhereLocation ? { deliveryElsewhere: true as const } : {}),
       })
       if (cancelled) return
       setQuoteLoading(false)
       setQuote(result.ok ? result.quote : null)
+      if (!hasDeliveryChoice) return
+      if (result.ok) {
+        const km = result.quote.elsewhereDelivery
+        setCrossCity({ state: 'ready', fee: result.quote.deliveryFee, message: null, distanceKm: km?.distanceKm ?? null, ratePerKm: km?.ratePerKm ?? null })
+      } else if (result.code === DELIVERY_ROUTE_UNAVAILABLE_CODE || result.code === CITY_COORDINATES_MISSING_CODE) {
+        setCrossCity({ ...IDLE_PREVIEW, state: 'unavailable', message: result.message })
+      } else {
+        setCrossCity(IDLE_PREVIEW)
+      }
     }, QUOTE_DEBOUNCE_MS)
     return () => {
       cancelled = true
       window.clearTimeout(timer)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step, pickupClarity, deviceLocation.location])
+  }, [step, pickupClarity, deviceLocation.location, originCityId, deliveryKey])
 
   const handleConfirm = async () => {
     if (!online) {
@@ -192,6 +245,9 @@ export function MandadoPage() {
       deliveryAddress: reviewAddress,
       deliveryAddressReference: reviewReference || undefined,
       destination: deviceLocation.location,
+      ...(originCityId ? { cityId: originCityId } : {}),
+      ...(deliveryCityId ? { deliveryCityId } : {}),
+      ...(elsewhereLocation ? { deliveryElsewhere: true as const } : {}),
       collectAmount: collectEnabled ? Number(collectAmount) : undefined,
       collectAt: collectEnabled ? collectAt : undefined,
       collectPlace: collectEnabled && collectAt === 'OTHER' ? collectPlace.trim() : undefined,
@@ -201,7 +257,13 @@ export function MandadoPage() {
     setSubmitting(false)
     if (result.ok) {
       orderCreated.current = true
-      if (showFreeForm) rememberDeliveryAddress({ address, reference: addressReference })
+      if (showFreeForm) {
+        rememberDeliveryAddress({
+          address,
+          reference: addressReference,
+          cityCode: showSelector && !elsewhere ? deliveryCityCode : null,
+        })
+      }
       showToast(`Mandado #${result.order.orderNumber} recibido`, 'success')
       navigate(`/pedido/${result.order.id}`, { replace: true })
       return
@@ -343,6 +405,22 @@ export function MandadoPage() {
               )}
             </section>
 
+            {showSelector && (
+              <DeliveryCityPicker
+                cities={cities}
+                value={elsewhere ? ELSEWHERE_CODE : deliveryCityCode}
+                buyingCityName={activeCity?.name ?? ''}
+                onChange={(code) => {
+                  setDeliveryCityOverride(code)
+                  // Elegir "Otra ubicación" es el gesto que pide la ubicación (nunca se pide antes).
+                  if (code === ELSEWHERE_CODE && deviceLocation.state === 'idle') deviceLocation.request()
+                }}
+                preview={crossCity}
+                locationState={deviceLocation.state}
+                onRequestLocation={deviceLocation.request}
+              />
+            )}
+
             <section className="space-y-3">
               <h2 className="text-h3 text-text-primary">Dirección de entrega</h2>
               {!showFreeForm ? (
@@ -452,6 +530,13 @@ export function MandadoPage() {
             address={reviewAddress}
             reference={reviewReference}
             collectSummary={collectEnabled ? `Cobrar ${collectAmount || 0} CUP ${collectAt === 'OTHER' ? `en ${collectPlace}` : 'al entregar'}` : null}
+            deliveryNote={
+              elsewhere
+                ? `Entrega en otra ubicación${quote?.elsewhereDelivery ? ` · a ${quote.elsewhereDelivery.distanceKm.toLocaleString('es')} km del centro de ${activeCity?.name ?? ''}` : ''}`
+                : crossCityDelivery
+                  ? `Entrega en ${findCity(deliveryCityCode, cities)?.name ?? ''} (entre localidades)`
+                  : null
+            }
             quote={quote}
             quoteLoading={quoteLoading}
             online={online}
@@ -501,6 +586,8 @@ function ReviewStep(props: {
   address: string
   reference: string
   collectSummary: string | null
+  /** "Entrega en San Antonio (entre localidades)" / "Entrega en otra ubicación · a 5 km…" (null = misma localidad). */
+  deliveryNote: string | null
   quote: MandadoQuote | null
   quoteLoading: boolean
   online: boolean
@@ -524,12 +611,16 @@ function ReviewStep(props: {
         </p>
         <p className="text-body text-text-primary">{props.address}</p>
         {props.reference && <p className="text-caption text-text-secondary">{props.reference}</p>}
+        {props.deliveryNote && <p className="text-caption font-semibold text-primary-text">{props.deliveryNote}</p>}
         {props.collectSummary && <p className="text-caption font-semibold text-warning-text">{props.collectSummary}</p>}
       </section>
 
       {quote ? (
         <section aria-label="Total del mandado" className="rounded-r-md bg-surface border border-border p-3 space-y-1">
-          <QuoteRow label="Mensajería" value={formatCup(quote.deliveryFee)} />
+          <QuoteRow
+            label={quote.elsewhereDelivery ? 'Mensajería por kilómetro' : quote.crossCityDelivery ? 'Mensajería entre localidades' : 'Mensajería'}
+            value={formatCup(quote.deliveryFee)}
+          />
           <QuoteRow label="Total a pagar" value={formatCup(quote.total)} strong />
           <p className="text-caption text-text-secondary">Calculado por Tráelo — el servidor lo vuelve a confirmar al crear el mandado.</p>
         </section>

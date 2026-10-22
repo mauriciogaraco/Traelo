@@ -30,6 +30,10 @@ export type BuildCheckoutInputParams = {
   redemption?: RedemptionRequest;
   /** Código de la promoción "primera mensajería gratis" (solo el código; el servidor valida y calcula). */
   promoCode?: string;
+  /** Localidad donde se entrega (City.id); solo con 2+ localidades. El servidor decide la mensajería. */
+  deliveryCityId?: string;
+  /** Entrega en "otra ubicación" (mensajería por km): exige `location` (la del cliente). */
+  deliveryElsewhere?: boolean;
 };
 
 /** Agrupa los productos del carrito por negocio, con el formato del backend (sin precios definitivos). */
@@ -75,5 +79,7 @@ export function buildCheckoutInput(params: BuildCheckoutInputParams): CheckoutOr
     // Solo el id de la recompensa (y el saldo visto): el servidor resuelve costo, descuento y total.
     redemption: params.redemption,
     promoCode: params.promoCode,
+    deliveryCityId: params.deliveryCityId,
+    deliveryElsewhere: params.deliveryElsewhere ? true : undefined,
   };
 }

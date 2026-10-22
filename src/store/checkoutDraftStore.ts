@@ -14,6 +14,8 @@ export type CheckoutDraft = {
   step: 'where' | 'review';
   /** Hora elegida ("7:30 pm"); null = lo antes posible. */
   deliveryTime?: string | null;
+  /** Localidad de entrega elegida a mano (City.code); null/ausente = la de la dirección o la del catálogo. */
+  deliveryCityCode?: string | null;
 };
 
 type CheckoutDraftState = {

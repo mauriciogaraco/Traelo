@@ -40,6 +40,11 @@ export function promoViewState(promo: { upcoming: boolean; active: boolean; exha
   return promo.exhausted ? 'exhausted' : 'inactive'
 }
 
+/** La promoción terminó (apagada o agotada) y no es una cuenta regresiva: la pantalla de la promo manda al Home. */
+export function isPromoClosed(promo: { upcoming: boolean; active: boolean }): boolean {
+  return !promo.active && !promo.upcoming
+}
+
 const LANDING_KEY = 'traelo.promo.landing'
 
 /**

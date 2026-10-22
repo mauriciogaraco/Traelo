@@ -1,4 +1,4 @@
-import { isFirstPromoLanding, isPromoErrorCode, parsePromoParam, promoCodeToSend, promoHomeHref, promoViewState } from '../promo'
+import { isFirstPromoLanding, isPromoClosed, isPromoErrorCode, parsePromoParam, promoCodeToSend, promoHomeHref, promoViewState } from '../promo'
 
 describe('parsePromoParam', () => {
   it('lee ?promo= y lo pasa a mayúsculas', () => {
@@ -72,3 +72,13 @@ describe('isFirstPromoLanding', () => {
   })
 })
 
+
+describe('isPromoClosed — cuándo la pantalla de la promo manda al Home', () => {
+  it('apagada o agotada (sin cuenta regresiva) = cerrada', () => {
+    expect(isPromoClosed({ upcoming: false, active: false })).toBe(true)
+  })
+  it('activa o por empezar NO está cerrada', () => {
+    expect(isPromoClosed({ upcoming: false, active: true })).toBe(false)
+    expect(isPromoClosed({ upcoming: true, active: false })).toBe(false)
+  })
+})
