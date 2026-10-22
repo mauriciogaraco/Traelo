@@ -49,6 +49,13 @@ export type CheckoutOrderInput = {
   redemption?: RedemptionRequest;
   /** Código de la promoción "primera mensajería gratis". Solo el código: el servidor valida y calcula el descuento. */
   promoCode?: string;
+  /**
+   * Localidad donde se ENTREGA (`City.id`). Ausente = la de los negocios. Si es otra, el servidor cobra la
+   * mensajería FIJA entre localidades (o rechaza con DELIVERY_ROUTE_UNAVAILABLE si no hay tarifa).
+   */
+  deliveryCityId?: string;
+  /** Entrega en "otra ubicación": con `location` (obligatoria aquí), mensajería por km desde el centro del pueblo. */
+  deliveryElsewhere?: true;
 };
 
 export type CreateAppOrderInput = {

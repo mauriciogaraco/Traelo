@@ -29,6 +29,11 @@ export type SavedAddress = {
   isDefault: boolean;
   /** Pin opcional de la dirección; null si la persona no lo añadió (lo normal). */
   location: DeliveryLocation | null;
+  /**
+   * Localidad (`City.code`) de esta dirección, para no volver a elegirla al pedir. Ausente = no se sabe
+   * (direcciones de antes de las localidades): se usa la localidad desde la que se compra.
+   */
+  cityCode?: string | null;
   createdAt: string;
   updatedAt: string;
 };

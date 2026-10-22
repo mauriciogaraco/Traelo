@@ -60,6 +60,11 @@ export type Order = {
   addressReference: string | null;
   customerPhone: string;
   deliveryFee: number;
+  /** Localidad donde se entrega cuando es distinta a la de los negocios (mensajería fija entre localidades); null/ausente = la misma. */
+  deliveryCityName?: string | null;
+  /** Entrega en "otra ubicación": la mensajería se cobró por km desde el centro del pueblo. */
+  deliveryElsewhere?: boolean;
+  deliveryDistanceKm?: number | null;
   /** Mensajería que regaló Tráelo en este pedido (promoción). Ausente o 0 sin promo. */
   deliveryFeeDiscount?: number;
   status: OrderStatus;

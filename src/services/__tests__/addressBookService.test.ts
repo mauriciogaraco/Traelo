@@ -69,3 +69,23 @@ describe('importAccountAddresses (una sola vez, sin duplicar)', () => {
     expect(useAddressStore.getState().importedFromAccount).toBe(false)
   })
 })
+
+describe('rememberDeliveryAddress — localidad de la dirección', () => {
+  it('guarda la localidad con la dirección para no volver a elegirla', () => {
+    rememberDeliveryAddress({ address: 'Calle 5 #6', cityCode: 'san-antonio-de-los-banos' })
+    expect(useAddressStore.getState().addresses[0].cityCode).toBe('san-antonio-de-los-banos')
+  })
+
+  it('la misma dirección con otra localidad actualiza la localidad, no la duplica', () => {
+    rememberDeliveryAddress({ address: 'Calle 5 #6', cityCode: 'guira-de-melena' })
+    rememberDeliveryAddress({ address: 'Calle 5 #6', cityCode: 'san-antonio-de-los-banos' })
+    const list = useAddressStore.getState().addresses
+    expect(list).toHaveLength(1)
+    expect(list[0].cityCode).toBe('san-antonio-de-los-banos')
+  })
+
+  it('una dirección de antes (sin localidad) sigue funcionando', () => {
+    rememberDeliveryAddress({ address: 'Calle 8 #9' })
+    expect(useAddressStore.getState().addresses[0].cityCode ?? null).toBeNull()
+  })
+})

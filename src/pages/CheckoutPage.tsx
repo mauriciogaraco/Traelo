@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { track } from '../analytics'
 import { useNavigate } from 'react-router-dom'
 import { CityNote } from '../components/city/CityNote'
+import { DeliveryCityPicker, type DeliveryPreview } from '../components/city/DeliveryCityPicker'
 import { formatCup } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
 import { ChipRow } from '../components/ui/ChipRow'
@@ -12,6 +13,17 @@ import { TextField } from '../components/ui/TextField'
 import { useToast } from '../context/ToastContext'
 import { getCartItemCount, getCartSubtotalEstimate } from '../features/cart'
 import { describeMissing, getMissingDeliveryDetails } from '../features/checkout/deliveryDetails'
+import {
+  CITY_COORDINATES_MISSING_CODE,
+  DELIVERY_ROUTE_UNAVAILABLE_CODE,
+  ELSEWHERE_CODE,
+  deliveryCityIdFor,
+  findCity,
+  isCrossCityDelivery,
+  resolveDeliveryCityCode,
+} from '../features/city'
+import { useActiveCity } from '../hooks/useActiveCity'
+import { useDeviceLocation } from '../hooks/useDeviceLocation'
 import { ASAP_LABEL, deliveryTimeOptions, scheduledForValue } from '../features/checkout/deliveryTime'
 import { formatPoints, validApplied } from '../features/rewards'
 import { useIsOnline } from '../hooks/useIsOnline'
@@ -89,6 +101,31 @@ export function CheckoutPage() {
   const clientRequestId = useRef(generateLocalId('checkout'))
   const orderCreated = useRef(false)
 
+  // Localidad donde se ENTREGA (distinta de la desde la que se compra, que es la del catálogo): con 2+
+  // localidades se pregunta; si es otra, la mensajería es la tarifa fija entre localidades.
+  const { cities, cityCode: activeCityCode, city: activeCity, showSelector } = useActiveCity()
+  const [deliveryCityOverride, setDeliveryCityOverride] = useState<string | null>(restored?.deliveryCityCode ?? null)
+  const IDLE_PREVIEW: DeliveryPreview = { state: 'idle', fee: null, message: null, distanceKm: null, ratePerKm: null }
+  const [crossCity, setCrossCity] = useState<DeliveryPreview>(IDLE_PREVIEW)
+  // "Otra ubicación": se pide la ubicación del cliente (solo cuando elige esa opción y la toca).
+  const deviceLocation = useDeviceLocation()
+  const savedForCity = useNewAddress || savedAddresses.length === 0
+    ? null
+    : (savedAddresses.find((a) => a.id === effectiveSavedAddressId(savedAddresses, selectedAddressId)) ?? null)
+  const elsewhere = showSelector && deliveryCityOverride === ELSEWHERE_CODE
+  const deliveryCityCode = showSelector
+    ? resolveDeliveryCityCode({ override: elsewhere ? null : deliveryCityOverride, savedAddressCityCode: elsewhere ? null : savedForCity?.cityCode, activeCityCode, cities })
+    : null
+  const crossCityDelivery = showSelector && !elsewhere && isCrossCityDelivery(deliveryCityCode, activeCityCode, cities)
+  // Solo se manda cuando es OTRA localidad: con la misma, el pedido es el de siempre.
+  const deliveryCityId = crossCityDelivery ? deliveryCityIdFor(deliveryCityCode, cities) : undefined
+  // Cómo se entrega respecto a la localidad de los negocios (lo que viaja a la cotización y al pedido).
+  const elsewhereLocation = elsewhere ? deviceLocation.location : null
+  const quoteDelivery = elsewhereLocation ? { elsewhere: elsewhereLocation } : deliveryCityId ? { cityId: deliveryCityId } : undefined
+  const quoteDeliveryKey = elsewhereLocation
+    ? `km:${elsewhereLocation.latitude.toFixed(4)},${elsewhereLocation.longitude.toFixed(4)}`
+    : (deliveryCityId ?? '')
+
   useEffect(() => {
     if (orderCreated.current) return
     useCheckoutDraftStore.getState().save({
@@ -98,8 +135,9 @@ export function CheckoutPage() {
       pinOverride: undefined,
       step,
       deliveryTime,
+      deliveryCityCode: deliveryCityOverride,
     })
-  }, [form, selectedAddressId, useNewAddress, step, deliveryTime])
+  }, [form, selectedAddressId, useNewAddress, step, deliveryTime, deliveryCityOverride])
 
   const patchForm = useCallback((patch: Partial<DeliveryForm>) => setForm((current) => ({ ...current, ...patch })), [])
 
@@ -108,6 +146,34 @@ export function CheckoutPage() {
   const cartFingerprint = items
     .map((i) => `${i.productId}:${i.quantity}:${i.optionName ?? ''}:${i.addonName ?? ''}:${i.packagingName ?? ''}`)
     .join('|')
+  // Paso 1: si entrega en otra localidad, se muestra YA lo que cuesta la mensajería (lo calcula el servidor) y,
+  // si no hay tarifa para ese sentido, se avisa antes de llenar nada más. Un error de red no bloquea.
+  useEffect(() => {
+    if (step !== 'where' || !quoteDelivery) {
+      setCrossCity(IDLE_PREVIEW)
+      return
+    }
+    let cancelled = false
+    setCrossCity((current) => ({ ...current, state: 'loading' }))
+    const timer = window.setTimeout(async () => {
+      const result = await requestCheckoutQuote(useCartStore.getState().items, redemption, quoteDelivery)
+      if (cancelled) return
+      if (result.ok) {
+        const km = result.quote.elsewhereDelivery
+        setCrossCity({ state: 'ready', fee: result.quote.deliveryFee, message: null, distanceKm: km?.distanceKm ?? null, ratePerKm: km?.ratePerKm ?? null })
+      } else if (result.code === DELIVERY_ROUTE_UNAVAILABLE_CODE || result.code === CITY_COORDINATES_MISSING_CODE) {
+        setCrossCity({ ...IDLE_PREVIEW, state: 'unavailable', message: result.message })
+      } else {
+        setCrossCity(IDLE_PREVIEW)
+      }
+    }, QUOTE_DEBOUNCE_MS)
+    return () => {
+      cancelled = true
+      window.clearTimeout(timer)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [step, quoteDeliveryKey, cartFingerprint])
+
   useEffect(() => {
     if (step !== 'review') {
       setQuote(null)
@@ -117,7 +183,7 @@ export function CheckoutPage() {
     let cancelled = false
     setQuoteLoading(true)
     const timer = window.setTimeout(async () => {
-      const result = await requestCheckoutQuote(useCartStore.getState().items, redemption)
+      const result = await requestCheckoutQuote(useCartStore.getState().items, redemption, quoteDelivery)
       if (cancelled) return
       setQuoteLoading(false)
       setQuote(result.ok ? result.quote : null)
@@ -129,7 +195,7 @@ export function CheckoutPage() {
     }
     // redemption resume a `applied` por contenido (id + saldo esperado): comparar el objeto entero recrearía la petición en cada render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step, cartFingerprint, applied?.reward.id])
+  }, [step, cartFingerprint, applied?.reward.id, quoteDeliveryKey])
 
   // Las horas se calculan en hora de Cuba y se refrescan al cambiar de paso (no cada segundo).
   const deliveryTimes = useMemo(() => deliveryTimeOptions(new Date()), [step])
@@ -156,7 +222,13 @@ export function CheckoutPage() {
     address: form.address,
     reference: form.reference,
   })
-  const canContinue = missing.length === 0 && (showFreeForm || selectedSaved !== null)
+  // Sin tarifa para entregar en esa localidad no se puede seguir (el servidor lo rechazaría igual).
+  // "Otra ubicación" necesita la ubicación del cliente (sin ella no se puede medir la mensajería).
+  const canContinue =
+    missing.length === 0 &&
+    (showFreeForm || selectedSaved !== null) &&
+    crossCity.state !== 'unavailable' &&
+    (!elsewhere || elsewhereLocation !== null)
   const missingText = describeMissing(missing)
   const deliveryLabel = scheduledForValue(deliveryTime)
   const reviewAddress = showFreeForm ? form.address.trim() : (selectedSaved?.address ?? '')
@@ -181,13 +253,20 @@ export function CheckoutPage() {
       customerName: form.name.trim(),
       customerPhone: toCubanE164(form.phone),
       redemption,
+      deliveryCityId,
+      ...(elsewhereLocation ? { deliveryElsewhere: true, location: elsewhereLocation } : {}),
     })
     setOrderInFlight(false)
     setSubmitting(false)
     if (result.ok) {
       orderCreated.current = true
       useCheckoutDraftStore.getState().clear()
-      if (showFreeForm) rememberDeliveryAddress({ address: form.address, reference: form.reference })
+      // La dirección queda guardada CON su localidad: la próxima vez no hay que volver a elegirla.
+      const cityCode = showSelector && !elsewhere ? deliveryCityCode : null
+      if (showFreeForm) rememberDeliveryAddress({ address: form.address, reference: form.reference, cityCode })
+      else if (selectedSaved && cityCode && selectedSaved.cityCode !== cityCode) {
+        useAddressStore.getState().update(selectedSaved.id, { cityCode })
+      }
       showToast(`Pedido #${result.order.orderNumber} recibido`, 'success')
       navigate(`/pedido/${result.order.id}`, { replace: true })
       return
@@ -221,6 +300,22 @@ export function CheckoutPage() {
               <PhoneField value={form.phone} onChange={(phone) => patchForm({ phone })} />
             </section>
 
+            {showSelector && (
+              <DeliveryCityPicker
+                cities={cities}
+                value={elsewhere ? ELSEWHERE_CODE : deliveryCityCode}
+                buyingCityName={activeCity?.name ?? ''}
+                onChange={(code) => {
+                  setDeliveryCityOverride(code)
+                  // Elegir "Otra ubicación" es el gesto que pide la ubicación (nunca se pide antes).
+                  if (code === ELSEWHERE_CODE && deviceLocation.state === 'idle') deviceLocation.request()
+                }}
+                preview={crossCity}
+                locationState={deviceLocation.state}
+                onRequestLocation={deviceLocation.request}
+              />
+            )}
+
             <section className="space-y-3">
               <h2 className="text-h3 text-text-primary">Dirección de entrega</h2>
               {!showFreeForm ? (
@@ -234,13 +329,20 @@ export function CheckoutPage() {
                           type="button"
                           role="radio"
                           aria-checked={selected}
-                          onClick={() => setSelectedAddressId(saved.id)}
+                          onClick={() => {
+                            setSelectedAddressId(saved.id)
+                            // Cada dirección trae su localidad: lo elegido antes a mano ya no aplica.
+                            setDeliveryCityOverride(null)
+                          }}
                           className={`w-full text-left rounded-r-md bg-surface p-3 transition ${
                             selected ? 'border-2 border-primary' : 'border border-border hover:border-primary/40'
                           }`}
                         >
                           <span className="block text-[15px] font-semibold text-text-primary">{saved.label}</span>
                           <span className="block text-caption text-text-secondary">{saved.address}</span>
+                          {showSelector && saved.cityCode && findCity(saved.cityCode, cities) && (
+                            <span className="block text-caption font-semibold text-primary-text">{findCity(saved.cityCode, cities)!.name}</span>
+                          )}
                           {saved.reference && <span className="block text-caption text-text-secondary">{saved.reference}</span>}
                         </button>
                       )
@@ -315,6 +417,15 @@ export function CheckoutPage() {
             phone={toCubanE164(form.phone)}
             address={reviewAddress}
             reference={reviewReference}
+            deliveryCityName={
+              elsewhere
+                ? 'otra ubicación'
+                : crossCityDelivery
+                  ? (findCity(deliveryCityCode, cities)?.name ?? null)
+                  : null
+            }
+            elsewhereKm={elsewhere ? (quote?.elsewhereDelivery?.distanceKm ?? crossCity.distanceKm) : null}
+            buyingCityName={activeCity?.name ?? ''}
             deliveryLabel={deliveryLabel}
             itemCount={getCartItemCount(items)}
             subtotalEstimate={getCartSubtotalEstimate(items)}
@@ -366,6 +477,11 @@ function ReviewStep(props: {
   phone: string
   address: string
   reference: string
+  /** Localidad de entrega cuando es distinta a la de los negocios (mensajería fija entre localidades). */
+  deliveryCityName: string | null
+  /** "Otra ubicación": km medidos desde el centro del pueblo de los negocios (null si no aplica / aún no se sabe). */
+  elsewhereKm: number | null
+  buyingCityName: string
   deliveryLabel: string
   itemCount: number
   subtotalEstimate: number
@@ -386,6 +502,15 @@ function ReviewStep(props: {
           {props.name} · {props.phone}
         </p>
         <p className="text-body text-text-primary">{props.address}</p>
+        {props.deliveryCityName && props.deliveryCityName !== 'otra ubicación' && (
+          <p className="text-caption font-semibold text-primary-text">Entrega en {props.deliveryCityName} (entre localidades)</p>
+        )}
+        {props.deliveryCityName === 'otra ubicación' && (
+          <p className="text-caption font-semibold text-primary-text">
+            Entrega en otra ubicación
+            {props.elsewhereKm !== null && <> · a {props.elsewhereKm.toLocaleString('es')} km del centro de {props.buyingCityName}</>}
+          </p>
+        )}
         <p className={`text-caption ${props.deliveryLabel === ASAP_LABEL ? 'text-text-secondary' : 'font-semibold text-warning-text'}`}>
           {props.deliveryLabel}
         </p>
@@ -408,7 +533,10 @@ function ReviewStep(props: {
           {(quote.deliveryFeeDiscount ?? 0) > 0 ? (
             <QuoteRow label={`🎁 Mensajería gratis (${formatCup(quote.deliveryFee)})`} value="Gratis" />
           ) : (
-            <QuoteRow label="Mensajería" value={formatCup(quote.deliveryFee)} />
+            <QuoteRow
+              label={quote.elsewhereDelivery ? 'Mensajería por kilómetro' : quote.crossCityDelivery ? 'Mensajería entre localidades' : 'Mensajería'}
+              value={formatCup(quote.deliveryFee)}
+            />
           )}
           <QuoteRow label="Servicio Tráelo" value={formatCup(quote.platformFee)} />
           <QuoteRow label="Total a pagar" value={formatCup(quote.total)} strong />

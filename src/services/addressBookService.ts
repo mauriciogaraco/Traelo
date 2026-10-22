@@ -20,6 +20,8 @@ export function rememberDeliveryAddress(input: {
   address: string
   reference?: string | null
   location?: DeliveryLocation | null
+  /** Localidad de la dirección (`City.code`): así la próxima vez no hay que volver a elegirla. */
+  cityCode?: string | null
 }): void {
   const address = input.address.trim()
   if (address.length < 3) return
@@ -27,6 +29,8 @@ export function rememberDeliveryAddress(input: {
   const existing = findDuplicate(address, reference)
   if (existing) {
     if (input.location) useAddressStore.getState().update(existing.id, { location: input.location })
+    // Misma dirección pero ahora con localidad conocida (o distinta): se actualiza.
+    if (input.cityCode && input.cityCode !== existing.cityCode) useAddressStore.getState().update(existing.id, { cityCode: input.cityCode })
     return
   }
   const { addresses, add } = useAddressStore.getState()
@@ -35,6 +39,7 @@ export function rememberDeliveryAddress(input: {
     address,
     reference,
     location: input.location ?? null,
+    cityCode: input.cityCode ?? null,
   })
 }
 

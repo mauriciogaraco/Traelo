@@ -2,20 +2,44 @@ import { useState } from 'react'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../../lib/storage'
 
 /**
- * Súbelo (cualquier texto nuevo) para volver a mostrar el aviso a TODOS los
- * clientes una vez más, por ejemplo tras un cambio que exija limpiar el caché.
+ * Versión de la web (mayor.menor). Súbela (1.10 → 1.11…) para mostrar el aviso "Actualizamos Tráelo" a quien
+ * no tenga guardada ninguna versión o tenga una MENOR; quien ya aceptó esta (o una mayor) no lo vuelve a ver.
  */
-const REFRESH_VERSION = '2026-09-24'
+export const WEB_VERSION = '1.10'
 
 const CLEANUP_TIMEOUT_MS = 3000
 
-function alreadyAccepted(): boolean {
-  if (readStorage<string | null>(STORAGE_KEYS.refreshAck, null) === REFRESH_VERSION) return true
-  try {
-    return sessionStorage.getItem(STORAGE_KEYS.refreshAck) === REFRESH_VERSION
-  } catch {
-    return false
+/** Convierte "1.10" en [1, 10]; cualquier otra cosa (p. ej. la fecha de avisos viejos) no es una versión. */
+function parseVersion(value: string | null | undefined): number[] | null {
+  if (typeof value !== 'string' || !/^\d+(\.\d+)*$/.test(value.trim())) return null
+  return value.trim().split('.').map(Number)
+}
+
+/** true si `a` es una versión menor que `b`, comparando número a número (1.9 < 1.10). */
+export function isOlderVersion(a: string | null | undefined, b: string): boolean {
+  const left = parseVersion(a)
+  const right = parseVersion(b)
+  if (!right) return false
+  if (!left) return true // sin versión guardada (o ilegible): hay que avisar
+  for (let i = 0; i < Math.max(left.length, right.length); i++) {
+    const diff = (left[i] ?? 0) - (right[i] ?? 0)
+    if (diff !== 0) return diff < 0
   }
+  return false
+}
+
+function storedVersion(): string | null {
+  const local = readStorage<string | null>(STORAGE_KEYS.refreshAck, null)
+  if (parseVersion(local)) return local
+  try {
+    return sessionStorage.getItem(STORAGE_KEYS.refreshAck)
+  } catch {
+    return null
+  }
+}
+
+function alreadyAccepted(): boolean {
+  return !isOlderVersion(storedVersion(), WEB_VERSION)
 }
 
 /** Da de baja los service workers y borra el caché de la app. NO toca localStorage (carrito, pedidos, dirección). */
@@ -43,9 +67,9 @@ export function RefreshModal() {
   async function accept() {
     if (busy) return
     setBusy(true)
-    writeStorage(STORAGE_KEYS.refreshAck, REFRESH_VERSION)
+    writeStorage(STORAGE_KEYS.refreshAck, WEB_VERSION)
     try {
-      sessionStorage.setItem(STORAGE_KEYS.refreshAck, REFRESH_VERSION)
+      sessionStorage.setItem(STORAGE_KEYS.refreshAck, WEB_VERSION)
     } catch {
       /* sessionStorage no disponible */
     }
@@ -70,7 +94,7 @@ export function RefreshModal() {
             Actualizamos Tráelo
           </h2>
           <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-            Para que tus pedidos se envíen sin problemas necesitamos refrescar la app. Toca{' '}
+            Hicimos cambios en la web (versión {WEB_VERSION}). Para que todo funcione bien necesitamos refrescarla. Toca{' '}
             <span className="font-bold text-text-primary">Aceptar</span>. Tu carrito, tu dirección y tus pedidos se
             conservan.
           </p>

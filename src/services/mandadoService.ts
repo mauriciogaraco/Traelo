@@ -10,13 +10,15 @@ import type { CreateMandadoInput, MandadoQuote, MandadoQuoteInput } from '../typ
  * autoridad del precio, aquí solo se arma la solicitud y se traducen los errores.
  */
 
-export type MandadoQuoteResult = { ok: true; quote: MandadoQuote } | { ok: false; message: string };
+export type MandadoQuoteResult = { ok: true; quote: MandadoQuote } | { ok: false; code: string; message: string };
 
 export async function requestMandadoQuote(input: MandadoQuoteInput): Promise<MandadoQuoteResult> {
   try {
     return { ok: true, quote: await apiQuoteMandado(input) };
-  } catch {
-    return { ok: false, message: 'No pudimos calcular el precio. Revisa tu conexión.' };
+  } catch (err) {
+    // Los errores del servidor sobre la entrega (sin tarifa entre localidades, pueblo sin coordenadas) se dicen tal cual.
+    if (err instanceof ApiError) return { ok: false, code: err.code, message: err.message };
+    return { ok: false, code: 'NETWORK_ERROR', message: 'No pudimos calcular el precio. Revisa tu conexión.' };
   }
 }
 

@@ -184,6 +184,9 @@ export function OrderPage() {
           {order.customerName} · {order.customerPhone}
         </p>
         <p className="text-body text-text-primary">{order.customerAddress}</p>
+        {order.deliveryCityName && (
+          <p className="text-caption font-semibold text-primary-text">Entrega en {order.deliveryCityName} (entre localidades)</p>
+        )}
         {order.addressReference && <p className="text-caption text-text-secondary">{order.addressReference}</p>}
         {order.scheduledFor && <p className="text-caption font-semibold text-text-secondary">{order.scheduledFor}</p>}
         {order.delivererName && <p className="text-caption text-text-secondary">Mensajero: {order.delivererName}</p>}

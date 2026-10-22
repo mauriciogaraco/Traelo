@@ -5,7 +5,7 @@ import { Button } from '../components/ui/Button'
 import { Skeleton } from '../components/ui/Skeleton'
 import { countdownParts, msUntil, startLabel } from '../features/promo/countdown'
 import { track } from '../analytics'
-import { promoHomeHref, promoViewState } from '../features/promo/promo'
+import { isPromoClosed, promoHomeHref, promoViewState } from '../features/promo/promo'
 
 type PromoState = { kind: 'loading' } | { kind: 'error' } | { kind: 'ready'; promo: FreeDeliveryPromo }
 
@@ -31,12 +31,21 @@ export function PromoPage() {
     load()
   }, [load])
 
+  // La promoción ya terminó (apagada o agotada, y no es una cuenta regresiva): no hay nada que ofrecer aquí,
+  // se manda al Home (reemplaza la entrada del historial para que "atrás" no vuelva a esta pantalla).
+  const closed = state.kind === 'ready' && isPromoClosed(state.promo)
+  useEffect(() => {
+    if (closed) navigate('/', { replace: true })
+  }, [closed, navigate])
+
   // Visita a la pantalla de la promo (una vez por estado cargado, no en cada tic de la cuenta regresiva).
   // Lleva SU localidad (San Antonio) aunque la persona esté comprando en otra.
   useEffect(() => {
-    if (state.kind !== 'ready') return
+    if (state.kind !== 'ready' || closed) return
     track('promo_view', { properties: { cityCode: state.promo.cityCode, state: promoViewState(state.promo) } })
-  }, [state])
+  }, [state, closed])
+
+  if (closed) return null
 
   return (
     <div className="px-4 lg:px-6 pt-3 lg:pt-6 max-w-xl mx-auto animate-fade-in">

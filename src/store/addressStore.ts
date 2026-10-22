@@ -9,6 +9,8 @@ export type NewAddressInput = {
   address: string;
   reference?: string | null;
   location?: DeliveryLocation | null;
+  /** Localidad de la dirección (`City.code`); ausente = no se sabe. */
+  cityCode?: string | null;
 };
 
 type AddressState = {
@@ -19,7 +21,7 @@ type AddressState = {
   importedFromAccount: boolean;
   setAddresses: (addresses: SavedAddress[]) => void;
   add: (input: NewAddressInput) => SavedAddress;
-  update: (id: string, patch: Partial<Pick<SavedAddress, 'label' | 'address' | 'reference' | 'location'>>) => void;
+  update: (id: string, patch: Partial<Pick<SavedAddress, 'label' | 'address' | 'reference' | 'location' | 'cityCode'>>) => void;
   remove: (id: string) => void;
   setDefault: (id: string) => void;
   markImported: () => void;
@@ -47,6 +49,7 @@ export const useAddressStore = create<AddressState>()(
           address: input.address,
           reference: input.reference ?? null,
           location: input.location ?? null,
+          cityCode: input.cityCode ?? null,
           // La primera dirección queda como predeterminada.
           isDefault: get().addresses.length === 0,
           createdAt: now,
