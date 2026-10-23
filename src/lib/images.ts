@@ -1,14 +1,9 @@
 /**
- * Las fotos del catálogo viven en Cloudinary en tamaño original. Para no gastar datos (conexión
- * limitada) se pide una versión redimensionada al ancho en que se muestra, en el mejor formato que
- * acepte el navegador (webp/avif). Otras URLs se devuelven tal cual.
+ * URL con que se muestra una foto del catálogo. Antes se pedía a Cloudinary una versión redimensionada al
+ * vuelo (f_auto,q_auto,w_N), pero cada variante cuenta como una "transformación" y eso consumió casi la mitad
+ * de los créditos del plan gratuito. Las fotos ya son livianas (~30 KB), así que se sirven tal cual hasta
+ * migrarlas a un almacenamiento con tamaños pregenerados. `width` se conserva para no tocar a los llamadores.
  */
-export function optimizedImageUrl(url: string | null | undefined, width: number): string | null {
-  if (!url) return null
-  const marker = '/image/upload/'
-  const index = url.indexOf(marker)
-  if (!url.includes('res.cloudinary.com') || index === -1) return url
-  const dpr = typeof window !== 'undefined' && window.devicePixelRatio > 1 ? 2 : 1
-  const transform = `f_auto,q_auto,c_limit,w_${Math.round(width * dpr)}/`
-  return url.slice(0, index + marker.length) + transform + url.slice(index + marker.length)
+export function optimizedImageUrl(url: string | null | undefined, _width: number): string | null {
+  return url ? url : null
 }

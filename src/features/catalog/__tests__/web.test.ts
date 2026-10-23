@@ -53,10 +53,9 @@ describe('enlaces viejos de la web', () => {
 })
 
 describe('optimizedImageUrl', () => {
-  it('pide a Cloudinary la foto redimensionada y en el mejor formato', () => {
-    expect(optimizedImageUrl('https://res.cloudinary.com/demo/image/upload/v1/p/a.jpg?v=1', 180)).toBe(
-      'https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,c_limit,w_180/v1/p/a.jpg?v=1',
-    )
+  it('NO pide transformaciones a Cloudinary (cada variante gasta créditos): la foto sale tal cual', () => {
+    const url = 'https://res.cloudinary.com/demo/image/upload/v1/p/a.jpg?v=1'
+    expect(optimizedImageUrl(url, 180)).toBe(url)
   })
 
   it('deja igual las demás URLs y null', () => {
