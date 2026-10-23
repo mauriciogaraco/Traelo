@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { track } from '../analytics'
 import { useNavigate } from 'react-router-dom'
 import { CityNote } from '../components/city/CityNote'
@@ -11,7 +11,8 @@ import { Icon } from '../components/ui/Icon'
 import { PhoneField } from '../components/ui/PhoneField'
 import { TextField } from '../components/ui/TextField'
 import { useToast } from '../context/ToastContext'
-import { getCartItemCount, getCartSubtotalEstimate } from '../features/cart'
+import { PointsPaymentSection } from '../components/rewards/PointsPaymentSection'
+import { getCartItemCount, getCartSubtotalEstimate, sanitizeUnits } from '../features/cart'
 import { describeMissing, getMissingDeliveryDetails } from '../features/checkout/deliveryDetails'
 import {
   CITY_COORDINATES_MISSING_CODE,
@@ -25,7 +26,11 @@ import {
 import { useActiveCity } from '../hooks/useActiveCity'
 import { useDeviceLocation } from '../hooks/useDeviceLocation'
 import { ASAP_LABEL, deliveryTimeOptions, scheduledForValue } from '../features/checkout/deliveryTime'
-import { formatPoints, validApplied } from '../features/rewards'
+import { formatPoints, isRedemptionError, validApplied } from '../features/rewards'
+import { useAuth } from '../hooks/useAuth'
+import { refreshPoints } from '../services/pointsService'
+import { usePointsPaymentStore } from '../store/pointsPaymentStore'
+import { usePointsStore } from '../store/pointsStore'
 import { useIsOnline } from '../hooks/useIsOnline'
 import { setOrderInFlight } from '../pwa'
 import { generateLocalId } from '../lib/id'
@@ -77,6 +82,18 @@ export function CheckoutPage() {
   const redemption: RedemptionRequest | undefined = applied
     ? { rewardId: applied.reward.id, expectedBalance: applied.expectedBalance }
     : undefined
+
+  // Pagar con puntos: solo con cuenta; con una recompensa aplicada no (el servidor no las mezcla).
+  const { isAuthenticated } = useAuth()
+  const pointsBalance = usePointsStore((state) => state.balance)
+  const pointsUnitsRaw = usePointsPaymentStore((state) => state.units)
+  const setPointsLine = usePointsPaymentStore((state) => state.setLine)
+  const setPointsUnits = usePointsPaymentStore((state) => state.setUnits)
+  const pointsUnits = !isAuthenticated || applied ? {} : sanitizeUnits(items, pointsUnitsRaw)
+  const pointsKey = Object.entries(pointsUnits)
+    .map(([id, n]) => `${id}=${n}`)
+    .sort()
+    .join(',')
 
   // Borrador: si hubo que volver al carrito (un agotado, un local cerrado…), lo escrito sigue ahí.
   const restored = useRef(useCheckoutDraftStore.getState().draft).current
@@ -183,11 +200,20 @@ export function CheckoutPage() {
     let cancelled = false
     setQuoteLoading(true)
     const timer = window.setTimeout(async () => {
-      const result = await requestCheckoutQuote(useCartStore.getState().items, redemption, quoteDelivery)
+      const result = await requestCheckoutQuote(useCartStore.getState().items, redemption, quoteDelivery, {
+        units: pointsUnits,
+        expectedBalance: pointsBalance,
+      })
       if (cancelled) return
       setQuoteLoading(false)
       setQuote(result.ok ? result.quote : null)
       setPromoNotice(result.ok ? (result.promoNotice ?? null) : null)
+      // El servidor dijo que no alcanzan los puntos / el saldo cambió: se explica y se quitan los puntos.
+      if (!result.ok && Object.keys(pointsUnits).length > 0 && isRedemptionError(result.code)) {
+        showToast(result.message, 'error')
+        usePointsPaymentStore.getState().clear()
+        void refreshPoints()
+      }
     }, QUOTE_DEBOUNCE_MS)
     return () => {
       cancelled = true
@@ -195,7 +221,7 @@ export function CheckoutPage() {
     }
     // redemption resume a `applied` por contenido (id + saldo esperado): comparar el objeto entero recrearía la petición en cada render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [step, cartFingerprint, applied?.reward.id, quoteDeliveryKey])
+  }, [step, cartFingerprint, applied?.reward.id, quoteDeliveryKey, pointsKey])
 
   // Las horas se calculan en hora de Cuba y se refrescan al cambiar de paso (no cada segundo).
   const deliveryTimes = useMemo(() => deliveryTimeOptions(new Date()), [step])
@@ -253,6 +279,8 @@ export function CheckoutPage() {
       customerName: form.name.trim(),
       customerPhone: toCubanE164(form.phone),
       redemption,
+      pointsUnits,
+      pointsExpectedBalance: pointsBalance,
       deliveryCityId,
       ...(elsewhereLocation ? { deliveryElsewhere: true, location: elsewhereLocation } : {}),
     })
@@ -260,6 +288,7 @@ export function CheckoutPage() {
     setSubmitting(false)
     if (result.ok) {
       orderCreated.current = true
+      usePointsPaymentStore.getState().clear()
       useCheckoutDraftStore.getState().clear()
       // La dirección queda guardada CON su localidad: la próxima vez no hay que volver a elegirla.
       const cityCode = showSelector && !elsewhere ? deliveryCityCode : null
@@ -277,6 +306,13 @@ export function CheckoutPage() {
         issues.length === 1 ? issues[0]!.message : issues.length > 1 ? `${issues.length} productos o negocios cambiaron.` : 'Revisa los productos afectados.'
       showToast(`Tu carrito cambió: ${detail}`, 'error')
       navigate('/carrito')
+      return
+    }
+    if (Object.keys(pointsUnits).length > 0 && isRedemptionError(result.code)) {
+      // Pagar con puntos falló (saldo distinto, no alcanzan): se explica y se queda aquí, sin perder el formulario.
+      usePointsPaymentStore.getState().clear()
+      void refreshPoints()
+      showToast(`Revisa tus puntos. ${result.message}`, 'error')
       return
     }
     showToast(`No pudimos confirmar tu pedido. ${result.message}`, 'error')
@@ -430,6 +466,18 @@ export function CheckoutPage() {
             itemCount={getCartItemCount(items)}
             subtotalEstimate={getCartSubtotalEstimate(items)}
             quote={quote}
+            pointsPayment={
+              isAuthenticated ? (
+                <PointsPaymentSection
+                  items={items}
+                  balance={pointsBalance}
+                  units={pointsUnits}
+                  onChangeLine={setPointsLine}
+                  onChangeAll={setPointsUnits}
+                  blockedByReward={applied !== null}
+                />
+              ) : null
+            }
             promoNotice={promoNotice}
             quoteLoading={quoteLoading}
             online={online}
@@ -486,6 +534,8 @@ function ReviewStep(props: {
   itemCount: number
   subtotalEstimate: number
   quote: OrderQuote | null
+  /** "Pagar con puntos" (solo con cuenta): se muestra justo encima del total. */
+  pointsPayment?: ReactNode
   promoNotice: string | null
   quoteLoading: boolean
   online: boolean
@@ -523,12 +573,21 @@ function ReviewStep(props: {
         </p>
       )}
 
+      {props.pointsPayment}
+
       {quote ? (
         <section aria-label="Total del pedido" className="rounded-r-md bg-surface border border-border p-3 space-y-1">
           <QuoteRow label="Productos" value={formatCup(quote.productsTotal - quote.packagingTotal)} />
           {quote.packagingTotal > 0 && <QuoteRow label="Empaque" value={formatCup(quote.packagingTotal)} />}
           {quote.redemption && (
-            <QuoteRow label={`🎁 ${quote.redemption.rewardName} (${formatPoints(quote.redemption.pointsCost)})`} value={`−${formatCup(quote.pointsDiscount)}`} />
+            <QuoteRow
+              label={
+                quote.redemption.rewardId === null
+                  ? `⭐ Pagado con puntos (${formatPoints(quote.redemption.pointsCost)})`
+                  : `🎁 ${quote.redemption.rewardName} (${formatPoints(quote.redemption.pointsCost)})`
+              }
+              value={`−${formatCup(quote.pointsDiscount)}`}
+            />
           )}
           {(quote.deliveryFeeDiscount ?? 0) > 0 ? (
             <QuoteRow label={`🎁 Mensajería gratis (${formatCup(quote.deliveryFee)})`} value="Gratis" />
@@ -539,8 +598,15 @@ function ReviewStep(props: {
             />
           )}
           <QuoteRow label="Servicio Tráelo" value={formatCup(quote.platformFee)} />
-          <QuoteRow label="Total a pagar" value={formatCup(quote.total)} strong />
-          <p className="text-caption text-text-secondary">Calculado por Tráelo — el servidor lo vuelve a confirmar al crear el pedido.</p>
+          {quote.redemption && quote.totalBeforeRedemption !== undefined && (
+            <QuoteRow label="Total antes del canje" value={formatCup(quote.totalBeforeRedemption)} />
+          )}
+          <QuoteRow label={quote.redemption ? 'Total a pagar (después del canje)' : 'Total a pagar'} value={formatCup(quote.total)} strong />
+          <p className="text-caption text-text-secondary">
+            {quote.redemption
+              ? 'Calculado por Tráelo. Los puntos se descuentan al confirmar; el total final lo vuelve a calcular el servidor.'
+              : 'Calculado por Tráelo — el servidor lo vuelve a confirmar al crear el pedido.'}
+          </p>
         </section>
       ) : (
         <>

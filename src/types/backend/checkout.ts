@@ -17,6 +17,8 @@ export type CartItemInput = {
   /** Tipo/sabor elegido y agrego elegido (solo el nombre; el precio lo resuelve el backend). */
   optionName?: string;
   addonName?: string;
+  /** Unidades de esta línea que se pagan con puntos (enteras). Solo la cantidad: los puntos exactos los decide el servidor. */
+  pointsUnits?: number;
 };
 
 export type CartBusinessInput = {
@@ -56,6 +58,8 @@ export type CheckoutOrderInput = {
   deliveryCityId?: string;
   /** Entrega en "otra ubicación": con `location` (obligatoria aquí), mensajería por km desde el centro del pueblo. */
   deliveryElsewhere?: true;
+  /** Saldo de puntos visto en pantalla (con pagar con puntos): el servidor detecta datos viejos. */
+  pointsExpectedBalance?: number;
 };
 
 export type CreateAppOrderInput = {

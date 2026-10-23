@@ -41,6 +41,10 @@ export type OrderQuote = {
   pointsDiscount: number;
   /** Productos que paga en dinero: productsTotal − pointsDiscount. */
   productsToPay: number;
+  /** Puntos que se gastarían (0 sin canje ni pago con puntos). */
+  pointsRedeemed?: number;
+  /** Total antes del canje: productos + mensajería + Servicio Tráelo. `total` es el de después. */
+  totalBeforeRedemption?: number;
   deliveryFee: number;
   /** true = la mensajería es la tarifa FIJA entre localidades (se entrega en otra localidad que la de los negocios). */
   crossCityDelivery?: boolean;
@@ -53,7 +57,8 @@ export type OrderQuote = {
   platformFee: number;
   total: number;
   redemption: {
-    rewardId: string;
+    /** null = pago con puntos libre (no viene de una recompensa). */
+    rewardId: string | null;
     rewardName: string;
     pointsCost: number;
     moneyValue: number;
