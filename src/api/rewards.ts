@@ -15,6 +15,7 @@ export function getRewards() {
 export function quoteCheckout(input: {
   businesses: CartBusinessInput[];
   redemption?: RedemptionRequest;
+  pointsExpectedBalance?: number;
   promoCode?: string;
   /** Localidad donde se entrega (City.id): con otra que la de los negocios, la mensajería es la fija entre localidades. */
   deliveryCityId?: string;

@@ -12,6 +12,7 @@ import {
   outsideCityIssues,
   shouldShowCitySelector,
 } from '../features/city'
+import type { PointsUnits } from '../features/cart/pointsPayment'
 import { isPromoErrorCode, promoCodeToSend } from '../features/promo/promo'
 import { isRedemptionError, redemptionErrorMessage } from '../features/rewards'
 import { useCartStore, type CartItem } from '../store/cartStore'
@@ -50,6 +51,17 @@ export type CheckoutQuoteResult =
 /** Cómo se entrega respecto a la localidad de los negocios: otra localidad (tarifa fija) u "otra ubicación" (por km). */
 export type QuoteDelivery = { cityId?: string; elsewhere?: DeliveryLocation }
 
+/** Pagar con puntos: unidades enteras por línea + el saldo visto (el servidor decide los puntos exactos). */
+export type PointsPayment = { units: PointsUnits; expectedBalance?: number }
+
+function pointsParams(items: CartItem[], pointsPayment?: PointsPayment) {
+  const paying = pointsPayment !== undefined && Object.keys(pointsPayment.units).length > 0
+  return {
+    businesses: buildBusinessesInput(items, paying ? pointsPayment.units : {}),
+    ...(paying ? { pointsExpectedBalance: pointsPayment.expectedBalance } : {}),
+  }
+}
+
 function deliveryParams(delivery?: QuoteDelivery) {
   return {
     ...(delivery?.cityId ? { deliveryCityId: delivery.cityId } : {}),
@@ -61,17 +73,19 @@ export async function requestCheckoutQuote(
   items: CartItem[],
   redemption?: RedemptionRequest,
   delivery?: QuoteDelivery,
+  pointsPayment?: PointsPayment,
 ): Promise<CheckoutQuoteResult> {
   const promoCode = currentPromoCode()
+  const points = pointsParams(items, pointsPayment)
   try {
-    return { ok: true, quote: await quoteCheckout({ businesses: buildBusinessesInput(items), redemption, promoCode, ...deliveryParams(delivery) }) }
+    return { ok: true, quote: await quoteCheckout({ ...points, redemption, promoCode, ...deliveryParams(delivery) }) }
   } catch (error) {
     if (error instanceof ApiError && promoCode && isPromoErrorCode(error.code)) {
       // El servidor dice que la promoción no aplica (agotada, ya pidió antes, otra localidad…): se cotiza
       // SIN ella y se explica, en vez de dejar al cliente sin total. Solo se olvida el código si ya no sirve.
       forgetPromoUnlessWrongCity(error.code)
       try {
-        const quote = await quoteCheckout({ businesses: buildBusinessesInput(items), redemption, ...deliveryParams(delivery) })
+        const quote = await quoteCheckout({ ...points, redemption, ...deliveryParams(delivery) })
         return { ok: true, quote, promoNotice: error.message }
       } catch (retryError) {
         return failedQuote(retryError)
@@ -220,7 +234,7 @@ export async function submitCheckout(params: BuildCheckoutInputParams): Promise<
     // La promoción es de un solo uso por persona: ya se usó (o ya no aplicaba), se olvida el código.
     usePromoStore.getState().clear()
     useOrderStore.getState().setLastCreatedOrder(order)
-    if (params.redemption) {
+    if (params.redemption || Object.keys(params.pointsUnits ?? {}).length > 0) {
       // Los puntos ya se descontaron en el servidor junto con el pedido: se actualiza el saldo y las recompensas.
       clearRedemption()
       void refreshPoints()

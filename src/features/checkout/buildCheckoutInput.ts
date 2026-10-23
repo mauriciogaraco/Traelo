@@ -2,6 +2,7 @@ import type { CartItem } from '../../store/cartStore';
 import type { CartBusinessInput, CheckoutOrderInput } from '../../types/backend/checkout';
 import type { DeliveryLocation } from '../../types/backend/location';
 import type { RedemptionRequest } from '../../types/backend/rewards';
+import { unitsForLine, type PointsUnits } from '../cart/pointsPayment';
 
 export type BuildCheckoutInputParams = {
   items: CartItem[];
@@ -28,6 +29,10 @@ export type BuildCheckoutInputParams = {
    * detectar datos viejos): nunca costo, descuento ni totales — el servidor los resuelve.
    */
   redemption?: RedemptionRequest;
+  /** Unidades de cada línea que se pagan con puntos (solo con cuenta, y no junto a un canje). */
+  pointsUnits?: PointsUnits;
+  /** Saldo de puntos visto en pantalla: solo sirve para que el servidor detecte datos viejos. */
+  pointsExpectedBalance?: number;
   /** Código de la promoción "primera mensajería gratis" (solo el código; el servidor valida y calcula). */
   promoCode?: string;
   /** Localidad donde se entrega (City.id); solo con 2+ localidades. El servidor decide la mensajería. */
@@ -37,7 +42,7 @@ export type BuildCheckoutInputParams = {
 };
 
 /** Agrupa los productos del carrito por negocio, con el formato del backend (sin precios definitivos). */
-export function buildBusinessesInput(items: CartItem[]): CartBusinessInput[] {
+export function buildBusinessesInput(items: CartItem[], pointsUnits: PointsUnits = {}): CartBusinessInput[] {
   const byBusiness = new Map<string, CartItem[]>();
   for (const item of items) {
     const list = byBusiness.get(item.businessId) ?? [];
@@ -54,6 +59,7 @@ export function buildBusinessesInput(items: CartItem[]): CartBusinessInput[] {
       packagingName: item.packagingName ?? undefined,
       optionName: item.optionName ?? undefined,
       addonName: item.addonName ?? undefined,
+      ...(unitsForLine(item, pointsUnits) > 0 ? { pointsUnits: unitsForLine(item, pointsUnits) } : {}),
     })),
   }));
 }
@@ -75,7 +81,8 @@ export function buildCheckoutInput(params: BuildCheckoutInputParams): CheckoutOr
     location: params.location,
     customerName: params.customerName,
     customerPhone: params.customerPhone,
-    businesses: buildBusinessesInput(params.items),
+    businesses: buildBusinessesInput(params.items, params.pointsUnits),
+    pointsExpectedBalance: Object.keys(params.pointsUnits ?? {}).length > 0 ? params.pointsExpectedBalance : undefined,
     // Solo el id de la recompensa (y el saldo visto): el servidor resuelve costo, descuento y total.
     redemption: params.redemption,
     promoCode: params.promoCode,

@@ -142,3 +142,29 @@ describe('buildCheckoutInput — otra ubicación (mensajería por km)', () => {
     expect('deliveryElsewhere' in JSON.parse(JSON.stringify(input))).toBe(false);
   });
 });
+
+describe('buildCheckoutInput — pagar con puntos', () => {
+  it('manda solo las unidades pagadas con puntos por línea y el saldo visto, nunca puntos ni dinero', () => {
+    const input = buildCheckoutInput({
+      items: [item({ productId: 'p1' }), item({ productId: 'p2', quantity: 3 })],
+      clientRequestId: 'req-12345678',
+      address: 'x',
+      pointsUnits: { p1: 2, p2: 1 },
+      pointsExpectedBalance: 800,
+    });
+    expect(input.businesses[0].items.map((i) => i.pointsUnits)).toEqual([2, 1]);
+    expect(input.pointsExpectedBalance).toBe(800);
+    expect(JSON.stringify(input)).not.toMatch(/pointsCost|pointsDiscount|total/);
+  });
+
+  it('sin unidades elegidas no viaja nada de puntos', () => {
+    const input = buildCheckoutInput({ items: [item({})], clientRequestId: 'req-12345678', address: 'x', pointsUnits: {}, pointsExpectedBalance: 800 });
+    expect(input.businesses[0].items[0]).toEqual({ productId: 'p1', quantity: 2, expectedPrice: 500 });
+    expect(input.pointsExpectedBalance).toBeUndefined();
+  });
+
+  it('las unidades se acotan a la cantidad de la línea', () => {
+    const input = buildCheckoutInput({ items: [item({ quantity: 2 })], clientRequestId: 'req-12345678', address: 'x', pointsUnits: { p1: 9 }, pointsExpectedBalance: 5 });
+    expect(input.businesses[0].items[0].pointsUnits).toBe(2);
+  });
+});
