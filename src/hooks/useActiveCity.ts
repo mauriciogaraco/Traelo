@@ -1,3 +1,5 @@
+import { useCallback } from 'react'
+import { track } from '../analytics'
 import { findCity, getCities, needsCityChoice, resolveActiveCityCode, shouldShowCitySelector } from '../features/city'
 import { useCitiesStore } from '../store/citiesStore'
 import { useCityStore } from '../store/cityStore'
@@ -9,11 +11,20 @@ import { useCityStore } from '../store/cityStore'
 export function useActiveCity() {
   const selected = useCityStore((state) => state.selectedCityCode)
   const hasHydrated = useCityStore((state) => state.hasHydrated)
-  const chooseCity = useCityStore((state) => state.confirmCity)
+  const confirmCity = useCityStore((state) => state.confirmCity)
   useCitiesStore((state) => state.cities) // re-renderiza cuando llega la lista del servidor
   const cities = getCities()
   const cityCode = resolveActiveCityCode(selected, cities)
   const city = findCity(cityCode, cities)
+  /** La persona elige: se guarda y se registra city_selected (con la anterior si cambia). */
+  const chooseCity = useCallback(
+    (code: string) => {
+      const previous = useCityStore.getState().selectedCityCode
+      confirmCity(code)
+      track('city_selected', { properties: { cityCode: code, source: 'user', ...(previous && previous !== code ? { previous } : {}) } })
+    },
+    [confirmCity],
+  )
   return {
     cities,
     cityCode,

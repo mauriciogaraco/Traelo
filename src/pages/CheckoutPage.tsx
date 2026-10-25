@@ -262,6 +262,7 @@ export function CheckoutPage() {
 
   const handleConfirm = async () => {
     if (!online) {
+      track('checkout_error', { properties: { code: 'OFFLINE', stage: 'submit' } })
       showToast('Sin conexión: no podemos confirmar tu pedido ahora. Conéctate a Internet para continuar.', 'error')
       return
     }
@@ -300,6 +301,8 @@ export function CheckoutPage() {
       navigate(`/pedido/${result.order.id}`, { replace: true })
       return
     }
+    // Todo lo que sigue es un error que la persona ve: se registra para saber en qué se atoran.
+    track('checkout_error', { properties: { code: String(result.code ?? 'UNKNOWN'), stage: 'submit' } })
     if (result.code === 'CART_CHANGED') {
       const issues = useCartStore.getState().checkoutIssues
       const detail =

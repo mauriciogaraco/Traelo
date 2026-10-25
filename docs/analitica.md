@@ -116,3 +116,22 @@ Si la web sale antes, sus envíos reciben 404 y se descartan sin efectos (se pie
 - Solo hay pruebas unitarias de la lógica (el repositorio no tiene herramientas de pruebas de componentes); la
   instrumentación de las pantallas se verificó a mano en el navegador.
 - La app Android necesita su propia integración (el backend ya acepta `channel: APP`).
+
+## Analítica por ciudad (2026-10-25)
+
+El backend guarda `analytics_events.cityId` (rama `feat/analitica-por-ciudad`, migración
+`20261025100000_analytics_event_city`). La web aporta:
+
+- **`properties.cityCode`** en todos los eventos: la localidad que la persona eligió (`resolveActiveCityCode`),
+  **no** el store del catálogo, que arranca en Güira por defecto. Mientras no haya elegido, el evento no lleva ciudad
+  (el backend la deduce del negocio o de la sesión) en vez de etiquetarse como de Güira.
+- **`session_started`**, una vez por pestaña/sesión (`src/analytics/session.ts`), cuando se lee la localidad guardada o la
+  del enlace `?ciudad=` (o a los 4 s). Cuenta también a quien entra y se va sin tocar nada. Propiedades: `entry` (primer
+  tramo de la ruta), `referrer` (solo el dominio externo), `utmSource`/`utmMedium`/`utmCampaign` y `viaCityLink`.
+- **`city_selected`**: elige localidad (`source: 'user'`, con `previous` si cambia) o llega con `?ciudad=` (`source: 'link'`).
+- **`checkout_error`**: el pedido falló y se le mostró un error (`code`, `stage: 'submit'`; `OFFLINE` si no había conexión).
+
+El servidor añade `order_placed` (con ciudad) y `order_blocked` (pedido o cotización rechazados). La web no los envía.
+
+**Orden de despliegue:** primero el backend; los nombres de evento nuevos dan 400 a todo el lote si el backend no los conoce
+(la web descarta ese lote, así que se perderían los eventos de ese rato).

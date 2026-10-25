@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { track } from '../analytics'
 import { cityFromQueryToApply, getCities, resolveActiveCityCode } from '../features/city'
 import { useCitiesStore } from '../store/citiesStore'
 import { switchCatalogCity } from '../services/catalogSync'
@@ -33,6 +34,7 @@ export function useCityBootstrap(): void {
     appliedFromQuery.current = next.key
     // Un enlace que ya dice la localidad cuenta como elección de esta visita (no se interrumpe con la pregunta).
     useCityStore.getState().confirmCity(next.code)
+    track('city_selected', { properties: { cityCode: next.code, source: 'link' } })
   }, [params, knownCities])
 
   const activeCode = hasHydrated ? resolveActiveCityCode(selected, getCities()) : null
