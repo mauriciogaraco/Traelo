@@ -13,6 +13,9 @@
  */
 
 export type EventType =
+  // Inicio del embudo: abrió la web (una vez por sesión) y eligió su localidad.
+  | 'session_started'
+  | 'city_selected'
   | 'business_view'
   | 'product_view'
   | 'search'
@@ -31,6 +34,8 @@ export type EventType =
   | 'promo_view'
   | 'promo_click'
   | 'promo_landing'
+  // La pantalla de pedido le mostró un error (properties.code / stage).
+  | 'checkout_error'
 
 export type EventProperties = Record<string, string | number | boolean | null | undefined>
 

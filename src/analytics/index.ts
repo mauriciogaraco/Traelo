@@ -1,11 +1,14 @@
 import { apiPost } from '../api/client'
 import { env } from '../config/env'
 import { useCartStore } from '../store/cartStore'
-import { useCatalogStore } from '../store/catalogStore'
+import { getCities, resolveActiveCityCode } from '../features/city'
+import { useCitiesStore } from '../store/citiesStore'
+import { useCityStore } from '../store/cityStore'
 import { withCity } from './city'
 import { diffCartItems } from './cartDiff'
 import { isOptedOut, writeOptOut } from './consent'
 import { getSessionId, getVisitorId, randomUuid, resetIdentity } from './ids'
+import { claimSessionStart, sessionStartProperties } from './session'
 import { createTracker, type EventType, type TrackData } from './tracker'
 
 export { recordRoute, sourceOfCurrentRoute } from './routeKind'
@@ -35,13 +38,54 @@ const tracker = createTracker({
 })
 
 /**
+ * Localidad desde la que compra la persona (la misma que usa el resto de la web), o null mientras no la haya
+ * elegido: así un visitante sin decidir no se etiqueta como de la ciudad por defecto del catálogo.
+ */
+function activeCityCode(): string | null {
+  const { hasHydrated, selectedCityCode } = useCityStore.getState()
+  return hasHydrated ? resolveActiveCityCode(selectedCityCode, getCities()) : null
+}
+
+/** Máxima espera por la localidad antes de registrar el inicio de sesión sin ella. */
+const SESSION_START_WAIT_MS = 4000
+
+/**
+ * Registra `session_started` una vez por sesión, ya con la localidad si se puede saber: espera a que se lea
+ * la guardada (o la del enlace ?ciudad=) y, si tarda o no hay, lo registra igual a los 4 s.
+ */
+function startSessionTracking(): () => void {
+  let done = false
+  const attempt = (force: boolean) => {
+    if (done) return
+    if (!activeCityCode() && !force) return
+    done = true
+    if (!isEnabled() || !claimSessionStart(typeof sessionStorage === 'undefined' ? null : sessionStorage, getSessionId())) return
+    const properties = sessionStartProperties({
+      href: window.location.href,
+      referrer: document.referrer,
+      ownHost: window.location.hostname,
+    })
+    track('session_started', { properties })
+  }
+  const stopCityStore = useCityStore.subscribe(() => attempt(false))
+  const stopCities = useCitiesStore.subscribe(() => attempt(false))
+  const timer = window.setTimeout(() => attempt(true), SESSION_START_WAIT_MS)
+  attempt(false)
+  return () => {
+    stopCityStore()
+    stopCities()
+    window.clearTimeout(timer)
+  }
+}
+
+/**
  * Registra un evento de uso (visita, búsqueda, carrito…). Nunca lanza ni espera: la analítica no
  * puede afectar a la pantalla. `flush: true` lo envía ya (p.ej. al iniciar sesión, para unir el
  * historial anónimo a la cuenta sin esperar).
  */
 export function track(type: EventType, data?: TrackData, options?: { flush?: boolean }): void {
   try {
-    tracker.track(type, withCity(data, useCatalogStore.getState().cityCode), options)
+    tracker.track(type, withCity(data, activeCityCode()), options)
   } catch {
     // Telemetría: un fallo aquí jamás debe verse.
   }
@@ -121,6 +165,7 @@ function startCartTracking(): () => void {
 export function startAnalytics(): () => void {
   tracker.restore()
   const stopCart = startCartTracking()
+  const stopSession = startSessionTracking()
 
   const flushNow = () => void tracker.flush({ keepalive: true })
   const onVisibility = () => {
@@ -134,6 +179,7 @@ export function startAnalytics(): () => void {
 
   return () => {
     stopCart()
+    stopSession()
     document.removeEventListener('visibilitychange', onVisibility)
     window.removeEventListener('pagehide', flushNow)
     window.removeEventListener('online', onOnline)
