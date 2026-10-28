@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { track } from '../analytics'
 import { useNavigate } from 'react-router-dom'
+import { PayOnDeliveryNote } from '../components/checkout/PayOnDeliveryNote'
 import { CityNote } from '../components/city/CityNote'
 import { DeliveryCityPicker, type DeliveryPreview } from '../components/city/DeliveryCityPicker'
 import { formatCup } from '../components/catalog/Price'
@@ -442,6 +443,7 @@ export function CheckoutPage() {
             </section>
 
             {missingText && <p className="text-caption text-text-secondary">{missingText}</p>}
+            <PayOnDeliveryNote variant="compact" />
             <Button fullWidth disabled={!canContinue} onClick={() => {
                 if (!canContinue) return
                 track('checkout_step_completed', { properties: { step: 'where' } })
@@ -630,6 +632,8 @@ function ReviewStep(props: {
           Sin conexión — no podemos confirmar tu pedido ahora. Conéctate a Internet para continuar.
         </p>
       )}
+
+      <PayOnDeliveryNote />
 
       <div className="space-y-2">
         <Button fullWidth loading={props.submitting} disabled={!props.online} onClick={props.onConfirm}>

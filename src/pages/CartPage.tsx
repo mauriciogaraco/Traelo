@@ -5,6 +5,7 @@ import { BusinessStatusBadge } from '../components/catalog/BusinessStatusBadge'
 import { CatalogImage } from '../components/catalog/CatalogImage'
 import { formatCup } from '../components/catalog/Price'
 import { RedemptionSection } from '../components/rewards/RedemptionSection'
+import { PayOnDeliveryNote } from '../components/checkout/PayOnDeliveryNote'
 import { Button } from '../components/ui/Button'
 import { EmptyState } from '../components/ui/EmptyState'
 import { Icon } from '../components/ui/Icon'
@@ -221,6 +222,7 @@ export function CartPage() {
             <span className="text-h3 text-text-primary">{formatCup(subtotalEstimate)}</span>
           </div>
           <p className="text-caption text-text-secondary">El delivery y el total final se calculan al confirmar.</p>
+          <PayOnDeliveryNote variant="compact" />
           <Button fullWidth loading={checking} onClick={handleContinue}>
             Continuar
           </Button>
