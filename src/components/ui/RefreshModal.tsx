@@ -1,26 +1,31 @@
 import { useState } from 'react'
 import { readStorage, writeStorage, STORAGE_KEYS } from '../../lib/storage'
+import { isHalloweenActive } from '../../seasonal/halloween'
+import { HalloweenRefreshArt } from '../../seasonal/HalloweenRefreshArt'
 
 /**
- * Versión de la web (mayor.menor). Súbela (1.10 → 1.11…) para mostrar el aviso "Actualizamos Tráelo" a quien
+ * Versión de la web (mayor.menor.parche). Súbela (1.0.1 → 1.0.2…) para mostrar el aviso "Actualizamos Tráelo" a quien
  * no tenga guardada ninguna versión o tenga una MENOR; quien ya aceptó esta (o una mayor) no lo vuelve a ver.
+ * Las versiones guardadas con el formato viejo "mayor.menor" (1.9, 1.10…) cuentan siempre como anteriores.
  */
-export const WEB_VERSION = '1.11'
+export const WEB_VERSION = '1.0.1'
 
 const CLEANUP_TIMEOUT_MS = 3000
 
-/** Convierte "1.10" en [1, 10]; cualquier otra cosa (p. ej. la fecha de avisos viejos) no es una versión. */
+/** Convierte "1.0.1" en [1, 0, 1]; cualquier otra cosa (p. ej. la fecha de avisos viejos) no es una versión. */
 function parseVersion(value: string | null | undefined): number[] | null {
   if (typeof value !== 'string' || !/^\d+(\.\d+)*$/.test(value.trim())) return null
   return value.trim().split('.').map(Number)
 }
 
-/** true si `a` es una versión menor que `b`, comparando número a número (1.9 < 1.10). */
+/** true si `a` es una versión menor que `b`, comparando número a número (1.0.9 < 1.0.10). */
 export function isOlderVersion(a: string | null | undefined, b: string): boolean {
   const left = parseVersion(a)
   const right = parseVersion(b)
   if (!right) return false
   if (!left) return true // sin versión guardada (o ilegible): hay que avisar
+  // Formato viejo "mayor.menor" (1.9, 1.10…): anterior a cualquier "mayor.menor.parche", aunque el número sea mayor.
+  if (left.length < 3 && right.length >= 3) return true
   for (let i = 0; i < Math.max(left.length, right.length); i++) {
     const diff = (left[i] ?? 0) - (right[i] ?? 0)
     if (diff !== 0) return diff < 0
@@ -84,12 +89,16 @@ export function RefreshModal() {
       aria-modal="true"
       aria-labelledby="refresh-modal-title"
     >
-      <div className="w-full max-w-sm rounded-3xl bg-surface shadow-2xl overflow-hidden animate-scale-in">
+      <div className="relative w-full max-w-sm rounded-3xl bg-surface shadow-2xl overflow-hidden animate-scale-in">
         <div className="h-2 bg-gradient-primary" />
         <div className="p-7 text-center">
-          <div className="mb-4 text-5xl" aria-hidden="true">
-            🔄
-          </div>
+          {isHalloweenActive() ? (
+            <HalloweenRefreshArt />
+          ) : (
+            <div className="mb-4 text-5xl" aria-hidden="true">
+              🔄
+            </div>
+          )}
           <h2 id="refresh-modal-title" className="text-xl font-extrabold text-text-primary">
             Actualizamos Tráelo
           </h2>
