@@ -47,9 +47,11 @@ export function Ghost(props: ArtProps) {
 export function WitchHat(props: ArtProps) {
   return (
     <svg viewBox="0 0 32 28" {...base} {...props}>
-      <path d="M17 1c3 .2 4.4 1.4 5.6 4.6L25 17H8.5L13 7.5C14 4.4 15 1.2 17 1z" fill="#3B1A63" />
-      <path d="M9.4 14.2h14.6l.8 3.3H8.6z" fill="#F97316" />
-      <ellipse cx="16.5" cy="21" rx="14" ry="4.6" fill="#2A1148" />
+      <g stroke="#FFEDD5" strokeOpacity="0.55" strokeWidth="0.8" strokeLinejoin="round">
+        <path d="M17 1c3 .2 4.4 1.4 5.6 4.6L25 17H8.5L13 7.5C14 4.4 15 1.2 17 1z" fill="#3A2417" />
+        <ellipse cx="16.5" cy="21" rx="14" ry="4.6" fill="#2A180E" />
+      </g>
+      <path d="M9.4 14.2h14.6l.8 3.3H8.6z" fill="#FBBF24" />
     </svg>
   )
 }

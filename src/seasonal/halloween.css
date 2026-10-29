@@ -1,23 +1,23 @@
 /*
  * Halloween — capa visual temporal (se carga solo si `data-season="halloween"` está activo, ver halloween.ts).
  * Todo cuelga de `:root[data-season='halloween']`, así que quitar la campaña no deja rastro en el diseño habitual.
- * Paleta temporal: noche #1F1A16 (el oscuro de la marca), ciruela #3B1A63 y violeta #8B5CF6 solo como acentos.
+ * Paleta temporal: noche #1F1A16 (el oscuro de la marca), marrón quemado #7C2D12 y el naranja/ámbar de Tráelo. Sin morado.
  */
 :root[data-season='halloween'] {
   --season-night: #1f1a16;
-  --season-plum: #3b1a63;
-  --season-violet: #8b5cf6;
+  --season-ember: #7c2d12;
+  --season-amber: #fbbf24;
 }
 
-/* Banner de Halloween del Home: noche → ciruela, con un brillo naranja de marca. */
+/* Banner de Halloween del Home: noche → marrón quemado, con un brillo naranja de marca. */
 :root[data-season='halloween'] .season-banner {
   background:
-    radial-gradient(120% 140% at 100% 100%, rgb(249 115 22 / 0.5), transparent 55%),
-    linear-gradient(135deg, var(--season-night) 0%, var(--season-plum) 100%);
-  border: 1px solid rgb(249 115 22 / 0.35);
+    radial-gradient(110% 150% at 100% 100%, rgb(249 115 22 / 0.55), transparent 58%),
+    linear-gradient(135deg, var(--season-night) 0%, var(--season-ember) 100%);
+  border: 1px solid rgb(249 115 22 / 0.4);
 }
 
-/* Filo del header: un hilo naranja → violeta → naranja. */
+/* Filo del header: un hilo naranja → ámbar → naranja. */
 :root[data-season='halloween'] .season-header::after {
   content: '';
   position: absolute;
@@ -26,7 +26,7 @@
   bottom: -1px;
   height: 2px;
   pointer-events: none;
-  background: linear-gradient(90deg, #f97316, var(--season-violet) 50%, #f97316);
+  background: linear-gradient(90deg, #f97316, var(--season-amber) 50%, #f97316);
   opacity: 0.85;
 }
 
