@@ -23,6 +23,7 @@ Por fecha local del dispositivo, del **28 de octubre al 2 de noviembre de 2026**
 2. Quitar las líneas que la usan:
    - `src/main.tsx`: el `import { initSeason }` y la llamada `initSeason()`.
    - `src/pages/HomePage.tsx`: los dos `import` y `<HalloweenHeroDecor />` / `<HalloweenBanner />`.
+   - `src/components/ui/RefreshModal.tsx`: los dos `import` de `seasonal` y el condicional que muestra `<HalloweenRefreshArt />` en lugar del 🔄.
    - `src/App.tsx`: el `import` de `HALLOWEEN_PATH`, el `lazy` de `HalloweenPage` y su `<Route>`.
    - `src/components/ui/Logo.tsx`: el `import`, `<HalloweenLogoAccent />` y la clase `relative` del badge (inofensiva si se deja).
    - `src/components/layout/TopHeader.tsx`: la clase `season-header`.
