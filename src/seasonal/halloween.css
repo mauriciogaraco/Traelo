@@ -1,0 +1,43 @@
+/*
+ * Halloween — capa visual temporal (se carga solo si `data-season="halloween"` está activo, ver halloween.ts).
+ * Todo cuelga de `:root[data-season='halloween']`, así que quitar la campaña no deja rastro en el diseño habitual.
+ * Paleta temporal: noche #1F1A16 (el oscuro de la marca), marrón quemado #7C2D12 y el naranja/ámbar de Tráelo. Sin morado.
+ */
+:root[data-season='halloween'] {
+  --season-night: #1f1a16;
+  --season-ember: #7c2d12;
+  --season-amber: #fbbf24;
+}
+
+/* Banner de Halloween del Home: noche → marrón quemado, con un brillo naranja de marca. */
+:root[data-season='halloween'] .season-banner {
+  background:
+    radial-gradient(110% 150% at 100% 100%, rgb(249 115 22 / 0.55), transparent 58%),
+    linear-gradient(135deg, var(--season-night) 0%, var(--season-ember) 100%);
+  border: 1px solid rgb(249 115 22 / 0.4);
+}
+
+/* Filo del header: un hilo naranja → ámbar → naranja. */
+:root[data-season='halloween'] .season-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, #f97316, var(--season-amber) 50%, #f97316);
+  opacity: 0.85;
+}
+
+/* Murciélagos: un vaivén lento. Se apaga con "reducir movimiento". */
+@keyframes season-float {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-4px) rotate(4deg); }
+}
+.season-float { animation: season-float 3.6s ease-in-out infinite; }
+.season-float-slow { animation: season-float 5s ease-in-out infinite reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .season-float,
+  .season-float-slow { animation: none; }
+}

@@ -15,6 +15,7 @@ import { useCatalogBootstrap } from "./hooks/useCatalogBootstrap";
 import { useCityBootstrap } from "./hooks/useCityBootstrap";
 import { usePromoBootstrap } from "./hooks/usePromoBootstrap";
 import { PROMO_PATH } from "./features/promo/promo";
+import { HALLOWEEN_PATH } from "./seasonal/halloween";
 import { useNotificationsBootstrap } from "./hooks/useNotificationsBootstrap";
 import { usePointsBootstrap } from "./hooks/usePointsBootstrap";
 import { useSessionBootstrap } from "./hooks/useSessionBootstrap";
@@ -44,6 +45,7 @@ const ReviewsPage = lazy(() => import("./pages/ReviewsPage").then((m) => ({ defa
 const PointsPage = lazy(() => import("./pages/PointsPage").then((m) => ({ default: m.PointsPage })));
 const ReferralsPage = lazy(() => import("./pages/ReferralsPage").then((m) => ({ default: m.ReferralsPage })));
 const ReferralLandingPage = lazy(() => import("./pages/ReferralLandingPage").then((m) => ({ default: m.ReferralLandingPage })));
+const HalloweenPage = lazy(() => import("./seasonal/HalloweenPage").then((m) => ({ default: m.HalloweenPage })));
 const NotificationsPage = lazy(() => import("./pages/NotificationsPage").then((m) => ({ default: m.NotificationsPage })));
 
 /** Arranque del catálogo (caché local + sincronización con el backend), una sola vez. */
@@ -167,6 +169,7 @@ export default function App() {
               <Route path="/checkout" element={<Narrow><CheckoutPage /></Narrow>} />
               <Route path="/mandado" element={<Narrow><MandadoPage /></Narrow>} />
               <Route path={PROMO_PATH} element={<PromoPage />} />
+              <Route path={HALLOWEEN_PATH} element={<HalloweenPage />} />
               <Route path="/cuenta" element={<AccountPage />} />
               <Route path="/direcciones" element={<AddressesPage />} />
               <Route path="/favoritos" element={<FavoritesPage />} />

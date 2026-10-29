@@ -27,7 +27,7 @@ export function TopHeader({ hideOnMobile = false }: { hideOnMobile?: boolean }) 
 
   return (
     <header
-      className={`sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-border pt-[env(safe-area-inset-top,0px)] ${
+      className={`season-header sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-border pt-[env(safe-area-inset-top,0px)] ${
         hideOnMobile ? 'hidden lg:block' : ''
       }`}
     >

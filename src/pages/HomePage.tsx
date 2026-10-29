@@ -12,6 +12,8 @@ import { HeroLogoStrip } from '../components/home/HeroLogoStrip'
 import { MandadoBanner } from '../components/home/MandadoBanner'
 import { RegisterPointsBanner } from '../components/home/RegisterPointsBanner'
 import { ShareSection } from '../components/home/ShareSection'
+import { HalloweenBanner } from '../seasonal/HalloweenBanner'
+import { HalloweenHeroDecor } from '../seasonal/HalloweenHeroDecor'
 
 // El flyer de la app se baja aparte: no suma peso a la carga inicial del Home.
 const AppDownloadFlyer = lazy(() => import('../components/home/AppDownloadFlyer').then((m) => ({ default: m.AppDownloadFlyer })))
@@ -109,6 +111,7 @@ export function HomePage() {
     <div className="px-4 lg:px-6 pt-3 lg:pt-6 space-y-5 lg:space-y-8 animate-fade-in">
       <section className="relative overflow-hidden rounded-[24px] lg:min-h-[280px] lg:flex lg:items-end">
         <HeroBusinessCarousel />
+        <HalloweenHeroDecor />
         <div className="relative p-4 lg:p-8 space-y-1 lg:max-w-xl">
           {!hasHeroPhotos && <HeroLogoStrip />}
           <h1 className="text-h1 lg:text-display text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.35)]">¿Qué te traemos hoy?</h1>
@@ -118,6 +121,8 @@ export function HomePage() {
           <SearchLink />
         </div>
       </section>
+
+      <HalloweenBanner />
 
       <MandadoBanner />
 

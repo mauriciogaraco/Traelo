@@ -1,4 +1,5 @@
 import logomarkWhite from '../../assets/traelo-logomark-white.png'
+import { HalloweenLogoAccent } from '../../seasonal/HalloweenLogoAccent'
 
 interface LogoProps {
   /** Tamaño del isotipo: sm 36 · md 44 (el del header de la app) · lg 64. */
@@ -30,7 +31,7 @@ export function Logo({ size = 'md', showWordmark = false, className = '' }: Logo
         // `rounded-[16px]` a propósito, no `rounded-r-lg`: ese nombre choca con la utilidad nativa
         // de Tailwind "redondear solo el lado derecho" y dejaba las esquinas izquierda/derecha con
         // radios distintos (16px vs 8px) — por eso se veía chueco.
-        className={`${badgeSize[size]} rounded-[16px] bg-gradient-hero flex items-center justify-center shadow-[0_4px_8px_0_rgb(var(--c-primary)/0.3)] shrink-0`}
+        className={`${badgeSize[size]} relative rounded-[16px] bg-gradient-hero flex items-center justify-center shadow-[0_4px_8px_0_rgb(var(--c-primary)/0.3)] shrink-0`}
       >
         <img
           src={logomarkWhite}
@@ -41,6 +42,7 @@ export function Logo({ size = 'md', showWordmark = false, className = '' }: Logo
           loading="eager"
           decoding="async"
         />
+        <HalloweenLogoAccent />
       </span>
       {showWordmark && (
         <span className="text-h2 font-extrabold text-text-primary tracking-tight">Tráelo</span>
