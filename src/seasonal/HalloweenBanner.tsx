@@ -1,57 +1,31 @@
-import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { useCatalogStore } from '../store/catalogStore'
-import { useStatsStore } from '../store/statsStore'
 import { useQuickAdd } from '../hooks/useQuickAdd'
-import { businessPath, findBusinessByParam } from '../features/catalog'
 import { ProductCard } from '../components/catalog/ProductCard'
-import { categorySearchHref } from '../components/catalog/CategoryCard'
 import { Rail, Section } from '../components/catalog/Section'
 import { ALL_BUSINESSES_HREF } from '../components/home/AllBusinessesLink'
 import { Icon } from '../components/ui/Icon'
-import { isHalloweenActive } from './halloween'
+import { HALLOWEEN_PATH, isHalloweenActive } from './halloween'
 import { Bat, Ghost, Pumpkin } from './HalloweenArt'
-import { FEATURED_BUSINESS_SLUG, SEASON_CATEGORY_SLUGS, pickSeasonProducts } from './seasonalFeatured'
+import { useSeasonProducts } from './useSeasonProducts'
 
-const PRIMARY_CTA =
-  'inline-flex h-10 items-center gap-1 rounded-full bg-gradient-primary px-4 text-[14px] font-bold text-white shadow-btn-primary transition hover:brightness-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40'
-const SECONDARY_CTA =
-  'inline-flex h-10 items-center gap-1 rounded-full border border-white/40 px-4 text-[14px] font-bold text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40'
+/** Cuántos productos de la campaña se asoman en el Home; la lista completa está en `HALLOWEEN_PATH`. */
+const HOME_PREVIEW_LIMIT = 12
 
 /**
- * Halloween en el Home (entre el hero y el banner de Mandado): un saludo de marca y, debajo, un carrusel con los
- * productos DISPONIBLES del negocio destacado (Cronos) y de los dulces, mezclados. No anuncia descuentos ni sorteos.
- * Los botones llevan al negocio destacado (si está en la localidad) y a los dulces. Fuera de campaña no pinta nada.
+ * Halloween en el Home (entre el hero y el banner de Mandado): un saludo de marca con UN botón a la lista completa
+ * y, debajo, un adelanto con los productos DISPONIBLES del negocio destacado (Cronos) y de los dulces, mezclados.
+ * No anuncia descuentos ni sorteos. Fuera de campaña no pinta nada.
  */
 export function HalloweenBanner() {
-  const businesses = useCatalogStore((state) => state.businesses)
-  const products = useCatalogStore((state) => state.products)
-  const categories = useCatalogStore((state) => state.categories)
-  const stats = useStatsStore((state) => state.stats)
+  const { featured, seasonProducts } = useSeasonProducts(HOME_PREVIEW_LIMIT)
   const quickAdd = useQuickAdd()
-
-  const featured = useMemo(() => findBusinessByParam(FEATURED_BUSINESS_SLUG, businesses), [businesses])
-  const seasonCategories = useMemo(
-    () => SEASON_CATEGORY_SLUGS.map((slug) => categories.find((c) => c.slug === slug)).filter((c) => c !== undefined),
-    [categories],
-  )
-  const seasonProducts = useMemo(
-    () =>
-      pickSeasonProducts(
-        products,
-        { businessId: featured?.id ?? null, categoryIds: new Set(seasonCategories.map((c) => c.id)) },
-        stats,
-      ),
-    [products, featured, seasonCategories, stats],
-  )
 
   if (!isHalloweenActive()) return null
 
-  const featuredHref = featured ? businessPath(featured.id, businesses) : null
-  const sweetsCategory = seasonCategories[0]
-  const sweetsHref = sweetsCategory ? categorySearchHref(sweetsCategory) : null
-  // Sin Cronos ni dulces en la localidad, un único botón lleva a todos los negocios.
-  const fallbackHref = featuredHref || sweetsHref ? null : ALL_BUSINESSES_HREF
+  // Sin nada que ofrecer en la localidad, el botón lleva a todos los negocios.
+  const hasProducts = seasonProducts.length > 0
+  const to = hasProducts ? HALLOWEEN_PATH : ALL_BUSINESSES_HREF
+  const cta = !hasProducts ? 'Ver negocios' : featured ? `Ver ${featured.name} y dulces` : 'Ver dulces'
 
   return (
     <>
@@ -66,29 +40,16 @@ export function HalloweenBanner() {
         <p className="relative mt-0.5 text-caption text-white/85">
           Que el único susto sea de película. Pide hoy y te lo llevamos a la puerta.
         </p>
-        <div className="relative mt-2.5 flex flex-wrap gap-2">
-          {featured && featuredHref && (
-            <Link to={featuredHref} className={PRIMARY_CTA}>
-              Ver {featured.name}
-              <Icon name="chevron-right" size={16} />
-            </Link>
-          )}
-          {sweetsHref && (
-            <Link to={sweetsHref} className={featuredHref ? SECONDARY_CTA : PRIMARY_CTA}>
-              Ver dulces
-              <Icon name="chevron-right" size={16} />
-            </Link>
-          )}
-          {fallbackHref && (
-            <Link to={fallbackHref} className={PRIMARY_CTA}>
-              Ver negocios
-              <Icon name="chevron-right" size={16} />
-            </Link>
-          )}
-        </div>
+        <Link
+          to={to}
+          className="relative mt-2.5 inline-flex h-10 items-center gap-1 rounded-full bg-gradient-primary px-4 text-[14px] font-bold text-white shadow-btn-primary transition hover:brightness-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+        >
+          {cta}
+          <Icon name="chevron-right" size={16} />
+        </Link>
       </div>
 
-      {seasonProducts.length > 0 && (
+      {hasProducts && (
         <Section title={featured ? `${featured.name} y dulces` : 'Dulces para esta noche'}>
           <Rail>
             {seasonProducts.map((product) => (

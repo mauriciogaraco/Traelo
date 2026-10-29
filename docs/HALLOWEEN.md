@@ -7,7 +7,7 @@ Toda la ambientación vive en `src/seasonal/` y se apaga sola. No toca precios, 
 - `src/seasonal/halloween.ts` — decide si la campaña está activa y marca `<html data-season="halloween">`. Baja `halloween.css` (≈0,9 kB) **solo** si está activa.
 - `src/seasonal/halloween.css` — todos los estilos, colgados de `:root[data-season='halloween']`.
 - `src/seasonal/HalloweenArt.tsx` — SVG inline (calabaza, murciélago, fantasma, sombrero, telaraña).
-- `HalloweenBanner` (Home, entre el hero y Mandado: saludo de marca + carrusel "Cronos y dulces" con los productos DISPONIBLES de Cronos y de las categorías Dulces y Confituras, mezclados; el negocio y las categorías se cambian en `seasonalFeatured.ts`), `HalloweenHeroDecor` (telaraña/murciélagos en el hero), `HalloweenLogoAccent` (sombrerito sobre el logo; el isotipo no cambia).
+- `HalloweenBanner` (Home, entre el hero y Mandado: saludo de marca con UN botón a la lista completa + adelanto "Cronos y dulces" con los productos DISPONIBLES de Cronos y de las categorías Dulces y Confituras, mezclados; el negocio y las categorías se cambian en `seasonalFeatured.ts`), `HalloweenPage` (ruta `/halloween`, la lista completa; fuera de campaña vuelve al Home), `HalloweenHeroDecor` (telaraña/murciélagos en el hero), `HalloweenLogoAccent` (sombrerito sobre el logo; el isotipo no cambia).
 - Hilo naranja→ámbar en el filo del header (clase `season-header`).
 
 ## Cuándo se ve
@@ -20,9 +20,10 @@ Por fecha local del dispositivo, del **28 de octubre al 2 de noviembre de 2026**
 ## Retirar del todo
 
 1. Borrar la carpeta `src/seasonal/` y este archivo.
-2. Quitar las 6 líneas que la usan:
+2. Quitar las líneas que la usan:
    - `src/main.tsx`: el `import { initSeason }` y la llamada `initSeason()`.
    - `src/pages/HomePage.tsx`: los dos `import` y `<HalloweenHeroDecor />` / `<HalloweenBanner />`.
+   - `src/App.tsx`: el `import` de `HALLOWEEN_PATH`, el `lazy` de `HalloweenPage` y su `<Route>`.
    - `src/components/ui/Logo.tsx`: el `import`, `<HalloweenLogoAccent />` y la clase `relative` del badge (inofensiva si se deja).
    - `src/components/layout/TopHeader.tsx`: la clase `season-header`.
 3. `npm run typecheck && npm test`.

@@ -9,6 +9,9 @@
 export const HALLOWEEN_START = '2026-10-28'
 export const HALLOWEEN_END = '2026-11-02'
 
+/** Ruta de la lista completa de la campaña (fuera de campaña vuelve al Home). */
+export const HALLOWEEN_PATH = '/halloween'
+
 function localIsoDate(now: Date): string {
   const month = String(now.getMonth() + 1).padStart(2, '0')
   const day = String(now.getDate()).padStart(2, '0')
