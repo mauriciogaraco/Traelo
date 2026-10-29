@@ -7,7 +7,7 @@ Toda la ambientación vive en `src/seasonal/` y se apaga sola. No toca precios, 
 - `src/seasonal/halloween.ts` — decide si la campaña está activa y marca `<html data-season="halloween">`. Baja `halloween.css` (≈0,9 kB) **solo** si está activa.
 - `src/seasonal/halloween.css` — todos los estilos, colgados de `:root[data-season='halloween']`.
 - `src/seasonal/HalloweenArt.tsx` — SVG inline (calabaza, murciélago, fantasma, sombrero, telaraña).
-- `HalloweenBanner` (Home, entre el hero y Mandado: saludo de marca + carrusel "Antójate con Cronos" con SUS productos disponibles; el negocio destacado se cambia en `seasonalFeatured.ts`), `HalloweenHeroDecor` (telaraña/murciélagos en el hero), `HalloweenLogoAccent` (sombrerito sobre el logo; el isotipo no cambia).
+- `HalloweenBanner` (Home, entre el hero y Mandado: saludo de marca + carrusel "Cronos y dulces" con los productos DISPONIBLES de Cronos y de las categorías Dulces y Confituras, mezclados; el negocio y las categorías se cambian en `seasonalFeatured.ts`), `HalloweenHeroDecor` (telaraña/murciélagos en el hero), `HalloweenLogoAccent` (sombrerito sobre el logo; el isotipo no cambia).
 - Hilo naranja→ámbar en el filo del header (clase `season-header`).
 
 ## Cuándo se ve

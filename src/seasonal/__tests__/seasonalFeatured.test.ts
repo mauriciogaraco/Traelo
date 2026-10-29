@@ -1,36 +1,58 @@
 import type { CatalogProduct, CatalogStats } from '../../types/backend/catalog'
-import { pickFeaturedProducts } from '../seasonalFeatured'
+import { pickSeasonProducts } from '../seasonalFeatured'
 
 const product = (id: string, name: string, extra: Partial<CatalogProduct> = {}): CatalogProduct =>
-  ({ id, name, businessId: 'cronos-id', available: true, ...extra }) as CatalogProduct
+  ({ id, name, businessId: 'otro', categoryId: null, available: true, ...extra }) as CatalogProduct
+
+const cronos = (id: string, name: string, extra: Partial<CatalogProduct> = {}) => product(id, name, { businessId: 'cronos-id', ...extra })
+const sweet = (id: string, name: string, extra: Partial<CatalogProduct> = {}) => product(id, name, { categoryId: 'cat-dulces', ...extra })
+
+const selection = { businessId: 'cronos-id', categoryIds: new Set(['cat-dulces', 'cat-confituras']) }
 
 const statsWith = (units: Record<string, number>): CatalogStats =>
   ({ products: Object.fromEntries(Object.entries(units).map(([id, unitsWeek]) => [id, { unitsWeek }])), businesses: {} }) as unknown as CatalogStats
 
-describe('pickFeaturedProducts', () => {
-  it('solo ofrece productos del negocio destacado', () => {
-    const list = [product('a', 'Batido'), product('b', 'Pizza', { businessId: 'otro' })]
-    expect(pickFeaturedProducts(list, 'cronos-id', null).map((p) => p.id)).toEqual(['a'])
+const ids = (list: CatalogProduct[]) => list.map((p) => p.id)
+
+describe('pickSeasonProducts', () => {
+  it('ofrece los productos del negocio destacado y los de dulces, y nada más', () => {
+    const list = [cronos('c1', 'Batido'), sweet('d1', 'Brownie'), product('x', 'Pizza'), sweet('d2', 'Galleta', { categoryId: 'cat-confituras' })]
+    expect(ids(pickSeasonProducts(list, selection, null))).toEqual(['c1', 'd1', 'd2'])
   })
 
   it('deja fuera los agotados, pero un catálogo sin el campo `available` cuenta como disponible', () => {
-    const list = [product('a', 'Batido', { available: false }), product('b', 'Café'), product('c', 'Frappé', { available: undefined })]
-    expect(pickFeaturedProducts(list, 'cronos-id', null).map((p) => p.id)).toEqual(['b', 'c'])
+    const list = [cronos('c1', 'Batido', { available: false }), sweet('d1', 'Brownie', { available: false }), cronos('c2', 'Café'), sweet('d2', 'Flan', { available: undefined })]
+    expect(ids(pickSeasonProducts(list, selection, null))).toEqual(['c2', 'd2'])
   })
 
-  it('pone primero los más pedidos de la semana y desempata por nombre', () => {
-    const list = [product('a', 'Zumo'), product('b', 'Batido'), product('c', 'Café')]
-    const stats = statsWith({ a: 5, b: 1, c: 1 })
-    expect(pickFeaturedProducts(list, 'cronos-id', stats).map((p) => p.id)).toEqual(['a', 'b', 'c'])
+  it('mezcla alternando negocio y dulces, con los más pedidos de cada grupo primero', () => {
+    const list = [cronos('c1', 'A'), cronos('c2', 'B'), cronos('c3', 'C'), sweet('d1', 'D'), sweet('d2', 'E')]
+    const stats = statsWith({ c3: 9, d2: 4 })
+    expect(ids(pickSeasonProducts(list, selection, stats))).toEqual(['c3', 'd2', 'c1', 'd1', 'c2'])
+  })
+
+  it('si un grupo se acaba, el otro llena el resto', () => {
+    const list = [cronos('c1', 'A'), sweet('d1', 'B'), sweet('d2', 'C'), sweet('d3', 'D')]
+    expect(ids(pickSeasonProducts(list, selection, null))).toEqual(['c1', 'd1', 'd2', 'd3'])
+  })
+
+  it('un producto del negocio que también es de dulces no sale dos veces', () => {
+    const list = [cronos('c1', 'Batido', { categoryId: 'cat-dulces' }), sweet('d1', 'Brownie')]
+    expect(ids(pickSeasonProducts(list, selection, null))).toEqual(['c1', 'd1'])
+  })
+
+  it('sin el negocio destacado en la localidad, solo salen los dulces', () => {
+    const list = [cronos('c1', 'Batido'), sweet('d1', 'Brownie')]
+    expect(ids(pickSeasonProducts(list, { ...selection, businessId: null }, null))).toEqual(['d1'])
   })
 
   it('respeta el límite y no modifica la lista recibida', () => {
-    const list = [product('a', 'A'), product('b', 'B'), product('c', 'C')]
-    expect(pickFeaturedProducts(list, 'cronos-id', null, 2)).toHaveLength(2)
-    expect(list.map((p) => p.id)).toEqual(['a', 'b', 'c'])
+    const list = [cronos('c1', 'A'), cronos('c2', 'B'), sweet('d1', 'C'), sweet('d2', 'D')]
+    expect(pickSeasonProducts(list, selection, null, 3)).toHaveLength(3)
+    expect(ids(list)).toEqual(['c1', 'c2', 'd1', 'd2'])
   })
 
-  it('negocio sin productos → lista vacía', () => {
-    expect(pickFeaturedProducts([], 'cronos-id', null)).toEqual([])
+  it('sin nada que ofrecer → lista vacía', () => {
+    expect(pickSeasonProducts([], selection, null)).toEqual([])
   })
 })
