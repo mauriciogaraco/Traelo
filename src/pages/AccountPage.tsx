@@ -3,12 +3,14 @@ import { Link, useNavigate } from 'react-router-dom'
 import { OrderRow } from '../components/orders/OrderRow'
 import { PointsCard } from '../components/rewards/PointsCard'
 import { ThemeSelector } from '../components/settings/ThemeSelector'
+import { AmbassadorBadge } from '../components/ui/AmbassadorBadge'
 import { Button } from '../components/ui/Button'
 import { Icon, type IconName } from '../components/ui/Icon'
 import { RowsSkeleton } from '../components/ui/Skeleton'
 import { StatusBadge } from '../components/ui/StatusBadge'
 import { useToast } from '../context/ToastContext'
 import { getOrderStatusLabel, isOrderActive, ORDER_STATUS_TONE } from '../features/orders/orderStatus'
+import { useAmbassadorTier } from '../hooks/useAmbassadorTier'
 import { useAuth } from '../hooks/useAuth'
 import { useCustomerOrders } from '../hooks/useCustomerOrders'
 import { logout } from '../services/authService'
@@ -37,6 +39,7 @@ export function AccountPage() {
   const { isAuthenticated, isLoading, customer } = useAuth()
   const guestOrders = useGuestOrdersStore((state) => state.orders)
   const { orders, loading, loadingMore, hasMore, error, reload, loadMore } = useCustomerOrders(isAuthenticated)
+  const ambassadorTier = useAmbassadorTier(isAuthenticated)
 
   if (isLoading) {
     return (
@@ -118,6 +121,11 @@ export function AccountPage() {
         <div className="min-w-0">
           <h1 className="text-h2 truncate">Hola, {customer?.name}</h1>
           <p className="text-body opacity-95">{customer?.phone}</p>
+          {ambassadorTier && (
+            <div className="mt-2">
+              <AmbassadorBadge tier={ambassadorTier} />
+            </div>
+          )}
         </div>
       </div>
 
