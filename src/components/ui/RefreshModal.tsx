@@ -5,7 +5,7 @@ import { readStorage, writeStorage, STORAGE_KEYS } from '../../lib/storage'
  * Versión de la web (mayor.menor). Súbela (1.10 → 1.11…) para mostrar el aviso "Actualizamos Tráelo" a quien
  * no tenga guardada ninguna versión o tenga una MENOR; quien ya aceptó esta (o una mayor) no lo vuelve a ver.
  */
-export const WEB_VERSION = '1.10'
+export const WEB_VERSION = '1.11'
 
 const CLEANUP_TIMEOUT_MS = 3000
 

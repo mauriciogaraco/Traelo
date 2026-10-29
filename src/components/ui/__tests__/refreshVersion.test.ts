@@ -1,8 +1,8 @@
 import { isOlderVersion, WEB_VERSION } from '../RefreshModal'
 
 describe('versión de la web — cuándo se avisa que hubo cambios', () => {
-  it('esta versión es la 1.10', () => {
-    expect(WEB_VERSION).toBe('1.10')
+  it('esta versión es la 1.11', () => {
+    expect(WEB_VERSION).toBe('1.11')
   })
 
   it('quien no tiene versión guardada ve el aviso', () => {
