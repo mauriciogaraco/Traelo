@@ -70,6 +70,10 @@ export type CatalogProduct = {
   categoryName: string | null;
   price: number | null;
   effectivePrice: number | null;
+  /** Moneda en que se definió el precio. `price`/`effectivePrice` vienen siempre en CUP; si es USD, se muestra `priceUsd`. Opcional: catálogos de antes no lo traen (= CUP). */
+  priceCurrency?: 'CUP' | 'USD';
+  /** Precio vigente (con oferta si la hay) en USD, solo para productos definidos en USD. */
+  priceUsd?: number | null;
   offer: CatalogProductOffer | null;
   imageUrl: string | null;
   /** Placeholder borroso mientras carga imageUrl. Opcional: ver CatalogBusiness.logoBlurhash. */

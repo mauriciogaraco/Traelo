@@ -4,7 +4,7 @@ import { sourceOfCurrentRoute, track } from '../analytics'
 import { OtherCityHint } from '../components/city/OtherCityHint'
 import { ProductGridSkeleton } from '../components/ui/Skeleton'
 import { CatalogImage } from '../components/catalog/CatalogImage'
-import { formatCup, Price } from '../components/catalog/Price'
+import { formatCup, formatUsd, Price } from '../components/catalog/Price'
 import { Button } from '../components/ui/Button'
 import { ChipRow } from '../components/ui/ChipRow'
 import { EmptyState } from '../components/ui/EmptyState'
@@ -13,7 +13,7 @@ import { QuantitySelector } from '../components/ui/QuantitySelector'
 import { StatusBadge } from '../components/ui/StatusBadge'
 import { FavoriteButton } from '../components/catalog/FavoriteButton'
 import { useToast } from '../context/ToastContext'
-import { cheapestPackaging, estimateLine, findAddon, findPackaging, packSizeOf, requiresOption } from '../features/cart'
+import { cheapestPackaging, estimateLine, estimateUsdLine, findAddon, findPackaging, packSizeOf, requiresOption } from '../features/cart'
 import { businessPath, getBusinessStatus, isSoldOut, visualForProduct } from '../features/catalog'
 import { useFavorites } from '../hooks/useFavorites'
 import { favoriteToast } from '../lib/favoriteToast'
@@ -105,6 +105,19 @@ export function ProductDetailPage() {
     packagingCapacity: packaging?.capacity,
   })
 
+  // Producto en USD: el total estimado se muestra en USD (el agrego y el envase, que están en CUP, aparte).
+  const usdEstimate =
+    product.priceCurrency === 'USD'
+      ? estimateUsdLine({
+          priceUsd: product.priceUsd,
+          quantity,
+          formato: product.formato,
+          addonPrice: findAddon(product, addonName)?.price,
+          packagingPrice: packaging?.price,
+          packagingCapacity: packaging?.capacity,
+        })
+      : null
+
   const handleAdd = (origin: HTMLElement) => {
     if (!canAdd) {
       showToast('Elige el tipo: este producto tiene varios tipos o sabores.', 'info')
@@ -159,7 +172,13 @@ export function ProductDetailPage() {
               </Link>
             )}
           </div>
-          <Price price={product.price} effectivePrice={product.effectivePrice} className="text-lg" />
+          <Price
+            price={product.price}
+            effectivePrice={product.effectivePrice}
+            priceCurrency={product.priceCurrency}
+            priceUsd={product.priceUsd}
+            className="text-lg"
+          />
           {soldOut ? (
             <div>
               <StatusBadge label="Agotado" tone="danger" />
@@ -226,7 +245,11 @@ export function ProductDetailPage() {
           {!soldOut && (
             <div className="flex items-center justify-between rounded-r-md bg-surface border border-border px-3 py-2.5">
               <span className="text-body text-text-primary">Total estimado</span>
-              <span className="text-h3 text-text-primary">{formatCup(estimate)}</span>
+              <span className="text-h3 text-text-primary">
+                {usdEstimate
+                  ? `${formatUsd(usdEstimate.usd)}${usdEstimate.extrasCup > 0 ? ` + ${formatCup(usdEstimate.extrasCup)}` : ''}`
+                  : formatCup(estimate)}
+              </span>
             </div>
           )}
 
