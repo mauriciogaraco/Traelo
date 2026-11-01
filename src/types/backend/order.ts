@@ -25,6 +25,8 @@ export type OrderItem = {
   productName: string;
   quantity: number;
   unitPrice: number;
+  /** Producto definido en USD: su precio en USD (`unitPrice` ya está en CUP). null/ausente = en CUP. */
+  unitPriceUsd?: number | null;
   subtotal: number;
   commissionAmount: number;
   /** Canje: puntos usados y valor en CUP cubierto por una unidad de esta línea. Ausente en respuestas antiguas. */

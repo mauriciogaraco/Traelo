@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { track } from '../analytics'
 import { BusinessStatusBadge } from '../components/catalog/BusinessStatusBadge'
 import { CatalogImage } from '../components/catalog/CatalogImage'
-import { formatCup } from '../components/catalog/Price'
+import { formatCup, formatUsd } from '../components/catalog/Price'
 import { RedemptionSection } from '../components/rewards/RedemptionSection'
 import { PayOnDeliveryNote } from '../components/checkout/PayOnDeliveryNote'
 import { Button } from '../components/ui/Button'
@@ -11,12 +11,12 @@ import { EmptyState } from '../components/ui/EmptyState'
 import { Icon } from '../components/ui/Icon'
 import { QuantitySelector } from '../components/ui/QuantitySelector'
 import { useToast } from '../context/ToastContext'
-import { estimateCartLine, getCartItemCount, getCartSubtotalEstimate, groupCartByBusiness, lineIdOf, packSizeOf } from '../features/cart'
+import { estimateCartLine, estimateUsdLine, getCartItemCount, getCartSubtotalEstimate, groupCartByBusiness, lineIdOf, packSizeOf } from '../features/cart'
 import { visualForProduct } from '../features/catalog'
 import { validApplied } from '../features/rewards'
 import { CityNote } from '../components/city/CityNote'
 import { isRemovableIssue, precheckCart, removeUnavailableFromCart } from '../services/checkoutService'
-import { MAX_LINE_QUANTITY, useCartStore } from '../store/cartStore'
+import { MAX_LINE_QUANTITY, useCartStore, type CartItem } from '../store/cartStore'
 import { useCatalogStore } from '../store/catalogStore'
 import { useRewardsStore } from '../store/rewardsStore'
 import type { CartChangeDetail } from '../types/backend/order'
@@ -173,7 +173,7 @@ export function CartPage() {
                           <p className="text-[15px] font-semibold text-text-primary line-clamp-2">{item.nameSnapshot}</p>
                           <p className="text-caption text-text-secondary">
                             {item.priceSnapshot != null
-                              ? `${formatCup(item.priceSnapshot)}${packSize > 1 ? ` por caja de ${packSize}` : ''}`
+                              ? `${item.priceUsdSnapshot != null ? formatUsd(item.priceUsdSnapshot) : formatCup(item.priceSnapshot)}${packSize > 1 ? ` por caja de ${packSize}` : ''}`
                               : 'Precio no disponible'}
                           </p>
                           {item.optionName && <p className="text-caption text-text-secondary">Tipo: {item.optionName}</p>}
@@ -190,7 +190,9 @@ export function CartPage() {
                             </p>
                           )}
                           {item.priceSnapshot != null && (
-                            <p className="text-caption font-semibold text-text-primary">Total línea: {formatCup(estimateCartLine(item))}</p>
+                            <p className="text-caption font-semibold text-text-primary">
+                              Total línea: {formatCartLineTotal(item)}
+                            </p>
                           )}
                           {issue && <p className="text-caption font-semibold text-danger-text">{issue.message}</p>}
                         </div>
@@ -230,4 +232,18 @@ export function CartPage() {
       </div>
     </div>
   )
+}
+
+/** Total estimado de la línea: en USD si el producto está definido en USD (el agrego y el envase, en CUP, aparte). */
+function formatCartLineTotal(item: CartItem): string {
+  const usd = estimateUsdLine({
+    priceUsd: item.priceUsdSnapshot,
+    quantity: item.quantity,
+    formato: item.formatoSnapshot,
+    addonPrice: item.addonPriceSnapshot,
+    packagingPrice: item.packagingPriceSnapshot,
+    packagingCapacity: item.packagingCapacitySnapshot,
+  })
+  if (!usd) return formatCup(estimateCartLine(item))
+  return `${formatUsd(usd.usd)}${usd.extrasCup > 0 ? ` + ${formatCup(usd.extrasCup)}` : ''}`
 }

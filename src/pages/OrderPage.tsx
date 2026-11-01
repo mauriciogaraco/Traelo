@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import type { OrderAccess } from '../api/orderAccess'
-import { formatCup } from '../components/catalog/Price'
+import { formatCup, formatUsd } from '../components/catalog/Price'
 import { CourierCard } from '../components/orders/CourierCard'
 import { CourierTrackingPanel } from '../components/orders/CourierTrackingPanel'
 import { OrderTracker } from '../components/orders/OrderTracker'
@@ -213,7 +213,9 @@ export function OrderPage() {
                     {extras.length > 0 && <span className="block text-caption text-text-secondary">{extras.join(' · ')}</span>}
                   </span>
                   <span className="shrink-0 tabular-nums text-text-primary">
-                    {formatCup(item.subtotal + (item.packagingFee ?? 0))}
+                    {item.unitPriceUsd != null && !item.addonName
+                      ? `${formatUsd(item.unitPriceUsd * item.quantity)}${(item.packagingFee ?? 0) > 0 ? ` + ${formatCup(item.packagingFee ?? 0)}` : ''}`
+                      : formatCup(item.subtotal + (item.packagingFee ?? 0))}
                   </span>
                 </li>
               )

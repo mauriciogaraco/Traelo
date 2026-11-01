@@ -92,6 +92,25 @@ export function estimateLine(input: EstimateInput): number {
   return pack * input.quantity + (input.packagingPrice ?? 0) * packagingCount;
 }
 
+/**
+ * Línea de un producto en USD: el producto en USD (cantidad × precio) y, aparte, lo que se cobra en CUP
+ * por agrego y envase. null si la línea no es en USD.
+ */
+export function estimateUsdLine(input: {
+  priceUsd: number | null | undefined;
+  quantity: number;
+  formato?: number | null;
+  addonPrice?: number | null;
+  packagingPrice?: number | null;
+  packagingCapacity?: number | null;
+}): { usd: number; extrasCup: number } | null {
+  if (input.priceUsd == null) return null;
+  return {
+    usd: input.priceUsd * input.quantity,
+    extrasCup: estimateLine({ ...input, price: 0 }),
+  };
+}
+
 export function estimateCartLine(item: CartItem): number {
   return estimateLine({
     price: item.priceSnapshot,

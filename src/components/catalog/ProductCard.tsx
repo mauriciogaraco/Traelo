@@ -59,7 +59,13 @@ export const ProductCard = memo(function ProductCard({ product, onAdd, subtitle,
       </Link>
       <div className="flex items-center justify-between gap-1 pt-1 mt-auto">
         <div className="flex-1 min-w-0">
-          <Price price={product.price} effectivePrice={product.effectivePrice} compact />
+          <Price
+            price={product.price}
+            effectivePrice={product.effectivePrice}
+            priceCurrency={product.priceCurrency}
+            priceUsd={product.priceUsd}
+            compact
+          />
         </div>
         {onAdd && !soldOut && (
           <button

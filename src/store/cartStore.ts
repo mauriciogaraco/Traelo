@@ -15,6 +15,8 @@ export type CartItem = {
   /** Informativos únicamente (checklist §21) — el backend siempre recalcula al hacer checkout. */
   nameSnapshot: string;
   priceSnapshot: number | null;
+  /** Solo productos definidos en USD: su precio vigente en USD, para mostrarlo tal cual (el total lo cobra el servidor en CUP). */
+  priceUsdSnapshot?: number | null;
   imageUrlSnapshot: string | null;
   /** Opcional: ítems persistidos antes de existir el blurhash no lo tienen. */
   imageBlurhashSnapshot?: string | null;
@@ -115,6 +117,7 @@ export const useCartStore = create<CartState>()(
                   quantity: Math.min(MAX_LINE_QUANTITY, quantity),
                   nameSnapshot: product.name,
                   priceSnapshot: product.effectivePrice ?? product.price,
+                  priceUsdSnapshot: product.priceCurrency === 'USD' ? (product.priceUsd ?? null) : null,
                   imageUrlSnapshot: product.imageUrl,
                   imageBlurhashSnapshot: product.imageBlurhash ?? null,
                   optionName: line.optionName,
