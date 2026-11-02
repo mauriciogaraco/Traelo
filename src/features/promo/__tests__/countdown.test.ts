@@ -43,3 +43,10 @@ describe('startLabel (hora de La Habana)', () => {
     expect(label).toMatch(/^el 17 de octubre a las 9:00/)
   })
 })
+
+describe('startLabel después del cambio de hora de noviembre (UTC-4 fijo)', () => {
+  it('9:00 de Cuba sigue siendo 9:00 en noviembre y en enero', () => {
+    expect(startLabel(new Date('2026-11-10T09:00:00-04:00'), new Date('2026-11-10T03:00:00-04:00'))).toMatch(/^hoy a las 9:00/)
+    expect(startLabel(new Date('2027-01-15T09:00:00-04:00'), new Date('2027-01-15T03:00:00-04:00'))).toMatch(/^hoy a las 9:00/)
+  })
+})

@@ -1,3 +1,5 @@
+import { BUSINESS_TIME_ZONE } from '../../lib/businessTimezone'
+
 const SECOND = 1000
 const MINUTE = 60 * SECOND
 const HOUR = 60 * MINUTE
@@ -23,7 +25,7 @@ export function msUntil(startsAtIso: string, nowMs: number, offsetMs: number): n
   return Date.parse(startsAtIso) - (nowMs + offsetMs)
 }
 
-const HAVANA = 'America/Havana'
+const HAVANA = BUSINESS_TIME_ZONE
 
 function havanaDay(date: Date): string {
   return new Intl.DateTimeFormat('en-CA', { timeZone: HAVANA, year: 'numeric', month: '2-digit', day: '2-digit' }).format(date)
