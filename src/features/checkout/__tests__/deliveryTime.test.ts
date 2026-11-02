@@ -58,3 +58,19 @@ describe('hora de entrega (hora de Cuba)', () => {
     expect(JSON.stringify(input)).not.toMatch(/addonPrice|packagingPrice/);
   });
 });
+
+// Regresión: en noviembre `America/Havana` retrocede una hora (UTC-5) pero Cuba no cambió el reloj y sigue en UTC-4.
+describe('hora de Cuba después del primer domingo de noviembre (UTC-4 fijo)', () => {
+  it('2026-11-02 01:40Z son las 21:40 en Cuba, no las 20:40', () => {
+    expect(havanaMinutesOfDay(at('2026-11-02T01:40:00Z'))).toBe(21 * 60 + 40);
+  })
+
+  it('las horas de entrega empiezan en el siguiente cuarto de hora de la hora real de Cuba', () => {
+    const options = deliveryTimeOptions(at('2026-11-02T01:40:00Z')); // 21:40 en Cuba
+    expect(options[0]).toBe('9:45 pm');
+  })
+
+  it('en pleno invierno también (sin horario de invierno)', () => {
+    expect(havanaMinutesOfDay(at('2027-01-15T14:40:00Z'))).toBe(10 * 60 + 40);
+  })
+})

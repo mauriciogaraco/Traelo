@@ -1,3 +1,5 @@
+import { BUSINESS_TIME_ZONE } from '../../lib/businessTimezone';
+
 /**
  * Hora de entrega elegida: "Lo antes posible" o una hora de HOY en pasos de 15 minutos, desde ahora
  * hasta las 23:45, siempre en hora de Cuba (nunca la del teléfono: si el reloj del cliente está mal,
@@ -7,7 +9,8 @@
 export const ASAP_LABEL = 'Lo antes posible';
 const STEP_MINUTES = 15;
 const LAST_SLOT_MINUTES = 23 * 60 + 45;
-export const HAVANA_TIME_ZONE = 'America/Havana';
+// Hora de Cuba = UTC-4 fijo (ver lib/businessTimezone).
+export const HAVANA_TIME_ZONE = BUSINESS_TIME_ZONE;
 
 /** Minutos transcurridos del día en La Habana (0–1439). */
 export function havanaMinutesOfDay(now: Date): number {
