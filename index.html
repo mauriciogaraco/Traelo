@@ -2,6 +2,23 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <!-- Enlace viejo de Vercel (*.vercel.app): llevar a la web oficial. Los pedidos hechos
+         aquí no llegan a la base de datos. Añade ?noredirect=1 para probar un preview. -->
+    <script>
+      (function () {
+        var h = location.hostname
+        if (!/\.vercel\.app$/.test(h) || /[?&]noredirect=1/.test(location.search)) return
+        try {
+          if (navigator.serviceWorker) {
+            navigator.serviceWorker.getRegistrations().then(function (rs) {
+              rs.forEach(function (r) { r.unregister() })
+            })
+          }
+          if (window.caches) caches.keys().then(function (ks) { ks.forEach(function (k) { caches.delete(k) }) })
+        } catch (e) {}
+        location.replace('https://www.traelo-market.com' + location.pathname + location.search + location.hash)
+      })()
+    </script>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/traelo_512x512.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
