@@ -228,6 +228,7 @@ export function OrderPage() {
         <Row label="Productos" value={formatCup(order.productsTotal - (order.packagingTotal ?? 0))} />
         {(order.packagingTotal ?? 0) > 0 && <Row label="Empaque" value={formatCup(order.packagingTotal ?? 0)} />}
         <Row label="Mensajería" value={formatCup(order.deliveryFee)} />
+        {(order.weatherSurcharge ?? 0) > 0 && <Row label="Cargo por mal clima" value={formatCup(order.weatherSurcharge ?? 0)} />}
         <Row label="Servicio Tráelo" value={formatCup(order.platformFee)} />
         {(order.pointsDiscount ?? 0) > 0 && <Row label="Canje con puntos" value={`−${formatCup(order.pointsDiscount ?? 0)}`} />}
         <Row label="Total a pagar" value={formatCup(order.total)} strong />

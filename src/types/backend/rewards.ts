@@ -55,6 +55,8 @@ export type OrderQuote = {
   /** Promoción aplicada a esta cotización (null/ausente sin código). */
   promo?: { code: string; discount: number } | null;
   platformFee: number;
+  // Cargo por mal clima (ya incluido en total); ausente en un backend anterior.
+  weatherSurcharge?: number;
   total: number;
   redemption: {
     /** null = pago con puntos libre (no viene de una recompensa). */

@@ -90,6 +90,8 @@ export type Order = {
   scheduledFor?: string | null;
   productsTotal: number;
   platformFee: number;
+  // Cargo por mal clima (ya incluido en total); ausente en un backend anterior.
+  weatherSurcharge?: number;
   /** Cuánto de productsTotal es empaque (ya sumado adentro). Ausente en respuestas antiguas. */
   packagingTotal?: number;
   /** Valor en CUP cubierto con puntos (0/ausente sin canje). productsTotal NO lo descuenta; total sí. */

@@ -17,6 +17,8 @@ export interface MandadoQuoteInput {
 export interface MandadoQuote {
   deliveryFee: number;
   platformFee: number;
+  // Cargo por mal clima (ya incluido en total); ausente en un backend anterior.
+  weatherSurcharge?: number;
   total: number;
   /** true = la mensajería es la tarifa FIJA entre localidades. */
   crossCityDelivery?: boolean;
