@@ -602,6 +602,9 @@ function ReviewStep(props: {
               value={formatCup(quote.deliveryFee)}
             />
           )}
+          {(quote.weatherSurcharge ?? 0) > 0 && (
+            <QuoteRow label="Cargo por mal clima" value={formatCup(quote.weatherSurcharge ?? 0)} />
+          )}
           <QuoteRow label="Servicio Tráelo" value={formatCup(quote.platformFee)} />
           {quote.redemption && quote.totalBeforeRedemption !== undefined && (
             <QuoteRow label="Total antes del canje" value={formatCup(quote.totalBeforeRedemption)} />

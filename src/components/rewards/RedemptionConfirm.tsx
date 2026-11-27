@@ -44,6 +44,7 @@ export function RedemptionConfirm({ open, quote, onConfirm, onCancel }: Props) {
 
         <div className="border-t border-border pt-2 space-y-1">
           <Row label="Mensajería" value={formatCup(quote.deliveryFee)} />
+          {(quote.weatherSurcharge ?? 0) > 0 && <Row label="Cargo por mal clima" value={formatCup(quote.weatherSurcharge ?? 0)} />}
           <Row label="Servicio Tráelo" value={formatCup(quote.platformFee)} />
           <Row label="Total" value={formatCup(quote.total)} strong />
         </div>

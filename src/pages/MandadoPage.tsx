@@ -621,6 +621,9 @@ function ReviewStep(props: {
             label={quote.elsewhereDelivery ? 'Mensajería por kilómetro' : quote.crossCityDelivery ? 'Mensajería entre localidades' : 'Mensajería'}
             value={formatCup(quote.deliveryFee)}
           />
+          {(quote.weatherSurcharge ?? 0) > 0 && (
+            <QuoteRow label="Cargo por mal clima" value={formatCup(quote.weatherSurcharge ?? 0)} />
+          )}
           <QuoteRow label="Total a pagar" value={formatCup(quote.total)} strong />
           <p className="text-caption text-text-secondary">Calculado por Tráelo — el servidor lo vuelve a confirmar al crear el mandado.</p>
         </section>
